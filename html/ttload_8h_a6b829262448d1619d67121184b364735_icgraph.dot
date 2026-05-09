@@ -1,0 +1,19 @@
+digraph "tt_face_lookup_table"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="tt_face_lookup_table",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sfnt_load_face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$sfobjs_8c.html#afd72d5f119f82792e4f48ba2019813b2",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="tt_face_goto_table",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttload_8c.html#a8fd7b5e90714a25bba2b7fd79edb2856",tooltip=" "];
+  Node3 -> Node3 [id="edge4_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node4 [id="edge5_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="tt_face_load_any",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttload_8c.html#a895fd777114d6f1f97529e4ca29e37d5",tooltip=" "];
+  Node4 -> Node4 [id="edge6_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge7_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

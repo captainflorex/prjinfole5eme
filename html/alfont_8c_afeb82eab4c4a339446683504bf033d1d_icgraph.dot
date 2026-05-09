@@ -1,0 +1,22 @@
+digraph "alfont_set_char_extra_spacing"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="alfont_set_char_extra\l_spacing",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="alfont_load_font",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a17a4a78f9ec07c4f8108992ad88e0e2f",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="afficher_decompte",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$affichage_8c.html#ae09ee85bc962e3a9ff1cb5934b972c03",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip=" "];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$example1_8c.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="menu_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$menu_8c.html#a9f7f93c6f1e2b624e8cf71df3f37517a",tooltip=" "];
+  Node6 -> Node4 [id="edge6_Node000006_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge7_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="alfont_load_font_from_mem",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a378d14420266472d23db54ab6e5b2b5a",tooltip=" "];
+}

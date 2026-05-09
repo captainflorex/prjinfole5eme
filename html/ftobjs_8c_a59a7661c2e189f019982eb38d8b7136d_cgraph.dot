@@ -1,0 +1,34 @@
+digraph "Destroy_Driver"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Destroy_Driver",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="destroy_face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a126576c1e9c9e19fd7fd29eee6a3d47d",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="destroy_size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a159b01a0ce6ee36fd7befe62be0b3eaf",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_CMap_Done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a6b28a33ad0a6cfe26f0d33a896f10477",tooltip=" "];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node5 [id="edge5_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_Done_GlyphSlot",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#ad0c3fbaead98eb3dc1e8dec850691b8e",tooltip=" "];
+  Node5 -> Node5 [id="edge6_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node6 [id="edge7_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ft_glyphslot_done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a62027096d1d8097fac96d4899125ece2",tooltip=" "];
+  Node6 -> Node7 [id="edge8_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_GlyphLoader_Done",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftgloadr_8c.html#a920c9ede2b8f63e3dd25f51daee360ab",tooltip=" "];
+  Node7 -> Node7 [id="edge9_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node10 [id="edge10_Node000002_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="ft_input_stream_free",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a37900af0fd3360c2bff7eb93e7606a30",tooltip=" "];
+  Node10 -> Node11 [id="edge11_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="FT_Stream_Close",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstream_8c.html#a593fa53a196798f63d80b7bfc25a1e7a",tooltip=" "];
+  Node11 -> Node11 [id="edge12_Node000011_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node12 [id="edge13_Node000002_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="FT_List_Finalize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftutil_8c.html#a92d979834e296ad88eb5c61ef5d6eefb",tooltip=" "];
+  Node12 -> Node12 [id="edge14_Node000012_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge15_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node12 [id="edge16_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
+}

@@ -1,0 +1,25 @@
+var cidload_8c =
+[
+    [ "FT_COMPONENT", "cidload_8c.html#a9c208ea57bc9a5fcbfc81a6106d28f3a", null ],
+    [ "FT_STRUCTURE", "cidload_8c.html#a79b310767d539d921d82c0c9bafb45e8", null ],
+    [ "FT_STRUCTURE", "cidload_8c.html#a3bd5412680c87e8804385f30b1bbcd0f", null ],
+    [ "FT_STRUCTURE", "cidload_8c.html#a486ece7706e0b40f03d6ab0b842586f0", null ],
+    [ "FT_STRUCTURE", "cidload_8c.html#adb14d0edf0c80ad37476a4c6ae657d15", null ],
+    [ "T1CODE", "cidload_8c.html#a969834884eacc754f73fb53948f35ab1", null ],
+    [ "T1CODE", "cidload_8c.html#a8be4a3000c4d41a2ae4f9051dbd8c3f3", null ],
+    [ "T1CODE", "cidload_8c.html#a948c4cb7b1455b9e1ffd02164e485eeb", null ],
+    [ "T1CODE", "cidload_8c.html#a601a070597291d53b0e6964aca356eb7", null ],
+    [ "cid_decrypt", "cidload_8c.html#a0aa4422f48ef5d500a80a0ba64c1b4d6", null ],
+    [ "cid_face_open", "cidload_8c.html#a4ff0b0d5b1a6f963bb297c4ebb975f82", null ],
+    [ "cid_get_offset", "cidload_8c.html#a29c965cd62ec4110610b750f3f9e83c0", null ],
+    [ "cid_load_keyword", "cidload_8c.html#a420bcdb5efbfb755869f1775bf9f827a", null ],
+    [ "cid_parse_dict", "cidload_8c.html#af0ad8b9f06bbaeb6100af9cd714b3de3", null ],
+    [ "cid_read_subrs", "cidload_8c.html#a0422203eddce4c341b528a43afaf5aa8", null ],
+    [ "is_alpha", "cidload_8c.html#a4f1a070d87207d7d68cdeb854780fccf", null ],
+    [ "parse_fd_array", "cidload_8c.html#a00a4472c18718de73b1a4b2e68eaeb02", null ],
+    [ "parse_font_bbox", "cidload_8c.html#a511e452f4ba93b9d21d7adb40233cff2", null ],
+    [ "parse_font_matrix", "cidload_8c.html#aa36c8ae66797b1a08db4296ee98a22b0", null ],
+    [ "t1_done_loader", "cidload_8c.html#a8b37b50117d13b7c951b76a074d3e355", null ],
+    [ "t1_init_loader", "cidload_8c.html#ad875eee0b0a7f68af6d200f09af9c01f", null ],
+    [ "cid_field_records", "cidload_8c.html#a641612061e7f877258cdf819fe57657c", null ]
+];

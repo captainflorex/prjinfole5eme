@@ -1,0 +1,12 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/tools/docmaker"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_e7b266eb1b6cca1b8f0ae82bf16a52d3 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="tools", rankdir=LR style="filled,dashed", URL="dir_e7b266eb1b6cca1b8f0ae82bf16a52d3.html",tooltip=""]
+  dir_03c2853d35f4b3929ad51b19b617d620 [label="docmaker", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_03c2853d35f4b3929ad51b19b617d620.html",tooltip=""];
+  }
+}

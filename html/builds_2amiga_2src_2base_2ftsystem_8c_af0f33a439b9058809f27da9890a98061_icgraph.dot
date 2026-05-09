@@ -1,0 +1,24 @@
+digraph "FreeVecPooled"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="FreeVecPooled",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ft_free",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a5905713c59cb5faa989548ca0016e6ba",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_memory_destroy_default",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftsysmem_8c.html#aedcf2e0211e552f1fd4814001b510962",tooltip=" "];
+  Node2 -> Node4 [id="edge4_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_New_Memory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a3ee8ecceb93e5ba4106a00f778f11609",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_Init_FreeType",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftinit_8c.html#af93e2afa8ab5ba5675ae8d67b84df079",tooltip=" "];
+  Node5 -> Node5 [id="edge6_Node000005_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node4 [id="edge7_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge8_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="ft_realloc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a3118a9054785c3bb1d7c4261b240d623",tooltip=" "];
+  Node10 -> Node4 [id="edge9_Node000010_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node10 [id="edge10_Node000010_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

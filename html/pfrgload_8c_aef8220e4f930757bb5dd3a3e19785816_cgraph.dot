@@ -1,0 +1,43 @@
+digraph "pfr_glyph_load_simple"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="pfr_glyph_load_simple",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="pfr_extra_items_skip",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a97d0336ab1ba4bfb0b7f286b51dca955",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="pfr_extra_items_parse",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a8e57ce249daf43d38320b13740001292",tooltip=" "];
+  Node3 -> Node3 [id="edge3_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node2 [id="edge4_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node4 [id="edge5_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="pfr_glyph_curve_to",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#a276297b054cda5c1012745eaaa2b1847",tooltip=" "];
+  Node4 -> Node5 [id="edge6_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_GlyphLoader_CheckPoints",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a33ec2edf52ffdde913e4ec66dcd16795",tooltip=" "];
+  Node5 -> Node6 [id="edge7_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_GlyphLoader_Adjust\l_Points",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#acb7c42abf11390f0a2061fbfaf9d9d6a",tooltip=" "];
+  Node5 -> Node5 [id="edge8_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge9_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="pfr_glyph_end",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#acdecc6181e9bc7ab8f286756752aefb4",tooltip=" "];
+  Node7 -> Node8 [id="edge10_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="FT_GlyphLoader_Add",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a05e75ff8be73536b15ebbc02f432e246",tooltip=" "];
+  Node8 -> Node8 [id="edge11_Node000008_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node9 [id="edge12_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="FT_GlyphLoader_Prepare",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftgloadr_8c.html#a8b24efd8846b09cfecb3534926d95931",tooltip=" "];
+  Node9 -> Node6 [id="edge13_Node000009_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node9 [id="edge14_Node000009_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node11 [id="edge15_Node000007_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="pfr_glyph_close_contour",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#aa0ef9cf67d780ff7023a88122dc226ee",tooltip=" "];
+  Node1 -> Node12 [id="edge16_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="pfr_glyph_line_to",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#ad65975b880a293766fdb8f5c1b87f0fb",tooltip=" "];
+  Node12 -> Node5 [id="edge17_Node000012_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge18_Node000001_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="pfr_glyph_move_to",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#a31f6769ae935f0a84674bf1891d50618",tooltip=" "];
+  Node13 -> Node5 [id="edge19_Node000013_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node11 [id="edge20_Node000013_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node12 [id="edge21_Node000013_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node14 [id="edge22_Node000001_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="pfr_glyph_start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#abbd343e0960b2ca85aaa1518a50ef1ae",tooltip=" "];
+}

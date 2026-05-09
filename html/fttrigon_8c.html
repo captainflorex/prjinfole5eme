@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/base/fttrigon.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('fttrigon_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier fttrigon.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de fttrigon.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2fttrigon_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2fttrigon_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="fttrigon_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af153f22be5cb87555cfeb7220ef7e90d" id="r_af153f22be5cb87555cfeb7220ef7e90d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af153f22be5cb87555cfeb7220ef7e90d">FT_TRIG_COSCALE</a>&#160;&#160;&#160;0x11616E8EUL</td></tr>
+<tr class="memitem:af26bd2694060637d1da5e99b278f13d0" id="r_af26bd2694060637d1da5e99b278f13d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af26bd2694060637d1da5e99b278f13d0">FT_TRIG_MAX_ITERS</a>&#160;&#160;&#160;23</td></tr>
+<tr class="memitem:aaa3ee45e59a883474a08f320a07e9905" id="r_aaa3ee45e59a883474a08f320a07e9905"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaa3ee45e59a883474a08f320a07e9905">FT_TRIG_SCALE</a>&#160;&#160;&#160;1166391785UL  /* 0x4585BA38UL */</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a1da1c321b8f3e8acd0b29fa675ab4081" id="r_a1da1c321b8f3e8acd0b29fa675ab4081"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1da1c321b8f3e8acd0b29fa675ab4081">ft_trig_downscale</a> (<a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> val)</td></tr>
+<tr class="memitem:afdeaa60df62d7b2d17bccf007ee02ede" id="r_afdeaa60df62d7b2d17bccf007ee02ede"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>&#160;</td><td class="memItemRight"><a class="el" href="#afdeaa60df62d7b2d17bccf007ee02ede">ft_trig_prenorm</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec)</td></tr>
+<tr class="memitem:a49631910e89de293aa8a9202539ac13e" id="r_a49631910e89de293aa8a9202539ac13e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a49631910e89de293aa8a9202539ac13e">ft_trig_pseudo_rotate</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> theta)</td></tr>
+<tr class="memitem:abe2cdf9da354b1693a65a4de219114d9" id="r_abe2cdf9da354b1693a65a4de219114d9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abe2cdf9da354b1693a65a4de219114d9">ft_trig_pseudo_polarize</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec)</td></tr>
+<tr class="memitem:ae33a86f03fde95adea1e7a58ee93a11d" id="r_ae33a86f03fde95adea1e7a58ee93a11d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae33a86f03fde95adea1e7a58ee93a11d">FT_Cos</a> (<a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle)</td></tr>
+<tr class="memitem:ab4ddffdc2fc430b643faabb47e467f89" id="r_ab4ddffdc2fc430b643faabb47e467f89"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab4ddffdc2fc430b643faabb47e467f89">FT_Sin</a> (<a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle)</td></tr>
+<tr class="memitem:a5dc857b862db1503ee132f4c66f7c8b7" id="r_a5dc857b862db1503ee132f4c66f7c8b7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5dc857b862db1503ee132f4c66f7c8b7">FT_Tan</a> (<a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle)</td></tr>
+<tr class="memitem:ae1e83838ffd2c22497bc58a5b628f47d" id="r_ae1e83838ffd2c22497bc58a5b628f47d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae1e83838ffd2c22497bc58a5b628f47d">FT_Atan2</a> (<a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> dx, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> dy)</td></tr>
+<tr class="memitem:a4813a9e3570c9bbf88103ef6499ab0c1" id="r_a4813a9e3570c9bbf88103ef6499ab0c1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4813a9e3570c9bbf88103ef6499ab0c1">FT_Vector_Unit</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle)</td></tr>
+<tr class="memitem:ae39fb94254591c5933ebcbe17d47a948" id="r_ae39fb94254591c5933ebcbe17d47a948"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae39fb94254591c5933ebcbe17d47a948">FT_Vector_Rotate</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle)</td></tr>
+<tr class="memitem:a359ddab159d2c342147cb69f33645101" id="r_a359ddab159d2c342147cb69f33645101"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a359ddab159d2c342147cb69f33645101">FT_Vector_Length</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec)</td></tr>
+<tr class="memitem:a094b81c6ad2356b206b14e0387101865" id="r_a094b81c6ad2356b206b14e0387101865"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a094b81c6ad2356b206b14e0387101865">FT_Vector_Polarize</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *length, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *angle)</td></tr>
+<tr class="memitem:a07535f29fc4f5d2fa010ad38fdfac144" id="r_a07535f29fc4f5d2fa010ad38fdfac144"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a07535f29fc4f5d2fa010ad38fdfac144">FT_Vector_From_Polar</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *vec, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> length, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle)</td></tr>
+<tr class="memitem:a704ad092fc7ea61941c0edc22883b14e" id="r_a704ad092fc7ea61941c0edc22883b14e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a704ad092fc7ea61941c0edc22883b14e">FT_Angle_Diff</a> (<a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle1, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle2)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8211f43d5e85b36d9d59ae53b41f1c5e" id="r_a8211f43d5e85b36d9d59ae53b41f1c5e"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8211f43d5e85b36d9d59ae53b41f1c5e">ft_trig_arctan_table</a> [24]</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="af153f22be5cb87555cfeb7220ef7e90d" name="af153f22be5cb87555cfeb7220ef7e90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af153f22be5cb87555cfeb7220ef7e90d">&#9670;&#160;</a></span>FT_TRIG_COSCALE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_TRIG_COSCALE&#160;&#160;&#160;0x11616E8EUL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af26bd2694060637d1da5e99b278f13d0" name="af26bd2694060637d1da5e99b278f13d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26bd2694060637d1da5e99b278f13d0">&#9670;&#160;</a></span>FT_TRIG_MAX_ITERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_TRIG_MAX_ITERS&#160;&#160;&#160;23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa3ee45e59a883474a08f320a07e9905" name="aaa3ee45e59a883474a08f320a07e9905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3ee45e59a883474a08f320a07e9905">&#9670;&#160;</a></span>FT_TRIG_SCALE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_TRIG_SCALE&#160;&#160;&#160;1166391785UL  /* 0x4585BA38UL */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a704ad092fc7ea61941c0edc22883b14e" name="a704ad092fc7ea61941c0edc22883b14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704ad092fc7ea61941c0edc22883b14e">&#9670;&#160;</a></span>FT_Angle_Diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Angle_Diff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a704ad092fc7ea61941c0edc22883b14e_cgraph.png" border="0" usemap="#afttrigon_8c_a704ad092fc7ea61941c0edc22883b14e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a704ad092fc7ea61941c0edc22883b14e_icgraph.png" border="0" usemap="#afttrigon_8c_a704ad092fc7ea61941c0edc22883b14e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ae1e83838ffd2c22497bc58a5b628f47d" name="ae1e83838ffd2c22497bc58a5b628f47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e83838ffd2c22497bc58a5b628f47d">&#9670;&#160;</a></span>FT_Atan2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Atan2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>dy</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ae1e83838ffd2c22497bc58a5b628f47d_cgraph.png" border="0" usemap="#afttrigon_8c_ae1e83838ffd2c22497bc58a5b628f47d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ae1e83838ffd2c22497bc58a5b628f47d_icgraph.png" border="0" usemap="#afttrigon_8c_ae1e83838ffd2c22497bc58a5b628f47d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ae33a86f03fde95adea1e7a58ee93a11d" name="ae33a86f03fde95adea1e7a58ee93a11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33a86f03fde95adea1e7a58ee93a11d">&#9670;&#160;</a></span>FT_Cos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Cos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ae33a86f03fde95adea1e7a58ee93a11d_cgraph.png" border="0" usemap="#afttrigon_8c_ae33a86f03fde95adea1e7a58ee93a11d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ae33a86f03fde95adea1e7a58ee93a11d_icgraph.png" border="0" usemap="#afttrigon_8c_ae33a86f03fde95adea1e7a58ee93a11d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ab4ddffdc2fc430b643faabb47e467f89" name="ab4ddffdc2fc430b643faabb47e467f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4ddffdc2fc430b643faabb47e467f89">&#9670;&#160;</a></span>FT_Sin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Sin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ab4ddffdc2fc430b643faabb47e467f89_cgraph.png" border="0" usemap="#afttrigon_8c_ab4ddffdc2fc430b643faabb47e467f89_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ab4ddffdc2fc430b643faabb47e467f89_icgraph.png" border="0" usemap="#afttrigon_8c_ab4ddffdc2fc430b643faabb47e467f89_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a5dc857b862db1503ee132f4c66f7c8b7" name="a5dc857b862db1503ee132f4c66f7c8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc857b862db1503ee132f4c66f7c8b7">&#9670;&#160;</a></span>FT_Tan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Tan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a5dc857b862db1503ee132f4c66f7c8b7_cgraph.png" border="0" usemap="#afttrigon_8c_a5dc857b862db1503ee132f4c66f7c8b7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a5dc857b862db1503ee132f4c66f7c8b7_icgraph.png" border="0" usemap="#afttrigon_8c_a5dc857b862db1503ee132f4c66f7c8b7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a1da1c321b8f3e8acd0b29fa675ab4081" name="a1da1c321b8f3e8acd0b29fa675ab4081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da1c321b8f3e8acd0b29fa675ab4081">&#9670;&#160;</a></span>ft_trig_downscale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> ft_trig_downscale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a1da1c321b8f3e8acd0b29fa675ab4081_icgraph.png" border="0" usemap="#afttrigon_8c_a1da1c321b8f3e8acd0b29fa675ab4081_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="afdeaa60df62d7b2d17bccf007ee02ede" name="afdeaa60df62d7b2d17bccf007ee02ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdeaa60df62d7b2d17bccf007ee02ede">&#9670;&#160;</a></span>ft_trig_prenorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> ft_trig_prenorm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_afdeaa60df62d7b2d17bccf007ee02ede_icgraph.png" border="0" usemap="#afttrigon_8c_afdeaa60df62d7b2d17bccf007ee02ede_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="abe2cdf9da354b1693a65a4de219114d9" name="abe2cdf9da354b1693a65a4de219114d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2cdf9da354b1693a65a4de219114d9">&#9670;&#160;</a></span>ft_trig_pseudo_polarize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_trig_pseudo_polarize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_abe2cdf9da354b1693a65a4de219114d9_icgraph.png" border="0" usemap="#afttrigon_8c_abe2cdf9da354b1693a65a4de219114d9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="a49631910e89de293aa8a9202539ac13e" name="a49631910e89de293aa8a9202539ac13e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49631910e89de293aa8a9202539ac13e">&#9670;&#160;</a></span>ft_trig_pseudo_rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_trig_pseudo_rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>theta</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a49631910e89de293aa8a9202539ac13e_icgraph.png" border="0" usemap="#afttrigon_8c_a49631910e89de293aa8a9202539ac13e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a07535f29fc4f5d2fa010ad38fdfac144" name="a07535f29fc4f5d2fa010ad38fdfac144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07535f29fc4f5d2fa010ad38fdfac144">&#9670;&#160;</a></span>FT_Vector_From_Polar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Vector_From_Polar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a07535f29fc4f5d2fa010ad38fdfac144_cgraph.png" border="0" usemap="#afttrigon_8c_a07535f29fc4f5d2fa010ad38fdfac144_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a07535f29fc4f5d2fa010ad38fdfac144_icgraph.png" border="0" usemap="#afttrigon_8c_a07535f29fc4f5d2fa010ad38fdfac144_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="a359ddab159d2c342147cb69f33645101" name="a359ddab159d2c342147cb69f33645101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359ddab159d2c342147cb69f33645101">&#9670;&#160;</a></span>FT_Vector_Length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Vector_Length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a359ddab159d2c342147cb69f33645101_cgraph.png" border="0" usemap="#afttrigon_8c_a359ddab159d2c342147cb69f33645101_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a359ddab159d2c342147cb69f33645101_icgraph.png" border="0" usemap="#afttrigon_8c_a359ddab159d2c342147cb69f33645101_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a094b81c6ad2356b206b14e0387101865" name="a094b81c6ad2356b206b14e0387101865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a094b81c6ad2356b206b14e0387101865">&#9670;&#160;</a></span>FT_Vector_Polarize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Vector_Polarize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *</td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a094b81c6ad2356b206b14e0387101865_cgraph.png" border="0" usemap="#afttrigon_8c_a094b81c6ad2356b206b14e0387101865_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a094b81c6ad2356b206b14e0387101865_icgraph.png" border="0" usemap="#afttrigon_8c_a094b81c6ad2356b206b14e0387101865_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="ae39fb94254591c5933ebcbe17d47a948" name="ae39fb94254591c5933ebcbe17d47a948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39fb94254591c5933ebcbe17d47a948">&#9670;&#160;</a></span>FT_Vector_Rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Vector_Rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ae39fb94254591c5933ebcbe17d47a948_cgraph.png" border="0" usemap="#afttrigon_8c_ae39fb94254591c5933ebcbe17d47a948_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_ae39fb94254591c5933ebcbe17d47a948_icgraph.png" border="0" usemap="#afttrigon_8c_ae39fb94254591c5933ebcbe17d47a948_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a4813a9e3570c9bbf88103ef6499ab0c1" name="a4813a9e3570c9bbf88103ef6499ab0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4813a9e3570c9bbf88103ef6499ab0c1">&#9670;&#160;</a></span>FT_Vector_Unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Vector_Unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a4813a9e3570c9bbf88103ef6499ab0c1_cgraph.png" border="0" usemap="#afttrigon_8c_a4813a9e3570c9bbf88103ef6499ab0c1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="fttrigon_8c_a4813a9e3570c9bbf88103ef6499ab0c1_icgraph.png" border="0" usemap="#afttrigon_8c_a4813a9e3570c9bbf88103ef6499ab0c1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a8211f43d5e85b36d9d59ae53b41f1c5e" name="a8211f43d5e85b36d9d59ae53b41f1c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8211f43d5e85b36d9d59ae53b41f1c5e">&#9670;&#160;</a></span>ft_trig_arctan_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> ft_trig_arctan_table[24]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                     =</div>
+<div class="line">{</div>
+<div class="line">  4157273L, 2949120L, 1740967L, 919879L, 466945L, 234379L, 117304L,</div>
+<div class="line">  58666L, 29335L, 14668L, 7334L, 3667L, 1833L, 917L, 458L, 229L, 115L,</div>
+<div class="line">  57L, 29L, 14L, 7L, 4L, 2L, 1L</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_acb6b619e019ac5df49dc8811bc81be5.html">base</a></li><li class="navelem"><a href="fttrigon_8c.html">fttrigon.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

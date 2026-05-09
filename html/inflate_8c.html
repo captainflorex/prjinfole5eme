@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/gzip/inflate.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('inflate_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier inflate.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="zutil_8h_source.html">zutil.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="infblock_8h_source.html">infblock.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de inflate.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2gzip_2inflate_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:internal_5Fstate" id="r_internal_5Fstate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structinternal__state.html">internal_state</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abe6b865c045f3e7c6892ef4f15ff5779" id="r_abe6b865c045f3e7c6892ef4f15ff5779"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abe6b865c045f3e7c6892ef4f15ff5779">DONE</a>&#160;&#160;&#160;INFLATE_DONE</td></tr>
+<tr class="memitem:afd3fc9004925132db4faf607ebbf9db7" id="r_afd3fc9004925132db4faf607ebbf9db7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afd3fc9004925132db4faf607ebbf9db7">BAD</a>&#160;&#160;&#160;INFLATE_BAD</td></tr>
+<tr class="memitem:a94d1f1effc0da983e806779147c6cdc3" id="r_a94d1f1effc0da983e806779147c6cdc3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a94d1f1effc0da983e806779147c6cdc3">NEEDBYTE</a>&#160;&#160;&#160;{if(z-&gt;avail_in==0)return r;r=f;}</td></tr>
+<tr class="memitem:ab757e29ce18ed03f73c4b81a869e4b9a" id="r_ab757e29ce18ed03f73c4b81a869e4b9a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab757e29ce18ed03f73c4b81a869e4b9a">NEXTBYTE</a>&#160;&#160;&#160;(z-&gt;avail_in--,z-&gt;total_in++,*z-&gt;next_in++)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a164ea0159d5f0b5f12a646f25f99ecea" id="r_a164ea0159d5f0b5f12a646f25f99ecea"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a164ea0159d5f0b5f12a646f25f99ecea">inflate_mode</a> { <br />
+&#160;&#160;<a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaaab8ec12ae9fe16e1151412938f611a19">METHOD</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa391ad3dbcf1f6d5c27590a7e511a1667">FLAG</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa855a2add86c5635aa2e39d61c5890a7b">DICT4</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa9eaf653f2279034adcd3bd9f668ddcb9">DICT3</a>
+, <br />
+&#160;&#160;<a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa5149bb3ac4255584a5868abb8b5e12a4">DICT2</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaab12353cac4cb015fa4e62a0dff2c680f">DICT1</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa6ffe5768bcd4f400da8efb74417600c8">DICT0</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa52b21361e4367bbda17ed80846f461c5">BLOCKS</a>
+, <br />
+&#160;&#160;<a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa64cdd94b0f39db4d022c9f14ac328370">CHECK4</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaab5f2d1ef400e41a6e0a5469be225abb0">CHECK3</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa62a36c3e302c35b0d2f6b16cbc354f88">CHECK2</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa5cc917ba482a42803b976cdc5425664a">CHECK1</a>
+, <br />
+&#160;&#160;<a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749">DONE</a>
+, <a class="el" href="#a164ea0159d5f0b5f12a646f25f99eceaafe29bdbfb6e2165eec29bf28af429856">BAD</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae4bf2cf85662c81338ded783e746c305" id="r_ae4bf2cf85662c81338ded783e746c305"><td class="memItemLeft">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae4bf2cf85662c81338ded783e746c305">inflateReset</a> (<a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> z)</td></tr>
+<tr class="memitem:adb35fa0fdc9e857ba86d298e16e428d1" id="r_adb35fa0fdc9e857ba86d298e16e428d1"><td class="memItemLeft">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a>&#160;</td><td class="memItemRight"><a class="el" href="#adb35fa0fdc9e857ba86d298e16e428d1">inflateEnd</a> (<a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> z)</td></tr>
+<tr class="memitem:a24cadd081749a872a778aa498bc7551b" id="r_a24cadd081749a872a778aa498bc7551b"><td class="memItemLeft">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a>&#160;</td><td class="memItemRight"><a class="el" href="#a24cadd081749a872a778aa498bc7551b">inflateInit2_</a> (<a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> z, int w, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *<a class="el" href="module__version.html">version</a>, int <a class="el" href="ftsysio_8h.html#a5381f884ea8f4dc986fab8f8421e339d">stream_size</a>)</td></tr>
+<tr class="memitem:aa69f3b62771ea8e0b859b48cf4e54b6b" id="r_aa69f3b62771ea8e0b859b48cf4e54b6b"><td class="memItemLeft">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa69f3b62771ea8e0b859b48cf4e54b6b">inflate</a> (<a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> z, int f)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="afd3fc9004925132db4faf607ebbf9db7" name="afd3fc9004925132db4faf607ebbf9db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd3fc9004925132db4faf607ebbf9db7">&#9670;&#160;</a></span>BAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BAD&#160;&#160;&#160;INFLATE_BAD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe6b865c045f3e7c6892ef4f15ff5779" name="abe6b865c045f3e7c6892ef4f15ff5779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6b865c045f3e7c6892ef4f15ff5779">&#9670;&#160;</a></span>DONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DONE&#160;&#160;&#160;INFLATE_DONE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94d1f1effc0da983e806779147c6cdc3" name="a94d1f1effc0da983e806779147c6cdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d1f1effc0da983e806779147c6cdc3">&#9670;&#160;</a></span>NEEDBYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEEDBYTE&#160;&#160;&#160;{if(z-&gt;avail_in==0)return r;r=f;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab757e29ce18ed03f73c4b81a869e4b9a" name="ab757e29ce18ed03f73c4b81a869e4b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab757e29ce18ed03f73c4b81a869e4b9a">&#9670;&#160;</a></span>NEXTBYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEXTBYTE&#160;&#160;&#160;(z-&gt;avail_in--,z-&gt;total_in++,*z-&gt;next_in++)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a164ea0159d5f0b5f12a646f25f99ecea" name="a164ea0159d5f0b5f12a646f25f99ecea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164ea0159d5f0b5f12a646f25f99ecea">&#9670;&#160;</a></span>inflate_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a164ea0159d5f0b5f12a646f25f99ecea">inflate_mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaaab8ec12ae9fe16e1151412938f611a19" name="a164ea0159d5f0b5f12a646f25f99eceaaab8ec12ae9fe16e1151412938f611a19"></a>METHOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa391ad3dbcf1f6d5c27590a7e511a1667" name="a164ea0159d5f0b5f12a646f25f99eceaa391ad3dbcf1f6d5c27590a7e511a1667"></a>FLAG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa855a2add86c5635aa2e39d61c5890a7b" name="a164ea0159d5f0b5f12a646f25f99eceaa855a2add86c5635aa2e39d61c5890a7b"></a>DICT4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa9eaf653f2279034adcd3bd9f668ddcb9" name="a164ea0159d5f0b5f12a646f25f99eceaa9eaf653f2279034adcd3bd9f668ddcb9"></a>DICT3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa5149bb3ac4255584a5868abb8b5e12a4" name="a164ea0159d5f0b5f12a646f25f99eceaa5149bb3ac4255584a5868abb8b5e12a4"></a>DICT2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaab12353cac4cb015fa4e62a0dff2c680f" name="a164ea0159d5f0b5f12a646f25f99eceaab12353cac4cb015fa4e62a0dff2c680f"></a>DICT1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa6ffe5768bcd4f400da8efb74417600c8" name="a164ea0159d5f0b5f12a646f25f99eceaa6ffe5768bcd4f400da8efb74417600c8"></a>DICT0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa52b21361e4367bbda17ed80846f461c5" name="a164ea0159d5f0b5f12a646f25f99eceaa52b21361e4367bbda17ed80846f461c5"></a>BLOCKS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa64cdd94b0f39db4d022c9f14ac328370" name="a164ea0159d5f0b5f12a646f25f99eceaa64cdd94b0f39db4d022c9f14ac328370"></a>CHECK4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaab5f2d1ef400e41a6e0a5469be225abb0" name="a164ea0159d5f0b5f12a646f25f99eceaab5f2d1ef400e41a6e0a5469be225abb0"></a>CHECK3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa62a36c3e302c35b0d2f6b16cbc354f88" name="a164ea0159d5f0b5f12a646f25f99eceaa62a36c3e302c35b0d2f6b16cbc354f88"></a>CHECK2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa5cc917ba482a42803b976cdc5425664a" name="a164ea0159d5f0b5f12a646f25f99eceaa5cc917ba482a42803b976cdc5425664a"></a>CHECK1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749" name="a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749"></a>DONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a164ea0159d5f0b5f12a646f25f99eceaafe29bdbfb6e2165eec29bf28af429856" name="a164ea0159d5f0b5f12a646f25f99eceaafe29bdbfb6e2165eec29bf28af429856"></a>BAD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="aa69f3b62771ea8e0b859b48cf4e54b6b" name="aa69f3b62771ea8e0b859b48cf4e54b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69f3b62771ea8e0b859b48cf4e54b6b">&#9670;&#160;</a></span>inflate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> inflate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_aa69f3b62771ea8e0b859b48cf4e54b6b_cgraph.png" border="0" usemap="#ainflate_8c_aa69f3b62771ea8e0b859b48cf4e54b6b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_aa69f3b62771ea8e0b859b48cf4e54b6b_icgraph.png" border="0" usemap="#ainflate_8c_aa69f3b62771ea8e0b859b48cf4e54b6b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="adb35fa0fdc9e857ba86d298e16e428d1" name="adb35fa0fdc9e857ba86d298e16e428d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb35fa0fdc9e857ba86d298e16e428d1">&#9670;&#160;</a></span>inflateEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> inflateEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_adb35fa0fdc9e857ba86d298e16e428d1_cgraph.png" border="0" usemap="#ainflate_8c_adb35fa0fdc9e857ba86d298e16e428d1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_adb35fa0fdc9e857ba86d298e16e428d1_icgraph.png" border="0" usemap="#ainflate_8c_adb35fa0fdc9e857ba86d298e16e428d1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a24cadd081749a872a778aa498bc7551b" name="a24cadd081749a872a778aa498bc7551b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24cadd081749a872a778aa498bc7551b">&#9670;&#160;</a></span>inflateInit2_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> inflateInit2_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>version</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>stream_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_a24cadd081749a872a778aa498bc7551b_cgraph.png" border="0" usemap="#ainflate_8c_a24cadd081749a872a778aa498bc7551b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_a24cadd081749a872a778aa498bc7551b_icgraph.png" border="0" usemap="#ainflate_8c_a24cadd081749a872a778aa498bc7551b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="ae4bf2cf85662c81338ded783e746c305" name="ae4bf2cf85662c81338ded783e746c305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4bf2cf85662c81338ded783e746c305">&#9670;&#160;</a></span>inflateReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> inflateReset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_ae4bf2cf85662c81338ded783e746c305_cgraph.png" border="0" usemap="#ainflate_8c_ae4bf2cf85662c81338ded783e746c305_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="inflate_8c_ae4bf2cf85662c81338ded783e746c305_icgraph.png" border="0" usemap="#ainflate_8c_ae4bf2cf85662c81338ded783e746c305_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_e1b3ffecbbf501e7b3912974e971879c.html">gzip</a></li><li class="navelem"><a href="inflate_8c.html">inflate.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

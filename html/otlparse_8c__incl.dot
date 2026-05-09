@@ -1,0 +1,30 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/otlayout/otlparse.c"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="src/alfont-code-r12\l-trunk/alfont-code-r12\l-trunk/freetype/src/otlayout\l/otlparse.c",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="otlparse.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlparse_8h.html",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="otlayout.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlayout_8h.html",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="otlconf.h",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$otlconf_8h.html",tooltip=" "];
+  Node3 -> Node7 [id="edge4_Node000003_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="otltags.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otltags_8h.html",tooltip=" "];
+  Node2 -> Node8 [id="edge5_Node000002_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="otlgdef.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlgdef_8h.html",tooltip=" "];
+  Node8 -> Node9 [id="edge6_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="otltable.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otltable_8h.html",tooltip=" "];
+  Node9 -> Node3 [id="edge7_Node000009_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node10 [id="edge8_Node000002_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="otlgsub.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlgsub_8h.html",tooltip=" "];
+  Node10 -> Node3 [id="edge9_Node000010_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node11 [id="edge10_Node000002_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="otlgpos.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlgpos_8h.html",tooltip=" "];
+  Node11 -> Node3 [id="edge11_Node000011_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node12 [id="edge12_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="otlutils.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlutils_8h.html",tooltip=" "];
+  Node12 -> Node3 [id="edge13_Node000012_Node000003",color="steelblue1",style="solid",tooltip=" "];
+}

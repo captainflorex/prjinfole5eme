@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/ftsysmem.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftsysmem_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftsysmem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftsysmem_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __FT_SYSTEM_MEMORY_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __FT_SYSTEM_MEMORY_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> /*****                                                              *****/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> /*****    NOTE: THE CONTENT OF THIS FILE IS NOT CURRENTLY USED      *****/</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> /*****          IN NORMAL BUILDS.  CONSIDER IT EXPERIMENTAL.        *****/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> /*****                                                              *****/</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">  * @type: FT_Memory</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">  *   opaque handle to a memory manager handle. Note that since FreeType</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">  *   2.2, the memory manager structure FT_MemoryRec is hidden to client</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">  *   applications.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">  *   however, you can still define custom allocators easily using the</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">  *   @ft_memory_new API</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">   30</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___memory_rec__.html">FT_MemoryRec_</a>*   <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">  * @functype: FT_Memory_AllocFunc</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">  *   a function used to allocate a block of memory.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">  *   size     :: size of blocks in bytes. Always &gt; 0 !!</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">  *   mem_data :: memory-manager specific optional argument</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">  *               (see @ft_memory_new)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">  * @return:</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">  *   address of new block. NULL in case of memory exhaustion</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#ad551041c480f0017a1313c11bbc831f0">   48</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  (*<a class="code hl_typedef" href="ftsysmem_8h.html#ad551041c480f0017a1313c11bbc831f0">FT_Memory_AllocFunc</a>)( <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>   size,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                              <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> <a class="code hl_variable" href="struct_f_t___memory_rec__.html#ab1a7b985cfe26dd8b6978bd6b8d404f6">mem_data</a> );</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">  * @functype: FT_Memory_FreeFunc</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">  *   a function used to release a block of memory created through</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">  *   @FT_Memory_AllocFunc or @FT_Memory_ReallocFunc</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">  *   block    :: address of target memory block. cannot be NULL !!</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">  *   mem_data :: memory-manager specific optional argument</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">  *               (see @ft_memory_new)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#a094e8d25ade431d7f961bc1e429a27a2">   65</a></span>  <span class="keyword">typedef</span> void        (*<a class="code hl_typedef" href="ftsysmem_8h.html#a094e8d25ade431d7f961bc1e429a27a2">FT_Memory_FreeFunc</a>) ( <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  block,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                              <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  <a class="code hl_variable" href="struct_f_t___memory_rec__.html#ab1a7b985cfe26dd8b6978bd6b8d404f6">mem_data</a> );</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">  * @functype: FT_Memory_ReallocFunc</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">  *   a function used to reallocate a memory block.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">  *   block    :: address of target memory block. cannot be NULL !!</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">  *   new_size :: new requested size in bytes</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">  *   cur_size :: current block size in bytes</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">  *   mem_data :: memory-manager specific optional argument</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">  *               (see @ft_memory_new)</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#a0d982908b12aa5867869d9521e1c83ef">   83</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  (*<a class="code hl_typedef" href="ftsysmem_8h.html#a0d982908b12aa5867869d9521e1c83ef">FT_Memory_ReallocFunc</a>)( <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>   block,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                                <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>     new_size,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                                <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>     cur_size,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                                <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>   <a class="code hl_variable" href="struct_f_t___memory_rec__.html#ab1a7b985cfe26dd8b6978bd6b8d404f6">mem_data</a> );</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">  * @functype: FT_Memory_CreateFunc</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">  *   a function used to create a @FT_Memory object to model a</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">  *   memory manager</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">  *   size      :: size of memory manager structure in bytes</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">  *   init_data :: optional initialisation argument</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">  * @output:</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">  *   amem_data :: memory-manager specific argument to block management</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">  *                routines.</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">  * @return:</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">  *   handle to new memory manager object. NULL in case of failure</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#abf3528102fb55b9252dafc31a5bfd74d">  108</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  (*<a class="code hl_typedef" href="ftsysmem_8h.html#abf3528102fb55b9252dafc31a5bfd74d">FT_Memory_CreateFunc</a>)( <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>     size,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                                               <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  init_data,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                               <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> *amem_data );</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">  * @functype: FT_Memory_DestroyFunc</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">  *   a function used to destroy a given @FT_Memory manager</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">  *   memory   :: target memory manager handle</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">  *   mem_data :: option manager-specific argument</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#add9491acb4bd649295b34ab2ec0a51a2">  124</a></span>  <span class="keyword">typedef</span> void        (*<a class="code hl_typedef" href="ftsysmem_8h.html#add9491acb4bd649295b34ab2ec0a51a2">FT_Memory_DestroyFunc</a>)( <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>  <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                                <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> <a class="code hl_variable" href="struct_f_t___memory_rec__.html#ab1a7b985cfe26dd8b6978bd6b8d404f6">mem_data</a> );</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">  * @struct: FT_Memory_FuncsRec</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">  *   a function used to hold all methods of a given memory manager</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">  *   implementation.</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">  * @fields:</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">  *   mem_alloc   :: block allocation routine</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">  *   mem_free    :: block release routine</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">  *   mem_realloc :: block re-allocation routine</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">  *   mem_create  :: manager creation routine</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">  *   mem_destroy :: manager destruction routine</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">  */</span></div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="};">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="struct_f_t___memory___funcs_rec__.html">  143</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___memory___funcs_rec__.html">FT_Memory_FuncsRec_</a></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="struct_f_t___memory___funcs_rec__.html#a1e148bdae469f30f5df523abb349a833">  145</a></span>    <a class="code hl_typedef" href="ftsysmem_8h.html#ad551041c480f0017a1313c11bbc831f0">FT_Memory_AllocFunc</a>     <a class="code hl_variable" href="struct_f_t___memory___funcs_rec__.html#a1e148bdae469f30f5df523abb349a833">mem_alloc</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="struct_f_t___memory___funcs_rec__.html#ada07e2042a1c6c32f4e9b908d4f24f17">  146</a></span>    <a class="code hl_typedef" href="ftsysmem_8h.html#a094e8d25ade431d7f961bc1e429a27a2">FT_Memory_FreeFunc</a>      <a class="code hl_variable" href="struct_f_t___memory___funcs_rec__.html#ada07e2042a1c6c32f4e9b908d4f24f17">mem_free</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="struct_f_t___memory___funcs_rec__.html#ab323b54f75dd77ea7825ea7ab6df06f9">  147</a></span>    <a class="code hl_typedef" href="ftsysmem_8h.html#a0d982908b12aa5867869d9521e1c83ef">FT_Memory_ReallocFunc</a>   <a class="code hl_variable" href="struct_f_t___memory___funcs_rec__.html#ab323b54f75dd77ea7825ea7ab6df06f9">mem_realloc</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="struct_f_t___memory___funcs_rec__.html#a7e7027b4a657de01a127a093e3c7a460">  148</a></span>    <a class="code hl_typedef" href="ftsysmem_8h.html#abf3528102fb55b9252dafc31a5bfd74d">FT_Memory_CreateFunc</a>    <a class="code hl_variable" href="struct_f_t___memory___funcs_rec__.html#a7e7027b4a657de01a127a093e3c7a460">mem_create</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="struct_f_t___memory___funcs_rec__.html#a73e257e3339704e062aef511fb4dde10">  149</a></span>    <a class="code hl_typedef" href="ftsysmem_8h.html#add9491acb4bd649295b34ab2ec0a51a2">FT_Memory_DestroyFunc</a>   <a class="code hl_variable" href="struct_f_t___memory___funcs_rec__.html#a73e257e3339704e062aef511fb4dde10">mem_destroy</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#aa87545f6f4117e2f44869f0fae1d20db">  151</a></span>  } <a class="code hl_typedef" href="ftsysmem_8h.html#aa87545f6f4117e2f44869f0fae1d20db">FT_Memory_FuncsRec</a>, *<a class="code hl_typedef" href="ftsysmem_8h.html#aa93bf70e453e846d615b5bf5db5886c3">FT_Memory_Funcs</a>;</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">  * @type: FT_Memory_Funcs</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">  *   a pointer to a constant @FT_Memory_FuncsRec structure used to</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">  *   describe a given memory manager implementation.</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#aa93bf70e453e846d615b5bf5db5886c3">  162</a></span>  <span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code hl_typedef" href="ftsysmem_8h.html#aa87545f6f4117e2f44869f0fae1d20db">FT_Memory_FuncsRec</a>*  <a class="code hl_typedef" href="ftsysmem_8h.html#aa93bf70e453e846d615b5bf5db5886c3">FT_Memory_Funcs</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">  * @function: ft_memory_new</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">  *   create a new memory manager, given a set of memory methods</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">  *   mem_funcs     :: handle to memory manager implementation descriptor</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">  *   mem_init_data :: optional initialisation argument, passed to</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">  *                    @FT_Memory_CreateFunc</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">  * @return:</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">  *   new memory manager handle. NULL in case of failure</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> )</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#aab4152b3342292df2bc7e959ad2cf0b0">  181</a></span>  <a class="code hl_function" href="ftsysmem_8h.html#aab4152b3342292df2bc7e959ad2cf0b0">ft_memory_new</a>( <a class="code hl_typedef" href="ftsysmem_8h.html#aa93bf70e453e846d615b5bf5db5886c3">FT_Memory_Funcs</a>  mem_funcs,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                 <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>       mem_init_data );</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> <span class="comment">/*@**********************************************************************</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">  * @function: ft_memory_destroy</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">  *   destroy a given memory manager</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">  *   memory :: handle to target memory manager</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="ftsysmem_8h.html#a135a15afa728ea2d428240755144c893">  196</a></span>  <a class="code hl_function" href="ftsysmem_8h.html#a135a15afa728ea2d428240755144c893">ft_memory_destroy</a>( <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>  <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a> );</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">/* */</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#endif </span><span class="comment">/* __FT_SYSTEM_MEMORY_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_ad9b0c555bd9c667187a720e265943bfc"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a></div><div class="ttdeci">#define FT_BASE(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:165</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a094e8d25ade431d7f961bc1e429a27a2"><div class="ttname"><a href="ftsysmem_8h.html#a094e8d25ade431d7f961bc1e429a27a2">FT_Memory_FreeFunc</a></div><div class="ttdeci">void(* FT_Memory_FreeFunc)(FT_Pointer block, FT_Pointer mem_data)</div><div class="ttdef"><b>Definition</b> ftsysmem.h:65</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a0d982908b12aa5867869d9521e1c83ef"><div class="ttname"><a href="ftsysmem_8h.html#a0d982908b12aa5867869d9521e1c83ef">FT_Memory_ReallocFunc</a></div><div class="ttdeci">FT_Pointer(* FT_Memory_ReallocFunc)(FT_Pointer block, FT_ULong new_size, FT_ULong cur_size, FT_Pointer mem_data)</div><div class="ttdef"><b>Definition</b> ftsysmem.h:83</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a135a15afa728ea2d428240755144c893"><div class="ttname"><a href="ftsysmem_8h.html#a135a15afa728ea2d428240755144c893">ft_memory_destroy</a></div><div class="ttdeci">ft_memory_destroy(FT_Memory memory)</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="aftsysmem_8h_html_aa87545f6f4117e2f44869f0fae1d20db"><div class="ttname"><a href="ftsysmem_8h.html#aa87545f6f4117e2f44869f0fae1d20db">FT_Memory_FuncsRec</a></div><div class="ttdeci">struct FT_Memory_FuncsRec_ FT_Memory_FuncsRec</div></div>
+<div class="ttc" id="aftsysmem_8h_html_aa93bf70e453e846d615b5bf5db5886c3"><div class="ttname"><a href="ftsysmem_8h.html#aa93bf70e453e846d615b5bf5db5886c3">FT_Memory_Funcs</a></div><div class="ttdeci">struct FT_Memory_FuncsRec_ * FT_Memory_Funcs</div><div class="ttdef"><b>Definition</b> ftsysmem.h:162</div></div>
+<div class="ttc" id="aftsysmem_8h_html_aab4152b3342292df2bc7e959ad2cf0b0"><div class="ttname"><a href="ftsysmem_8h.html#aab4152b3342292df2bc7e959ad2cf0b0">ft_memory_new</a></div><div class="ttdeci">ft_memory_new(FT_Memory_Funcs mem_funcs, FT_Pointer mem_init_data)</div></div>
+<div class="ttc" id="aftsysmem_8h_html_abf3528102fb55b9252dafc31a5bfd74d"><div class="ttname"><a href="ftsysmem_8h.html#abf3528102fb55b9252dafc31a5bfd74d">FT_Memory_CreateFunc</a></div><div class="ttdeci">FT_Pointer(* FT_Memory_CreateFunc)(FT_UInt size, FT_Pointer init_data, FT_Pointer *amem_data)</div><div class="ttdef"><b>Definition</b> ftsysmem.h:108</div></div>
+<div class="ttc" id="aftsysmem_8h_html_ad551041c480f0017a1313c11bbc831f0"><div class="ttname"><a href="ftsysmem_8h.html#ad551041c480f0017a1313c11bbc831f0">FT_Memory_AllocFunc</a></div><div class="ttdeci">FT_Pointer(* FT_Memory_AllocFunc)(FT_ULong size, FT_Pointer mem_data)</div><div class="ttdef"><b>Definition</b> ftsysmem.h:48</div></div>
+<div class="ttc" id="aftsysmem_8h_html_add9491acb4bd649295b34ab2ec0a51a2"><div class="ttname"><a href="ftsysmem_8h.html#add9491acb4bd649295b34ab2ec0a51a2">FT_Memory_DestroyFunc</a></div><div class="ttdeci">void(* FT_Memory_DestroyFunc)(FT_Memory memory, FT_Pointer mem_data)</div><div class="ttdef"><b>Definition</b> ftsysmem.h:124</div></div>
+<div class="ttc" id="afttypes_8h_html_a00f9e6a0ddd7bc55f79b2f4b5b867266"><div class="ttname"><a href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></div><div class="ttdeci">void * FT_Pointer</div><div class="ttdef"><b>Definition</b> fttypes.h:278</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="astruct_f_t___memory___funcs_rec___html"><div class="ttname"><a href="struct_f_t___memory___funcs_rec__.html">FT_Memory_FuncsRec_</a></div><div class="ttdef"><b>Definition</b> ftsysmem.h:144</div></div>
+<div class="ttc" id="astruct_f_t___memory___funcs_rec___html_a1e148bdae469f30f5df523abb349a833"><div class="ttname"><a href="struct_f_t___memory___funcs_rec__.html#a1e148bdae469f30f5df523abb349a833">FT_Memory_FuncsRec_::mem_alloc</a></div><div class="ttdeci">FT_Memory_AllocFunc mem_alloc</div><div class="ttdef"><b>Definition</b> ftsysmem.h:145</div></div>
+<div class="ttc" id="astruct_f_t___memory___funcs_rec___html_a73e257e3339704e062aef511fb4dde10"><div class="ttname"><a href="struct_f_t___memory___funcs_rec__.html#a73e257e3339704e062aef511fb4dde10">FT_Memory_FuncsRec_::mem_destroy</a></div><div class="ttdeci">FT_Memory_DestroyFunc mem_destroy</div><div class="ttdef"><b>Definition</b> ftsysmem.h:149</div></div>
+<div class="ttc" id="astruct_f_t___memory___funcs_rec___html_a7e7027b4a657de01a127a093e3c7a460"><div class="ttname"><a href="struct_f_t___memory___funcs_rec__.html#a7e7027b4a657de01a127a093e3c7a460">FT_Memory_FuncsRec_::mem_create</a></div><div class="ttdeci">FT_Memory_CreateFunc mem_create</div><div class="ttdef"><b>Definition</b> ftsysmem.h:148</div></div>
+<div class="ttc" id="astruct_f_t___memory___funcs_rec___html_ab323b54f75dd77ea7825ea7ab6df06f9"><div class="ttname"><a href="struct_f_t___memory___funcs_rec__.html#ab323b54f75dd77ea7825ea7ab6df06f9">FT_Memory_FuncsRec_::mem_realloc</a></div><div class="ttdeci">FT_Memory_ReallocFunc mem_realloc</div><div class="ttdef"><b>Definition</b> ftsysmem.h:147</div></div>
+<div class="ttc" id="astruct_f_t___memory___funcs_rec___html_ada07e2042a1c6c32f4e9b908d4f24f17"><div class="ttname"><a href="struct_f_t___memory___funcs_rec__.html#ada07e2042a1c6c32f4e9b908d4f24f17">FT_Memory_FuncsRec_::mem_free</a></div><div class="ttdeci">FT_Memory_FreeFunc mem_free</div><div class="ttdef"><b>Definition</b> ftsysmem.h:146</div></div>
+<div class="ttc" id="astruct_f_t___memory_rec___html"><div class="ttname"><a href="struct_f_t___memory_rec__.html">FT_MemoryRec_</a></div><div class="ttdef"><b>Definition</b> ftsystem.h:155</div></div>
+<div class="ttc" id="astruct_f_t___memory_rec___html_ab1a7b985cfe26dd8b6978bd6b8d404f6"><div class="ttname"><a href="struct_f_t___memory_rec__.html#ab1a7b985cfe26dd8b6978bd6b8d404f6">FT_MemoryRec_::mem_data</a></div><div class="ttdeci">FT_Pointer mem_data</div><div class="ttdef"><b>Definition</b> ftcore.h:120</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="ftsysmem_8h.html">ftsysmem.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

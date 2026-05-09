@@ -1,0 +1,15 @@
+digraph "optim_compute_distortion"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="optim_compute_distortion",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="optim_record_configuration",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#a35737b6946eaf0d316962ce0f6246853",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="optim_compute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#a1f8c657e7ad3cebfd84e63e7e466287b",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="AH_Optimizer_Compute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#af9004c2279d2e3bccb748638e319f676",tooltip=" "];
+}

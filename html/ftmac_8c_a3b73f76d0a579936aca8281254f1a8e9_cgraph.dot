@@ -1,0 +1,37 @@
+digraph "FT_New_Face_From_FOND"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FT_New_Face_From_FOND",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [id="edge1_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge2_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_New_Face_From_LWFN",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a3cd18fa4466c9360932e04a02d4f8864",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="open_face_from_buffer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ab966e870e9df99a387b5e915c7d93693",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_Get_Module",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a9aae78d37c4eadf2cd3c702ab138d3d1",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node5 [id="edge6_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_Open_Face",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a3bdf12232d495ca7d4d40f47b4bc157c",tooltip=" "];
+  Node5 -> Node5 [id="edge7_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node18 [id="edge8_Node000003_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="memory_stream_close",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a197f1a3bb4e2619678651c6b95d5bb0b",tooltip=" "];
+  Node3 -> Node19 [id="edge9_Node000003_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="new_memory_stream",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#ad887ba62210690cef00695ea15c39a12",tooltip=" "];
+  Node2 -> Node20 [id="edge10_Node000002_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="read_lwfn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a71a282749af0a4d1df97d8f20d86ab04",tooltip=" "];
+  Node1 -> Node21 [id="edge11_Node000001_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="FT_New_Face_From_SFNT",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#aa20cd5e3c2679dd37a145024609d33bd",tooltip=" "];
+  Node21 -> Node3 [id="edge12_Node000021_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node22 [id="edge13_Node000001_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node22 [id="Node000022",label="make_lwfn_spec",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a3833069c0430016b7d9d5bbd257d97ce",tooltip=" "];
+  Node22 -> Node23 [id="edge14_Node000022_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="get_file_location",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a38da86a43f023888700530ef3c5aa485",tooltip=" "];
+  Node1 -> Node24 [id="edge15_Node000001_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="parse_fond",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a91106e1846020d59d7e97ccfe5d78efa",tooltip=" "];
+  Node24 -> Node25 [id="edge16_Node000024_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="create_lwfn_name",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a6bc9c51e3148c32107042564026be296",tooltip=" "];
+}

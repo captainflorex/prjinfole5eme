@@ -1,0 +1,15 @@
+digraph "cid_size_get_globals_funcs"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="cid_size_get_globals\l_funcs",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="cid_size_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cidobjs_8c.html#a70055a6e76caa9ce7e58cb7cab002af5",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="cid_size_reset",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cidobjs_8c.html#a5668623060c8fe79a5144102956a9f59",tooltip=" "];
+  Node3 -> Node3 [id="edge4_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

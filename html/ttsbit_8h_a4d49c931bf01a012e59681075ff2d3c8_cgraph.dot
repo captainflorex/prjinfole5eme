@@ -1,0 +1,32 @@
+digraph "tt_face_load_sbit_image"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="tt_face_load_sbit_image",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="crop_bitmap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#affe64058234892f99fdff1b2cb6bcf4f",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="find_sbit_image",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#abf0d60f666c38d1635364545eee6023f",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="find_sbit_range",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#a1faf4ee7d14c2695ffa41e7ac479c5a7",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Load_SBit_Image",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#aea8f97eafd1bab903188326d29eb0786",tooltip=" "];
+  Node5 -> Node4 [id="edge5_Node000005_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node6 [id="edge6_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_Stream_Skip",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstream_8c.html#af8c7f7371554f4eb30c7aa56ded8078a",tooltip=" "];
+  Node6 -> Node7 [id="edge7_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_Stream_Seek",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstream_8c.html#adaaeed4eea8beadd5ae9a5493b340890",tooltip=" "];
+  Node7 -> Node7 [id="edge8_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node6 [id="edge9_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node5 [id="edge10_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node8 [id="edge11_Node000005_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="load_sbit_metrics",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#aad7f5b00c514e90c357b3acc71fa8326",tooltip=" "];
+  Node5 -> Node9 [id="edge12_Node000005_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Load_SBit_Single",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#a2616f29f071fa42a32d9f1722ba0d501",tooltip=" "];
+  Node9 -> Node10 [id="edge13_Node000009_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="blit_sbit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#aed61d2ae17d2ae49985e174d5bab239c",tooltip=" "];
+  Node1 -> Node1 [id="edge14_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+}

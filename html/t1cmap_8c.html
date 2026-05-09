@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/psaux/t1cmap.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t1cmap_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier t1cmap.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="t1cmap_8h_source.html">t1cmap.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de t1cmap.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2psaux_2t1cmap_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2psaux_2t1cmap_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="t1cmap_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a8a768bd79cbdc9eb829e788f365d4f09" id="r_a8a768bd79cbdc9eb829e788f365d4f09"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8a768bd79cbdc9eb829e788f365d4f09">t1_cmap_std_init</a> (<a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a> cmap, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> is_expert)</td></tr>
+<tr class="memitem:aa858efbbaf21ff7108380a858180c753" id="r_aa858efbbaf21ff7108380a858180c753"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa858efbbaf21ff7108380a858180c753">t1_cmap_std_done</a> (<a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a> cmap)</td></tr>
+<tr class="memitem:a22bf758e07b5c475979596479d9fb943" id="r_a22bf758e07b5c475979596479d9fb943"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a22bf758e07b5c475979596479d9fb943">t1_cmap_std_char_index</a> (<a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a> cmap, <a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> char_code)</td></tr>
+<tr class="memitem:a713829c21dc00f0af4994e1b28285bab" id="r_a713829c21dc00f0af4994e1b28285bab"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a713829c21dc00f0af4994e1b28285bab">t1_cmap_std_char_next</a> (<a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a> cmap, <a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> *pchar_code)</td></tr>
+<tr class="memitem:aa713182bbab77f475523d3be591e8735" id="r_aa713182bbab77f475523d3be591e8735"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa713182bbab77f475523d3be591e8735">t1_cmap_standard_init</a> (<a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a> cmap)</td></tr>
+<tr class="memitem:a78e4964d07593fdcb688b22164f7246f" id="r_a78e4964d07593fdcb688b22164f7246f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a78e4964d07593fdcb688b22164f7246f">t1_cmap_expert_init</a> (<a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a> cmap)</td></tr>
+<tr class="memitem:aa22392dfcee15dce09d9bfdda8b2fb5d" id="r_aa22392dfcee15dce09d9bfdda8b2fb5d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa22392dfcee15dce09d9bfdda8b2fb5d">t1_cmap_custom_init</a> (<a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a> cmap)</td></tr>
+<tr class="memitem:aafa4f84b55bf8e3bededd047a0d7bed2" id="r_aafa4f84b55bf8e3bededd047a0d7bed2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aafa4f84b55bf8e3bededd047a0d7bed2">t1_cmap_custom_done</a> (<a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a> cmap)</td></tr>
+<tr class="memitem:afba5c360621cd01cbca9a6950e07254d" id="r_afba5c360621cd01cbca9a6950e07254d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afba5c360621cd01cbca9a6950e07254d">t1_cmap_custom_char_index</a> (<a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a> cmap, <a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> char_code)</td></tr>
+<tr class="memitem:a7f8bfa89b1afb64850e35a554f229e40" id="r_a7f8bfa89b1afb64850e35a554f229e40"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7f8bfa89b1afb64850e35a554f229e40">t1_cmap_custom_char_next</a> (<a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a> cmap, <a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> *pchar_code)</td></tr>
+<tr class="memitem:a6ecbfd623f12f719f820664b204e39fc" id="r_a6ecbfd623f12f719f820664b204e39fc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6ecbfd623f12f719f820664b204e39fc">t1_cmap_uni_pair_compare</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *pair1, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *pair2)</td></tr>
+<tr class="memitem:a7785b236f7315e24ac7b3e2fdb5c8a02" id="r_a7785b236f7315e24ac7b3e2fdb5c8a02"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7785b236f7315e24ac7b3e2fdb5c8a02">t1_cmap_unicode_init</a> (<a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a> cmap)</td></tr>
+<tr class="memitem:a31c14680d6a0e6cad1e828d8c06d93c0" id="r_a31c14680d6a0e6cad1e828d8c06d93c0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a31c14680d6a0e6cad1e828d8c06d93c0">t1_cmap_unicode_done</a> (<a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a> cmap)</td></tr>
+<tr class="memitem:a46624d40e1f6e348076b96ff79fe5fed" id="r_a46624d40e1f6e348076b96ff79fe5fed"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a46624d40e1f6e348076b96ff79fe5fed">t1_cmap_unicode_char_index</a> (<a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a> cmap, <a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> char_code)</td></tr>
+<tr class="memitem:ac19350c5e2055021ad227434b3d356b7" id="r_ac19350c5e2055021ad227434b3d356b7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac19350c5e2055021ad227434b3d356b7">t1_cmap_unicode_char_next</a> (<a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a> cmap, <a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> *pchar_code)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad01f68c41d33f9e2fa2c8151d42ca4e7" id="r_ad01f68c41d33f9e2fa2c8151d42ca4e7"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad01f68c41d33f9e2fa2c8151d42ca4e7">t1_cmap_standard_class_rec</a></td></tr>
+<tr class="memitem:a668b72f60ce09bbbc01f98d249fd284e" id="r_a668b72f60ce09bbbc01f98d249fd284e"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a668b72f60ce09bbbc01f98d249fd284e">t1_cmap_expert_class_rec</a></td></tr>
+<tr class="memitem:a7019f6f9e6b7d5ebf292a050d279ef78" id="r_a7019f6f9e6b7d5ebf292a050d279ef78"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7019f6f9e6b7d5ebf292a050d279ef78">t1_cmap_custom_class_rec</a></td></tr>
+<tr class="memitem:a8ca6ac02d71eedb2e588a2cb4ac4d4a1" id="r_a8ca6ac02d71eedb2e588a2cb4ac4d4a1"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8ca6ac02d71eedb2e588a2cb4ac4d4a1">t1_cmap_unicode_class_rec</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="afba5c360621cd01cbca9a6950e07254d" name="afba5c360621cd01cbca9a6950e07254d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba5c360621cd01cbca9a6950e07254d">&#9670;&#160;</a></span>t1_cmap_custom_char_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_custom_char_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></td>          <td class="paramname"><span class="paramname"><em>char_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_afba5c360621cd01cbca9a6950e07254d_cgraph.png" border="0" usemap="#at1cmap_8c_afba5c360621cd01cbca9a6950e07254d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_afba5c360621cd01cbca9a6950e07254d_icgraph.png" border="0" usemap="#at1cmap_8c_afba5c360621cd01cbca9a6950e07254d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a7f8bfa89b1afb64850e35a554f229e40" name="a7f8bfa89b1afb64850e35a554f229e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8bfa89b1afb64850e35a554f229e40">&#9670;&#160;</a></span>t1_cmap_custom_char_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_custom_char_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>pchar_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a7f8bfa89b1afb64850e35a554f229e40_cgraph.png" border="0" usemap="#at1cmap_8c_a7f8bfa89b1afb64850e35a554f229e40_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a7f8bfa89b1afb64850e35a554f229e40_icgraph.png" border="0" usemap="#at1cmap_8c_a7f8bfa89b1afb64850e35a554f229e40_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="aafa4f84b55bf8e3bededd047a0d7bed2" name="aafa4f84b55bf8e3bededd047a0d7bed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa4f84b55bf8e3bededd047a0d7bed2">&#9670;&#160;</a></span>t1_cmap_custom_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_custom_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aafa4f84b55bf8e3bededd047a0d7bed2_cgraph.png" border="0" usemap="#at1cmap_8c_aafa4f84b55bf8e3bededd047a0d7bed2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aafa4f84b55bf8e3bededd047a0d7bed2_icgraph.png" border="0" usemap="#at1cmap_8c_aafa4f84b55bf8e3bededd047a0d7bed2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="aa22392dfcee15dce09d9bfdda8b2fb5d" name="aa22392dfcee15dce09d9bfdda8b2fb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22392dfcee15dce09d9bfdda8b2fb5d">&#9670;&#160;</a></span>t1_cmap_custom_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_custom_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#ade372442ba33dba89b01d7242529a25b">T1_CMapCustom</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aa22392dfcee15dce09d9bfdda8b2fb5d_cgraph.png" border="0" usemap="#at1cmap_8c_aa22392dfcee15dce09d9bfdda8b2fb5d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aa22392dfcee15dce09d9bfdda8b2fb5d_icgraph.png" border="0" usemap="#at1cmap_8c_aa22392dfcee15dce09d9bfdda8b2fb5d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a78e4964d07593fdcb688b22164f7246f" name="a78e4964d07593fdcb688b22164f7246f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e4964d07593fdcb688b22164f7246f">&#9670;&#160;</a></span>t1_cmap_expert_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_expert_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a78e4964d07593fdcb688b22164f7246f_cgraph.png" border="0" usemap="#at1cmap_8c_a78e4964d07593fdcb688b22164f7246f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a78e4964d07593fdcb688b22164f7246f_icgraph.png" border="0" usemap="#at1cmap_8c_a78e4964d07593fdcb688b22164f7246f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="aa713182bbab77f475523d3be591e8735" name="aa713182bbab77f475523d3be591e8735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa713182bbab77f475523d3be591e8735">&#9670;&#160;</a></span>t1_cmap_standard_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_standard_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aa713182bbab77f475523d3be591e8735_cgraph.png" border="0" usemap="#at1cmap_8c_aa713182bbab77f475523d3be591e8735_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aa713182bbab77f475523d3be591e8735_icgraph.png" border="0" usemap="#at1cmap_8c_aa713182bbab77f475523d3be591e8735_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a22bf758e07b5c475979596479d9fb943" name="a22bf758e07b5c475979596479d9fb943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22bf758e07b5c475979596479d9fb943">&#9670;&#160;</a></span>t1_cmap_std_char_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_std_char_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></td>          <td class="paramname"><span class="paramname"><em>char_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a22bf758e07b5c475979596479d9fb943_cgraph.png" border="0" usemap="#at1cmap_8c_a22bf758e07b5c475979596479d9fb943_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a22bf758e07b5c475979596479d9fb943_icgraph.png" border="0" usemap="#at1cmap_8c_a22bf758e07b5c475979596479d9fb943_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a713829c21dc00f0af4994e1b28285bab" name="a713829c21dc00f0af4994e1b28285bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713829c21dc00f0af4994e1b28285bab">&#9670;&#160;</a></span>t1_cmap_std_char_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_std_char_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>pchar_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a713829c21dc00f0af4994e1b28285bab_cgraph.png" border="0" usemap="#at1cmap_8c_a713829c21dc00f0af4994e1b28285bab_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a713829c21dc00f0af4994e1b28285bab_icgraph.png" border="0" usemap="#at1cmap_8c_a713829c21dc00f0af4994e1b28285bab_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="aa858efbbaf21ff7108380a858180c753" name="aa858efbbaf21ff7108380a858180c753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa858efbbaf21ff7108380a858180c753">&#9670;&#160;</a></span>t1_cmap_std_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_std_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aa858efbbaf21ff7108380a858180c753_cgraph.png" border="0" usemap="#at1cmap_8c_aa858efbbaf21ff7108380a858180c753_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_aa858efbbaf21ff7108380a858180c753_icgraph.png" border="0" usemap="#at1cmap_8c_aa858efbbaf21ff7108380a858180c753_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a8a768bd79cbdc9eb829e788f365d4f09" name="a8a768bd79cbdc9eb829e788f365d4f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a768bd79cbdc9eb829e788f365d4f09">&#9670;&#160;</a></span>t1_cmap_std_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t1_cmap_std_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#aad763574d17b13cab3b35270eb120999">T1_CMapStd</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>is_expert</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a8a768bd79cbdc9eb829e788f365d4f09_icgraph.png" border="0" usemap="#at1cmap_8c_a8a768bd79cbdc9eb829e788f365d4f09_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="a6ecbfd623f12f719f820664b204e39fc" name="a6ecbfd623f12f719f820664b204e39fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ecbfd623f12f719f820664b204e39fc">&#9670;&#160;</a></span>t1_cmap_uni_pair_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_uni_pair_compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>pair1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>pair2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a6ecbfd623f12f719f820664b204e39fc_cgraph.png" border="0" usemap="#at1cmap_8c_a6ecbfd623f12f719f820664b204e39fc_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a6ecbfd623f12f719f820664b204e39fc_icgraph.png" border="0" usemap="#at1cmap_8c_a6ecbfd623f12f719f820664b204e39fc_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a46624d40e1f6e348076b96ff79fe5fed" name="a46624d40e1f6e348076b96ff79fe5fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46624d40e1f6e348076b96ff79fe5fed">&#9670;&#160;</a></span>t1_cmap_unicode_char_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_unicode_char_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></td>          <td class="paramname"><span class="paramname"><em>char_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a46624d40e1f6e348076b96ff79fe5fed_cgraph.png" border="0" usemap="#at1cmap_8c_a46624d40e1f6e348076b96ff79fe5fed_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a46624d40e1f6e348076b96ff79fe5fed_icgraph.png" border="0" usemap="#at1cmap_8c_a46624d40e1f6e348076b96ff79fe5fed_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="ac19350c5e2055021ad227434b3d356b7" name="ac19350c5e2055021ad227434b3d356b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19350c5e2055021ad227434b3d356b7">&#9670;&#160;</a></span>t1_cmap_unicode_char_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_unicode_char_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>pchar_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_ac19350c5e2055021ad227434b3d356b7_cgraph.png" border="0" usemap="#at1cmap_8c_ac19350c5e2055021ad227434b3d356b7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_ac19350c5e2055021ad227434b3d356b7_icgraph.png" border="0" usemap="#at1cmap_8c_ac19350c5e2055021ad227434b3d356b7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="a31c14680d6a0e6cad1e828d8c06d93c0" name="a31c14680d6a0e6cad1e828d8c06d93c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c14680d6a0e6cad1e828d8c06d93c0">&#9670;&#160;</a></span>t1_cmap_unicode_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_unicode_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a31c14680d6a0e6cad1e828d8c06d93c0_cgraph.png" border="0" usemap="#at1cmap_8c_a31c14680d6a0e6cad1e828d8c06d93c0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a31c14680d6a0e6cad1e828d8c06d93c0_icgraph.png" border="0" usemap="#at1cmap_8c_a31c14680d6a0e6cad1e828d8c06d93c0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="a7785b236f7315e24ac7b3e2fdb5c8a02" name="a7785b236f7315e24ac7b3e2fdb5c8a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7785b236f7315e24ac7b3e2fdb5c8a02">&#9670;&#160;</a></span>t1_cmap_unicode_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_cmap_unicode_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1cmap_8h.html#a3a91d417d14ee2a79b337c97cd79cab5">T1_CMapUnicode</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a7785b236f7315e24ac7b3e2fdb5c8a02_cgraph.png" border="0" usemap="#at1cmap_8c_a7785b236f7315e24ac7b3e2fdb5c8a02_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1cmap_8c_a7785b236f7315e24ac7b3e2fdb5c8a02_icgraph.png" border="0" usemap="#at1cmap_8c_a7785b236f7315e24ac7b3e2fdb5c8a02_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a7019f6f9e6b7d5ebf292a050d279ef78" name="a7019f6f9e6b7d5ebf292a050d279ef78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7019f6f9e6b7d5ebf292a050d279ef78">&#9670;&#160;</a></span>t1_cmap_custom_class_rec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a> t1_cmap_custom_class_rec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                         =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="t1cmap_8h.html#ac84e926a56518caa0bbf9be4b76f0080">T1_CMapCustomRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a>)     <a class="code hl_function" href="#aa22392dfcee15dce09d9bfdda8b2fb5d">t1_cmap_custom_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a>)     <a class="code hl_function" href="#aafa4f84b55bf8e3bededd047a0d7bed2">t1_cmap_custom_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a>)<a class="code hl_function" href="#afba5c360621cd01cbca9a6950e07254d">t1_cmap_custom_char_index</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a>) <a class="code hl_function" href="#a7f8bfa89b1afb64850e35a554f229e40">t1_cmap_custom_char_next</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftobjs_8h_html_a03f32530ae806f856615343e30ec97eb"><div class="ttname"><a href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a></div><div class="ttdeci">FT_UInt(* FT_CMap_CharNextFunc)(FT_CMap cmap, FT_UInt32 *achar_code)</div><div class="ttdef"><b>Definition</b> ftobjs.h:236</div></div>
+<div class="ttc" id="aftobjs_8h_html_ac6d2c6d1ad4e85083a4f344cd264b433"><div class="ttname"><a href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_CMap_InitFunc)(FT_CMap cmap, FT_Pointer init_data)</div><div class="ttdef"><b>Definition</b> ftobjs.h:225</div></div>
+<div class="ttc" id="aftobjs_8h_html_af51a5c94137ed72eda2a53539666237e"><div class="ttname"><a href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a></div><div class="ttdeci">void(* FT_CMap_DoneFunc)(FT_CMap cmap)</div><div class="ttdef"><b>Definition</b> ftobjs.h:229</div></div>
+<div class="ttc" id="aftobjs_8h_html_af706e51c7b6f6d9e9b9573fadd209904"><div class="ttname"><a href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a></div><div class="ttdeci">FT_UInt(* FT_CMap_CharIndexFunc)(FT_CMap cmap, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> ftobjs.h:232</div></div>
+<div class="ttc" id="at1cmap_8c_html_a7f8bfa89b1afb64850e35a554f229e40"><div class="ttname"><a href="#a7f8bfa89b1afb64850e35a554f229e40">t1_cmap_custom_char_next</a></div><div class="ttdeci">t1_cmap_custom_char_next(T1_CMapCustom cmap, FT_UInt32 *pchar_code)</div><div class="ttdef"><b>Definition</b> t1cmap.c:211</div></div>
+<div class="ttc" id="at1cmap_8c_html_aa22392dfcee15dce09d9bfdda8b2fb5d"><div class="ttname"><a href="#aa22392dfcee15dce09d9bfdda8b2fb5d">t1_cmap_custom_init</a></div><div class="ttdeci">t1_cmap_custom_init(T1_CMapCustom cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:169</div></div>
+<div class="ttc" id="at1cmap_8c_html_aafa4f84b55bf8e3bededd047a0d7bed2"><div class="ttname"><a href="#aafa4f84b55bf8e3bededd047a0d7bed2">t1_cmap_custom_done</a></div><div class="ttdeci">t1_cmap_custom_done(T1_CMapCustom cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:187</div></div>
+<div class="ttc" id="at1cmap_8c_html_afba5c360621cd01cbca9a6950e07254d"><div class="ttname"><a href="#afba5c360621cd01cbca9a6950e07254d">t1_cmap_custom_char_index</a></div><div class="ttdeci">t1_cmap_custom_char_index(T1_CMapCustom cmap, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> t1cmap.c:196</div></div>
+<div class="ttc" id="at1cmap_8h_html_ac84e926a56518caa0bbf9be4b76f0080"><div class="ttname"><a href="t1cmap_8h.html#ac84e926a56518caa0bbf9be4b76f0080">T1_CMapCustomRec</a></div><div class="ttdeci">struct T1_CMapCustomRec_ T1_CMapCustomRec</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a668b72f60ce09bbbc01f98d249fd284e" name="a668b72f60ce09bbbc01f98d249fd284e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668b72f60ce09bbbc01f98d249fd284e">&#9670;&#160;</a></span>t1_cmap_expert_class_rec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a> t1_cmap_expert_class_rec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                         =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="t1cmap_8h.html#a72898a8dafb650ef88089beee1129cce">T1_CMapStdRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a>)     <a class="code hl_function" href="#a78e4964d07593fdcb688b22164f7246f">t1_cmap_expert_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a>)     <a class="code hl_function" href="#aa858efbbaf21ff7108380a858180c753">t1_cmap_std_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a>)<a class="code hl_function" href="#a22bf758e07b5c475979596479d9fb943">t1_cmap_std_char_index</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a>) <a class="code hl_function" href="#a713829c21dc00f0af4994e1b28285bab">t1_cmap_std_char_next</a></div>
+<div class="line">}</div>
+<div class="ttc" id="at1cmap_8c_html_a22bf758e07b5c475979596479d9fb943"><div class="ttname"><a href="#a22bf758e07b5c475979596479d9fb943">t1_cmap_std_char_index</a></div><div class="ttdeci">t1_cmap_std_char_index(T1_CMapStd cmap, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> t1cmap.c:61</div></div>
+<div class="ttc" id="at1cmap_8c_html_a713829c21dc00f0af4994e1b28285bab"><div class="ttname"><a href="#a713829c21dc00f0af4994e1b28285bab">t1_cmap_std_char_next</a></div><div class="ttdeci">t1_cmap_std_char_next(T1_CMapStd cmap, FT_UInt32 *pchar_code)</div><div class="ttdef"><b>Definition</b> t1cmap.c:97</div></div>
+<div class="ttc" id="at1cmap_8c_html_a78e4964d07593fdcb688b22164f7246f"><div class="ttname"><a href="#a78e4964d07593fdcb688b22164f7246f">t1_cmap_expert_init</a></div><div class="ttdeci">t1_cmap_expert_init(T1_CMapStd cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:141</div></div>
+<div class="ttc" id="at1cmap_8c_html_aa858efbbaf21ff7108380a858180c753"><div class="ttname"><a href="#aa858efbbaf21ff7108380a858180c753">t1_cmap_std_done</a></div><div class="ttdeci">t1_cmap_std_done(T1_CMapStd cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:51</div></div>
+<div class="ttc" id="at1cmap_8h_html_a72898a8dafb650ef88089beee1129cce"><div class="ttname"><a href="t1cmap_8h.html#a72898a8dafb650ef88089beee1129cce">T1_CMapStdRec</a></div><div class="ttdeci">struct T1_CMapStdRec_ T1_CMapStdRec</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad01f68c41d33f9e2fa2c8151d42ca4e7" name="ad01f68c41d33f9e2fa2c8151d42ca4e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01f68c41d33f9e2fa2c8151d42ca4e7">&#9670;&#160;</a></span>t1_cmap_standard_class_rec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a> t1_cmap_standard_class_rec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                           =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="t1cmap_8h.html#a72898a8dafb650ef88089beee1129cce">T1_CMapStdRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a>)     <a class="code hl_function" href="#aa713182bbab77f475523d3be591e8735">t1_cmap_standard_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a>)     <a class="code hl_function" href="#aa858efbbaf21ff7108380a858180c753">t1_cmap_std_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a>)<a class="code hl_function" href="#a22bf758e07b5c475979596479d9fb943">t1_cmap_std_char_index</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a>) <a class="code hl_function" href="#a713829c21dc00f0af4994e1b28285bab">t1_cmap_std_char_next</a></div>
+<div class="line">}</div>
+<div class="ttc" id="at1cmap_8c_html_aa713182bbab77f475523d3be591e8735"><div class="ttname"><a href="#aa713182bbab77f475523d3be591e8735">t1_cmap_standard_init</a></div><div class="ttdeci">t1_cmap_standard_init(T1_CMapStd cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:121</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ca6ac02d71eedb2e588a2cb4ac4d4a1" name="a8ca6ac02d71eedb2e588a2cb4ac4d4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca6ac02d71eedb2e588a2cb4ac4d4a1">&#9670;&#160;</a></span>t1_cmap_unicode_class_rec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a> t1_cmap_unicode_class_rec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                          =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="t1cmap_8h.html#a43431475d9d73516ab27e48ca1b73ae4">T1_CMapUnicodeRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a>)     <a class="code hl_function" href="#a7785b236f7315e24ac7b3e2fdb5c8a02">t1_cmap_unicode_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a>)     <a class="code hl_function" href="#a31c14680d6a0e6cad1e828d8c06d93c0">t1_cmap_unicode_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a>)<a class="code hl_function" href="#a46624d40e1f6e348076b96ff79fe5fed">t1_cmap_unicode_char_index</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a>) <a class="code hl_function" href="#ac19350c5e2055021ad227434b3d356b7">t1_cmap_unicode_char_next</a></div>
+<div class="line">}</div>
+<div class="ttc" id="at1cmap_8c_html_a31c14680d6a0e6cad1e828d8c06d93c0"><div class="ttname"><a href="#a31c14680d6a0e6cad1e828d8c06d93c0">t1_cmap_unicode_done</a></div><div class="ttdeci">t1_cmap_unicode_done(T1_CMapUnicode cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:350</div></div>
+<div class="ttc" id="at1cmap_8c_html_a46624d40e1f6e348076b96ff79fe5fed"><div class="ttname"><a href="#a46624d40e1f6e348076b96ff79fe5fed">t1_cmap_unicode_char_index</a></div><div class="ttdeci">t1_cmap_unicode_char_index(T1_CMapUnicode cmap, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> t1cmap.c:361</div></div>
+<div class="ttc" id="at1cmap_8c_html_a7785b236f7315e24ac7b3e2fdb5c8a02"><div class="ttname"><a href="#a7785b236f7315e24ac7b3e2fdb5c8a02">t1_cmap_unicode_init</a></div><div class="ttdeci">t1_cmap_unicode_init(T1_CMapUnicode cmap)</div><div class="ttdef"><b>Definition</b> t1cmap.c:277</div></div>
+<div class="ttc" id="at1cmap_8c_html_ac19350c5e2055021ad227434b3d356b7"><div class="ttname"><a href="#ac19350c5e2055021ad227434b3d356b7">t1_cmap_unicode_char_next</a></div><div class="ttdeci">t1_cmap_unicode_char_next(T1_CMapUnicode cmap, FT_UInt32 *pchar_code)</div><div class="ttdef"><b>Definition</b> t1cmap.c:388</div></div>
+<div class="ttc" id="at1cmap_8h_html_a43431475d9d73516ab27e48ca1b73ae4"><div class="ttname"><a href="t1cmap_8h.html#a43431475d9d73516ab27e48ca1b73ae4">T1_CMapUnicodeRec</a></div><div class="ttdeci">struct T1_CMapUnicodeRec_ T1_CMapUnicodeRec</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_94c7abbf20057b94b7cab758e0159797.html">psaux</a></li><li class="navelem"><a href="t1cmap_8c.html">t1cmap.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

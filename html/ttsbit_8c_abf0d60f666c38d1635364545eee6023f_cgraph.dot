@@ -1,0 +1,11 @@
+digraph "find_sbit_image"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="find_sbit_image",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="find_sbit_range",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttsbit_8c.html#a1faf4ee7d14c2695ffa41e7ac479c5a7",tooltip=" "];
+}

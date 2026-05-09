@@ -1,0 +1,219 @@
+\doxysection{Référence du fichier src/\+sauvegarde.h}
+\hypertarget{src_2sauvegarde_8h}{}\label{src_2sauvegarde_8h}\index{src/sauvegarde.h@{src/sauvegarde.h}}
+{\ttfamily \+\#include "{}entites.\+h"{}}\newline
+Graphe des dépendances par inclusion de sauvegarde.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{src_2sauvegarde_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{src_2sauvegarde_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{src_2sauvegarde_8h_a3a4b199f7550c3126a16bc4c9d29de15}{FICHIER\+\_\+\+SAUVEGARDE}}~"{}sauvegarde.\+txt"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779}{sauvegarde\+\_\+ecrire}} (const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+int \doxymbox{\hyperlink{src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996}{sauvegarde\+\_\+lire}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+int \doxymbox{\hyperlink{src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5}{sauvegarde\+\_\+existe}} (const char \texorpdfstring{$\ast$}{*}pseudo)
+\item 
+int \doxymbox{\hyperlink{src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868}{sauvegarde\+\_\+lister}} (char noms\+[$\,$]\+\+[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\+\_\+\+LEN}}]\+, int max)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{src_2sauvegarde_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{src_2sauvegarde_8h_a3a4b199f7550c3126a16bc4c9d29de15}\index{sauvegarde.h@{sauvegarde.h}!FICHIER\_SAUVEGARDE@{FICHIER\_SAUVEGARDE}}
+\index{FICHIER\_SAUVEGARDE@{FICHIER\_SAUVEGARDE}!sauvegarde.h@{sauvegarde.h}}
+\doxysubsubsection{\texorpdfstring{FICHIER\_SAUVEGARDE}{FICHIER\_SAUVEGARDE}}
+{\footnotesize\ttfamily \label{src_2sauvegarde_8h_a3a4b199f7550c3126a16bc4c9d29de15} 
+\+\#define FICHIER\+\_\+\+SAUVEGARDE~"{}sauvegarde.\+txt"{}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2sauvegarde_8h_source_l00006}{6}} du fichier \doxymbox{\hyperlink{src_2sauvegarde_8h_source}{sauvegarde.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{src_2sauvegarde_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779}\index{sauvegarde.h@{sauvegarde.h}!sauvegarde\_ecrire@{sauvegarde\_ecrire}}
+\index{sauvegarde\_ecrire@{sauvegarde\_ecrire}!sauvegarde.h@{sauvegarde.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarde\_ecrire()}{sauvegarde\_ecrire()}}
+{\footnotesize\ttfamily \label{src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779} 
+void sauvegarde\+\_\+ecrire (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{sauvegarde_8c_source_l00014}{14}} du fichier \doxymbox{\hyperlink{sauvegarde_8c_source}{sauvegarde.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ fichier[64];}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ fichier,\ \textcolor{keyword}{sizeof}(fichier));}
+\DoxyCodeLine{00017\ \ \ \ \ FILE\ *f\ =\ fopen(fichier,\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00019\ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}\%s\(\backslash\)n\%d\(\backslash\)n\%d\(\backslash\)n"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}});}
+\DoxyCodeLine{00020\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5}\index{sauvegarde.h@{sauvegarde.h}!sauvegarde\_existe@{sauvegarde\_existe}}
+\index{sauvegarde\_existe@{sauvegarde\_existe}!sauvegarde.h@{sauvegarde.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarde\_existe()}{sauvegarde\_existe()}}
+{\footnotesize\ttfamily \label{src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5} 
+int sauvegarde\+\_\+existe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pseudo}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{sauvegarde_8c_source_l00040}{40}} du fichier \doxymbox{\hyperlink{sauvegarde_8c_source}{sauvegarde.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{char}\ fichier[64];}
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(pseudo,\ fichier,\ \textcolor{keyword}{sizeof}(fichier));}
+\DoxyCodeLine{00043\ \ \ \ \ FILE\ *f\ =\ fopen(fichier,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996}\index{sauvegarde.h@{sauvegarde.h}!sauvegarde\_lire@{sauvegarde\_lire}}
+\index{sauvegarde\_lire@{sauvegarde\_lire}!sauvegarde.h@{sauvegarde.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarde\_lire()}{sauvegarde\_lire()}}
+{\footnotesize\ttfamily \label{src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996} 
+int sauvegarde\+\_\+lire (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{sauvegarde_8c_source_l00023}{23}} du fichier \doxymbox{\hyperlink{sauvegarde_8c_source}{sauvegarde.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{char}\ fichier[64];}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ fichier,\ \textcolor{keyword}{sizeof}(fichier));}
+\DoxyCodeLine{00026\ \ \ \ \ FILE\ *f\ =\ fopen(fichier,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{char}\ pseudo[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}];}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \ score,\ niveau;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (fscanf(f,\ \textcolor{stringliteral}{"{}\%49s\(\backslash\)n\%d\(\backslash\)n\%d\(\backslash\)n"{}},\ pseudo,\ \&score,\ \&niveau)\ !=\ 3)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ fclose(f);\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ strncpy(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ pseudo,\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{00034\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ =\ score;}
+\DoxyCodeLine{00035\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ \ \ \ \ \ \ =\ niveau;}
+\DoxyCodeLine{00036\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868}\index{sauvegarde.h@{sauvegarde.h}!sauvegarde\_lister@{sauvegarde\_lister}}
+\index{sauvegarde\_lister@{sauvegarde\_lister}!sauvegarde.h@{sauvegarde.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarde\_lister()}{sauvegarde\_lister()}}
+{\footnotesize\ttfamily \label{src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868} 
+int sauvegarde\+\_\+lister (\begin{DoxyParamCaption}\item[{char}]{noms}{\+[$\,$]\+\+[\+PSEUDO\+\_\+\+LEN]\+, }\item[{int}]{max}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{sauvegarde_8c_source_l00049}{49}} du fichier \doxymbox{\hyperlink{sauvegarde_8c_source}{sauvegarde.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ WIN32\_FIND\_DATA\ fd;}
+\DoxyCodeLine{00051\ \ \ \ \ HANDLE\ h;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ h\ =\ FindFirstFileA(\textcolor{stringliteral}{"{}sauvegarde\_*.txt"{}},\ \&fd);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (h\ ==\ INVALID\_HANDLE\_VALUE)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nb\ >=\ max)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fd.dwFileAttributes\ \&\ FILE\_ATTRIBUTE\_DIRECTORY)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *debut\ =\ fd.cFileName\ +\ 11;\ \textcolor{comment}{/*\ len("{}sauvegarde\_"{})\ ==\ 11\ */}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *fin\ \ \ =\ strrchr(fd.cFileName,\ \textcolor{charliteral}{'.'});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fin\ ||\ fin\ <=\ debut)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ (int)(fin\ -\/\ debut);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (len\ <=\ 0\ ||\ len\ >=\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ strncpy(noms[nb],\ debut,\ len);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ noms[nb][len]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ nb++;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (FindNextFileA(h,\ \&fd)\ !=\ 0);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ FindClose(h);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ nb;}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868_icgraph}
+\end{center}
+\end{figure}

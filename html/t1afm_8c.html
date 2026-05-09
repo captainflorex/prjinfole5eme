@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/type1/t1afm.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t1afm_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier t1afm.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="t1afm_8h_source.html">t1afm.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de t1afm.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2type1_2t1afm_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2type1_2t1afm_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="t1afm_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_t1afm</td></tr>
+<tr class="memitem:a23ed42405967f105d0884100b081062a" id="r_a23ed42405967f105d0884100b081062a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a23ed42405967f105d0884100b081062a">IS_KERN_PAIR</a>(p)</td></tr>
+<tr class="memitem:a4b278ae5554f29904ca8505922aba5a3" id="r_a4b278ae5554f29904ca8505922aba5a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4b278ae5554f29904ca8505922aba5a3">IS_ALPHANUM</a>(c)</td></tr>
+<tr class="memitem:ae67cccc9caff88ab82093e50a8363557" id="r_ae67cccc9caff88ab82093e50a8363557"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae67cccc9caff88ab82093e50a8363557">KERN_INDEX</a>(g1,  g2)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a180d3b4f2ad7cb8fc9d211d4cf38f62a" id="r_a180d3b4f2ad7cb8fc9d211d4cf38f62a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a180d3b4f2ad7cb8fc9d211d4cf38f62a">T1_Done_AFM</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="t1afm_8h.html#ab023a8a9848a772cfea363cafa6c2bb6">T1_AFM</a> *afm)</td></tr>
+<tr class="memitem:a8851feacd0e161d3fa3593b6e3df8d5c" id="r_a8851feacd0e161d3fa3593b6e3df8d5c"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8851feacd0e161d3fa3593b6e3df8d5c">afm_atoindex</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **start, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit, <a class="el" href="t1types_8h.html#a67742e9bbcad8c2e36097597c28dd496">T1_Font</a> type1)</td></tr>
+<tr class="memitem:a5edca28f1d51204721b18fa53d1a0979" id="r_a5edca28f1d51204721b18fa53d1a0979"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a5edca28f1d51204721b18fa53d1a0979">afm_atoi</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **start, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit)</td></tr>
+<tr class="memitem:a82db840a23ddeaed89212e5ff333c9ff" id="r_a82db840a23ddeaed89212e5ff333c9ff"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a82db840a23ddeaed89212e5ff333c9ff">compare_kern_pairs</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *a, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *b)</td></tr>
+<tr class="memitem:a0a31a1ef97907d6cb9af20b1e3d45eea" id="r_a0a31a1ef97907d6cb9af20b1e3d45eea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0a31a1ef97907d6cb9af20b1e3d45eea">T1_Read_AFM</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> t1_face, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:ab41233cc5b217ee146bf0c057f261970" id="r_ab41233cc5b217ee146bf0c057f261970"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab41233cc5b217ee146bf0c057f261970">T1_Get_Kerning</a> (<a class="el" href="t1afm_8h.html#ab023a8a9848a772cfea363cafa6c2bb6">T1_AFM</a> *afm, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> glyph1, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> glyph2, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *kerning)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_t1afm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b278ae5554f29904ca8505922aba5a3" name="a4b278ae5554f29904ca8505922aba5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b278ae5554f29904ca8505922aba5a3">&#9670;&#160;</a></span>IS_ALPHANUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_ALPHANUM</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( <a class="code hl_define" href="ftstdlib_8h.html#ac124c6ed7204f2719850ff7ce249b90d">ft_isalnum</a>( c ) || \</div>
+<div class="line">c == <span class="charliteral">&#39;_&#39;</span>        || \</div>
+<div class="line">c == <span class="charliteral">&#39;.&#39;</span>        )</div>
+<div class="ttc" id="aftstdlib_8h_html_ac124c6ed7204f2719850ff7ce249b90d"><div class="ttname"><a href="ftstdlib_8h.html#ac124c6ed7204f2719850ff7ce249b90d">ft_isalnum</a></div><div class="ttdeci">#define ft_isalnum</div><div class="ttdef"><b>Definition</b> ftstdlib.h:76</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a23ed42405967f105d0884100b081062a" name="a23ed42405967f105d0884100b081062a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ed42405967f105d0884100b081062a">&#9670;&#160;</a></span>IS_KERN_PAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_KERN_PAIR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( p[0] == <span class="charliteral">&#39;K&#39;</span> &amp;&amp; p[1] == <span class="charliteral">&#39;P&#39;</span> )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae67cccc9caff88ab82093e50a8363557" name="ae67cccc9caff88ab82093e50a8363557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67cccc9caff88ab82093e50a8363557">&#9670;&#160;</a></span>KERN_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KERN_INDEX</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (<a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>)g1 &lt;&lt; 16 ) | g2 )</div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a5edca28f1d51204721b18fa53d1a0979" name="a5edca28f1d51204721b18fa53d1a0979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5edca28f1d51204721b18fa53d1a0979">&#9670;&#160;</a></span>afm_atoi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int afm_atoi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a5edca28f1d51204721b18fa53d1a0979_icgraph.png" border="0" usemap="#at1afm_8c_a5edca28f1d51204721b18fa53d1a0979_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a8851feacd0e161d3fa3593b6e3df8d5c" name="a8851feacd0e161d3fa3593b6e3df8d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8851feacd0e161d3fa3593b6e3df8d5c">&#9670;&#160;</a></span>afm_atoindex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> afm_atoindex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a67742e9bbcad8c2e36097597c28dd496">T1_Font</a></td>          <td class="paramname"><span class="paramname"><em>type1</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a8851feacd0e161d3fa3593b6e3df8d5c_icgraph.png" border="0" usemap="#at1afm_8c_a8851feacd0e161d3fa3593b6e3df8d5c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a82db840a23ddeaed89212e5ff333c9ff" name="a82db840a23ddeaed89212e5ff333c9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82db840a23ddeaed89212e5ff333c9ff">&#9670;&#160;</a></span>compare_kern_pairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">compare_kern_pairs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a82db840a23ddeaed89212e5ff333c9ff_cgraph.png" border="0" usemap="#at1afm_8c_a82db840a23ddeaed89212e5ff333c9ff_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a82db840a23ddeaed89212e5ff333c9ff_icgraph.png" border="0" usemap="#at1afm_8c_a82db840a23ddeaed89212e5ff333c9ff_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a180d3b4f2ad7cb8fc9d211d4cf38f62a" name="a180d3b4f2ad7cb8fc9d211d4cf38f62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180d3b4f2ad7cb8fc9d211d4cf38f62a">&#9670;&#160;</a></span>T1_Done_AFM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1_Done_AFM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t1afm_8h.html#ab023a8a9848a772cfea363cafa6c2bb6">T1_AFM</a> *</td>          <td class="paramname"><span class="paramname"><em>afm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a180d3b4f2ad7cb8fc9d211d4cf38f62a_cgraph.png" border="0" usemap="#at1afm_8c_a180d3b4f2ad7cb8fc9d211d4cf38f62a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a180d3b4f2ad7cb8fc9d211d4cf38f62a_icgraph.png" border="0" usemap="#at1afm_8c_a180d3b4f2ad7cb8fc9d211d4cf38f62a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ab41233cc5b217ee146bf0c057f261970" name="ab41233cc5b217ee146bf0c057f261970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41233cc5b217ee146bf0c057f261970">&#9670;&#160;</a></span>T1_Get_Kerning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1_Get_Kerning </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1afm_8h.html#ab023a8a9848a772cfea363cafa6c2bb6">T1_AFM</a> *</td>          <td class="paramname"><span class="paramname"><em>afm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>kerning</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_ab41233cc5b217ee146bf0c057f261970_cgraph.png" border="0" usemap="#at1afm_8c_ab41233cc5b217ee146bf0c057f261970_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_ab41233cc5b217ee146bf0c057f261970_icgraph.png" border="0" usemap="#at1afm_8c_ab41233cc5b217ee146bf0c057f261970_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a0a31a1ef97907d6cb9af20b1e3d45eea" name="a0a31a1ef97907d6cb9af20b1e3d45eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a31a1ef97907d6cb9af20b1e3d45eea">&#9670;&#160;</a></span>T1_Read_AFM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1_Read_AFM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>t1_face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a0a31a1ef97907d6cb9af20b1e3d45eea_cgraph.png" border="0" usemap="#at1afm_8c_a0a31a1ef97907d6cb9af20b1e3d45eea_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1afm_8c_a0a31a1ef97907d6cb9af20b1e3d45eea_icgraph.png" border="0" usemap="#at1afm_8c_a0a31a1ef97907d6cb9af20b1e3d45eea_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_0dd962a48e96800d6adc8e0bba6ee8c4.html">type1</a></li><li class="navelem"><a href="t1afm_8c.html">t1afm.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

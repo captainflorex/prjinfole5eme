@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/gzip/infblock.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('infblock_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">infblock.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="infblock_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* infblock.h -- header to use infblock.c</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (C) 1995-2002 Mark Adler</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * For conditions of distribution and use, see copyright notice in zlib.h</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/* WARNING: this file should *not* be used by applications. It is</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">   part of the implementation of the compression library and is</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">   subject to change. Applications should only use zlib.h.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef _INFBLOCK_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define _INFBLOCK_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">struct </span><a class="code hl_struct" href="structinflate__blocks__state.html">inflate_blocks_state</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structinflate__blocks__state.html">inflate_blocks_state</a> <a class="code hl_define" href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a> <a class="code hl_typedef" href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">inflate_blocks_statef</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="infblock_8h.html#abf1c942d3deac7f9ae3b3101033d5083">   17</a></span><a class="code hl_define" href="zutil_8h.html#a08023ea6765c99d60a6a3840cd07156e">local</a>  <a class="code hl_typedef" href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">inflate_blocks_statef</a> * <a class="code hl_function" href="infblock_8c.html#afe26bb275032192f9bed8ffcd45ab2f9">inflate_blocks_new</a> <a class="code hl_define" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_typedef" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> z,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    check_func c,               <span class="comment">/* check function */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_typedef" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> w));                   <span class="comment">/* window size */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="infblock_8h.html#a347a6971c5f0728cac19d708f5004cda">   22</a></span><a class="code hl_define" href="zutil_8h.html#a08023ea6765c99d60a6a3840cd07156e">local</a>  <span class="keywordtype">int</span> <a class="code hl_function" href="infblock_8c.html#a069535e661c047289b1926eb8985b2df">inflate_blocks</a> <a class="code hl_define" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_typedef" href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">inflate_blocks_statef</a> *,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_typedef" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> ,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">int</span>));                      <span class="comment">/* initial return code */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="infblock_8h.html#a1e33cdddc528c5f55e8429b7916291e1">   27</a></span><a class="code hl_define" href="zutil_8h.html#a08023ea6765c99d60a6a3840cd07156e">local</a>  <span class="keywordtype">void</span> <a class="code hl_function" href="infblock_8c.html#ac1a98afb193485db9fbcfa8334e30c9c">inflate_blocks_reset</a> <a class="code hl_define" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_typedef" href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">inflate_blocks_statef</a> *,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_typedef" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a> ,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_typedef" href="zconf_8h.html#a0426a5a0ed418ec4ae15af8281c64254">uLongf</a> *));                  <span class="comment">/* check value on output */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="infblock_8h.html#a7d57092e02b427c53526176374e7b372">   32</a></span><a class="code hl_define" href="zutil_8h.html#a08023ea6765c99d60a6a3840cd07156e">local</a>  <span class="keywordtype">int</span> <a class="code hl_function" href="infblock_8c.html#a77b40c2d205ee4e475dc463d186a571c">inflate_blocks_free</a> <a class="code hl_define" href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a>((</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_typedef" href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">inflate_blocks_statef</a> *,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_typedef" href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a>));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">/* _INFBLOCK_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ainfblock_8c_html_a069535e661c047289b1926eb8985b2df"><div class="ttname"><a href="infblock_8c.html#a069535e661c047289b1926eb8985b2df">inflate_blocks</a></div><div class="ttdeci">local int inflate_blocks(inflate_blocks_statef *s, z_streamp z, int r)</div><div class="ttdef"><b>Definition</b> infblock.c:119</div></div>
+<div class="ttc" id="ainfblock_8c_html_a77b40c2d205ee4e475dc463d186a571c"><div class="ttname"><a href="infblock_8c.html#a77b40c2d205ee4e475dc463d186a571c">inflate_blocks_free</a></div><div class="ttdeci">local int inflate_blocks_free(inflate_blocks_statef *s, z_streamp z)</div><div class="ttdef"><b>Definition</b> infblock.c:371</div></div>
+<div class="ttc" id="ainfblock_8c_html_ac1a98afb193485db9fbcfa8334e30c9c"><div class="ttname"><a href="infblock_8c.html#ac1a98afb193485db9fbcfa8334e30c9c">inflate_blocks_reset</a></div><div class="ttdeci">local void inflate_blocks_reset(inflate_blocks_statef *s, z_streamp z, uLongf *c)</div><div class="ttdef"><b>Definition</b> infblock.c:67</div></div>
+<div class="ttc" id="ainfblock_8c_html_afe26bb275032192f9bed8ffcd45ab2f9"><div class="ttname"><a href="infblock_8c.html#afe26bb275032192f9bed8ffcd45ab2f9">inflate_blocks_new</a></div><div class="ttdeci">local inflate_blocks_statef * inflate_blocks_new(z_streamp z, check_func c, uInt w)</div><div class="ttdef"><b>Definition</b> infblock.c:88</div></div>
+<div class="ttc" id="ainfblock_8h_html_a177afbaf64cdc92f24d5396685d0c22e"><div class="ttname"><a href="infblock_8h.html#a177afbaf64cdc92f24d5396685d0c22e">inflate_blocks_statef</a></div><div class="ttdeci">struct inflate_blocks_state FAR inflate_blocks_statef</div><div class="ttdef"><b>Definition</b> infblock.h:15</div></div>
+<div class="ttc" id="astructinflate__blocks__state_html"><div class="ttname"><a href="structinflate__blocks__state.html">inflate_blocks_state</a></div><div class="ttdef"><b>Definition</b> infutil.h:28</div></div>
+<div class="ttc" id="azconf_8h_html_a0426a5a0ed418ec4ae15af8281c64254"><div class="ttname"><a href="zconf_8h.html#a0426a5a0ed418ec4ae15af8281c64254">uLongf</a></div><div class="ttdeci">uLong FAR uLongf</div><div class="ttdef"><b>Definition</b> zconf.h:224</div></div>
+<div class="ttc" id="azconf_8h_html_a87d141052bcd5ec8a80812a565c70369"><div class="ttname"><a href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a></div><div class="ttdeci">unsigned int uInt</div><div class="ttdef"><b>Definition</b> zconf.h:212</div></div>
+<div class="ttc" id="azconf_8h_html_aa6c3c093d0900e1d96d07c91b53c1b5d"><div class="ttname"><a href="zconf_8h.html#aa6c3c093d0900e1d96d07c91b53c1b5d">OF</a></div><div class="ttdeci">#define OF(args)</div><div class="ttdef"><b>Definition</b> zconf.h:137</div></div>
+<div class="ttc" id="azconf_8h_html_aef060b3456fdcc093a7210a762d5f2ed"><div class="ttname"><a href="zconf_8h.html#aef060b3456fdcc093a7210a762d5f2ed">FAR</a></div><div class="ttdeci">#define FAR</div><div class="ttdef"><b>Definition</b> zconf.h:206</div></div>
+<div class="ttc" id="azlib_8h_html_a6ede25c84d3c9f8632305866acffb1d6"><div class="ttname"><a href="zlib_8h.html#a6ede25c84d3c9f8632305866acffb1d6">z_streamp</a></div><div class="ttdeci">z_stream FAR * z_streamp</div><div class="ttdef"><b>Definition</b> zlib.h:89</div></div>
+<div class="ttc" id="azutil_8h_html_a08023ea6765c99d60a6a3840cd07156e"><div class="ttname"><a href="zutil_8h.html#a08023ea6765c99d60a6a3840cd07156e">local</a></div><div class="ttdeci">#define local</div><div class="ttdef"><b>Definition</b> zutil.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_e1b3ffecbbf501e7b3912974e971879c.html">gzip</a></li><li class="navelem"><a href="infblock_8h.html">infblock.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,2120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/src/alfont.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('alfont_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier alfont.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;allegro.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;alfont.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de alfont.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2src_2alfont_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:ALFONT_5FFONT" id="r_ALFONT_5FFONT"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a></td></tr>
+<tr class="memitem:ALFONT_5FFONT_3A_3A_5FALFONT_5FCACHED_5FGLYPH" id="r_ALFONT_5FFONT_3A_3A_5FALFONT_5FCACHED_5FGLYPH"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t_1_1___a_l_f_o_n_t___c_a_c_h_e_d___g_l_y_p_h.html">ALFONT_FONT::_ALFONT_CACHED_GLYPH</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af26616982f869c93bfa32a7a72c35d0d" id="r_af26616982f869c93bfa32a7a72c35d0d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af26616982f869c93bfa32a7a72c35d0d">_alfont_reget_fixed_sizes</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a219efdb79ad967a82ef9300c0adefd23" id="r_a219efdb79ad967a82ef9300c0adefd23"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a219efdb79ad967a82ef9300c0adefd23">_alfont_uncache_glyphs</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:ac9b511fabd060fb4ed34e0f023d41b32" id="r_ac9b511fabd060fb4ed34e0f023d41b32"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac9b511fabd060fb4ed34e0f023d41b32">_alfont_delete_glyphs</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a0666628364488a824cb42afc68e8b912" id="r_a0666628364488a824cb42afc68e8b912"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0666628364488a824cb42afc68e8b912">_alfont_cache_glyph</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int glyph_number)</td></tr>
+<tr class="memitem:a3fec666a842e064ff5bdc225e54d6787" id="r_a3fec666a842e064ff5bdc225e54d6787"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3fec666a842e064ff5bdc225e54d6787">_alfont_new_cache_glyph</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a0d8fd92bea789910bf30c10c80360b40" id="r_a0d8fd92bea789910bf30c10c80360b40"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0d8fd92bea789910bf30c10c80360b40">alfont_set_font_size</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int h)</td></tr>
+<tr class="memitem:ace2d4c151e7507381084374f900f3234" id="r_ace2d4c151e7507381084374f900f3234"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ace2d4c151e7507381084374f900f3234">alfont_get_font_height</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a9a72e9d31091fb7ccfe9366effe99f6d" id="r_a9a72e9d31091fb7ccfe9366effe99f6d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a72e9d31091fb7ccfe9366effe99f6d">alfont_exit</a> (void)</td></tr>
+<tr class="memitem:ab9ea80fe0745e4ccac48da9c40233950" id="r_ab9ea80fe0745e4ccac48da9c40233950"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab9ea80fe0745e4ccac48da9c40233950">alfont_init</a> (void)</td></tr>
+<tr class="memitem:a17a4a78f9ec07c4f8108992ad88e0e2f" id="r_a17a4a78f9ec07c4f8108992ad88e0e2f"><td class="memItemLeft"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a17a4a78f9ec07c4f8108992ad88e0e2f">alfont_load_font</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filepathname)</td></tr>
+<tr class="memitem:a378d14420266472d23db54ab6e5b2b5a" id="r_a378d14420266472d23db54ab6e5b2b5a"><td class="memItemLeft"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a378d14420266472d23db54ab6e5b2b5a">alfont_load_font_from_mem</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *data, int data_len)</td></tr>
+<tr class="memitem:ae5b049f810948137c21a35109f952aba" id="r_ae5b049f810948137c21a35109f952aba"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae5b049f810948137c21a35109f952aba">alfont_text_mode</a> (int mode)</td></tr>
+<tr class="memitem:ac8c7cf2fd9d4a77a33674550cc37ffa6" id="r_ac8c7cf2fd9d4a77a33674550cc37ffa6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8c7cf2fd9d4a77a33674550cc37ffa6">alfont_destroy_font</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:ae65d558a4f09bf1e9fc752895134950f" id="r_ae65d558a4f09bf1e9fc752895134950f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae65d558a4f09bf1e9fc752895134950f">alfont_textout_aa</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color)</td></tr>
+<tr class="memitem:a20cd5b5cf5f24216bc18ede9b34334f3" id="r_a20cd5b5cf5f24216bc18ede9b34334f3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20cd5b5cf5f24216bc18ede9b34334f3">alfont_textout_aa_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color, int backg)</td></tr>
+<tr class="memitem:a4ea040f05cb15633ed4b7726920c558b" id="r_a4ea040f05cb15633ed4b7726920c558b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ea040f05cb15633ed4b7726920c558b">alfont_textout</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color)</td></tr>
+<tr class="memitem:ae026835dbcb2be41a2f58ba48584f1f0" id="r_ae026835dbcb2be41a2f58ba48584f1f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae026835dbcb2be41a2f58ba48584f1f0">alfont_textout_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color, int backg)</td></tr>
+<tr class="memitem:ac6025cf2e39d023484501772c08fe76e" id="r_ac6025cf2e39d023484501772c08fe76e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac6025cf2e39d023484501772c08fe76e">alfont_text_height</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:abe0ef90b0b723ec8f4dee4427c3c403e" id="r_abe0ef90b0b723ec8f4dee4427c3c403e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abe0ef90b0b723ec8f4dee4427c3c403e">alfont_text_length</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *str)</td></tr>
+<tr class="memitem:a31a515955197f5354116c26a64940671" id="r_a31a515955197f5354116c26a64940671"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a31a515955197f5354116c26a64940671">alfont_textout_centre_aa</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color)</td></tr>
+<tr class="memitem:a3aa8bde851e871445c6b9d68bc4d3838" id="r_a3aa8bde851e871445c6b9d68bc4d3838"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3aa8bde851e871445c6b9d68bc4d3838">alfont_textout_centre_aa_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color, int backg)</td></tr>
+<tr class="memitem:a677287eef235470df828ef37858ccf04" id="r_a677287eef235470df828ef37858ccf04"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a677287eef235470df828ef37858ccf04">alfont_textout_centre</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color)</td></tr>
+<tr class="memitem:ae5ff8dcf379aef6ef49dcf3fd944dbf2" id="r_ae5ff8dcf379aef6ef49dcf3fd944dbf2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae5ff8dcf379aef6ef49dcf3fd944dbf2">alfont_textout_centre_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color, int backg)</td></tr>
+<tr class="memitem:a79c1f367ab8f8add7482d29becb5ab22" id="r_a79c1f367ab8f8add7482d29becb5ab22"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a79c1f367ab8f8add7482d29becb5ab22">alfont_textout_right_aa</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color)</td></tr>
+<tr class="memitem:a06107ea0ca9a3708da9d3b108053b475" id="r_a06107ea0ca9a3708da9d3b108053b475"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a06107ea0ca9a3708da9d3b108053b475">alfont_textout_right_aa_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color, int backg)</td></tr>
+<tr class="memitem:ae2d3cc683f39d13fe86a553a8a2060f0" id="r_ae2d3cc683f39d13fe86a553a8a2060f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae2d3cc683f39d13fe86a553a8a2060f0">alfont_textout_right</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color)</td></tr>
+<tr class="memitem:a2ba9dcac3a4441bbea9e1b6fbba0c8fe" id="r_a2ba9dcac3a4441bbea9e1b6fbba0c8fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ba9dcac3a4441bbea9e1b6fbba0c8fe">alfont_textout_right_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *s, int x, int y, int color, int backg)</td></tr>
+<tr class="memitem:af002cbbd973d5aa92e98b190c7407d4b" id="r_af002cbbd973d5aa92e98b190c7407d4b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af002cbbd973d5aa92e98b190c7407d4b">alfont_textprintf</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:ab2c00d14808b6ad678db6249e47f1af1" id="r_ab2c00d14808b6ad678db6249e47f1af1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab2c00d14808b6ad678db6249e47f1af1">alfont_textprintf_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, int backg, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a159481557a55ed13a51d88a25fcb192d" id="r_a159481557a55ed13a51d88a25fcb192d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a159481557a55ed13a51d88a25fcb192d">alfont_textprintf_aa</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a875b576927463f7877545c294d174f15" id="r_a875b576927463f7877545c294d174f15"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a875b576927463f7877545c294d174f15">alfont_textprintf_aa_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, int backg, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a009aeb55b1686fa4db7d50bbf4e693de" id="r_a009aeb55b1686fa4db7d50bbf4e693de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a009aeb55b1686fa4db7d50bbf4e693de">alfont_textprintf_centre</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a29a8e966565e3ba2ed43477e39507e03" id="r_a29a8e966565e3ba2ed43477e39507e03"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a29a8e966565e3ba2ed43477e39507e03">alfont_textprintf_centre_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, int backg, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a3a872d22997571dad45f8f18fea81dbb" id="r_a3a872d22997571dad45f8f18fea81dbb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a872d22997571dad45f8f18fea81dbb">alfont_textprintf_centre_aa</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a3e979787873fa96918fff4396a401889" id="r_a3e979787873fa96918fff4396a401889"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3e979787873fa96918fff4396a401889">alfont_textprintf_centre_aa_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, int backg, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a6507d57998c4eb73a62b7b05a24594cf" id="r_a6507d57998c4eb73a62b7b05a24594cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6507d57998c4eb73a62b7b05a24594cf">alfont_textprintf_right</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a66ab48641feda6551a620779087cca76" id="r_a66ab48641feda6551a620779087cca76"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a66ab48641feda6551a620779087cca76">alfont_textprintf_right_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, int backg, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:ae844e17d3f5d2cf1eb5e09022af75695" id="r_ae844e17d3f5d2cf1eb5e09022af75695"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae844e17d3f5d2cf1eb5e09022af75695">alfont_textprintf_right_aa</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:a64f61e73635f6b5fb072d91e154ad8af" id="r_a64f61e73635f6b5fb072d91e154ad8af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a64f61e73635f6b5fb072d91e154ad8af">alfont_textprintf_right_aa_ex</a> (BITMAP *bmp, <a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int x, int y, int color, int backg, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *format,...)</td></tr>
+<tr class="memitem:ae77a0ce6a8877b30962506d452864a26" id="r_ae77a0ce6a8877b30962506d452864a26"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae77a0ce6a8877b30962506d452864a26">alfont_is_fixed_font</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a86d498dc5b8ca8f8d66381303d87c006" id="r_a86d498dc5b8ca8f8d66381303d87c006"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a86d498dc5b8ca8f8d66381303d87c006">alfont_is_scalable_font</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a1d7757be9fccb81ec91b9c7d9426958c" id="r_a1d7757be9fccb81ec91b9c7d9426958c"><td class="memItemLeft"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int *&#160;</td><td class="memItemRight"><a class="el" href="#a1d7757be9fccb81ec91b9c7d9426958c">alfont_get_available_fixed_sizes</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:adcce80f0beeee9bc1f6e91914e2ada48" id="r_adcce80f0beeee9bc1f6e91914e2ada48"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adcce80f0beeee9bc1f6e91914e2ada48">alfont_get_nof_available_fixed_sizes</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:a7c41a6640f261574ae76448e9c16bf4d" id="r_a7c41a6640f261574ae76448e9c16bf4d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7c41a6640f261574ae76448e9c16bf4d">alfont_get_char_extra_spacing</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f)</td></tr>
+<tr class="memitem:afeb82eab4c4a339446683504bf033d1d" id="r_afeb82eab4c4a339446683504bf033d1d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afeb82eab4c4a339446683504bf033d1d">alfont_set_char_extra_spacing</a> (<a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *f, int spacing)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4af5124eaf94260907310c9e898e9e54" id="r_a4af5124eaf94260907310c9e898e9e54"><td class="memItemLeft">static <a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4af5124eaf94260907310c9e898e9e54">ft_library</a></td></tr>
+<tr class="memitem:aef9c863e2dcac4819ef6983b8d515052" id="r_aef9c863e2dcac4819ef6983b8d515052"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#aef9c863e2dcac4819ef6983b8d515052">alfont_textmode</a> = 0</td></tr>
+<tr class="memitem:ab6716784fb5aef7a2eb0510a3c196e9b" id="r_ab6716784fb5aef7a2eb0510a3c196e9b"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ab6716784fb5aef7a2eb0510a3c196e9b">alfont_inited</a> = 0</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a0666628364488a824cb42afc68e8b912" name="a0666628364488a824cb42afc68e8b912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0666628364488a824cb42afc68e8b912">&#9670;&#160;</a></span>_alfont_cache_glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _alfont_cache_glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>glyph_number</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a0666628364488a824cb42afc68e8b912_cgraph.png" border="0" usemap="#aalfont_8c_a0666628364488a824cb42afc68e8b912_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a0666628364488a824cb42afc68e8b912_icgraph.png" border="0" usemap="#aalfont_8c_a0666628364488a824cb42afc68e8b912_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ac9b511fabd060fb4ed34e0f023d41b32" name="ac9b511fabd060fb4ed34e0f023d41b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b511fabd060fb4ed34e0f023d41b32">&#9670;&#160;</a></span>_alfont_delete_glyphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _alfont_delete_glyphs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ac9b511fabd060fb4ed34e0f023d41b32_cgraph.png" border="0" usemap="#aalfont_8c_ac9b511fabd060fb4ed34e0f023d41b32_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ac9b511fabd060fb4ed34e0f023d41b32_icgraph.png" border="0" usemap="#aalfont_8c_ac9b511fabd060fb4ed34e0f023d41b32_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a3fec666a842e064ff5bdc225e54d6787" name="a3fec666a842e064ff5bdc225e54d6787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fec666a842e064ff5bdc225e54d6787">&#9670;&#160;</a></span>_alfont_new_cache_glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _alfont_new_cache_glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a3fec666a842e064ff5bdc225e54d6787_icgraph.png" border="0" usemap="#aalfont_8c_a3fec666a842e064ff5bdc225e54d6787_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="af26616982f869c93bfa32a7a72c35d0d" name="af26616982f869c93bfa32a7a72c35d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26616982f869c93bfa32a7a72c35d0d">&#9670;&#160;</a></span>_alfont_reget_fixed_sizes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _alfont_reget_fixed_sizes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_af26616982f869c93bfa32a7a72c35d0d_icgraph.png" border="0" usemap="#aalfont_8c_af26616982f869c93bfa32a7a72c35d0d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a219efdb79ad967a82ef9300c0adefd23" name="a219efdb79ad967a82ef9300c0adefd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219efdb79ad967a82ef9300c0adefd23">&#9670;&#160;</a></span>_alfont_uncache_glyphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _alfont_uncache_glyphs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a219efdb79ad967a82ef9300c0adefd23_icgraph.png" border="0" usemap="#aalfont_8c_a219efdb79ad967a82ef9300c0adefd23_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ac8c7cf2fd9d4a77a33674550cc37ffa6" name="ac8c7cf2fd9d4a77a33674550cc37ffa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c7cf2fd9d4a77a33674550cc37ffa6">&#9670;&#160;</a></span>alfont_destroy_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_destroy_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ac8c7cf2fd9d4a77a33674550cc37ffa6_cgraph.png" border="0" usemap="#aalfont_8c_ac8c7cf2fd9d4a77a33674550cc37ffa6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ac8c7cf2fd9d4a77a33674550cc37ffa6_icgraph.png" border="0" usemap="#aalfont_8c_ac8c7cf2fd9d4a77a33674550cc37ffa6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a9a72e9d31091fb7ccfe9366effe99f6d" name="a9a72e9d31091fb7ccfe9366effe99f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a72e9d31091fb7ccfe9366effe99f6d">&#9670;&#160;</a></span>alfont_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_exit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a9a72e9d31091fb7ccfe9366effe99f6d_cgraph.png" border="0" usemap="#aalfont_8c_a9a72e9d31091fb7ccfe9366effe99f6d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a9a72e9d31091fb7ccfe9366effe99f6d_icgraph.png" border="0" usemap="#aalfont_8c_a9a72e9d31091fb7ccfe9366effe99f6d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a1d7757be9fccb81ec91b9c7d9426958c" name="a1d7757be9fccb81ec91b9c7d9426958c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7757be9fccb81ec91b9c7d9426958c">&#9670;&#160;</a></span>alfont_get_available_fixed_sizes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> int * alfont_get_available_fixed_sizes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a1d7757be9fccb81ec91b9c7d9426958c_cgraph.png" border="0" usemap="#aalfont_8c_a1d7757be9fccb81ec91b9c7d9426958c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a7c41a6640f261574ae76448e9c16bf4d" name="a7c41a6640f261574ae76448e9c16bf4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c41a6640f261574ae76448e9c16bf4d">&#9670;&#160;</a></span>alfont_get_char_extra_spacing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_get_char_extra_spacing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace2d4c151e7507381084374f900f3234" name="ace2d4c151e7507381084374f900f3234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace2d4c151e7507381084374f900f3234">&#9670;&#160;</a></span>alfont_get_font_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_get_font_height </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcce80f0beeee9bc1f6e91914e2ada48" name="adcce80f0beeee9bc1f6e91914e2ada48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcce80f0beeee9bc1f6e91914e2ada48">&#9670;&#160;</a></span>alfont_get_nof_available_fixed_sizes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_get_nof_available_fixed_sizes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9ea80fe0745e4ccac48da9c40233950" name="ab9ea80fe0745e4ccac48da9c40233950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ea80fe0745e4ccac48da9c40233950">&#9670;&#160;</a></span>alfont_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ab9ea80fe0745e4ccac48da9c40233950_cgraph.png" border="0" usemap="#aalfont_8c_ab9ea80fe0745e4ccac48da9c40233950_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ab9ea80fe0745e4ccac48da9c40233950_icgraph.png" border="0" usemap="#aalfont_8c_ab9ea80fe0745e4ccac48da9c40233950_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="ae77a0ce6a8877b30962506d452864a26" name="ae77a0ce6a8877b30962506d452864a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77a0ce6a8877b30962506d452864a26">&#9670;&#160;</a></span>alfont_is_fixed_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_is_fixed_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86d498dc5b8ca8f8d66381303d87c006" name="a86d498dc5b8ca8f8d66381303d87c006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d498dc5b8ca8f8d66381303d87c006">&#9670;&#160;</a></span>alfont_is_scalable_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_is_scalable_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17a4a78f9ec07c4f8108992ad88e0e2f" name="a17a4a78f9ec07c4f8108992ad88e0e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a4a78f9ec07c4f8108992ad88e0e2f">&#9670;&#160;</a></span>alfont_load_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> * alfont_load_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>filepathname</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a17a4a78f9ec07c4f8108992ad88e0e2f_cgraph.png" border="0" usemap="#aalfont_8c_a17a4a78f9ec07c4f8108992ad88e0e2f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a17a4a78f9ec07c4f8108992ad88e0e2f_icgraph.png" border="0" usemap="#aalfont_8c_a17a4a78f9ec07c4f8108992ad88e0e2f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="a378d14420266472d23db54ab6e5b2b5a" name="a378d14420266472d23db54ab6e5b2b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378d14420266472d23db54ab6e5b2b5a">&#9670;&#160;</a></span>alfont_load_font_from_mem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> * alfont_load_font_from_mem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>data_len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a378d14420266472d23db54ab6e5b2b5a_cgraph.png" border="0" usemap="#aalfont_8c_a378d14420266472d23db54ab6e5b2b5a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="afeb82eab4c4a339446683504bf033d1d" name="afeb82eab4c4a339446683504bf033d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb82eab4c4a339446683504bf033d1d">&#9670;&#160;</a></span>alfont_set_char_extra_spacing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_set_char_extra_spacing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_afeb82eab4c4a339446683504bf033d1d_icgraph.png" border="0" usemap="#aalfont_8c_afeb82eab4c4a339446683504bf033d1d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="a0d8fd92bea789910bf30c10c80360b40" name="a0d8fd92bea789910bf30c10c80360b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8fd92bea789910bf30c10c80360b40">&#9670;&#160;</a></span>alfont_set_font_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_set_font_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a0d8fd92bea789910bf30c10c80360b40_cgraph.png" border="0" usemap="#aalfont_8c_a0d8fd92bea789910bf30c10c80360b40_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a0d8fd92bea789910bf30c10c80360b40_icgraph.png" border="0" usemap="#aalfont_8c_a0d8fd92bea789910bf30c10c80360b40_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="ac6025cf2e39d023484501772c08fe76e" name="ac6025cf2e39d023484501772c08fe76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6025cf2e39d023484501772c08fe76e">&#9670;&#160;</a></span>alfont_text_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_text_height </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe0ef90b0b723ec8f4dee4427c3c403e" name="abe0ef90b0b723ec8f4dee4427c3c403e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0ef90b0b723ec8f4dee4427c3c403e">&#9670;&#160;</a></span>alfont_text_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_text_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_abe0ef90b0b723ec8f4dee4427c3c403e_cgraph.png" border="0" usemap="#aalfont_8c_abe0ef90b0b723ec8f4dee4427c3c403e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_abe0ef90b0b723ec8f4dee4427c3c403e_icgraph.png" border="0" usemap="#aalfont_8c_abe0ef90b0b723ec8f4dee4427c3c403e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="ae5b049f810948137c21a35109f952aba" name="ae5b049f810948137c21a35109f952aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b049f810948137c21a35109f952aba">&#9670;&#160;</a></span>alfont_text_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_text_mode </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ea040f05cb15633ed4b7726920c558b" name="a4ea040f05cb15633ed4b7726920c558b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ea040f05cb15633ed4b7726920c558b">&#9670;&#160;</a></span>alfont_textout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a4ea040f05cb15633ed4b7726920c558b_cgraph.png" border="0" usemap="#aalfont_8c_a4ea040f05cb15633ed4b7726920c558b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a4ea040f05cb15633ed4b7726920c558b_icgraph.png" border="0" usemap="#aalfont_8c_a4ea040f05cb15633ed4b7726920c558b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="ae65d558a4f09bf1e9fc752895134950f" name="ae65d558a4f09bf1e9fc752895134950f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65d558a4f09bf1e9fc752895134950f">&#9670;&#160;</a></span>alfont_textout_aa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_aa </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae65d558a4f09bf1e9fc752895134950f_cgraph.png" border="0" usemap="#aalfont_8c_ae65d558a4f09bf1e9fc752895134950f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae65d558a4f09bf1e9fc752895134950f_icgraph.png" border="0" usemap="#aalfont_8c_ae65d558a4f09bf1e9fc752895134950f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="a20cd5b5cf5f24216bc18ede9b34334f3" name="a20cd5b5cf5f24216bc18ede9b34334f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20cd5b5cf5f24216bc18ede9b34334f3">&#9670;&#160;</a></span>alfont_textout_aa_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_aa_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a20cd5b5cf5f24216bc18ede9b34334f3_cgraph.png" border="0" usemap="#aalfont_8c_a20cd5b5cf5f24216bc18ede9b34334f3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a20cd5b5cf5f24216bc18ede9b34334f3_icgraph.png" border="0" usemap="#aalfont_8c_a20cd5b5cf5f24216bc18ede9b34334f3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="a677287eef235470df828ef37858ccf04" name="a677287eef235470df828ef37858ccf04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677287eef235470df828ef37858ccf04">&#9670;&#160;</a></span>alfont_textout_centre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_centre </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a677287eef235470df828ef37858ccf04_cgraph.png" border="0" usemap="#aalfont_8c_a677287eef235470df828ef37858ccf04_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a677287eef235470df828ef37858ccf04_icgraph.png" border="0" usemap="#aalfont_8c_a677287eef235470df828ef37858ccf04_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="a31a515955197f5354116c26a64940671" name="a31a515955197f5354116c26a64940671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a515955197f5354116c26a64940671">&#9670;&#160;</a></span>alfont_textout_centre_aa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_centre_aa </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a31a515955197f5354116c26a64940671_cgraph.png" border="0" usemap="#aalfont_8c_a31a515955197f5354116c26a64940671_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a31a515955197f5354116c26a64940671_icgraph.png" border="0" usemap="#aalfont_8c_a31a515955197f5354116c26a64940671_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+
+</div>
+</div>
+<a id="a3aa8bde851e871445c6b9d68bc4d3838" name="a3aa8bde851e871445c6b9d68bc4d3838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa8bde851e871445c6b9d68bc4d3838">&#9670;&#160;</a></span>alfont_textout_centre_aa_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_centre_aa_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a3aa8bde851e871445c6b9d68bc4d3838_cgraph.png" border="0" usemap="#aalfont_8c_a3aa8bde851e871445c6b9d68bc4d3838_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a3aa8bde851e871445c6b9d68bc4d3838_icgraph.png" border="0" usemap="#aalfont_8c_a3aa8bde851e871445c6b9d68bc4d3838_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="ae5ff8dcf379aef6ef49dcf3fd944dbf2" name="ae5ff8dcf379aef6ef49dcf3fd944dbf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ff8dcf379aef6ef49dcf3fd944dbf2">&#9670;&#160;</a></span>alfont_textout_centre_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_centre_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae5ff8dcf379aef6ef49dcf3fd944dbf2_cgraph.png" border="0" usemap="#aalfont_8c_ae5ff8dcf379aef6ef49dcf3fd944dbf2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae5ff8dcf379aef6ef49dcf3fd944dbf2_icgraph.png" border="0" usemap="#aalfont_8c_ae5ff8dcf379aef6ef49dcf3fd944dbf2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="ae026835dbcb2be41a2f58ba48584f1f0" name="ae026835dbcb2be41a2f58ba48584f1f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae026835dbcb2be41a2f58ba48584f1f0">&#9670;&#160;</a></span>alfont_textout_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae026835dbcb2be41a2f58ba48584f1f0_cgraph.png" border="0" usemap="#aalfont_8c_ae026835dbcb2be41a2f58ba48584f1f0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae026835dbcb2be41a2f58ba48584f1f0_icgraph.png" border="0" usemap="#aalfont_8c_ae026835dbcb2be41a2f58ba48584f1f0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+
+</div>
+</div>
+<a id="ae2d3cc683f39d13fe86a553a8a2060f0" name="ae2d3cc683f39d13fe86a553a8a2060f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d3cc683f39d13fe86a553a8a2060f0">&#9670;&#160;</a></span>alfont_textout_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_right </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae2d3cc683f39d13fe86a553a8a2060f0_cgraph.png" border="0" usemap="#aalfont_8c_ae2d3cc683f39d13fe86a553a8a2060f0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae2d3cc683f39d13fe86a553a8a2060f0_icgraph.png" border="0" usemap="#aalfont_8c_ae2d3cc683f39d13fe86a553a8a2060f0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+
+</div>
+</div>
+<a id="a79c1f367ab8f8add7482d29becb5ab22" name="a79c1f367ab8f8add7482d29becb5ab22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c1f367ab8f8add7482d29becb5ab22">&#9670;&#160;</a></span>alfont_textout_right_aa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_right_aa </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a79c1f367ab8f8add7482d29becb5ab22_cgraph.png" border="0" usemap="#aalfont_8c_a79c1f367ab8f8add7482d29becb5ab22_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a79c1f367ab8f8add7482d29becb5ab22_icgraph.png" border="0" usemap="#aalfont_8c_a79c1f367ab8f8add7482d29becb5ab22_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+
+</div>
+</div>
+<a id="a06107ea0ca9a3708da9d3b108053b475" name="a06107ea0ca9a3708da9d3b108053b475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06107ea0ca9a3708da9d3b108053b475">&#9670;&#160;</a></span>alfont_textout_right_aa_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_right_aa_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a06107ea0ca9a3708da9d3b108053b475_cgraph.png" border="0" usemap="#aalfont_8c_a06107ea0ca9a3708da9d3b108053b475_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a06107ea0ca9a3708da9d3b108053b475_icgraph.png" border="0" usemap="#aalfont_8c_a06107ea0ca9a3708da9d3b108053b475_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+
+</div>
+</div>
+<a id="a2ba9dcac3a4441bbea9e1b6fbba0c8fe" name="a2ba9dcac3a4441bbea9e1b6fbba0c8fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba9dcac3a4441bbea9e1b6fbba0c8fe">&#9670;&#160;</a></span>alfont_textout_right_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textout_right_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a2ba9dcac3a4441bbea9e1b6fbba0c8fe_cgraph.png" border="0" usemap="#aalfont_8c_a2ba9dcac3a4441bbea9e1b6fbba0c8fe_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a2ba9dcac3a4441bbea9e1b6fbba0c8fe_icgraph.png" border="0" usemap="#aalfont_8c_a2ba9dcac3a4441bbea9e1b6fbba0c8fe_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+
+</div>
+</div>
+<a id="af002cbbd973d5aa92e98b190c7407d4b" name="af002cbbd973d5aa92e98b190c7407d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af002cbbd973d5aa92e98b190c7407d4b">&#9670;&#160;</a></span>alfont_textprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_af002cbbd973d5aa92e98b190c7407d4b_cgraph.png" border="0" usemap="#aalfont_8c_af002cbbd973d5aa92e98b190c7407d4b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="a159481557a55ed13a51d88a25fcb192d" name="a159481557a55ed13a51d88a25fcb192d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159481557a55ed13a51d88a25fcb192d">&#9670;&#160;</a></span>alfont_textprintf_aa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_aa </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a159481557a55ed13a51d88a25fcb192d_cgraph.png" border="0" usemap="#aalfont_8c_a159481557a55ed13a51d88a25fcb192d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+
+</div>
+</div>
+<a id="a875b576927463f7877545c294d174f15" name="a875b576927463f7877545c294d174f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875b576927463f7877545c294d174f15">&#9670;&#160;</a></span>alfont_textprintf_aa_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_aa_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a875b576927463f7877545c294d174f15_cgraph.png" border="0" usemap="#aalfont_8c_a875b576927463f7877545c294d174f15_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+
+</div>
+</div>
+<a id="a009aeb55b1686fa4db7d50bbf4e693de" name="a009aeb55b1686fa4db7d50bbf4e693de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a009aeb55b1686fa4db7d50bbf4e693de">&#9670;&#160;</a></span>alfont_textprintf_centre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_centre </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a009aeb55b1686fa4db7d50bbf4e693de_cgraph.png" border="0" usemap="#aalfont_8c_a009aeb55b1686fa4db7d50bbf4e693de_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 50 -->
+</div>
+
+</div>
+</div>
+<a id="a3a872d22997571dad45f8f18fea81dbb" name="a3a872d22997571dad45f8f18fea81dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a872d22997571dad45f8f18fea81dbb">&#9670;&#160;</a></span>alfont_textprintf_centre_aa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_centre_aa </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a3a872d22997571dad45f8f18fea81dbb_cgraph.png" border="0" usemap="#aalfont_8c_a3a872d22997571dad45f8f18fea81dbb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 51 -->
+</div>
+
+</div>
+</div>
+<a id="a3e979787873fa96918fff4396a401889" name="a3e979787873fa96918fff4396a401889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e979787873fa96918fff4396a401889">&#9670;&#160;</a></span>alfont_textprintf_centre_aa_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_centre_aa_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a3e979787873fa96918fff4396a401889_cgraph.png" border="0" usemap="#aalfont_8c_a3e979787873fa96918fff4396a401889_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 52 -->
+</div>
+
+</div>
+</div>
+<a id="a29a8e966565e3ba2ed43477e39507e03" name="a29a8e966565e3ba2ed43477e39507e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a8e966565e3ba2ed43477e39507e03">&#9670;&#160;</a></span>alfont_textprintf_centre_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_centre_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a29a8e966565e3ba2ed43477e39507e03_cgraph.png" border="0" usemap="#aalfont_8c_a29a8e966565e3ba2ed43477e39507e03_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 53 -->
+</div>
+
+</div>
+</div>
+<a id="ab2c00d14808b6ad678db6249e47f1af1" name="ab2c00d14808b6ad678db6249e47f1af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c00d14808b6ad678db6249e47f1af1">&#9670;&#160;</a></span>alfont_textprintf_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ab2c00d14808b6ad678db6249e47f1af1_cgraph.png" border="0" usemap="#aalfont_8c_ab2c00d14808b6ad678db6249e47f1af1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 54 -->
+</div>
+
+</div>
+</div>
+<a id="a6507d57998c4eb73a62b7b05a24594cf" name="a6507d57998c4eb73a62b7b05a24594cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6507d57998c4eb73a62b7b05a24594cf">&#9670;&#160;</a></span>alfont_textprintf_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_right </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a6507d57998c4eb73a62b7b05a24594cf_cgraph.png" border="0" usemap="#aalfont_8c_a6507d57998c4eb73a62b7b05a24594cf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 55 -->
+</div>
+
+</div>
+</div>
+<a id="ae844e17d3f5d2cf1eb5e09022af75695" name="ae844e17d3f5d2cf1eb5e09022af75695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae844e17d3f5d2cf1eb5e09022af75695">&#9670;&#160;</a></span>alfont_textprintf_right_aa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_right_aa </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_ae844e17d3f5d2cf1eb5e09022af75695_cgraph.png" border="0" usemap="#aalfont_8c_ae844e17d3f5d2cf1eb5e09022af75695_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 56 -->
+</div>
+
+</div>
+</div>
+<a id="a64f61e73635f6b5fb072d91e154ad8af" name="a64f61e73635f6b5fb072d91e154ad8af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f61e73635f6b5fb072d91e154ad8af">&#9670;&#160;</a></span>alfont_textprintf_right_aa_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_right_aa_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a64f61e73635f6b5fb072d91e154ad8af_cgraph.png" border="0" usemap="#aalfont_8c_a64f61e73635f6b5fb072d91e154ad8af_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 57 -->
+</div>
+
+</div>
+</div>
+<a id="a66ab48641feda6551a620779087cca76" name="a66ab48641feda6551a620779087cca76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ab48641feda6551a620779087cca76">&#9670;&#160;</a></span>alfont_textprintf_right_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alfont_textprintf_right_ex </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_l_f_o_n_t___f_o_n_t.html">ALFONT_FONT</a> *</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="alfont_8c_a66ab48641feda6551a620779087cca76_cgraph.png" border="0" usemap="#aalfont_8c_a66ab48641feda6551a620779087cca76_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 58 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ab6716784fb5aef7a2eb0510a3c196e9b" name="ab6716784fb5aef7a2eb0510a3c196e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6716784fb5aef7a2eb0510a3c196e9b">&#9670;&#160;</a></span>alfont_inited</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_inited = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef9c863e2dcac4819ef6983b8d515052" name="aef9c863e2dcac4819ef6983b8d515052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9c863e2dcac4819ef6983b8d515052">&#9670;&#160;</a></span>alfont_textmode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int alfont_textmode = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4af5124eaf94260907310c9e898e9e54" name="a4af5124eaf94260907310c9e898e9e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af5124eaf94260907310c9e898e9e54">&#9670;&#160;</a></span>ft_library</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> ft_library</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_33846cb4197894974867eb644cd6a4c2.html">src</a></li><li class="navelem"><a href="alfont_8c.html">alfont.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

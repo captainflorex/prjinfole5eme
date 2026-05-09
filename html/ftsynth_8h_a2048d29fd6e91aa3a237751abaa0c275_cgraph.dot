@@ -1,0 +1,51 @@
+digraph "FT_GlyphSlot_Embolden"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FT_GlyphSlot_Embolden",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Angle_Diff",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a704ad092fc7ea61941c0edc22883b14e",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_Atan2",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#ae1e83838ffd2c22497bc58a5b628f47d",tooltip=" "];
+  Node3 -> Node3 [id="edge4_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node4 [id="edge5_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="ft_trig_prenorm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#afdeaa60df62d7b2d17bccf007ee02ede",tooltip=" "];
+  Node3 -> Node5 [id="edge6_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ft_trig_pseudo_polarize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#abe2cdf9da354b1693a65a4de219114d9",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_Cos",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#ae33a86f03fde95adea1e7a58ee93a11d",tooltip=" "];
+  Node6 -> Node6 [id="edge8_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge9_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="ft_trig_pseudo_rotate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a49631910e89de293aa8a9202539ac13e",tooltip=" "];
+  Node1 -> Node8 [id="edge10_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="FT_DivFix",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcalc_8c.html#a5248df90a0d076e6543b09284face353",tooltip=" "];
+  Node8 -> Node9 [id="edge11_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="FT_Add64",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcalc_8c.html#accd7cf4b2d759a74e0556d97f84469cf",tooltip=" "];
+  Node9 -> Node9 [id="edge12_Node000009_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node10 [id="edge13_Node000008_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="ft_div64by32",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcalc_8c.html#af85bb1414756897bd65b93faf18ec366",tooltip=" "];
+  Node8 -> Node8 [id="edge14_Node000008_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node11 [id="edge15_Node000001_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="ft_get_orientation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftsynth_8c.html#a7d56009c5d446f815483cbdecc1b9e1c",tooltip=" "];
+  Node11 -> Node12 [id="edge16_Node000011_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="ft_test_extrema",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftsynth_8c.html#a309779f800d88132387e05613b9bde9b",tooltip=" "];
+  Node12 -> Node13 [id="edge17_Node000012_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="FT_MulDiv",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftcalc_8c.html#ae31c0f444ce1bba445af776b86beaa60",tooltip=" "];
+  Node13 -> Node9 [id="edge18_Node000013_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node10 [id="edge19_Node000013_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node13 [id="edge20_Node000013_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge21_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node15 [id="edge22_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="FT_MulFix",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcalc_8c.html#aeb37c2858e2851e15465580de1d1d218",tooltip=" "];
+  Node15 -> Node15 [id="edge23_Node000015_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node16 [id="edge24_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="FT_Vector_From_Polar",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a07535f29fc4f5d2fa010ad38fdfac144",tooltip=" "];
+  Node16 -> Node16 [id="edge25_Node000016_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 -> Node17 [id="edge26_Node000016_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="FT_Vector_Rotate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#ae39fb94254591c5933ebcbe17d47a948",tooltip=" "];
+  Node17 -> Node17 [id="edge27_Node000017_Node000017",color="steelblue1",style="solid",tooltip=" "];
+}

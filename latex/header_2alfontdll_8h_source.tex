@@ -1,0 +1,28 @@
+\doxysection{alfontdll.\+h}
+\hypertarget{header_2alfontdll_8h_source}{}\label{header_2alfontdll_8h_source}\index{header/alfontdll.h@{header/alfontdll.h}}
+\doxymbox{\hyperlink{header_2alfontdll_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00001}00001\ \textcolor{comment}{/*\ AllegroFont\ -\/\ a\ wrapper\ for\ FreeType\ 2\ */}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00002}00002\ \textcolor{comment}{/*\ to\ render\ TTF\ and\ other\ font\ formats\ with\ Allegro\ */}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00004}00004\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00005}00005\ \textcolor{comment}{/*\ FreeType\ 2\ is\ copyright\ (c)\ 1996-\/2000\ */}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00006}00006\ \textcolor{comment}{/*\ David\ Turner,\ Robert\ Wilhelm,\ and\ Werner\ Lemberg\ */}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00007}00007\ \textcolor{comment}{/*\ AllegroFont\ is\ copyright\ (c)\ 2001,\ 2002\ Javier\ Gonzï¿½lez\ */}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00009}00009\ \textcolor{comment}{/*\ See\ FTL.txt\ (FreeType\ Project\ License)\ for\ license\ */}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00012}00012\ \textcolor{preprocessor}{\#ifndef\ ALFONT\_DLL\_DECLSPEC}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00013}00013\ \textcolor{preprocessor}{\#\ \ ifdef\ ALFONT\_DLL}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00014}00014\ \textcolor{preprocessor}{\#\ \ \ \ ifdef\ ALFONT\_DLL\_EXPORTS}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00015}00015\ \textcolor{preprocessor}{\#\ \ \ \ \ \ define\ ALFONT\_DLL\_DECLSPEC\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00016}00016\ \textcolor{preprocessor}{\#\ \ \ \ else}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00017}00017\ \textcolor{preprocessor}{\#\ \ \ \ \ \ define\ ALFONT\_DLL\_DECLSPEC\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00018}00018\ \textcolor{preprocessor}{\#\ \ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00019}00019\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00020}\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{00020}}\ \textcolor{preprocessor}{\#\ \ \ \ define\ ALFONT\_DLL\_DECLSPEC}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00021}00021\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{\Hypertarget{header_2alfontdll_8h_source_l00022}00022\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

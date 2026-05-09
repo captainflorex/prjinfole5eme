@@ -1,0 +1,23 @@
+digraph "alfont_textprintf_centre_aa_ex"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="alfont_textprintf_centre\l_aa_ex",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="alfont_textout_centre\l_aa_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a3aa8bde851e871445c6b9d68bc4d3838",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="alfont_text_length",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#abe0ef90b0b723ec8f4dee4427c3c403e",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="_alfont_cache_glyph",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$alfont_8c.html#a0666628364488a824cb42afc68e8b912",tooltip=" "];
+  Node3 -> Node26 [id="edge4_Node000003_Node000026",color="steelblue1",style="solid",tooltip=" "];
+  Node26 [id="Node000026",label="FT_Get_Char_Index",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a529192ba5290936f21b63f257bf42bdd",tooltip=" "];
+  Node26 -> Node26 [id="edge5_Node000026_Node000026",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node27 [id="edge6_Node000002_Node000027",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="alfont_textout_aa_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a20cd5b5cf5f24216bc18ede9b34334f3",tooltip=" "];
+  Node27 -> Node4 [id="edge7_Node000027_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node27 -> Node3 [id="edge8_Node000027_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node27 -> Node26 [id="edge9_Node000027_Node000026",color="steelblue1",style="solid",tooltip=" "];
+}

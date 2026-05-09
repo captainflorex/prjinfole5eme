@@ -1,0 +1,541 @@
+\doxysection{Référence du fichier src/\+menu.c}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{src/menu.c@{src/menu.c}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include $<$alfont.\+h$>$}\newline
+{\ttfamily \+\#include "{}menu.\+h"{}}\newline
+{\ttfamily \+\#include "{}affichage.\+h"{}}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Graphe des dépendances par inclusion de menu.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a}{menu\+\_\+init}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+int \doxymbox{\hyperlink{menu_8c_a3913bce4e975a52d19ed8450f553b4f2}{menu\+\_\+mettre\+\_\+a\+\_\+jour}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8c_a015a16da2577c972ef258e595f5634b0}{menu\+\_\+saisir\+\_\+pseudo}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0}{afficher\+\_\+menu}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8c_aa21de65fbde7933c3234a51ff1cf192f}{afficher\+\_\+regles}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\+\_\+titre}} = NULL
+\item 
+static \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\+\_\+menu}} = NULL
+\item 
+static \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\+\_\+petite}} = NULL
+\item 
+static \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\+\_\+regles}} = NULL
+\item 
+static int \doxymbox{\hyperlink{menu_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\+\_\+anim}} = 0
+\item 
+static const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\+\_\+\+MENU}} \+[\doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\+\_\+\+ELEMENTS\+\_\+\+MENU}}]\+
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{menu_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0}\index{menu.c@{menu.c}!afficher\_menu@{afficher\_menu}}
+\index{afficher\_menu@{afficher\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_menu()}{afficher\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0} 
+void afficher\+\_\+menu (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00093}{93}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}})}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ stretch\_blit(\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}},\ tampon,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}}-\/>w,\ \doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}}-\/>h,\ 0,\ 0,\ SCREEN\_W,\ SCREEN\_H);}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ clear\_to\_color(tampon,\ makecol(10,\ 10,\ 30));}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{/*\ Scanlines\ */}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ y\ =\ 0;\ y\ <\ SCREEN\_H;\ y\ +=\ 4)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ set\_trans\_blender(0,\ 0,\ 0,\ 50);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ hline(tampon,\ 0,\ y,\ SCREEN\_W,\ makecol(0,\ 0,\ 0));}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ cx\ =\ SCREEN\_W\ /\ 2;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{/*\ ===\ CADRE\ DU\ TITRE\ ===\ */}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ tx\ =\ cx\ -\/\ 260,\ ty\ =\ 45;}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ tw\ =\ 520,\ \ \ \ \ \ th\ =\ 110;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{/*\ Halo\ */}}
+\DoxyCodeLine{00115\ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00116\ \ \ \ \ set\_trans\_blender(0,\ 180,\ 255,\ 30);}
+\DoxyCodeLine{00117\ \ \ \ \ rectfill(tampon,\ tx\ -\/\ 10,\ ty\ -\/\ 10,\ tx\ +\ tw\ +\ 10,\ ty\ +\ th\ +\ 10,\ makecol(0,\ 180,\ 255));}
+\DoxyCodeLine{00118\ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{/*\ Bordures\ dorÃ©es\ */}}
+\DoxyCodeLine{00121\ \ \ \ \ rect(tampon,\ tx\ -\/\ 5,\ ty\ -\/\ 5,\ tx\ +\ tw\ +\ 5,\ ty\ +\ th\ +\ 5,\ makecol(255,\ 180,\ 0));}
+\DoxyCodeLine{00122\ \ \ \ \ rect(tampon,\ tx\ -\/\ 4,\ ty\ -\/\ 4,\ tx\ +\ tw\ +\ 4,\ ty\ +\ th\ +\ 4,\ makecol(255,\ 220,\ 80));}
+\DoxyCodeLine{00123\ \ \ \ \ rect(tampon,\ tx\ -\/\ 3,\ ty\ -\/\ 3,\ tx\ +\ tw\ +\ 3,\ ty\ +\ th\ +\ 3,\ makecol(255,\ 180,\ 0));}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{/*\ Fond\ dÃ©gradÃ©\ */}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ th;\ i++)\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ r\ =\ 5\ \ +\ (i\ *\ 10\ /\ th);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ g\ =\ 5\ \ +\ (i\ *\ 5\ \ /\ th);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ b\ =\ 20\ +\ (i\ *\ 30\ /\ th);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ hline(tampon,\ tx,\ ty\ +\ i,\ tx\ +\ tw,\ makecol(r,\ g,\ b));}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{/*\ Bordure\ interne\ cyan\ */}}
+\DoxyCodeLine{00134\ \ \ \ \ rect(tampon,\ tx\ +\ 5,\ ty\ +\ 5,\ tx\ +\ tw\ -\/\ 5,\ ty\ +\ th\ -\/\ 5,\ makecol(0,\ 220,\ 255));}
+\DoxyCodeLine{00135\ \ \ \ \ rect(tampon,\ tx\ +\ 6,\ ty\ +\ 6,\ tx\ +\ tw\ -\/\ 6,\ ty\ +\ th\ -\/\ 6,\ makecol(0,\ 150,\ 200));}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{/*\ ===\ TITRE\ avec\ pulse\ ===\ */}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}})\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pulse\ =\ (int)(sin(\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ *\ 0.05)\ *\ 3);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}},\ 32\ +\ pulse);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}},\ \textcolor{stringliteral}{"{}SUPER\ BULLES"{}},}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 3,\ ty\ +\ 38,\ makecol(0,\ 40,\ 60),\ -\/1);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}},\ \textcolor{stringliteral}{"{}SUPER\ BULLES"{}},}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 1,\ ty\ +\ 36,\ makecol(0,\ 80,\ 120),\ -\/1);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}},\ \textcolor{stringliteral}{"{}SUPER\ BULLES"{}},}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ ty\ +\ 35,\ makecol(0,\ 230,\ 255),\ -\/1);}
+\DoxyCodeLine{00147\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}SUPER\ BULLES"{}},\ cx,\ ty\ +\ 35,\ makecol(0,\ 220,\ 255),\ -\/1);}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{/*\ Ligne\ dÃ©co\ */}}
+\DoxyCodeLine{00152\ \ \ \ \ hline(tampon,\ tx\ +\ 15,\ ty\ +\ th\ -\/\ 14,\ tx\ +\ tw\ -\/\ 15,\ makecol(255,\ 210,\ 0));}
+\DoxyCodeLine{00153\ \ \ \ \ hline(tampon,\ tx\ +\ 25,\ ty\ +\ th\ -\/\ 12,\ tx\ +\ tw\ -\/\ 25,\ makecol(255,\ 160,\ 0));}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{/*\ ===\ INSERT\ COIN\ clignotant\ ===\ */}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ /\ 30)\ \%\ 2\ ==\ 0)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}})}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}},\ \textcolor{stringliteral}{"{}>>\ INSERT\ COIN\ <<"{}},}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ ty\ +\ th\ +\ 18,\ makecol(255,\ 255,\ 0),\ -\/1);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}>>\ INSERT\ COIN\ <<"{}},}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ ty\ +\ th\ +\ 18,\ makecol(255,\ 255,\ 0),\ -\/1);}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{/*\ ===\ ELEMENTS\ DU\ MENU\ ===\ */}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ depart\_y\ =\ SCREEN\_H\ /\ 2\ -\/\ (\doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\_ELEMENTS\_MENU}}\ *\ 40)\ /\ 2\ +\ 30;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\_ELEMENTS\_MENU}};\ i++)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\_elem\ =\ depart\_y\ +\ i\ *\ 40;}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}})\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Halo\ sÃ©lection\ */}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ set\_trans\_blender(255,\ 220,\ 0,\ 25);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ rectfill(tampon,\ cx\ -\/\ 225,\ y\_elem\ -\/\ 10,\ cx\ +\ 225,\ y\_elem\ +\ 26,\ makecol(255,\ 220,\ 0));}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Cadre\ */}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ rectfill(tampon,\ cx\ -\/\ 220,\ y\_elem\ -\/\ 8,\ cx\ +\ 220,\ y\_elem\ +\ 24,\ makecol(15,\ 15,\ 50));}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ rect(tampon,\ \ \ \ \ cx\ -\/\ 220,\ y\_elem\ -\/\ 8,\ cx\ +\ 220,\ y\_elem\ +\ 24,\ makecol(255,\ 220,\ 0));}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ FlÃ¨ches\ */}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ (\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ /\ 10)\ \%\ 2;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}})\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935}{alfont\_textout\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \textcolor{stringliteral}{"{}>"{}},\ cx\ -\/\ 210\ +\ dx,\ y\_elem,\ makecol(255,\ 255,\ 0),\ -\/1);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935}{alfont\_textout\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \textcolor{stringliteral}{"{}<"{}},\ cx\ +\ 195\ -\/\ dx,\ y\_elem,\ makecol(255,\ 255,\ 0),\ -\/1);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Texte\ sÃ©lectionnÃ©\ */}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}})\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\_MENU}}[i],}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 1,\ y\_elem\ +\ 1,\ makecol(100,\ 80,\ 0),\ -\/1);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\_MENU}}[i],}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ y\_elem,\ makecol(255,\ 240,\ 50),\ -\/1);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\_MENU}}[i],\ cx,\ y\_elem,\ makecol(255,\ 240,\ 50),\ -\/1);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}})\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\_MENU}}[i],}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 1,\ y\_elem\ +\ 1,\ makecol(20,\ 20,\ 50),\ -\/1);}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\_MENU}}[i],}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ y\_elem,\ makecol(160,\ 170,\ 210),\ -\/1);}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\_MENU}}[i],\ cx,\ y\_elem,\ makecol(160,\ 170,\ 210),\ -\/1);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \ \ \ \ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{/*\ ===\ BAS\ ===\ */}}
+\DoxyCodeLine{00211\ \ \ \ \ hline(tampon,\ 40,\ SCREEN\_H\ -\/\ 70,\ SCREEN\_W\ -\/\ 40,\ makecol(50,\ 50,\ 100));}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}})\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}},\ \textcolor{stringliteral}{"{}HI-\/SCORE\ :\ 999999"{}},}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ SCREEN\_H\ -\/\ 58,\ makecol(255,\ 80,\ 80),\ -\/1);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}},\ \textcolor{stringliteral}{"{}-\/\ 2025\ SUPER\ BULLES\ -\/"{}},}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ SCREEN\_H\ -\/\ 38,\ makecol(100,\ 100,\ 180),\ -\/1);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}},\ \textcolor{stringliteral}{"{}FLECHES\ +\ ENTREE"{}},}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ SCREEN\_H\ -\/\ 18,\ makecol(80,\ 80,\ 100),\ -\/1);}
+\DoxyCodeLine{00220\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}HI-\/SCORE\ :\ 999999"{}},\ \ \ \ \ cx,\ SCREEN\_H\ -\/\ 58,\ makecol(255,\ 80,\ 80),\ -\/1);}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}-\/\ 2025\ SUPER\ BULLES\ -\/"{}},\ cx,\ SCREEN\_H\ -\/\ 38,\ makecol(100,\ 100,\ 180),\ -\/1);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}FLECHES\ +\ ENTREE"{}},\ \ \ \ \ \ cx,\ SCREEN\_H\ -\/\ 18,\ makecol(80,\ 80,\ 100),\ -\/1);}
+\DoxyCodeLine{00224\ \ \ \ \ \}}
+\DoxyCodeLine{00225\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_aa21de65fbde7933c3234a51ff1cf192f}\index{menu.c@{menu.c}!afficher\_regles@{afficher\_regles}}
+\index{afficher\_regles@{afficher\_regles}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_regles()}{afficher\_regles()}}
+{\footnotesize\ttfamily \label{menu_8c_aa21de65fbde7933c3234a51ff1cf192f} 
+void afficher\+\_\+regles (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00227}{227}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}})}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ blit(\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}},\ tampon,\ 0,\ 0,\ 0,\ 0,\ SCREEN\_W,\ SCREEN\_H);}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ clear\_to\_color(tampon,\ makecol(10,\ 10,\ 50));}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00234\ \ \ \ \ set\_trans\_blender(0,\ 0,\ 0,\ 190);}
+\DoxyCodeLine{00235\ \ \ \ \ rectfill(tampon,\ 40,\ 30,\ SCREEN\_W\ -\/\ 40,\ SCREEN\_H\ -\/\ 30,\ makecol(0,\ 0,\ 0));}
+\DoxyCodeLine{00236\ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ rect(tampon,\ 40,\ 30,\ SCREEN\_W\ -\/\ 40,\ SCREEN\_H\ -\/\ 30,\ makecol(255,\ 200,\ 0));}
+\DoxyCodeLine{00239\ \ \ \ \ rect(tampon,\ 42,\ 32,\ SCREEN\_W\ -\/\ 42,\ SCREEN\_H\ -\/\ 32,\ makecol(100,\ 100,\ 200));}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{comment}{/*\ Titre\ des\ rÃ¨gles\ avec\ police\_regles\ (taille\ 15)\ */}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}})\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}},\ 15);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}},\ \textcolor{stringliteral}{"{}REGLES\ DU\ JEU"{}},}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W\ /\ 2\ +\ 2,\ 47,\ makecol(80,\ 60,\ 0),\ -\/1);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}},\ \textcolor{stringliteral}{"{}REGLES\ DU\ JEU"{}},}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W\ /\ 2,\ 45,\ makecol(255,\ 220,\ 0),\ -\/1);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}},\ 11);}
+\DoxyCodeLine{00249\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}===\ REGLES\ DU\ JEU\ ==="{}},\ SCREEN\_W\ /\ 2,\ 50,\ makecol(255,\ 220,\ 0),\ -\/1);}
+\DoxyCodeLine{00251\ \ \ \ \ \}}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *regles[]\ =\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}OBJECTIF"{}},}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Eliminez\ toutes\ les\ bulles\ de\ chaque\ niveau\ sans\ vous\ faire\ "{}},}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ toucher."{}},}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Une\ partie\ comporte\ 4\ niveaux\ de\ difficulte\ croissante\ "{}},}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ +\ un\ Boss\ final."{}}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DEPLACEMENT"{}},}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Fleche\ GAUCHE/DROITE\ :\ deplacer\ le\ personnage\ horizontalement."{}},}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Le\ personnage\ est\ bloque\ sur\ les\ bords\ de\ la\ zone\ de\ jeu."{}},}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}TIRS"{}},}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ ESPACE\ :\ tirer\ un\ projectile\ vers\ le\ haut."{}},}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Arme\ de\ base\ :\ un\ seul\ tir\ a\ la\ fois,\ vitesse\ constante."{}},}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Des\ armes\ speciales\ apparaissent\ en\ detruisant\ des\ bulles\ :"{}},}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ tir\ rapide,\ tirs\ multiples,\ explosions\ (disponibles\ niv.\ 2+)."{}},}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}BULLES"{}},}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Une\ bulle\ touchee\ se\ divise\ en\ 2\ bulles\ plus\ petites."{}},}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ La\ plus\ petite\ taille\ est\ detruite\ directement."{}},}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ A\ partir\ du\ niveau\ 3,\ certaines\ bulles\ lancent\ des\ eclairs\ !"{}},}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}FIN\ DE\ NIVEAU"{}},}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Victoire\ :\ toutes\ les\ bulles\ eliminees\ dans\ le\ temps\ imparti."{}},}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Echec\ \ \ \ :\ touche\ par\ une\ bulle,\ un\ eclair,\ ou\ temps\ ecoule."{}},}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Appuyez\ sur\ ECHAP\ pour\ revenir\ au\ menu."{}}}
+\DoxyCodeLine{00290\ \ \ \ \ \};}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_lignes\ =\ \textcolor{keyword}{sizeof}(regles)\ /\ \textcolor{keyword}{sizeof}(regles[0]);}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ 75;}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nb\_lignes;\ i++)\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (regles[i][0]\ ==\ \textcolor{charliteral}{'\(\backslash\)0'})\ \{\ y\ +=\ 6;\ \textcolor{keywordflow}{continue};\ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ est\_titre\ =\ (regles[i][0]\ !=\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ couleur\ \ \ =\ est\_titre\ ?\ makecol(255,\ 220,\ 0)\ :\ makecol(200,\ 210,\ 230);}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}})}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935}{alfont\_textout\_aa\_ex}}(tampon,\ \doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}},\ regles[i],\ 60,\ y,\ couleur,\ -\/1);}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ textout\_ex(tampon,\ font,\ regles[i],\ 60,\ y,\ couleur,\ -\/1);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ y\ +=\ est\_titre\ ?\ 16\ :\ 13;}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a}\index{menu.c@{menu.c}!menu\_init@{menu\_init}}
+\index{menu\_init@{menu\_init}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_init()}{menu\_init()}}
+{\footnotesize\ttfamily \label{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a} 
+void menu\+\_\+init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}}\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a5f915e5f8f3f8f065f3e75c1df8b6eac}{saisie\_en\_cours}}\ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a51485ba2fa7fd3305c3db5275f018d73}{afficher\_regles}}\ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ memset(em-\/>\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}},\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}}\ \ =\ \doxymbox{\hyperlink{header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}{alfont\_load\_font}}(\textcolor{stringliteral}{"{}ressources/police.ttf"{}});}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}}\ \ \ =\ \doxymbox{\hyperlink{header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}{alfont\_load\_font}}(\textcolor{stringliteral}{"{}ressources/police.ttf"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}}\ =\ \doxymbox{\hyperlink{header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}{alfont\_load\_font}}(\textcolor{stringliteral}{"{}ressources/police.ttf"{}});}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}}\ =\ \doxymbox{\hyperlink{header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}{alfont\_load\_font}}(\textcolor{stringliteral}{"{}ressources/police.ttf"{}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}})\ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_a2442016244e99e75b9b427b88a19fd47}{police\_titre}},\ \ 42);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}})\ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}{police\_menu}},\ \ \ 14);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}})\ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}{police\_petite}},\ 12);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}})\ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(\doxymbox{\hyperlink{menu_8c_ad344e1e8f39d4f7029b79158d973604f}{police\_regles}},\ 11);}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a3913bce4e975a52d19ed8450f553b4f2}\index{menu.c@{menu.c}!menu\_mettre\_a\_jour@{menu\_mettre\_a\_jour}}
+\index{menu\_mettre\_a\_jour@{menu\_mettre\_a\_jour}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_mettre\_a\_jour()}{menu\_mettre\_a\_jour()}}
+{\footnotesize\ttfamily \label{menu_8c_a3913bce4e975a52d19ed8450f553b4f2} 
+int menu\+\_\+mettre\+\_\+a\+\_\+jour (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}++;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ touche\_bas\_relachee\ \ \ \ =\ 1;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ touche\_haut\_relachee\ \ \ =\ 1;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ touche\_entree\_relachee\ =\ 1;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_DOWN]\ \&\&\ touche\_bas\_relachee)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}}\ =\ (em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}}\ +\ 1)\ \%\ \doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\_ELEMENTS\_MENU}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ touche\_bas\_relachee\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (!key[KEY\_DOWN])\ touche\_bas\_relachee\ =\ 1;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_UP]\ \&\&\ touche\_haut\_relachee)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}}\ =\ (em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}}\ +\ \doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\_ELEMENTS\_MENU}}\ -\/\ 1)\ \%\ \doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\_ELEMENTS\_MENU}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ touche\_haut\_relachee\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (!key[KEY\_UP])\ touche\_haut\_relachee\ =\ 1;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_ENTER]\ \&\&\ touche\_entree\_relachee)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ touche\_entree\_relachee\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}}\ ==\ \doxymbox{\hyperlink{header_2menu_8h_a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967}{MENU\_REGLES}})\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a51485ba2fa7fd3305c3db5275f018d73}{afficher\_regles}}\ =\ 1;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ em-\/>\doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (!key[KEY\_ENTER])\ touche\_entree\_relachee\ =\ 1;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (em-\/>\doxymbox{\hyperlink{struct_etat_menu_a51485ba2fa7fd3305c3db5275f018d73}{afficher\_regles}}\ \&\&\ key[KEY\_ESC])}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a51485ba2fa7fd3305c3db5275f018d73}{afficher\_regles}}\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a015a16da2577c972ef258e595f5634b0}\index{menu.c@{menu.c}!menu\_saisir\_pseudo@{menu\_saisir\_pseudo}}
+\index{menu\_saisir\_pseudo@{menu\_saisir\_pseudo}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_saisir\_pseudo()}{menu\_saisir\_pseudo()}}
+{\footnotesize\ttfamily \label{menu_8c_a015a16da2577c972ef258e595f5634b0} 
+void menu\+\_\+saisir\+\_\+pseudo (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00074}{74}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ clear\_keybuf();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ strlen(em-\/>\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}});}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (keypressed())\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ c\ \ \ \ \ =\ readkey();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ascii\ =\ c\ \&\ 0xFF;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scan\ \ =\ (c\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (scan\ ==\ KEY\_ENTER\ \&\&\ len\ >\ 0)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (scan\ ==\ KEY\_BACKSPACE\ \&\&\ len\ >\ 0)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}}[-\/-\/len]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ascii\ >=\ 32\ \&\&\ ascii\ <\ 127\ \&\&\ len\ <\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}\ -\/\ 1)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}}[len++]\ =\ (char)ascii;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}}[len]\ \ \ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-var-members}
+\Hypertarget{menu_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{menu_8c_af2b9eff02ed27d3a363f2661f736e29e}\index{menu.c@{menu.c}!compteur\_anim@{compteur\_anim}}
+\index{compteur\_anim@{compteur\_anim}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{compteur\_anim}{compteur\_anim}}
+{\footnotesize\ttfamily \label{menu_8c_af2b9eff02ed27d3a363f2661f736e29e} 
+int compteur\+\_\+anim = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00013}{13}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+\Hypertarget{menu_8c_a499a5e286fc4181187726055786536c0}\index{menu.c@{menu.c}!LIBELLES\_MENU@{LIBELLES\_MENU}}
+\index{LIBELLES\_MENU@{LIBELLES\_MENU}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{LIBELLES\_MENU}{LIBELLES\_MENU}}
+{\footnotesize\ttfamily \label{menu_8c_a499a5e286fc4181187726055786536c0} 
+const char\texorpdfstring{$\ast$}{*} LIBELLES\+\_\+\+MENU\+[\doxymbox{\hyperlink{header_2menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\+\_\+\+ELEMENTS\+\_\+\+MENU}}]\+\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Valeur initiale :\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Nouvelle\ partie"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Reprendre\ une\ partie"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Regles\ du\ jeu"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Quitter"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00015}{15}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{stringliteral}{"{}Nouvelle\ partie"{}},}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{stringliteral}{"{}Reprendre\ une\ partie"{}},}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{stringliteral}{"{}Regles\ du\ jeu"{}},}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{stringliteral}{"{}Quitter"{}}}
+\DoxyCodeLine{00020\ \};}
+
+\end{DoxyCode}
+\Hypertarget{menu_8c_aca94600d4de5f09d04105fd4ba4251ac}\index{menu.c@{menu.c}!police\_menu@{police\_menu}}
+\index{police\_menu@{police\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{police\_menu}{police\_menu}}
+{\footnotesize\ttfamily \label{menu_8c_aca94600d4de5f09d04105fd4ba4251ac} 
+\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}}\texorpdfstring{$\ast$}{*} police\+\_\+menu = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00010}{10}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+\Hypertarget{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1}\index{menu.c@{menu.c}!police\_petite@{police\_petite}}
+\index{police\_petite@{police\_petite}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{police\_petite}{police\_petite}}
+{\footnotesize\ttfamily \label{menu_8c_afc29a26fce12980fc0ea07dfb9af6cb1} 
+\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}}\texorpdfstring{$\ast$}{*} police\+\_\+petite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00011}{11}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+\Hypertarget{menu_8c_ad344e1e8f39d4f7029b79158d973604f}\index{menu.c@{menu.c}!police\_regles@{police\_regles}}
+\index{police\_regles@{police\_regles}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{police\_regles}{police\_regles}}
+{\footnotesize\ttfamily \label{menu_8c_ad344e1e8f39d4f7029b79158d973604f} 
+\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}}\texorpdfstring{$\ast$}{*} police\+\_\+regles = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00012}{12}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+\Hypertarget{menu_8c_a2442016244e99e75b9b427b88a19fd47}\index{menu.c@{menu.c}!police\_titre@{police\_titre}}
+\index{police\_titre@{police\_titre}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{police\_titre}{police\_titre}}
+{\footnotesize\ttfamily \label{menu_8c_a2442016244e99e75b9b427b88a19fd47} 
+\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}}\texorpdfstring{$\ast$}{*} police\+\_\+titre = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{menu_8c_source_l00009}{9}} du fichier \doxymbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+

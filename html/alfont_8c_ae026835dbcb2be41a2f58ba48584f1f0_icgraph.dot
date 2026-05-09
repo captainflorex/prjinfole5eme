@@ -1,0 +1,17 @@
+digraph "alfont_textout_ex"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="alfont_textout_ex",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="alfont_textout",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a4ea040f05cb15633ed4b7726920c558b",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="alfont_textout_centre_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#ae5ff8dcf379aef6ef49dcf3fd944dbf2",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="alfont_textout_right_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a2ba9dcac3a4441bbea9e1b6fbba0c8fe",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="alfont_textprintf_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#ab2c00d14808b6ad678db6249e47f1af1",tooltip=" "];
+}

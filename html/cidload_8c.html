@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cid/cidload.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('cidload_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier cidload.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="cidload_8h_source.html">cidload.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ciderrs_8h_source.html">ciderrs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cidtoken_8h_source.html">cidtoken.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de cidload.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cid_2cidload_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cid_2cidload_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="cidload_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_cidload</td></tr>
+<tr class="memitem:adb14d0edf0c80ad37476a4c6ae657d15" id="r_adb14d0edf0c80ad37476a4c6ae657d15"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb14d0edf0c80ad37476a4c6ae657d15">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#ac029c548268ab554f3459e7379e7aee7">CID_FaceInfoRec</a></td></tr>
+<tr class="memitem:a601a070597291d53b0e6964aca356eb7" id="r_a601a070597291d53b0e6964aca356eb7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a601a070597291d53b0e6964aca356eb7">T1CODE</a>&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a49a2c680f72e9b28197625a198f17bb6">T1_FIELD_LOCATION_CID_INFO</a></td></tr>
+<tr class="memitem:a486ece7706e0b40f03d6ab0b842586f0" id="r_a486ece7706e0b40f03d6ab0b842586f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a486ece7706e0b40f03d6ab0b842586f0">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="struct_p_s___font_info_rec.html">PS_FontInfoRec</a></td></tr>
+<tr class="memitem:a948c4cb7b1455b9e1ffd02164e485eeb" id="r_a948c4cb7b1455b9e1ffd02164e485eeb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a948c4cb7b1455b9e1ffd02164e485eeb">T1CODE</a>&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a92b9d360faa31535e6b2d8023857e3fe">T1_FIELD_LOCATION_FONT_INFO</a></td></tr>
+<tr class="memitem:a3bd5412680c87e8804385f30b1bbcd0f" id="r_a3bd5412680c87e8804385f30b1bbcd0f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3bd5412680c87e8804385f30b1bbcd0f">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#a46f9ff3a0d23cd92614012b2400c5759">CID_FaceDictRec</a></td></tr>
+<tr class="memitem:a8be4a3000c4d41a2ae4f9051dbd8c3f3" id="r_a8be4a3000c4d41a2ae4f9051dbd8c3f3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8be4a3000c4d41a2ae4f9051dbd8c3f3">T1CODE</a>&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32afa57448995b2f1f0876491e1ead3c26a">T1_FIELD_LOCATION_FONT_DICT</a></td></tr>
+<tr class="memitem:a79b310767d539d921d82c0c9bafb45e8" id="r_a79b310767d539d921d82c0c9bafb45e8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a79b310767d539d921d82c0c9bafb45e8">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#a274fc710e46de4825f7a0d2157e168e4">PS_PrivateRec</a></td></tr>
+<tr class="memitem:a969834884eacc754f73fb53948f35ab1" id="r_a969834884eacc754f73fb53948f35ab1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a969834884eacc754f73fb53948f35ab1">T1CODE</a>&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a81c5858e601ee955b6c9eb6d4a7adfd0">T1_FIELD_LOCATION_PRIVATE</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a29c965cd62ec4110610b750f3f9e83c0" id="r_a29c965cd62ec4110610b750f3f9e83c0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29c965cd62ec4110610b750f3f9e83c0">cid_get_offset</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **start, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> offsize)</td></tr>
+<tr class="memitem:a0aa4422f48ef5d500a80a0ba64c1b4d6" id="r_a0aa4422f48ef5d500a80a0ba64c1b4d6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0aa4422f48ef5d500a80a0ba64c1b4d6">cid_decrypt</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *buffer, <a class="el" href="fttypes_8h.html#af7b5edd727ac01b0d4729ac848bd4175">FT_Offset</a> length, <a class="el" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a> seed)</td></tr>
+<tr class="memitem:a420bcdb5efbfb755869f1775bf9f827a" id="r_a420bcdb5efbfb755869f1775bf9f827a"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a420bcdb5efbfb755869f1775bf9f827a">cid_load_keyword</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *loader, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a> keyword)</td></tr>
+<tr class="memitem:a511e452f4ba93b9d21d7adb40233cff2" id="r_a511e452f4ba93b9d21d7adb40233cff2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a511e452f4ba93b9d21d7adb40233cff2">parse_font_bbox</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cidparse_8h.html#a3666434d7f15bf729e8f4c81e10a5912">CID_Parser</a> *parser)</td></tr>
+<tr class="memitem:aa36c8ae66797b1a08db4296ee98a22b0" id="r_aa36c8ae66797b1a08db4296ee98a22b0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa36c8ae66797b1a08db4296ee98a22b0">parse_font_matrix</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cidparse_8h.html#a3666434d7f15bf729e8f4c81e10a5912">CID_Parser</a> *parser)</td></tr>
+<tr class="memitem:a00a4472c18718de73b1a4b2e68eaeb02" id="r_a00a4472c18718de73b1a4b2e68eaeb02"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a00a4472c18718de73b1a4b2e68eaeb02">parse_fd_array</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cidparse_8h.html#a3666434d7f15bf729e8f4c81e10a5912">CID_Parser</a> *parser)</td></tr>
+<tr class="memitem:a4f1a070d87207d7d68cdeb854780fccf" id="r_a4f1a070d87207d7d68cdeb854780fccf"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a4f1a070d87207d7d68cdeb854780fccf">is_alpha</a> (char c)</td></tr>
+<tr class="memitem:af0ad8b9f06bbaeb6100af9cd714b3de3" id="r_af0ad8b9f06bbaeb6100af9cd714b3de3"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#af0ad8b9f06bbaeb6100af9cd714b3de3">cid_parse_dict</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *loader, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *base, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> size)</td></tr>
+<tr class="memitem:a0422203eddce4c341b528a43afaf5aa8" id="r_a0422203eddce4c341b528a43afaf5aa8"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0422203eddce4c341b528a43afaf5aa8">cid_read_subrs</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:ad875eee0b0a7f68af6d200f09af9c01f" id="r_ad875eee0b0a7f68af6d200f09af9c01f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ad875eee0b0a7f68af6d200f09af9c01f">t1_init_loader</a> (<a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *loader, <a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a8b37b50117d13b7c951b76a074d3e355" id="r_a8b37b50117d13b7c951b76a074d3e355"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8b37b50117d13b7c951b76a074d3e355">t1_done_loader</a> (<a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *loader)</td></tr>
+<tr class="memitem:a4ff0b0d5b1a6f963bb297c4ebb975f82" id="r_a4ff0b0d5b1a6f963bb297c4ebb975f82"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4ff0b0d5b1a6f963bb297c4ebb975f82">cid_face_open</a> (<a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a641612061e7f877258cdf819fe57657c" id="r_a641612061e7f877258cdf819fe57657c"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#a4d4d3541e7fa341d8699b39efe37973c">T1_FieldRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a641612061e7f877258cdf819fe57657c">cid_field_records</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_cidload</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79b310767d539d921d82c0c9bafb45e8" name="a79b310767d539d921d82c0c9bafb45e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b310767d539d921d82c0c9bafb45e8">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#a274fc710e46de4825f7a0d2157e168e4">PS_PrivateRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bd5412680c87e8804385f30b1bbcd0f" name="a3bd5412680c87e8804385f30b1bbcd0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd5412680c87e8804385f30b1bbcd0f">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#a46f9ff3a0d23cd92614012b2400c5759">CID_FaceDictRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a486ece7706e0b40f03d6ab0b842586f0" name="a486ece7706e0b40f03d6ab0b842586f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486ece7706e0b40f03d6ab0b842586f0">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="struct_p_s___font_info_rec.html">PS_FontInfoRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb14d0edf0c80ad37476a4c6ae657d15" name="adb14d0edf0c80ad37476a4c6ae657d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb14d0edf0c80ad37476a4c6ae657d15">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#ac029c548268ab554f3459e7379e7aee7">CID_FaceInfoRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a969834884eacc754f73fb53948f35ab1" name="a969834884eacc754f73fb53948f35ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a969834884eacc754f73fb53948f35ab1">&#9670;&#160;</a></span>T1CODE <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1CODE&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a81c5858e601ee955b6c9eb6d4a7adfd0">T1_FIELD_LOCATION_PRIVATE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8be4a3000c4d41a2ae4f9051dbd8c3f3" name="a8be4a3000c4d41a2ae4f9051dbd8c3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8be4a3000c4d41a2ae4f9051dbd8c3f3">&#9670;&#160;</a></span>T1CODE <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1CODE&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32afa57448995b2f1f0876491e1ead3c26a">T1_FIELD_LOCATION_FONT_DICT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a948c4cb7b1455b9e1ffd02164e485eeb" name="a948c4cb7b1455b9e1ffd02164e485eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948c4cb7b1455b9e1ffd02164e485eeb">&#9670;&#160;</a></span>T1CODE <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1CODE&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a92b9d360faa31535e6b2d8023857e3fe">T1_FIELD_LOCATION_FONT_INFO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a601a070597291d53b0e6964aca356eb7" name="a601a070597291d53b0e6964aca356eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601a070597291d53b0e6964aca356eb7">&#9670;&#160;</a></span>T1CODE <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1CODE&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a49a2c680f72e9b28197625a198f17bb6">T1_FIELD_LOCATION_CID_INFO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a0aa4422f48ef5d500a80a0ba64c1b4d6" name="a0aa4422f48ef5d500a80a0ba64c1b4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa4422f48ef5d500a80a0ba64c1b4d6">&#9670;&#160;</a></span>cid_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cid_decrypt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#af7b5edd727ac01b0d4729ac848bd4175">FT_Offset</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a></td>          <td class="paramname"><span class="paramname"><em>seed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a0aa4422f48ef5d500a80a0ba64c1b4d6_cgraph.png" border="0" usemap="#acidload_8c_a0aa4422f48ef5d500a80a0ba64c1b4d6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a0aa4422f48ef5d500a80a0ba64c1b4d6_icgraph.png" border="0" usemap="#acidload_8c_a0aa4422f48ef5d500a80a0ba64c1b4d6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a4ff0b0d5b1a6f963bb297c4ebb975f82" name="a4ff0b0d5b1a6f963bb297c4ebb975f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff0b0d5b1a6f963bb297c4ebb975f82">&#9670;&#160;</a></span>cid_face_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cid_face_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a4ff0b0d5b1a6f963bb297c4ebb975f82_cgraph.png" border="0" usemap="#acidload_8c_a4ff0b0d5b1a6f963bb297c4ebb975f82_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a4ff0b0d5b1a6f963bb297c4ebb975f82_icgraph.png" border="0" usemap="#acidload_8c_a4ff0b0d5b1a6f963bb297c4ebb975f82_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a29c965cd62ec4110610b750f3f9e83c0" name="a29c965cd62ec4110610b750f3f9e83c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c965cd62ec4110610b750f3f9e83c0">&#9670;&#160;</a></span>cid_get_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cid_get_offset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></td>          <td class="paramname"><span class="paramname"><em>offsize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a29c965cd62ec4110610b750f3f9e83c0_cgraph.png" border="0" usemap="#acidload_8c_a29c965cd62ec4110610b750f3f9e83c0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a29c965cd62ec4110610b750f3f9e83c0_icgraph.png" border="0" usemap="#acidload_8c_a29c965cd62ec4110610b750f3f9e83c0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a420bcdb5efbfb755869f1775bf9f827a" name="a420bcdb5efbfb755869f1775bf9f827a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420bcdb5efbfb755869f1775bf9f827a">&#9670;&#160;</a></span>cid_load_keyword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cid_load_keyword </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *</td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a></td>          <td class="paramname"><span class="paramname"><em>keyword</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a420bcdb5efbfb755869f1775bf9f827a_icgraph.png" border="0" usemap="#acidload_8c_a420bcdb5efbfb755869f1775bf9f827a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="af0ad8b9f06bbaeb6100af9cd714b3de3" name="af0ad8b9f06bbaeb6100af9cd714b3de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ad8b9f06bbaeb6100af9cd714b3de3">&#9670;&#160;</a></span>cid_parse_dict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cid_parse_dict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *</td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_af0ad8b9f06bbaeb6100af9cd714b3de3_cgraph.png" border="0" usemap="#acidload_8c_af0ad8b9f06bbaeb6100af9cd714b3de3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_af0ad8b9f06bbaeb6100af9cd714b3de3_icgraph.png" border="0" usemap="#acidload_8c_af0ad8b9f06bbaeb6100af9cd714b3de3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a0422203eddce4c341b528a43afaf5aa8" name="a0422203eddce4c341b528a43afaf5aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0422203eddce4c341b528a43afaf5aa8">&#9670;&#160;</a></span>cid_read_subrs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cid_read_subrs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a0422203eddce4c341b528a43afaf5aa8_cgraph.png" border="0" usemap="#acidload_8c_a0422203eddce4c341b528a43afaf5aa8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a0422203eddce4c341b528a43afaf5aa8_icgraph.png" border="0" usemap="#acidload_8c_a0422203eddce4c341b528a43afaf5aa8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a4f1a070d87207d7d68cdeb854780fccf" name="a4f1a070d87207d7d68cdeb854780fccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1a070d87207d7d68cdeb854780fccf">&#9670;&#160;</a></span>is_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_alpha </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a4f1a070d87207d7d68cdeb854780fccf_icgraph.png" border="0" usemap="#acidload_8c_a4f1a070d87207d7d68cdeb854780fccf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a00a4472c18718de73b1a4b2e68eaeb02" name="a00a4472c18718de73b1a4b2e68eaeb02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a4472c18718de73b1a4b2e68eaeb02">&#9670;&#160;</a></span>parse_fd_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">parse_fd_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cidparse_8h.html#a3666434d7f15bf729e8f4c81e10a5912">CID_Parser</a> *</td>          <td class="paramname"><span class="paramname"><em>parser</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a00a4472c18718de73b1a4b2e68eaeb02_cgraph.png" border="0" usemap="#acidload_8c_a00a4472c18718de73b1a4b2e68eaeb02_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a00a4472c18718de73b1a4b2e68eaeb02_icgraph.png" border="0" usemap="#acidload_8c_a00a4472c18718de73b1a4b2e68eaeb02_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a511e452f4ba93b9d21d7adb40233cff2" name="a511e452f4ba93b9d21d7adb40233cff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511e452f4ba93b9d21d7adb40233cff2">&#9670;&#160;</a></span>parse_font_bbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">parse_font_bbox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cidparse_8h.html#a3666434d7f15bf729e8f4c81e10a5912">CID_Parser</a> *</td>          <td class="paramname"><span class="paramname"><em>parser</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a511e452f4ba93b9d21d7adb40233cff2_cgraph.png" border="0" usemap="#acidload_8c_a511e452f4ba93b9d21d7adb40233cff2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a511e452f4ba93b9d21d7adb40233cff2_icgraph.png" border="0" usemap="#acidload_8c_a511e452f4ba93b9d21d7adb40233cff2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="aa36c8ae66797b1a08db4296ee98a22b0" name="aa36c8ae66797b1a08db4296ee98a22b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36c8ae66797b1a08db4296ee98a22b0">&#9670;&#160;</a></span>parse_font_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">parse_font_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cidparse_8h.html#a3666434d7f15bf729e8f4c81e10a5912">CID_Parser</a> *</td>          <td class="paramname"><span class="paramname"><em>parser</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_aa36c8ae66797b1a08db4296ee98a22b0_cgraph.png" border="0" usemap="#acidload_8c_aa36c8ae66797b1a08db4296ee98a22b0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_aa36c8ae66797b1a08db4296ee98a22b0_icgraph.png" border="0" usemap="#acidload_8c_aa36c8ae66797b1a08db4296ee98a22b0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a8b37b50117d13b7c951b76a074d3e355" name="a8b37b50117d13b7c951b76a074d3e355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b37b50117d13b7c951b76a074d3e355">&#9670;&#160;</a></span>t1_done_loader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t1_done_loader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *</td>          <td class="paramname"><span class="paramname"><em>loader</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a8b37b50117d13b7c951b76a074d3e355_cgraph.png" border="0" usemap="#acidload_8c_a8b37b50117d13b7c951b76a074d3e355_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_a8b37b50117d13b7c951b76a074d3e355_icgraph.png" border="0" usemap="#acidload_8c_a8b37b50117d13b7c951b76a074d3e355_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="ad875eee0b0a7f68af6d200f09af9c01f" name="ad875eee0b0a7f68af6d200f09af9c01f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad875eee0b0a7f68af6d200f09af9c01f">&#9670;&#160;</a></span>t1_init_loader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t1_init_loader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cidload_8h.html#a08d5d05ea49edf0603b8ca5615388ce3">CID_Loader</a> *</td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cidload_8c_ad875eee0b0a7f68af6d200f09af9c01f_icgraph.png" border="0" usemap="#acidload_8c_ad875eee0b0a7f68af6d200f09af9c01f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a641612061e7f877258cdf819fe57657c" name="a641612061e7f877258cdf819fe57657c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641612061e7f877258cdf819fe57657c">&#9670;&#160;</a></span>cid_field_records</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#a4d4d3541e7fa341d8699b39efe37973c">T1_FieldRec</a> cid_field_records[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_6142772ec078ae34fbb9714b7c3220bd.html">cid</a></li><li class="navelem"><a href="cidload_8c.html">cidload.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

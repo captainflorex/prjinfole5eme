@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['zalloc_0',['zalloc',['../structz__stream__s.html#a23a2299c384f808e76e9908f21216b0f',1,'z_stream_s']]],
+  ['zfree_1',['zfree',['../structz__stream__s.html#a89eb750ade7f4f0b56bfdadf13344982',1,'z_stream_s']]],
+  ['zone_2',['zone',['../struct_t1___decoder_rec__.html#add29399f0c811404b9d6ca373793103e',1,'T1_DecoderRec_::zone'],['../struct_t_t___loader_rec__.html#aaa594deb371418c6cb932f318a8631ce',1,'TT_LoaderRec_::zone'],['../struct_c_f_f___decoder__.html#a8b7e65540295938e9c3f466f8279849c',1,'CFF_Decoder_::zone'],['../struct_p_s_h1___hint___table_rec__.html#a9a80d783109c30c6ea36f11870ddad38',1,'PSH1_Hint_TableRec_::zone'],['../struct_p_s_h2___hint___table_rec__.html#a6db2c0343666be1352edc9c17037d5a4',1,'PSH2_Hint_TableRec_::zone'],['../struct_p_s_h3___hint___table_rec__.html#a476c8fcca65f5ddd1fc5c411f5d4911b',1,'PSH3_Hint_TableRec_::zone'],['../struct_t_t___subglyph_rec__.html#a938c495327711a17538f68bd1c7b4b7b',1,'TT_SubglyphRec_::zone'],['../struct_t_t___driver_rec__.html#a331bcdf6b1b3b46569d5f77f08330ce1',1,'TT_DriverRec_::zone']]],
+  ['zones_3',['zones',['../struct_t1___decoder_rec__.html#a4e33201df5beec8a3d81eca726b09ea5',1,'T1_DecoderRec_::zones'],['../struct_c_f_f___decoder__.html#a91ff8b4f9cb5d2275cc468972632aaac',1,'CFF_Decoder_::zones'],['../struct_p_s_h1___hint___table_rec__.html#a6809e6b5b9a8cf369098aa693e547af1',1,'PSH1_Hint_TableRec_::zones'],['../struct_p_s_h2___hint___table_rec__.html#a66ee19d0b19a5647d0d5b7e14947f2c5',1,'PSH2_Hint_TableRec_::zones'],['../struct_p_s_h3___hint___table_rec__.html#a7629cf3f87098488af490c72e7873991',1,'PSH3_Hint_TableRec_::zones'],['../struct_p_s_h___blue___table_rec__.html#a81f477ba33c7de685c36ac8afa32efa2',1,'PSH_Blue_TableRec_::zones']]],
+  ['zp0_4',['zp0',['../struct_t_t___exec_context_rec__.html#a6cc4b85be1c1e517bfd7a0d4892fdefb',1,'TT_ExecContextRec_']]],
+  ['zp1_5',['zp1',['../struct_t_t___exec_context_rec__.html#a1492ef8738681b3859103655e07f0940',1,'TT_ExecContextRec_']]],
+  ['zp2_6',['zp2',['../struct_t_t___exec_context_rec__.html#ab953844213b8f65fdc8b556892f51e0f',1,'TT_ExecContextRec_']]]
+];

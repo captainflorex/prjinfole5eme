@@ -1,0 +1,105 @@
+\doxysection{entites.\+h}
+\hypertarget{src_2entites_8h_source}{}\label{src_2entites_8h_source}\index{src/entites.h@{src/entites.h}}
+\doxymbox{\hyperlink{src_2entites_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ ENTITES\_H}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ ENTITES\_H}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{src_2eclair_8h}{eclair.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00006}\doxymbox{\hyperlink{src_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{00006}}\ \textcolor{preprocessor}{\#define\ LARGEUR\_FENETRE\ \ 800}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00007}\doxymbox{\hyperlink{src_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{00007}}\ \textcolor{preprocessor}{\#define\ HAUTEUR\_FENETRE\ \ 600}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00008}\doxymbox{\hyperlink{src_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{00008}}\ \textcolor{preprocessor}{\#define\ HAUTEUR\_INFO\ \ \ \ \ \ 60}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00009}\doxymbox{\hyperlink{src_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{00009}}\ \textcolor{preprocessor}{\#define\ HAUTEUR\_ZONE\ \ \ \ \ (HAUTEUR\_FENETRE\ -\/\ HAUTEUR\_INFO)}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00011}\doxymbox{\hyperlink{src_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{00011}}\ \textcolor{preprocessor}{\#define\ MAX\_BULLES\ \ \ \ \ \ 30}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00012}\doxymbox{\hyperlink{src_2entites_8h_adbc131e9b147b67d84003e054b355365}{00012}}\ \textcolor{preprocessor}{\#define\ MAX\_PROJECTILES\ 10}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00013}\doxymbox{\hyperlink{src_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{00013}}\ \textcolor{preprocessor}{\#define\ MAX\_BONUS\ \ \ \ \ \ \ 5}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00014}\doxymbox{\hyperlink{src_2entites_8h_a5d2813c915f8962316bdba34165daef5}{00014}}\ \textcolor{preprocessor}{\#define\ PSEUDO\_LEN\ \ \ \ \ \ 32}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00016}\doxymbox{\hyperlink{src_2entites_8h_a37fa8267bd5513503c65440e387d561c}{00016}}\ \textcolor{preprocessor}{\#define\ NB\_TYPES\_BONUS\ 3}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00017}\doxymbox{\hyperlink{src_2entites_8h_a0c5ae29b6a7357ae211b341bf2e4c9b7}{00017}}\ \textcolor{preprocessor}{\#define\ DUREE\_ARME\_SPECIALE\ 10.0f}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00021}\doxymbox{\hyperlink{src_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{00021}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00022}\doxymbox{\hyperlink{src_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{00022}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\_GRANDE}}\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00023}\doxymbox{\hyperlink{src_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}{00023}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}{BULLE\_MOYENNE}},}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00024}\doxymbox{\hyperlink{src_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{00024}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{BULLE\_PETITE}},}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00025}\doxymbox{\hyperlink{src_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{00025}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{BULLE\_MINUSCULE}}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00026}00026\ \}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{TailleBulle}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00028}\doxymbox{\hyperlink{src_2entites_8h_aeea858c806fecc146afba5319180d9ae}{00028}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00029}\doxymbox{\hyperlink{src_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{00029}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}}\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00030}\doxymbox{\hyperlink{src_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{00030}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{ARME\_TIR\_RAPIDE}},}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00031}\doxymbox{\hyperlink{src_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{00031}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{ARME\_TIR\_TRIPLE}},}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00032}\doxymbox{\hyperlink{src_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{00032}}\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{ARME\_EXPLOSION}}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00033}00033\ \}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}{TypeArme}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00035}00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{float}\ vx;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ vivant;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00039}00039\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}{TypeArme}}\ arme;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{float}\ duree\_arme;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ score;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{char}\ \ pseudo[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}];}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00043}00043\ \}\ \doxymbox{\hyperlink{struct_joueur}{Joueur}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00045}00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ x,\ y;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ vx,\ vy;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00048}00048\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{TailleBulle}}\ taille;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ active;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ contient\_arme;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ lance\_eclairs;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00052}00052\ \}\ \doxymbox{\hyperlink{struct_bulle}{Bulle}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00054}00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{float}\ vx,\ vy;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{int}\ active;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00058}00058\ \ \ \ \ \textcolor{keywordtype}{int}\ explosion;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00059}00059\ \}\ \doxymbox{\hyperlink{struct_projectile}{Projectile}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00061}00061\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ x,\ y;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00063}00063\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}{TypeArme}}\ type;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{int}\ active;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{float}\ timer;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00066}00066\ \}\ \doxymbox{\hyperlink{struct_bonus_arme}{BonusArme}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00068}00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{float}\ vx;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ active;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ points\_vie;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00073}\doxymbox{\hyperlink{struct_boss_aa8f84435dbb2670923e1908a9d4e46b9}{00073}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \doxymbox{\hyperlink{struct_boss_aa8f84435dbb2670923e1908a9d4e46b9}{points\_vie\_max}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00074}\doxymbox{\hyperlink{struct_boss_a7f80cb01aede5e6c00d0b93d4156b643}{00074}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{struct_boss_a7f80cb01aede5e6c00d0b93d4156b643}{timer\_tir}};\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ dÃ©lai\ avant\ prochain\ envoi\ de\ bulle\ */}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00075}00075\ \}\ \doxymbox{\hyperlink{struct_boss}{Boss}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00077}00077\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00078}00078\ \ \ \ \ \doxymbox{\hyperlink{struct_joueur}{Joueur}}\ \ \ \ \ \ joueur;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00079}00079\ \ \ \ \ \doxymbox{\hyperlink{struct_bulle}{Bulle}}\ \ \ \ \ \ \ bulles[\doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}}];}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ nb\_bulles;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00081}00081\ \ \ \ \ \doxymbox{\hyperlink{struct_projectile}{Projectile}}\ \ projectiles[\doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}}];}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00082}00082\ \ \ \ \ \doxymbox{\hyperlink{struct_bonus_arme}{BonusArme}}\ \ \ bonus[\doxymbox{\hyperlink{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{MAX\_BONUS}}];}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00083}00083\ \ \ \ \ \doxymbox{\hyperlink{struct_boss}{Boss}}\ \ \ \ \ \ \ \ boss;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ niveau;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ temps\_restant;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ decompte;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{float}\ decompte\_timer;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00088}00088\ \ \ \ \ \doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ eclairs;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{int}\ bulles\_en\_attente;\ \ \ \textcolor{comment}{/*\ nb\ de\ bulles\ Ã \ spawner\ aprÃ¨s\ le\ dÃ©compte\ */}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{float}\ timer\_arme\_speciale;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{float}\ explosion\_x,\ explosion\_y;}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{float}\ explosion\_timer;\ \ \ \textcolor{comment}{/*\ >\ 0\ =\ explosion\ en\ cours\ */}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00093}\doxymbox{\hyperlink{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}{00093}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}{boss\_a\_spawne}};\ \ \ \textcolor{comment}{/*\ passe\ Ã \ 1\ dÃ¨s\ que\ le\ boss\ apparaÃ®t\ */}}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00094}00094\ \}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}};}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00097}00097\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412}{rayon\_bulle}}(\doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{TailleBulle}}\ t);}
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{src_2entites_8h_source_l00099}00099\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

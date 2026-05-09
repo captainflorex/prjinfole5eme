@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/cache/ftccache.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftccache_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftccache.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftccache_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  ftccache.h                                                             */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    FreeType internal cache interface (specification).                   */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2000-2001, 2002 by                                           */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef __FTCCACHE_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define __FTCCACHE_H__</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/* define to allow cache lookup inlining */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="ftccache_8h.html#ae44aa476a90c7e22a1f6036b3b2e4905">   24</a></span><span class="preprocessor">#define  FTC_CACHE_USE_INLINE</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">/* handle to cache object */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">   30</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t_c___cache_rec__.html">FTC_CacheRec_</a>*  <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">/* handle to cache class */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">   33</a></span>  <span class="keyword">typedef</span> <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t_c___cache___class_rec__.html">FTC_Cache_ClassRec_</a>*  <a class="code hl_typedef" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">/* handle to cache node family */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">   36</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t_c___family_rec__.html">FTC_FamilyRec_</a>*  <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">/* handle to cache root query */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">   39</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t_c___query_rec__.html">FTC_QueryRec_</a>*  <a class="code hl_typedef" href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">FTC_Query</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">  /*****                   CACHE NODE DEFINITIONS                      *****/</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">/* Each cache controls one or more cache nodes.  Each node is part of    */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">/* the global_lru list of the manager.  Its `data&#39; field however is used */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="comment">/* as a reference count for now.                                         */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="comment">/* A node can be anything, depending on the type of information held by  */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">/* the cache.  It can be an individual glyph image, a set of bitmaps     */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">/* glyphs for a given size, some metrics, etc.                           */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">/* structure size should be 20 bytes on 32-bits machines */</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="};">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html">   63</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___node_rec__.html">FTC_NodeRec_</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html#a94b63c6f1a6c12b61814b72165c66db5">   65</a></span>    <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>   <a class="code hl_variable" href="struct_f_t_c___node_rec__.html#a94b63c6f1a6c12b61814b72165c66db5">mru_next</a>;     <span class="comment">/* circular mru list pointer           */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html#a8ea2370e9a02ec311515c780fc311715">   66</a></span>    <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>   <a class="code hl_variable" href="struct_f_t_c___node_rec__.html#a8ea2370e9a02ec311515c780fc311715">mru_prev</a>;     <span class="comment">/* circular mru list pointer           */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html#a90db883e43107186580ebb85e46e9af2">   67</a></span>    <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>   <a class="code hl_variable" href="struct_f_t_c___node_rec__.html#a90db883e43107186580ebb85e46e9af2">link</a>;         <span class="comment">/* used for hashing                    */</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html#a11ca8eff3101f4b7d2be47d8af1a4aab">   68</a></span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  <a class="code hl_variable" href="struct_f_t_c___node_rec__.html#a11ca8eff3101f4b7d2be47d8af1a4aab">hash</a>;         <span class="comment">/* used for hashing too                */</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html#ac7b58044efa898190d0a00cb79eecd37">   69</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a>  <a class="code hl_variable" href="struct_f_t_c___node_rec__.html#ac7b58044efa898190d0a00cb79eecd37">fam_index</a>;    <span class="comment">/* index of family the node belongs to */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_f_t_c___node_rec__.html#a30ba3878a09ce276f9d804ed9451cdcb">   70</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>   <a class="code hl_variable" href="struct_f_t_c___node_rec__.html#a30ba3878a09ce276f9d804ed9451cdcb">ref_count</a>;    <span class="comment">/* reference count for this node       */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="ftccache_8h.html#ad8e7952ccf161b72f4f25dc5de31f08f">   72</a></span>  } <a class="code hl_typedef" href="ftccache_8h.html#ad8e7952ccf161b72f4f25dc5de31f08f">FTC_NodeRec</a>;</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="ftccache_8h.html#ac645bc767d471cf5c43ba93f5eacca89">   75</a></span><span class="preprocessor">#define FTC_NODE( x )    ( (FTC_Node)(x) )</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a3ebc1ab378d9434100957418a881db15">   76</a></span><span class="preprocessor">#define FTC_NODE_P( x )  ( (FTC_Node*)(x) )</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="comment">/* These functions are exported so that they can be called from          */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">/* user-provided cache classes; otherwise, they are really part of the   */</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="comment">/* cache sub-system internals.                                           */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="comment">/* can be used as a FTC_Node_DoneFunc */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_function" href="ftccache_8h.html#a74516f61eef430ec9c782a308f452e2c">ftc_node_done</a>( <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>   node,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                 <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="comment">/* reserved for manager&#39;s use */</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_function" href="ftccache_8h.html#a7b50d6710a8d606816e3916df36940dc">ftc_node_destroy</a>( <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>     node,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>  manager );</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">  /*****                   CACHE QUERY DEFINITIONS                     *****/</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="comment">/* A structure modelling a cache node query.  The following fields must  */</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="comment">/* all be set by the @FTC_Family_CompareFunc method of a cache&#39;s family  */</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">/* list.                                                                 */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="};">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="struct_f_t_c___query_rec__.html">  109</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___query_rec__.html">FTC_QueryRec_</a></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="struct_f_t_c___query_rec__.html#a7d33bf65e0ce78cb3c7ab0f987499e8e">  111</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>  <a class="code hl_variable" href="struct_f_t_c___query_rec__.html#a7d33bf65e0ce78cb3c7ab0f987499e8e">family</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="struct_f_t_c___query_rec__.html#a57650872d6d79c5dc02e8aa83f67ff82">  112</a></span>    FT_UFast    <a class="code hl_variable" href="struct_f_t_c___query_rec__.html#a57650872d6d79c5dc02e8aa83f67ff82">hash</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a96f43456912699b680da2096288e8a93">  114</a></span>  } <a class="code hl_typedef" href="ftccache_8h.html#a96f43456912699b680da2096288e8a93">FTC_QueryRec</a>;</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">  117</a></span><span class="preprocessor">#define FTC_QUERY( x )    ( (FTC_Query)(x) )</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a565aab25b0183cd5267daec69d0cb0a8">  118</a></span><span class="preprocessor">#define FTC_QUERY_P( x )  ( (FTC_Query*)(x) )</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">  /*****                   CACHE FAMILY DEFINITIONS                    *****/</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="};">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="struct_f_t_c___family_rec__.html">  129</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___family_rec__.html">FTC_FamilyRec_</a></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="struct_f_t_c___family_rec__.html#a9f378d498573bc75fe67a372e4936a58">  131</a></span>    <a class="code hl_typedef" href="ftlru_8h.html#a346bb711b56c413b493f84f84227ce8c">FT_LruNodeRec</a>  <a class="code hl_variable" href="struct_f_t_c___family_rec__.html#a9f378d498573bc75fe67a372e4936a58">lru</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="struct_f_t_c___family_rec__.html#a4c004b25e43bb56007b037e8e6f1cc98">  132</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>      <a class="code hl_variable" href="struct_f_t_c___family_rec__.html#a4c004b25e43bb56007b037e8e6f1cc98">cache</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="struct_f_t_c___family_rec__.html#a5878abfe3f75aca4550738264ddd5543">  133</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>        <a class="code hl_variable" href="struct_f_t_c___family_rec__.html#a5878abfe3f75aca4550738264ddd5543">num_nodes</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="struct_f_t_c___family_rec__.html#aca3942aeafbb5b2f7114ffe4352b437b">  134</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>        <a class="code hl_variable" href="struct_f_t_c___family_rec__.html#aca3942aeafbb5b2f7114ffe4352b437b">fam_index</a>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a2543323bf3358707d629aa92727ee8e1">  136</a></span>  } <a class="code hl_typedef" href="ftccache_8h.html#a2543323bf3358707d629aa92727ee8e1">FTC_FamilyRec</a>;</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="ftccache_8h.html#af8b0bb86a0434c6bdeb346c0f53afb32">  139</a></span><span class="preprocessor">#define FTC_FAMILY( x )    ( (FTC_Family)(x) )</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a57e4630cb139f2406347795530acd253">  140</a></span><span class="preprocessor">#define FTC_FAMILY_P( x )  ( (FTC_Family*)(x) )</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="comment">/* These functions are exported so that they can be called from          */</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="comment">/* user-provided cache classes; otherwise, they are really part of the   */</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="comment">/* cache sub-system internals.                                           */</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="comment">/* must be called by any FTC_Node_InitFunc routine */</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <a class="code hl_function" href="ftccache_8h.html#abd89a8a8e860a11792cf2ca59fe3d5ed">ftc_family_init</a>( <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>  family,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                   <a class="code hl_typedef" href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">FTC_Query</a>   query,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                   <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>   cache );</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">/* can be used as a FTC_Family_DoneFunc; otherwise, must be called */</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="comment">/* by any family finalizer function                                */</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_function" href="ftccache_8h.html#ada49ed57b935b684d100b9b557c0ebbb">ftc_family_done</a>( <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>  family );</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">  /*****                       CACHE DEFINITIONS                       *****/</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">/* each cache really implements a dynamic hash table to manage its nodes */</span></div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="};">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html">  172</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___cache_rec__.html">FTC_CacheRec_</a></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#aec65ef3c6235023c6caa74ceb41d2d3f">  174</a></span>    <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>          <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#aec65ef3c6235023c6caa74ceb41d2d3f">manager</a>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#a2765f249e995da02dc9f01edcaee9b0d">  175</a></span>    <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>            <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#a2765f249e995da02dc9f01edcaee9b0d">memory</a>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#a00a841ffa3c58ccfb6a9ce258a5fbbea">  176</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a>      <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#a00a841ffa3c58ccfb6a9ce258a5fbbea">clazz</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#ad63f53b859574a34590c425fb4781bf0">  178</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>              <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#ad63f53b859574a34590c425fb4781bf0">cache_index</a>;  <span class="comment">/* in manager&#39;s table         */</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#a7403f3ac93e80886c06a47277876a182">  179</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>           <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#a7403f3ac93e80886c06a47277876a182">cache_data</a>;   <span class="comment">/* used by cache node methods */</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#a205c7df4d202f5061b819a51930b5a1f">  181</a></span>    FT_UFast             <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#a205c7df4d202f5061b819a51930b5a1f">p</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#aca20340deffda70ee03e5538a222657b">  182</a></span>    FT_UFast             <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#aca20340deffda70ee03e5538a222657b">mask</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#a5325ff0ab8b2f9c06e9379834b9813ef">  183</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>              <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#a5325ff0ab8b2f9c06e9379834b9813ef">slack</a>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#ae1203a745e309bf6245abe162eb5b882">  184</a></span>    <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>*            <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#ae1203a745e309bf6245abe162eb5b882">buckets</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#a9d80ad6599d9b1db7defc8a6b1df3f28">  186</a></span>    <a class="code hl_typedef" href="ftlru_8h.html#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a>  <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#a9d80ad6599d9b1db7defc8a6b1df3f28">family_class</a>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache_rec__.html#ac12c63fb2e9d108f1f68f5dc88227ffb">  187</a></span>    <a class="code hl_typedef" href="ftlru_8h.html#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a>           <a class="code hl_variable" href="struct_f_t_c___cache_rec__.html#ac12c63fb2e9d108f1f68f5dc88227ffb">families</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">  189</a></span>  } <a class="code hl_typedef" href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a>;</div>
+</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="ftccache_8h.html#accff87f7fe8ee4824aed3d9b5ac7fc35">  192</a></span><span class="preprocessor">#define FTC_CACHE( x )    ( (FTC_Cache)(x) )</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="ftccache_8h.html#aa80e8485449ae6c35ca2a41c582df4f7">  193</a></span><span class="preprocessor">#define FTC_CACHE_P( x )  ( (FTC_Cache*)(x) )</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">/* initialize a given cache */</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">  197</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a>)( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="comment">/* clear a cache */</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">  201</a></span>  <span class="keyword">typedef</span> void</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a>)( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="comment">/* finalize a given cache */</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">  205</a></span>  <span class="keyword">typedef</span> void</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a>)( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">  209</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a>)( <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>  family,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                          <a class="code hl_typedef" href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">FTC_Query</a>   query,</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                          <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>   cache );</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">  214</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a>)( <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>  family,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                             <a class="code hl_typedef" href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">FTC_Query</a>   query );</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">  218</a></span>  <span class="keyword">typedef</span> void</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a>)( <a class="code hl_typedef" href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a>  family,</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                          <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>   cache );</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="comment">/* initialize a new cache node */</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">  223</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a>)( <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>    node,</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                        <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  type,</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                        <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>   cache );</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="comment">/* compute the weight of a given cache node */</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">  229</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a>)( <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>   node,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                          <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="comment">/* compare a node to a given key pair */</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">  234</a></span>  <span class="keyword">typedef</span> <a class="code hl_variable" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a>)( <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>    node,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                           <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>  key,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                           <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>   cache );</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="comment">/* finalize a given cache node */</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">  240</a></span>  <span class="keyword">typedef</span> void</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  (*<a class="code hl_typedef" href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a>)( <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>   node,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                        <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="foldopen" id="foldopen00245" data-start="{" data-end="};">
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html">  245</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___cache___class_rec__.html">FTC_Cache_ClassRec_</a></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#ae089448a93e3df7fd04a323092e81f88">  247</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>                 <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#ae089448a93e3df7fd04a323092e81f88">cache_size</a>;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#aac531d2fe05c64a48a637c76eae831a0">  248</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a>      <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#aac531d2fe05c64a48a637c76eae831a0">cache_init</a>;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#af9ada4f5051bec8f8f5d3df8ed155c07">  249</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a>     <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#af9ada4f5051bec8f8f5d3df8ed155c07">cache_clear</a>;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a29f0e2b378fe503939fbc4020f7f3027">  250</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a>      <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a29f0e2b378fe503939fbc4020f7f3027">cache_done</a>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a34aa156e90c6f744e8ff62ef97fc00e1">  252</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>                 <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a34aa156e90c6f744e8ff62ef97fc00e1">family_size</a>;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a5f2849bf1c5696d8738f7265518c8e11">  253</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a>     <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a5f2849bf1c5696d8738f7265518c8e11">family_init</a>;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#ab24956bfd647b9478f8326805c27d2e5">  254</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a>  <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#ab24956bfd647b9478f8326805c27d2e5">family_compare</a>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a2ecef890a2405bd6d4e862b6efe85a18">  255</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a>     <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a2ecef890a2405bd6d4e862b6efe85a18">family_done</a>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a66846d6b64d5b50e411c6c8e4e2abce8">  257</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>                 <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a66846d6b64d5b50e411c6c8e4e2abce8">node_size</a>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a95d2029260af6dde1b20e309eceb10d5">  258</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a>       <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a95d2029260af6dde1b20e309eceb10d5">node_init</a>;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#aa545ed62f5982ee489aa06d3ea9e5f1a">  259</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a>     <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#aa545ed62f5982ee489aa06d3ea9e5f1a">node_weight</a>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#ae6f1182f02e46c553056f6fcb0ec40ed">  260</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a>    <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#ae6f1182f02e46c553056f6fcb0ec40ed">node_compare</a>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="struct_f_t_c___cache___class_rec__.html#a69f40cd0925fd6283e836c4d966c28ac">  261</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a>       <a class="code hl_variable" href="struct_f_t_c___cache___class_rec__.html#a69f40cd0925fd6283e836c4d966c28ac">node_done</a>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">  263</a></span>  } <a class="code hl_typedef" href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a>;</div>
+</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="comment">/* */</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="comment">/* These functions are exported so that they can be called from          */</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  <span class="comment">/* user-provided cache classes; otherwise, they are really part of the   */</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="comment">/* cache sub-system internals.                                           */</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="comment">/* can be used directly as FTC_Cache_DoneFunc(), or called by custom */</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="comment">/* cache finalizers                                                  */</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_function" href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a>( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  <span class="comment">/* can be used directly as FTC_Cache_ClearFunc(), or called by custom */</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="comment">/* cache clear routines                                               */</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <a class="code hl_function" href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a>( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  <span class="comment">/* initalize the hash table within the cache */</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  <a class="code hl_function" href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a>( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache );</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="comment">/* can be called when the key&#39;s hash value has been computed */</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <a class="code hl_function" href="ftccache_8h.html#a450f88f6f1437c4289dcecc8c30040e3">ftc_cache_lookup</a>( <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>  cache,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                    <a class="code hl_typedef" href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">FTC_Query</a>  query,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                    <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>  *anode );</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> <span class="comment">/* */</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">#endif </span><span class="comment">/* __FTCCACHE_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3b8071588139bdf26503c59260303ebd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></div><div class="ttdeci">unsigned int FT_UInt32</div><div class="ttdef"><b>Definition</b> ftconfig.h:104</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_abb1f0cb171117bb94f204d09e6a89a6e"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#abb1f0cb171117bb94f204d09e6a89a6e">FT_EXPORT</a></div><div class="ttdeci">#define FT_EXPORT(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:186</div></div>
+<div class="ttc" id="aftcache_8h_html_a69e20e3229cfa1fe4677c6626890a2e4"><div class="ttname"><a href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a></div><div class="ttdeci">struct FTC_NodeRec_ * FTC_Node</div><div class="ttdef"><b>Definition</b> ftcache.h:249</div></div>
+<div class="ttc" id="aftcache_8h_html_afa42daf62f0c6ee9d6d93e44236e47ac"><div class="ttname"><a href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></div><div class="ttdeci">struct FTC_ManagerRec_ * FTC_Manager</div><div class="ttdef"><b>Definition</b> ftcache.h:229</div></div>
+<div class="ttc" id="aftccache_8h_html_a095a59c6052424bec9f75ad5e052aa73"><div class="ttname"><a href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FTC_CacheRec_ * FTC_Cache</div><div class="ttdef"><b>Definition</b> ftccache.h:30</div></div>
+<div class="ttc" id="aftccache_8h_html_a2543323bf3358707d629aa92727ee8e1"><div class="ttname"><a href="ftccache_8h.html#a2543323bf3358707d629aa92727ee8e1">FTC_FamilyRec</a></div><div class="ttdeci">struct FTC_FamilyRec_ FTC_FamilyRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a29958ad81fd027a85c17974a9876045e"><div class="ttname"><a href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a></div><div class="ttdeci">ftc_cache_clear(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:471</div></div>
+<div class="ttc" id="aftccache_8h_html_a2fbddca535665bf0429a3e6a7567a349"><div class="ttname"><a href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a></div><div class="ttdeci">struct FTC_CacheRec_ FTC_CacheRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a359d2dfeee5abb19bbfe0afd0775556a"><div class="ttname"><a href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a></div><div class="ttdeci">struct FTC_Cache_ClassRec_ FTC_Cache_ClassRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a446cb5758705c8d93fed4834c1f7ba01"><div class="ttname"><a href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a></div><div class="ttdeci">ftc_cache_init(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:426</div></div>
+<div class="ttc" id="aftccache_8h_html_a450f88f6f1437c4289dcecc8c30040e3"><div class="ttname"><a href="ftccache_8h.html#a450f88f6f1437c4289dcecc8c30040e3">ftc_cache_lookup</a></div><div class="ttdeci">ftc_cache_lookup(FTC_Cache cache, FTC_Query query, FTC_Node *anode)</div><div class="ttdef"><b>Definition</b> ftccache.c:544</div></div>
+<div class="ttc" id="aftccache_8h_html_a4e044ea7a9cfe2cbc7b2046879fa66e7"><div class="ttname"><a href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a></div><div class="ttdeci">void(* FTC_Node_DoneFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:241</div></div>
+<div class="ttc" id="aftccache_8h_html_a74516f61eef430ec9c782a308f452e2c"><div class="ttname"><a href="ftccache_8h.html#a74516f61eef430ec9c782a308f452e2c">ftc_node_done</a></div><div class="ttdeci">ftc_node_done(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:44</div></div>
+<div class="ttc" id="aftccache_8h_html_a7b50d6710a8d606816e3916df36940dc"><div class="ttname"><a href="ftccache_8h.html#a7b50d6710a8d606816e3916df36940dc">ftc_node_destroy</a></div><div class="ttdeci">ftc_node_destroy(FTC_Node node, FTC_Manager manager)</div><div class="ttdef"><b>Definition</b> ftccache.c:314</div></div>
+<div class="ttc" id="aftccache_8h_html_a7fda8305fba9da3ac004f69d62222c1f"><div class="ttname"><a href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a></div><div class="ttdeci">void(* FTC_Cache_ClearFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:202</div></div>
+<div class="ttc" id="aftccache_8h_html_a8d40751b20ddb9a153ea1c474b1924ff"><div class="ttname"><a href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a></div><div class="ttdeci">FT_Bool(* FTC_Node_CompareFunc)(FTC_Node node, FT_Pointer key, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:235</div></div>
+<div class="ttc" id="aftccache_8h_html_a9569a13469bd526ef597ba839844b0b2"><div class="ttname"><a href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Cache_InitFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:198</div></div>
+<div class="ttc" id="aftccache_8h_html_a96f43456912699b680da2096288e8a93"><div class="ttname"><a href="ftccache_8h.html#a96f43456912699b680da2096288e8a93">FTC_QueryRec</a></div><div class="ttdeci">struct FTC_QueryRec_ FTC_QueryRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a9b89a008acd33229209ea4ca60f919de"><div class="ttname"><a href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a></div><div class="ttdeci">const struct FTC_Cache_ClassRec_ * FTC_Cache_Class</div><div class="ttdef"><b>Definition</b> ftccache.h:33</div></div>
+<div class="ttc" id="aftccache_8h_html_aa85fb09f1beb0075fe79f096d2e8cf72"><div class="ttname"><a href="ftccache_8h.html#aa85fb09f1beb0075fe79f096d2e8cf72">FTC_Family</a></div><div class="ttdeci">struct FTC_FamilyRec_ * FTC_Family</div><div class="ttdef"><b>Definition</b> ftccache.h:36</div></div>
+<div class="ttc" id="aftccache_8h_html_abd89a8a8e860a11792cf2ca59fe3d5ed"><div class="ttname"><a href="ftccache_8h.html#abd89a8a8e860a11792cf2ca59fe3d5ed">ftc_family_init</a></div><div class="ttdeci">ftc_family_init(FTC_Family family, FTC_Query query, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:376</div></div>
+<div class="ttc" id="aftccache_8h_html_acb5e48b47a8df5f85ca45be7a024dcae"><div class="ttname"><a href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a></div><div class="ttdeci">void(* FTC_Family_DoneFunc)(FTC_Family family, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:219</div></div>
+<div class="ttc" id="aftccache_8h_html_ad64f564311fcf5fabf5bce6dc513a056"><div class="ttname"><a href="ftccache_8h.html#ad64f564311fcf5fabf5bce6dc513a056">FTC_Query</a></div><div class="ttdeci">struct FTC_QueryRec_ * FTC_Query</div><div class="ttdef"><b>Definition</b> ftccache.h:39</div></div>
+<div class="ttc" id="aftccache_8h_html_ad8e7952ccf161b72f4f25dc5de31f08f"><div class="ttname"><a href="ftccache_8h.html#ad8e7952ccf161b72f4f25dc5de31f08f">FTC_NodeRec</a></div><div class="ttdeci">struct FTC_NodeRec_ FTC_NodeRec</div></div>
+<div class="ttc" id="aftccache_8h_html_ad9a62f6e005e94390b5871fead4c046f"><div class="ttname"><a href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a></div><div class="ttdeci">FT_ULong(* FTC_Node_WeightFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:230</div></div>
+<div class="ttc" id="aftccache_8h_html_ada49ed57b935b684d100b9b557c0ebbb"><div class="ttname"><a href="ftccache_8h.html#ada49ed57b935b684d100b9b557c0ebbb">ftc_family_done</a></div><div class="ttdeci">ftc_family_done(FTC_Family family)</div><div class="ttdef"><b>Definition</b> ftccache.c:405</div></div>
+<div class="ttc" id="aftccache_8h_html_add258d52f2e5270ca6aa757658198266"><div class="ttname"><a href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Family_InitFunc)(FTC_Family family, FTC_Query query, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:210</div></div>
+<div class="ttc" id="aftccache_8h_html_aea9f60ed64c82997a8d6b6ae2c808561"><div class="ttname"><a href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a></div><div class="ttdeci">void(* FTC_Cache_DoneFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:206</div></div>
+<div class="ttc" id="aftccache_8h_html_aeedbacc3ae67fcafc7806e83cb2d9772"><div class="ttname"><a href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a></div><div class="ttdeci">FT_Int(* FTC_Family_CompareFunc)(FTC_Family family, FTC_Query query)</div><div class="ttdef"><b>Definition</b> ftccache.h:215</div></div>
+<div class="ttc" id="aftccache_8h_html_afb110aa890319e5aaa0c751804afb427"><div class="ttname"><a href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Node_InitFunc)(FTC_Node node, FT_Pointer type, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:224</div></div>
+<div class="ttc" id="aftccache_8h_html_aff0fde319e7b724184209a0ebb5ea0e9"><div class="ttname"><a href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a></div><div class="ttdeci">ftc_cache_done(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:518</div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftlru_8h_html_a346bb711b56c413b493f84f84227ce8c"><div class="ttname"><a href="ftlru_8h.html#a346bb711b56c413b493f84f84227ce8c">FT_LruNodeRec</a></div><div class="ttdeci">struct FT_LruNodeRec_ FT_LruNodeRec</div></div>
+<div class="ttc" id="aftlru_8h_html_a360e5f9a87e82af925f73c028e6bf55e"><div class="ttname"><a href="ftlru_8h.html#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></div><div class="ttdeci">struct FT_LruListRec_ * FT_LruList</div><div class="ttdef"><b>Definition</b> ftlru.h:73</div></div>
+<div class="ttc" id="aftlru_8h_html_acb767a535e58997f5b97466144b0b66b"><div class="ttname"><a href="ftlru_8h.html#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a></div><div class="ttdeci">struct FT_LruList_ClassRec_ FT_LruList_ClassRec</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="afttypes_8h_html_a00f9e6a0ddd7bc55f79b2f4b5b867266"><div class="ttname"><a href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></div><div class="ttdeci">void * FT_Pointer</div><div class="ttdef"><b>Definition</b> fttypes.h:278</div></div>
+<div class="ttc" id="afttypes_8h_html_a1a832a256bb5a7e6e884afaa1a07f3ae"><div class="ttname"><a href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef unsigned char FT_Bool</div><div class="ttdef"><b>Definition</b> fttypes.h:97</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a77b77ff4d86f1c3a791463b762cfe60e"><div class="ttname"><a href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div><div class="ttdeci">int FT_Int</div><div class="ttdef"><b>Definition</b> fttypes.h:187</div></div>
+<div class="ttc" id="afttypes_8h_html_a7fa72a1f0e79fb1860c5965789024d6f"><div class="ttname"><a href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></div><div class="ttdeci">signed long FT_Long</div><div class="ttdef"><b>Definition</b> fttypes.h:209</div></div>
+<div class="ttc" id="afttypes_8h_html_a937f6c17cf5ffd09086d8610c37b9f58"><div class="ttname"><a href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a></div><div class="ttdeci">unsigned short FT_UShort</div><div class="ttdef"><b>Definition</b> fttypes.h:176</div></div>
+<div class="ttc" id="afttypes_8h_html_aa7279be89046a2563cd3d4d6651fbdcf"><div class="ttname"><a href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a></div><div class="ttdeci">signed short FT_Short</div><div class="ttdef"><b>Definition</b> fttypes.h:165</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html">FTC_Cache_ClassRec_</a></div><div class="ttdef"><b>Definition</b> ftccache.h:246</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a29f0e2b378fe503939fbc4020f7f3027"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a29f0e2b378fe503939fbc4020f7f3027">FTC_Cache_ClassRec_::cache_done</a></div><div class="ttdeci">FTC_Cache_DoneFunc cache_done</div><div class="ttdef"><b>Definition</b> ftccache.h:250</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a2ecef890a2405bd6d4e862b6efe85a18"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a2ecef890a2405bd6d4e862b6efe85a18">FTC_Cache_ClassRec_::family_done</a></div><div class="ttdeci">FTC_Family_DoneFunc family_done</div><div class="ttdef"><b>Definition</b> ftccache.h:255</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a34aa156e90c6f744e8ff62ef97fc00e1"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a34aa156e90c6f744e8ff62ef97fc00e1">FTC_Cache_ClassRec_::family_size</a></div><div class="ttdeci">FT_UInt family_size</div><div class="ttdef"><b>Definition</b> ftccache.h:252</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a5f2849bf1c5696d8738f7265518c8e11"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a5f2849bf1c5696d8738f7265518c8e11">FTC_Cache_ClassRec_::family_init</a></div><div class="ttdeci">FTC_Family_InitFunc family_init</div><div class="ttdef"><b>Definition</b> ftccache.h:253</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a66846d6b64d5b50e411c6c8e4e2abce8"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a66846d6b64d5b50e411c6c8e4e2abce8">FTC_Cache_ClassRec_::node_size</a></div><div class="ttdeci">FT_UInt node_size</div><div class="ttdef"><b>Definition</b> ftccache.h:257</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a69f40cd0925fd6283e836c4d966c28ac"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a69f40cd0925fd6283e836c4d966c28ac">FTC_Cache_ClassRec_::node_done</a></div><div class="ttdeci">FTC_Node_DoneFunc node_done</div><div class="ttdef"><b>Definition</b> ftccache.h:261</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_a95d2029260af6dde1b20e309eceb10d5"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#a95d2029260af6dde1b20e309eceb10d5">FTC_Cache_ClassRec_::node_init</a></div><div class="ttdeci">FTC_Node_InitFunc node_init</div><div class="ttdef"><b>Definition</b> ftccache.h:258</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_aa545ed62f5982ee489aa06d3ea9e5f1a"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#aa545ed62f5982ee489aa06d3ea9e5f1a">FTC_Cache_ClassRec_::node_weight</a></div><div class="ttdeci">FTC_Node_WeightFunc node_weight</div><div class="ttdef"><b>Definition</b> ftccache.h:259</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_aac531d2fe05c64a48a637c76eae831a0"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#aac531d2fe05c64a48a637c76eae831a0">FTC_Cache_ClassRec_::cache_init</a></div><div class="ttdeci">FTC_Cache_InitFunc cache_init</div><div class="ttdef"><b>Definition</b> ftccache.h:248</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_ab24956bfd647b9478f8326805c27d2e5"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#ab24956bfd647b9478f8326805c27d2e5">FTC_Cache_ClassRec_::family_compare</a></div><div class="ttdeci">FTC_Family_CompareFunc family_compare</div><div class="ttdef"><b>Definition</b> ftccache.h:254</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_ae089448a93e3df7fd04a323092e81f88"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#ae089448a93e3df7fd04a323092e81f88">FTC_Cache_ClassRec_::cache_size</a></div><div class="ttdeci">FT_UInt cache_size</div><div class="ttdef"><b>Definition</b> ftccache.h:247</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_ae6f1182f02e46c553056f6fcb0ec40ed"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#ae6f1182f02e46c553056f6fcb0ec40ed">FTC_Cache_ClassRec_::node_compare</a></div><div class="ttdeci">FTC_Node_CompareFunc node_compare</div><div class="ttdef"><b>Definition</b> ftccache.h:260</div></div>
+<div class="ttc" id="astruct_f_t_c___cache___class_rec___html_af9ada4f5051bec8f8f5d3df8ed155c07"><div class="ttname"><a href="struct_f_t_c___cache___class_rec__.html#af9ada4f5051bec8f8f5d3df8ed155c07">FTC_Cache_ClassRec_::cache_clear</a></div><div class="ttdeci">FTC_Cache_ClearFunc cache_clear</div><div class="ttdef"><b>Definition</b> ftccache.h:249</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html">FTC_CacheRec_</a></div><div class="ttdef"><b>Definition</b> ftccache.h:173</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_a00a841ffa3c58ccfb6a9ce258a5fbbea"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#a00a841ffa3c58ccfb6a9ce258a5fbbea">FTC_CacheRec_::clazz</a></div><div class="ttdeci">FTC_Cache_Class clazz</div><div class="ttdef"><b>Definition</b> ftccache.h:176</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_a205c7df4d202f5061b819a51930b5a1f"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#a205c7df4d202f5061b819a51930b5a1f">FTC_CacheRec_::p</a></div><div class="ttdeci">FT_UFast p</div><div class="ttdef"><b>Definition</b> ftccache.h:181</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_a2765f249e995da02dc9f01edcaee9b0d"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#a2765f249e995da02dc9f01edcaee9b0d">FTC_CacheRec_::memory</a></div><div class="ttdeci">FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftccache.h:175</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_a5325ff0ab8b2f9c06e9379834b9813ef"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#a5325ff0ab8b2f9c06e9379834b9813ef">FTC_CacheRec_::slack</a></div><div class="ttdeci">FT_Long slack</div><div class="ttdef"><b>Definition</b> ftccache.h:183</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_a7403f3ac93e80886c06a47277876a182"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#a7403f3ac93e80886c06a47277876a182">FTC_CacheRec_::cache_data</a></div><div class="ttdeci">FT_Pointer cache_data</div><div class="ttdef"><b>Definition</b> ftccache.h:179</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_a9d80ad6599d9b1db7defc8a6b1df3f28"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#a9d80ad6599d9b1db7defc8a6b1df3f28">FTC_CacheRec_::family_class</a></div><div class="ttdeci">FT_LruList_ClassRec family_class</div><div class="ttdef"><b>Definition</b> ftccache.h:186</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_ac12c63fb2e9d108f1f68f5dc88227ffb"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#ac12c63fb2e9d108f1f68f5dc88227ffb">FTC_CacheRec_::families</a></div><div class="ttdeci">FT_LruList families</div><div class="ttdef"><b>Definition</b> ftccache.h:187</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_aca20340deffda70ee03e5538a222657b"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#aca20340deffda70ee03e5538a222657b">FTC_CacheRec_::mask</a></div><div class="ttdeci">FT_UFast mask</div><div class="ttdef"><b>Definition</b> ftccache.h:182</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_ad63f53b859574a34590c425fb4781bf0"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#ad63f53b859574a34590c425fb4781bf0">FTC_CacheRec_::cache_index</a></div><div class="ttdeci">FT_UInt cache_index</div><div class="ttdef"><b>Definition</b> ftccache.h:178</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_ae1203a745e309bf6245abe162eb5b882"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#ae1203a745e309bf6245abe162eb5b882">FTC_CacheRec_::buckets</a></div><div class="ttdeci">FTC_Node * buckets</div><div class="ttdef"><b>Definition</b> ftccache.h:184</div></div>
+<div class="ttc" id="astruct_f_t_c___cache_rec___html_aec65ef3c6235023c6caa74ceb41d2d3f"><div class="ttname"><a href="struct_f_t_c___cache_rec__.html#aec65ef3c6235023c6caa74ceb41d2d3f">FTC_CacheRec_::manager</a></div><div class="ttdeci">FTC_Manager manager</div><div class="ttdef"><b>Definition</b> ftccache.h:174</div></div>
+<div class="ttc" id="astruct_f_t_c___family_rec___html"><div class="ttname"><a href="struct_f_t_c___family_rec__.html">FTC_FamilyRec_</a></div><div class="ttdef"><b>Definition</b> ftccache.h:130</div></div>
+<div class="ttc" id="astruct_f_t_c___family_rec___html_a4c004b25e43bb56007b037e8e6f1cc98"><div class="ttname"><a href="struct_f_t_c___family_rec__.html#a4c004b25e43bb56007b037e8e6f1cc98">FTC_FamilyRec_::cache</a></div><div class="ttdeci">FTC_Cache cache</div><div class="ttdef"><b>Definition</b> ftccache.h:132</div></div>
+<div class="ttc" id="astruct_f_t_c___family_rec___html_a5878abfe3f75aca4550738264ddd5543"><div class="ttname"><a href="struct_f_t_c___family_rec__.html#a5878abfe3f75aca4550738264ddd5543">FTC_FamilyRec_::num_nodes</a></div><div class="ttdeci">FT_UInt num_nodes</div><div class="ttdef"><b>Definition</b> ftccache.h:133</div></div>
+<div class="ttc" id="astruct_f_t_c___family_rec___html_a9f378d498573bc75fe67a372e4936a58"><div class="ttname"><a href="struct_f_t_c___family_rec__.html#a9f378d498573bc75fe67a372e4936a58">FTC_FamilyRec_::lru</a></div><div class="ttdeci">FT_LruNodeRec lru</div><div class="ttdef"><b>Definition</b> ftccache.h:131</div></div>
+<div class="ttc" id="astruct_f_t_c___family_rec___html_aca3942aeafbb5b2f7114ffe4352b437b"><div class="ttname"><a href="struct_f_t_c___family_rec__.html#aca3942aeafbb5b2f7114ffe4352b437b">FTC_FamilyRec_::fam_index</a></div><div class="ttdeci">FT_UInt fam_index</div><div class="ttdef"><b>Definition</b> ftccache.h:134</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html"><div class="ttname"><a href="struct_f_t_c___node_rec__.html">FTC_NodeRec_</a></div><div class="ttdef"><b>Definition</b> ftccache.h:64</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html_a11ca8eff3101f4b7d2be47d8af1a4aab"><div class="ttname"><a href="struct_f_t_c___node_rec__.html#a11ca8eff3101f4b7d2be47d8af1a4aab">FTC_NodeRec_::hash</a></div><div class="ttdeci">FT_UInt32 hash</div><div class="ttdef"><b>Definition</b> ftccache.h:68</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html_a30ba3878a09ce276f9d804ed9451cdcb"><div class="ttname"><a href="struct_f_t_c___node_rec__.html#a30ba3878a09ce276f9d804ed9451cdcb">FTC_NodeRec_::ref_count</a></div><div class="ttdeci">FT_Short ref_count</div><div class="ttdef"><b>Definition</b> ftccache.h:70</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html_a8ea2370e9a02ec311515c780fc311715"><div class="ttname"><a href="struct_f_t_c___node_rec__.html#a8ea2370e9a02ec311515c780fc311715">FTC_NodeRec_::mru_prev</a></div><div class="ttdeci">FTC_Node mru_prev</div><div class="ttdef"><b>Definition</b> ftccache.h:66</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html_a90db883e43107186580ebb85e46e9af2"><div class="ttname"><a href="struct_f_t_c___node_rec__.html#a90db883e43107186580ebb85e46e9af2">FTC_NodeRec_::link</a></div><div class="ttdeci">FTC_Node link</div><div class="ttdef"><b>Definition</b> ftccache.h:67</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html_a94b63c6f1a6c12b61814b72165c66db5"><div class="ttname"><a href="struct_f_t_c___node_rec__.html#a94b63c6f1a6c12b61814b72165c66db5">FTC_NodeRec_::mru_next</a></div><div class="ttdeci">FTC_Node mru_next</div><div class="ttdef"><b>Definition</b> ftccache.h:65</div></div>
+<div class="ttc" id="astruct_f_t_c___node_rec___html_ac7b58044efa898190d0a00cb79eecd37"><div class="ttname"><a href="struct_f_t_c___node_rec__.html#ac7b58044efa898190d0a00cb79eecd37">FTC_NodeRec_::fam_index</a></div><div class="ttdeci">FT_UShort fam_index</div><div class="ttdef"><b>Definition</b> ftccache.h:69</div></div>
+<div class="ttc" id="astruct_f_t_c___query_rec___html"><div class="ttname"><a href="struct_f_t_c___query_rec__.html">FTC_QueryRec_</a></div><div class="ttdef"><b>Definition</b> ftccache.h:110</div></div>
+<div class="ttc" id="astruct_f_t_c___query_rec___html_a57650872d6d79c5dc02e8aa83f67ff82"><div class="ttname"><a href="struct_f_t_c___query_rec__.html#a57650872d6d79c5dc02e8aa83f67ff82">FTC_QueryRec_::hash</a></div><div class="ttdeci">FT_UFast hash</div><div class="ttdef"><b>Definition</b> ftccache.h:112</div></div>
+<div class="ttc" id="astruct_f_t_c___query_rec___html_a7d33bf65e0ce78cb3c7ab0f987499e8e"><div class="ttname"><a href="struct_f_t_c___query_rec__.html#a7d33bf65e0ce78cb3c7ab0f987499e8e">FTC_QueryRec_::family</a></div><div class="ttdeci">FTC_Family family</div><div class="ttdef"><b>Definition</b> ftccache.h:111</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_985be69c003d9be7527e0d4572d646a5.html">cache</a></li><li class="navelem"><a href="ftccache_8h.html">ftccache.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

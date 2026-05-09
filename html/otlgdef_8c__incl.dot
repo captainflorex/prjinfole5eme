@@ -1,0 +1,17 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/otlayout/otlgdef.c"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="src/alfont-code-r12\l-trunk/alfont-code-r12\l-trunk/freetype/src/otlayout\l/otlgdef.c",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="otlgdef.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlgdef_8h.html",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="otltable.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otltable_8h.html",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="otlayout.h",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$otlayout_8h.html",tooltip=" "];
+  Node1 -> Node9 [id="edge4_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="otlcommn.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlcommn_8h.html",tooltip=" "];
+  Node9 -> Node4 [id="edge5_Node000009_Node000004",color="steelblue1",style="solid",tooltip=" "];
+}

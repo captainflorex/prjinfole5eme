@@ -1,0 +1,52 @@
+\doxysection{Référence du fichier src/\+entrees.h}
+\hypertarget{src_2entrees_8h}{}\label{src_2entrees_8h}\index{src/entrees.h@{src/entrees.h}}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{src_2entrees_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_etat_entrees}{Etat\+Entrees}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{src_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f}{entrees\+\_\+lire}} (\doxymbox{\hyperlink{struct_etat_entrees}{Etat\+Entrees}} \texorpdfstring{$\ast$}{*}e)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{src_2entrees_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{src_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f}\index{entrees.h@{entrees.h}!entrees\_lire@{entrees\_lire}}
+\index{entrees\_lire@{entrees\_lire}!entrees.h@{entrees.h}}
+\doxysubsubsection{\texorpdfstring{entrees\_lire()}{entrees\_lire()}}
+{\footnotesize\ttfamily \label{src_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f} 
+void entrees\+\_\+lire (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_entrees}{Etat\+Entrees}} \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{entrees_8c_source_l00005}{5}} du fichier \doxymbox{\hyperlink{entrees_8c_source}{entrees.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ pause\_precedent\ =\ 0;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ e-\/>\doxymbox{\hyperlink{struct_etat_entrees_ae639826acd5e0e357fd1810fbad797d0}{aller\_gauche}}\ \ =\ key[KEY\_LEFT];}
+\DoxyCodeLine{00009\ \ \ \ \ e-\/>\doxymbox{\hyperlink{struct_etat_entrees_ac2890246e0160c11ff0c09f4ab23ea43}{aller\_droite}}\ \ =\ key[KEY\_RIGHT];}
+\DoxyCodeLine{00010\ \ \ \ \ e-\/>\doxymbox{\hyperlink{struct_etat_entrees_a0ae11e053c6423cb0d4db90feed1d571}{tirer}}\ \ \ \ \ \ \ \ \ =\ key[KEY\_SPACE];}
+\DoxyCodeLine{00011\ \ \ \ \ e-\/>\doxymbox{\hyperlink{struct_etat_entrees_a26df952cfebd013e57bf1ca779b9f9d2}{quitter}}\ \ \ \ \ \ \ =\ key[KEY\_ESC];}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ pause\_actuel\ =\ key[KEY\_P];}
+\DoxyCodeLine{00014\ \ \ \ \ e-\/>\doxymbox{\hyperlink{struct_etat_entrees_a00c4b13957488beb17f148601de0ab6c}{pause\_appuye}}\ \ =\ (pause\_actuel\ \&\&\ !pause\_precedent);\ \textcolor{comment}{/*\ vrai\ 1\ seul\ tic\ */}}
+\DoxyCodeLine{00015\ \ \ \ \ e-\/>\doxymbox{\hyperlink{struct_etat_entrees_a816f24f258b10adcb07b14babc0cc160}{pause}}\ \ \ \ \ \ \ \ \ =\ pause\_actuel;}
+\DoxyCodeLine{00016\ \ \ \ \ pause\_precedent\ \ =\ pause\_actuel;}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}

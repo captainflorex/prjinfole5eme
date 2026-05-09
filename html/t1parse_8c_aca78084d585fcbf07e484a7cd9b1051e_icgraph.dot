@@ -1,0 +1,22 @@
+digraph "read_pfb_tag"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="read_pfb_tag",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="T1_Get_Private_Dict",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1parse_8c.html#abc9d83fd1fd9fc5862c14e1a6f01fbd4",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="T1_Open_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#a92b9085b4bbedf79068a7d2e2fbf88ec",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="T1_Face_Init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1objs_8c.html#ab701c1866f7ad9c23603e1294f7830af",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node3 [id="edge6_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge7_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="T1_New_Parser",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1parse_8c.html#a2a4928055043ebf7d39c609a05ddf371",tooltip=" "];
+  Node5 -> Node5 [id="edge8_Node000005_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node3 [id="edge9_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

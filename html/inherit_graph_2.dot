@@ -1,0 +1,9 @@
+digraph "Graphe hiérarchique des classes"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="_hashnode_",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct__hashnode__.html",tooltip=" "];
+}

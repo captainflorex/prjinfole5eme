@@ -1,0 +1,35 @@
+digraph "pfr_face_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="pfr_face_init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_CMap_New",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a951ef5b2f18dc022f7524a2c4d209b99",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge3_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge4_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="pfr_header_check",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#ac3f6e0bff7e3e53b748aeab8b68934a3",tooltip=" "];
+  Node3 -> Node3 [id="edge5_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node4 [id="edge6_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="pfr_header_load",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a9c06580b1cfdc8a954f63abfaa259a57",tooltip=" "];
+  Node4 -> Node4 [id="edge7_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge8_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="pfr_log_font_count",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a3e64ab6baa70a1e450ef3fb94da784b5",tooltip=" "];
+  Node5 -> Node5 [id="edge9_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge10_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="pfr_log_font_load",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a68c192c56ee5f526ab6278c30e4ff9a3",tooltip=" "];
+  Node6 -> Node7 [id="edge11_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="pfr_extra_items_skip",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a97d0336ab1ba4bfb0b7f286b51dca955",tooltip=" "];
+  Node7 -> Node8 [id="edge12_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="pfr_extra_items_parse",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a8e57ce249daf43d38320b13740001292",tooltip=" "];
+  Node8 -> Node8 [id="edge13_Node000008_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node7 [id="edge14_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node6 [id="edge15_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node9 [id="edge16_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="pfr_phy_font_load",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#ad00578e6a700b74f88e2e2b9faff9d54",tooltip=" "];
+  Node9 -> Node8 [id="edge17_Node000009_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node9 [id="edge18_Node000009_Node000009",color="steelblue1",style="solid",tooltip=" "];
+}

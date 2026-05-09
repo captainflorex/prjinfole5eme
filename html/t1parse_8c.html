@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/type1/t1parse.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t1parse_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier t1parse.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="t1parse_8h_source.html">t1parse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="t1errors_8h_source.html">t1errors.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de t1parse.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2type1_2t1parse_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2type1_2t1parse_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="t1parse_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:PFB_5FTag_5F" id="r_PFB_5FTag_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_f_b___tag__.html">PFB_Tag_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_t1parse</td></tr>
+<tr class="memitem:afa98d723b478018b84f053b5cc28ae75" id="r_afa98d723b478018b84f053b5cc28ae75"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afa98d723b478018b84f053b5cc28ae75">IS_T1_WHITESPACE</a>(c)</td></tr>
+<tr class="memitem:a6a4708f2fc8d32e3105c63bddf2e7325" id="r_a6a4708f2fc8d32e3105c63bddf2e7325"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6a4708f2fc8d32e3105c63bddf2e7325">IS_T1_LINESPACE</a>(c)</td></tr>
+<tr class="memitem:a24b997d50253b12a6669130570dd63d5" id="r_a24b997d50253b12a6669130570dd63d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a24b997d50253b12a6669130570dd63d5">IS_T1_SPACE</a>(c)</td></tr>
+<tr class="memitem:adb14d0edf0c80ad37476a4c6ae657d15" id="r_adb14d0edf0c80ad37476a4c6ae657d15"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb14d0edf0c80ad37476a4c6ae657d15">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="#a0f8d821a220e13382a49dd7d4ca2681c">PFB_Tag</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a0f8d821a220e13382a49dd7d4ca2681c" id="r_a0f8d821a220e13382a49dd7d4ca2681c"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_f_b___tag__.html">PFB_Tag_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0f8d821a220e13382a49dd7d4ca2681c">PFB_Tag</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aca78084d585fcbf07e484a7cd9b1051e" id="r_aca78084d585fcbf07e484a7cd9b1051e"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aca78084d585fcbf07e484a7cd9b1051e">read_pfb_tag</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a> *tag, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> *size)</td></tr>
+<tr class="memitem:a2a4928055043ebf7d39c609a05ddf371" id="r_a2a4928055043ebf7d39c609a05ddf371"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2a4928055043ebf7d39c609a05ddf371">T1_New_Parser</a> (<a class="el" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a> parser, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a> psaux)</td></tr>
+<tr class="memitem:a0e8d682e4e2e85b3f609db59836d5e62" id="r_a0e8d682e4e2e85b3f609db59836d5e62"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0e8d682e4e2e85b3f609db59836d5e62">T1_Finalize_Parser</a> (<a class="el" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a> parser)</td></tr>
+<tr class="memitem:ab8c599ff14b6c36f8ce2ba0447e3c47a" id="r_ab8c599ff14b6c36f8ce2ba0447e3c47a"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ab8c599ff14b6c36f8ce2ba0447e3c47a">hexa_value</a> (char c)</td></tr>
+<tr class="memitem:abc9d83fd1fd9fc5862c14e1a6f01fbd4" id="r_abc9d83fd1fd9fc5862c14e1a6f01fbd4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abc9d83fd1fd9fc5862c14e1a6f01fbd4">T1_Get_Private_Dict</a> (<a class="el" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a> parser, <a class="el" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a> psaux)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afd481a276e07b6efe88f31c177b53acc" id="r_afd481a276e07b6efe88f31c177b53acc"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#afd481a276e07b6efe88f31c177b53acc">pfb_tag_fields</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_t1parse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb14d0edf0c80ad37476a4c6ae657d15" name="adb14d0edf0c80ad37476a4c6ae657d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb14d0edf0c80ad37476a4c6ae657d15">&#9670;&#160;</a></span>FT_STRUCTURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="#a0f8d821a220e13382a49dd7d4ca2681c">PFB_Tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a4708f2fc8d32e3105c63bddf2e7325" name="a6a4708f2fc8d32e3105c63bddf2e7325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4708f2fc8d32e3105c63bddf2e7325">&#9670;&#160;</a></span>IS_T1_LINESPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_T1_LINESPACE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (c) == <span class="charliteral">&#39;\r&#39;</span> || (c) == <span class="charliteral">&#39;\n&#39;</span> )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24b997d50253b12a6669130570dd63d5" name="a24b997d50253b12a6669130570dd63d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b997d50253b12a6669130570dd63d5">&#9670;&#160;</a></span>IS_T1_SPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_T1_SPACE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( <a class="code hl_define" href="psobjs_8c.html#afa98d723b478018b84f053b5cc28ae75">IS_T1_WHITESPACE</a>( c ) || <a class="code hl_define" href="psobjs_8c.html#a6a4708f2fc8d32e3105c63bddf2e7325">IS_T1_LINESPACE</a>( c ) )</div>
+<div class="ttc" id="apsobjs_8c_html_a6a4708f2fc8d32e3105c63bddf2e7325"><div class="ttname"><a href="psobjs_8c.html#a6a4708f2fc8d32e3105c63bddf2e7325">IS_T1_LINESPACE</a></div><div class="ttdeci">#define IS_T1_LINESPACE(c)</div><div class="ttdef"><b>Definition</b> psobjs.c:267</div></div>
+<div class="ttc" id="apsobjs_8c_html_afa98d723b478018b84f053b5cc28ae75"><div class="ttname"><a href="psobjs_8c.html#afa98d723b478018b84f053b5cc28ae75">IS_T1_WHITESPACE</a></div><div class="ttdeci">#define IS_T1_WHITESPACE(c)</div><div class="ttdef"><b>Definition</b> psobjs.c:266</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa98d723b478018b84f053b5cc28ae75" name="afa98d723b478018b84f053b5cc28ae75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa98d723b478018b84f053b5cc28ae75">&#9670;&#160;</a></span>IS_T1_WHITESPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_T1_WHITESPACE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (c) == <span class="charliteral">&#39; &#39;</span>  || (c) == <span class="charliteral">&#39;\t&#39;</span> )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a0f8d821a220e13382a49dd7d4ca2681c" name="a0f8d821a220e13382a49dd7d4ca2681c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8d821a220e13382a49dd7d4ca2681c">&#9670;&#160;</a></span>PFB_Tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_f_b___tag__.html">PFB_Tag_</a> <a class="el" href="#a0f8d821a220e13382a49dd7d4ca2681c">PFB_Tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ab8c599ff14b6c36f8ce2ba0447e3c47a" name="ab8c599ff14b6c36f8ce2ba0447e3c47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c599ff14b6c36f8ce2ba0447e3c47a">&#9670;&#160;</a></span>hexa_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hexa_value </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca78084d585fcbf07e484a7cd9b1051e" name="aca78084d585fcbf07e484a7cd9b1051e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca78084d585fcbf07e484a7cd9b1051e">&#9670;&#160;</a></span>read_pfb_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> read_pfb_tag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a> *</td>          <td class="paramname"><span class="paramname"><em>tag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_aca78084d585fcbf07e484a7cd9b1051e_icgraph.png" border="0" usemap="#at1parse_8c_aca78084d585fcbf07e484a7cd9b1051e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a0e8d682e4e2e85b3f609db59836d5e62" name="a0e8d682e4e2e85b3f609db59836d5e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8d682e4e2e85b3f609db59836d5e62">&#9670;&#160;</a></span>T1_Finalize_Parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1_Finalize_Parser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_a0e8d682e4e2e85b3f609db59836d5e62_cgraph.png" border="0" usemap="#at1parse_8c_a0e8d682e4e2e85b3f609db59836d5e62_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_a0e8d682e4e2e85b3f609db59836d5e62_icgraph.png" border="0" usemap="#at1parse_8c_a0e8d682e4e2e85b3f609db59836d5e62_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="abc9d83fd1fd9fc5862c14e1a6f01fbd4" name="abc9d83fd1fd9fc5862c14e1a6f01fbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9d83fd1fd9fc5862c14e1a6f01fbd4">&#9670;&#160;</a></span>T1_Get_Private_Dict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1_Get_Private_Dict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a></td>          <td class="paramname"><span class="paramname"><em>psaux</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_abc9d83fd1fd9fc5862c14e1a6f01fbd4_cgraph.png" border="0" usemap="#at1parse_8c_abc9d83fd1fd9fc5862c14e1a6f01fbd4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_abc9d83fd1fd9fc5862c14e1a6f01fbd4_icgraph.png" border="0" usemap="#at1parse_8c_abc9d83fd1fd9fc5862c14e1a6f01fbd4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a2a4928055043ebf7d39c609a05ddf371" name="a2a4928055043ebf7d39c609a05ddf371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4928055043ebf7d39c609a05ddf371">&#9670;&#160;</a></span>T1_New_Parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T1_New_Parser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a></td>          <td class="paramname"><span class="paramname"><em>psaux</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_a2a4928055043ebf7d39c609a05ddf371_cgraph.png" border="0" usemap="#at1parse_8c_a2a4928055043ebf7d39c609a05ddf371_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t1parse_8c_a2a4928055043ebf7d39c609a05ddf371_icgraph.png" border="0" usemap="#at1parse_8c_a2a4928055043ebf7d39c609a05ddf371_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="afd481a276e07b6efe88f31c177b53acc" name="afd481a276e07b6efe88f31c177b53acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd481a276e07b6efe88f31c177b53acc">&#9670;&#160;</a></span>pfb_tag_fields</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pfb_tag_fields[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                     =</div>
+<div class="line">{</div>
+<div class="line">  <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 6 ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ae5421a72e00a764e9c6a56158b158772">FT_FRAME_USHORT</a> ( tag ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a>( size ),</div>
+<div class="line">  <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftstream_8h_html_a158291ad00a2056f43fee105a3e0c794"><div class="ttname"><a href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div><div class="ttdeci">#define FT_FRAME_END</div><div class="ttdef"><b>Definition</b> ftstream.h:118</div></div>
+<div class="ttc" id="aftstream_8h_html_ab486a7dc25c6a11a2444b93cbd318193"><div class="ttname"><a href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a></div><div class="ttdeci">#define FT_FRAME_LONG_LE(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:129</div></div>
+<div class="ttc" id="aftstream_8h_html_ad21c17eec6966e8275f8bc2269fe98a9"><div class="ttname"><a href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a></div><div class="ttdeci">#define FT_FRAME_START(size)</div><div class="ttdef"><b>Definition</b> ftstream.h:117</div></div>
+<div class="ttc" id="aftstream_8h_html_ae5421a72e00a764e9c6a56158b158772"><div class="ttname"><a href="ftstream_8h.html#ae5421a72e00a764e9c6a56158b158772">FT_FRAME_USHORT</a></div><div class="ttdeci">#define FT_FRAME_USHORT(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:123</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_0dd962a48e96800d6adc8e0bba6ee8c4.html">type1</a></li><li class="navelem"><a href="t1parse_8c.html">t1parse.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

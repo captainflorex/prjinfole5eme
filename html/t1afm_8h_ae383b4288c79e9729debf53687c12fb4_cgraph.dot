@@ -1,0 +1,17 @@
+digraph "T1_Read_AFM"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="T1_Read_AFM",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="afm_atoi",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1afm_8c.html#a5edca28f1d51204721b18fa53d1a0979",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="afm_atoindex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1afm_8c.html#a8851feacd0e161d3fa3593b6e3df8d5c",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="compare_kern_pairs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1afm_8c.html#a82db840a23ddeaed89212e5ff333c9ff",tooltip=" "];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge5_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+}

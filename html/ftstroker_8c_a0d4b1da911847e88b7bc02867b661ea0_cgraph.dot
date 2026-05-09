@@ -1,0 +1,23 @@
+digraph "ft_stroker_subpath_start"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="ft_stroker_subpath\l_start",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ft_stroke_border_moveto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#a51b59a31cbd89df47be0c9c61df947c4",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_stroke_border_close",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#ac9464e35dee19ce76331efcdd2cd46de",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="ft_stroke_border_lineto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#ac1e0905d69438efd78808fabf7f1142d",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ft_stroke_border_grow",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#a56bd2fb9d0e75d1e5802fa96f585966b",tooltip=" "];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_Vector_From_Polar",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a07535f29fc4f5d2fa010ad38fdfac144",tooltip=" "];
+  Node6 -> Node6 [id="edge6_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge7_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_Vector_Rotate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#ae39fb94254591c5933ebcbe17d47a948",tooltip=" "];
+  Node7 -> Node7 [id="edge8_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+}

@@ -1,0 +1,27 @@
+digraph "psh2_glyph_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="psh2_glyph_init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Atan2",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#ae1e83838ffd2c22497bc58a5b628f47d",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_trig_prenorm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#afdeaa60df62d7b2d17bccf007ee02ede",tooltip=" "];
+  Node2 -> Node4 [id="edge4_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="ft_trig_pseudo_polarize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#abe2cdf9da354b1693a65a4de219114d9",tooltip=" "];
+  Node1 -> Node5 [id="edge5_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="psh2_compute_dir",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a658eca7bcc0a0b0ea040b4f466769a0e",tooltip=" "];
+  Node1 -> Node6 [id="edge6_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="psh2_hint_table_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a2f24b9b70b4a4b1f1f6f2bc7268f73b7",tooltip=" "];
+  Node6 -> Node7 [id="edge7_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="psh2_hint_table_record",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#ab126e78904b4d910581cca6c3d43776f",tooltip=" "];
+  Node7 -> Node8 [id="edge8_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="psh2_hint_overlap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a6887169ea13c69419bfba4ae901403e4",tooltip=" "];
+  Node6 -> Node9 [id="edge9_Node000006_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="psh2_hint_table_record_mask",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a3e08f73b120b1b5cf2b6a4468823ddc9",tooltip=" "];
+  Node9 -> Node7 [id="edge10_Node000009_Node000007",color="steelblue1",style="solid",tooltip=" "];
+}

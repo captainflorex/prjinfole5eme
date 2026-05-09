@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/builds/amiga/src/base/ftsystem.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('builds_2amiga_2src_2base_2ftsystem_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftsystem.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;exec/memory.h&gt;</code><br />
+<code>#include &lt;proto/exec.h&gt;</code><br />
+<code>#include &lt;proto/dos.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftsystem.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2builds_2amiga_2src_2base_2ftsystem_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae48d342d1d0bc38aa38a1a7728d4bb55" id="r_ae48d342d1d0bc38aa38a1a7728d4bb55"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae48d342d1d0bc38aa38a1a7728d4bb55">__USE_SYSBASE</a></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_io</td></tr>
+<tr class="memitem:a6d05cfc0ba5a5e3298ba942c4c18bc65" id="r_a6d05cfc0ba5a5e3298ba942c4c18bc65"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6d05cfc0ba5a5e3298ba942c4c18bc65">STREAM_FILE</a>(stream)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a8b7d0c6bf3ebafe9b31ff2de7e04d108" id="r_a8b7d0c6bf3ebafe9b31ff2de7e04d108"><td class="memItemLeft">APTR __asm&#160;</td><td class="memItemRight"><a class="el" href="#a8b7d0c6bf3ebafe9b31ff2de7e04d108">AsmCreatePool</a> (register __d0 ULONG memFlags, register __d1 ULONG puddleSize, register __d2 ULONG threshSize, register __a6 struct ExecBase *SysBase)</td></tr>
+<tr class="memitem:a8c0e69e1e810ec3d91ecf4c0e5cefcc3" id="r_a8c0e69e1e810ec3d91ecf4c0e5cefcc3"><td class="memItemLeft">VOID __asm&#160;</td><td class="memItemRight"><a class="el" href="#a8c0e69e1e810ec3d91ecf4c0e5cefcc3">AsmDeletePool</a> (register __a0 APTR poolHeader, register __a6 struct ExecBase *SysBase)</td></tr>
+<tr class="memitem:a8f6db2a450672fb2d91b929ce9ce5bee" id="r_a8f6db2a450672fb2d91b929ce9ce5bee"><td class="memItemLeft">APTR __asm&#160;</td><td class="memItemRight"><a class="el" href="#a8f6db2a450672fb2d91b929ce9ce5bee">AsmAllocPooled</a> (register __a0 APTR poolHeader, register __d0 ULONG memSize, register __a6 struct ExecBase *SysBase)</td></tr>
+<tr class="memitem:a691f470ed971569aa48c4422784c9023" id="r_a691f470ed971569aa48c4422784c9023"><td class="memItemLeft">VOID __asm&#160;</td><td class="memItemRight"><a class="el" href="#a691f470ed971569aa48c4422784c9023">AsmFreePooled</a> (register __a0 APTR poolHeader, register __a1 APTR <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, register __d0 ULONG memSize, register __a6 struct ExecBase *SysBase)</td></tr>
+<tr class="memitem:a3199d8f9adfbf4eba6fda461ac419a06" id="r_a3199d8f9adfbf4eba6fda461ac419a06"><td class="memItemLeft">APTR&#160;</td><td class="memItemRight"><a class="el" href="#a3199d8f9adfbf4eba6fda461ac419a06">AllocVecPooled</a> (APTR poolHeader, ULONG memSize)</td></tr>
+<tr class="memitem:af0f33a439b9058809f27da9890a98061" id="r_af0f33a439b9058809f27da9890a98061"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af0f33a439b9058809f27da9890a98061">FreeVecPooled</a> (APTR poolHeader, APTR <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:a5f58c8d044a0bc495871558594c133ef" id="r_a5f58c8d044a0bc495871558594c133ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5f58c8d044a0bc495871558594c133ef">ft_alloc</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, long size)</td></tr>
+<tr class="memitem:a3118a9054785c3bb1d7c4261b240d623" id="r_a3118a9054785c3bb1d7c4261b240d623"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3118a9054785c3bb1d7c4261b240d623">ft_realloc</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, long cur_size, long new_size, void *block)</td></tr>
+<tr class="memitem:a5905713c59cb5faa989548ca0016e6ba" id="r_a5905713c59cb5faa989548ca0016e6ba"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5905713c59cb5faa989548ca0016e6ba">ft_free</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, void *block)</td></tr>
+<tr class="memitem:ac889669c9e5ee59d230ac5cbd742f813" id="r_ac889669c9e5ee59d230ac5cbd742f813"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac889669c9e5ee59d230ac5cbd742f813">ft_close_stream</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a9519a1fdf2587020823781ebee6b5aa9" id="r_a9519a1fdf2587020823781ebee6b5aa9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9519a1fdf2587020823781ebee6b5aa9">ft_io_stream</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, unsigned long offset, unsigned char *buffer, unsigned long count)</td></tr>
+<tr class="memitem:a80669a3b6fb4d8ad8187866fc3db25aa" id="r_a80669a3b6fb4d8ad8187866fc3db25aa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a80669a3b6fb4d8ad8187866fc3db25aa">FT_Stream_Open</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filepathname)</td></tr>
+<tr class="memitem:a3ee8ecceb93e5ba4106a00f778f11609" id="r_a3ee8ecceb93e5ba4106a00f778f11609"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3ee8ecceb93e5ba4106a00f778f11609">FT_New_Memory</a> (void)</td></tr>
+<tr class="memitem:ac23e6dc69e72d8c1a2e2f674607199fa" id="r_ac23e6dc69e72d8c1a2e2f674607199fa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac23e6dc69e72d8c1a2e2f674607199fa">FT_Done_Memory</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ae48d342d1d0bc38aa38a1a7728d4bb55" name="ae48d342d1d0bc38aa38a1a7728d4bb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48d342d1d0bc38aa38a1a7728d4bb55">&#9670;&#160;</a></span>__USE_SYSBASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __USE_SYSBASE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_io</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d05cfc0ba5a5e3298ba942c4c18bc65" name="a6d05cfc0ba5a5e3298ba942c4c18bc65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d05cfc0ba5a5e3298ba942c4c18bc65">&#9670;&#160;</a></span>STREAM_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STREAM_FILE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (BPTR)stream-&gt;descriptor.pointer )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a3199d8f9adfbf4eba6fda461ac419a06" name="a3199d8f9adfbf4eba6fda461ac419a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3199d8f9adfbf4eba6fda461ac419a06">&#9670;&#160;</a></span>AllocVecPooled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">APTR AllocVecPooled </td>
+          <td>(</td>
+          <td class="paramtype">APTR</td>          <td class="paramname"><span class="paramname"><em>poolHeader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>memSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a3199d8f9adfbf4eba6fda461ac419a06_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a3199d8f9adfbf4eba6fda461ac419a06_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a3199d8f9adfbf4eba6fda461ac419a06_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a3199d8f9adfbf4eba6fda461ac419a06_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a8f6db2a450672fb2d91b929ce9ce5bee" name="a8f6db2a450672fb2d91b929ce9ce5bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6db2a450672fb2d91b929ce9ce5bee">&#9670;&#160;</a></span>AsmAllocPooled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">APTR __asm AsmAllocPooled </td>
+          <td>(</td>
+          <td class="paramtype">register __a0 APTR</td>          <td class="paramname"><span class="paramname"><em>poolHeader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __d0 ULONG</td>          <td class="paramname"><span class="paramname"><em>memSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __a6 struct ExecBase *</td>          <td class="paramname"><span class="paramname"><em>SysBase</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a8f6db2a450672fb2d91b929ce9ce5bee_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a8f6db2a450672fb2d91b929ce9ce5bee_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a8b7d0c6bf3ebafe9b31ff2de7e04d108" name="a8b7d0c6bf3ebafe9b31ff2de7e04d108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7d0c6bf3ebafe9b31ff2de7e04d108">&#9670;&#160;</a></span>AsmCreatePool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">APTR __asm AsmCreatePool </td>
+          <td>(</td>
+          <td class="paramtype">register __d0 ULONG</td>          <td class="paramname"><span class="paramname"><em>memFlags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __d1 ULONG</td>          <td class="paramname"><span class="paramname"><em>puddleSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __d2 ULONG</td>          <td class="paramname"><span class="paramname"><em>threshSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __a6 struct ExecBase *</td>          <td class="paramname"><span class="paramname"><em>SysBase</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a8b7d0c6bf3ebafe9b31ff2de7e04d108_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a8b7d0c6bf3ebafe9b31ff2de7e04d108_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a8c0e69e1e810ec3d91ecf4c0e5cefcc3" name="a8c0e69e1e810ec3d91ecf4c0e5cefcc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0e69e1e810ec3d91ecf4c0e5cefcc3">&#9670;&#160;</a></span>AsmDeletePool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VOID __asm AsmDeletePool </td>
+          <td>(</td>
+          <td class="paramtype">register __a0 APTR</td>          <td class="paramname"><span class="paramname"><em>poolHeader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __a6 struct ExecBase *</td>          <td class="paramname"><span class="paramname"><em>SysBase</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a8c0e69e1e810ec3d91ecf4c0e5cefcc3_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a8c0e69e1e810ec3d91ecf4c0e5cefcc3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a691f470ed971569aa48c4422784c9023" name="a691f470ed971569aa48c4422784c9023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691f470ed971569aa48c4422784c9023">&#9670;&#160;</a></span>AsmFreePooled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VOID __asm AsmFreePooled </td>
+          <td>(</td>
+          <td class="paramtype">register __a0 APTR</td>          <td class="paramname"><span class="paramname"><em>poolHeader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __a1 APTR</td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __d0 ULONG</td>          <td class="paramname"><span class="paramname"><em>memSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">register __a6 struct ExecBase *</td>          <td class="paramname"><span class="paramname"><em>SysBase</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a691f470ed971569aa48c4422784c9023_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a691f470ed971569aa48c4422784c9023_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="af0f33a439b9058809f27da9890a98061" name="af0f33a439b9058809f27da9890a98061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0f33a439b9058809f27da9890a98061">&#9670;&#160;</a></span>FreeVecPooled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FreeVecPooled </td>
+          <td>(</td>
+          <td class="paramtype">APTR</td>          <td class="paramname"><span class="paramname"><em>poolHeader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">APTR</td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_af0f33a439b9058809f27da9890a98061_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_af0f33a439b9058809f27da9890a98061_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_af0f33a439b9058809f27da9890a98061_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_af0f33a439b9058809f27da9890a98061_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a5f58c8d044a0bc495871558594c133ef" name="a5f58c8d044a0bc495871558594c133ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f58c8d044a0bc495871558594c133ef">&#9670;&#160;</a></span>ft_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a5f58c8d044a0bc495871558594c133ef_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a5f58c8d044a0bc495871558594c133ef_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a5f58c8d044a0bc495871558594c133ef_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a5f58c8d044a0bc495871558594c133ef_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="ac889669c9e5ee59d230ac5cbd742f813" name="ac889669c9e5ee59d230ac5cbd742f813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac889669c9e5ee59d230ac5cbd742f813">&#9670;&#160;</a></span>ft_close_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_close_stream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_ac889669c9e5ee59d230ac5cbd742f813_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_ac889669c9e5ee59d230ac5cbd742f813_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_ac889669c9e5ee59d230ac5cbd742f813_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_ac889669c9e5ee59d230ac5cbd742f813_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="ac23e6dc69e72d8c1a2e2f674607199fa" name="ac23e6dc69e72d8c1a2e2f674607199fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23e6dc69e72d8c1a2e2f674607199fa">&#9670;&#160;</a></span>FT_Done_Memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Done_Memory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_ac23e6dc69e72d8c1a2e2f674607199fa_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_ac23e6dc69e72d8c1a2e2f674607199fa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_ac23e6dc69e72d8c1a2e2f674607199fa_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_ac23e6dc69e72d8c1a2e2f674607199fa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="a5905713c59cb5faa989548ca0016e6ba" name="a5905713c59cb5faa989548ca0016e6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5905713c59cb5faa989548ca0016e6ba">&#9670;&#160;</a></span>ft_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>block</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a5905713c59cb5faa989548ca0016e6ba_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a5905713c59cb5faa989548ca0016e6ba_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a5905713c59cb5faa989548ca0016e6ba_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a5905713c59cb5faa989548ca0016e6ba_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="a9519a1fdf2587020823781ebee6b5aa9" name="a9519a1fdf2587020823781ebee6b5aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9519a1fdf2587020823781ebee6b5aa9">&#9670;&#160;</a></span>ft_io_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_io_stream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a9519a1fdf2587020823781ebee6b5aa9_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a9519a1fdf2587020823781ebee6b5aa9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a9519a1fdf2587020823781ebee6b5aa9_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a9519a1fdf2587020823781ebee6b5aa9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="a3ee8ecceb93e5ba4106a00f778f11609" name="a3ee8ecceb93e5ba4106a00f778f11609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee8ecceb93e5ba4106a00f778f11609">&#9670;&#160;</a></span>FT_New_Memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_New_Memory </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a3ee8ecceb93e5ba4106a00f778f11609_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a3ee8ecceb93e5ba4106a00f778f11609_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a3ee8ecceb93e5ba4106a00f778f11609_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a3ee8ecceb93e5ba4106a00f778f11609_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="a3118a9054785c3bb1d7c4261b240d623" name="a3118a9054785c3bb1d7c4261b240d623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3118a9054785c3bb1d7c4261b240d623">&#9670;&#160;</a></span>ft_realloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_realloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>cur_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>new_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>block</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a3118a9054785c3bb1d7c4261b240d623_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a3118a9054785c3bb1d7c4261b240d623_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a3118a9054785c3bb1d7c4261b240d623_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a3118a9054785c3bb1d7c4261b240d623_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a80669a3b6fb4d8ad8187866fc3db25aa" name="a80669a3b6fb4d8ad8187866fc3db25aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80669a3b6fb4d8ad8187866fc3db25aa">&#9670;&#160;</a></span>FT_Stream_Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_Open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>filepathname</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a80669a3b6fb4d8ad8187866fc3db25aa_cgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a80669a3b6fb4d8ad8187866fc3db25aa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="builds_2amiga_2src_2base_2ftsystem_8c_a80669a3b6fb4d8ad8187866fc3db25aa_icgraph.png" border="0" usemap="#abuilds_2amiga_2src_2base_2ftsystem_8c_a80669a3b6fb4d8ad8187866fc3db25aa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_d5c9b988bb0c5cde96f2390ac7f4b5af.html">builds</a></li><li class="navelem"><a href="dir_aea4eb7ff13cb25efd810f56fab7995c.html">amiga</a></li><li class="navelem"><a href="dir_cda8b95f9eef4126cb9805c2fcac0622.html">src</a></li><li class="navelem"><a href="dir_1769cc85c21570e83e20cc7b33be7e7f.html">base</a></li><li class="navelem"><a href="builds_2amiga_2src_2base_2ftsystem_8c.html">ftsystem.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

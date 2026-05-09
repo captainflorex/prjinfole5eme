@@ -1,0 +1,82 @@
+\doxysection{sauvegarde.\+c}
+\hypertarget{sauvegarde_8c_source}{}\label{sauvegarde_8c_source}\index{src/sauvegarde.c@{src/sauvegarde.c}}
+\doxymbox{\hyperlink{sauvegarde_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{src_2sauvegarde_8h}{sauvegarde.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00005}\doxymbox{\hyperlink{sauvegarde_8c_a2bedaca1c6ca66de2397772910fbe140}{00005}}\ \textcolor{preprocessor}{\#define\ NOGDI\ }\textcolor{comment}{//\ Source\ Claude:\ car\ sinon\ bug\ avec\ allegro}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00006}\doxymbox{\hyperlink{sauvegarde_8c_ac7bef5d85e3dcd73eef56ad39ffc84a9}{00006}}\ \textcolor{preprocessor}{\#define\ WIN32\_LEAN\_AND\_MEAN\ }\textcolor{comment}{//\ Source\ Claude:\ car\ sinon\ bug\ avec\ allegro}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00009}00009\ \textcolor{comment}{/*\ Nom\ de\ fichier\ unique\ par\ pseudo\ */}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00010}\doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{00010}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pseudo,\ \textcolor{keywordtype}{char}\ *buf,\ \textcolor{keywordtype}{int}\ buf\_size)\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00011}00011\ \ \ \ \ snprintf(buf,\ buf\_size,\ \textcolor{stringliteral}{"{}sauvegarde\_\%s.txt"{}},\ pseudo);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00014}\doxymbox{\hyperlink{sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779}{00014}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779}{sauvegarde\_ecrire}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej)\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{char}\ fichier[64];}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00016}00016\ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ fichier,\ \textcolor{keyword}{sizeof}(fichier));}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00017}00017\ \ \ \ \ FILE\ *f\ =\ fopen(fichier,\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00019}00019\ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}\%s\(\backslash\)n\%d\(\backslash\)n\%d\(\backslash\)n"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}});}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00020}00020\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00023}\doxymbox{\hyperlink{sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996}{00023}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996}{sauvegarde\_lire}}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej)\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{char}\ fichier[64];}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00025}00025\ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ fichier,\ \textcolor{keyword}{sizeof}(fichier));}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00026}00026\ \ \ \ \ FILE\ *f\ =\ fopen(fichier,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{char}\ pseudo[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}];}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \ score,\ niveau;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (fscanf(f,\ \textcolor{stringliteral}{"{}\%49s\(\backslash\)n\%d\(\backslash\)n\%d\(\backslash\)n"{}},\ pseudo,\ \&score,\ \&niveau)\ !=\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ fclose(f);\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00033}00033\ \ \ \ \ strncpy(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ pseudo,\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00034}00034\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ =\ score;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00035}00035\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ \ \ \ \ \ \ =\ niveau;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00036}00036\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00040}\doxymbox{\hyperlink{sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5}{00040}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5}{sauvegarde\_existe}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pseudo)\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{char}\ fichier[64];}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00042}00042\ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e}{nom\_fichier}}(pseudo,\ fichier,\ \textcolor{keyword}{sizeof}(fichier));}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00043}00043\ \ \ \ \ FILE\ *f\ =\ fopen(fichier,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00045}00045\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00049}\doxymbox{\hyperlink{sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868}{00049}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868}{sauvegarde\_lister}}(\textcolor{keywordtype}{char}\ noms[][\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}],\ \textcolor{keywordtype}{int}\ max)\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00050}00050\ \ \ \ \ WIN32\_FIND\_DATA\ fd;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00051}00051\ \ \ \ \ HANDLE\ h;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00054}00054\ \ \ \ \ h\ =\ FindFirstFileA(\textcolor{stringliteral}{"{}sauvegarde\_*.txt"{}},\ \&fd);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (h\ ==\ INVALID\_HANDLE\_VALUE)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nb\ >=\ max)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fd.dwFileAttributes\ \&\ FILE\_ATTRIBUTE\_DIRECTORY)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *debut\ =\ fd.cFileName\ +\ 11;\ \textcolor{comment}{/*\ len("{}sauvegarde\_"{})\ ==\ 11\ */}}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *fin\ \ \ =\ strrchr(fd.cFileName,\ \textcolor{charliteral}{'.'});}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fin\ ||\ fin\ <=\ debut)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ (int)(fin\ -\/\ debut);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (len\ <=\ 0\ ||\ len\ >=\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ strncpy(noms[nb],\ debut,\ len);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ noms[nb][len]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ nb++;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00072}00072\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (FindNextFileA(h,\ \&fd)\ !=\ 0);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00074}00074\ \ \ \ \ FindClose(h);}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ nb;}
+\DoxyCodeLine{\Hypertarget{sauvegarde_8c_source_l00076}00076\ \}}
+
+\end{DoxyCode}

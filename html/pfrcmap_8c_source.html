@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pfr/pfrcmap.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pfrcmap_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pfrcmap.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pfrcmap_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  pfrcmap.c                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    FreeType PFR cmap handling (body).                                   */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2002 by                                                      */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="pfrcmap_8h.html">pfrcmap.h</a>&quot;</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="pfrobjs_8h.html">pfrobjs.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include FT_INTERNAL_DEBUG_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="pfrcmap_8c.html#a9b800d856fcbd4fe532b25dfc90db38c">   25</a></span>  <a class="code hl_function" href="pfrcmap_8c.html#a9b800d856fcbd4fe532b25dfc90db38c">pfr_cmap_init</a>( <a class="code hl_typedef" href="pfrcmap_8h.html#a185e560b4f78f964782eac127fa683f4">PFR_CMap</a>  cmap )</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>  <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> = (<a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>)<a class="code hl_define" href="ftobjs_8h.html#afc11e233856114ac68e996617578d563">FT_CMAP_FACE</a>( cmap );</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    cmap-&gt;num_chars = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;phy_font.num_chars;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    cmap-&gt;chars     = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;phy_font.chars;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* just for safety, check that the character entries are correctly */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* sorted in increasing character code order                       */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>  n;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keywordflow">for</span> ( n = 1; n &lt; cmap-&gt;num_chars; n++ )</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> ( cmap-&gt;chars[n - 1].char_code &gt;= cmap-&gt;chars[n].char_code )</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          <a class="code hl_define" href="ftdebug_8h.html#a0edcd80581eabc970a562c5d284d5e7e">FT_ASSERT</a>( 0 );</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <span class="keywordtype">void</span> )</div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="pfrcmap_8c.html#a7724b640462430a27b2083a027331e2b">   51</a></span>  <a class="code hl_function" href="pfrcmap_8c.html#a7724b640462430a27b2083a027331e2b">pfr_cmap_done</a>( <a class="code hl_typedef" href="pfrcmap_8h.html#a185e560b4f78f964782eac127fa683f4">PFR_CMap</a>  cmap )</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    cmap-&gt;chars     = <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    cmap-&gt;num_chars = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> )</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="pfrcmap_8c.html#adc6e93fab64dbb07e8bf44947c0694ca">   59</a></span>  <a class="code hl_function" href="pfrcmap_8c.html#adc6e93fab64dbb07e8bf44947c0694ca">pfr_cmap_char_index</a>( <a class="code hl_typedef" href="pfrcmap_8h.html#a185e560b4f78f964782eac127fa683f4">PFR_CMap</a>   cmap,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                       <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  char_code )</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   min = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   max = cmap-&gt;num_chars;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   mid;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_typedef" href="pfrtypes_8h.html#a9e97c651b055ee24997a4cdce37dfe47">PFR_Char</a>  gchar;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">while</span> ( min &lt; max )</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      mid   = min + ( max - min ) / 2;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      gchar = cmap-&gt;chars + mid;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">if</span> ( gchar-&gt;char_code == char_code )</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> mid + 1;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">if</span> ( gchar-&gt;char_code &lt; char_code )</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        min = mid + 1;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        max = mid;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> )</div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="pfrcmap_8c.html#a8208f7fc8f4d0a0609c94693ae04035a">   86</a></span>  <a class="code hl_function" href="pfrcmap_8c.html#a8208f7fc8f4d0a0609c94693ae04035a">pfr_cmap_char_next</a>( <a class="code hl_typedef" href="pfrcmap_8h.html#a185e560b4f78f964782eac127fa683f4">PFR_CMap</a>    cmap,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                      <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  *pchar_code )</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    result    = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  char_code = *pchar_code + 1;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  Restart:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   min = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   max = cmap-&gt;num_chars;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   mid;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <a class="code hl_typedef" href="pfrtypes_8h.html#a9e97c651b055ee24997a4cdce37dfe47">PFR_Char</a>  gchar;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="keywordflow">while</span> ( min &lt; max )</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        mid   = min + ( ( max - min ) &gt;&gt; 1 );</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        gchar = cmap-&gt;chars + mid;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">if</span> ( gchar-&gt;char_code == char_code )</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>          result = mid;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>          <span class="keywordflow">if</span> ( result != 0 )</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>          {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            result++;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>          }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>          char_code++;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>          <span class="keywordflow">goto</span> Restart;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">if</span> ( gchar-&gt;char_code &lt; char_code )</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          min = mid+1;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>          max = mid;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="comment">/* we didn&#39;t find it, but we have a pair just above it */</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      char_code = 0;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      <span class="keywordflow">if</span> ( min &lt; cmap-&gt;num_chars )</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        gchar  = cmap-&gt;chars + min;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        result = min;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> ( result != 0 )</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          result++;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>          char_code = gchar-&gt;<a class="code hl_variable" href="struct_p_f_r___char_rec__.html#a2b71d5f6a2b9e40883ec5e471bb056c6">char_code</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  Exit:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    *pchar_code = char_code;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  }</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <span class="keyword">const</span> <a class="code hl_typedef" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a></div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="};">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="pfrcmap_8c.html#a64ded58f41249b491755f43b21cf15cf">  147</a></span>  <a class="code hl_variable" href="pfrcmap_8c.html#a64ded58f41249b491755f43b21cf15cf">pfr_cmap_class_rec</a> =</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="pfrcmap_8h.html#ade6472e1572bb89c08f6efe01e15cf24">PFR_CMapRec</a> ),</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    (<a class="code hl_typedef" href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a>)     <a class="code hl_function" href="pfrcmap_8c.html#a9b800d856fcbd4fe532b25dfc90db38c">pfr_cmap_init</a>,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    (<a class="code hl_typedef" href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a>)     <a class="code hl_function" href="pfrcmap_8c.html#a7724b640462430a27b2083a027331e2b">pfr_cmap_done</a>,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    (<a class="code hl_typedef" href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a>)<a class="code hl_function" href="pfrcmap_8c.html#adc6e93fab64dbb07e8bf44947c0694ca">pfr_cmap_char_index</a>,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    (<a class="code hl_typedef" href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a>) <a class="code hl_function" href="pfrcmap_8c.html#a8208f7fc8f4d0a0609c94693ae04035a">pfr_cmap_char_next</a></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  };</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a04749b69ac5a7fd07001364cc9f803fd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_DEF(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:227</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3b8071588139bdf26503c59260303ebd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></div><div class="ttdeci">unsigned int FT_UInt32</div><div class="ttdef"><b>Definition</b> ftconfig.h:104</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3e7304105563eb715cae1b9c213858ed"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE_DEF</div><div class="ttdef"><b>Definition</b> ftconfig.h:229</div></div>
+<div class="ttc" id="aftdebug_8h_html_a0edcd80581eabc970a562c5d284d5e7e"><div class="ttname"><a href="ftdebug_8h.html#a0edcd80581eabc970a562c5d284d5e7e">FT_ASSERT</a></div><div class="ttdeci">#define FT_ASSERT(condition)</div><div class="ttdef"><b>Definition</b> ftdebug.h:152</div></div>
+<div class="ttc" id="aftobjs_8h_html_a03f32530ae806f856615343e30ec97eb"><div class="ttname"><a href="ftobjs_8h.html#a03f32530ae806f856615343e30ec97eb">FT_CMap_CharNextFunc</a></div><div class="ttdeci">FT_UInt(* FT_CMap_CharNextFunc)(FT_CMap cmap, FT_UInt32 *achar_code)</div><div class="ttdef"><b>Definition</b> ftobjs.h:236</div></div>
+<div class="ttc" id="aftobjs_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> ftobjs.h:60</div></div>
+<div class="ttc" id="aftobjs_8h_html_a7b6b9614765f3c8190d69ee737273dec"><div class="ttname"><a href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a></div><div class="ttdeci">struct FT_CMap_ClassRec_ FT_CMap_ClassRec</div></div>
+<div class="ttc" id="aftobjs_8h_html_ac6d2c6d1ad4e85083a4f344cd264b433"><div class="ttname"><a href="ftobjs_8h.html#ac6d2c6d1ad4e85083a4f344cd264b433">FT_CMap_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_CMap_InitFunc)(FT_CMap cmap, FT_Pointer init_data)</div><div class="ttdef"><b>Definition</b> ftobjs.h:225</div></div>
+<div class="ttc" id="aftobjs_8h_html_af51a5c94137ed72eda2a53539666237e"><div class="ttname"><a href="ftobjs_8h.html#af51a5c94137ed72eda2a53539666237e">FT_CMap_DoneFunc</a></div><div class="ttdeci">void(* FT_CMap_DoneFunc)(FT_CMap cmap)</div><div class="ttdef"><b>Definition</b> ftobjs.h:229</div></div>
+<div class="ttc" id="aftobjs_8h_html_af706e51c7b6f6d9e9b9573fadd209904"><div class="ttname"><a href="ftobjs_8h.html#af706e51c7b6f6d9e9b9573fadd209904">FT_CMap_CharIndexFunc</a></div><div class="ttdeci">FT_UInt(* FT_CMap_CharIndexFunc)(FT_CMap cmap, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> ftobjs.h:232</div></div>
+<div class="ttc" id="aftobjs_8h_html_afc11e233856114ac68e996617578d563"><div class="ttname"><a href="ftobjs_8h.html#afc11e233856114ac68e996617578d563">FT_CMAP_FACE</a></div><div class="ttdeci">#define FT_CMAP_FACE(x)</div><div class="ttdef"><b>Definition</b> ftobjs.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+<div class="ttc" id="apfrcmap_8c_html_a64ded58f41249b491755f43b21cf15cf"><div class="ttname"><a href="pfrcmap_8c.html#a64ded58f41249b491755f43b21cf15cf">pfr_cmap_class_rec</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_CMap_ClassRec pfr_cmap_class_rec</div><div class="ttdef"><b>Definition</b> pfrcmap.c:147</div></div>
+<div class="ttc" id="apfrcmap_8c_html_a7724b640462430a27b2083a027331e2b"><div class="ttname"><a href="pfrcmap_8c.html#a7724b640462430a27b2083a027331e2b">pfr_cmap_done</a></div><div class="ttdeci">pfr_cmap_done(PFR_CMap cmap)</div><div class="ttdef"><b>Definition</b> pfrcmap.c:51</div></div>
+<div class="ttc" id="apfrcmap_8c_html_a8208f7fc8f4d0a0609c94693ae04035a"><div class="ttname"><a href="pfrcmap_8c.html#a8208f7fc8f4d0a0609c94693ae04035a">pfr_cmap_char_next</a></div><div class="ttdeci">pfr_cmap_char_next(PFR_CMap cmap, FT_UInt32 *pchar_code)</div><div class="ttdef"><b>Definition</b> pfrcmap.c:86</div></div>
+<div class="ttc" id="apfrcmap_8c_html_a9b800d856fcbd4fe532b25dfc90db38c"><div class="ttname"><a href="pfrcmap_8c.html#a9b800d856fcbd4fe532b25dfc90db38c">pfr_cmap_init</a></div><div class="ttdeci">pfr_cmap_init(PFR_CMap cmap)</div><div class="ttdef"><b>Definition</b> pfrcmap.c:25</div></div>
+<div class="ttc" id="apfrcmap_8c_html_adc6e93fab64dbb07e8bf44947c0694ca"><div class="ttname"><a href="pfrcmap_8c.html#adc6e93fab64dbb07e8bf44947c0694ca">pfr_cmap_char_index</a></div><div class="ttdeci">pfr_cmap_char_index(PFR_CMap cmap, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> pfrcmap.c:59</div></div>
+<div class="ttc" id="apfrcmap_8h_html"><div class="ttname"><a href="pfrcmap_8h.html">pfrcmap.h</a></div></div>
+<div class="ttc" id="apfrcmap_8h_html_a185e560b4f78f964782eac127fa683f4"><div class="ttname"><a href="pfrcmap_8h.html#a185e560b4f78f964782eac127fa683f4">PFR_CMap</a></div><div class="ttdeci">FT_BEGIN_HEADER struct PFR_CMapRec_ * PFR_CMap</div></div>
+<div class="ttc" id="apfrcmap_8h_html_ade6472e1572bb89c08f6efe01e15cf24"><div class="ttname"><a href="pfrcmap_8h.html#ade6472e1572bb89c08f6efe01e15cf24">PFR_CMapRec</a></div><div class="ttdeci">FT_BEGIN_HEADER struct PFR_CMapRec_ PFR_CMapRec</div></div>
+<div class="ttc" id="apfrobjs_8h_html"><div class="ttname"><a href="pfrobjs_8h.html">pfrobjs.h</a></div></div>
+<div class="ttc" id="apfrobjs_8h_html_a59ef022bfa0a198447ffd8c9cde4c8af"><div class="ttname"><a href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct PFR_FaceRec_ * PFR_Face</div><div class="ttdef"><b>Definition</b> pfrobjs.h:27</div></div>
+<div class="ttc" id="apfrtypes_8h_html_a9e97c651b055ee24997a4cdce37dfe47"><div class="ttname"><a href="pfrtypes_8h.html#a9e97c651b055ee24997a4cdce37dfe47">PFR_Char</a></div><div class="ttdeci">struct PFR_CharRec_ * PFR_Char</div></div>
+<div class="ttc" id="astruct_p_f_r___char_rec___html_a2b71d5f6a2b9e40883ec5e471bb056c6"><div class="ttname"><a href="struct_p_f_r___char_rec__.html#a2b71d5f6a2b9e40883ec5e471bb056c6">PFR_CharRec_::char_code</a></div><div class="ttdeci">FT_UInt char_code</div><div class="ttdef"><b>Definition</b> pfrtypes.h:174</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_d4ba0b202c3d42f5530bd6926753ce2f.html">pfr</a></li><li class="navelem"><a href="pfrcmap_8c.html">pfrcmap.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,2423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/base/ftobjs.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftobjs_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftobjs.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftobjs.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2ftobjs_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2ftobjs_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ftobjs_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_objs</td></tr>
+<tr class="memitem:a7c487785feb0c2301960280bb4820c69" id="r_a7c487785feb0c2301960280bb4820c69"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7c487785feb0c2301960280bb4820c69">FREETYPE_VER_FIXED</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6042da97a44e287d5d99b459aae11ea0" id="r_a6042da97a44e287d5d99b459aae11ea0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6042da97a44e287d5d99b459aae11ea0">ft_validator_init</a> (<a class="el" href="ftobjs_8h.html#acd88544ad6c46f328a837af8030059be">FT_Validator</a> valid, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *base, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit, <a class="el" href="ftobjs_8h.html#a888f61b9e1821a9a378a6356816de23f">FT_ValidationLevel</a> level)</td></tr>
+<tr class="memitem:a40b463141ddaf56437d42b1f9b7894ef" id="r_a40b463141ddaf56437d42b1f9b7894ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a40b463141ddaf56437d42b1f9b7894ef">ft_validator_run</a> (<a class="el" href="ftobjs_8h.html#acd88544ad6c46f328a837af8030059be">FT_Validator</a> valid)</td></tr>
+<tr class="memitem:a9504bbbfc7751a25a39d1330f92655b3" id="r_a9504bbbfc7751a25a39d1330f92655b3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9504bbbfc7751a25a39d1330f92655b3">ft_validator_error</a> (<a class="el" href="ftobjs_8h.html#acd88544ad6c46f328a837af8030059be">FT_Validator</a> valid, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> <a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:a39b78dde92f846a8649c93f7009ad642" id="r_a39b78dde92f846a8649c93f7009ad642"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a39b78dde92f846a8649c93f7009ad642">ft_input_stream_new</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="freetype_8h.html#aa1c1d4d731529d220017c71767baaccb">FT_Open_Args</a> *args, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> *<a class="el" href="ftsysio_8h.html#a3f8d3ab17617380a2aa17009e495d02a">astream</a>)</td></tr>
+<tr class="memitem:a37900af0fd3360c2bff7eb93e7606a30" id="r_a37900af0fd3360c2bff7eb93e7606a30"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a37900af0fd3360c2bff7eb93e7606a30">ft_input_stream_free</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> external)</td></tr>
+<tr class="memitem:a9a732386968a59ca7fe09512b2047bde" id="r_a9a732386968a59ca7fe09512b2047bde"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9a732386968a59ca7fe09512b2047bde">ft_glyphslot_init</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a24f6b28dae62ce7050967b4b8dec77b4" id="r_a24f6b28dae62ce7050967b4b8dec77b4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a24f6b28dae62ce7050967b4b8dec77b4">ft_glyphslot_clear</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a62027096d1d8097fac96d4899125ece2" id="r_a62027096d1d8097fac96d4899125ece2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62027096d1d8097fac96d4899125ece2">ft_glyphslot_done</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a6b8a7296866810c4feff8dc562e55c4c" id="r_a6b8a7296866810c4feff8dc562e55c4c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6b8a7296866810c4feff8dc562e55c4c">FT_New_GlyphSlot</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> *aslot)</td></tr>
+<tr class="memitem:ad0c3fbaead98eb3dc1e8dec850691b8e" id="r_ad0c3fbaead98eb3dc1e8dec850691b8e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad0c3fbaead98eb3dc1e8dec850691b8e">FT_Done_GlyphSlot</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a0b6b8de9867c8f91918847861d43ede8" id="r_a0b6b8de9867c8f91918847861d43ede8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0b6b8de9867c8f91918847861d43ede8">FT_Set_Transform</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *matrix, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *delta)</td></tr>
+<tr class="memitem:a3f955545698c6d0ee2475a444fae65ef" id="r_a3f955545698c6d0ee2475a444fae65ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3f955545698c6d0ee2475a444fae65ef">FT_Set_Hint_Flags</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> flags)</td></tr>
+<tr class="memitem:a47574eb59d73e20f7905cb0c34ce42f3" id="r_a47574eb59d73e20f7905cb0c34ce42f3"><td class="memItemLeft">static <a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a47574eb59d73e20f7905cb0c34ce42f3">ft_lookup_glyph_renderer</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a01806ddba7989d0ad132e3318301e72d" id="r_a01806ddba7989d0ad132e3318301e72d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a01806ddba7989d0ad132e3318301e72d">FT_Load_Glyph</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>, <a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a> load_flags)</td></tr>
+<tr class="memitem:aeea4c9699584228c2244e4f6d9f09380" id="r_aeea4c9699584228c2244e4f6d9f09380"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aeea4c9699584228c2244e4f6d9f09380">FT_Load_Char</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> char_code, <a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a> load_flags)</td></tr>
+<tr class="memitem:a159b01a0ce6ee36fd7befe62be0b3eaf" id="r_a159b01a0ce6ee36fd7befe62be0b3eaf"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a159b01a0ce6ee36fd7befe62be0b3eaf">destroy_size</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> size, <a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a> driver)</td></tr>
+<tr class="memitem:a126576c1e9c9e19fd7fd29eee6a3d47d" id="r_a126576c1e9c9e19fd7fd29eee6a3d47d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a126576c1e9c9e19fd7fd29eee6a3d47d">destroy_face</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a> driver)</td></tr>
+<tr class="memitem:a59a7661c2e189f019982eb38d8b7136d" id="r_a59a7661c2e189f019982eb38d8b7136d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a59a7661c2e189f019982eb38d8b7136d">Destroy_Driver</a> (<a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a> driver)</td></tr>
+<tr class="memitem:a298534074e91baa2a5a15d69dd623c04" id="r_a298534074e91baa2a5a15d69dd623c04"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a298534074e91baa2a5a15d69dd623c04">open_face</a> (<a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a> driver, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> face_index, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> num_params, <a class="el" href="freetype_8h.html#a1647d861933dce4c11d35d33b264bcee">FT_Parameter</a> *params, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *aface)</td></tr>
+<tr class="memitem:a549a19bbea568f3a6d60207f1b787070" id="r_a549a19bbea568f3a6d60207f1b787070"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a549a19bbea568f3a6d60207f1b787070">FT_New_Face</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *pathname, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> face_index, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *aface)</td></tr>
+<tr class="memitem:ae9bce7676556ee5611ecbaf370023a86" id="r_ae9bce7676556ee5611ecbaf370023a86"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae9bce7676556ee5611ecbaf370023a86">FT_New_Memory_Face</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *file_base, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> file_size, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> face_index, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *aface)</td></tr>
+<tr class="memitem:a3bdf12232d495ca7d4d40f47b4bc157c" id="r_a3bdf12232d495ca7d4d40f47b4bc157c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3bdf12232d495ca7d4d40f47b4bc157c">FT_Open_Face</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="freetype_8h.html#aa1c1d4d731529d220017c71767baaccb">FT_Open_Args</a> *args, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> face_index, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *aface)</td></tr>
+<tr class="memitem:ae97b04528da5fc081e0ce9be40c5b036" id="r_ae97b04528da5fc081e0ce9be40c5b036"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae97b04528da5fc081e0ce9be40c5b036">FT_Attach_File</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filepathname)</td></tr>
+<tr class="memitem:aced0db97521cb20e44bed22d03ea4b6b" id="r_aced0db97521cb20e44bed22d03ea4b6b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aced0db97521cb20e44bed22d03ea4b6b">FT_Attach_Stream</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#aa1c1d4d731529d220017c71767baaccb">FT_Open_Args</a> *parameters)</td></tr>
+<tr class="memitem:a2d1542be3d3af3d7699cee3425b2bc79" id="r_a2d1542be3d3af3d7699cee3425b2bc79"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2d1542be3d3af3d7699cee3425b2bc79">FT_Done_Face</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a9b4a1faa77e9bd3f24250affb24c1518" id="r_a9b4a1faa77e9bd3f24250affb24c1518"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9b4a1faa77e9bd3f24250affb24c1518">FT_New_Size</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> *asize)</td></tr>
+<tr class="memitem:a3f370063d752eda02f1a9d54feb863a4" id="r_a3f370063d752eda02f1a9d54feb863a4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3f370063d752eda02f1a9d54feb863a4">FT_Done_Size</a> (<a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> size)</td></tr>
+<tr class="memitem:aed9de641231834a26e3cf047408069b7" id="r_aed9de641231834a26e3cf047408069b7"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aed9de641231834a26e3cf047408069b7">ft_recompute_scaled_metrics</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#ad885552d186adaffc5fe385cd458a4a4">FT_Size_Metrics</a> *metrics)</td></tr>
+<tr class="memitem:ae36c65d750a39cc04b8c67448632d5fa" id="r_ae36c65d750a39cc04b8c67448632d5fa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae36c65d750a39cc04b8c67448632d5fa">FT_Set_Char_Size</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> char_width, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> char_height, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> horz_resolution, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> vert_resolution)</td></tr>
+<tr class="memitem:a229ad0ad247b9952677d09378c813988" id="r_a229ad0ad247b9952677d09378c813988"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a229ad0ad247b9952677d09378c813988">FT_Set_Pixel_Sizes</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> pixel_width, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> pixel_height)</td></tr>
+<tr class="memitem:ac577d98c18789a0d558d2b2f9fadbbf1" id="r_ac577d98c18789a0d558d2b2f9fadbbf1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac577d98c18789a0d558d2b2f9fadbbf1">FT_Get_Kerning</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> left_glyph, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> right_glyph, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> kern_mode, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *akerning)</td></tr>
+<tr class="memitem:a5ccc241b34958a2b8818bb8b663b393f" id="r_a5ccc241b34958a2b8818bb8b663b393f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5ccc241b34958a2b8818bb8b663b393f">FT_Select_Charmap</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#a969ab19025eab22915f16dedc4a5cdeb">FT_Encoding</a> encoding)</td></tr>
+<tr class="memitem:a9208d1ccf0f8ad9a122fd6c9fe0c5b45" id="r_a9208d1ccf0f8ad9a122fd6c9fe0c5b45"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9208d1ccf0f8ad9a122fd6c9fe0c5b45">FT_Set_Charmap</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a> charmap)</td></tr>
+<tr class="memitem:a6b28a33ad0a6cfe26f0d33a896f10477" id="r_a6b28a33ad0a6cfe26f0d33a896f10477"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6b28a33ad0a6cfe26f0d33a896f10477">FT_CMap_Done</a> (<a class="el" href="ftobjs_8h.html#aa592181714c026f0c6c90c91f3659b21">FT_CMap</a> cmap)</td></tr>
+<tr class="memitem:a951ef5b2f18dc022f7524a2c4d209b99" id="r_a951ef5b2f18dc022f7524a2c4d209b99"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a951ef5b2f18dc022f7524a2c4d209b99">FT_CMap_New</a> (<a class="el" href="ftobjs_8h.html#af6ac93d072307dd61214e0d2b7c0e924">FT_CMap_Class</a> clazz, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> init_data, <a class="el" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a> charmap, <a class="el" href="ftobjs_8h.html#aa592181714c026f0c6c90c91f3659b21">FT_CMap</a> *acmap)</td></tr>
+<tr class="memitem:a529192ba5290936f21b63f257bf42bdd" id="r_a529192ba5290936f21b63f257bf42bdd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a529192ba5290936f21b63f257bf42bdd">FT_Get_Char_Index</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> charcode)</td></tr>
+<tr class="memitem:a2e6870abd05ffbf08632dd5416d3093d" id="r_a2e6870abd05ffbf08632dd5416d3093d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2e6870abd05ffbf08632dd5416d3093d">FT_Get_First_Char</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *agindex)</td></tr>
+<tr class="memitem:a04a3c0f5b4a05b4dffd3aa607363ef04" id="r_a04a3c0f5b4a05b4dffd3aa607363ef04"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a04a3c0f5b4a05b4dffd3aa607363ef04">FT_Get_Next_Char</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> charcode, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *agindex)</td></tr>
+<tr class="memitem:abfb440cce732f3c3b03ef784601dd67a" id="r_abfb440cce732f3c3b03ef784601dd67a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abfb440cce732f3c3b03ef784601dd67a">FT_Get_Name_Index</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a> *glyph_name)</td></tr>
+<tr class="memitem:aa2d5108cf55705b1e1faf4fbe9873edc" id="r_aa2d5108cf55705b1e1faf4fbe9873edc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa2d5108cf55705b1e1faf4fbe9873edc">FT_Get_Glyph_Name</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> buffer, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> buffer_max)</td></tr>
+<tr class="memitem:a7ba3fd81be23a7e0ca0a1c435bdaa84a" id="r_a7ba3fd81be23a7e0ca0a1c435bdaa84a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7ba3fd81be23a7e0ca0a1c435bdaa84a">FT_Get_Postscript_Name</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a05db257798829b76cf62cf22239e7058" id="r_a05db257798829b76cf62cf22239e7058"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a05db257798829b76cf62cf22239e7058">FT_Get_Sfnt_Table</a> (<a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="tttables_8h.html#ae1616fc3b78c85fb21f22247562cb12a">FT_Sfnt_Tag</a> tag)</td></tr>
+<tr class="memitem:a64b78b9733d559cd38d3db1ad91ae14d" id="r_a64b78b9733d559cd38d3db1ad91ae14d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a64b78b9733d559cd38d3db1ad91ae14d">FT_Activate_Size</a> (<a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> size)</td></tr>
+<tr class="memitem:ae4b2a9b835cfaf9e509dcc8fb1be773c" id="r_ae4b2a9b835cfaf9e509dcc8fb1be773c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae4b2a9b835cfaf9e509dcc8fb1be773c">FT_Lookup_Renderer</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="ftimage_8h.html#ac277a6c91e1d785fae31f2aa86d60588">FT_Glyph_Format</a> format, <a class="el" href="fttypes_8h.html#a155e4980a42c16fbc221ad40b2b59695">FT_ListNode</a> *node)</td></tr>
+<tr class="memitem:acaefac9110b7b49a692b6e2e5327d81b" id="r_acaefac9110b7b49a692b6e2e5327d81b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acaefac9110b7b49a692b6e2e5327d81b">ft_set_current_renderer</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library)</td></tr>
+<tr class="memitem:a038f96cdeebcf981be0463505f24e087" id="r_a038f96cdeebcf981be0463505f24e087"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a038f96cdeebcf981be0463505f24e087">ft_add_renderer</a> (<a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a> module)</td></tr>
+<tr class="memitem:aeeb6b8fbcabf0937b7e5b0a9457c829d" id="r_aeeb6b8fbcabf0937b7e5b0a9457c829d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aeeb6b8fbcabf0937b7e5b0a9457c829d">ft_remove_renderer</a> (<a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a> module)</td></tr>
+<tr class="memitem:a8b85f16751ce80fd73908fff04276d15" id="r_a8b85f16751ce80fd73908fff04276d15"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8b85f16751ce80fd73908fff04276d15">FT_Get_Renderer</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="ftimage_8h.html#ac277a6c91e1d785fae31f2aa86d60588">FT_Glyph_Format</a> format)</td></tr>
+<tr class="memitem:a2a6d8dbbb7e55d023c9dacfee1dbdb0d" id="r_a2a6d8dbbb7e55d023c9dacfee1dbdb0d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2a6d8dbbb7e55d023c9dacfee1dbdb0d">FT_Set_Renderer</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> <a class="el" href="gview_8c.html#ae8752478767dc73959a13c5649fc5f25">renderer</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> num_params, <a class="el" href="freetype_8h.html#a1647d861933dce4c11d35d33b264bcee">FT_Parameter</a> *parameters)</td></tr>
+<tr class="memitem:a98909bc41306311d5c4cc62d6735b374" id="r_a98909bc41306311d5c4cc62d6735b374"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a98909bc41306311d5c4cc62d6735b374">FT_Render_Glyph_Internal</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> render_mode)</td></tr>
+<tr class="memitem:ab463acb65581abb6dd4a70a33b5f435f" id="r_ab463acb65581abb6dd4a70a33b5f435f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab463acb65581abb6dd4a70a33b5f435f">FT_Render_Glyph</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> render_mode)</td></tr>
+<tr class="memitem:a3e1ed8be3b28f02ad5fb8ea1f90bde53" id="r_a3e1ed8be3b28f02ad5fb8ea1f90bde53"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3e1ed8be3b28f02ad5fb8ea1f90bde53">Destroy_Module</a> (<a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a> module)</td></tr>
+<tr class="memitem:a537c6119249420ea935f0e61cbee5079" id="r_a537c6119249420ea935f0e61cbee5079"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a537c6119249420ea935f0e61cbee5079">FT_Add_Module</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="include_2freetype_2ftmodule_8h.html#a751938d4065a634ee7ca55439f825018">FT_Module_Class</a> *clazz)</td></tr>
+<tr class="memitem:a9aae78d37c4eadf2cd3c702ab138d3d1" id="r_a9aae78d37c4eadf2cd3c702ab138d3d1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9aae78d37c4eadf2cd3c702ab138d3d1">FT_Get_Module</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *module_name)</td></tr>
+<tr class="memitem:abc8a3cf6f444f32a6f9b18352b9f5216" id="r_abc8a3cf6f444f32a6f9b18352b9f5216"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abc8a3cf6f444f32a6f9b18352b9f5216">FT_Get_Module_Interface</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *mod_name)</td></tr>
+<tr class="memitem:a036e2fa194e8a02f2626cee7aea1ac53" id="r_a036e2fa194e8a02f2626cee7aea1ac53"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a036e2fa194e8a02f2626cee7aea1ac53">FT_Remove_Module</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a> module)</td></tr>
+<tr class="memitem:a7bee32bd20d4e35dd5a87a169f76fc82" id="r_a7bee32bd20d4e35dd5a87a169f76fc82"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7bee32bd20d4e35dd5a87a169f76fc82">FT_New_Library</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> *alibrary)</td></tr>
+<tr class="memitem:a1f08c1971529d442c6e90ca07f79bd94" id="r_a1f08c1971529d442c6e90ca07f79bd94"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1f08c1971529d442c6e90ca07f79bd94">FT_Library_Version</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *amajor, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *aminor, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *apatch)</td></tr>
+<tr class="memitem:a682ac750d151780f186333dbd85cc2fb" id="r_a682ac750d151780f186333dbd85cc2fb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a682ac750d151780f186333dbd85cc2fb">FT_Done_Library</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library)</td></tr>
+<tr class="memitem:a6d63da0d3f569b3e49a2f63bb47da858" id="r_a6d63da0d3f569b3e49a2f63bb47da858"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6d63da0d3f569b3e49a2f63bb47da858">FT_Set_Debug_Hook</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> hook_index, <a class="el" href="include_2freetype_2ftmodule_8h.html#aa4b5a842c3899ebb6923671ded96cdf2">FT_DebugHook_Func</a> debug_hook)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a7c487785feb0c2301960280bb4820c69" name="a7c487785feb0c2301960280bb4820c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c487785feb0c2301960280bb4820c69">&#9670;&#160;</a></span>FREETYPE_VER_FIXED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FREETYPE_VER_FIXED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (<a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>)<a class="code hl_define" href="freetype_8h.html#a8c43b050c90b7a146a32297f88e85a4b">FREETYPE_MAJOR</a> &lt;&lt; 16 ) | \</div>
+<div class="line"><a class="code hl_define" href="freetype_8h.html#a90734b9c06a745153f6dbad8f9165814">FREETYPE_MINOR</a>                  )</div>
+<div class="ttc" id="afreetype_8h_html_a8c43b050c90b7a146a32297f88e85a4b"><div class="ttname"><a href="freetype_8h.html#a8c43b050c90b7a146a32297f88e85a4b">FREETYPE_MAJOR</a></div><div class="ttdeci">#define FREETYPE_MAJOR</div><div class="ttdef"><b>Definition</b> freetype.h:36</div></div>
+<div class="ttc" id="afreetype_8h_html_a90734b9c06a745153f6dbad8f9165814"><div class="ttname"><a href="freetype_8h.html#a90734b9c06a745153f6dbad8f9165814">FREETYPE_MINOR</a></div><div class="ttdeci">#define FREETYPE_MINOR</div><div class="ttdef"><b>Definition</b> freetype.h:37</div></div>
+<div class="ttc" id="afttypes_8h_html_a7fa72a1f0e79fb1860c5965789024d6f"><div class="ttname"><a href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></div><div class="ttdeci">signed long FT_Long</div><div class="ttdef"><b>Definition</b> fttypes.h:209</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_objs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a59a7661c2e189f019982eb38d8b7136d" name="a59a7661c2e189f019982eb38d8b7136d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a7661c2e189f019982eb38d8b7136d">&#9670;&#160;</a></span>Destroy_Driver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destroy_Driver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a></td>          <td class="paramname"><span class="paramname"><em>driver</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a59a7661c2e189f019982eb38d8b7136d_cgraph.png" border="0" usemap="#aftobjs_8c_a59a7661c2e189f019982eb38d8b7136d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a59a7661c2e189f019982eb38d8b7136d_icgraph.png" border="0" usemap="#aftobjs_8c_a59a7661c2e189f019982eb38d8b7136d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a126576c1e9c9e19fd7fd29eee6a3d47d" name="a126576c1e9c9e19fd7fd29eee6a3d47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126576c1e9c9e19fd7fd29eee6a3d47d">&#9670;&#160;</a></span>destroy_face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroy_face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a></td>          <td class="paramname"><span class="paramname"><em>driver</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a126576c1e9c9e19fd7fd29eee6a3d47d_cgraph.png" border="0" usemap="#aftobjs_8c_a126576c1e9c9e19fd7fd29eee6a3d47d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a126576c1e9c9e19fd7fd29eee6a3d47d_icgraph.png" border="0" usemap="#aftobjs_8c_a126576c1e9c9e19fd7fd29eee6a3d47d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a3e1ed8be3b28f02ad5fb8ea1f90bde53" name="a3e1ed8be3b28f02ad5fb8ea1f90bde53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1ed8be3b28f02ad5fb8ea1f90bde53">&#9670;&#160;</a></span>Destroy_Module()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destroy_Module </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a></td>          <td class="paramname"><span class="paramname"><em>module</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3e1ed8be3b28f02ad5fb8ea1f90bde53_cgraph.png" border="0" usemap="#aftobjs_8c_a3e1ed8be3b28f02ad5fb8ea1f90bde53_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3e1ed8be3b28f02ad5fb8ea1f90bde53_icgraph.png" border="0" usemap="#aftobjs_8c_a3e1ed8be3b28f02ad5fb8ea1f90bde53_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a159b01a0ce6ee36fd7befe62be0b3eaf" name="a159b01a0ce6ee36fd7befe62be0b3eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159b01a0ce6ee36fd7befe62be0b3eaf">&#9670;&#160;</a></span>destroy_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroy_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a></td>          <td class="paramname"><span class="paramname"><em>driver</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a159b01a0ce6ee36fd7befe62be0b3eaf_icgraph.png" border="0" usemap="#aftobjs_8c_a159b01a0ce6ee36fd7befe62be0b3eaf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a64b78b9733d559cd38d3db1ad91ae14d" name="a64b78b9733d559cd38d3db1ad91ae14d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b78b9733d559cd38d3db1ad91ae14d">&#9670;&#160;</a></span>FT_Activate_Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Activate_Size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a64b78b9733d559cd38d3db1ad91ae14d_cgraph.png" border="0" usemap="#aftobjs_8c_a64b78b9733d559cd38d3db1ad91ae14d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a64b78b9733d559cd38d3db1ad91ae14d_icgraph.png" border="0" usemap="#aftobjs_8c_a64b78b9733d559cd38d3db1ad91ae14d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a537c6119249420ea935f0e61cbee5079" name="a537c6119249420ea935f0e61cbee5079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537c6119249420ea935f0e61cbee5079">&#9670;&#160;</a></span>FT_Add_Module()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Add_Module </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="include_2freetype_2ftmodule_8h.html#a751938d4065a634ee7ca55439f825018">FT_Module_Class</a> *</td>          <td class="paramname"><span class="paramname"><em>clazz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a537c6119249420ea935f0e61cbee5079_cgraph.png" border="0" usemap="#aftobjs_8c_a537c6119249420ea935f0e61cbee5079_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a537c6119249420ea935f0e61cbee5079_icgraph.png" border="0" usemap="#aftobjs_8c_a537c6119249420ea935f0e61cbee5079_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a038f96cdeebcf981be0463505f24e087" name="a038f96cdeebcf981be0463505f24e087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038f96cdeebcf981be0463505f24e087">&#9670;&#160;</a></span>ft_add_renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_add_renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a></td>          <td class="paramname"><span class="paramname"><em>module</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a038f96cdeebcf981be0463505f24e087_cgraph.png" border="0" usemap="#aftobjs_8c_a038f96cdeebcf981be0463505f24e087_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a038f96cdeebcf981be0463505f24e087_icgraph.png" border="0" usemap="#aftobjs_8c_a038f96cdeebcf981be0463505f24e087_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="ae97b04528da5fc081e0ce9be40c5b036" name="ae97b04528da5fc081e0ce9be40c5b036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97b04528da5fc081e0ce9be40c5b036">&#9670;&#160;</a></span>FT_Attach_File()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Attach_File </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>filepathname</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae97b04528da5fc081e0ce9be40c5b036_cgraph.png" border="0" usemap="#aftobjs_8c_ae97b04528da5fc081e0ce9be40c5b036_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae97b04528da5fc081e0ce9be40c5b036_icgraph.png" border="0" usemap="#aftobjs_8c_ae97b04528da5fc081e0ce9be40c5b036_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="aced0db97521cb20e44bed22d03ea4b6b" name="aced0db97521cb20e44bed22d03ea4b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced0db97521cb20e44bed22d03ea4b6b">&#9670;&#160;</a></span>FT_Attach_Stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Attach_Stream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#aa1c1d4d731529d220017c71767baaccb">FT_Open_Args</a> *</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aced0db97521cb20e44bed22d03ea4b6b_cgraph.png" border="0" usemap="#aftobjs_8c_aced0db97521cb20e44bed22d03ea4b6b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aced0db97521cb20e44bed22d03ea4b6b_icgraph.png" border="0" usemap="#aftobjs_8c_aced0db97521cb20e44bed22d03ea4b6b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="a6b28a33ad0a6cfe26f0d33a896f10477" name="a6b28a33ad0a6cfe26f0d33a896f10477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b28a33ad0a6cfe26f0d33a896f10477">&#9670;&#160;</a></span>FT_CMap_Done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_CMap_Done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#aa592181714c026f0c6c90c91f3659b21">FT_CMap</a></td>          <td class="paramname"><span class="paramname"><em>cmap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6b28a33ad0a6cfe26f0d33a896f10477_cgraph.png" border="0" usemap="#aftobjs_8c_a6b28a33ad0a6cfe26f0d33a896f10477_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6b28a33ad0a6cfe26f0d33a896f10477_icgraph.png" border="0" usemap="#aftobjs_8c_a6b28a33ad0a6cfe26f0d33a896f10477_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="a951ef5b2f18dc022f7524a2c4d209b99" name="a951ef5b2f18dc022f7524a2c4d209b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951ef5b2f18dc022f7524a2c4d209b99">&#9670;&#160;</a></span>FT_CMap_New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_CMap_New </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#af6ac93d072307dd61214e0d2b7c0e924">FT_CMap_Class</a></td>          <td class="paramname"><span class="paramname"><em>clazz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>init_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a></td>          <td class="paramname"><span class="paramname"><em>charmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#aa592181714c026f0c6c90c91f3659b21">FT_CMap</a> *</td>          <td class="paramname"><span class="paramname"><em>acmap</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a951ef5b2f18dc022f7524a2c4d209b99_cgraph.png" border="0" usemap="#aftobjs_8c_a951ef5b2f18dc022f7524a2c4d209b99_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a951ef5b2f18dc022f7524a2c4d209b99_icgraph.png" border="0" usemap="#aftobjs_8c_a951ef5b2f18dc022f7524a2c4d209b99_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a2d1542be3d3af3d7699cee3425b2bc79" name="a2d1542be3d3af3d7699cee3425b2bc79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1542be3d3af3d7699cee3425b2bc79">&#9670;&#160;</a></span>FT_Done_Face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Done_Face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a2d1542be3d3af3d7699cee3425b2bc79_cgraph.png" border="0" usemap="#aftobjs_8c_a2d1542be3d3af3d7699cee3425b2bc79_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a2d1542be3d3af3d7699cee3425b2bc79_icgraph.png" border="0" usemap="#aftobjs_8c_a2d1542be3d3af3d7699cee3425b2bc79_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="ad0c3fbaead98eb3dc1e8dec850691b8e" name="ad0c3fbaead98eb3dc1e8dec850691b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c3fbaead98eb3dc1e8dec850691b8e">&#9670;&#160;</a></span>FT_Done_GlyphSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Done_GlyphSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ad0c3fbaead98eb3dc1e8dec850691b8e_cgraph.png" border="0" usemap="#aftobjs_8c_ad0c3fbaead98eb3dc1e8dec850691b8e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ad0c3fbaead98eb3dc1e8dec850691b8e_icgraph.png" border="0" usemap="#aftobjs_8c_ad0c3fbaead98eb3dc1e8dec850691b8e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="a682ac750d151780f186333dbd85cc2fb" name="a682ac750d151780f186333dbd85cc2fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682ac750d151780f186333dbd85cc2fb">&#9670;&#160;</a></span>FT_Done_Library()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Done_Library </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a682ac750d151780f186333dbd85cc2fb_cgraph.png" border="0" usemap="#aftobjs_8c_a682ac750d151780f186333dbd85cc2fb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a682ac750d151780f186333dbd85cc2fb_icgraph.png" border="0" usemap="#aftobjs_8c_a682ac750d151780f186333dbd85cc2fb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="a3f370063d752eda02f1a9d54feb863a4" name="a3f370063d752eda02f1a9d54feb863a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f370063d752eda02f1a9d54feb863a4">&#9670;&#160;</a></span>FT_Done_Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Done_Size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3f370063d752eda02f1a9d54feb863a4_cgraph.png" border="0" usemap="#aftobjs_8c_a3f370063d752eda02f1a9d54feb863a4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3f370063d752eda02f1a9d54feb863a4_icgraph.png" border="0" usemap="#aftobjs_8c_a3f370063d752eda02f1a9d54feb863a4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="a529192ba5290936f21b63f257bf42bdd" name="a529192ba5290936f21b63f257bf42bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529192ba5290936f21b63f257bf42bdd">&#9670;&#160;</a></span>FT_Get_Char_Index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Char_Index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>charcode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a529192ba5290936f21b63f257bf42bdd_cgraph.png" border="0" usemap="#aftobjs_8c_a529192ba5290936f21b63f257bf42bdd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a529192ba5290936f21b63f257bf42bdd_icgraph.png" border="0" usemap="#aftobjs_8c_a529192ba5290936f21b63f257bf42bdd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+
+</div>
+</div>
+<a id="a2e6870abd05ffbf08632dd5416d3093d" name="a2e6870abd05ffbf08632dd5416d3093d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6870abd05ffbf08632dd5416d3093d">&#9670;&#160;</a></span>FT_Get_First_Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_First_Char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>agindex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a2e6870abd05ffbf08632dd5416d3093d_cgraph.png" border="0" usemap="#aftobjs_8c_a2e6870abd05ffbf08632dd5416d3093d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a2e6870abd05ffbf08632dd5416d3093d_icgraph.png" border="0" usemap="#aftobjs_8c_a2e6870abd05ffbf08632dd5416d3093d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="aa2d5108cf55705b1e1faf4fbe9873edc" name="aa2d5108cf55705b1e1faf4fbe9873edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d5108cf55705b1e1faf4fbe9873edc">&#9670;&#160;</a></span>FT_Get_Glyph_Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Glyph_Name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>buffer_max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aa2d5108cf55705b1e1faf4fbe9873edc_cgraph.png" border="0" usemap="#aftobjs_8c_aa2d5108cf55705b1e1faf4fbe9873edc_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aa2d5108cf55705b1e1faf4fbe9873edc_icgraph.png" border="0" usemap="#aftobjs_8c_aa2d5108cf55705b1e1faf4fbe9873edc_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="ac577d98c18789a0d558d2b2f9fadbbf1" name="ac577d98c18789a0d558d2b2f9fadbbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac577d98c18789a0d558d2b2f9fadbbf1">&#9670;&#160;</a></span>FT_Get_Kerning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Kerning </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>left_glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>right_glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>kern_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>akerning</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ac577d98c18789a0d558d2b2f9fadbbf1_cgraph.png" border="0" usemap="#aftobjs_8c_ac577d98c18789a0d558d2b2f9fadbbf1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ac577d98c18789a0d558d2b2f9fadbbf1_icgraph.png" border="0" usemap="#aftobjs_8c_ac577d98c18789a0d558d2b2f9fadbbf1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+
+</div>
+</div>
+<a id="a9aae78d37c4eadf2cd3c702ab138d3d1" name="a9aae78d37c4eadf2cd3c702ab138d3d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aae78d37c4eadf2cd3c702ab138d3d1">&#9670;&#160;</a></span>FT_Get_Module()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Module </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>module_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9aae78d37c4eadf2cd3c702ab138d3d1_cgraph.png" border="0" usemap="#aftobjs_8c_a9aae78d37c4eadf2cd3c702ab138d3d1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9aae78d37c4eadf2cd3c702ab138d3d1_icgraph.png" border="0" usemap="#aftobjs_8c_a9aae78d37c4eadf2cd3c702ab138d3d1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+
+</div>
+</div>
+<a id="abc8a3cf6f444f32a6f9b18352b9f5216" name="abc8a3cf6f444f32a6f9b18352b9f5216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8a3cf6f444f32a6f9b18352b9f5216">&#9670;&#160;</a></span>FT_Get_Module_Interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Module_Interface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>mod_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_abc8a3cf6f444f32a6f9b18352b9f5216_cgraph.png" border="0" usemap="#aftobjs_8c_abc8a3cf6f444f32a6f9b18352b9f5216_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_abc8a3cf6f444f32a6f9b18352b9f5216_icgraph.png" border="0" usemap="#aftobjs_8c_abc8a3cf6f444f32a6f9b18352b9f5216_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+
+</div>
+</div>
+<a id="abfb440cce732f3c3b03ef784601dd67a" name="abfb440cce732f3c3b03ef784601dd67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb440cce732f3c3b03ef784601dd67a">&#9670;&#160;</a></span>FT_Get_Name_Index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Name_Index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a> *</td>          <td class="paramname"><span class="paramname"><em>glyph_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_abfb440cce732f3c3b03ef784601dd67a_cgraph.png" border="0" usemap="#aftobjs_8c_abfb440cce732f3c3b03ef784601dd67a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_abfb440cce732f3c3b03ef784601dd67a_icgraph.png" border="0" usemap="#aftobjs_8c_abfb440cce732f3c3b03ef784601dd67a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+
+</div>
+</div>
+<a id="a04a3c0f5b4a05b4dffd3aa607363ef04" name="a04a3c0f5b4a05b4dffd3aa607363ef04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a3c0f5b4a05b4dffd3aa607363ef04">&#9670;&#160;</a></span>FT_Get_Next_Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Next_Char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>charcode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>agindex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a04a3c0f5b4a05b4dffd3aa607363ef04_cgraph.png" border="0" usemap="#aftobjs_8c_a04a3c0f5b4a05b4dffd3aa607363ef04_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a04a3c0f5b4a05b4dffd3aa607363ef04_icgraph.png" border="0" usemap="#aftobjs_8c_a04a3c0f5b4a05b4dffd3aa607363ef04_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+
+</div>
+</div>
+<a id="a7ba3fd81be23a7e0ca0a1c435bdaa84a" name="a7ba3fd81be23a7e0ca0a1c435bdaa84a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba3fd81be23a7e0ca0a1c435bdaa84a">&#9670;&#160;</a></span>FT_Get_Postscript_Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Postscript_Name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a7ba3fd81be23a7e0ca0a1c435bdaa84a_cgraph.png" border="0" usemap="#aftobjs_8c_a7ba3fd81be23a7e0ca0a1c435bdaa84a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a7ba3fd81be23a7e0ca0a1c435bdaa84a_icgraph.png" border="0" usemap="#aftobjs_8c_a7ba3fd81be23a7e0ca0a1c435bdaa84a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+
+</div>
+</div>
+<a id="a8b85f16751ce80fd73908fff04276d15" name="a8b85f16751ce80fd73908fff04276d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b85f16751ce80fd73908fff04276d15">&#9670;&#160;</a></span>FT_Get_Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#ac277a6c91e1d785fae31f2aa86d60588">FT_Glyph_Format</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a8b85f16751ce80fd73908fff04276d15_cgraph.png" border="0" usemap="#aftobjs_8c_a8b85f16751ce80fd73908fff04276d15_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a8b85f16751ce80fd73908fff04276d15_icgraph.png" border="0" usemap="#aftobjs_8c_a8b85f16751ce80fd73908fff04276d15_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 50 -->
+</div>
+
+</div>
+</div>
+<a id="a05db257798829b76cf62cf22239e7058" name="a05db257798829b76cf62cf22239e7058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05db257798829b76cf62cf22239e7058">&#9670;&#160;</a></span>FT_Get_Sfnt_Table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Sfnt_Table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tttables_8h.html#ae1616fc3b78c85fb21f22247562cb12a">FT_Sfnt_Tag</a></td>          <td class="paramname"><span class="paramname"><em>tag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a05db257798829b76cf62cf22239e7058_cgraph.png" border="0" usemap="#aftobjs_8c_a05db257798829b76cf62cf22239e7058_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 51 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a05db257798829b76cf62cf22239e7058_icgraph.png" border="0" usemap="#aftobjs_8c_a05db257798829b76cf62cf22239e7058_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 52 -->
+</div>
+
+</div>
+</div>
+<a id="a24f6b28dae62ce7050967b4b8dec77b4" name="a24f6b28dae62ce7050967b4b8dec77b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f6b28dae62ce7050967b4b8dec77b4">&#9670;&#160;</a></span>ft_glyphslot_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_glyphslot_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a24f6b28dae62ce7050967b4b8dec77b4_icgraph.png" border="0" usemap="#aftobjs_8c_a24f6b28dae62ce7050967b4b8dec77b4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 53 -->
+</div>
+
+</div>
+</div>
+<a id="a62027096d1d8097fac96d4899125ece2" name="a62027096d1d8097fac96d4899125ece2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62027096d1d8097fac96d4899125ece2">&#9670;&#160;</a></span>ft_glyphslot_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_glyphslot_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a62027096d1d8097fac96d4899125ece2_cgraph.png" border="0" usemap="#aftobjs_8c_a62027096d1d8097fac96d4899125ece2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 54 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a62027096d1d8097fac96d4899125ece2_icgraph.png" border="0" usemap="#aftobjs_8c_a62027096d1d8097fac96d4899125ece2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 55 -->
+</div>
+
+</div>
+</div>
+<a id="a9a732386968a59ca7fe09512b2047bde" name="a9a732386968a59ca7fe09512b2047bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a732386968a59ca7fe09512b2047bde">&#9670;&#160;</a></span>ft_glyphslot_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_glyphslot_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9a732386968a59ca7fe09512b2047bde_cgraph.png" border="0" usemap="#aftobjs_8c_a9a732386968a59ca7fe09512b2047bde_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 56 -->
+</div>
+
+</div>
+</div>
+<a id="a37900af0fd3360c2bff7eb93e7606a30" name="a37900af0fd3360c2bff7eb93e7606a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37900af0fd3360c2bff7eb93e7606a30">&#9670;&#160;</a></span>ft_input_stream_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_input_stream_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>external</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a37900af0fd3360c2bff7eb93e7606a30_cgraph.png" border="0" usemap="#aftobjs_8c_a37900af0fd3360c2bff7eb93e7606a30_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 57 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a37900af0fd3360c2bff7eb93e7606a30_icgraph.png" border="0" usemap="#aftobjs_8c_a37900af0fd3360c2bff7eb93e7606a30_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 58 -->
+</div>
+
+</div>
+</div>
+<a id="a39b78dde92f846a8649c93f7009ad642" name="a39b78dde92f846a8649c93f7009ad642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b78dde92f846a8649c93f7009ad642">&#9670;&#160;</a></span>ft_input_stream_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_input_stream_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="freetype_8h.html#aa1c1d4d731529d220017c71767baaccb">FT_Open_Args</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> *</td>          <td class="paramname"><span class="paramname"><em>astream</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a39b78dde92f846a8649c93f7009ad642_cgraph.png" border="0" usemap="#aftobjs_8c_a39b78dde92f846a8649c93f7009ad642_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 59 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a39b78dde92f846a8649c93f7009ad642_icgraph.png" border="0" usemap="#aftobjs_8c_a39b78dde92f846a8649c93f7009ad642_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 60 -->
+</div>
+
+</div>
+</div>
+<a id="a1f08c1971529d442c6e90ca07f79bd94" name="a1f08c1971529d442c6e90ca07f79bd94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f08c1971529d442c6e90ca07f79bd94">&#9670;&#160;</a></span>FT_Library_Version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Library_Version </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *</td>          <td class="paramname"><span class="paramname"><em>amajor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *</td>          <td class="paramname"><span class="paramname"><em>aminor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *</td>          <td class="paramname"><span class="paramname"><em>apatch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a1f08c1971529d442c6e90ca07f79bd94_cgraph.png" border="0" usemap="#aftobjs_8c_a1f08c1971529d442c6e90ca07f79bd94_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 61 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a1f08c1971529d442c6e90ca07f79bd94_icgraph.png" border="0" usemap="#aftobjs_8c_a1f08c1971529d442c6e90ca07f79bd94_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 62 -->
+</div>
+
+</div>
+</div>
+<a id="aeea4c9699584228c2244e4f6d9f09380" name="aeea4c9699584228c2244e4f6d9f09380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea4c9699584228c2244e4f6d9f09380">&#9670;&#160;</a></span>FT_Load_Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Load_Char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>char_code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a></td>          <td class="paramname"><span class="paramname"><em>load_flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aeea4c9699584228c2244e4f6d9f09380_cgraph.png" border="0" usemap="#aftobjs_8c_aeea4c9699584228c2244e4f6d9f09380_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 63 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aeea4c9699584228c2244e4f6d9f09380_icgraph.png" border="0" usemap="#aftobjs_8c_aeea4c9699584228c2244e4f6d9f09380_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 64 -->
+</div>
+
+</div>
+</div>
+<a id="a01806ddba7989d0ad132e3318301e72d" name="a01806ddba7989d0ad132e3318301e72d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01806ddba7989d0ad132e3318301e72d">&#9670;&#160;</a></span>FT_Load_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Load_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a></td>          <td class="paramname"><span class="paramname"><em>load_flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a01806ddba7989d0ad132e3318301e72d_cgraph.png" border="0" usemap="#aftobjs_8c_a01806ddba7989d0ad132e3318301e72d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 65 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a01806ddba7989d0ad132e3318301e72d_icgraph.png" border="0" usemap="#aftobjs_8c_a01806ddba7989d0ad132e3318301e72d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 66 -->
+</div>
+
+</div>
+</div>
+<a id="a47574eb59d73e20f7905cb0c34ce42f3" name="a47574eb59d73e20f7905cb0c34ce42f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47574eb59d73e20f7905cb0c34ce42f3">&#9670;&#160;</a></span>ft_lookup_glyph_renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> ft_lookup_glyph_renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a47574eb59d73e20f7905cb0c34ce42f3_cgraph.png" border="0" usemap="#aftobjs_8c_a47574eb59d73e20f7905cb0c34ce42f3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 67 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a47574eb59d73e20f7905cb0c34ce42f3_icgraph.png" border="0" usemap="#aftobjs_8c_a47574eb59d73e20f7905cb0c34ce42f3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 68 -->
+</div>
+
+</div>
+</div>
+<a id="ae4b2a9b835cfaf9e509dcc8fb1be773c" name="ae4b2a9b835cfaf9e509dcc8fb1be773c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b2a9b835cfaf9e509dcc8fb1be773c">&#9670;&#160;</a></span>FT_Lookup_Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Lookup_Renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#ac277a6c91e1d785fae31f2aa86d60588">FT_Glyph_Format</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a155e4980a42c16fbc221ad40b2b59695">FT_ListNode</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae4b2a9b835cfaf9e509dcc8fb1be773c_cgraph.png" border="0" usemap="#aftobjs_8c_ae4b2a9b835cfaf9e509dcc8fb1be773c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 69 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae4b2a9b835cfaf9e509dcc8fb1be773c_icgraph.png" border="0" usemap="#aftobjs_8c_ae4b2a9b835cfaf9e509dcc8fb1be773c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 70 -->
+</div>
+
+</div>
+</div>
+<a id="a549a19bbea568f3a6d60207f1b787070" name="a549a19bbea568f3a6d60207f1b787070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a549a19bbea568f3a6d60207f1b787070">&#9670;&#160;</a></span>FT_New_Face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_New_Face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>pathname</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>face_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *</td>          <td class="paramname"><span class="paramname"><em>aface</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a549a19bbea568f3a6d60207f1b787070_cgraph.png" border="0" usemap="#aftobjs_8c_a549a19bbea568f3a6d60207f1b787070_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 71 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a549a19bbea568f3a6d60207f1b787070_icgraph.png" border="0" usemap="#aftobjs_8c_a549a19bbea568f3a6d60207f1b787070_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 72 -->
+</div>
+
+</div>
+</div>
+<a id="a6b8a7296866810c4feff8dc562e55c4c" name="a6b8a7296866810c4feff8dc562e55c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8a7296866810c4feff8dc562e55c4c">&#9670;&#160;</a></span>FT_New_GlyphSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_New_GlyphSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> *</td>          <td class="paramname"><span class="paramname"><em>aslot</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6b8a7296866810c4feff8dc562e55c4c_cgraph.png" border="0" usemap="#aftobjs_8c_a6b8a7296866810c4feff8dc562e55c4c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 73 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6b8a7296866810c4feff8dc562e55c4c_icgraph.png" border="0" usemap="#aftobjs_8c_a6b8a7296866810c4feff8dc562e55c4c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 74 -->
+</div>
+
+</div>
+</div>
+<a id="a7bee32bd20d4e35dd5a87a169f76fc82" name="a7bee32bd20d4e35dd5a87a169f76fc82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bee32bd20d4e35dd5a87a169f76fc82">&#9670;&#160;</a></span>FT_New_Library()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_New_Library </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> *</td>          <td class="paramname"><span class="paramname"><em>alibrary</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a7bee32bd20d4e35dd5a87a169f76fc82_cgraph.png" border="0" usemap="#aftobjs_8c_a7bee32bd20d4e35dd5a87a169f76fc82_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 75 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a7bee32bd20d4e35dd5a87a169f76fc82_icgraph.png" border="0" usemap="#aftobjs_8c_a7bee32bd20d4e35dd5a87a169f76fc82_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 76 -->
+</div>
+
+</div>
+</div>
+<a id="ae9bce7676556ee5611ecbaf370023a86" name="ae9bce7676556ee5611ecbaf370023a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9bce7676556ee5611ecbaf370023a86">&#9670;&#160;</a></span>FT_New_Memory_Face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_New_Memory_Face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>file_base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>file_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>face_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *</td>          <td class="paramname"><span class="paramname"><em>aface</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae9bce7676556ee5611ecbaf370023a86_cgraph.png" border="0" usemap="#aftobjs_8c_ae9bce7676556ee5611ecbaf370023a86_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 77 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae9bce7676556ee5611ecbaf370023a86_icgraph.png" border="0" usemap="#aftobjs_8c_ae9bce7676556ee5611ecbaf370023a86_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 78 -->
+</div>
+
+</div>
+</div>
+<a id="a9b4a1faa77e9bd3f24250affb24c1518" name="a9b4a1faa77e9bd3f24250affb24c1518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4a1faa77e9bd3f24250affb24c1518">&#9670;&#160;</a></span>FT_New_Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_New_Size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> *</td>          <td class="paramname"><span class="paramname"><em>asize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9b4a1faa77e9bd3f24250affb24c1518_cgraph.png" border="0" usemap="#aftobjs_8c_a9b4a1faa77e9bd3f24250affb24c1518_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 79 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9b4a1faa77e9bd3f24250affb24c1518_icgraph.png" border="0" usemap="#aftobjs_8c_a9b4a1faa77e9bd3f24250affb24c1518_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 80 -->
+</div>
+
+</div>
+</div>
+<a id="a3bdf12232d495ca7d4d40f47b4bc157c" name="a3bdf12232d495ca7d4d40f47b4bc157c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdf12232d495ca7d4d40f47b4bc157c">&#9670;&#160;</a></span>FT_Open_Face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Open_Face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="freetype_8h.html#aa1c1d4d731529d220017c71767baaccb">FT_Open_Args</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>face_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *</td>          <td class="paramname"><span class="paramname"><em>aface</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3bdf12232d495ca7d4d40f47b4bc157c_cgraph.png" border="0" usemap="#aftobjs_8c_a3bdf12232d495ca7d4d40f47b4bc157c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 81 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3bdf12232d495ca7d4d40f47b4bc157c_icgraph.png" border="0" usemap="#aftobjs_8c_a3bdf12232d495ca7d4d40f47b4bc157c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 82 -->
+</div>
+
+</div>
+</div>
+<a id="aed9de641231834a26e3cf047408069b7" name="aed9de641231834a26e3cf047408069b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9de641231834a26e3cf047408069b7">&#9670;&#160;</a></span>ft_recompute_scaled_metrics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_recompute_scaled_metrics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#ad885552d186adaffc5fe385cd458a4a4">FT_Size_Metrics</a> *</td>          <td class="paramname"><span class="paramname"><em>metrics</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aed9de641231834a26e3cf047408069b7_cgraph.png" border="0" usemap="#aftobjs_8c_aed9de641231834a26e3cf047408069b7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 83 -->
+</div>
+
+</div>
+</div>
+<a id="a036e2fa194e8a02f2626cee7aea1ac53" name="a036e2fa194e8a02f2626cee7aea1ac53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036e2fa194e8a02f2626cee7aea1ac53">&#9670;&#160;</a></span>FT_Remove_Module()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Remove_Module </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a></td>          <td class="paramname"><span class="paramname"><em>module</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a036e2fa194e8a02f2626cee7aea1ac53_cgraph.png" border="0" usemap="#aftobjs_8c_a036e2fa194e8a02f2626cee7aea1ac53_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 84 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a036e2fa194e8a02f2626cee7aea1ac53_icgraph.png" border="0" usemap="#aftobjs_8c_a036e2fa194e8a02f2626cee7aea1ac53_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 85 -->
+</div>
+
+</div>
+</div>
+<a id="aeeb6b8fbcabf0937b7e5b0a9457c829d" name="aeeb6b8fbcabf0937b7e5b0a9457c829d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeb6b8fbcabf0937b7e5b0a9457c829d">&#9670;&#160;</a></span>ft_remove_renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_remove_renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a660c1bb333747abacdc433b7d73ca59b">FT_Module</a></td>          <td class="paramname"><span class="paramname"><em>module</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aeeb6b8fbcabf0937b7e5b0a9457c829d_cgraph.png" border="0" usemap="#aftobjs_8c_aeeb6b8fbcabf0937b7e5b0a9457c829d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 86 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_aeeb6b8fbcabf0937b7e5b0a9457c829d_icgraph.png" border="0" usemap="#aftobjs_8c_aeeb6b8fbcabf0937b7e5b0a9457c829d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 87 -->
+</div>
+
+</div>
+</div>
+<a id="ab463acb65581abb6dd4a70a33b5f435f" name="ab463acb65581abb6dd4a70a33b5f435f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab463acb65581abb6dd4a70a33b5f435f">&#9670;&#160;</a></span>FT_Render_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Render_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>render_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ab463acb65581abb6dd4a70a33b5f435f_cgraph.png" border="0" usemap="#aftobjs_8c_ab463acb65581abb6dd4a70a33b5f435f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 88 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ab463acb65581abb6dd4a70a33b5f435f_icgraph.png" border="0" usemap="#aftobjs_8c_ab463acb65581abb6dd4a70a33b5f435f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 89 -->
+</div>
+
+</div>
+</div>
+<a id="a98909bc41306311d5c4cc62d6735b374" name="a98909bc41306311d5c4cc62d6735b374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98909bc41306311d5c4cc62d6735b374">&#9670;&#160;</a></span>FT_Render_Glyph_Internal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Render_Glyph_Internal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>render_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a98909bc41306311d5c4cc62d6735b374_cgraph.png" border="0" usemap="#aftobjs_8c_a98909bc41306311d5c4cc62d6735b374_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 90 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a98909bc41306311d5c4cc62d6735b374_icgraph.png" border="0" usemap="#aftobjs_8c_a98909bc41306311d5c4cc62d6735b374_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 91 -->
+</div>
+
+</div>
+</div>
+<a id="a5ccc241b34958a2b8818bb8b663b393f" name="a5ccc241b34958a2b8818bb8b663b393f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccc241b34958a2b8818bb8b663b393f">&#9670;&#160;</a></span>FT_Select_Charmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Select_Charmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a969ab19025eab22915f16dedc4a5cdeb">FT_Encoding</a></td>          <td class="paramname"><span class="paramname"><em>encoding</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a5ccc241b34958a2b8818bb8b663b393f_cgraph.png" border="0" usemap="#aftobjs_8c_a5ccc241b34958a2b8818bb8b663b393f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 92 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a5ccc241b34958a2b8818bb8b663b393f_icgraph.png" border="0" usemap="#aftobjs_8c_a5ccc241b34958a2b8818bb8b663b393f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 93 -->
+</div>
+
+</div>
+</div>
+<a id="ae36c65d750a39cc04b8c67448632d5fa" name="ae36c65d750a39cc04b8c67448632d5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36c65d750a39cc04b8c67448632d5fa">&#9670;&#160;</a></span>FT_Set_Char_Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Char_Size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>char_width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>char_height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>horz_resolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>vert_resolution</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae36c65d750a39cc04b8c67448632d5fa_cgraph.png" border="0" usemap="#aftobjs_8c_ae36c65d750a39cc04b8c67448632d5fa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 94 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_ae36c65d750a39cc04b8c67448632d5fa_icgraph.png" border="0" usemap="#aftobjs_8c_ae36c65d750a39cc04b8c67448632d5fa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 95 -->
+</div>
+
+</div>
+</div>
+<a id="a9208d1ccf0f8ad9a122fd6c9fe0c5b45" name="a9208d1ccf0f8ad9a122fd6c9fe0c5b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9208d1ccf0f8ad9a122fd6c9fe0c5b45">&#9670;&#160;</a></span>FT_Set_Charmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Charmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a></td>          <td class="paramname"><span class="paramname"><em>charmap</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9208d1ccf0f8ad9a122fd6c9fe0c5b45_cgraph.png" border="0" usemap="#aftobjs_8c_a9208d1ccf0f8ad9a122fd6c9fe0c5b45_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 96 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9208d1ccf0f8ad9a122fd6c9fe0c5b45_icgraph.png" border="0" usemap="#aftobjs_8c_a9208d1ccf0f8ad9a122fd6c9fe0c5b45_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 97 -->
+</div>
+
+</div>
+</div>
+<a id="acaefac9110b7b49a692b6e2e5327d81b" name="acaefac9110b7b49a692b6e2e5327d81b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaefac9110b7b49a692b6e2e5327d81b">&#9670;&#160;</a></span>ft_set_current_renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_set_current_renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_acaefac9110b7b49a692b6e2e5327d81b_cgraph.png" border="0" usemap="#aftobjs_8c_acaefac9110b7b49a692b6e2e5327d81b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 98 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_acaefac9110b7b49a692b6e2e5327d81b_icgraph.png" border="0" usemap="#aftobjs_8c_acaefac9110b7b49a692b6e2e5327d81b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 99 -->
+</div>
+
+</div>
+</div>
+<a id="a6d63da0d3f569b3e49a2f63bb47da858" name="a6d63da0d3f569b3e49a2f63bb47da858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d63da0d3f569b3e49a2f63bb47da858">&#9670;&#160;</a></span>FT_Set_Debug_Hook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Debug_Hook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>hook_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2freetype_2ftmodule_8h.html#aa4b5a842c3899ebb6923671ded96cdf2">FT_DebugHook_Func</a></td>          <td class="paramname"><span class="paramname"><em>debug_hook</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6d63da0d3f569b3e49a2f63bb47da858_cgraph.png" border="0" usemap="#aftobjs_8c_a6d63da0d3f569b3e49a2f63bb47da858_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 100 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6d63da0d3f569b3e49a2f63bb47da858_icgraph.png" border="0" usemap="#aftobjs_8c_a6d63da0d3f569b3e49a2f63bb47da858_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 101 -->
+</div>
+
+</div>
+</div>
+<a id="a3f955545698c6d0ee2475a444fae65ef" name="a3f955545698c6d0ee2475a444fae65ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f955545698c6d0ee2475a444fae65ef">&#9670;&#160;</a></span>FT_Set_Hint_Flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Hint_Flags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3f955545698c6d0ee2475a444fae65ef_cgraph.png" border="0" usemap="#aftobjs_8c_a3f955545698c6d0ee2475a444fae65ef_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 102 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a3f955545698c6d0ee2475a444fae65ef_icgraph.png" border="0" usemap="#aftobjs_8c_a3f955545698c6d0ee2475a444fae65ef_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 103 -->
+</div>
+
+</div>
+</div>
+<a id="a229ad0ad247b9952677d09378c813988" name="a229ad0ad247b9952677d09378c813988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229ad0ad247b9952677d09378c813988">&#9670;&#160;</a></span>FT_Set_Pixel_Sizes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Pixel_Sizes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>pixel_width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>pixel_height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a229ad0ad247b9952677d09378c813988_cgraph.png" border="0" usemap="#aftobjs_8c_a229ad0ad247b9952677d09378c813988_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 104 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a229ad0ad247b9952677d09378c813988_icgraph.png" border="0" usemap="#aftobjs_8c_a229ad0ad247b9952677d09378c813988_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 105 -->
+</div>
+
+</div>
+</div>
+<a id="a2a6d8dbbb7e55d023c9dacfee1dbdb0d" name="a2a6d8dbbb7e55d023c9dacfee1dbdb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6d8dbbb7e55d023c9dacfee1dbdb0d">&#9670;&#160;</a></span>FT_Set_Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Renderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>num_params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a1647d861933dce4c11d35d33b264bcee">FT_Parameter</a> *</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a2a6d8dbbb7e55d023c9dacfee1dbdb0d_cgraph.png" border="0" usemap="#aftobjs_8c_a2a6d8dbbb7e55d023c9dacfee1dbdb0d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 106 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a2a6d8dbbb7e55d023c9dacfee1dbdb0d_icgraph.png" border="0" usemap="#aftobjs_8c_a2a6d8dbbb7e55d023c9dacfee1dbdb0d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 107 -->
+</div>
+
+</div>
+</div>
+<a id="a0b6b8de9867c8f91918847861d43ede8" name="a0b6b8de9867c8f91918847861d43ede8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b6b8de9867c8f91918847861d43ede8">&#9670;&#160;</a></span>FT_Set_Transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Set_Transform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>delta</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a0b6b8de9867c8f91918847861d43ede8_cgraph.png" border="0" usemap="#aftobjs_8c_a0b6b8de9867c8f91918847861d43ede8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 108 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a0b6b8de9867c8f91918847861d43ede8_icgraph.png" border="0" usemap="#aftobjs_8c_a0b6b8de9867c8f91918847861d43ede8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 109 -->
+</div>
+
+</div>
+</div>
+<a id="a9504bbbfc7751a25a39d1330f92655b3" name="a9504bbbfc7751a25a39d1330f92655b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9504bbbfc7751a25a39d1330f92655b3">&#9670;&#160;</a></span>ft_validator_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_validator_error </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#acd88544ad6c46f328a837af8030059be">FT_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9504bbbfc7751a25a39d1330f92655b3_cgraph.png" border="0" usemap="#aftobjs_8c_a9504bbbfc7751a25a39d1330f92655b3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 110 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a9504bbbfc7751a25a39d1330f92655b3_icgraph.png" border="0" usemap="#aftobjs_8c_a9504bbbfc7751a25a39d1330f92655b3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 111 -->
+</div>
+
+</div>
+</div>
+<a id="a6042da97a44e287d5d99b459aae11ea0" name="a6042da97a44e287d5d99b459aae11ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6042da97a44e287d5d99b459aae11ea0">&#9670;&#160;</a></span>ft_validator_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_validator_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#acd88544ad6c46f328a837af8030059be">FT_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#a888f61b9e1821a9a378a6356816de23f">FT_ValidationLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6042da97a44e287d5d99b459aae11ea0_cgraph.png" border="0" usemap="#aftobjs_8c_a6042da97a44e287d5d99b459aae11ea0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 112 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a6042da97a44e287d5d99b459aae11ea0_icgraph.png" border="0" usemap="#aftobjs_8c_a6042da97a44e287d5d99b459aae11ea0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 113 -->
+</div>
+
+</div>
+</div>
+<a id="a40b463141ddaf56437d42b1f9b7894ef" name="a40b463141ddaf56437d42b1f9b7894ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b463141ddaf56437d42b1f9b7894ef">&#9670;&#160;</a></span>ft_validator_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_validator_run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftobjs_8h.html#acd88544ad6c46f328a837af8030059be">FT_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a40b463141ddaf56437d42b1f9b7894ef_cgraph.png" border="0" usemap="#aftobjs_8c_a40b463141ddaf56437d42b1f9b7894ef_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 114 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a40b463141ddaf56437d42b1f9b7894ef_icgraph.png" border="0" usemap="#aftobjs_8c_a40b463141ddaf56437d42b1f9b7894ef_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 115 -->
+</div>
+
+</div>
+</div>
+<a id="a298534074e91baa2a5a15d69dd623c04" name="a298534074e91baa2a5a15d69dd623c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298534074e91baa2a5a15d69dd623c04">&#9670;&#160;</a></span>open_face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> open_face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a></td>          <td class="paramname"><span class="paramname"><em>driver</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>face_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>num_params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a1647d861933dce4c11d35d33b264bcee">FT_Parameter</a> *</td>          <td class="paramname"><span class="paramname"><em>params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *</td>          <td class="paramname"><span class="paramname"><em>aface</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftobjs_8c_a298534074e91baa2a5a15d69dd623c04_icgraph.png" border="0" usemap="#aftobjs_8c_a298534074e91baa2a5a15d69dd623c04_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 116 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_acb6b619e019ac5df49dc8811bc81be5.html">base</a></li><li class="navelem"><a href="ftobjs_8c.html">ftobjs.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

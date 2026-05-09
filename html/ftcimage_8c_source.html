@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cache/ftcimage.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftcimage_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftcimage.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftcimage_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  ftcimage.c                                                             */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    FreeType Image cache (body).                                         */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2000-2001 by                                                 */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include FT_CACHE_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include FT_CACHE_IMAGE_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include FT_CACHE_INTERNAL_GLYPH_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include FT_INTERNAL_MEMORY_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="ftcerror_8h.html">ftcerror.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">/* the FT_Glyph image node type */</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_node_rec__.html">   29</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___image_node_rec__.html">FTC_ImageNodeRec_</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_node_rec__.html#a0f35f8fbb5fc0b65402041d90a2d9bf7">   31</a></span>    <a class="code hl_typedef" href="ftcglyph_8h.html#a813b08ba13645184e4f5180d59732700">FTC_GlyphNodeRec</a>  <a class="code hl_variable" href="struct_f_t_c___image_node_rec__.html#a0f35f8fbb5fc0b65402041d90a2d9bf7">gnode</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_node_rec__.html#a643f5b635838424d2b5a616e456b5ccc">   32</a></span>    <a class="code hl_typedef" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a>          <a class="code hl_variable" href="struct_f_t_c___image_node_rec__.html#a643f5b635838424d2b5a616e456b5ccc">glyph</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">   34</a></span>  } <a class="code hl_typedef" href="ftcimage_8c.html#a40c33ecb853c05b4bb852eeb8b7129d9">FTC_ImageNodeRec</a>, *<a class="code hl_typedef" href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">FTC_ImageNode</a>;</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a359d30ca836909341510b76d320c9e05">   37</a></span><span class="preprocessor">#define FTC_IMAGE_NODE( x )         ( (FTC_ImageNode)( x ) )</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a918bb3d8e7fff91355213194cf7d3af5">   38</a></span><span class="preprocessor">#define FTC_IMAGE_NODE_GINDEX( x )  FTC_GLYPH_NODE_GINDEX( x )</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">/* the glyph image query */</span></div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_query_rec__.html">   42</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___image_query_rec__.html">FTC_ImageQueryRec_</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_query_rec__.html#a4f46647f818fcf4607901dbc91163247">   44</a></span>    <a class="code hl_typedef" href="ftcglyph_8h.html#a8e3d778d8f68c2fc594a153e34e5ec5c">FTC_GlyphQueryRec</a>  <a class="code hl_variable" href="struct_f_t_c___image_query_rec__.html#a4f46647f818fcf4607901dbc91163247">gquery</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_query_rec__.html#a1104d48e330d0f23062288633ac9fc4f">   45</a></span>    <a class="code hl_typedef" href="ftcimage_8h.html#a8bf75c67b57cf945be17689d696e2c12">FTC_ImageTypeRec</a>   <a class="code hl_variable" href="struct_f_t_c___image_query_rec__.html#a1104d48e330d0f23062288633ac9fc4f">type</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a5dbcf72977f6c93c0fcdd3069219b7c8">   47</a></span>  } <a class="code hl_typedef" href="ftcimage_8c.html#a11ca0deea964e9a0cb66980bef2238a0">FTC_ImageQueryRec</a>, *<a class="code hl_typedef" href="ftcimage_8c.html#a5dbcf72977f6c93c0fcdd3069219b7c8">FTC_ImageQuery</a>;</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a682192c59e092d0b6f4b4c50dda9c824">   50</a></span><span class="preprocessor">#define FTC_IMAGE_QUERY( x )  ( (FTC_ImageQuery)( x ) )</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">/* the glyph image set type */</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_family_rec__.html">   54</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___image_family_rec__.html">FTC_ImageFamilyRec_</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_family_rec__.html#a4fff33c7a072ae160de7d7a80e00910e">   56</a></span>    <a class="code hl_typedef" href="ftcglyph_8h.html#aecfee8a6346c719a72c467e7fb6a8a65">FTC_GlyphFamilyRec</a>  <a class="code hl_variable" href="struct_f_t_c___image_family_rec__.html#a4fff33c7a072ae160de7d7a80e00910e">gfam</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_f_t_c___image_family_rec__.html#abcc7547f3546fb94d889289a9c69605a">   57</a></span>    <a class="code hl_typedef" href="ftcimage_8h.html#a8bf75c67b57cf945be17689d696e2c12">FTC_ImageTypeRec</a>    <a class="code hl_variable" href="struct_f_t_c___image_family_rec__.html#abcc7547f3546fb94d889289a9c69605a">type</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a736d567c8e91f027d413a576fa7280bd">   59</a></span>  } <a class="code hl_typedef" href="ftcimage_8c.html#ad46cc5a98221615a429b16ab1c4ce357">FTC_ImageFamilyRec</a>, *<a class="code hl_typedef" href="ftcimage_8c.html#a736d567c8e91f027d413a576fa7280bd">FTC_ImageFamily</a>;</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#ad21d2808f57c3233e630d8ddbab08514">   62</a></span><span class="preprocessor">#define FTC_IMAGE_FAMILY( x )         ( (FTC_ImageFamily)( x ) )</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#afe437bdcc6d7d6cd928daf037ee4eb74">   63</a></span><span class="preprocessor">#define FTC_IMAGE_FAMILY_MEMORY( x )  FTC_GLYPH_FAMILY_MEMORY( &amp;(x)-&gt;gfam )</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">  /*****                    GLYPH IMAGE NODES                          *****/</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">/* finalize a given glyph image node */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <span class="keywordtype">void</span> )</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#aef8e1af7f23b869c9b7963c100b24489">   77</a></span>  <a class="code hl_function" href="ftcimage_8c.html#aef8e1af7f23b869c9b7963c100b24489">ftc_image_node_done</a>( <a class="code hl_typedef" href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">FTC_ImageNode</a>  inode,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                       <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>      cache )</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> ( inode-&gt;glyph )</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      FT_Done_Glyph( inode-&gt;glyph );</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      inode-&gt;glyph = NULL;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="ftcglyph_8h.html#ac71d3dc5a8fb231d833b6953886047c1">ftc_glyph_node_done</a>( <a class="code hl_define" href="ftcglyph_8h.html#a8c6fa2e008f64a6a747361a599dce910">FTC_GLYPH_NODE</a>( inode ), cache );</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">/* initialize a new glyph image node */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#acc99987247fee24c5bfb0bcef82b4bbb">   92</a></span>  <a class="code hl_function" href="ftcimage_8c.html#acc99987247fee24c5bfb0bcef82b4bbb">ftc_image_node_init</a>( <a class="code hl_typedef" href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">FTC_ImageNode</a>   inode,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                       <a class="code hl_typedef" href="ftcglyph_8h.html#a49d6185ec27e1b82e31cc6c67ce2013d">FTC_GlyphQuery</a>  gquery,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                       <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>       cache )</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_typedef" href="ftcimage_8c.html#a736d567c8e91f027d413a576fa7280bd">FTC_ImageFamily</a>  ifam = <a class="code hl_define" href="ftcimage_8c.html#ad21d2808f57c3233e630d8ddbab08514">FTC_IMAGE_FAMILY</a>( gquery-&gt;query.family );</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>         <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_typedef" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a>          <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_typedef" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a>          size;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">/* initialize its inner fields */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_function" href="ftcglyph_8h.html#a5a484d3f724cd6a84f0ea0a746866127">ftc_glyph_node_init</a>( <a class="code hl_define" href="ftcglyph_8h.html#a8c6fa2e008f64a6a747361a599dce910">FTC_GLYPH_NODE</a>( inode ),</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                         gquery-&gt;gindex,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                         <a class="code hl_define" href="ftcglyph_8h.html#aaefe34b751e34e2fe45057ef06aa36e7">FTC_GLYPH_FAMILY</a>( ifam ) );</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">/* we will now load the glyph image */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftcache_8h.html#a94de5a508e8599cd87698f65d2bd27f8">FTC_Manager_Lookup_Size</a>( <a class="code hl_define" href="ftccache_8h.html#af8b0bb86a0434c6bdeb346c0f53afb32">FTC_FAMILY</a>( ifam )-&gt;cache-&gt;manager,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                                     &amp;ifam-&gt;<a class="code hl_variable" href="struct_f_t_c___image_family_rec__.html#abcc7547f3546fb94d889289a9c69605a">type</a>.font,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                     &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, &amp;size );</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>  gindex = <a class="code hl_define" href="ftcglyph_8h.html#aaf974d912cade16b74a6e9de267c3b13">FTC_GLYPH_NODE_GINDEX</a>( inode );</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="freetype_8h.html#a01806ddba7989d0ad132e3318301e72d">FT_Load_Glyph</a>( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, gindex, ifam-&gt;<a class="code hl_variable" href="struct_f_t_c___image_family_rec__.html#abcc7547f3546fb94d889289a9c69605a">type</a>.flags );</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">if</span> ( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;glyph-&gt;format == FT_GLYPH_FORMAT_BITMAP  ||</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>             <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;glyph-&gt;format == FT_GLYPH_FORMAT_OUTLINE )</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>          <span class="comment">/* ok, copy it */</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>          <a class="code hl_typedef" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a>  glyph;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>          <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftglyph_8h.html#a87ba3f101920f5c3c736395dc66060c3">FT_Get_Glyph</a>( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;glyph, &amp;glyph );</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>          <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>          {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            inode-&gt;glyph = glyph;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>          }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = FTC_Err_Invalid_Argument;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">/* in case of error */</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_function" href="ftcglyph_8h.html#ac71d3dc5a8fb231d833b6953886047c1">ftc_glyph_node_done</a>( <a class="code hl_define" href="ftcglyph_8h.html#a8c6fa2e008f64a6a747361a599dce910">FTC_GLYPH_NODE</a>(inode), cache );</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  Exit:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  }</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> )</div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#a3e7f3ad2081754a5837f99cce6c9ee9e">  147</a></span>  <a class="code hl_function" href="ftcimage_8c.html#a3e7f3ad2081754a5837f99cce6c9ee9e">ftc_image_node_weight</a>( <a class="code hl_typedef" href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">FTC_ImageNode</a>  inode )</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  size  = 0;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_typedef" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a>  glyph = inode-&gt;glyph;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">switch</span> ( glyph-&gt;<a class="code hl_variable" href="struct_f_t___glyph_rec__.html#a26b42a2610a69dcaed3e7c8b6d506211">format</a> )</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    case FT_GLYPH_FORMAT_BITMAP:</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        FT_BitmapGlyph  bitg;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        bitg = (FT_BitmapGlyph)glyph;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        size = bitg-&gt;bitmap.rows * labs( bitg-&gt;bitmap.pitch ) +</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>               sizeof ( *bitg );</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">case</span> FT_GLYPH_FORMAT_OUTLINE:</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        FT_OutlineGlyph  outg;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        outg = (FT_OutlineGlyph)glyph;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        size = outg-&gt;outline.n_points *</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                 ( sizeof ( FT_Vector ) + sizeof ( FT_Byte ) ) +</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>               outg-&gt;outline.n_contours * sizeof ( FT_Short ) +</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>               sizeof ( *outg );</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      ;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    size += <span class="keyword">sizeof</span> ( *inode );</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
+</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">  /*****                    GLYPH IMAGE SETS                           *****/</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#acbb9406b0ce21fea1b0b51cd23dd57c7">  198</a></span>  <a class="code hl_function" href="ftcimage_8c.html#acbb9406b0ce21fea1b0b51cd23dd57c7">ftc_image_family_init</a>( <a class="code hl_typedef" href="ftcimage_8c.html#a736d567c8e91f027d413a576fa7280bd">FTC_ImageFamily</a>  ifam,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                         <a class="code hl_typedef" href="ftcimage_8c.html#a5dbcf72977f6c93c0fcdd3069219b7c8">FTC_ImageQuery</a>   iquery,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                         <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>        cache )</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>  manager = cache-&gt;manager;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>     <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <a class="code hl_typedef" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a>      <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    ifam-&gt;type = iquery-&gt;type;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="comment">/* we need to compute &quot;iquery.item_total&quot; now */</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftcache_8h.html#a4e3e4336009353906dece81c0c9cf98e">FTC_Manager_Lookup_Face</a>( manager,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                                     iquery-&gt;type.font.face_id,</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                                     &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> );</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftcglyph_8h.html#a56eb6339d53be831b981558699421162">ftc_glyph_family_init</a>( <a class="code hl_define" href="ftcglyph_8h.html#aaefe34b751e34e2fe45057ef06aa36e7">FTC_GLYPH_FAMILY</a>( ifam ),</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                                     <a class="code hl_define" href="ftcimage_8h.html#af29348b20a65abb673de27d54096468e">FTC_IMAGE_TYPE_HASH</a>( &amp;ifam-&gt;type ),</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                                     1,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                                     <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;num_glyphs,</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                                     <a class="code hl_define" href="ftcglyph_8h.html#a192b9879a170fe02be38de9e7b63bb0f">FTC_GLYPH_QUERY</a>( iquery ),</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                     cache );</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  }</div>
+</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_variable" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> )</div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#aa61637efd5320b2b7da5ba3f77a8c1a5">  228</a></span>  <a class="code hl_function" href="ftcimage_8c.html#aa61637efd5320b2b7da5ba3f77a8c1a5">ftc_image_family_compare</a>( <a class="code hl_typedef" href="ftcimage_8c.html#a736d567c8e91f027d413a576fa7280bd">FTC_ImageFamily</a>  ifam,</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                            <a class="code hl_typedef" href="ftcimage_8c.html#a5dbcf72977f6c93c0fcdd3069219b7c8">FTC_ImageQuery</a>   iquery )</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <a class="code hl_variable" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>  result;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    result = <a class="code hl_define" href="fttypes_8h.html#adf712510036d534403cbddf4f18c2083">FT_BOOL</a>( <a class="code hl_define" href="ftcimage_8h.html#ae2728e07ecd409bcc5cec76653fdac6a">FTC_IMAGE_TYPE_COMPARE</a>( &amp;ifam-&gt;type, &amp;iquery-&gt;type ) );</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordflow">if</span> ( result )</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      <a class="code hl_define" href="ftcglyph_8h.html#a7ecb9981d785fe201ab3e548d49ac5e5">FTC_GLYPH_FAMILY_FOUND</a>( ifam, iquery );</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  }</div>
+</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">  /*****                    GLYPH IMAGE CACHE                          *****/</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00253" data-start="{" data-end="};">
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="ftcimage_8c.html#ae2f2f9a46d3e3d92aa0f5c6df75a5ac0">  253</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a>  <a class="code hl_variable" href="ftcimage_8c.html#ae2f2f9a46d3e3d92aa0f5c6df75a5ac0">ftc_image_cache_class</a> =</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a> ),</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a>) <a class="code hl_function" href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a>,</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a>)<a class="code hl_function" href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a>,</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    (<a class="code hl_typedef" href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a>) <a class="code hl_function" href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a>,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftcimage_8c.html#ad46cc5a98221615a429b16ab1c4ce357">FTC_ImageFamilyRec</a> ),</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    (<a class="code hl_typedef" href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a>)   <a class="code hl_function" href="ftcimage_8c.html#acbb9406b0ce21fea1b0b51cd23dd57c7">ftc_image_family_init</a>,</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    (<a class="code hl_typedef" href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a>)<a class="code hl_function" href="ftcimage_8c.html#aa61637efd5320b2b7da5ba3f77a8c1a5">ftc_image_family_compare</a>,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    (<a class="code hl_typedef" href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a>)   <a class="code hl_function" href="ftcglyph_8h.html#a13cd7e8ec106d3711e38d43ec457fe57">ftc_glyph_family_done</a>,</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftcimage_8c.html#a40c33ecb853c05b4bb852eeb8b7129d9">FTC_ImageNodeRec</a> ),</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    (<a class="code hl_typedef" href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a>)   <a class="code hl_function" href="ftcimage_8c.html#acc99987247fee24c5bfb0bcef82b4bbb">ftc_image_node_init</a>,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    (<a class="code hl_typedef" href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a>) <a class="code hl_function" href="ftcimage_8c.html#a3e7f3ad2081754a5837f99cce6c9ee9e">ftc_image_node_weight</a>,</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a>)<a class="code hl_function" href="ftcglyph_8h.html#ab8a509db2e0f7dec853e0b0a827f5d70">ftc_glyph_node_compare</a>,</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a>)   <a class="code hl_function" href="ftcimage_8c.html#aef8e1af7f23b869c9b7963c100b24489">ftc_image_node_done</a></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  };</div>
+</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="comment">/* documentation is in ftcimage.h */</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <a class="code hl_define" href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00276" data-start="{" data-end="}">
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="ftcimage_8h.html#afb90ade3453225a0e1a5682e301731fd">  276</a></span>  <a class="code hl_function" href="ftcimage_8h.html#afb90ade3453225a0e1a5682e301731fd">FTC_ImageCache_New</a>( <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>      manager,</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                      <a class="code hl_typedef" href="ftcimage_8h.html#a2cb5ee7124051e0fdd9e5ba2cf0cf758">FTC_ImageCache</a>  *acache )</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="ftcmanag_8h.html#a8ed3e862c3edd26789b4f34475af6ffd">FTC_Manager_Register_Cache</a>(</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>             manager,</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>             (<a class="code hl_typedef" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a>)&amp;<a class="code hl_variable" href="ftcimage_8c.html#ae2f2f9a46d3e3d92aa0f5c6df75a5ac0">ftc_image_cache_class</a>,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>             <a class="code hl_define" href="ftccache_8h.html#aa80e8485449ae6c35ca2a41c582df4f7">FTC_CACHE_P</a>( acache ) );</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  }</div>
+</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  <span class="comment">/* documentation is in ftcimage.h */</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  <a class="code hl_define" href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="}">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="ftcimage_8h.html#a47f24aa2f98db5e26060dd1d87532a48">  289</a></span>  <a class="code hl_function" href="ftcimage_8h.html#a47f24aa2f98db5e26060dd1d87532a48">FTC_ImageCache_Lookup</a>( <a class="code hl_typedef" href="ftcimage_8h.html#a2cb5ee7124051e0fdd9e5ba2cf0cf758">FTC_ImageCache</a>  cache,</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                         <a class="code hl_typedef" href="ftcimage_8h.html#a25aba38e94e78467730ce4fbd7237101">FTC_ImageType</a>   type,</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                         <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>         gindex,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                         <a class="code hl_typedef" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a>       *aglyph,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                         <a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>       *anode )</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <a class="code hl_typedef" href="ftcimage_8c.html#a11ca0deea964e9a0cb66980bef2238a0">FTC_ImageQueryRec</a>  iquery;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_typedef" href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">FTC_ImageNode</a>      node;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>           <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="comment">/* some argument checks are delayed to ftc_cache_lookup */</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">if</span> ( !aglyph )</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      <span class="keywordflow">return</span> FTC_Err_Invalid_Argument;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">if</span> ( anode )</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      *anode  = <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    iquery.<a class="code hl_variable" href="struct_f_t_c___image_query_rec__.html#a4f46647f818fcf4607901dbc91163247">gquery</a>.<a class="code hl_variable" href="struct_f_t_c___glyph_query_rec__.html#a6412191804fb3d1fdb68c93d5d7a5256">gindex</a> = gindex;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    iquery.<a class="code hl_variable" href="struct_f_t_c___image_query_rec__.html#a1104d48e330d0f23062288633ac9fc4f">type</a>          = *type;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftccache_8h.html#a450f88f6f1437c4289dcecc8c30040e3">ftc_cache_lookup</a>( <a class="code hl_define" href="ftccache_8h.html#accff87f7fe8ee4824aed3d9b5ac7fc35">FTC_CACHE</a>( cache ),</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                              <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( &amp;iquery ),</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                              (<a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>*)&amp;node );</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      *aglyph = node-&gt;<a class="code hl_variable" href="struct_f_t_c___image_node_rec__.html#a643f5b635838424d2b5a616e456b5ccc">glyph</a>;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      <span class="keywordflow">if</span> ( anode )</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        *anode = (<a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>)node;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <a class="code hl_define" href="ftccache_8h.html#ac645bc767d471cf5c43ba93f5eacca89">FTC_NODE</a>( node )-&gt;ref_count++;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  }</div>
+</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>  <span class="comment">/* backwards-compatibility functions */</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  <a class="code hl_define" href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00331" data-start="{" data-end="}">
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="ftcimage_8h.html#adcdcb8aabd7650d7bf58b2c348633fc3">  331</a></span>  <a class="code hl_function" href="ftcimage_8h.html#adcdcb8aabd7650d7bf58b2c348633fc3">FTC_Image_Cache_New</a>( <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>       manager,</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                       <a class="code hl_typedef" href="ftcimage_8h.html#a0203ca875ab5971f1ad09de53339d5f1">FTC_Image_Cache</a>  *acache )</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="ftcimage_8c.html#afb90ade3453225a0e1a5682e301731fd">FTC_ImageCache_New</a>( manager, (<a class="code hl_typedef" href="ftcimage_8h.html#a2cb5ee7124051e0fdd9e5ba2cf0cf758">FTC_ImageCache</a>*)acache );</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  }</div>
+</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  <a class="code hl_define" href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00339" data-start="{" data-end="}">
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="ftcimage_8h.html#aab4cb9729d2aad963d2e75a8d219d73f">  339</a></span>  <a class="code hl_function" href="ftcimage_8h.html#aab4cb9729d2aad963d2e75a8d219d73f">FTC_Image_Cache_Lookup</a>( <a class="code hl_typedef" href="ftcimage_8h.html#a0203ca875ab5971f1ad09de53339d5f1">FTC_Image_Cache</a>  icache,</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                          <a class="code hl_typedef" href="ftcimage_8h.html#af78e4e9b3504301d3fc5a865766f6e76">FTC_Image_Desc</a>*  desc,</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                          <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>          gindex,</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                          <a class="code hl_typedef" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a>        *aglyph )</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <a class="code hl_typedef" href="ftcimage_8h.html#a8bf75c67b57cf945be17689d696e2c12">FTC_ImageTypeRec</a>  type0;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">if</span> ( !desc )</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      <span class="keywordflow">return</span> FTC_Err_Invalid_Argument;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    type0.font = desc-&gt;font;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="comment">/* convert image type flags to load flags */</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>  load_flags = <a class="code hl_define" href="freetype_8h.html#a70e9181eeca14df104c48ec573156da8">FT_LOAD_DEFAULT</a>;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>  type       = desc-&gt;image_type;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      <span class="comment">/* determine load flags, depending on the font description&#39;s */</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>      <span class="comment">/* image type                                                */</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>      <span class="keywordflow">if</span> ( <a class="code hl_define" href="ftcimage_8h.html#abdafdd6502277b5241ad4c96882337aa">ftc_image_format</a>( type ) == <a class="code hl_define" href="ftcimage_8h.html#a05aeadf23fefb0830ffbb7038f3d47b0">ftc_image_format_bitmap</a> )</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>      {</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">if</span> ( type &amp; <a class="code hl_define" href="ftcimage_8h.html#aa6bae860e5c8dc49ee9ec7b8acb56fe9">ftc_image_flag_monochrome</a> )</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>          load_flags |= <a class="code hl_define" href="freetype_8h.html#a69eec6a6db16fc011e2881e7cbb3ed48">FT_LOAD_MONOCHROME</a>;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <span class="comment">/* disable embedded bitmaps loading if necessary */</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="keywordflow">if</span> ( type &amp; <a class="code hl_define" href="ftcimage_8h.html#ae3999bd8319bdcfdb4ff307d6c981eaf">ftc_image_flag_no_sbits</a> )</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>          load_flags |= <a class="code hl_define" href="freetype_8h.html#a0b68fe1c2c21b9ca3be6853ad44460df">FT_LOAD_NO_BITMAP</a>;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      }</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>      {</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        <span class="comment">/* we want an outline, don&#39;t load embedded bitmaps */</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        load_flags |= <a class="code hl_define" href="freetype_8h.html#a0b68fe1c2c21b9ca3be6853ad44460df">FT_LOAD_NO_BITMAP</a>;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keywordflow">if</span> ( type &amp; <a class="code hl_define" href="ftcimage_8h.html#a70bcdcf4b3016ac79eb6afbc06bf49d4">ftc_image_flag_unscaled</a> )</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>          load_flags |= <a class="code hl_define" href="freetype_8h.html#a1ae5e2e14c90bb98bde52e5412a8f23f">FT_LOAD_NO_SCALE</a>;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>      }</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>      <span class="comment">/* always render glyphs to bitmaps */</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>      load_flags |= <a class="code hl_define" href="freetype_8h.html#a0151cfe710837b05d545dafe99933ba9">FT_LOAD_RENDER</a>;</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      <span class="keywordflow">if</span> ( type &amp; <a class="code hl_define" href="ftcimage_8h.html#ae804dac5566346f61cfde514578be0bd">ftc_image_flag_unhinted</a> )</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        load_flags |= <a class="code hl_define" href="freetype_8h.html#a4d3657db8d87688e93601201d0524e38">FT_LOAD_NO_HINTING</a>;</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>      <span class="keywordflow">if</span> ( type &amp; <a class="code hl_define" href="ftcimage_8h.html#a625ee29bcd328c658595b5c1e3f9df47">ftc_image_flag_autohinted</a> )</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        load_flags |= <a class="code hl_define" href="freetype_8h.html#a63f6789f8fee0232e4b1178d22909059">FT_LOAD_FORCE_AUTOHINT</a>;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>      type0.flags = load_flags;</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    }</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="ftcimage_8c.html#a47f24aa2f98db5e26060dd1d87532a48">FTC_ImageCache_Lookup</a>( (<a class="code hl_typedef" href="ftcimage_8h.html#a2cb5ee7124051e0fdd9e5ba2cf0cf758">FTC_ImageCache</a>)icache,</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                                   &amp;type0,</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                                   gindex,</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                                   aglyph,</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                                   <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> );</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>  }</div>
+</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2amiga_2include_2freetype_2config_2ftconfig_8h_html_ad012d49d959527854f814cfd38299aab"><div class="ttname"><a href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a></div><div class="ttdeci">#define FT_EXPORT_DEF(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:8</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a04749b69ac5a7fd07001364cc9f803fd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_DEF(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:227</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3e7304105563eb715cae1b9c213858ed"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE_DEF</div><div class="ttdef"><b>Definition</b> ftconfig.h:229</div></div>
+<div class="ttc" id="afreetype_8h_html_a0151cfe710837b05d545dafe99933ba9"><div class="ttname"><a href="freetype_8h.html#a0151cfe710837b05d545dafe99933ba9">FT_LOAD_RENDER</a></div><div class="ttdeci">#define FT_LOAD_RENDER</div><div class="ttdef"><b>Definition</b> freetype.h:2128</div></div>
+<div class="ttc" id="afreetype_8h_html_a01806ddba7989d0ad132e3318301e72d"><div class="ttname"><a href="freetype_8h.html#a01806ddba7989d0ad132e3318301e72d">FT_Load_Glyph</a></div><div class="ttdeci">FT_Load_Glyph(FT_Face face, FT_UInt glyph_index, FT_Int32 load_flags)</div><div class="ttdef"><b>Definition</b> ftobjs.c:412</div></div>
+<div class="ttc" id="afreetype_8h_html_a0b68fe1c2c21b9ca3be6853ad44460df"><div class="ttname"><a href="freetype_8h.html#a0b68fe1c2c21b9ca3be6853ad44460df">FT_LOAD_NO_BITMAP</a></div><div class="ttdeci">#define FT_LOAD_NO_BITMAP</div><div class="ttdef"><b>Definition</b> freetype.h:2129</div></div>
+<div class="ttc" id="afreetype_8h_html_a1ae5e2e14c90bb98bde52e5412a8f23f"><div class="ttname"><a href="freetype_8h.html#a1ae5e2e14c90bb98bde52e5412a8f23f">FT_LOAD_NO_SCALE</a></div><div class="ttdeci">#define FT_LOAD_NO_SCALE</div><div class="ttdef"><b>Definition</b> freetype.h:2126</div></div>
+<div class="ttc" id="afreetype_8h_html_a4d3657db8d87688e93601201d0524e38"><div class="ttname"><a href="freetype_8h.html#a4d3657db8d87688e93601201d0524e38">FT_LOAD_NO_HINTING</a></div><div class="ttdeci">#define FT_LOAD_NO_HINTING</div><div class="ttdef"><b>Definition</b> freetype.h:2127</div></div>
+<div class="ttc" id="afreetype_8h_html_a63f6789f8fee0232e4b1178d22909059"><div class="ttname"><a href="freetype_8h.html#a63f6789f8fee0232e4b1178d22909059">FT_LOAD_FORCE_AUTOHINT</a></div><div class="ttdeci">#define FT_LOAD_FORCE_AUTOHINT</div><div class="ttdef"><b>Definition</b> freetype.h:2131</div></div>
+<div class="ttc" id="afreetype_8h_html_a69eec6a6db16fc011e2881e7cbb3ed48"><div class="ttname"><a href="freetype_8h.html#a69eec6a6db16fc011e2881e7cbb3ed48">FT_LOAD_MONOCHROME</a></div><div class="ttdeci">#define FT_LOAD_MONOCHROME</div><div class="ttdef"><b>Definition</b> freetype.h:2137</div></div>
+<div class="ttc" id="afreetype_8h_html_a70e9181eeca14df104c48ec573156da8"><div class="ttname"><a href="freetype_8h.html#a70e9181eeca14df104c48ec573156da8">FT_LOAD_DEFAULT</a></div><div class="ttdeci">#define FT_LOAD_DEFAULT</div><div class="ttdef"><b>Definition</b> freetype.h:2155</div></div>
+<div class="ttc" id="afreetype_8h_html_a791d0ff3273ca9628a523efd98d138c1"><div class="ttname"><a href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></div><div class="ttdeci">struct FT_SizeRec_ * FT_Size</div><div class="ttdef"><b>Definition</b> freetype.h:340</div></div>
+<div class="ttc" id="afreetype_8h_html_a7eba045ee20968354fa1bff0f69740fa"><div class="ttname"><a href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></div><div class="ttdeci">struct FT_FaceRec_ * FT_Face</div><div class="ttdef"><b>Definition</b> freetype.h:315</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftcache_8h_html_a4e3e4336009353906dece81c0c9cf98e"><div class="ttname"><a href="ftcache_8h.html#a4e3e4336009353906dece81c0c9cf98e">FTC_Manager_Lookup_Face</a></div><div class="ttdeci">FTC_Manager_Lookup_Face(FTC_Manager manager, FTC_FaceID face_id, FT_Face *aface)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:133</div></div>
+<div class="ttc" id="aftcache_8h_html_a69e20e3229cfa1fe4677c6626890a2e4"><div class="ttname"><a href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a></div><div class="ttdeci">struct FTC_NodeRec_ * FTC_Node</div><div class="ttdef"><b>Definition</b> ftcache.h:249</div></div>
+<div class="ttc" id="aftcache_8h_html_a94de5a508e8599cd87698f65d2bd27f8"><div class="ttname"><a href="ftcache_8h.html#a94de5a508e8599cd87698f65d2bd27f8">FTC_Manager_Lookup_Size</a></div><div class="ttdeci">FTC_Manager_Lookup_Size(FTC_Manager manager, FTC_Font font, FT_Face *aface, FT_Size *asize)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:274</div></div>
+<div class="ttc" id="aftcache_8h_html_afa42daf62f0c6ee9d6d93e44236e47ac"><div class="ttname"><a href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></div><div class="ttdeci">struct FTC_ManagerRec_ * FTC_Manager</div><div class="ttdef"><b>Definition</b> ftcache.h:229</div></div>
+<div class="ttc" id="aftccache_8h_html_a095a59c6052424bec9f75ad5e052aa73"><div class="ttname"><a href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FTC_CacheRec_ * FTC_Cache</div><div class="ttdef"><b>Definition</b> ftccache.h:30</div></div>
+<div class="ttc" id="aftccache_8h_html_a29958ad81fd027a85c17974a9876045e"><div class="ttname"><a href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a></div><div class="ttdeci">ftc_cache_clear(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:471</div></div>
+<div class="ttc" id="aftccache_8h_html_a2e21a71e9b0e54ae826d3608440b1142"><div class="ttname"><a href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a></div><div class="ttdeci">#define FTC_QUERY(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:117</div></div>
+<div class="ttc" id="aftccache_8h_html_a2fbddca535665bf0429a3e6a7567a349"><div class="ttname"><a href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a></div><div class="ttdeci">struct FTC_CacheRec_ FTC_CacheRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a359d2dfeee5abb19bbfe0afd0775556a"><div class="ttname"><a href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a></div><div class="ttdeci">struct FTC_Cache_ClassRec_ FTC_Cache_ClassRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a446cb5758705c8d93fed4834c1f7ba01"><div class="ttname"><a href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a></div><div class="ttdeci">ftc_cache_init(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:426</div></div>
+<div class="ttc" id="aftccache_8h_html_a450f88f6f1437c4289dcecc8c30040e3"><div class="ttname"><a href="ftccache_8h.html#a450f88f6f1437c4289dcecc8c30040e3">ftc_cache_lookup</a></div><div class="ttdeci">ftc_cache_lookup(FTC_Cache cache, FTC_Query query, FTC_Node *anode)</div><div class="ttdef"><b>Definition</b> ftccache.c:544</div></div>
+<div class="ttc" id="aftccache_8h_html_a4e044ea7a9cfe2cbc7b2046879fa66e7"><div class="ttname"><a href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a></div><div class="ttdeci">void(* FTC_Node_DoneFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:241</div></div>
+<div class="ttc" id="aftccache_8h_html_a7fda8305fba9da3ac004f69d62222c1f"><div class="ttname"><a href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a></div><div class="ttdeci">void(* FTC_Cache_ClearFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:202</div></div>
+<div class="ttc" id="aftccache_8h_html_a8d40751b20ddb9a153ea1c474b1924ff"><div class="ttname"><a href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a></div><div class="ttdeci">FT_Bool(* FTC_Node_CompareFunc)(FTC_Node node, FT_Pointer key, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:235</div></div>
+<div class="ttc" id="aftccache_8h_html_a9569a13469bd526ef597ba839844b0b2"><div class="ttname"><a href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Cache_InitFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:198</div></div>
+<div class="ttc" id="aftccache_8h_html_a9b89a008acd33229209ea4ca60f919de"><div class="ttname"><a href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a></div><div class="ttdeci">const struct FTC_Cache_ClassRec_ * FTC_Cache_Class</div><div class="ttdef"><b>Definition</b> ftccache.h:33</div></div>
+<div class="ttc" id="aftccache_8h_html_aa80e8485449ae6c35ca2a41c582df4f7"><div class="ttname"><a href="ftccache_8h.html#aa80e8485449ae6c35ca2a41c582df4f7">FTC_CACHE_P</a></div><div class="ttdeci">#define FTC_CACHE_P(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:193</div></div>
+<div class="ttc" id="aftccache_8h_html_ac645bc767d471cf5c43ba93f5eacca89"><div class="ttname"><a href="ftccache_8h.html#ac645bc767d471cf5c43ba93f5eacca89">FTC_NODE</a></div><div class="ttdeci">#define FTC_NODE(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:75</div></div>
+<div class="ttc" id="aftccache_8h_html_acb5e48b47a8df5f85ca45be7a024dcae"><div class="ttname"><a href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a></div><div class="ttdeci">void(* FTC_Family_DoneFunc)(FTC_Family family, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:219</div></div>
+<div class="ttc" id="aftccache_8h_html_accff87f7fe8ee4824aed3d9b5ac7fc35"><div class="ttname"><a href="ftccache_8h.html#accff87f7fe8ee4824aed3d9b5ac7fc35">FTC_CACHE</a></div><div class="ttdeci">#define FTC_CACHE(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:192</div></div>
+<div class="ttc" id="aftccache_8h_html_ad9a62f6e005e94390b5871fead4c046f"><div class="ttname"><a href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a></div><div class="ttdeci">FT_ULong(* FTC_Node_WeightFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:230</div></div>
+<div class="ttc" id="aftccache_8h_html_add258d52f2e5270ca6aa757658198266"><div class="ttname"><a href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Family_InitFunc)(FTC_Family family, FTC_Query query, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:210</div></div>
+<div class="ttc" id="aftccache_8h_html_aea9f60ed64c82997a8d6b6ae2c808561"><div class="ttname"><a href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a></div><div class="ttdeci">void(* FTC_Cache_DoneFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:206</div></div>
+<div class="ttc" id="aftccache_8h_html_aeedbacc3ae67fcafc7806e83cb2d9772"><div class="ttname"><a href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a></div><div class="ttdeci">FT_Int(* FTC_Family_CompareFunc)(FTC_Family family, FTC_Query query)</div><div class="ttdef"><b>Definition</b> ftccache.h:215</div></div>
+<div class="ttc" id="aftccache_8h_html_af8b0bb86a0434c6bdeb346c0f53afb32"><div class="ttname"><a href="ftccache_8h.html#af8b0bb86a0434c6bdeb346c0f53afb32">FTC_FAMILY</a></div><div class="ttdeci">#define FTC_FAMILY(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:139</div></div>
+<div class="ttc" id="aftccache_8h_html_afb110aa890319e5aaa0c751804afb427"><div class="ttname"><a href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Node_InitFunc)(FTC_Node node, FT_Pointer type, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:224</div></div>
+<div class="ttc" id="aftccache_8h_html_aff0fde319e7b724184209a0ebb5ea0e9"><div class="ttname"><a href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a></div><div class="ttdeci">ftc_cache_done(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:518</div></div>
+<div class="ttc" id="aftcerror_8h_html"><div class="ttname"><a href="ftcerror_8h.html">ftcerror.h</a></div></div>
+<div class="ttc" id="aftcglyph_8h_html_a13cd7e8ec106d3711e38d43ec457fe57"><div class="ttname"><a href="ftcglyph_8h.html#a13cd7e8ec106d3711e38d43ec457fe57">ftc_glyph_family_done</a></div><div class="ttdeci">ftc_glyph_family_done(FTC_GlyphFamily gfam)</div><div class="ttdef"><b>Definition</b> ftcglyph.c:109</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a192b9879a170fe02be38de9e7b63bb0f"><div class="ttname"><a href="ftcglyph_8h.html#a192b9879a170fe02be38de9e7b63bb0f">FTC_GLYPH_QUERY</a></div><div class="ttdeci">#define FTC_GLYPH_QUERY(x)</div><div class="ttdef"><b>Definition</b> ftcglyph.h:92</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a49d6185ec27e1b82e31cc6c67ce2013d"><div class="ttname"><a href="ftcglyph_8h.html#a49d6185ec27e1b82e31cc6c67ce2013d">FTC_GlyphQuery</a></div><div class="ttdeci">struct FTC_GlyphQueryRec_ * FTC_GlyphQuery</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a56eb6339d53be831b981558699421162"><div class="ttname"><a href="ftcglyph_8h.html#a56eb6339d53be831b981558699421162">ftc_glyph_family_init</a></div><div class="ttdeci">ftc_glyph_family_init(FTC_GlyphFamily gfam, FT_UInt32 hash, FT_UInt item_count, FT_UInt item_total, FTC_GlyphQuery gquery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcglyph.c:84</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a5a484d3f724cd6a84f0ea0a746866127"><div class="ttname"><a href="ftcglyph_8h.html#a5a484d3f724cd6a84f0ea0a746866127">ftc_glyph_node_init</a></div><div class="ttdeci">ftc_glyph_node_init(FTC_GlyphNode node, FT_UInt gindex, FTC_GlyphFamily gfam)</div><div class="ttdef"><b>Definition</b> ftcglyph.c:32</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a7ecb9981d785fe201ab3e548d49ac5e5"><div class="ttname"><a href="ftcglyph_8h.html#a7ecb9981d785fe201ab3e548d49ac5e5">FTC_GLYPH_FAMILY_FOUND</a></div><div class="ttdeci">#define FTC_GLYPH_FAMILY_FOUND(gfam, gquery)</div><div class="ttdef"><b>Definition</b> ftcglyph.h:131</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a813b08ba13645184e4f5180d59732700"><div class="ttname"><a href="ftcglyph_8h.html#a813b08ba13645184e4f5180d59732700">FTC_GlyphNodeRec</a></div><div class="ttdeci">struct FTC_GlyphNodeRec_ FTC_GlyphNodeRec</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a8c6fa2e008f64a6a747361a599dce910"><div class="ttname"><a href="ftcglyph_8h.html#a8c6fa2e008f64a6a747361a599dce910">FTC_GLYPH_NODE</a></div><div class="ttdeci">#define FTC_GLYPH_NODE(x)</div><div class="ttdef"><b>Definition</b> ftcglyph.h:80</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a8e3d778d8f68c2fc594a153e34e5ec5c"><div class="ttname"><a href="ftcglyph_8h.html#a8e3d778d8f68c2fc594a153e34e5ec5c">FTC_GlyphQueryRec</a></div><div class="ttdeci">struct FTC_GlyphQueryRec_ FTC_GlyphQueryRec</div></div>
+<div class="ttc" id="aftcglyph_8h_html_aaefe34b751e34e2fe45057ef06aa36e7"><div class="ttname"><a href="ftcglyph_8h.html#aaefe34b751e34e2fe45057ef06aa36e7">FTC_GLYPH_FAMILY</a></div><div class="ttdeci">#define FTC_GLYPH_FAMILY(x)</div><div class="ttdef"><b>Definition</b> ftcglyph.h:106</div></div>
+<div class="ttc" id="aftcglyph_8h_html_aaf974d912cade16b74a6e9de267c3b13"><div class="ttname"><a href="ftcglyph_8h.html#aaf974d912cade16b74a6e9de267c3b13">FTC_GLYPH_NODE_GINDEX</a></div><div class="ttdeci">#define FTC_GLYPH_NODE_GINDEX(x)</div><div class="ttdef"><b>Definition</b> ftcglyph.h:141</div></div>
+<div class="ttc" id="aftcglyph_8h_html_ab8a509db2e0f7dec853e0b0a827f5d70"><div class="ttname"><a href="ftcglyph_8h.html#ab8a509db2e0f7dec853e0b0a827f5d70">ftc_glyph_node_compare</a></div><div class="ttdeci">ftc_glyph_node_compare(FTC_GlyphNode gnode, FTC_GlyphQuery gquery)</div><div class="ttdef"><b>Definition</b> ftcglyph.c:64</div></div>
+<div class="ttc" id="aftcglyph_8h_html_ac71d3dc5a8fb231d833b6953886047c1"><div class="ttname"><a href="ftcglyph_8h.html#ac71d3dc5a8fb231d833b6953886047c1">ftc_glyph_node_done</a></div><div class="ttdeci">ftc_glyph_node_done(FTC_GlyphNode node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcglyph.c:52</div></div>
+<div class="ttc" id="aftcglyph_8h_html_aecfee8a6346c719a72c467e7fb6a8a65"><div class="ttname"><a href="ftcglyph_8h.html#aecfee8a6346c719a72c467e7fb6a8a65">FTC_GlyphFamilyRec</a></div><div class="ttdeci">struct FTC_GlyphFamilyRec_ FTC_GlyphFamilyRec</div></div>
+<div class="ttc" id="aftcimage_8c_html_a11ca0deea964e9a0cb66980bef2238a0"><div class="ttname"><a href="ftcimage_8c.html#a11ca0deea964e9a0cb66980bef2238a0">FTC_ImageQueryRec</a></div><div class="ttdeci">struct FTC_ImageQueryRec_ FTC_ImageQueryRec</div></div>
+<div class="ttc" id="aftcimage_8c_html_a3e7f3ad2081754a5837f99cce6c9ee9e"><div class="ttname"><a href="ftcimage_8c.html#a3e7f3ad2081754a5837f99cce6c9ee9e">ftc_image_node_weight</a></div><div class="ttdeci">ftc_image_node_weight(FTC_ImageNode inode)</div><div class="ttdef"><b>Definition</b> ftcimage.c:147</div></div>
+<div class="ttc" id="aftcimage_8c_html_a40c33ecb853c05b4bb852eeb8b7129d9"><div class="ttname"><a href="ftcimage_8c.html#a40c33ecb853c05b4bb852eeb8b7129d9">FTC_ImageNodeRec</a></div><div class="ttdeci">struct FTC_ImageNodeRec_ FTC_ImageNodeRec</div></div>
+<div class="ttc" id="aftcimage_8c_html_a47f24aa2f98db5e26060dd1d87532a48"><div class="ttname"><a href="ftcimage_8c.html#a47f24aa2f98db5e26060dd1d87532a48">FTC_ImageCache_Lookup</a></div><div class="ttdeci">FTC_ImageCache_Lookup(FTC_ImageCache cache, FTC_ImageType type, FT_UInt gindex, FT_Glyph *aglyph, FTC_Node *anode)</div><div class="ttdef"><b>Definition</b> ftcimage.c:289</div></div>
+<div class="ttc" id="aftcimage_8c_html_a5dbcf72977f6c93c0fcdd3069219b7c8"><div class="ttname"><a href="ftcimage_8c.html#a5dbcf72977f6c93c0fcdd3069219b7c8">FTC_ImageQuery</a></div><div class="ttdeci">struct FTC_ImageQueryRec_ * FTC_ImageQuery</div></div>
+<div class="ttc" id="aftcimage_8c_html_a5f60b5c9083d35c7c2731a16abb7244a"><div class="ttname"><a href="ftcimage_8c.html#a5f60b5c9083d35c7c2731a16abb7244a">FTC_ImageNode</a></div><div class="ttdeci">struct FTC_ImageNodeRec_ * FTC_ImageNode</div></div>
+<div class="ttc" id="aftcimage_8c_html_a736d567c8e91f027d413a576fa7280bd"><div class="ttname"><a href="ftcimage_8c.html#a736d567c8e91f027d413a576fa7280bd">FTC_ImageFamily</a></div><div class="ttdeci">struct FTC_ImageFamilyRec_ * FTC_ImageFamily</div></div>
+<div class="ttc" id="aftcimage_8c_html_aa61637efd5320b2b7da5ba3f77a8c1a5"><div class="ttname"><a href="ftcimage_8c.html#aa61637efd5320b2b7da5ba3f77a8c1a5">ftc_image_family_compare</a></div><div class="ttdeci">ftc_image_family_compare(FTC_ImageFamily ifam, FTC_ImageQuery iquery)</div><div class="ttdef"><b>Definition</b> ftcimage.c:228</div></div>
+<div class="ttc" id="aftcimage_8c_html_acbb9406b0ce21fea1b0b51cd23dd57c7"><div class="ttname"><a href="ftcimage_8c.html#acbb9406b0ce21fea1b0b51cd23dd57c7">ftc_image_family_init</a></div><div class="ttdeci">ftc_image_family_init(FTC_ImageFamily ifam, FTC_ImageQuery iquery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcimage.c:198</div></div>
+<div class="ttc" id="aftcimage_8c_html_acc99987247fee24c5bfb0bcef82b4bbb"><div class="ttname"><a href="ftcimage_8c.html#acc99987247fee24c5bfb0bcef82b4bbb">ftc_image_node_init</a></div><div class="ttdeci">ftc_image_node_init(FTC_ImageNode inode, FTC_GlyphQuery gquery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcimage.c:92</div></div>
+<div class="ttc" id="aftcimage_8c_html_ad21d2808f57c3233e630d8ddbab08514"><div class="ttname"><a href="ftcimage_8c.html#ad21d2808f57c3233e630d8ddbab08514">FTC_IMAGE_FAMILY</a></div><div class="ttdeci">#define FTC_IMAGE_FAMILY(x)</div><div class="ttdef"><b>Definition</b> ftcimage.c:62</div></div>
+<div class="ttc" id="aftcimage_8c_html_ad46cc5a98221615a429b16ab1c4ce357"><div class="ttname"><a href="ftcimage_8c.html#ad46cc5a98221615a429b16ab1c4ce357">FTC_ImageFamilyRec</a></div><div class="ttdeci">struct FTC_ImageFamilyRec_ FTC_ImageFamilyRec</div></div>
+<div class="ttc" id="aftcimage_8c_html_ae2f2f9a46d3e3d92aa0f5c6df75a5ac0"><div class="ttname"><a href="ftcimage_8c.html#ae2f2f9a46d3e3d92aa0f5c6df75a5ac0">ftc_image_cache_class</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FTC_Cache_ClassRec ftc_image_cache_class</div><div class="ttdef"><b>Definition</b> ftcimage.c:253</div></div>
+<div class="ttc" id="aftcimage_8c_html_aef8e1af7f23b869c9b7963c100b24489"><div class="ttname"><a href="ftcimage_8c.html#aef8e1af7f23b869c9b7963c100b24489">ftc_image_node_done</a></div><div class="ttdeci">ftc_image_node_done(FTC_ImageNode inode, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcimage.c:77</div></div>
+<div class="ttc" id="aftcimage_8c_html_afb90ade3453225a0e1a5682e301731fd"><div class="ttname"><a href="ftcimage_8c.html#afb90ade3453225a0e1a5682e301731fd">FTC_ImageCache_New</a></div><div class="ttdeci">FTC_ImageCache_New(FTC_Manager manager, FTC_ImageCache *acache)</div><div class="ttdef"><b>Definition</b> ftcimage.c:276</div></div>
+<div class="ttc" id="aftcimage_8h_html_a0203ca875ab5971f1ad09de53339d5f1"><div class="ttname"><a href="ftcimage_8h.html#a0203ca875ab5971f1ad09de53339d5f1">FTC_Image_Cache</a></div><div class="ttdeci">FTC_ImageCache FTC_Image_Cache</div><div class="ttdef"><b>Definition</b> ftcimage.h:237</div></div>
+<div class="ttc" id="aftcimage_8h_html_a05aeadf23fefb0830ffbb7038f3d47b0"><div class="ttname"><a href="ftcimage_8h.html#a05aeadf23fefb0830ffbb7038f3d47b0">ftc_image_format_bitmap</a></div><div class="ttdeci">#define ftc_image_format_bitmap</div><div class="ttdef"><b>Definition</b> ftcimage.h:184</div></div>
+<div class="ttc" id="aftcimage_8h_html_a25aba38e94e78467730ce4fbd7237101"><div class="ttname"><a href="ftcimage_8h.html#a25aba38e94e78467730ce4fbd7237101">FTC_ImageType</a></div><div class="ttdeci">struct FTC_ImageTypeRec_ * FTC_ImageType</div><div class="ttdef"><b>Definition</b> ftcimage.h:82</div></div>
+<div class="ttc" id="aftcimage_8h_html_a2cb5ee7124051e0fdd9e5ba2cf0cf758"><div class="ttname"><a href="ftcimage_8h.html#a2cb5ee7124051e0fdd9e5ba2cf0cf758">FTC_ImageCache</a></div><div class="ttdeci">struct FTC_ImageCacheRec_ * FTC_ImageCache</div><div class="ttdef"><b>Definition</b> ftcimage.h:105</div></div>
+<div class="ttc" id="aftcimage_8h_html_a47f24aa2f98db5e26060dd1d87532a48"><div class="ttname"><a href="ftcimage_8h.html#a47f24aa2f98db5e26060dd1d87532a48">FTC_ImageCache_Lookup</a></div><div class="ttdeci">FTC_ImageCache_Lookup(FTC_ImageCache cache, FTC_ImageType type, FT_UInt gindex, FT_Glyph *aglyph, FTC_Node *anode)</div><div class="ttdef"><b>Definition</b> ftcimage.c:289</div></div>
+<div class="ttc" id="aftcimage_8h_html_a625ee29bcd328c658595b5c1e3f9df47"><div class="ttname"><a href="ftcimage_8h.html#a625ee29bcd328c658595b5c1e3f9df47">ftc_image_flag_autohinted</a></div><div class="ttdeci">#define ftc_image_flag_autohinted</div><div class="ttdef"><b>Definition</b> ftcimage.h:191</div></div>
+<div class="ttc" id="aftcimage_8h_html_a70bcdcf4b3016ac79eb6afbc06bf49d4"><div class="ttname"><a href="ftcimage_8h.html#a70bcdcf4b3016ac79eb6afbc06bf49d4">ftc_image_flag_unscaled</a></div><div class="ttdeci">#define ftc_image_flag_unscaled</div><div class="ttdef"><b>Definition</b> ftcimage.h:192</div></div>
+<div class="ttc" id="aftcimage_8h_html_a8bf75c67b57cf945be17689d696e2c12"><div class="ttname"><a href="ftcimage_8h.html#a8bf75c67b57cf945be17689d696e2c12">FTC_ImageTypeRec</a></div><div class="ttdeci">FT_BEGIN_HEADER struct FTC_ImageTypeRec_ FTC_ImageTypeRec</div></div>
+<div class="ttc" id="aftcimage_8h_html_aa6bae860e5c8dc49ee9ec7b8acb56fe9"><div class="ttname"><a href="ftcimage_8h.html#aa6bae860e5c8dc49ee9ec7b8acb56fe9">ftc_image_flag_monochrome</a></div><div class="ttdeci">#define ftc_image_flag_monochrome</div><div class="ttdef"><b>Definition</b> ftcimage.h:189</div></div>
+<div class="ttc" id="aftcimage_8h_html_aab4cb9729d2aad963d2e75a8d219d73f"><div class="ttname"><a href="ftcimage_8h.html#aab4cb9729d2aad963d2e75a8d219d73f">FTC_Image_Cache_Lookup</a></div><div class="ttdeci">FTC_Image_Cache_Lookup(FTC_Image_Cache cache, FTC_Image_Desc *desc, FT_UInt gindex, FT_Glyph *aglyph)</div><div class="ttdef"><b>Definition</b> ftcimage.c:339</div></div>
+<div class="ttc" id="aftcimage_8h_html_abdafdd6502277b5241ad4c96882337aa"><div class="ttname"><a href="ftcimage_8h.html#abdafdd6502277b5241ad4c96882337aa">ftc_image_format</a></div><div class="ttdeci">#define ftc_image_format(x)</div><div class="ttdef"><b>Definition</b> ftcimage.h:181</div></div>
+<div class="ttc" id="aftcimage_8h_html_adcdcb8aabd7650d7bf58b2c348633fc3"><div class="ttname"><a href="ftcimage_8h.html#adcdcb8aabd7650d7bf58b2c348633fc3">FTC_Image_Cache_New</a></div><div class="ttdeci">FTC_Image_Cache_New(FTC_Manager manager, FTC_Image_Cache *acache)</div><div class="ttdef"><b>Definition</b> ftcimage.c:331</div></div>
+<div class="ttc" id="aftcimage_8h_html_ae2728e07ecd409bcc5cec76653fdac6a"><div class="ttname"><a href="ftcimage_8h.html#ae2728e07ecd409bcc5cec76653fdac6a">FTC_IMAGE_TYPE_COMPARE</a></div><div class="ttdeci">#define FTC_IMAGE_TYPE_COMPARE(d1, d2)</div><div class="ttdef"><b>Definition</b> ftcimage.h:86</div></div>
+<div class="ttc" id="aftcimage_8h_html_ae3999bd8319bdcfdb4ff307d6c981eaf"><div class="ttname"><a href="ftcimage_8h.html#ae3999bd8319bdcfdb4ff307d6c981eaf">ftc_image_flag_no_sbits</a></div><div class="ttdeci">#define ftc_image_flag_no_sbits</div><div class="ttdef"><b>Definition</b> ftcimage.h:193</div></div>
+<div class="ttc" id="aftcimage_8h_html_ae804dac5566346f61cfde514578be0bd"><div class="ttname"><a href="ftcimage_8h.html#ae804dac5566346f61cfde514578be0bd">ftc_image_flag_unhinted</a></div><div class="ttdeci">#define ftc_image_flag_unhinted</div><div class="ttdef"><b>Definition</b> ftcimage.h:190</div></div>
+<div class="ttc" id="aftcimage_8h_html_af29348b20a65abb673de27d54096468e"><div class="ttname"><a href="ftcimage_8h.html#af29348b20a65abb673de27d54096468e">FTC_IMAGE_TYPE_HASH</a></div><div class="ttdeci">#define FTC_IMAGE_TYPE_HASH(d)</div><div class="ttdef"><b>Definition</b> ftcimage.h:90</div></div>
+<div class="ttc" id="aftcimage_8h_html_af78e4e9b3504301d3fc5a865766f6e76"><div class="ttname"><a href="ftcimage_8h.html#af78e4e9b3504301d3fc5a865766f6e76">FTC_Image_Desc</a></div><div class="ttdeci">struct FTC_Image_Desc_ FTC_Image_Desc</div></div>
+<div class="ttc" id="aftcimage_8h_html_afb90ade3453225a0e1a5682e301731fd"><div class="ttname"><a href="ftcimage_8h.html#afb90ade3453225a0e1a5682e301731fd">FTC_ImageCache_New</a></div><div class="ttdeci">FTC_ImageCache_New(FTC_Manager manager, FTC_ImageCache *acache)</div><div class="ttdef"><b>Definition</b> ftcimage.c:276</div></div>
+<div class="ttc" id="aftcmanag_8h_html_a8ed3e862c3edd26789b4f34475af6ffd"><div class="ttname"><a href="ftcmanag_8h.html#a8ed3e862c3edd26789b4f34475af6ffd">FTC_Manager_Register_Cache</a></div><div class="ttdeci">FTC_Manager_Register_Cache(FTC_Manager manager, FTC_Cache_Class clazz, FTC_Cache *acache)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:688</div></div>
+<div class="ttc" id="aftglyph_8h_html_a87ba3f101920f5c3c736395dc66060c3"><div class="ttname"><a href="ftglyph_8h.html#a87ba3f101920f5c3c736395dc66060c3">FT_Get_Glyph</a></div><div class="ttdeci">FT_Get_Glyph(FT_GlyphSlot slot, FT_Glyph *aglyph)</div><div class="ttdef"><b>Definition</b> ftglyph.c:421</div></div>
+<div class="ttc" id="aftglyph_8h_html_aeb217021e2817832b003c325b185e003"><div class="ttname"><a href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a></div><div class="ttdeci">struct FT_GlyphRec_ * FT_Glyph</div><div class="ttdef"><b>Definition</b> ftglyph.h:81</div></div>
+<div class="ttc" id="aftobjs_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> ftobjs.h:60</div></div>
+<div class="ttc" id="afttypes_8h_html_a1a832a256bb5a7e6e884afaa1a07f3ae"><div class="ttname"><a href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef unsigned char FT_Bool</div><div class="ttdef"><b>Definition</b> fttypes.h:97</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="afttypes_8h_html_adf712510036d534403cbddf4f18c2083"><div class="ttname"><a href="fttypes_8h.html#adf712510036d534403cbddf4f18c2083">FT_BOOL</a></div><div class="ttdeci">#define FT_BOOL(x)</div><div class="ttdef"><b>Definition</b> fttypes.h:551</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+<div class="ttc" id="astruct_f_t___glyph_rec___html_a26b42a2610a69dcaed3e7c8b6d506211"><div class="ttname"><a href="struct_f_t___glyph_rec__.html#a26b42a2610a69dcaed3e7c8b6d506211">FT_GlyphRec_::format</a></div><div class="ttdeci">FT_Glyph_Format format</div><div class="ttdef"><b>Definition</b> ftglyph.h:106</div></div>
+<div class="ttc" id="astruct_f_t_c___glyph_query_rec___html_a6412191804fb3d1fdb68c93d5d7a5256"><div class="ttname"><a href="struct_f_t_c___glyph_query_rec__.html#a6412191804fb3d1fdb68c93d5d7a5256">FTC_GlyphQueryRec_::gindex</a></div><div class="ttdeci">FT_UInt gindex</div><div class="ttdef"><b>Definition</b> ftcglyph.h:87</div></div>
+<div class="ttc" id="astruct_f_t_c___image_family_rec___html"><div class="ttname"><a href="struct_f_t_c___image_family_rec__.html">FTC_ImageFamilyRec_</a></div><div class="ttdef"><b>Definition</b> ftcimage.c:55</div></div>
+<div class="ttc" id="astruct_f_t_c___image_family_rec___html_a4fff33c7a072ae160de7d7a80e00910e"><div class="ttname"><a href="struct_f_t_c___image_family_rec__.html#a4fff33c7a072ae160de7d7a80e00910e">FTC_ImageFamilyRec_::gfam</a></div><div class="ttdeci">FTC_GlyphFamilyRec gfam</div><div class="ttdef"><b>Definition</b> ftcimage.c:56</div></div>
+<div class="ttc" id="astruct_f_t_c___image_family_rec___html_abcc7547f3546fb94d889289a9c69605a"><div class="ttname"><a href="struct_f_t_c___image_family_rec__.html#abcc7547f3546fb94d889289a9c69605a">FTC_ImageFamilyRec_::type</a></div><div class="ttdeci">FTC_ImageTypeRec type</div><div class="ttdef"><b>Definition</b> ftcimage.c:57</div></div>
+<div class="ttc" id="astruct_f_t_c___image_node_rec___html"><div class="ttname"><a href="struct_f_t_c___image_node_rec__.html">FTC_ImageNodeRec_</a></div><div class="ttdef"><b>Definition</b> ftcimage.c:30</div></div>
+<div class="ttc" id="astruct_f_t_c___image_node_rec___html_a0f35f8fbb5fc0b65402041d90a2d9bf7"><div class="ttname"><a href="struct_f_t_c___image_node_rec__.html#a0f35f8fbb5fc0b65402041d90a2d9bf7">FTC_ImageNodeRec_::gnode</a></div><div class="ttdeci">FTC_GlyphNodeRec gnode</div><div class="ttdef"><b>Definition</b> ftcimage.c:31</div></div>
+<div class="ttc" id="astruct_f_t_c___image_node_rec___html_a643f5b635838424d2b5a616e456b5ccc"><div class="ttname"><a href="struct_f_t_c___image_node_rec__.html#a643f5b635838424d2b5a616e456b5ccc">FTC_ImageNodeRec_::glyph</a></div><div class="ttdeci">FT_Glyph glyph</div><div class="ttdef"><b>Definition</b> ftcimage.c:32</div></div>
+<div class="ttc" id="astruct_f_t_c___image_query_rec___html"><div class="ttname"><a href="struct_f_t_c___image_query_rec__.html">FTC_ImageQueryRec_</a></div><div class="ttdef"><b>Definition</b> ftcimage.c:43</div></div>
+<div class="ttc" id="astruct_f_t_c___image_query_rec___html_a1104d48e330d0f23062288633ac9fc4f"><div class="ttname"><a href="struct_f_t_c___image_query_rec__.html#a1104d48e330d0f23062288633ac9fc4f">FTC_ImageQueryRec_::type</a></div><div class="ttdeci">FTC_ImageTypeRec type</div><div class="ttdef"><b>Definition</b> ftcimage.c:45</div></div>
+<div class="ttc" id="astruct_f_t_c___image_query_rec___html_a4f46647f818fcf4607901dbc91163247"><div class="ttname"><a href="struct_f_t_c___image_query_rec__.html#a4f46647f818fcf4607901dbc91163247">FTC_ImageQueryRec_::gquery</a></div><div class="ttdeci">FTC_GlyphQueryRec gquery</div><div class="ttdef"><b>Definition</b> ftcimage.c:44</div></div>
+<div class="ttc" id="atest__trig_8c_html_af10dacfa214e2575bb2e0ee407c242e0"><div class="ttname"><a href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a></div><div class="ttdeci">static error</div><div class="ttdef"><b>Definition</b> test_trig.c:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_1ecb25ace48afe747597ea1a7845e1b7.html">cache</a></li><li class="navelem"><a href="ftcimage_8c.html">ftcimage.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

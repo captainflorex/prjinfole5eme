@@ -1,0 +1,315 @@
+\doxysection{Référence du fichier header/\+entites.h}
+\hypertarget{header_2entites_8h}{}\label{header_2entites_8h}\index{header/entites.h@{header/entites.h}}
+{\ttfamily \+\#include "{}eclair.\+h"{}}\newline
+Graphe des dépendances par inclusion de entites.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{header_2entites_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{header_2entites_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_joueur}{Joueur}}
+\item 
+struct \doxymbox{\hyperlink{struct_bulle}{Bulle}}
+\item 
+struct \doxymbox{\hyperlink{struct_projectile}{Projectile}}
+\item 
+struct \doxymbox{\hyperlink{struct_bonus_arme}{Bonus\+Arme}}
+\item 
+struct \doxymbox{\hyperlink{struct_boss}{Boss}}
+\item 
+struct \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\+\_\+\+FENETRE}}~800
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\+\_\+\+FENETRE}}~600
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\+\_\+\+INFO}}~60
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\+\_\+\+ZONE}}~(\doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\+\_\+\+FENETRE}} -\/ \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\+\_\+\+INFO}})
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\+\_\+\+BULLES}}~30
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\+\_\+\+PROJECTILES}}~10
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{MAX\+\_\+\+BONUS}}~5
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\+\_\+\+LEN}}~32
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a37fa8267bd5513503c65440e387d561c}{NB\+\_\+\+TYPES\+\_\+\+BONUS}}~3
+\item 
+\+\#define \doxymbox{\hyperlink{header_2entites_8h_a0c5ae29b6a7357ae211b341bf2e4c9b7}{DUREE\+\_\+\+ARME\+\_\+\+SPECIALE}}~10.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{Taille\+Bulle}} \{ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\+\_\+\+GRANDE}} = 0
+, \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}{BULLE\+\_\+\+MOYENNE}}
+, \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{BULLE\+\_\+\+PETITE}}
+, \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{BULLE\+\_\+\+MINUSCULE}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}{Type\+Arme}} \{ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\+\_\+\+BASIQUE}} = 0
+, \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{ARME\+\_\+\+TIR\+\_\+\+RAPIDE}}
+, \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{ARME\+\_\+\+TIR\+\_\+\+TRIPLE}}
+, \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{ARME\+\_\+\+EXPLOSION}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412}{rayon\+\_\+bulle}} (\doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{Taille\+Bulle}} t)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{header_2entites_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{header_2entites_8h_a0c5ae29b6a7357ae211b341bf2e4c9b7}\index{entites.h@{entites.h}!DUREE\_ARME\_SPECIALE@{DUREE\_ARME\_SPECIALE}}
+\index{DUREE\_ARME\_SPECIALE@{DUREE\_ARME\_SPECIALE}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{DUREE\_ARME\_SPECIALE}{DUREE\_ARME\_SPECIALE}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a0c5ae29b6a7357ae211b341bf2e4c9b7} 
+\+\#define DUREE\+\_\+\+ARME\+\_\+\+SPECIALE~10.\+0f}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}\index{entites.h@{entites.h}!HAUTEUR\_FENETRE@{HAUTEUR\_FENETRE}}
+\index{HAUTEUR\_FENETRE@{HAUTEUR\_FENETRE}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{HAUTEUR\_FENETRE}{HAUTEUR\_FENETRE}}
+{\footnotesize\ttfamily \label{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41} 
+\+\#define HAUTEUR\+\_\+\+FENETRE~600}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00007}{7}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}\index{entites.h@{entites.h}!HAUTEUR\_INFO@{HAUTEUR\_INFO}}
+\index{HAUTEUR\_INFO@{HAUTEUR\_INFO}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{HAUTEUR\_INFO}{HAUTEUR\_INFO}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251} 
+\+\#define HAUTEUR\+\_\+\+INFO~60}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00008}{8}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}\index{entites.h@{entites.h}!HAUTEUR\_ZONE@{HAUTEUR\_ZONE}}
+\index{HAUTEUR\_ZONE@{HAUTEUR\_ZONE}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{HAUTEUR\_ZONE}{HAUTEUR\_ZONE}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38} 
+\+\#define HAUTEUR\+\_\+\+ZONE~(\doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\+\_\+\+FENETRE}} -\/ \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\+\_\+\+INFO}})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00009}{9}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}\index{entites.h@{entites.h}!LARGEUR\_FENETRE@{LARGEUR\_FENETRE}}
+\index{LARGEUR\_FENETRE@{LARGEUR\_FENETRE}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{LARGEUR\_FENETRE}{LARGEUR\_FENETRE}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c} 
+\+\#define LARGEUR\+\_\+\+FENETRE~800}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00006}{6}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d}\index{entites.h@{entites.h}!MAX\_BONUS@{MAX\_BONUS}}
+\index{MAX\_BONUS@{MAX\_BONUS}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_BONUS}{MAX\_BONUS}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d} 
+\+\#define MAX\+\_\+\+BONUS~5}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00013}{13}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}\index{entites.h@{entites.h}!MAX\_BULLES@{MAX\_BULLES}}
+\index{MAX\_BULLES@{MAX\_BULLES}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_BULLES}{MAX\_BULLES}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61} 
+\+\#define MAX\+\_\+\+BULLES~30}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00011}{11}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_adbc131e9b147b67d84003e054b355365}\index{entites.h@{entites.h}!MAX\_PROJECTILES@{MAX\_PROJECTILES}}
+\index{MAX\_PROJECTILES@{MAX\_PROJECTILES}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_PROJECTILES}{MAX\_PROJECTILES}}
+{\footnotesize\ttfamily \label{header_2entites_8h_adbc131e9b147b67d84003e054b355365} 
+\+\#define MAX\+\_\+\+PROJECTILES~10}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00012}{12}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a37fa8267bd5513503c65440e387d561c}\index{entites.h@{entites.h}!NB\_TYPES\_BONUS@{NB\_TYPES\_BONUS}}
+\index{NB\_TYPES\_BONUS@{NB\_TYPES\_BONUS}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{NB\_TYPES\_BONUS}{NB\_TYPES\_BONUS}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a37fa8267bd5513503c65440e387d561c} 
+\+\#define NB\+\_\+\+TYPES\+\_\+\+BONUS~3}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00016}{16}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}\index{entites.h@{entites.h}!PSEUDO\_LEN@{PSEUDO\_LEN}}
+\index{PSEUDO\_LEN@{PSEUDO\_LEN}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{PSEUDO\_LEN}{PSEUDO\_LEN}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a5d2813c915f8962316bdba34165daef5} 
+\+\#define PSEUDO\+\_\+\+LEN~32}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00014}{14}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{header_2entites_8h_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}\index{entites.h@{entites.h}!TailleBulle@{TailleBulle}}
+\index{TailleBulle@{TailleBulle}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{TailleBulle}{TailleBulle}}
+{\footnotesize\ttfamily \label{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d} 
+enum \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{Taille\+Bulle}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BULLE\_GRANDE@{BULLE\_GRANDE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!BULLE\_GRANDE@{BULLE\_GRANDE}}
+}\Hypertarget{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}\label{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134} 
+BULLE\+\_\+\+GRANDE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BULLE\_MOYENNE@{BULLE\_MOYENNE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!BULLE\_MOYENNE@{BULLE\_MOYENNE}}
+}\Hypertarget{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}\label{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc} 
+BULLE\+\_\+\+MOYENNE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BULLE\_PETITE@{BULLE\_PETITE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!BULLE\_PETITE@{BULLE\_PETITE}}
+}\Hypertarget{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}\label{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979} 
+BULLE\+\_\+\+PETITE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BULLE\_MINUSCULE@{BULLE\_MINUSCULE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!BULLE\_MINUSCULE@{BULLE\_MINUSCULE}}
+}\Hypertarget{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}\label{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983} 
+BULLE\+\_\+\+MINUSCULE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00021}{21}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\_GRANDE}}\ =\ 0,}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}{BULLE\_MOYENNE}},}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{BULLE\_PETITE}},}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{BULLE\_MINUSCULE}}}
+\DoxyCodeLine{00026\ \}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{TailleBulle}};}
+
+\end{DoxyCode}
+\Hypertarget{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}\index{entites.h@{entites.h}!TypeArme@{TypeArme}}
+\index{TypeArme@{TypeArme}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{TypeArme}{TypeArme}}
+{\footnotesize\ttfamily \label{header_2entites_8h_aeea858c806fecc146afba5319180d9ae} 
+enum \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}{Type\+Arme}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARME\_BASIQUE@{ARME\_BASIQUE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!ARME\_BASIQUE@{ARME\_BASIQUE}}
+}\Hypertarget{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}\label{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43} 
+ARME\+\_\+\+BASIQUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARME\_TIR\_RAPIDE@{ARME\_TIR\_RAPIDE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!ARME\_TIR\_RAPIDE@{ARME\_TIR\_RAPIDE}}
+}\Hypertarget{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}\label{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a} 
+ARME\+\_\+\+TIR\+\_\+\+RAPIDE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARME\_TIR\_TRIPLE@{ARME\_TIR\_TRIPLE}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!ARME\_TIR\_TRIPLE@{ARME\_TIR\_TRIPLE}}
+}\Hypertarget{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}\label{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400} 
+ARME\+\_\+\+TIR\+\_\+\+TRIPLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARME\_EXPLOSION@{ARME\_EXPLOSION}!entites.h@{entites.h}}
+\index{entites.h@{entites.h}!ARME\_EXPLOSION@{ARME\_EXPLOSION}}
+}\Hypertarget{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}\label{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453} 
+ARME\+\_\+\+EXPLOSION&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00028}{28}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}}\ =\ 0,}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{ARME\_TIR\_RAPIDE}},}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{ARME\_TIR\_TRIPLE}},}
+\DoxyCodeLine{00032\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{ARME\_EXPLOSION}}}
+\DoxyCodeLine{00033\ \}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9ae}{TypeArme}};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{header_2entites_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412}\index{entites.h@{entites.h}!rayon\_bulle@{rayon\_bulle}}
+\index{rayon\_bulle@{rayon\_bulle}!entites.h@{entites.h}}
+\doxysubsubsection{\texorpdfstring{rayon\_bulle()}{rayon\_bulle()}}
+{\footnotesize\ttfamily \label{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412} 
+float rayon\+\_\+bulle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{Taille\+Bulle}}}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00008}{8}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{switch}(t)\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\_GRANDE}}:\ \ \ \ \textcolor{keywordflow}{return}\ 40.0f;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}{BULLE\_MOYENNE}}:\ \ \ \textcolor{keywordflow}{return}\ 25.0f;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{BULLE\_PETITE}}:\ \ \ \ \textcolor{keywordflow}{return}\ 15.0f;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{BULLE\_MINUSCULE}}:\ \textcolor{keywordflow}{return}\ \ 8.0f;}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{return}\ 8.0f;}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph}
+\end{center}
+\end{figure}

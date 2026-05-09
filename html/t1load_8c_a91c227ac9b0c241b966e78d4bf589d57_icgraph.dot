@@ -1,0 +1,23 @@
+digraph "is_alpha"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="is_alpha",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="parse_charstrings",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#ae8c36322a7da8cb78e728a8b21c1e6ab",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="parse_dict",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#a2ae44ef887bfa330d3fa6a0107a14521",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="T1_Open_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#a92b9085b4bbedf79068a7d2e2fbf88ec",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="T1_Face_Init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1objs_8c.html#ab701c1866f7ad9c23603e1294f7830af",tooltip=" "];
+  Node5 -> Node5 [id="edge5_Node000005_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node4 [id="edge6_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="parse_encoding",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#abd51b689aeb307b1f515944e7b286d95",tooltip=" "];
+  Node1 -> Node7 [id="edge8_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="parse_font_name",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#aee440b6278cf302bc4647c80dbd977f2",tooltip=" "];
+}

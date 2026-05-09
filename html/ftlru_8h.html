@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/cache/ftlru.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftlru_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftlru.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftlru.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2include_2freetype_2cache_2ftlru_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="ftlru_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:FT_5FLruNodeRec_5F" id="r_FT_5FLruNodeRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___lru_node_rec__.html">FT_LruNodeRec_</a></td></tr>
+<tr class="memitem:FT_5FLruListRec_5F" id="r_FT_5FLruListRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___lru_list_rec__.html">FT_LruListRec_</a></td></tr>
+<tr class="memitem:FT_5FLruList_5FClassRec_5F" id="r_FT_5FLruList_5FClassRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___lru_list___class_rec__.html">FT_LruList_ClassRec_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a360e5f9a87e82af925f73c028e6bf55e" id="r_a360e5f9a87e82af925f73c028e6bf55e"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___lru_list_rec__.html">FT_LruListRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td></tr>
+<tr class="memitem:a8975b6254b5ba046d49ed90ce8c9719a" id="r_a8975b6254b5ba046d49ed90ce8c9719a"><td class="memItemLeft">typedef <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> struct <a class="el" href="struct_f_t___lru_list___class_rec__.html">FT_LruList_ClassRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8975b6254b5ba046d49ed90ce8c9719a">FT_LruList_Class</a></td></tr>
+<tr class="memitem:adaefb499235cf94ca5efe6799473ac55" id="r_adaefb499235cf94ca5efe6799473ac55"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___lru_node_rec__.html">FT_LruNodeRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a></td></tr>
+<tr class="memitem:a346bb711b56c413b493f84f84227ce8c" id="r_a346bb711b56c413b493f84f84227ce8c"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___lru_node_rec__.html">FT_LruNodeRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a346bb711b56c413b493f84f84227ce8c">FT_LruNodeRec</a></td></tr>
+<tr class="memitem:a848bd47914797472c173321756dc4ae1" id="r_a848bd47914797472c173321756dc4ae1"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___lru_list_rec__.html">FT_LruListRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a848bd47914797472c173321756dc4ae1">FT_LruListRec</a></td></tr>
+<tr class="memitem:aa484f1380e53bf3cc5e7bf8adce98fa6" id="r_aa484f1380e53bf3cc5e7bf8adce98fa6"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#aa484f1380e53bf3cc5e7bf8adce98fa6">FT_LruList_InitFunc</a>) (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list)</td></tr>
+<tr class="memitem:abcc66adf1e0d0fc3b3e77b2bae93f77b" id="r_abcc66adf1e0d0fc3b3e77b2bae93f77b"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#abcc66adf1e0d0fc3b3e77b2bae93f77b">FT_LruList_DoneFunc</a>) (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list)</td></tr>
+<tr class="memitem:a67a24f9349e8b27d43d75ad31a8cb2c5" id="r_a67a24f9349e8b27d43d75ad31a8cb2c5"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#a67a24f9349e8b27d43d75ad31a8cb2c5">FT_LruNode_InitFunc</a>) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> key, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td></tr>
+<tr class="memitem:acff7d88a151a368b71b0bbe73ab07026" id="r_acff7d88a151a368b71b0bbe73ab07026"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#acff7d88a151a368b71b0bbe73ab07026">FT_LruNode_DoneFunc</a>) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td></tr>
+<tr class="memitem:af751df92362ef7a3e2dfec2e771ef01c" id="r_af751df92362ef7a3e2dfec2e771ef01c"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#af751df92362ef7a3e2dfec2e771ef01c">FT_LruNode_FlushFunc</a>) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> new_key, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td></tr>
+<tr class="memitem:a273a636608985633cb9ba89964cf328a" id="r_a273a636608985633cb9ba89964cf328a"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#a273a636608985633cb9ba89964cf328a">FT_LruNode_CompareFunc</a>) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> key, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td></tr>
+<tr class="memitem:aff8829141e9734a9fe88a79ea4acdae8" id="r_aff8829141e9734a9fe88a79ea4acdae8"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#aff8829141e9734a9fe88a79ea4acdae8">FT_LruNode_SelectFunc</a>) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> list_data)</td></tr>
+<tr class="memitem:acb767a535e58997f5b97466144b0b66b" id="r_acb767a535e58997f5b97466144b0b66b"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___lru_list___class_rec__.html">FT_LruList_ClassRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a5a67cc87b91fa1a3cbf2f540f2faa161" id="r_a5a67cc87b91fa1a3cbf2f540f2faa161"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a67cc87b91fa1a3cbf2f540f2faa161">FT_LruList_New</a> (<a class="el" href="#a8975b6254b5ba046d49ed90ce8c9719a">FT_LruList_Class</a> clazz, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> max_elements, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> user_data, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> *alist)</td></tr>
+<tr class="memitem:a8996ded0a22bb114f965c1b45acb755e" id="r_a8996ded0a22bb114f965c1b45acb755e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8996ded0a22bb114f965c1b45acb755e">FT_LruList_Reset</a> (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list)</td></tr>
+<tr class="memitem:a2970bd134aa7c31c8d81301ea737f6ff" id="r_a2970bd134aa7c31c8d81301ea737f6ff"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2970bd134aa7c31c8d81301ea737f6ff">FT_LruList_Destroy</a> (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list)</td></tr>
+<tr class="memitem:a447e3f7cb6ce2399bf47fab91c5022ee" id="r_a447e3f7cb6ce2399bf47fab91c5022ee"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a447e3f7cb6ce2399bf47fab91c5022ee">FT_LruList_Lookup</a> (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> key, <a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> *anode)</td></tr>
+<tr class="memitem:a03de6a1a6726221414b571462b07706c" id="r_a03de6a1a6726221414b571462b07706c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a03de6a1a6726221414b571462b07706c">FT_LruList_Remove</a> (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list, <a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node)</td></tr>
+<tr class="memitem:a938d950987e2d8893fce56e76ebc5349" id="r_a938d950987e2d8893fce56e76ebc5349"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a938d950987e2d8893fce56e76ebc5349">FT_LruList_Remove_Selection</a> (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list, <a class="el" href="#aff8829141e9734a9fe88a79ea4acdae8">FT_LruNode_SelectFunc</a> select_func, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> select_data)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a18f98313280003b64fd2756fdd6e6a76" id="r_a18f98313280003b64fd2756fdd6e6a76"><td class="memItemLeft"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> typedef <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a360e5f9a87e82af925f73c028e6bf55e" name="a360e5f9a87e82af925f73c028e6bf55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360e5f9a87e82af925f73c028e6bf55e">&#9670;&#160;</a></span>FT_LruList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___lru_list_rec__.html">FT_LruListRec_</a>* <a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8975b6254b5ba046d49ed90ce8c9719a" name="a8975b6254b5ba046d49ed90ce8c9719a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8975b6254b5ba046d49ed90ce8c9719a">&#9670;&#160;</a></span>FT_LruList_Class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> struct <a class="el" href="struct_f_t___lru_list___class_rec__.html">FT_LruList_ClassRec_</a>* <a class="el" href="#a8975b6254b5ba046d49ed90ce8c9719a">FT_LruList_Class</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb767a535e58997f5b97466144b0b66b" name="acb767a535e58997f5b97466144b0b66b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb767a535e58997f5b97466144b0b66b">&#9670;&#160;</a></span>FT_LruList_ClassRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___lru_list___class_rec__.html">FT_LruList_ClassRec_</a> <a class="el" href="#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcc66adf1e0d0fc3b3e77b2bae93f77b" name="abcc66adf1e0d0fc3b3e77b2bae93f77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc66adf1e0d0fc3b3e77b2bae93f77b">&#9670;&#160;</a></span>FT_LruList_DoneFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* FT_LruList_DoneFunc) (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa484f1380e53bf3cc5e7bf8adce98fa6" name="aa484f1380e53bf3cc5e7bf8adce98fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa484f1380e53bf3cc5e7bf8adce98fa6">&#9670;&#160;</a></span>FT_LruList_InitFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(* FT_LruList_InitFunc) (<a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> list)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a848bd47914797472c173321756dc4ae1" name="a848bd47914797472c173321756dc4ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848bd47914797472c173321756dc4ae1">&#9670;&#160;</a></span>FT_LruListRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___lru_list_rec__.html">FT_LruListRec_</a> <a class="el" href="#a848bd47914797472c173321756dc4ae1">FT_LruListRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaefb499235cf94ca5efe6799473ac55" name="adaefb499235cf94ca5efe6799473ac55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaefb499235cf94ca5efe6799473ac55">&#9670;&#160;</a></span>FT_LruNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___lru_node_rec__.html">FT_LruNodeRec_</a>* <a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a273a636608985633cb9ba89964cf328a" name="a273a636608985633cb9ba89964cf328a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a273a636608985633cb9ba89964cf328a">&#9670;&#160;</a></span>FT_LruNode_CompareFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>(* FT_LruNode_CompareFunc) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> key, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acff7d88a151a368b71b0bbe73ab07026" name="acff7d88a151a368b71b0bbe73ab07026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff7d88a151a368b71b0bbe73ab07026">&#9670;&#160;</a></span>FT_LruNode_DoneFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* FT_LruNode_DoneFunc) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af751df92362ef7a3e2dfec2e771ef01c" name="af751df92362ef7a3e2dfec2e771ef01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af751df92362ef7a3e2dfec2e771ef01c">&#9670;&#160;</a></span>FT_LruNode_FlushFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(* FT_LruNode_FlushFunc) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> new_key, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67a24f9349e8b27d43d75ad31a8cb2c5" name="a67a24f9349e8b27d43d75ad31a8cb2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67a24f9349e8b27d43d75ad31a8cb2c5">&#9670;&#160;</a></span>FT_LruNode_InitFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(* FT_LruNode_InitFunc) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a> key, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff8829141e9734a9fe88a79ea4acdae8" name="aff8829141e9734a9fe88a79ea4acdae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8829141e9734a9fe88a79ea4acdae8">&#9670;&#160;</a></span>FT_LruNode_SelectFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>(* FT_LruNode_SelectFunc) (<a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> node, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> list_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a346bb711b56c413b493f84f84227ce8c" name="a346bb711b56c413b493f84f84227ce8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346bb711b56c413b493f84f84227ce8c">&#9670;&#160;</a></span>FT_LruNodeRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___lru_node_rec__.html">FT_LruNodeRec_</a> <a class="el" href="#a346bb711b56c413b493f84f84227ce8c">FT_LruNodeRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a2970bd134aa7c31c8d81301ea737f6ff" name="a2970bd134aa7c31c8d81301ea737f6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2970bd134aa7c31c8d81301ea737f6ff">&#9670;&#160;</a></span>FT_LruList_Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_LruList_Destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a2970bd134aa7c31c8d81301ea737f6ff_cgraph.png" border="0" usemap="#aftlru_8h_a2970bd134aa7c31c8d81301ea737f6ff_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a2970bd134aa7c31c8d81301ea737f6ff_icgraph.png" border="0" usemap="#aftlru_8h_a2970bd134aa7c31c8d81301ea737f6ff_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a447e3f7cb6ce2399bf47fab91c5022ee" name="a447e3f7cb6ce2399bf47fab91c5022ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447e3f7cb6ce2399bf47fab91c5022ee">&#9670;&#160;</a></span>FT_LruList_Lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_LruList_Lookup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a18f98313280003b64fd2756fdd6e6a76">FT_LruKey</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a> *</td>          <td class="paramname"><span class="paramname"><em>anode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a447e3f7cb6ce2399bf47fab91c5022ee_cgraph.png" border="0" usemap="#aftlru_8h_a447e3f7cb6ce2399bf47fab91c5022ee_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a447e3f7cb6ce2399bf47fab91c5022ee_icgraph.png" border="0" usemap="#aftlru_8h_a447e3f7cb6ce2399bf47fab91c5022ee_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a5a67cc87b91fa1a3cbf2f540f2faa161" name="a5a67cc87b91fa1a3cbf2f540f2faa161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a67cc87b91fa1a3cbf2f540f2faa161">&#9670;&#160;</a></span>FT_LruList_New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_LruList_New </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a8975b6254b5ba046d49ed90ce8c9719a">FT_LruList_Class</a></td>          <td class="paramname"><span class="paramname"><em>clazz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>max_elements</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a> *</td>          <td class="paramname"><span class="paramname"><em>alist</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a5a67cc87b91fa1a3cbf2f540f2faa161_cgraph.png" border="0" usemap="#aftlru_8h_a5a67cc87b91fa1a3cbf2f540f2faa161_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a5a67cc87b91fa1a3cbf2f540f2faa161_icgraph.png" border="0" usemap="#aftlru_8h_a5a67cc87b91fa1a3cbf2f540f2faa161_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a03de6a1a6726221414b571462b07706c" name="a03de6a1a6726221414b571462b07706c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03de6a1a6726221414b571462b07706c">&#9670;&#160;</a></span>FT_LruList_Remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_LruList_Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#adaefb499235cf94ca5efe6799473ac55">FT_LruNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a03de6a1a6726221414b571462b07706c_cgraph.png" border="0" usemap="#aftlru_8h_a03de6a1a6726221414b571462b07706c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a03de6a1a6726221414b571462b07706c_icgraph.png" border="0" usemap="#aftlru_8h_a03de6a1a6726221414b571462b07706c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a938d950987e2d8893fce56e76ebc5349" name="a938d950987e2d8893fce56e76ebc5349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938d950987e2d8893fce56e76ebc5349">&#9670;&#160;</a></span>FT_LruList_Remove_Selection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_LruList_Remove_Selection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aff8829141e9734a9fe88a79ea4acdae8">FT_LruNode_SelectFunc</a></td>          <td class="paramname"><span class="paramname"><em>select_func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>select_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a938d950987e2d8893fce56e76ebc5349_cgraph.png" border="0" usemap="#aftlru_8h_a938d950987e2d8893fce56e76ebc5349_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a938d950987e2d8893fce56e76ebc5349_icgraph.png" border="0" usemap="#aftlru_8h_a938d950987e2d8893fce56e76ebc5349_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a8996ded0a22bb114f965c1b45acb755e" name="a8996ded0a22bb114f965c1b45acb755e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8996ded0a22bb114f965c1b45acb755e">&#9670;&#160;</a></span>FT_LruList_Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_LruList_Reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a360e5f9a87e82af925f73c028e6bf55e">FT_LruList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a8996ded0a22bb114f965c1b45acb755e_cgraph.png" border="0" usemap="#aftlru_8h_a8996ded0a22bb114f965c1b45acb755e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftlru_8h_a8996ded0a22bb114f965c1b45acb755e_icgraph.png" border="0" usemap="#aftlru_8h_a8996ded0a22bb114f965c1b45acb755e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a18f98313280003b64fd2756fdd6e6a76" name="a18f98313280003b64fd2756fdd6e6a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f98313280003b64fd2756fdd6e6a76">&#9670;&#160;</a></span>FT_LruKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> typedef <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> FT_LruKey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_985be69c003d9be7527e0d4572d646a5.html">cache</a></li><li class="navelem"><a href="ftlru_8h.html">ftlru.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

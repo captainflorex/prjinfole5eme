@@ -1,0 +1,664 @@
+\doxysection{Référence du fichier header/\+jeu.h}
+\hypertarget{header_2jeu_8h}{}\label{header_2jeu_8h}\index{header/jeu.h@{header/jeu.h}}
+{\ttfamily \+\#include "{}entites.\+h"{}}\newline
+Graphe des dépendances par inclusion de jeu.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{header_2jeu_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}{jeu\+\_\+init\+\_\+niveau}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej, int niveau)
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd}{jeu\+\_\+mettre\+\_\+a\+\_\+jour}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej, float dt)
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00}{bulle\+\_\+deplacer}} (\doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}b, float dt, float largeur\+\_\+zone, float hauteur\+\_\+zone)
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_a95bdea7c66358469b0f5587032814c83}{bulle\+\_\+diviser}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej, int indice)
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295}{jeu\+\_\+verifier\+\_\+collisions}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be}{joueur\+\_\+tirer}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{header_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5}{boss\+\_\+deplacer}} (\doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}b, float dt, float largeur\+\_\+zone)
+\item 
+int \doxymbox{\hyperlink{header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e}{jeu\+\_\+niveau\+\_\+gagne}} (const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+int \doxymbox{\hyperlink{header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516}{jeu\+\_\+niveau\+\_\+perdu}} (const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+int \doxymbox{\hyperlink{header_2jeu_8h_adbd875e13250e4155452816f4a51f9ac}{verifier\+\_\+collision\+\_\+cercle\+\_\+rect}} (float cx, float cy, float r, float rx, float ry, float larg, float haut)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{header_2jeu_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{header_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5}\index{jeu.h@{jeu.h}!boss\_deplacer@{boss\_deplacer}}
+\index{boss\_deplacer@{boss\_deplacer}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{boss\_deplacer()}{boss\_deplacer()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5} 
+void boss\+\_\+deplacer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{float}]{dt}{, }\item[{float}]{largeur\+\_\+zone}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00403}{403}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordflow}{if}\ (!b-\/>\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordtype}{float}\ ratio\ \ \ =\ (float)b-\/>\doxymbox{\hyperlink{struct_boss_a9276aeb24cc00e6bd8aada39190f0334}{points\_vie}}\ /\ (\textcolor{keywordtype}{float})b-\/>\doxymbox{\hyperlink{struct_boss_aa8f84435dbb2670923e1908a9d4e46b9}{points\_vie\_max}};}
+\DoxyCodeLine{00407\ \ \ \ \ \textcolor{keywordtype}{float}\ vitesse\ =\ b-\/>\doxymbox{\hyperlink{struct_boss_a3f9482821d86e68131678f33a1ed65c6}{vx}}\ *\ (1.0f\ +\ (1.0f\ -\/\ ratio)\ *\ 2.0f);}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}}\ +=\ vitesse\ *\ dt;}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}}\ <\ 40)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ b-\/>\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}}\ =\ 40;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_boss_a3f9482821d86e68131678f33a1ed65c6}{vx}}\ =\ \ fabsf(b-\/>\doxymbox{\hyperlink{struct_boss_a3f9482821d86e68131678f33a1ed65c6}{vx}});\ \}}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}}\ >\ largeur\_zone\ -\/\ 40)\ \{\ b-\/>\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}}\ =\ largeur\_zone\ -\/\ 40;\ b-\/>\doxymbox{\hyperlink{struct_boss_a3f9482821d86e68131678f33a1ed65c6}{vx}}\ =\ -\/fabsf(b-\/>\doxymbox{\hyperlink{struct_boss_a3f9482821d86e68131678f33a1ed65c6}{vx}});\ \}}
+\DoxyCodeLine{00412\ \}}
+
+\end{DoxyCode}
+\Hypertarget{header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00}\index{jeu.h@{jeu.h}!bulle\_deplacer@{bulle\_deplacer}}
+\index{bulle\_deplacer@{bulle\_deplacer}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{bulle\_deplacer()}{bulle\_deplacer()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00} 
+void bulle\+\_\+deplacer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{float}]{dt}{, }\item[{float}]{largeur\+\_\+zone}{, }\item[{float}]{hauteur\+\_\+zone}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00204}{204}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{if}\ (!b-\/>\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ +=\ 100.0f\ *\ dt;\ \textcolor{comment}{/*\ gravitÃ©\ */}}
+\DoxyCodeLine{00208\ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ \ +=\ b-\/>\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ *\ dt;}
+\DoxyCodeLine{00209\ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ \ +=\ b-\/>\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ *\ dt;}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{float}\ r\ =\ \doxymbox{\hyperlink{jeu_8c_a04fd5d00b05181b0046eec5c7a877412}{rayon\_bulle}}(b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}});}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ -\/\ r\ <\ 0)\ \ \ \ \ \ \ \ \ \ \ \ \{\ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ =\ r;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ =\ \ fabsf(b-\/>\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}});\ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ +\ r\ >\ largeur\_zone)\ \{\ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ =\ largeur\_zone\ -\/\ r;\ b-\/>\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ =\ -\/fabsf(b-\/>\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}});\ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ +\ r\ >\ hauteur\_zone)\ \{\ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ =\ hauteur\_zone\ -\/\ r;\ b-\/>\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ =\ -\/fabsf(b-\/>\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}})\ *\ 0.95f;\ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ -\/\ r\ <\ 0)\ \ \ \ \ \ \ \ \ \ \ \ \{\ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ =\ r;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ =\ \ fabsf(b-\/>\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}});\ \}}
+\DoxyCodeLine{00217\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_a95bdea7c66358469b0f5587032814c83}\index{jeu.h@{jeu.h}!bulle\_diviser@{bulle\_diviser}}
+\index{bulle\_diviser@{bulle\_diviser}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{bulle\_diviser()}{bulle\_diviser()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_a95bdea7c66358469b0f5587032814c83} 
+void bulle\+\_\+diviser (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{int}]{indice}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00219}{219}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \doxymbox{\hyperlink{struct_bulle}{Bulle}}\ *b\ =\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[indice];}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{/*\ 1\ chance\ sur\ 4\ de\ faire\ tomber\ un\ bonus\ (niveau\ 2+)\ */}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ >=\ 2\ \&\&\ rand()\ \%\ 4\ ==\ 0)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{MAX\_BONUS}};\ i++)\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a4b7263158e47151b2fa1db82eb519cf0}{active}})\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a4b7263158e47151b2fa1db82eb519cf0}{active}}\ =\ 1;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ab35e606c33f4a3c608deffbb237f09a6}{x}}\ \ \ \ \ =\ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}};}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a98456dfc3875b5a45bd599b192250a56}{y}}\ \ \ \ \ =\ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}};}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_aad545942fb407a2f1ee4fc19ac36b87e}{type}}\ \ =\ rand()\ \%\ \doxymbox{\hyperlink{header_2entites_8h_a37fa8267bd5513503c65440e387d561c}{NB\_TYPES\_BONUS}};}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ad6efd20802414585049c50aa509e934a}{timer}}\ \ =\ 8.0f;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{if}\ (b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}\ ==\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{BULLE\_MINUSCULE}})\ \{\ b-\/>\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ =\ 0;\ \textcolor{keywordflow}{return};\ \}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1d}{TailleBulle}}\ prochaine\ =\ b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}\ +\ 1;}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{float}\ bx\ =\ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}},\ by\ =\ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}};}
+\DoxyCodeLine{00240\ \ \ \ \ b-\/>\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ =\ 0;}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{int}\ crees\ =\ 0;}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}}\ \&\&\ crees\ <\ 2;\ i++)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ \ \ \ \ \ \ \ =\ 1;}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}\ \ \ \ \ \ \ \ =\ prochaine;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ bx;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ by;}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ \ \ \ \ \ \ \ \ \ \ \ =\ (crees\ ==\ 0\ ?\ -\/120.0f\ :\ 120.0f);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ \ \ \ \ \ \ \ \ \ \ \ =\ -\/150.0f;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a4a036a888c1539e425b626a6d8fbf049}{contient\_arme}}\ =\ 0;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a9791f1ae1668cba807a70847326f2662}{lance\_eclairs}}\ =\ 0;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ crees++;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \}}
+
+\end{DoxyCode}
+\Hypertarget{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}\index{jeu.h@{jeu.h}!jeu\_init\_niveau@{jeu\_init\_niveau}}
+\index{jeu\_init\_niveau@{jeu\_init\_niveau}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_init\_niveau()}{jeu\_init\_niveau()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9} 
+void jeu\+\_\+init\+\_\+niveau (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{int}]{niveau}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00018}{18}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{/*\ Sauvegarde\ avant\ reset\ */}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ score\_sauvegarde\ =\ (niveau\ >\ 1)\ ?\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ :\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{char}\ pseudo\_sauvegarde[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}];}
+\DoxyCodeLine{00023\ \ \ \ \ strncpy(pseudo\_sauvegarde,\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ memset(ej,\ 0,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}));}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{/*\ Restauration\ aprÃ¨s\ reset\ */}}
+\DoxyCodeLine{00028\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ =\ score\_sauvegarde;}
+\DoxyCodeLine{00029\ \ \ \ \ strncpy(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ pseudo\_sauvegarde,\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686}{eclairs\_init}}(\&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}{eclairs}});}
+\DoxyCodeLine{00032\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ \ \ \ \ \ \ \ =\ niveau;}
+\DoxyCodeLine{00033\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}}\ =\ 60.0f;}
+\DoxyCodeLine{00034\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}\ \ \ \ \ \ =\ 3;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ \ \ \ \ \ =\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2.0f;}
+\DoxyCodeLine{00037\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ \ \ \ \ \ =\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}}\ -\/\ 30.0f;}
+\DoxyCodeLine{00038\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a83ffd7975e660463a18b1ad04b9429f3}{vivant}}\ =\ 1;}
+\DoxyCodeLine{00039\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}}\ \ \ =\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (niveau\ <=\ 2)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Niveaux\ 1\ et\ 2\ :\ bulles\ visibles\ dÃ¨s\ le\ dÃ©part\ */}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ niveau\ \&\&\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ =\ 1;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}\ =\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\_GRANDE}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ \ \ \ \ \ =\ 100.0f\ +\ i\ *\ 150.0f;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ \ \ \ \ \ =\ 100.0f;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ \ \ \ \ =\ 80.0f\ +\ niveau\ *\ 10.0f;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ \ \ \ \ =\ 0.0f;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aba9c833f5fd68d3d93e9781c282c8229}{nb\_bulles}}++;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (niveau\ ==\ 4)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Niveau\ 4\ :\ le\ boss\ apparaÃ®t\ aprÃ¨s\ le\ dÃ©compte\ */}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}}\ \ \ \ \ \ \ \ \ =\ 0;\ \ \ \textcolor{comment}{/*\ spawne\ aprÃ¨s\ dÃ©compte\ */}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a9276aeb24cc00e6bd8aada39190f0334}{points\_vie}}\ \ \ \ \ =\ 10;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_aa8f84435dbb2670923e1908a9d4e46b9}{points\_vie\_max}}\ =\ 10;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2.0f;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a5872a3518b99314af857322c97c3b800}{y}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 80.0f;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a3f9482821d86e68131678f33a1ed65c6}{vx}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 100.0f;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a7f80cb01aede5e6c00d0b93d4156b643}{timer\_tir}}\ \ \ \ \ \ =\ 2.0f;}
+\DoxyCodeLine{00061\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}{bulles\_en\_attente}}\ =\ niveau;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd}\index{jeu.h@{jeu.h}!jeu\_mettre\_a\_jour@{jeu\_mettre\_a\_jour}}
+\index{jeu\_mettre\_a\_jour@{jeu\_mettre\_a\_jour}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_mettre\_a\_jour()}{jeu\_mettre\_a\_jour()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd} 
+void jeu\+\_\+mettre\+\_\+a\+\_\+jour (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00067}{67}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{/*\ DÃ©compte\ de\ dÃ©but\ de\ niveau\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}\ >\ 0)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a859f7580d4aedcfb5d59b67a41d228ce}{decompte\_timer}}\ +=\ dt;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a859f7580d4aedcfb5d59b67a41d228ce}{decompte\_timer}}\ >=\ 1.0f)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a859f7580d4aedcfb5d59b67a41d228ce}{decompte\_timer}}\ =\ 0.0f;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}-\/-\/;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Spawn\ bulles\ en\ attente\ (niveaux\ 3)\ */}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}{bulles\_en\_attente}}\ >\ 0)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}{bulles\_en\_attente}}\ \&\&\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ =\ 1;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}\ =\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\_GRANDE}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ \ \ \ \ \ =\ 100.0f\ +\ i\ *\ 150.0f;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ \ \ \ \ \ =\ 100.0f;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ \ \ \ \ =\ 80.0f\ +\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ *\ 10.0f;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ \ \ \ \ =\ 0.0f;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aba9c833f5fd68d3d93e9781c282c8229}{nb\_bulles}}++;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}{bulles\_en\_attente}}\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Spawn\ boss\ niveau\ 4\ â\ condition\ sÃ©parÃ©e\ */}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ ==\ 4\ \&\&\ !ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}{boss\_a\_spawne}})\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}}\ \ \ \ =\ 1;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}{boss\_a\_spawne}}\ \ =\ 1;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{/*\ Bonus\ qui\ tombent\ au\ sol\ */}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ >=\ 2)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{MAX\_BONUS}};\ i++)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a4b7263158e47151b2fa1db82eb519cf0}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DÃ©compte\ timer\ */}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ad6efd20802414585049c50aa509e934a}{timer}}\ -\/=\ dt;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ad6efd20802414585049c50aa509e934a}{timer}}\ <=\ 0)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a4b7263158e47151b2fa1db82eb519cf0}{active}}\ =\ 0;\ \ \ \textcolor{comment}{/*\ â\ disparaÃ®t\ */}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Chute\ */}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a98456dfc3875b5a45bd599b192250a56}{y}}\ +=\ 80.0f\ *\ dt;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a98456dfc3875b5a45bd599b192250a56}{y}}\ >\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}}\ -\/\ 10)}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a98456dfc3875b5a45bd599b192250a56}{y}}\ =\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}}\ -\/\ 10;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Collision\ joueur\ /\ bonus\ */}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dx\ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ab35e606c33f4a3c608deffbb237f09a6}{x}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dy\ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a98456dfc3875b5a45bd599b192250a56}{y}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dx*dx\ +\ dy*dy\ <\ 30*30)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}}\ \ \ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_aad545942fb407a2f1ee4fc19ac36b87e}{type}}\ +\ 1;\ \textcolor{comment}{/*\ +1\ car\ ARME\_BASIQUE\ =\ 0\ */}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}}\ \ \ =\ \doxymbox{\hyperlink{header_2entites_8h_a0c5ae29b6a7357ae211b341bf2e4c9b7}{DUREE\_ARME\_SPECIALE}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a4b7263158e47151b2fa1db82eb519cf0}{active}}\ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DÃ©compte\ durÃ©e\ arme\ spÃ©ciale\ */}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}}\ >\ 0)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}}\ -\/=\ dt;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}}\ <=\ 0)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}}\ =\ 0;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}}\ =\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{/*\ DÃ©placement\ joueur\ */}}
+\DoxyCodeLine{00139\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ +=\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a70d5fe053297331173073eb5d7e688bd}{vx}}\ *\ dt;}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ <\ 12)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ =\ 12;}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ >\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ -\/\ 12)\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ =\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ -\/\ 12;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{/*\ DÃ©placement\ bulles\ */}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{jeu_8c_a35db185c59a638dfe4f06995eaeb7e00}{bulle\_deplacer}}(\&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i],\ dt,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{/*\ DÃ©placement\ projectiles\ */}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ +=\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a29202389dc05d908a2b16c3b15174546}{vx}}\ *\ dt;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ +=\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a2081fe99e23a4605b86c8aab4a5d78b0}{vy}}\ *\ dt;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ <\ 0)\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ =\ 0;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{/*\ Boss\ */}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \doxymbox{\hyperlink{jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5}{boss\_deplacer}}(\&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}},\ dt,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}});}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{/*\ Tir\ du\ boss\ */}}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a7f80cb01aede5e6c00d0b93d4156b643}{timer\_tir}}\ -\/=\ dt;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a7f80cb01aede5e6c00d0b93d4156b643}{timer\_tir}}\ <=\ 0)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ratio\ =\ (float)ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a9276aeb24cc00e6bd8aada39190f0334}{points\_vie}}\ /\ (\textcolor{keywordtype}{float})ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_aa8f84435dbb2670923e1908a9d4e46b9}{points\_vie\_max}};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a7f80cb01aede5e6c00d0b93d4156b643}{timer\_tir}}\ =\ 0.5f\ +\ ratio\ *\ 1.5f;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ =\ 1;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}\ =\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{BULLE\_PETITE}};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a5872a3518b99314af857322c97c3b800}{y}}\ +\ 40.0f;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a3bcdab971a3d6a56c1feeadd839456d7}{vx}}\ \ \ \ \ =\ (rand()\ \%\ 2\ ==\ 0\ ?\ -\/100.0f\ :\ 100.0f);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a8b0cb46603242b18e489f0bf05cff2d3}{vy}}\ \ \ \ \ =\ 80.0f;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{/*\ Collisions\ */}}
+\DoxyCodeLine{00180\ \ \ \ \ \doxymbox{\hyperlink{jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295}{jeu\_verifier\_collisions}}(ej);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{/*\ =====\ ECLAIRS\ (niveau\ 3+)\ =====\ */}}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ >=\ 3)\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}}\ \&\&\ rand()\ \%\ 200\ ==\ 0)}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2eclair_8h_a94d73eb8a889534102b2442ed022db13}{eclair\_spawner}}(\&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}{eclairs}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}});}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2eclair_8h_a41927b1d41e1bda12297701119910c62}{eclairs\_mettre\_a\_jour}}(\&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}{eclairs}});}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b}{eclairs\_collision\_personnage}}(\&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}{eclairs}},}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}},}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 24.0f,\ 32.0f))\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a83ffd7975e660463a18b1ad04b9429f3}{vivant}}\ =\ 0;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{/*\ Timer\ explosion\ visuelle\ */}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}{explosion\_timer}}\ >\ 0)}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}{explosion\_timer}}\ -\/=\ dt;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{/*\ Temps\ */}}
+\DoxyCodeLine{00201\ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}}\ -\/=\ dt;}
+\DoxyCodeLine{00202\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e}\index{jeu.h@{jeu.h}!jeu\_niveau\_gagne@{jeu\_niveau\_gagne}}
+\index{jeu\_niveau\_gagne@{jeu\_niveau\_gagne}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_niveau\_gagne()}{jeu\_niveau\_gagne()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e} 
+int jeu\+\_\+niveau\+\_\+gagne (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00414}{414}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}\ >\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00416\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}{bulles\_en\_attente}}\ >\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{comment}{/*\ Niveau\ 4\ :\ le\ boss\ doit\ avoir\ spawnÃ©\ ET\ Ãªtre\ mort\ */}}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ ==\ 4)\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}{boss\_a\_spawne}})\ \textcolor{keywordflow}{return}\ 0;\ \ \ \textcolor{comment}{/*\ â\ pas\ encore\ apparu\ */}}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \textcolor{comment}{/*\ â\ encore\ vivant\ */}}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00423\ \ \ \ \ \}}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00428\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00429\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516}\index{jeu.h@{jeu.h}!jeu\_niveau\_perdu@{jeu\_niveau\_perdu}}
+\index{jeu\_niveau\_perdu@{jeu\_niveau\_perdu}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_niveau\_perdu()}{jeu\_niveau\_perdu()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516} 
+int jeu\+\_\+niveau\+\_\+perdu (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00432}{432}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00433\ \ \ \ \ \textcolor{keywordflow}{return}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a83ffd7975e660463a18b1ad04b9429f3}{vivant}}\ ||\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}}\ <=\ 0.0f);}
+\DoxyCodeLine{00434\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295}\index{jeu.h@{jeu.h}!jeu\_verifier\_collisions@{jeu\_verifier\_collisions}}
+\index{jeu\_verifier\_collisions@{jeu\_verifier\_collisions}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_verifier\_collisions()}{jeu\_verifier\_collisions()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295} 
+void jeu\+\_\+verifier\+\_\+collisions (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00258}{258}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \doxymbox{\hyperlink{struct_joueur}{Joueur}}\ *j\ =\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}};}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{float}\ rj\ =\ 16.0f;}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)\ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_bulle}{Bulle}}\ *b\ =\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i];}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!b-\/>\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rb\ =\ \doxymbox{\hyperlink{jeu_8c_a04fd5d00b05181b0046eec5c7a877412}{rayon\_bulle}}(b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}});}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Projectile\ /\ bulle\ */}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ k++)\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_projectile}{Projectile}}\ *p\ =\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[k];}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!p-\/>\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dx\ =\ p-\/>\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ -\/\ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}},\ dy\ =\ p-\/>\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ -\/\ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}};}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dx*dx\ +\ dy*dy\ <\ (rb+4)*(rb+4))\ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p-\/>\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ =\ 0;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ +=\ 10\ *\ (4\ -\/\ b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}});}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p-\/>\doxymbox{\hyperlink{struct_projectile_ab78c13348075fde0f4278c75dbbce3bf}{explosion}})\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afb5e772fa2c38d9e89f9473e89b7b794}{explosion\_x}}\ \ \ \ \ =\ p-\/>\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a92f49feda43c0f42a4aa2f15e8656fb7}{explosion\_y}}\ \ \ \ \ =\ p-\/>\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}{explosion\_timer}}\ =\ \doxymbox{\hyperlink{src_2jeu_8h_a242a7514f3f5838a8e0bc4ff7e4306d7}{DUREE\_EXPLOSION}};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Explose\ toutes\ les\ bulles\ dans\ un\ rayon\ de\ 80px\ */}}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ e\ =\ 0;\ e\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ e++)\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[e].\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ex\ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[e].\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ -\/\ p-\/>\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ey\ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[e].\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ -\/\ p-\/>\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ex*ex\ +\ ey*ey\ <\ 80*80)\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ +=\ 10\ *\ (4\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[e].\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}});}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{jeu_8c_a95bdea7c66358469b0f5587032814c83}{bulle\_diviser}}(ej,\ e);}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{jeu_8c_a95bdea7c66358469b0f5587032814c83}{bulle\_diviser}}(ej,\ i);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Bulle\ /\ joueur\ */}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!b-\/>\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dx\ =\ j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ -\/\ b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}},\ dy\ =\ j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}};}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dx*dx\ +\ dy*dy\ <\ (rj+rb)*(rj+rb))}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ j-\/>\doxymbox{\hyperlink{struct_joueur_a83ffd7975e660463a18b1ad04b9429f3}{vivant}}\ =\ 0;}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{comment}{/*\ Boss\ /\ joueur\ */}}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dx\ =\ j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}},\ dy\ =\ j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a5872a3518b99314af857322c97c3b800}{y}};}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dx*dx\ +\ dy*dy\ <\ (rj+40)*(rj+40))}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ j-\/>\doxymbox{\hyperlink{struct_joueur_a83ffd7975e660463a18b1ad04b9429f3}{vivant}}\ =\ 0;}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Projectile\ /\ boss\ */}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ k++)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_projectile}{Projectile}}\ *p\ =\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[k];}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!p-\/>\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ bx\ =\ p-\/>\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}},\ by\ =\ p-\/>\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ -\/\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a5872a3518b99314af857322c97c3b800}{y}};}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bx*bx\ +\ by*by\ <\ 40*40)\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p-\/>\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ =\ 0;}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}}\ +=\ 50;}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a9276aeb24cc00e6bd8aada39190f0334}{points\_vie}}-\/-\/;}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a9276aeb24cc00e6bd8aada39190f0334}{points\_vie}}\ <=\ 0)}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}}\ =\ 0;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be}\index{jeu.h@{jeu.h}!joueur\_tirer@{joueur\_tirer}}
+\index{joueur\_tirer@{joueur\_tirer}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{joueur\_tirer()}{joueur\_tirer()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be} 
+void joueur\+\_\+tirer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00328}{328}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{comment}{/*\ Arme\ basique\ :\ 1\ seul\ tir\ Ã \ la\ fois\ */}}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}}\ ==\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}})\ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{switch}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}})\ \{}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}}:}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)\ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ \ \ \ =\ 1;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}};}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ 20.0f;}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a2081fe99e23a4605b86c8aab4a5d78b0}{vy}}\ \ \ \ \ \ \ \ =\ -\/700.0f;}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_ab78c13348075fde0f4278c75dbbce3bf}{explosion}}\ =\ 0;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{ARME\_TIR\_RAPIDE}}:}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Tir\ rapide\ :\ pas\ de\ limite\ 1\ balle\ */}}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)\ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ \ \ \ =\ 1;}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}};}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ 20.0f;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a2081fe99e23a4605b86c8aab4a5d78b0}{vy}}\ \ \ \ \ \ \ \ =\ -\/900.0f;}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_ab78c13348075fde0f4278c75dbbce3bf}{explosion}}\ =\ 0;}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{ARME\_TIR\_TRIPLE}}:}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 3\ projectiles\ :\ gauche,\ centre,\ droite\ */}}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordtype}{int}\ crees\ =\ 0;}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ vx\_vals[3]\ =\ \{\ -\/150.0f,\ 0.0f,\ 150.0f\ \};}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}}\ \&\&\ crees\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ \ \ \ =\ 1;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}};}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ 20.0f;}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a29202389dc05d908a2b16c3b15174546}{vx}}\ \ \ \ \ \ \ \ =\ vx\_vals[crees];}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a2081fe99e23a4605b86c8aab4a5d78b0}{vy}}\ \ \ \ \ \ \ \ =\ -\/700.0f;}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_ab78c13348075fde0f4278c75dbbce3bf}{explosion}}\ =\ 0;}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ crees++;}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{ARME\_EXPLOSION}}:}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 1\ seul\ tir\ Ã \ la\ fois\ comme\ l'arme\ basique\ */}}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \textcolor{keywordflow}{return};\ \ \ \textcolor{comment}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \{}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}}\ \ \ \ =\ 1;}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}};}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}}\ \ \ \ \ \ \ \ \ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ 20.0f;}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a29202389dc05d908a2b16c3b15174546}{vx}}\ \ \ \ \ \ \ \ =\ 0.0f;}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_a2081fe99e23a4605b86c8aab4a5d78b0}{vy}}\ \ \ \ \ \ \ \ =\ -\/700.0f;}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i].\doxymbox{\hyperlink{struct_projectile_ab78c13348075fde0f4278c75dbbce3bf}{explosion}}\ =\ 1;}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00400\ \ \ \ \ \}}
+\DoxyCodeLine{00401\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2jeu_8h_adbd875e13250e4155452816f4a51f9ac}\index{jeu.h@{jeu.h}!verifier\_collision\_cercle\_rect@{verifier\_collision\_cercle\_rect}}
+\index{verifier\_collision\_cercle\_rect@{verifier\_collision\_cercle\_rect}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{verifier\_collision\_cercle\_rect()}{verifier\_collision\_cercle\_rect()}}
+{\footnotesize\ttfamily \label{header_2jeu_8h_adbd875e13250e4155452816f4a51f9ac} 
+int verifier\+\_\+collision\+\_\+cercle\+\_\+rect (\begin{DoxyParamCaption}\item[{float}]{cx}{, }\item[{float}]{cy}{, }\item[{float}]{r}{, }\item[{float}]{rx}{, }\item[{float}]{ry}{, }\item[{float}]{larg}{, }\item[{float}]{haut}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{jeu_8c_source_l00435}{435}} du fichier \doxymbox{\hyperlink{jeu_8c_source}{jeu.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00437\ \ \ \ \ \textcolor{keywordtype}{float}\ px\ =\ cx\ <\ rx\ ?\ rx\ :\ (cx\ >\ rx+larg\ ?\ rx+larg\ :\ cx);}
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordtype}{float}\ py\ =\ cy\ <\ ry\ ?\ ry\ :\ (cy\ >\ ry+haut\ ?\ ry+haut\ :\ cy);}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordtype}{float}\ dx\ =\ cx\ -\/\ px,\ dy\ =\ cy\ -\/\ py;}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordflow}{return}\ (dx*dx\ +\ dy*dy)\ <\ (r*r);}
+\DoxyCodeLine{00441\ \}}
+
+\end{DoxyCode}

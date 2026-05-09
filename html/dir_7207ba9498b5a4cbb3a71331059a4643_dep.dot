@@ -1,0 +1,16 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/builds/amiga/include"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_aea4eb7ff13cb25efd810f56fab7995c {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="amiga", rankdir=LR style="filled,dashed", URL="dir_aea4eb7ff13cb25efd810f56fab7995c.html",tooltip=""]
+  subgraph clusterdir_7207ba9498b5a4cbb3a71331059a4643 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", rankdir=LR style="filled,bold", URL="dir_7207ba9498b5a4cbb3a71331059a4643.html",tooltip=""]
+    dir_7207ba9498b5a4cbb3a71331059a4643 [shape=plaintext, label="include"];
+  dir_3be8ff0d76b8ee481ae4af0068037857 [label="freetype", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_3be8ff0d76b8ee481ae4af0068037857.html",tooltip=""];
+  }
+  }
+}

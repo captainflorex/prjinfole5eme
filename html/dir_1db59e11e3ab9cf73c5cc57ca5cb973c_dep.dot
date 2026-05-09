@@ -1,0 +1,14 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/builds/vms"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_d5c9b988bb0c5cde96f2390ac7f4b5af {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="builds", rankdir=LR style="filled,dashed", URL="dir_d5c9b988bb0c5cde96f2390ac7f4b5af.html",tooltip=""]
+  dir_1db59e11e3ab9cf73c5cc57ca5cb973c [label="vms", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_1db59e11e3ab9cf73c5cc57ca5cb973c.html",tooltip=""];
+  }
+  dir_3603bed0816a62e1b0e4984ead63386d [label="include", fillcolor="#edf0f7", color="red", style="filled,dashed", URL="dir_3603bed0816a62e1b0e4984ead63386d.html",tooltip=""];
+  dir_1db59e11e3ab9cf73c5cc57ca5cb973c->dir_3603bed0816a62e1b0e4984ead63386d [headlabel="2", labeldistance=1.5 headhref="dir_000052_000030.html" href="dir_000052_000030.html" color="steelblue1" fontcolor="steelblue1"];
+}

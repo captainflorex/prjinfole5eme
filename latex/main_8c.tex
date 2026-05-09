@@ -1,0 +1,497 @@
+\doxysection{Référence du fichier src/\+main.c}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include $<$alfont.\+h$>$}\newline
+{\ttfamily \+\#include "{}affichage.\+h"{}}\newline
+{\ttfamily \+\#include "{}jeu.\+h"{}}\newline
+{\ttfamily \+\#include "{}entrees.\+h"{}}\newline
+{\ttfamily \+\#include "{}menu.\+h"{}}\newline
+{\ttfamily \+\#include "{}sauvegarde.\+h"{}}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+Graphe des dépendances par inclusion de main.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{main_8c_a2bedaca1c6ca66de2397772910fbe140}{NOGDI}}
+\item 
+\+\#define \doxymbox{\hyperlink{main_8c_ac7bef5d85e3dcd73eef56ad39ffc84a9}{WIN32\+\_\+\+LEAN\+\_\+\+AND\+\_\+\+MEAN}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815}{Etat\+Application}} \{ \newline
+\doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\+\_\+\+MENU}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}{ETAT\+\_\+\+SAISIE\+\_\+\+PSEUDO}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0}{ETAT\+\_\+\+SAISIE\+\_\+\+PSEUDO\+\_\+\+REPRISE}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\+\_\+\+EN\+\_\+\+JEU}}
+, \newline
+\doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}{ETAT\+\_\+\+PAUSE}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}{ETAT\+\_\+\+VICTOIRE}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}{ETAT\+\_\+\+DEFAITE}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}{ETAT\+\_\+\+QUITTER}}
+, \newline
+\doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7}{ETAT\+\_\+\+SAUVEGARDE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8c_ab997a9e67270e2ce595ea9362874f072}{compteur}} (void)
+\item 
+static int \doxymbox{\hyperlink{main_8c_a9df11d22c0ecf29623a91a03addff8ef}{lister\+\_\+sauvegardes}} (char noms\+[$\,$]\+\+[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\+\_\+\+LEN}}]\+, int max)
+\item 
+int \doxymbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile int \doxymbox{\hyperlink{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}{tics}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{main_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{main_8c_a2bedaca1c6ca66de2397772910fbe140}\index{main.c@{main.c}!NOGDI@{NOGDI}}
+\index{NOGDI@{NOGDI}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{NOGDI}{NOGDI}}
+{\footnotesize\ttfamily \label{main_8c_a2bedaca1c6ca66de2397772910fbe140} 
+\+\#define NOGDI}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00010}{10}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_ac7bef5d85e3dcd73eef56ad39ffc84a9}\index{main.c@{main.c}!WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}}
+\index{WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{WIN32\_LEAN\_AND\_MEAN}{WIN32\_LEAN\_AND\_MEAN}}
+{\footnotesize\ttfamily \label{main_8c_ac7bef5d85e3dcd73eef56ad39ffc84a9} 
+\+\#define WIN32\+\_\+\+LEAN\+\_\+\+AND\+\_\+\+MEAN}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00011}{11}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{main_8c_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815}\index{main.c@{main.c}!EtatApplication@{EtatApplication}}
+\index{EtatApplication@{EtatApplication}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EtatApplication}{EtatApplication}}
+{\footnotesize\ttfamily \label{main_8c_a3a6fdc193bb7d49efa29f51611331815} 
+enum \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815}{Etat\+Application}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_MENU@{ETAT\_MENU}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_MENU@{ETAT\_MENU}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e} 
+ETAT\+\_\+\+MENU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_SAISIE\_PSEUDO@{ETAT\_SAISIE\_PSEUDO}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_SAISIE\_PSEUDO@{ETAT\_SAISIE\_PSEUDO}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed} 
+ETAT\+\_\+\+SAISIE\+\_\+\+PSEUDO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_SAISIE\_PSEUDO\_REPRISE@{ETAT\_SAISIE\_PSEUDO\_REPRISE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_SAISIE\_PSEUDO\_REPRISE@{ETAT\_SAISIE\_PSEUDO\_REPRISE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0} 
+ETAT\+\_\+\+SAISIE\+\_\+\+PSEUDO\+\_\+\+REPRISE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_EN\_JEU@{ETAT\_EN\_JEU}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_EN\_JEU@{ETAT\_EN\_JEU}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0} 
+ETAT\+\_\+\+EN\+\_\+\+JEU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_PAUSE@{ETAT\_PAUSE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_PAUSE@{ETAT\_PAUSE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd} 
+ETAT\+\_\+\+PAUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_VICTOIRE@{ETAT\_VICTOIRE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_VICTOIRE@{ETAT\_VICTOIRE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea} 
+ETAT\+\_\+\+VICTOIRE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_DEFAITE@{ETAT\_DEFAITE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_DEFAITE@{ETAT\_DEFAITE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a} 
+ETAT\+\_\+\+DEFAITE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_QUITTER@{ETAT\_QUITTER}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_QUITTER@{ETAT\_QUITTER}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d} 
+ETAT\+\_\+\+QUITTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_SAUVEGARDE@{ETAT\_SAUVEGARDE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_SAUVEGARDE@{ETAT\_SAUVEGARDE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7} 
+ETAT\+\_\+\+SAUVEGARDE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00018}{18}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}},}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}{ETAT\_SAISIE\_PSEUDO}},}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0}{ETAT\_SAISIE\_PSEUDO\_REPRISE}},}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}},}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}{ETAT\_PAUSE}},}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}{ETAT\_VICTOIRE}},}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}{ETAT\_DEFAITE}},}
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}{ETAT\_QUITTER}},}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7}{ETAT\_SAUVEGARDE}}}
+\DoxyCodeLine{00028\ \}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815}{EtatApplication}};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{main_8c_ab997a9e67270e2ce595ea9362874f072}\index{main.c@{main.c}!compteur@{compteur}}
+\index{compteur@{compteur}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{compteur()}{compteur()}}
+{\footnotesize\ttfamily \label{main_8c_ab997a9e67270e2ce595ea9362874f072} 
+void compteur (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00015}{15}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \doxymbox{\hyperlink{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}{tics}}++;\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a9df11d22c0ecf29623a91a03addff8ef}\index{main.c@{main.c}!lister\_sauvegardes@{lister\_sauvegardes}}
+\index{lister\_sauvegardes@{lister\_sauvegardes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{lister\_sauvegardes()}{lister\_sauvegardes()}}
+{\footnotesize\ttfamily \label{main_8c_a9df11d22c0ecf29623a91a03addff8ef} 
+int lister\+\_\+sauvegardes (\begin{DoxyParamCaption}\item[{char}]{noms}{\+[$\,$]\+\+[\+PSEUDO\+\_\+\+LEN]\+, }\item[{int}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00031}{31}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ WIN32\_FIND\_DATA\ fd;}
+\DoxyCodeLine{00033\ \ \ \ \ HANDLE\ h\ =\ FindFirstFile(\textcolor{stringliteral}{"{}sauvegarde\_*.txt"{}},\ \&fd);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (h\ ==\ INVALID\_HANDLE\_VALUE)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nb\ >=\ max)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *debut\ =\ fd.cFileName\ +\ strlen(\textcolor{stringliteral}{"{}sauvegarde\_"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *fin\ \ \ =\ strrchr(fd.cFileName,\ \textcolor{charliteral}{'.'});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debut\ \&\&\ fin\ \&\&\ fin\ >\ debut)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ (int)(fin\ -\/\ debut);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (len\ >=\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}})\ len\ =\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}\ -\/\ 1;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ strncpy(noms[nb],\ debut,\ len);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ noms[nb][len]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ nb++;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (FindNextFile(h,\ \&fd));}
+\DoxyCodeLine{00048\ \ \ \ \ FindClose(h);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ nb;}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00052}{52}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee}{affichage\_init}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827}{affichage\_charger\_ressources}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3}{alfont\_init}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ BITMAP\ *tampon\ =\ create\_bitmap(\doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\_FENETRE}});}
+\DoxyCodeLine{00058\ \ \ \ \ LOCK\_VARIABLE(\doxymbox{\hyperlink{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}{tics}});}
+\DoxyCodeLine{00059\ \ \ \ \ LOCK\_FUNCTION(\doxymbox{\hyperlink{main_8c_ab997a9e67270e2ce595ea9362874f072}{compteur}});}
+\DoxyCodeLine{00060\ \ \ \ \ install\_int\_ex(\doxymbox{\hyperlink{main_8c_ab997a9e67270e2ce595ea9362874f072}{compteur}},\ BPS\_TO\_TIMER(60));}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ \ \ \ \ \ \ \ \ ej;}
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{struct_etat_entrees}{EtatEntrees}}\ \ \ \ \ entrees;}
+\DoxyCodeLine{00064\ \ \ \ \ \doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}}\ \ \ \ \ \ \ \ menu\_etat;}
+\DoxyCodeLine{00065\ \ \ \ \ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815}{EtatApplication}}\ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}};}
+\DoxyCodeLine{00066\ \ \ \ \ \doxymbox{\hyperlink{header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a}{menu\_init}}(\&menu\_etat);}
+\DoxyCodeLine{00067\ \ \ \ \ memset(\&ej,\ 0,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}));}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ choix\_sauvegarde\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{/*\ Liste\ des\ sauvegardes\ pour\ "{}Reprendre"{}\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{char}\ \ liste\_sauvegardes[10][\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}];}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ nb\_sauvegardes\ \ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ choix\_reprise\ \ \ =\ 0;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{while}\ (etat\ !=\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}{ETAT\_QUITTER}})\ \{}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\doxymbox{\hyperlink{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}{tics}}\ >\ 0)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}{tics}}-\/-\/;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dt\ =\ 1.0f\ /\ 60.0f;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f}{entrees\_lire}}(\&entrees);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (etat)\ \{}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ MENU\ =====\ */}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}}:\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ action\ =\ \doxymbox{\hyperlink{header_2menu_8h_a3913bce4e975a52d19ed8450f553b4f2}{menu\_mettre\_a\_jour}}(\&menu\_etat);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \doxymbox{\hyperlink{header_2menu_8h_a697513d0346fbaa26784191b9cbbf093a6fb2cce6876c14b2320b86d39ebf12b4}{MENU\_NOUVELLE\_PARTIE}})\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memset(menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}},\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clear\_keybuf();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}{ETAT\_SAISIE\_PSEUDO}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (action\ ==\ \doxymbox{\hyperlink{header_2menu_8h_a697513d0346fbaa26784191b9cbbf093a1edbca7839d01020f061191245876b14}{MENU\_REPRENDRE\_PARTIE}})\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nb\_sauvegardes\ =\ \doxymbox{\hyperlink{sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868}{sauvegarde\_lister}}(liste\_sauvegardes,\ 10);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ choix\_reprise\ \ =\ 0;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ reset\ de\ la\ garde\ ENTER\ pour\ Ã©viter\ validation\ immÃ©diate\ */}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clear\_keybuf();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nb\_sauvegardes\ ==\ 0)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ rien\ */}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0}{ETAT\_SAISIE\_PSEUDO\_REPRISE}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (action\ ==\ \doxymbox{\hyperlink{header_2menu_8h_a697513d0346fbaa26784191b9cbbf093aeda6b268840b05d8bc39cbf6b0cfd117}{MENU\_QUITTER}})\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}{ETAT\_QUITTER}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ SAISIE\ PSEUDO\ NOUVELLE\ PARTIE\ =====\ */}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}{ETAT\_SAISIE\_PSEUDO}}:\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (keypressed())\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ c\ \ \ \ \ =\ readkey();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ascii\ =\ c\ \&\ 0xFF;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scan\ \ =\ (c\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\ \ \ =\ strlen(menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}});}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (scan\ ==\ KEY\_ENTER\ \&\&\ len\ >\ 0)\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memset(\&ej,\ 0,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}));}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}{jeu\_init\_niveau}}(\&ej,\ 1);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(ej.\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (scan\ ==\ KEY\_BACKSPACE\ \&\&\ len\ >\ 0)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}}[len\ -\/\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ascii\ >=\ 32\ \&\&\ ascii\ <\ 127\ \&\&\ len\ <\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}\ -\/\ 1)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}}[len]\ \ \ \ \ =\ (char)ascii;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}}[len\ +\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ CHOIX\ SAUVEGARDE\ A\ REPRENDRE\ =====\ */}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0}{ETAT\_SAISIE\_PSEUDO\_REPRISE}}:\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ entree\_relachee\ =\ 0;\ \ \textcolor{comment}{/*\ attend\ que\ ENTER\ soit\ relÃ¢chÃ©\ */}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Attend\ que\ ENTER\ soit\ relÃ¢chÃ©\ avant\ d'accepter\ une\ nouvelle\ pression\ */}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!key[KEY\_ENTER])\ entree\_relachee\ =\ 1;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_UP]\ \ \ \&\&\ choix\_reprise\ >\ 0)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ choix\_reprise-\/-\/;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_DOWN]\ \&\&\ choix\_reprise\ <\ nb\_sauvegardes\ -\/\ 1)\ choix\_reprise++;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_ENTER]\ \&\&\ entree\_relachee)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entree\_relachee\ =\ 0;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strncpy(ej.\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}},\ liste\_sauvegardes[choix\_reprise],\ \doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}});}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996}{sauvegarde\_lire}}(\&ej);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}{jeu\_init\_niveau}}(\&ej,\ ej.\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}});}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_ESC])\ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ EN\ JEU\ =====\ */}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}}:\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_ae639826acd5e0e357fd1810fbad797d0}{aller\_gauche}})\ \ \ \ \ \ ej.\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a70d5fe053297331173073eb5d7e688bd}{vx}}\ =\ -\/200.0f;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_ac2890246e0160c11ff0c09f4ab23ea43}{aller\_droite}})\ ej.\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a70d5fe053297331173073eb5d7e688bd}{vx}}\ =\ \ 200.0f;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej.\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a70d5fe053297331173073eb5d7e688bd}{vx}}\ =\ \ \ \ 0.0f;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_a0ae11e053c6423cb0d4db90feed1d571}{tirer}})\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be}{joueur\_tirer}}(\&ej);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80}{joueur\_signaler\_tir}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_a26df952cfebd013e57bf1ca779b9f9d2}{quitter}})\ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clear\_keybuf();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}};}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_a00c4b13957488beb17f148601de0ab6c}{pause\_appuye}})}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}{ETAT\_PAUSE}};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd}{jeu\_mettre\_a\_jour}}(\&ej,\ dt);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e}{jeu\_niveau\_gagne}}(\&ej))\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ choix\_sauvegarde\ =\ 0;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7}{ETAT\_SAUVEGARDE}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516}{jeu\_niveau\_perdu}}(\&ej))\ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}{ETAT\_DEFAITE}};}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ SAUVEGARDE\ =====\ */}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7}{ETAT\_SAUVEGARDE}}:\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_UP]\ \ \ ||\ key[KEY\_LEFT])\ \ choix\_sauvegarde\ =\ 0;}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_DOWN]\ ||\ key[KEY\_RIGHT])\ choix\_sauvegarde\ =\ 1;}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_ENTER])\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ej.\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}++;\ \ \ \textcolor{comment}{/*\ incrÃ©mente\ AVANT\ de\ sauvegarder\ */}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (choix\_sauvegarde\ ==\ 0)}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779}{sauvegarde\_ecrire}}(\&ej);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ choix\_sauvegarde\ =\ 0;}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej.\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ >\ 4)\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}{ETAT\_VICTOIRE}};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}{jeu\_init\_niveau}}(\&ej,\ ej.\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}});}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ PAUSE\ =====\ */}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}{ETAT\_PAUSE}}:\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_a00c4b13957488beb17f148601de0ab6c}{pause\_appuye}})\ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}};}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrees.\doxymbox{\hyperlink{struct_etat_entrees_a26df952cfebd013e57bf1ca779b9f9d2}{quitter}})\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clear\_keybuf();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ =====\ VICTOIRE\ /\ DEFAITE\ =====\ */}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}{ETAT\_VICTOIRE}}:}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}{ETAT\_DEFAITE}}:\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key[KEY\_ENTER])\ etat\ =\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ ===\ RENDU\ ===\ */}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ clear\_bitmap(tampon);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (etat)\ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\_MENU}}:}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (menu\_etat.\doxymbox{\hyperlink{struct_etat_menu_a51485ba2fa7fd3305c3db5275f018d73}{afficher\_regles}})}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f}{afficher\_regles}}(tampon);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0}{afficher\_menu}}(tampon,\ \&menu\_etat);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}{ETAT\_SAISIE\_PSEUDO}}:}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb}{afficher\_saisie\_pseudo}}(tampon,\ \&menu\_etat);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aa1e6838a6301188faad49be1fde2ddb0}{ETAT\_SAISIE\_PSEUDO\_REPRISE}}:}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Affiche\ la\ liste\ des\ sauvegardes\ */}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a9662fd89470ff912257e700f3014cabb}{afficher\_liste\_sauvegardes}}(tampon,}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ (*)[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}])liste\_sauvegardes,}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nb\_sauvegardes,\ choix\_reprise);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\_EN\_JEU}}:}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5}{afficher\_jeu}}(tampon,\ \&ej);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej.\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}\ >\ 0)}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03}{afficher\_decompte}}(tampon,\ ej.\doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815ae03b6191ae7a415eade1722cba2247b7}{ETAT\_SAUVEGARDE}}:}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5}{afficher\_jeu}}(tampon,\ \&ej);}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_ab4a51dce181769925f8e3d8e268e6a61}{afficher\_ecran\_sauvegarde}}(tampon,\ choix\_sauvegarde,\ \&ej);}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}{ETAT\_PAUSE}}:}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5}{afficher\_jeu}}(tampon,\ \&ej);}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33}{afficher\_pause}}(tampon,\ \&ej);}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}{ETAT\_VICTOIRE}}:}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013}{afficher\_victoire}}(tampon);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}{ETAT\_DEFAITE}}:}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e}{afficher\_defaite}}(tampon);}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ vsync();}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ blit(tampon,\ screen,\ 0,\ 0,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\_FENETRE}});}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3}{affichage\_liberer\_ressources}}();}
+\DoxyCodeLine{00278\ \ \ \ \ destroy\_bitmap(tampon);}
+\DoxyCodeLine{00279\ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_af2bcc3c080bd6827885dd7728d504800}{alfont\_exit}}();}
+\DoxyCodeLine{00280\ \ \ \ \ allegro\_exit();}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00282\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{main_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}\index{main.c@{main.c}!tics@{tics}}
+\index{tics@{tics}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tics}{tics}}
+{\footnotesize\ttfamily \label{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09} 
+volatile int tics = 0}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{main_8c_source_l00014}{14}} du fichier \doxymbox{\hyperlink{main_8c_source}{main.\+c}}.
+

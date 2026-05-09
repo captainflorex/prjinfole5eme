@@ -1,0 +1,39 @@
+\doxysection{sauvegarde.\+h}
+\hypertarget{header_2sauvegarde_8h_source}{}\label{header_2sauvegarde_8h_source}\index{header/sauvegarde.h@{header/sauvegarde.h}}
+\doxymbox{\hyperlink{header_2sauvegarde_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ SAUVEGARDE\_H}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ SAUVEGARDE\_H}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{header_2entites_8h}{entites.h}}"{}}\ \ \textcolor{comment}{/*\ pour\ PSEUDO\_LEN\ */}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00006}\doxymbox{\hyperlink{header_2sauvegarde_8h_a3a4b199f7550c3126a16bc4c9d29de15}{00006}}\ \textcolor{preprocessor}{\#define\ FICHIER\_SAUVEGARDE\ "{}sauvegardes.txt"{}}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00008}00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00009}00009\ \textcolor{comment}{\ *\ Sauvegarde\ le\ pseudo\ et\ le\ niveau\ atteint\ dans\ le\ fichier\ de\ sauvegarde.}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00010}00010\ \textcolor{comment}{\ *\ Plusieurs\ parties\ peuvent\ Ãªtre\ sauvegardÃ©es\ dans\ le\ mÃªme\ fichier.}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00011}00011\ \textcolor{comment}{\ *\ EntrÃ©e\ :\ pseudo\ -\/>\ nom\ du\ joueur}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00012}00012\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ niveau\ -\/>\ dernier\ niveau\ gagnÃ©}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00013}00013\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00014}\doxymbox{\hyperlink{header_2sauvegarde_8h_a26ec48c760eb5033b7daa90e34880188}{00014}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{header_2sauvegarde_8h_a26ec48c760eb5033b7daa90e34880188}{sauvegarder\_partie}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pseudo,\ \textcolor{keywordtype}{int}\ niveau);}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00016}00016\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00017}00017\ \textcolor{comment}{\ *\ Charge\ la\ derniÃ¨re\ sauvegarde\ correspondant\ au\ pseudo\ donnÃ©.}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00018}00018\ \textcolor{comment}{\ *\ EntrÃ©e\ \ :\ pseudo\ -\/>\ nom\ du\ joueur\ recherchÃ©}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00019}00019\ \textcolor{comment}{\ *\ Sortie\ \ :\ numÃ©ro\ du\ dernier\ niveau\ sauvegardÃ©,\ ou\ -\/1\ si\ non\ trouvÃ©}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00020}00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00021}\doxymbox{\hyperlink{header_2sauvegarde_8h_af3a2c189baddea2c0ec249be72805129}{00021}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{header_2sauvegarde_8h_af3a2c189baddea2c0ec249be72805129}{charger\_partie}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pseudo);}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00023}00023\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00024}00024\ \textcolor{comment}{\ *\ Affiche\ la\ liste\ de\ toutes\ les\ parties\ sauvegardÃ©es.}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00025}00025\ \textcolor{comment}{\ *\ Utile\ pour\ le\ menu\ "{}Reprendre\ une\ partie"{}.}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00026}00026\ \textcolor{comment}{\ *\ EntrÃ©e\ :\ tampons\ \ \ \ -\/>\ tableau\ de\ chaÃ®nes\ pour\ stocker\ les\ pseudos\ trouvÃ©s}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00027}00027\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ niveaux\ \ \ \ -\/>\ tableau\ d'entiers\ pour\ stocker\ les\ niveaux\ associÃ©s}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00028}00028\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ taille\_max\ -\/>\ taille\ maximale\ des\ tableaux}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00029}00029\ \textcolor{comment}{\ *\ Sortie\ :\ nombre\ de\ sauvegardes\ trouvÃ©es}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00030}00030\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00031}\doxymbox{\hyperlink{header_2sauvegarde_8h_a84f8b199f22919236cd9dedbf7b5186f}{00031}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{header_2sauvegarde_8h_a84f8b199f22919236cd9dedbf7b5186f}{lister\_sauvegardes}}(\textcolor{keywordtype}{char}\ tampons[][\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}],\ \textcolor{keywordtype}{int}\ *niveaux,\ \textcolor{keywordtype}{int}\ taille\_max);}
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{header_2sauvegarde_8h_source_l00033}00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

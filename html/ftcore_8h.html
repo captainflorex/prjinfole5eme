@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/internal/ftcore.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftcore_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftcore.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftcore.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2include_2freetype_2internal_2ftcore_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="ftcore_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:FT_5FCleanupItemRec_5F" id="r_FT_5FCleanupItemRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___cleanup_item_rec__.html">FT_CleanupItemRec_</a></td></tr>
+<tr class="memitem:FT_5FCleanupChunkRec_5F" id="r_FT_5FCleanupChunkRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a></td></tr>
+<tr class="memitem:FT_5FCleanupStackRec_5F" id="r_FT_5FCleanupStackRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a></td></tr>
+<tr class="memitem:FT_5FMemoryRec_5F" id="r_FT_5FMemoryRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___memory_rec__.html">FT_MemoryRec_</a></td></tr>
+<tr class="memitem:FT_5FXHandlerRec_5F" id="r_FT_5FXHandlerRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___x_handler_rec__.html">FT_XHandlerRec_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:acaecc7d9e93128d0532ac0453983265f" id="r_acaecc7d9e93128d0532ac0453983265f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acaecc7d9e93128d0532ac0453983265f">FT_CLEANUP_CHUNK_SIZE</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:a36471166912fe62aae99d806684e4739" id="r_a36471166912fe62aae99d806684e4739"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a>(x)</td></tr>
+<tr class="memitem:ae5c255ce88a2d78544f2d39cf35f8e8a" id="r_ae5c255ce88a2d78544f2d39cf35f8e8a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae5c255ce88a2d78544f2d39cf35f8e8a">FT_MEMORY__ALLOC</a>(x)</td></tr>
+<tr class="memitem:adfbd952379ede1cbdad744809ac376f2" id="r_adfbd952379ede1cbdad744809ac376f2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adfbd952379ede1cbdad744809ac376f2">FT_MEMORY__FREE</a>(x)</td></tr>
+<tr class="memitem:a3c9158ddf6c5c16f740a419201e9f610" id="r_a3c9158ddf6c5c16f740a419201e9f610"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3c9158ddf6c5c16f740a419201e9f610">FT_MEMORY__REALLOC</a>(x)</td></tr>
+<tr class="memitem:a3d089add33f848baa08d724069047830" id="r_a3d089add33f848baa08d724069047830"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3d089add33f848baa08d724069047830">FT_MEMORY__CLEANUP</a>(x)</td></tr>
+<tr class="memitem:ac56db60959893b1e8a7bce05fd69d1cb" id="r_ac56db60959893b1e8a7bce05fd69d1cb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac56db60959893b1e8a7bce05fd69d1cb">FT_MEMORY__META_CLASS</a>(x)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a7bb0e15aade9448f0e7e12a094b11c2d" id="r_a7bb0e15aade9448f0e7e12a094b11c2d"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___x_handler_rec__.html">FT_XHandlerRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a></td></tr>
+<tr class="memitem:a0250b87c6a8d9f9e5f8cba9d71b2cb99" id="r_a0250b87c6a8d9f9e5f8cba9d71b2cb99"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___cleanup_item_rec__.html">FT_CleanupItemRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0250b87c6a8d9f9e5f8cba9d71b2cb99">FT_CleanupItemRec</a></td></tr>
+<tr class="memitem:ac74c4d8822112aa92e678af3a2e6189d" id="r_ac74c4d8822112aa92e678af3a2e6189d"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac74c4d8822112aa92e678af3a2e6189d">FT_CleanupChunk</a></td></tr>
+<tr class="memitem:adf2be92c2ae0d624ff79d06adf7e8e12" id="r_adf2be92c2ae0d624ff79d06adf7e8e12"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#adf2be92c2ae0d624ff79d06adf7e8e12">FT_CleanupChunkRec</a></td></tr>
+<tr class="memitem:ad703713de322822a5c2fcf258be07b49" id="r_ad703713de322822a5c2fcf258be07b49"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad703713de322822a5c2fcf258be07b49">FT_CleanupStackRec</a></td></tr>
+<tr class="memitem:a91da37f28ff680c8453a1d406985a62f" id="r_a91da37f28ff680c8453a1d406985a62f"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></td></tr>
+<tr class="memitem:a359b7a844efd99f5dec76518512cdc33" id="r_a359b7a844efd99f5dec76518512cdc33"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___memory_rec__.html">FT_MemoryRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a359b7a844efd99f5dec76518512cdc33">FT_MemoryRec</a></td></tr>
+<tr class="memitem:a23a56b91affd5a361ce7bbc9003f9a17" id="r_a23a56b91affd5a361ce7bbc9003f9a17"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___x_handler_rec__.html">FT_XHandlerRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a23a56b91affd5a361ce7bbc9003f9a17">FT_XHandlerRec</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a93dea04f6fd34efed98dbf9de2127463" id="r_a93dea04f6fd34efed98dbf9de2127463"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a93dea04f6fd34efed98dbf9de2127463">ft_cleanup_stack_push</a> (<a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a> stack, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> item, <a class="el" href="#a9ef4f0e35c2aec735f09636792bfd24f">FT_CleanupFunc</a> item_func, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> item_data)</td></tr>
+<tr class="memitem:ad7be4bb9746cb81f1ea71fa0ab2363aa" id="r_ad7be4bb9746cb81f1ea71fa0ab2363aa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad7be4bb9746cb81f1ea71fa0ab2363aa">ft_cleanup_stack_pop</a> (<a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a> stack, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> destroy)</td></tr>
+<tr class="memitem:ac85c27ac4479c14603b1435a66e4c762" id="r_ac85c27ac4479c14603b1435a66e4c762"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac85c27ac4479c14603b1435a66e4c762">ft_cleanup_stack_peek</a> (<a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a> stack)</td></tr>
+<tr class="memitem:a28f25277649dcb5dc401d7e95abc4e28" id="r_a28f25277649dcb5dc401d7e95abc4e28"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a28f25277649dcb5dc401d7e95abc4e28">ft_cleanup_throw</a> (<a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a> stack, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> <a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:a356df26fdd9059be93375f78a45bccb2" id="r_a356df26fdd9059be93375f78a45bccb2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a356df26fdd9059be93375f78a45bccb2">ft_xhandler_enter</a> (<a class="el" href="#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a> xhandler, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:afb804dd1be87b86d083f1426cb88a266" id="r_afb804dd1be87b86d083f1426cb88a266"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb804dd1be87b86d083f1426cb88a266">ft_xhandler_exit</a> (<a class="el" href="#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a> xhandler)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9ef4f0e35c2aec735f09636792bfd24f" id="r_a9ef4f0e35c2aec735f09636792bfd24f"><td class="memItemLeft"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#a9ef4f0e35c2aec735f09636792bfd24f">FT_CleanupFunc</a> )(<a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> item, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> item_data)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="acaecc7d9e93128d0532ac0453983265f" name="acaecc7d9e93128d0532ac0453983265f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaecc7d9e93128d0532ac0453983265f">&#9670;&#160;</a></span>FT_CLEANUP_CHUNK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_CLEANUP_CHUNK_SIZE&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36471166912fe62aae99d806684e4739" name="a36471166912fe62aae99d806684e4739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36471166912fe62aae99d806684e4739">&#9670;&#160;</a></span>FT_MEMORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEMORY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((<a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>)(x))</div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae5c255ce88a2d78544f2d39cf35f8e8a" name="ae5c255ce88a2d78544f2d39cf35f8e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c255ce88a2d78544f2d39cf35f8e8a">&#9670;&#160;</a></span>FT_MEMORY__ALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEMORY__ALLOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a>(x)-&gt;mem_alloc</div>
+<div class="ttc" id="aftcore_8h_html_a36471166912fe62aae99d806684e4739"><div class="ttname"><a href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a></div><div class="ttdeci">#define FT_MEMORY(x)</div><div class="ttdef"><b>Definition</b> ftcore.h:129</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d089add33f848baa08d724069047830" name="a3d089add33f848baa08d724069047830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d089add33f848baa08d724069047830">&#9670;&#160;</a></span>FT_MEMORY__CLEANUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEMORY__CLEANUP</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(&amp;<a class="code hl_define" href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a>(x)-&gt;cleanup_stack)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfbd952379ede1cbdad744809ac376f2" name="adfbd952379ede1cbdad744809ac376f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbd952379ede1cbdad744809ac376f2">&#9670;&#160;</a></span>FT_MEMORY__FREE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEMORY__FREE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a>(x)-&gt;mem_free</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac56db60959893b1e8a7bce05fd69d1cb" name="ac56db60959893b1e8a7bce05fd69d1cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56db60959893b1e8a7bce05fd69d1cb">&#9670;&#160;</a></span>FT_MEMORY__META_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEMORY__META_CLASS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((<a class="code hl_typedef" href="ftobject_8h.html#a1912b602959f446afe023e586cf13a6a">FT_MetaClass</a>)(<a class="code hl_define" href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a>(x)-&gt;meta_class))</div>
+<div class="ttc" id="aftobject_8h_html_a1912b602959f446afe023e586cf13a6a"><div class="ttname"><a href="ftobject_8h.html#a1912b602959f446afe023e586cf13a6a">FT_MetaClass</a></div><div class="ttdeci">struct FT_MetaClassRec_ * FT_MetaClass</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3c9158ddf6c5c16f740a419201e9f610" name="a3c9158ddf6c5c16f740a419201e9f610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9158ddf6c5c16f740a419201e9f610">&#9670;&#160;</a></span>FT_MEMORY__REALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEMORY__REALLOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a36471166912fe62aae99d806684e4739">FT_MEMORY</a>(x)-&gt;mem_funcs-&gt;mem_realloc</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ac74c4d8822112aa92e678af3a2e6189d" name="ac74c4d8822112aa92e678af3a2e6189d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74c4d8822112aa92e678af3a2e6189d">&#9670;&#160;</a></span>FT_CleanupChunk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a>* <a class="el" href="#ac74c4d8822112aa92e678af3a2e6189d">FT_CleanupChunk</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf2be92c2ae0d624ff79d06adf7e8e12" name="adf2be92c2ae0d624ff79d06adf7e8e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2be92c2ae0d624ff79d06adf7e8e12">&#9670;&#160;</a></span>FT_CleanupChunkRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a> <a class="el" href="#adf2be92c2ae0d624ff79d06adf7e8e12">FT_CleanupChunkRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0250b87c6a8d9f9e5f8cba9d71b2cb99" name="a0250b87c6a8d9f9e5f8cba9d71b2cb99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0250b87c6a8d9f9e5f8cba9d71b2cb99">&#9670;&#160;</a></span>FT_CleanupItemRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___cleanup_item_rec__.html">FT_CleanupItemRec_</a> <a class="el" href="#a0250b87c6a8d9f9e5f8cba9d71b2cb99">FT_CleanupItemRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91da37f28ff680c8453a1d406985a62f" name="a91da37f28ff680c8453a1d406985a62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91da37f28ff680c8453a1d406985a62f">&#9670;&#160;</a></span>FT_CleanupStack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a> * <a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad703713de322822a5c2fcf258be07b49" name="ad703713de322822a5c2fcf258be07b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad703713de322822a5c2fcf258be07b49">&#9670;&#160;</a></span>FT_CleanupStackRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a> <a class="el" href="#ad703713de322822a5c2fcf258be07b49">FT_CleanupStackRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a359b7a844efd99f5dec76518512cdc33" name="a359b7a844efd99f5dec76518512cdc33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359b7a844efd99f5dec76518512cdc33">&#9670;&#160;</a></span>FT_MemoryRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___memory_rec__.html">FT_MemoryRec_</a> <a class="el" href="#a359b7a844efd99f5dec76518512cdc33">FT_MemoryRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bb0e15aade9448f0e7e12a094b11c2d" name="a7bb0e15aade9448f0e7e12a094b11c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb0e15aade9448f0e7e12a094b11c2d">&#9670;&#160;</a></span>FT_XHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___x_handler_rec__.html">FT_XHandlerRec_</a>* <a class="el" href="#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23a56b91affd5a361ce7bbc9003f9a17" name="a23a56b91affd5a361ce7bbc9003f9a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a56b91affd5a361ce7bbc9003f9a17">&#9670;&#160;</a></span>FT_XHandlerRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___x_handler_rec__.html">FT_XHandlerRec_</a> <a class="el" href="#a23a56b91affd5a361ce7bbc9003f9a17">FT_XHandlerRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ac85c27ac4479c14603b1435a66e4c762" name="ac85c27ac4479c14603b1435a66e4c762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac85c27ac4479c14603b1435a66e4c762">&#9670;&#160;</a></span>ft_cleanup_stack_peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_cleanup_stack_peek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></td>          <td class="paramname"><span class="paramname"><em>stack</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_ac85c27ac4479c14603b1435a66e4c762_cgraph.png" border="0" usemap="#aftcore_8h_ac85c27ac4479c14603b1435a66e4c762_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_ac85c27ac4479c14603b1435a66e4c762_icgraph.png" border="0" usemap="#aftcore_8h_ac85c27ac4479c14603b1435a66e4c762_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ad7be4bb9746cb81f1ea71fa0ab2363aa" name="ad7be4bb9746cb81f1ea71fa0ab2363aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7be4bb9746cb81f1ea71fa0ab2363aa">&#9670;&#160;</a></span>ft_cleanup_stack_pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_cleanup_stack_pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></td>          <td class="paramname"><span class="paramname"><em>stack</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>destroy</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_ad7be4bb9746cb81f1ea71fa0ab2363aa_cgraph.png" border="0" usemap="#aftcore_8h_ad7be4bb9746cb81f1ea71fa0ab2363aa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_ad7be4bb9746cb81f1ea71fa0ab2363aa_icgraph.png" border="0" usemap="#aftcore_8h_ad7be4bb9746cb81f1ea71fa0ab2363aa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a93dea04f6fd34efed98dbf9de2127463" name="a93dea04f6fd34efed98dbf9de2127463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93dea04f6fd34efed98dbf9de2127463">&#9670;&#160;</a></span>ft_cleanup_stack_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_cleanup_stack_push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></td>          <td class="paramname"><span class="paramname"><em>stack</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9ef4f0e35c2aec735f09636792bfd24f">FT_CleanupFunc</a></td>          <td class="paramname"><span class="paramname"><em>item_func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>item_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_a93dea04f6fd34efed98dbf9de2127463_cgraph.png" border="0" usemap="#aftcore_8h_a93dea04f6fd34efed98dbf9de2127463_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_a93dea04f6fd34efed98dbf9de2127463_icgraph.png" border="0" usemap="#aftcore_8h_a93dea04f6fd34efed98dbf9de2127463_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a28f25277649dcb5dc401d7e95abc4e28" name="a28f25277649dcb5dc401d7e95abc4e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f25277649dcb5dc401d7e95abc4e28">&#9670;&#160;</a></span>ft_cleanup_throw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_cleanup_throw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></td>          <td class="paramname"><span class="paramname"><em>stack</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_a28f25277649dcb5dc401d7e95abc4e28_cgraph.png" border="0" usemap="#aftcore_8h_a28f25277649dcb5dc401d7e95abc4e28_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_a28f25277649dcb5dc401d7e95abc4e28_icgraph.png" border="0" usemap="#aftcore_8h_a28f25277649dcb5dc401d7e95abc4e28_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a356df26fdd9059be93375f78a45bccb2" name="a356df26fdd9059be93375f78a45bccb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356df26fdd9059be93375f78a45bccb2">&#9670;&#160;</a></span>ft_xhandler_enter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_xhandler_enter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a></td>          <td class="paramname"><span class="paramname"><em>xhandler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_a356df26fdd9059be93375f78a45bccb2_cgraph.png" border="0" usemap="#aftcore_8h_a356df26fdd9059be93375f78a45bccb2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_a356df26fdd9059be93375f78a45bccb2_icgraph.png" border="0" usemap="#aftcore_8h_a356df26fdd9059be93375f78a45bccb2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="afb804dd1be87b86d083f1426cb88a266" name="afb804dd1be87b86d083f1426cb88a266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb804dd1be87b86d083f1426cb88a266">&#9670;&#160;</a></span>ft_xhandler_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ft_xhandler_exit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a></td>          <td class="paramname"><span class="paramname"><em>xhandler</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_afb804dd1be87b86d083f1426cb88a266_cgraph.png" border="0" usemap="#aftcore_8h_afb804dd1be87b86d083f1426cb88a266_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcore_8h_afb804dd1be87b86d083f1426cb88a266_icgraph.png" border="0" usemap="#aftcore_8h_afb804dd1be87b86d083f1426cb88a266_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a9ef4f0e35c2aec735f09636792bfd24f" name="a9ef4f0e35c2aec735f09636792bfd24f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef4f0e35c2aec735f09636792bfd24f">&#9670;&#160;</a></span>FT_CleanupFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> typedef void(* FT_CleanupFunc) (<a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> item, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> item_data) </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>item_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_5a7d374fb846e4a5bfa73ed3019144e9.html">internal</a></li><li class="navelem"><a href="ftcore_8h.html">ftcore.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+digraph "pfr_load_bitmap_bits"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="pfr_load_bitmap_bits",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="pfr_bitwriter_decode\l_bytes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrsbit_8c.html#ab7a37814a092f25694335298962c825e",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="pfr_bitwriter_decode_rle1",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrsbit_8c.html#ac02f2a0ef300a8005f4a379ea8299870",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="pfr_bitwriter_decode_rle2",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrsbit_8c.html#a3d76c97248b7653e0d2d9c491231424e",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="pfr_bitwriter_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrsbit_8c.html#a99c32ce571f90d212219cbfc50ff9d46",tooltip=" "];
+}

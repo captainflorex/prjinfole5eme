@@ -1,0 +1,27 @@
+var struct_c_f_f___decoder__ =
+[
+    [ "buildchar", "struct_c_f_f___decoder__.html#a01fc3a76039387e17f20cf2df1c2128d", null ],
+    [ "builder", "struct_c_f_f___decoder__.html#a1974266e7e164100b88c75fc05a15303", null ],
+    [ "cff", "struct_c_f_f___decoder__.html#a543fe100eb6139211d33c57bc82c9faa", null ],
+    [ "flex_state", "struct_c_f_f___decoder__.html#a2a6a5d625f137a69d839ffe9570e7b61", null ],
+    [ "flex_vectors", "struct_c_f_f___decoder__.html#a075bfb59c5b5b5c16810727315657e3f", null ],
+    [ "globals", "struct_c_f_f___decoder__.html#aadf635ae7bc701e672d45d15cf09668f", null ],
+    [ "globals_bias", "struct_c_f_f___decoder__.html#aa6070ea99029b41dfd2058bd80631889", null ],
+    [ "glyph_names", "struct_c_f_f___decoder__.html#a0b0a776add983dbd3df97224eb56d18b", null ],
+    [ "glyph_width", "struct_c_f_f___decoder__.html#a0d3d6ccc7097a1e256543f511d47c7e9", null ],
+    [ "hint_mode", "struct_c_f_f___decoder__.html#a67906a908923c392f2cbe954da0dc545", null ],
+    [ "len_buildchar", "struct_c_f_f___decoder__.html#a97d8cbed062ae8d2c47830b4c9c2dd53", null ],
+    [ "locals", "struct_c_f_f___decoder__.html#a73ddc4c41f9d331b547ca3b747f18748", null ],
+    [ "locals_bias", "struct_c_f_f___decoder__.html#a3cdcfb160c93736ad91e17682296749e", null ],
+    [ "nominal_width", "struct_c_f_f___decoder__.html#a4e29c00c24380a115f6b4027f8ad257f", null ],
+    [ "num_flex_vectors", "struct_c_f_f___decoder__.html#aef7e8a5c32357885d3e6c2777e1dd309", null ],
+    [ "num_globals", "struct_c_f_f___decoder__.html#a497ad7a1cf8ff1b1c40b4bffd3d2bb94", null ],
+    [ "num_glyphs", "struct_c_f_f___decoder__.html#a8f41d4378dae59fe52c1451db80d25c6", null ],
+    [ "num_hints", "struct_c_f_f___decoder__.html#a386558299ea4efd85294b93ad515ff2b", null ],
+    [ "num_locals", "struct_c_f_f___decoder__.html#ac6c2553ef54a77da4100a28d71b3aa34", null ],
+    [ "read_width", "struct_c_f_f___decoder__.html#a19c69b106557653d4a02ab16152fdb79", null ],
+    [ "stack", "struct_c_f_f___decoder__.html#afb0aead2fa8dcd179609394ce435007e", null ],
+    [ "top", "struct_c_f_f___decoder__.html#a3629bf05291a538fd649abab0848a39c", null ],
+    [ "zone", "struct_c_f_f___decoder__.html#a8b7e65540295938e9c3f466f8279849c", null ],
+    [ "zones", "struct_c_f_f___decoder__.html#a91ff8b4f9cb5d2275cc468972632aaac", null ]
+];

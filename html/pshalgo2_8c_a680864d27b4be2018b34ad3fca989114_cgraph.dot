@@ -1,0 +1,11 @@
+digraph "psh2_hint_table_find_strong_point"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="psh2_hint_table_find\l_strong_point",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="psh2_point_is_extremum",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a9d50bda8be9a7f0231382c0119aaeae3",tooltip=" "];
+}

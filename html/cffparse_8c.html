@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cff/cffparse.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('cffparse_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier cffparse.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="cffparse_8h_source.html">cffparse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cfferrs_8h_source.html">cfferrs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cfftoken_8h_source.html">cfftoken.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de cffparse.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cff_2cffparse_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cff_2cffparse_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="cffparse_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:CFF_5FField_5FHandler_5F" id="r_CFF_5FField_5FHandler_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_c_f_f___field___handler__.html">CFF_Field_Handler_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_cffparse</td></tr>
+<tr class="memitem:a69fe4c43f0cd67994a6d30f1593288ec" id="r_a69fe4c43f0cd67994a6d30f1593288ec"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a69fe4c43f0cd67994a6d30f1593288ec">CFF_FIELD_NUM</a>(code,  name)</td></tr>
+<tr class="memitem:a16fb4abac81e3ff589ed70371a120bb5" id="r_a16fb4abac81e3ff589ed70371a120bb5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a16fb4abac81e3ff589ed70371a120bb5">CFF_FIELD_FIXED</a>(code,  name)</td></tr>
+<tr class="memitem:acf6181f5abe376bf2f74fc233786d335" id="r_acf6181f5abe376bf2f74fc233786d335"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acf6181f5abe376bf2f74fc233786d335">CFF_FIELD_STRING</a>(code,  name)</td></tr>
+<tr class="memitem:adaba2448e3db43a9d6b97aac160f4c58" id="r_adaba2448e3db43a9d6b97aac160f4c58"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adaba2448e3db43a9d6b97aac160f4c58">CFF_FIELD_BOOL</a>(code,  name)</td></tr>
+<tr class="memitem:a1910e796ae9d484daf026000d187a7ae" id="r_a1910e796ae9d484daf026000d187a7ae"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1910e796ae9d484daf026000d187a7ae">CFF_FIELD_DELTA</a>(code,  name,  max)</td></tr>
+<tr class="memitem:aaa57b9decb4f40b3df736a1fff6341ce" id="r_aaa57b9decb4f40b3df736a1fff6341ce"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaa57b9decb4f40b3df736a1fff6341ce">CFF_FIELD_CALLBACK</a>(code,  name)</td></tr>
+<tr class="memitem:adb784b5e5bbdc94f47328326ab0bf96a" id="r_adb784b5e5bbdc94f47328326ab0bf96a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a>(code,  name,  kind)</td></tr>
+<tr class="memitem:a2788443a91eae1575463d52ec975878c" id="r_a2788443a91eae1575463d52ec975878c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2788443a91eae1575463d52ec975878c">CFF_FIELD_DELTA</a>(code,  name,  max)</td></tr>
+<tr class="memitem:a20d9136d18e65d002a490972bd5406ae" id="r_a20d9136d18e65d002a490972bd5406ae"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a20d9136d18e65d002a490972bd5406ae">CFFCODE_TOPDICT</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="memitem:ab1ed4d4060e7d672e6241783b4091943" id="r_ab1ed4d4060e7d672e6241783b4091943"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab1ed4d4060e7d672e6241783b4091943">CFFCODE_PRIVATE</a>&#160;&#160;&#160;0x2000</td></tr>
+<tr class="memitem:adb14d0edf0c80ad37476a4c6ae657d15" id="r_adb14d0edf0c80ad37476a4c6ae657d15"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb14d0edf0c80ad37476a4c6ae657d15">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="cfftypes_8h.html#ad4fac11f0abdbd6a162b75b6d0a53566">CFF_FontRecDictRec</a></td></tr>
+<tr class="memitem:afb5515641f825752aa535e21558d46d3" id="r_afb5515641f825752aa535e21558d46d3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afb5515641f825752aa535e21558d46d3">CFFCODE</a>&#160;&#160;&#160;<a class="el" href="#a20d9136d18e65d002a490972bd5406ae">CFFCODE_TOPDICT</a></td></tr>
+<tr class="memitem:a486ece7706e0b40f03d6ab0b842586f0" id="r_a486ece7706e0b40f03d6ab0b842586f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a486ece7706e0b40f03d6ab0b842586f0">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="cfftypes_8h.html#aacc622a1bab8f974818de384965aa8d0">CFF_PrivateRec</a></td></tr>
+<tr class="memitem:a53e52451cb3b0080f57a10b24c181ce6" id="r_a53e52451cb3b0080f57a10b24c181ce6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a53e52451cb3b0080f57a10b24c181ce6">CFFCODE</a>&#160;&#160;&#160;<a class="el" href="#ab1ed4d4060e7d672e6241783b4091943">CFFCODE_PRIVATE</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:affbf886be20ba3fe293a79dc8e237b8d" id="r_affbf886be20ba3fe293a79dc8e237b8d"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#affbf886be20ba3fe293a79dc8e237b8d">CFF_Field_Reader</a>) (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser)</td></tr>
+<tr class="memitem:a54d174f805f6539773db56c4698b9c38" id="r_a54d174f805f6539773db56c4698b9c38"><td class="memItemLeft">typedef struct <a class="el" href="struct_c_f_f___field___handler__.html">CFF_Field_Handler_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a54d174f805f6539773db56c4698b9c38">CFF_Field_Handler</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a426f01c82b98050f55c8a96f8a44385d" id="r_a426f01c82b98050f55c8a96f8a44385d"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <br />
+&#160;&#160;<a class="el" href="#a426f01c82b98050f55c8a96f8a44385dadaed996d9cba6fe7d494f26bcaeca000">cff_kind_none</a> = 0
+, <a class="el" href="#a426f01c82b98050f55c8a96f8a44385daf974e53514dd279768b8d208ae82497a">cff_kind_num</a>
+, <a class="el" href="#a426f01c82b98050f55c8a96f8a44385da48a47f2b7e48a297310889b817929e90">cff_kind_fixed</a>
+, <a class="el" href="#a426f01c82b98050f55c8a96f8a44385dae960b3653d701d9a837ecf57fc278e45">cff_kind_string</a>
+, <br />
+&#160;&#160;<a class="el" href="#a426f01c82b98050f55c8a96f8a44385da33e1a96267f95201b79d489455467d53">cff_kind_bool</a>
+, <a class="el" href="#a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc">cff_kind_delta</a>
+, <a class="el" href="#a426f01c82b98050f55c8a96f8a44385da05c4690d6876b0b03b1e019bd408574f">cff_kind_callback</a>
+, <a class="el" href="#a426f01c82b98050f55c8a96f8a44385da58a466296be1aac089ea5771d21ce7c4">cff_kind_max</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ac440f41bd3804588ad56ea1471d5991b" id="r_ac440f41bd3804588ad56ea1471d5991b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac440f41bd3804588ad56ea1471d5991b">cff_parser_init</a> (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> code, void *object)</td></tr>
+<tr class="memitem:a0e2fa2504895ab519d07de0b1e09fb66" id="r_a0e2fa2504895ab519d07de0b1e09fb66"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0e2fa2504895ab519d07de0b1e09fb66">cff_parse_integer</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *start, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit)</td></tr>
+<tr class="memitem:a64400e561df70927ec47288d097aa151" id="r_a64400e561df70927ec47288d097aa151"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>&#160;</td><td class="memItemRight"><a class="el" href="#a64400e561df70927ec47288d097aa151">cff_parse_real</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *start, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> power_ten)</td></tr>
+<tr class="memitem:af54ea1f764d14310af2ec6cc04a8d9da" id="r_af54ea1f764d14310af2ec6cc04a8d9da"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>&#160;</td><td class="memItemRight"><a class="el" href="#af54ea1f764d14310af2ec6cc04a8d9da">cff_parse_num</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **d)</td></tr>
+<tr class="memitem:ae6ed14600a27b109f9fcfa30acb27052" id="r_ae6ed14600a27b109f9fcfa30acb27052"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae6ed14600a27b109f9fcfa30acb27052">cff_parse_fixed</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **d)</td></tr>
+<tr class="memitem:a7b7f6c6d5369e9fa4ae47e4c9a6d795e" id="r_a7b7f6c6d5369e9fa4ae47e4c9a6d795e"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7b7f6c6d5369e9fa4ae47e4c9a6d795e">cff_parse_fixed_thousand</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **d)</td></tr>
+<tr class="memitem:a7a31ccc8911e85665b2d2dcfcab6b8da" id="r_a7a31ccc8911e85665b2d2dcfcab6b8da"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7a31ccc8911e85665b2d2dcfcab6b8da">cff_parse_font_matrix</a> (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser)</td></tr>
+<tr class="memitem:a467aebf0cbcc13079707a0bff74f7bc0" id="r_a467aebf0cbcc13079707a0bff74f7bc0"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a467aebf0cbcc13079707a0bff74f7bc0">cff_parse_font_bbox</a> (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser)</td></tr>
+<tr class="memitem:a8a7de38caf5c772f252b4ee4769694fb" id="r_a8a7de38caf5c772f252b4ee4769694fb"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8a7de38caf5c772f252b4ee4769694fb">cff_parse_private_dict</a> (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser)</td></tr>
+<tr class="memitem:a98df07986cbfdafcd504464cfb48d59b" id="r_a98df07986cbfdafcd504464cfb48d59b"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a98df07986cbfdafcd504464cfb48d59b">cff_parse_cid_ros</a> (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser)</td></tr>
+<tr class="memitem:aba75c215a307045c69f74cd40a1292f8" id="r_aba75c215a307045c69f74cd40a1292f8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aba75c215a307045c69f74cd40a1292f8">cff_parser_run</a> (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *start, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a925b2de05993f6fe4f8b8c955e7e04fc" id="r_a925b2de05993f6fe4f8b8c955e7e04fc"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="#a54d174f805f6539773db56c4698b9c38">CFF_Field_Handler</a>&#160;</td><td class="memItemRight"><a class="el" href="#a925b2de05993f6fe4f8b8c955e7e04fc">cff_field_handlers</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="adb784b5e5bbdc94f47328326ab0bf96a" name="adb784b5e5bbdc94f47328326ab0bf96a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb784b5e5bbdc94f47328326ab0bf96a">&#9670;&#160;</a></span>CFF_FIELD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>kind</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">{                          \</div>
+<div class="line">  kind,                    \</div>
+<div class="line">  code | <a class="code hl_define" href="#afb5515641f825752aa535e21558d46d3">CFFCODE</a>,          \</div>
+<div class="line">  FT_FIELD_OFFSET( name ), \</div>
+<div class="line">  FT_FIELD_SIZE( name ),   \</div>
+<div class="line">  0, 0, 0                  \</div>
+<div class="line">},</div>
+<div class="ttc" id="acffparse_8c_html_afb5515641f825752aa535e21558d46d3"><div class="ttname"><a href="#afb5515641f825752aa535e21558d46d3">CFFCODE</a></div><div class="ttdeci">#define CFFCODE</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adaba2448e3db43a9d6b97aac160f4c58" name="adaba2448e3db43a9d6b97aac160f4c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaba2448e3db43a9d6b97aac160f4c58">&#9670;&#160;</a></span>CFF_FIELD_BOOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_BOOL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a>( code, name, <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385da33e1a96267f95201b79d489455467d53">cff_kind_bool</a> )</div>
+<div class="ttc" id="acffparse_8c_html_a426f01c82b98050f55c8a96f8a44385da33e1a96267f95201b79d489455467d53"><div class="ttname"><a href="#a426f01c82b98050f55c8a96f8a44385da33e1a96267f95201b79d489455467d53">cff_kind_bool</a></div><div class="ttdeci">@ cff_kind_bool</div><div class="ttdef"><b>Definition</b> cffparse.c:42</div></div>
+<div class="ttc" id="acffparse_8c_html_adb784b5e5bbdc94f47328326ab0bf96a"><div class="ttname"><a href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a></div><div class="ttdeci">#define CFF_FIELD(code, name, kind)</div><div class="ttdef"><b>Definition</b> cffparse.c:449</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaa57b9decb4f40b3df736a1fff6341ce" name="aaa57b9decb4f40b3df736a1fff6341ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa57b9decb4f40b3df736a1fff6341ce">&#9670;&#160;</a></span>CFF_FIELD_CALLBACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_CALLBACK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">{                              \</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385da05c4690d6876b0b03b1e019bd408574f">cff_kind_callback</a>,           \</div>
+<div class="line">  code | <a class="code hl_define" href="#afb5515641f825752aa535e21558d46d3">CFFCODE</a>,              \</div>
+<div class="line">  0, 0,                        \</div>
+<div class="line">  cff_parse_ ## name,          \</div>
+<div class="line">  0, 0                         \</div>
+<div class="line">},</div>
+<div class="ttc" id="acffparse_8c_html_a426f01c82b98050f55c8a96f8a44385da05c4690d6876b0b03b1e019bd408574f"><div class="ttname"><a href="#a426f01c82b98050f55c8a96f8a44385da05c4690d6876b0b03b1e019bd408574f">cff_kind_callback</a></div><div class="ttdeci">@ cff_kind_callback</div><div class="ttdef"><b>Definition</b> cffparse.c:44</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2788443a91eae1575463d52ec975878c" name="a2788443a91eae1575463d52ec975878c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2788443a91eae1575463d52ec975878c">&#9670;&#160;</a></span>CFF_FIELD_DELTA <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_DELTA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">{                                  \</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc">cff_kind_delta</a>,                  \</div>
+<div class="line">  code | <a class="code hl_define" href="#afb5515641f825752aa535e21558d46d3">CFFCODE</a>,                  \</div>
+<div class="line">  FT_FIELD_OFFSET( name ),         \</div>
+<div class="line">  FT_FIELD_SIZE_DELTA( name ),     \</div>
+<div class="line">  0,                               \</div>
+<div class="line">  max,                             \</div>
+<div class="line">  FT_FIELD_OFFSET( num_ ## name )  \</div>
+<div class="line">},</div>
+<div class="ttc" id="acffparse_8c_html_a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc"><div class="ttname"><a href="#a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc">cff_kind_delta</a></div><div class="ttdeci">@ cff_kind_delta</div><div class="ttdef"><b>Definition</b> cffparse.c:43</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1910e796ae9d484daf026000d187a7ae" name="a1910e796ae9d484daf026000d187a7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1910e796ae9d484daf026000d187a7ae">&#9670;&#160;</a></span>CFF_FIELD_DELTA <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_DELTA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a>( code, name, <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc">cff_kind_delta</a> )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a16fb4abac81e3ff589ed70371a120bb5" name="a16fb4abac81e3ff589ed70371a120bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16fb4abac81e3ff589ed70371a120bb5">&#9670;&#160;</a></span>CFF_FIELD_FIXED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_FIXED</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a>( code, name, <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385da48a47f2b7e48a297310889b817929e90">cff_kind_fixed</a> )</div>
+<div class="ttc" id="acffparse_8c_html_a426f01c82b98050f55c8a96f8a44385da48a47f2b7e48a297310889b817929e90"><div class="ttname"><a href="#a426f01c82b98050f55c8a96f8a44385da48a47f2b7e48a297310889b817929e90">cff_kind_fixed</a></div><div class="ttdeci">@ cff_kind_fixed</div><div class="ttdef"><b>Definition</b> cffparse.c:40</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a69fe4c43f0cd67994a6d30f1593288ec" name="a69fe4c43f0cd67994a6d30f1593288ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69fe4c43f0cd67994a6d30f1593288ec">&#9670;&#160;</a></span>CFF_FIELD_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_NUM</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a>( code, name, <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385daf974e53514dd279768b8d208ae82497a">cff_kind_num</a> )</div>
+<div class="ttc" id="acffparse_8c_html_a426f01c82b98050f55c8a96f8a44385daf974e53514dd279768b8d208ae82497a"><div class="ttname"><a href="#a426f01c82b98050f55c8a96f8a44385daf974e53514dd279768b8d208ae82497a">cff_kind_num</a></div><div class="ttdeci">@ cff_kind_num</div><div class="ttdef"><b>Definition</b> cffparse.c:39</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acf6181f5abe376bf2f74fc233786d335" name="acf6181f5abe376bf2f74fc233786d335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6181f5abe376bf2f74fc233786d335">&#9670;&#160;</a></span>CFF_FIELD_STRING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_FIELD_STRING</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#adb784b5e5bbdc94f47328326ab0bf96a">CFF_FIELD</a>( code, name, <a class="code hl_enumvalue" href="#a426f01c82b98050f55c8a96f8a44385dae960b3653d701d9a837ecf57fc278e45">cff_kind_string</a> )</div>
+<div class="ttc" id="acffparse_8c_html_a426f01c82b98050f55c8a96f8a44385dae960b3653d701d9a837ecf57fc278e45"><div class="ttname"><a href="#a426f01c82b98050f55c8a96f8a44385dae960b3653d701d9a837ecf57fc278e45">cff_kind_string</a></div><div class="ttdeci">@ cff_kind_string</div><div class="ttdef"><b>Definition</b> cffparse.c:41</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53e52451cb3b0080f57a10b24c181ce6" name="a53e52451cb3b0080f57a10b24c181ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e52451cb3b0080f57a10b24c181ce6">&#9670;&#160;</a></span>CFFCODE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFCODE&#160;&#160;&#160;<a class="el" href="#ab1ed4d4060e7d672e6241783b4091943">CFFCODE_PRIVATE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb5515641f825752aa535e21558d46d3" name="afb5515641f825752aa535e21558d46d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb5515641f825752aa535e21558d46d3">&#9670;&#160;</a></span>CFFCODE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFCODE&#160;&#160;&#160;<a class="el" href="#a20d9136d18e65d002a490972bd5406ae">CFFCODE_TOPDICT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1ed4d4060e7d672e6241783b4091943" name="ab1ed4d4060e7d672e6241783b4091943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ed4d4060e7d672e6241783b4091943">&#9670;&#160;</a></span>CFFCODE_PRIVATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFCODE_PRIVATE&#160;&#160;&#160;0x2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20d9136d18e65d002a490972bd5406ae" name="a20d9136d18e65d002a490972bd5406ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d9136d18e65d002a490972bd5406ae">&#9670;&#160;</a></span>CFFCODE_TOPDICT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFFCODE_TOPDICT&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_cffparse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a486ece7706e0b40f03d6ab0b842586f0" name="a486ece7706e0b40f03d6ab0b842586f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486ece7706e0b40f03d6ab0b842586f0">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="cfftypes_8h.html#aacc622a1bab8f974818de384965aa8d0">CFF_PrivateRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb14d0edf0c80ad37476a4c6ae657d15" name="adb14d0edf0c80ad37476a4c6ae657d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb14d0edf0c80ad37476a4c6ae657d15">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="cfftypes_8h.html#ad4fac11f0abdbd6a162b75b6d0a53566">CFF_FontRecDictRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a54d174f805f6539773db56c4698b9c38" name="a54d174f805f6539773db56c4698b9c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d174f805f6539773db56c4698b9c38">&#9670;&#160;</a></span>CFF_Field_Handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_c_f_f___field___handler__.html">CFF_Field_Handler_</a> <a class="el" href="#a54d174f805f6539773db56c4698b9c38">CFF_Field_Handler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affbf886be20ba3fe293a79dc8e237b8d" name="affbf886be20ba3fe293a79dc8e237b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbf886be20ba3fe293a79dc8e237b8d">&#9670;&#160;</a></span>CFF_Field_Reader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(* CFF_Field_Reader) (<a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a> parser)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a426f01c82b98050f55c8a96f8a44385d" name="a426f01c82b98050f55c8a96f8a44385d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a426f01c82b98050f55c8a96f8a44385d">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385dadaed996d9cba6fe7d494f26bcaeca000" name="a426f01c82b98050f55c8a96f8a44385dadaed996d9cba6fe7d494f26bcaeca000"></a>cff_kind_none&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385daf974e53514dd279768b8d208ae82497a" name="a426f01c82b98050f55c8a96f8a44385daf974e53514dd279768b8d208ae82497a"></a>cff_kind_num&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385da48a47f2b7e48a297310889b817929e90" name="a426f01c82b98050f55c8a96f8a44385da48a47f2b7e48a297310889b817929e90"></a>cff_kind_fixed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385dae960b3653d701d9a837ecf57fc278e45" name="a426f01c82b98050f55c8a96f8a44385dae960b3653d701d9a837ecf57fc278e45"></a>cff_kind_string&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385da33e1a96267f95201b79d489455467d53" name="a426f01c82b98050f55c8a96f8a44385da33e1a96267f95201b79d489455467d53"></a>cff_kind_bool&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc" name="a426f01c82b98050f55c8a96f8a44385da8f899dcc0472154cfe941e3923f43bdc"></a>cff_kind_delta&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385da05c4690d6876b0b03b1e019bd408574f" name="a426f01c82b98050f55c8a96f8a44385da05c4690d6876b0b03b1e019bd408574f"></a>cff_kind_callback&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a426f01c82b98050f55c8a96f8a44385da58a466296be1aac089ea5771d21ce7c4" name="a426f01c82b98050f55c8a96f8a44385da58a466296be1aac089ea5771d21ce7c4"></a>cff_kind_max&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a98df07986cbfdafcd504464cfb48d59b" name="a98df07986cbfdafcd504464cfb48d59b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98df07986cbfdafcd504464cfb48d59b">&#9670;&#160;</a></span>cff_parse_cid_ros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_parse_cid_ros </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a98df07986cbfdafcd504464cfb48d59b_cgraph.png" border="0" usemap="#acffparse_8c_a98df07986cbfdafcd504464cfb48d59b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ae6ed14600a27b109f9fcfa30acb27052" name="ae6ed14600a27b109f9fcfa30acb27052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ed14600a27b109f9fcfa30acb27052">&#9670;&#160;</a></span>cff_parse_fixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> cff_parse_fixed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_ae6ed14600a27b109f9fcfa30acb27052_cgraph.png" border="0" usemap="#acffparse_8c_ae6ed14600a27b109f9fcfa30acb27052_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_ae6ed14600a27b109f9fcfa30acb27052_icgraph.png" border="0" usemap="#acffparse_8c_ae6ed14600a27b109f9fcfa30acb27052_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a7b7f6c6d5369e9fa4ae47e4c9a6d795e" name="a7b7f6c6d5369e9fa4ae47e4c9a6d795e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7f6c6d5369e9fa4ae47e4c9a6d795e">&#9670;&#160;</a></span>cff_parse_fixed_thousand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> cff_parse_fixed_thousand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a7b7f6c6d5369e9fa4ae47e4c9a6d795e_cgraph.png" border="0" usemap="#acffparse_8c_a7b7f6c6d5369e9fa4ae47e4c9a6d795e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a7b7f6c6d5369e9fa4ae47e4c9a6d795e_icgraph.png" border="0" usemap="#acffparse_8c_a7b7f6c6d5369e9fa4ae47e4c9a6d795e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a467aebf0cbcc13079707a0bff74f7bc0" name="a467aebf0cbcc13079707a0bff74f7bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467aebf0cbcc13079707a0bff74f7bc0">&#9670;&#160;</a></span>cff_parse_font_bbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_parse_font_bbox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a467aebf0cbcc13079707a0bff74f7bc0_cgraph.png" border="0" usemap="#acffparse_8c_a467aebf0cbcc13079707a0bff74f7bc0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a7a31ccc8911e85665b2d2dcfcab6b8da" name="a7a31ccc8911e85665b2d2dcfcab6b8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a31ccc8911e85665b2d2dcfcab6b8da">&#9670;&#160;</a></span>cff_parse_font_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_parse_font_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a7a31ccc8911e85665b2d2dcfcab6b8da_cgraph.png" border="0" usemap="#acffparse_8c_a7a31ccc8911e85665b2d2dcfcab6b8da_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a0e2fa2504895ab519d07de0b1e09fb66" name="a0e2fa2504895ab519d07de0b1e09fb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e2fa2504895ab519d07de0b1e09fb66">&#9670;&#160;</a></span>cff_parse_integer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> cff_parse_integer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a0e2fa2504895ab519d07de0b1e09fb66_icgraph.png" border="0" usemap="#acffparse_8c_a0e2fa2504895ab519d07de0b1e09fb66_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="af54ea1f764d14310af2ec6cc04a8d9da" name="af54ea1f764d14310af2ec6cc04a8d9da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54ea1f764d14310af2ec6cc04a8d9da">&#9670;&#160;</a></span>cff_parse_num()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> cff_parse_num </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_af54ea1f764d14310af2ec6cc04a8d9da_cgraph.png" border="0" usemap="#acffparse_8c_af54ea1f764d14310af2ec6cc04a8d9da_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_af54ea1f764d14310af2ec6cc04a8d9da_icgraph.png" border="0" usemap="#acffparse_8c_af54ea1f764d14310af2ec6cc04a8d9da_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a8a7de38caf5c772f252b4ee4769694fb" name="a8a7de38caf5c772f252b4ee4769694fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7de38caf5c772f252b4ee4769694fb">&#9670;&#160;</a></span>cff_parse_private_dict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_parse_private_dict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a8a7de38caf5c772f252b4ee4769694fb_cgraph.png" border="0" usemap="#acffparse_8c_a8a7de38caf5c772f252b4ee4769694fb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a64400e561df70927ec47288d097aa151" name="a64400e561df70927ec47288d097aa151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64400e561df70927ec47288d097aa151">&#9670;&#160;</a></span>cff_parse_real()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> cff_parse_real </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>power_ten</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a64400e561df70927ec47288d097aa151_cgraph.png" border="0" usemap="#acffparse_8c_a64400e561df70927ec47288d097aa151_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_a64400e561df70927ec47288d097aa151_icgraph.png" border="0" usemap="#acffparse_8c_a64400e561df70927ec47288d097aa151_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="ac440f41bd3804588ad56ea1471d5991b" name="ac440f41bd3804588ad56ea1471d5991b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac440f41bd3804588ad56ea1471d5991b">&#9670;&#160;</a></span>cff_parser_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cff_parser_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>object</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_ac440f41bd3804588ad56ea1471d5991b_cgraph.png" border="0" usemap="#acffparse_8c_ac440f41bd3804588ad56ea1471d5991b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_ac440f41bd3804588ad56ea1471d5991b_icgraph.png" border="0" usemap="#acffparse_8c_ac440f41bd3804588ad56ea1471d5991b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="aba75c215a307045c69f74cd40a1292f8" name="aba75c215a307045c69f74cd40a1292f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba75c215a307045c69f74cd40a1292f8">&#9670;&#160;</a></span>cff_parser_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cff_parser_run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffparse_8h.html#a26492ca02501e689e5d60489e40e49d7">CFF_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_aba75c215a307045c69f74cd40a1292f8_cgraph.png" border="0" usemap="#acffparse_8c_aba75c215a307045c69f74cd40a1292f8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffparse_8c_aba75c215a307045c69f74cd40a1292f8_icgraph.png" border="0" usemap="#acffparse_8c_aba75c215a307045c69f74cd40a1292f8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a925b2de05993f6fe4f8b8c955e7e04fc" name="a925b2de05993f6fe4f8b8c955e7e04fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925b2de05993f6fe4f8b8c955e7e04fc">&#9670;&#160;</a></span>cff_field_handlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="#a54d174f805f6539773db56c4698b9c38">CFF_Field_Handler</a> cff_field_handlers[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_ef10f7e7d7430b88d4d2aea26a8f2c3a.html">cff</a></li><li class="navelem"><a href="cffparse_8c.html">cffparse.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

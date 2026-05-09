@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cache/ftccmap.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftccmap_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftccmap.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftccmap_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  ftccmap.c                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    FreeType CharMap cache (body)                                        */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2000-2001, 2002 by                                           */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include FT_FREETYPE_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include FT_CACHE_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include FT_CACHE_CHARMAP_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include FT_CACHE_MANAGER_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include FT_INTERNAL_MEMORY_H</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include FT_INTERNAL_DEBUG_H</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="ftcerror_8h.html">ftcerror.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="comment">/* Each FTC_CMapNode contains a simple array to map a range of character */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">/* codes to equivalent glyph indices.                                    */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">/* For now, the implementation is very basic: Each node maps a range of  */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">/* 128 consecutive character codes to their corresponding glyph indices. */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="comment">/* We could do more complex things, but I don&#39;t think it is really very  */</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">/* useful.                                                               */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">/* number of glyph indices / character code per node */</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">   44</a></span><span class="preprocessor">#define FTC_CMAP_INDICES_MAX  128</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_node_rec__.html">   47</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___c_map_node_rec__.html">FTC_CMapNodeRec_</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_node_rec__.html#a027dbba40fff69333ec20b4bc311a4f0">   49</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#ad8e7952ccf161b72f4f25dc5de31f08f">FTC_NodeRec</a>  <a class="code hl_variable" href="struct_f_t_c___c_map_node_rec__.html#a027dbba40fff69333ec20b4bc311a4f0">node</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_node_rec__.html#a386e8bde9f720faeb8c1437fb0b6b593">   50</a></span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>    <a class="code hl_variable" href="struct_f_t_c___c_map_node_rec__.html#a386e8bde9f720faeb8c1437fb0b6b593">first</a>;                         <span class="comment">/* first character in node */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_node_rec__.html#ae3801fdfb4ec0e8c2ac9dd3e92207f44">   51</a></span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#af9bfc99e3f8d44fc8d61ff6d43c7f580">FT_UInt16</a>    <a class="code hl_variable" href="struct_f_t_c___c_map_node_rec__.html#ae3801fdfb4ec0e8c2ac9dd3e92207f44">indices</a>[<a class="code hl_define" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a>]; <span class="comment">/* array of glyph indices  */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">   53</a></span>  } <a class="code hl_typedef" href="ftccmap_8c.html#a9ec87583e18d11947baaad96a1e50f3f">FTC_CMapNodeRec</a>, *<a class="code hl_typedef" href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">FTC_CMapNode</a>;</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a8aec9d569f3f86f0c6586d993f707fad">   56</a></span><span class="preprocessor">#define FTC_CMAP_NODE( x ) ( (FTC_CMapNode)( x ) )</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">/* compute node hash value from cmap family and &quot;requested&quot; glyph index */</span></div>
+<div class="foldopen" id="foldopen00060" data-start="" data-end="">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a6dd6f1976bd266e4bbaa2a2d24d08cc1">   60</a></span><span class="preprocessor">#define FTC_CMAP_HASH( cfam, cquery )                                       \</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">          ( (cfam)-&gt;hash + ( (cquery)-&gt;char_code / FTC_CMAP_INDICES_MAX ) )</span></div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">/* if (indices[n] == FTC_CMAP_UNKNOWN), we assume that the corresponding */</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">/* glyph indices haven&#39;t been queried through FT_Get_Glyph_Index() yet   */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a2c861f74f3072a491b2046e43a278fc5">   65</a></span><span class="preprocessor">#define FTC_CMAP_UNKNOWN  ( (FT_UInt16)-1 )</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">/* the charmap query */</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_query_rec__.html">   69</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_f_t_c___c_map_query_rec__.html">FTC_CMapQueryRec_</a></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_query_rec__.html#a56d7630bd79dc5ae11edef9f7616e4fa">   71</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a96f43456912699b680da2096288e8a93">FTC_QueryRec</a>  <a class="code hl_variable" href="struct_f_t_c___c_map_query_rec__.html#a56d7630bd79dc5ae11edef9f7616e4fa">query</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_query_rec__.html#a5ecbf86c2215c73e0ceafef11138163b">   72</a></span>    <a class="code hl_typedef" href="ftccmap_8h.html#ad3bc81dda0c71d8f81ef7bfe9c5f2bdc">FTC_CMapDesc</a>  <a class="code hl_variable" href="struct_f_t_c___c_map_query_rec__.html#a5ecbf86c2215c73e0ceafef11138163b">desc</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_query_rec__.html#ad943d0c1bfbff84ce7d631faa0dbc18e">   73</a></span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>     <a class="code hl_variable" href="struct_f_t_c___c_map_query_rec__.html#ad943d0c1bfbff84ce7d631faa0dbc18e">char_code</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">   75</a></span>  } <a class="code hl_typedef" href="ftccmap_8c.html#aa9a4bfcb15682849aa461f8a341b4cb8">FTC_CMapQueryRec</a>, *<a class="code hl_typedef" href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">FTC_CMapQuery</a>;</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a657f515cf2793229825d9d677c07b3da">   78</a></span><span class="preprocessor">#define FTC_CMAP_QUERY( x )  ( (FTC_CMapQuery)( x ) )</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="comment">/* the charmap family */</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="};">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_family_rec__.html">   82</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t_c___c_map_family_rec__.html">FTC_CMapFamilyRec_</a></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_family_rec__.html#a6e8b06b1bde3e518918a0f77bf35ada0">   84</a></span>    <a class="code hl_typedef" href="ftccache_8h.html#a2543323bf3358707d629aa92727ee8e1">FTC_FamilyRec</a>    <a class="code hl_variable" href="struct_f_t_c___c_map_family_rec__.html#a6e8b06b1bde3e518918a0f77bf35ada0">family</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_family_rec__.html#ac65964585637c1d988b78bef94b56b9e">   85</a></span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>        <a class="code hl_variable" href="struct_f_t_c___c_map_family_rec__.html#ac65964585637c1d988b78bef94b56b9e">hash</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_family_rec__.html#ae22d12cebbec226a0dc15c760c5d76cf">   86</a></span>    <a class="code hl_typedef" href="ftccmap_8h.html#aebc4a6120353ae6a60453f6fa5d6fc6a">FTC_CMapDescRec</a>  <a class="code hl_variable" href="struct_f_t_c___c_map_family_rec__.html#ae22d12cebbec226a0dc15c760c5d76cf">desc</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_f_t_c___c_map_family_rec__.html#a59da5dda4e03a17b82a714d46b3c6d42">   87</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>          <a class="code hl_variable" href="struct_f_t_c___c_map_family_rec__.html#a59da5dda4e03a17b82a714d46b3c6d42">index</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a9f5c9ac895f902357385288f19c62b8a">   89</a></span>  } <a class="code hl_typedef" href="ftccmap_8c.html#a510a5312399b8594e3344c1bf05b7a53">FTC_CMapFamilyRec</a>, *<a class="code hl_typedef" href="ftccmap_8c.html#a9f5c9ac895f902357385288f19c62b8a">FTC_CMapFamily</a>;</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a5defc1d54ff0811f2c75261b0630de79">   92</a></span><span class="preprocessor">#define FTC_CMAP_FAMILY( x )         ( (FTC_CMapFamily)( x ) )</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#ab80168f65dfa5544dc51187312b3488e">   93</a></span><span class="preprocessor">#define FTC_CMAP_FAMILY_MEMORY( x )  FTC_FAMILY( x )-&gt;memory</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">  /*****                        CHARMAP NODES                          *****/</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="comment">/* no need for specific finalizer; we use &quot;ftc_node_done&quot; directly */</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">/* initialize a new cmap node */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#ae13b105e0c59fac46bbd6d1e9c2d8b26">  109</a></span>  <a class="code hl_function" href="ftccmap_8c.html#ae13b105e0c59fac46bbd6d1e9c2d8b26">ftc_cmap_node_init</a>( <a class="code hl_typedef" href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">FTC_CMapNode</a>   cnode,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                      <a class="code hl_typedef" href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">FTC_CMapQuery</a>  cquery,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                      <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>      cache )</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  first;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    n;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a>( cache );</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    first = ( cquery-&gt;char_code / <a class="code hl_define" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a> ) *</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <a class="code hl_define" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    cnode-&gt;first = first;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">for</span> ( n = 0; n &lt; <a class="code hl_define" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a>; n++ )</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      cnode-&gt;indices[n] = <a class="code hl_define" href="ftccmap_8c.html#a2c861f74f3072a491b2046e43a278fc5">FTC_CMAP_UNKNOWN</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="comment">/* compute the weight of a given cmap node */</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> )</div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a042f39963549e4ef4c67c840c04b2b07">  131</a></span>  <a class="code hl_function" href="ftccmap_8c.html#a042f39963549e4ef4c67c840c04b2b07">ftc_cmap_node_weight</a>( <a class="code hl_typedef" href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">FTC_CMapNode</a>  cnode )</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a>( cnode );</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">return</span> <span class="keyword">sizeof</span> ( *cnode );</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="comment">/* compare a cmap node to a given query */</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_variable" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> )</div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a9241f9e4b97c1c7a89feda463e351d9f">  141</a></span>  <a class="code hl_function" href="ftccmap_8c.html#a9241f9e4b97c1c7a89feda463e351d9f">ftc_cmap_node_compare</a>( <a class="code hl_typedef" href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">FTC_CMapNode</a>   cnode,</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                         <a class="code hl_typedef" href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">FTC_CMapQuery</a>  cquery )</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  offset = (<a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>)( cquery-&gt;char_code - cnode-&gt;first );</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="fttypes_8h.html#adf712510036d534403cbddf4f18c2083">FT_BOOL</a>( offset &lt; <a class="code hl_define" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a> );</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">  /*****                    CHARMAP FAMILY                             *****/</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a1e7f706c788608a9e9629e6841b2adcb">  161</a></span>  <a class="code hl_function" href="ftccmap_8c.html#a1e7f706c788608a9e9629e6841b2adcb">ftc_cmap_family_init</a>( <a class="code hl_typedef" href="ftccmap_8c.html#a9f5c9ac895f902357385288f19c62b8a">FTC_CMapFamily</a>  cfam,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        <a class="code hl_typedef" href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">FTC_CMapQuery</a>   cquery,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                        <a class="code hl_typedef" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a>       cache )</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>   manager = cache-&gt;manager;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_typedef" href="ftccmap_8h.html#ad3bc81dda0c71d8f81ef7bfe9c5f2bdc">FTC_CMapDesc</a>  desc = cquery-&gt;desc;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>     hash = 0;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>      <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_typedef" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a>       <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="comment">/* setup charmap descriptor */</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    cfam-&gt;desc = *desc;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">/* let&#39;s see whether the rest is correct too */</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftcache_8h.html#a4e3e4336009353906dece81c0c9cf98e">FTC_Manager_Lookup_Face</a>( manager, desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#a1ece63112804914536f80aa9156987b1">face_id</a>, &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> );</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>      count = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;num_charmaps;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>      idx   = count;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      <a class="code hl_typedef" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a>*  cur   = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;charmaps;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      <span class="keywordflow">switch</span> ( desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#afec0920a962260d3117d6451f4eed3ee">type</a> )</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ftccmap_8h.html#a26d463213d03f5893dc4f0f56d65000cacd4e7e8d06ff090b6c0927ad0e4ce313">FTC_CMAP_BY_INDEX</a>:</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        idx  = desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">u</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#af3a9d2eb783b0f637219b5542a3f8a98">index</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        hash = idx * 33;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ftccmap_8h.html#a26d463213d03f5893dc4f0f56d65000ca2ea0e8a7e9b6bc28ef93904a5a7d39b3">FTC_CMAP_BY_ENCODING</a>:</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">for</span> ( idx = 0; idx &lt; count; idx++, cur++ )</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>          <span class="keywordflow">if</span> ( cur[0]-&gt;encoding == desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">u</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#a243c8a0b7a798b1e35e2182f647ca5a0">encoding</a> )</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        hash = idx * 67;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ftccmap_8h.html#a26d463213d03f5893dc4f0f56d65000cac3b21ea11deac31cca116c4f23af6356">FTC_CMAP_BY_ID</a>:</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">for</span> ( idx = 0; idx &lt; count; idx++, cur++ )</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          <span class="keywordflow">if</span> ( (<a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>)cur[0]-&gt;platform_id == desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">u</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa0bb63304f6034294ed6b5c5cf1043b2">id</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_id_rec__.html#a43806c52cc93153b83785f59a56c8d80">platform</a> &amp;&amp;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>               (<a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>)cur[0]-&gt;<a class="code hl_variable" href="struct_f_t___char_map_rec__.html#af10dd43eee8dc93e7d6191c663ae831a">encoding_id</a> == desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">u</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa0bb63304f6034294ed6b5c5cf1043b2">id</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_id_rec__.html#ad649cc8fc14d235d9a837ae662612e4e">encoding</a> )</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>          {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            hash = ( ( desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">u</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa0bb63304f6034294ed6b5c5cf1043b2">id</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_id_rec__.html#a43806c52cc93153b83785f59a56c8d80">platform</a> &lt;&lt; 8 ) | desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">u</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#aa0bb63304f6034294ed6b5c5cf1043b2">id</a>.<a class="code hl_variable" href="struct_f_t_c___c_map_id_rec__.html#ad649cc8fc14d235d9a837ae662612e4e">encoding</a> ) * 7;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        ;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <span class="keywordflow">if</span> ( idx &gt;= count )</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">goto</span> Bad_Descriptor;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      <span class="comment">/* compute hash value, both in family and query */</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      cfam-&gt;index               = idx;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      cfam-&gt;hash                = hash ^ <a class="code hl_define" href="ftcache_8h.html#a534ce5d170cc582fb78f55d9b43ced59">FTC_FACE_ID_HASH</a>( desc-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_desc_rec__.html#a1ece63112804914536f80aa9156987b1">face_id</a> );</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( cquery )-&gt;hash = <a class="code hl_define" href="ftccmap_8c.html#a6dd6f1976bd266e4bbaa2a2d24d08cc1">FTC_CMAP_HASH</a>( cfam, cquery );</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftccache_8h.html#abd89a8a8e860a11792cf2ca59fe3d5ed">ftc_family_init</a>( <a class="code hl_define" href="ftccache_8h.html#af8b0bb86a0434c6bdeb346c0f53afb32">FTC_FAMILY</a>( cfam ),</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                               <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( cquery ), cache );</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  Bad_Descriptor:</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_define" href="ftdebug_8h.html#a311092b5a8fece0a17cfb5b2d874e25d">FT_ERROR</a>(( <span class="stringliteral">&quot;ftp_cmap_family_init: invalid charmap descriptor\n&quot;</span> ));</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">return</span> FTC_Err_Invalid_Argument;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  }</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a>( <a class="code hl_variable" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> )</div>
+<div class="foldopen" id="foldopen00236" data-start="{" data-end="}">
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a24b00be9ab1232b77b56f3d7091e3236">  236</a></span>  <a class="code hl_function" href="ftccmap_8c.html#a24b00be9ab1232b77b56f3d7091e3236">ftc_cmap_family_compare</a>( <a class="code hl_typedef" href="ftccmap_8c.html#a9f5c9ac895f902357385288f19c62b8a">FTC_CMapFamily</a>  cfam,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                           <a class="code hl_typedef" href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">FTC_CMapQuery</a>   cquery )</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>  result = 0;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="comment">/* first, compare face id and type */</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordflow">if</span> ( cfam-&gt;desc.face_id != cquery-&gt;desc-&gt;face_id ||</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>         cfam-&gt;desc.type    != cquery-&gt;desc-&gt;type    )</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    switch ( cfam-&gt;desc.type )</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    case FTC_CMAP_BY_INDEX:</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      result = ( cfam-&gt;desc.u.index == cquery-&gt;desc-&gt;u.index );</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      break;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    case FTC_CMAP_BY_ENCODING:</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      result = ( cfam-&gt;desc.u.encoding == cquery-&gt;desc-&gt;u.encoding );</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      break;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    case FTC_CMAP_BY_ID:</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      result = ( cfam-&gt;desc.u.id.platform == cquery-&gt;desc-&gt;u.id.platform &amp;&amp;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                 cfam-&gt;desc.u.id.encoding == cquery-&gt;desc-&gt;u.id.encoding );</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      break;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    default:</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      ;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    if ( result )</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="comment">/* when found, update the &#39;family&#39; and &#39;hash&#39; field of the query */</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( cquery )-&gt;family = <a class="code hl_define" href="ftccache_8h.html#af8b0bb86a0434c6bdeb346c0f53afb32">FTC_FAMILY</a>( cfam );</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( cquery )-&gt;hash   = <a class="code hl_define" href="ftccmap_8c.html#a6dd6f1976bd266e4bbaa2a2d24d08cc1">FTC_CMAP_HASH</a>( cfam, cquery );</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  Exit:</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="fttypes_8h.html#adf712510036d534403cbddf4f18c2083">FT_BOOL</a>( result );</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  }</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="comment">  /*****                    GLYPH IMAGE CACHE                          *****/</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00288" data-start="{" data-end="};">
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a49c9a720276ccf6a178097764269107a">  288</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a>  <a class="code hl_variable" href="ftccmap_8c.html#a49c9a720276ccf6a178097764269107a">ftc_cmap_cache_class</a> =</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a> ),</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a>) <a class="code hl_function" href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a>,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a>)<a class="code hl_function" href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a>,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    (<a class="code hl_typedef" href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a>) <a class="code hl_function" href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a>,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftccmap_8c.html#a510a5312399b8594e3344c1bf05b7a53">FTC_CMapFamilyRec</a> ),</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    (<a class="code hl_typedef" href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a>)   <a class="code hl_function" href="ftccmap_8c.html#a1e7f706c788608a9e9629e6841b2adcb">ftc_cmap_family_init</a>,</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    (<a class="code hl_typedef" href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a>)<a class="code hl_function" href="ftccmap_8c.html#a24b00be9ab1232b77b56f3d7091e3236">ftc_cmap_family_compare</a>,</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    (<a class="code hl_typedef" href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a>)   <a class="code hl_function" href="ftccache_8h.html#ada49ed57b935b684d100b9b557c0ebbb">ftc_family_done</a>,</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftccmap_8c.html#a9ec87583e18d11947baaad96a1e50f3f">FTC_CMapNodeRec</a> ),</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    (<a class="code hl_typedef" href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a>)   <a class="code hl_function" href="ftccmap_8c.html#ae13b105e0c59fac46bbd6d1e9c2d8b26">ftc_cmap_node_init</a>,</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    (<a class="code hl_typedef" href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a>) <a class="code hl_function" href="ftccmap_8c.html#a042f39963549e4ef4c67c840c04b2b07">ftc_cmap_node_weight</a>,</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a>)<a class="code hl_function" href="ftccmap_8c.html#a9241f9e4b97c1c7a89feda463e351d9f">ftc_cmap_node_compare</a>,</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    (<a class="code hl_typedef" href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a>)   <a class="code hl_function" href="ftccache_8h.html#a74516f61eef430ec9c782a308f452e2c">ftc_node_done</a></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  };</div>
+</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="comment">/* documentation is in ftccmap.h */</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <a class="code hl_define" href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="foldopen" id="foldopen00311" data-start="{" data-end="}">
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="ftccmap_8h.html#ab99c23dd20da843e8bb866fc93226fb0">  311</a></span>  <a class="code hl_function" href="ftccmap_8h.html#ab99c23dd20da843e8bb866fc93226fb0">FTC_CMapCache_New</a>( <a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>     manager,</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                     <a class="code hl_typedef" href="ftccmap_8h.html#a2caec1677dd04ce4ef58ab056bf69c76">FTC_CMapCache</a>  *acache )</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="ftcmanag_8h.html#a8ed3e862c3edd26789b4f34475af6ffd">FTC_Manager_Register_Cache</a>(</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>             manager,</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>             (<a class="code hl_typedef" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a>)&amp;<a class="code hl_variable" href="ftccmap_8c.html#a49c9a720276ccf6a178097764269107a">ftc_cmap_cache_class</a>,</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>             <a class="code hl_define" href="ftccache_8h.html#aa80e8485449ae6c35ca2a41c582df4f7">FTC_CACHE_P</a>( acache ) );</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  }</div>
+</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">#ifdef FTC_CACHE_USE_INLINE</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define GEN_CACHE_FAMILY_COMPARE( f, q, c ) \</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">          ftc_cmap_family_compare( (FTC_CMapFamily)(f), (FTC_CMapQuery)(q) )</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#define GEN_CACHE_NODE_COMPARE( n, q, c ) \</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">          ftc_cmap_node_compare( (FTC_CMapNode)(n), (FTC_CMapQuery)(q) )</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="preprocessor">#define GEN_CACHE_LOOKUP  ftc_cmap_cache_lookup</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">#include &quot;ftccache.i&quot;</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">#else  </span><span class="comment">/* !FTC_CACHE_USE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="ftccmap_8c.html#a6332783bd65a83416091819b252cc73b">  335</a></span><span class="preprocessor">#define ftc_cmap_cache_lookup  ftc_cache_lookup</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">#endif </span><span class="comment">/* !FTC_CACHE_USE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  <span class="comment">/* documentation is in ftccmap.h */</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  <a class="code hl_define" href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a>( <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> )</div>
+<div class="foldopen" id="foldopen00343" data-start="{" data-end="}">
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="ftccmap_8h.html#aedbcb612e758c6e64fb41c864a0b173a">  343</a></span>  <a class="code hl_function" href="ftccmap_8h.html#aedbcb612e758c6e64fb41c864a0b173a">FTC_CMapCache_Lookup</a>( <a class="code hl_typedef" href="ftccmap_8h.html#a2caec1677dd04ce4ef58ab056bf69c76">FTC_CMapCache</a>  cache,</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                        <a class="code hl_typedef" href="ftccmap_8h.html#ad3bc81dda0c71d8f81ef7bfe9c5f2bdc">FTC_CMapDesc</a>   desc,</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                        <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>      char_code )</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <a class="code hl_typedef" href="ftccmap_8c.html#aa9a4bfcb15682849aa461f8a341b4cb8">FTC_CMapQueryRec</a>  cquery;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_typedef" href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">FTC_CMapNode</a>      node;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>          <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>           gindex = 0;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keywordflow">if</span> ( !cache || !desc )</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      <a class="code hl_define" href="ftdebug_8h.html#a311092b5a8fece0a17cfb5b2d874e25d">FT_ERROR</a>(( <span class="stringliteral">&quot;FTC_CMapCache_Lookup: bad arguments, returning 0!\n&quot;</span> ));</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    cquery.<a class="code hl_variable" href="struct_f_t_c___c_map_query_rec__.html#a5ecbf86c2215c73e0ceafef11138163b">desc</a>      = desc;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    cquery.<a class="code hl_variable" href="struct_f_t_c___c_map_query_rec__.html#ad943d0c1bfbff84ce7d631faa0dbc18e">char_code</a> = char_code;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_define" href="ftccmap_8c.html#a6332783bd65a83416091819b252cc73b">ftc_cmap_cache_lookup</a>( <a class="code hl_define" href="ftccache_8h.html#accff87f7fe8ee4824aed3d9b5ac7fc35">FTC_CACHE</a>( cache ),</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                                   <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( &amp;cquery ),</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                                   (<a class="code hl_typedef" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a>*)&amp;node );</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    {</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>  offset = (<a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>)( char_code - node-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_node_rec__.html#a386e8bde9f720faeb8c1437fb0b6b593">first</a> );</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <a class="code hl_define" href="ftdebug_8h.html#a0edcd80581eabc970a562c5d284d5e7e">FT_ASSERT</a>( offset &lt; <a class="code hl_define" href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a> );</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>      gindex = node-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_node_rec__.html#ae3801fdfb4ec0e8c2ac9dd3e92207f44">indices</a>[offset];</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>      <span class="keywordflow">if</span> ( gindex == <a class="code hl_define" href="ftccmap_8c.html#a2c861f74f3072a491b2046e43a278fc5">FTC_CMAP_UNKNOWN</a> )</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>      {</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <a class="code hl_typedef" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a>  <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        <span class="comment">/* we need to use FT_Get_Char_Index */</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        gindex = 0;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="ftcache_8h.html#a4e3e4336009353906dece81c0c9cf98e">FTC_Manager_Lookup_Face</a>( <a class="code hl_define" href="ftccache_8h.html#accff87f7fe8ee4824aed3d9b5ac7fc35">FTC_CACHE</a>(cache)-&gt;manager,</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                                         desc-&gt;face_id,</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                                         &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> );</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        {</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>          <a class="code hl_typedef" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a>  old, cmap  = <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>          <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>     cmap_index;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>          <span class="comment">/* save old charmap, select new one */</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>          old        = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;charmap;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>          cmap_index = <a class="code hl_define" href="ftccmap_8c.html#a5defc1d54ff0811f2c75261b0630de79">FTC_CMAP_FAMILY</a>( <a class="code hl_define" href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a>( &amp;cquery )-&gt;family )-&gt;index;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>          cmap       = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;charmaps[cmap_index];</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>          <a class="code hl_function" href="freetype_8h.html#a9208d1ccf0f8ad9a122fd6c9fe0c5b45">FT_Set_Charmap</a>( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, cmap );</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>          <span class="comment">/* perform lookup */</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>          gindex                = <a class="code hl_function" href="freetype_8h.html#a529192ba5290936f21b63f257bf42bdd">FT_Get_Char_Index</a>( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, char_code );</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>          node-&gt;<a class="code hl_variable" href="struct_f_t_c___c_map_node_rec__.html#ae3801fdfb4ec0e8c2ac9dd3e92207f44">indices</a>[offset] = (<a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#af9bfc99e3f8d44fc8d61ff6d43c7f580">FT_UInt16</a>)gindex;</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>          <span class="comment">/* restore old charmap */</span></div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>          <a class="code hl_function" href="freetype_8h.html#a9208d1ccf0f8ad9a122fd6c9fe0c5b45">FT_Set_Charmap</a>( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, old );</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        }</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>      }</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    }</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keywordflow">return</span> gindex;</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>  }</div>
+</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2amiga_2include_2freetype_2config_2ftconfig_8h_html_ad012d49d959527854f814cfd38299aab"><div class="ttname"><a href="builds_2amiga_2include_2freetype_2config_2ftconfig_8h.html#ad012d49d959527854f814cfd38299aab">FT_EXPORT_DEF</a></div><div class="ttdeci">#define FT_EXPORT_DEF(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:8</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a04749b69ac5a7fd07001364cc9f803fd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a04749b69ac5a7fd07001364cc9f803fd">FT_CALLBACK_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_DEF(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:227</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3b8071588139bdf26503c59260303ebd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></div><div class="ttdeci">unsigned int FT_UInt32</div><div class="ttdef"><b>Definition</b> ftconfig.h:104</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3e7304105563eb715cae1b9c213858ed"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE_DEF</div><div class="ttdef"><b>Definition</b> ftconfig.h:229</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a4db62b7638f149986cdc24d0c03e062f"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a></div><div class="ttdeci">#define FT_UNUSED(arg)</div><div class="ttdef"><b>Definition</b> ftconfig.h:77</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_af9bfc99e3f8d44fc8d61ff6d43c7f580"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#af9bfc99e3f8d44fc8d61ff6d43c7f580">FT_UInt16</a></div><div class="ttdeci">unsigned short FT_UInt16</div><div class="ttdef"><b>Definition</b> ftconfig.h:99</div></div>
+<div class="ttc" id="afreetype_8h_html_a529192ba5290936f21b63f257bf42bdd"><div class="ttname"><a href="freetype_8h.html#a529192ba5290936f21b63f257bf42bdd">FT_Get_Char_Index</a></div><div class="ttdeci">FT_Get_Char_Index(FT_Face face, FT_ULong charcode)</div><div class="ttdef"><b>Definition</b> ftobjs.c:1567</div></div>
+<div class="ttc" id="afreetype_8h_html_a7eba045ee20968354fa1bff0f69740fa"><div class="ttname"><a href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></div><div class="ttdeci">struct FT_FaceRec_ * FT_Face</div><div class="ttdef"><b>Definition</b> freetype.h:315</div></div>
+<div class="ttc" id="afreetype_8h_html_a9208d1ccf0f8ad9a122fd6c9fe0c5b45"><div class="ttname"><a href="freetype_8h.html#a9208d1ccf0f8ad9a122fd6c9fe0c5b45">FT_Set_Charmap</a></div><div class="ttdeci">FT_Set_Charmap(FT_Face face, FT_CharMap charmap)</div><div class="ttdef"><b>Definition</b> ftobjs.c:1466</div></div>
+<div class="ttc" id="afreetype_8h_html_afc4717ddfd456a38ee15ec9c88fc7dac"><div class="ttname"><a href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a></div><div class="ttdeci">struct FT_CharMapRec_ * FT_CharMap</div><div class="ttdef"><b>Definition</b> freetype.h:389</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftcache_8h_html_a4e3e4336009353906dece81c0c9cf98e"><div class="ttname"><a href="ftcache_8h.html#a4e3e4336009353906dece81c0c9cf98e">FTC_Manager_Lookup_Face</a></div><div class="ttdeci">FTC_Manager_Lookup_Face(FTC_Manager manager, FTC_FaceID face_id, FT_Face *aface)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:133</div></div>
+<div class="ttc" id="aftcache_8h_html_a534ce5d170cc582fb78f55d9b43ced59"><div class="ttname"><a href="ftcache_8h.html#a534ce5d170cc582fb78f55d9b43ced59">FTC_FACE_ID_HASH</a></div><div class="ttdeci">#define FTC_FACE_ID_HASH(i)</div><div class="ttdef"><b>Definition</b> ftcache.h:188</div></div>
+<div class="ttc" id="aftcache_8h_html_a69e20e3229cfa1fe4677c6626890a2e4"><div class="ttname"><a href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a></div><div class="ttdeci">struct FTC_NodeRec_ * FTC_Node</div><div class="ttdef"><b>Definition</b> ftcache.h:249</div></div>
+<div class="ttc" id="aftcache_8h_html_afa42daf62f0c6ee9d6d93e44236e47ac"><div class="ttname"><a href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></div><div class="ttdeci">struct FTC_ManagerRec_ * FTC_Manager</div><div class="ttdef"><b>Definition</b> ftcache.h:229</div></div>
+<div class="ttc" id="aftccache_8h_html_a095a59c6052424bec9f75ad5e052aa73"><div class="ttname"><a href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FTC_CacheRec_ * FTC_Cache</div><div class="ttdef"><b>Definition</b> ftccache.h:30</div></div>
+<div class="ttc" id="aftccache_8h_html_a2543323bf3358707d629aa92727ee8e1"><div class="ttname"><a href="ftccache_8h.html#a2543323bf3358707d629aa92727ee8e1">FTC_FamilyRec</a></div><div class="ttdeci">struct FTC_FamilyRec_ FTC_FamilyRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a29958ad81fd027a85c17974a9876045e"><div class="ttname"><a href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a></div><div class="ttdeci">ftc_cache_clear(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:471</div></div>
+<div class="ttc" id="aftccache_8h_html_a2e21a71e9b0e54ae826d3608440b1142"><div class="ttname"><a href="ftccache_8h.html#a2e21a71e9b0e54ae826d3608440b1142">FTC_QUERY</a></div><div class="ttdeci">#define FTC_QUERY(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:117</div></div>
+<div class="ttc" id="aftccache_8h_html_a2fbddca535665bf0429a3e6a7567a349"><div class="ttname"><a href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a></div><div class="ttdeci">struct FTC_CacheRec_ FTC_CacheRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a359d2dfeee5abb19bbfe0afd0775556a"><div class="ttname"><a href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a></div><div class="ttdeci">struct FTC_Cache_ClassRec_ FTC_Cache_ClassRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a446cb5758705c8d93fed4834c1f7ba01"><div class="ttname"><a href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a></div><div class="ttdeci">ftc_cache_init(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:426</div></div>
+<div class="ttc" id="aftccache_8h_html_a4e044ea7a9cfe2cbc7b2046879fa66e7"><div class="ttname"><a href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a></div><div class="ttdeci">void(* FTC_Node_DoneFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:241</div></div>
+<div class="ttc" id="aftccache_8h_html_a74516f61eef430ec9c782a308f452e2c"><div class="ttname"><a href="ftccache_8h.html#a74516f61eef430ec9c782a308f452e2c">ftc_node_done</a></div><div class="ttdeci">ftc_node_done(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:44</div></div>
+<div class="ttc" id="aftccache_8h_html_a7fda8305fba9da3ac004f69d62222c1f"><div class="ttname"><a href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a></div><div class="ttdeci">void(* FTC_Cache_ClearFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:202</div></div>
+<div class="ttc" id="aftccache_8h_html_a8d40751b20ddb9a153ea1c474b1924ff"><div class="ttname"><a href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a></div><div class="ttdeci">FT_Bool(* FTC_Node_CompareFunc)(FTC_Node node, FT_Pointer key, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:235</div></div>
+<div class="ttc" id="aftccache_8h_html_a9569a13469bd526ef597ba839844b0b2"><div class="ttname"><a href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Cache_InitFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:198</div></div>
+<div class="ttc" id="aftccache_8h_html_a96f43456912699b680da2096288e8a93"><div class="ttname"><a href="ftccache_8h.html#a96f43456912699b680da2096288e8a93">FTC_QueryRec</a></div><div class="ttdeci">struct FTC_QueryRec_ FTC_QueryRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a9b89a008acd33229209ea4ca60f919de"><div class="ttname"><a href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a></div><div class="ttdeci">const struct FTC_Cache_ClassRec_ * FTC_Cache_Class</div><div class="ttdef"><b>Definition</b> ftccache.h:33</div></div>
+<div class="ttc" id="aftccache_8h_html_aa80e8485449ae6c35ca2a41c582df4f7"><div class="ttname"><a href="ftccache_8h.html#aa80e8485449ae6c35ca2a41c582df4f7">FTC_CACHE_P</a></div><div class="ttdeci">#define FTC_CACHE_P(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:193</div></div>
+<div class="ttc" id="aftccache_8h_html_abd89a8a8e860a11792cf2ca59fe3d5ed"><div class="ttname"><a href="ftccache_8h.html#abd89a8a8e860a11792cf2ca59fe3d5ed">ftc_family_init</a></div><div class="ttdeci">ftc_family_init(FTC_Family family, FTC_Query query, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:376</div></div>
+<div class="ttc" id="aftccache_8h_html_acb5e48b47a8df5f85ca45be7a024dcae"><div class="ttname"><a href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a></div><div class="ttdeci">void(* FTC_Family_DoneFunc)(FTC_Family family, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:219</div></div>
+<div class="ttc" id="aftccache_8h_html_accff87f7fe8ee4824aed3d9b5ac7fc35"><div class="ttname"><a href="ftccache_8h.html#accff87f7fe8ee4824aed3d9b5ac7fc35">FTC_CACHE</a></div><div class="ttdeci">#define FTC_CACHE(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:192</div></div>
+<div class="ttc" id="aftccache_8h_html_ad8e7952ccf161b72f4f25dc5de31f08f"><div class="ttname"><a href="ftccache_8h.html#ad8e7952ccf161b72f4f25dc5de31f08f">FTC_NodeRec</a></div><div class="ttdeci">struct FTC_NodeRec_ FTC_NodeRec</div></div>
+<div class="ttc" id="aftccache_8h_html_ad9a62f6e005e94390b5871fead4c046f"><div class="ttname"><a href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a></div><div class="ttdeci">FT_ULong(* FTC_Node_WeightFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:230</div></div>
+<div class="ttc" id="aftccache_8h_html_ada49ed57b935b684d100b9b557c0ebbb"><div class="ttname"><a href="ftccache_8h.html#ada49ed57b935b684d100b9b557c0ebbb">ftc_family_done</a></div><div class="ttdeci">ftc_family_done(FTC_Family family)</div><div class="ttdef"><b>Definition</b> ftccache.c:405</div></div>
+<div class="ttc" id="aftccache_8h_html_add258d52f2e5270ca6aa757658198266"><div class="ttname"><a href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Family_InitFunc)(FTC_Family family, FTC_Query query, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:210</div></div>
+<div class="ttc" id="aftccache_8h_html_aea9f60ed64c82997a8d6b6ae2c808561"><div class="ttname"><a href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a></div><div class="ttdeci">void(* FTC_Cache_DoneFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:206</div></div>
+<div class="ttc" id="aftccache_8h_html_aeedbacc3ae67fcafc7806e83cb2d9772"><div class="ttname"><a href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a></div><div class="ttdeci">FT_Int(* FTC_Family_CompareFunc)(FTC_Family family, FTC_Query query)</div><div class="ttdef"><b>Definition</b> ftccache.h:215</div></div>
+<div class="ttc" id="aftccache_8h_html_af8b0bb86a0434c6bdeb346c0f53afb32"><div class="ttname"><a href="ftccache_8h.html#af8b0bb86a0434c6bdeb346c0f53afb32">FTC_FAMILY</a></div><div class="ttdeci">#define FTC_FAMILY(x)</div><div class="ttdef"><b>Definition</b> ftccache.h:139</div></div>
+<div class="ttc" id="aftccache_8h_html_afb110aa890319e5aaa0c751804afb427"><div class="ttname"><a href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Node_InitFunc)(FTC_Node node, FT_Pointer type, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:224</div></div>
+<div class="ttc" id="aftccache_8h_html_aff0fde319e7b724184209a0ebb5ea0e9"><div class="ttname"><a href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a></div><div class="ttdeci">ftc_cache_done(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:518</div></div>
+<div class="ttc" id="aftccmap_8c_html_a042f39963549e4ef4c67c840c04b2b07"><div class="ttname"><a href="ftccmap_8c.html#a042f39963549e4ef4c67c840c04b2b07">ftc_cmap_node_weight</a></div><div class="ttdeci">ftc_cmap_node_weight(FTC_CMapNode cnode)</div><div class="ttdef"><b>Definition</b> ftccmap.c:131</div></div>
+<div class="ttc" id="aftccmap_8c_html_a086efb545228474292b7758d8fe89695"><div class="ttname"><a href="ftccmap_8c.html#a086efb545228474292b7758d8fe89695">FTC_CMapQuery</a></div><div class="ttdeci">struct FTC_CMapQueryRec_ * FTC_CMapQuery</div></div>
+<div class="ttc" id="aftccmap_8c_html_a1e7f706c788608a9e9629e6841b2adcb"><div class="ttname"><a href="ftccmap_8c.html#a1e7f706c788608a9e9629e6841b2adcb">ftc_cmap_family_init</a></div><div class="ttdeci">ftc_cmap_family_init(FTC_CMapFamily cfam, FTC_CMapQuery cquery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccmap.c:161</div></div>
+<div class="ttc" id="aftccmap_8c_html_a24b00be9ab1232b77b56f3d7091e3236"><div class="ttname"><a href="ftccmap_8c.html#a24b00be9ab1232b77b56f3d7091e3236">ftc_cmap_family_compare</a></div><div class="ttdeci">ftc_cmap_family_compare(FTC_CMapFamily cfam, FTC_CMapQuery cquery)</div><div class="ttdef"><b>Definition</b> ftccmap.c:236</div></div>
+<div class="ttc" id="aftccmap_8c_html_a2c861f74f3072a491b2046e43a278fc5"><div class="ttname"><a href="ftccmap_8c.html#a2c861f74f3072a491b2046e43a278fc5">FTC_CMAP_UNKNOWN</a></div><div class="ttdeci">#define FTC_CMAP_UNKNOWN</div><div class="ttdef"><b>Definition</b> ftccmap.c:65</div></div>
+<div class="ttc" id="aftccmap_8c_html_a49c9a720276ccf6a178097764269107a"><div class="ttname"><a href="ftccmap_8c.html#a49c9a720276ccf6a178097764269107a">ftc_cmap_cache_class</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FTC_Cache_ClassRec ftc_cmap_cache_class</div><div class="ttdef"><b>Definition</b> ftccmap.c:288</div></div>
+<div class="ttc" id="aftccmap_8c_html_a510a5312399b8594e3344c1bf05b7a53"><div class="ttname"><a href="ftccmap_8c.html#a510a5312399b8594e3344c1bf05b7a53">FTC_CMapFamilyRec</a></div><div class="ttdeci">struct FTC_CMapFamilyRec_ FTC_CMapFamilyRec</div></div>
+<div class="ttc" id="aftccmap_8c_html_a5defc1d54ff0811f2c75261b0630de79"><div class="ttname"><a href="ftccmap_8c.html#a5defc1d54ff0811f2c75261b0630de79">FTC_CMAP_FAMILY</a></div><div class="ttdeci">#define FTC_CMAP_FAMILY(x)</div><div class="ttdef"><b>Definition</b> ftccmap.c:92</div></div>
+<div class="ttc" id="aftccmap_8c_html_a5fe5fa11eb8b09ca2e770d9051c92828"><div class="ttname"><a href="ftccmap_8c.html#a5fe5fa11eb8b09ca2e770d9051c92828">FTC_CMapNode</a></div><div class="ttdeci">struct FTC_CMapNodeRec_ * FTC_CMapNode</div></div>
+<div class="ttc" id="aftccmap_8c_html_a6332783bd65a83416091819b252cc73b"><div class="ttname"><a href="ftccmap_8c.html#a6332783bd65a83416091819b252cc73b">ftc_cmap_cache_lookup</a></div><div class="ttdeci">#define ftc_cmap_cache_lookup</div><div class="ttdef"><b>Definition</b> ftccmap.c:335</div></div>
+<div class="ttc" id="aftccmap_8c_html_a6dd6f1976bd266e4bbaa2a2d24d08cc1"><div class="ttname"><a href="ftccmap_8c.html#a6dd6f1976bd266e4bbaa2a2d24d08cc1">FTC_CMAP_HASH</a></div><div class="ttdeci">#define FTC_CMAP_HASH(cfam, cquery)</div><div class="ttdef"><b>Definition</b> ftccmap.c:60</div></div>
+<div class="ttc" id="aftccmap_8c_html_a9241f9e4b97c1c7a89feda463e351d9f"><div class="ttname"><a href="ftccmap_8c.html#a9241f9e4b97c1c7a89feda463e351d9f">ftc_cmap_node_compare</a></div><div class="ttdeci">ftc_cmap_node_compare(FTC_CMapNode cnode, FTC_CMapQuery cquery)</div><div class="ttdef"><b>Definition</b> ftccmap.c:141</div></div>
+<div class="ttc" id="aftccmap_8c_html_a9ec87583e18d11947baaad96a1e50f3f"><div class="ttname"><a href="ftccmap_8c.html#a9ec87583e18d11947baaad96a1e50f3f">FTC_CMapNodeRec</a></div><div class="ttdeci">struct FTC_CMapNodeRec_ FTC_CMapNodeRec</div></div>
+<div class="ttc" id="aftccmap_8c_html_a9f5c9ac895f902357385288f19c62b8a"><div class="ttname"><a href="ftccmap_8c.html#a9f5c9ac895f902357385288f19c62b8a">FTC_CMapFamily</a></div><div class="ttdeci">struct FTC_CMapFamilyRec_ * FTC_CMapFamily</div></div>
+<div class="ttc" id="aftccmap_8c_html_aa190031e2dcf55b8b68364151e938fe7"><div class="ttname"><a href="ftccmap_8c.html#aa190031e2dcf55b8b68364151e938fe7">FTC_CMAP_INDICES_MAX</a></div><div class="ttdeci">#define FTC_CMAP_INDICES_MAX</div><div class="ttdef"><b>Definition</b> ftccmap.c:44</div></div>
+<div class="ttc" id="aftccmap_8c_html_aa9a4bfcb15682849aa461f8a341b4cb8"><div class="ttname"><a href="ftccmap_8c.html#aa9a4bfcb15682849aa461f8a341b4cb8">FTC_CMapQueryRec</a></div><div class="ttdeci">struct FTC_CMapQueryRec_ FTC_CMapQueryRec</div></div>
+<div class="ttc" id="aftccmap_8c_html_ae13b105e0c59fac46bbd6d1e9c2d8b26"><div class="ttname"><a href="ftccmap_8c.html#ae13b105e0c59fac46bbd6d1e9c2d8b26">ftc_cmap_node_init</a></div><div class="ttdeci">ftc_cmap_node_init(FTC_CMapNode cnode, FTC_CMapQuery cquery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccmap.c:109</div></div>
+<div class="ttc" id="aftccmap_8h_html_a26d463213d03f5893dc4f0f56d65000ca2ea0e8a7e9b6bc28ef93904a5a7d39b3"><div class="ttname"><a href="ftccmap_8h.html#a26d463213d03f5893dc4f0f56d65000ca2ea0e8a7e9b6bc28ef93904a5a7d39b3">FTC_CMAP_BY_ENCODING</a></div><div class="ttdeci">@ FTC_CMAP_BY_ENCODING</div><div class="ttdef"><b>Definition</b> ftccmap.h:86</div></div>
+<div class="ttc" id="aftccmap_8h_html_a26d463213d03f5893dc4f0f56d65000cac3b21ea11deac31cca116c4f23af6356"><div class="ttname"><a href="ftccmap_8h.html#a26d463213d03f5893dc4f0f56d65000cac3b21ea11deac31cca116c4f23af6356">FTC_CMAP_BY_ID</a></div><div class="ttdeci">@ FTC_CMAP_BY_ID</div><div class="ttdef"><b>Definition</b> ftccmap.h:87</div></div>
+<div class="ttc" id="aftccmap_8h_html_a26d463213d03f5893dc4f0f56d65000cacd4e7e8d06ff090b6c0927ad0e4ce313"><div class="ttname"><a href="ftccmap_8h.html#a26d463213d03f5893dc4f0f56d65000cacd4e7e8d06ff090b6c0927ad0e4ce313">FTC_CMAP_BY_INDEX</a></div><div class="ttdeci">@ FTC_CMAP_BY_INDEX</div><div class="ttdef"><b>Definition</b> ftccmap.h:85</div></div>
+<div class="ttc" id="aftccmap_8h_html_a2caec1677dd04ce4ef58ab056bf69c76"><div class="ttname"><a href="ftccmap_8h.html#a2caec1677dd04ce4ef58ab056bf69c76">FTC_CMapCache</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FTC_CMapCacheRec_ * FTC_CMapCache</div><div class="ttdef"><b>Definition</b> ftccmap.h:45</div></div>
+<div class="ttc" id="aftccmap_8h_html_ab99c23dd20da843e8bb866fc93226fb0"><div class="ttname"><a href="ftccmap_8h.html#ab99c23dd20da843e8bb866fc93226fb0">FTC_CMapCache_New</a></div><div class="ttdeci">FTC_CMapCache_New(FTC_Manager manager, FTC_CMapCache *acache)</div><div class="ttdef"><b>Definition</b> ftccmap.c:311</div></div>
+<div class="ttc" id="aftccmap_8h_html_ad3bc81dda0c71d8f81ef7bfe9c5f2bdc"><div class="ttname"><a href="ftccmap_8h.html#ad3bc81dda0c71d8f81ef7bfe9c5f2bdc">FTC_CMapDesc</a></div><div class="ttdeci">struct FTC_CMapDescRec_ * FTC_CMapDesc</div><div class="ttdef"><b>Definition</b> ftccmap.h:60</div></div>
+<div class="ttc" id="aftccmap_8h_html_aebc4a6120353ae6a60453f6fa5d6fc6a"><div class="ttname"><a href="ftccmap_8h.html#aebc4a6120353ae6a60453f6fa5d6fc6a">FTC_CMapDescRec</a></div><div class="ttdeci">struct FTC_CMapDescRec_ FTC_CMapDescRec</div></div>
+<div class="ttc" id="aftccmap_8h_html_aedbcb612e758c6e64fb41c864a0b173a"><div class="ttname"><a href="ftccmap_8h.html#aedbcb612e758c6e64fb41c864a0b173a">FTC_CMapCache_Lookup</a></div><div class="ttdeci">FTC_CMapCache_Lookup(FTC_CMapCache cache, FTC_CMapDesc cmap_desc, FT_UInt32 char_code)</div><div class="ttdef"><b>Definition</b> ftccmap.c:343</div></div>
+<div class="ttc" id="aftcerror_8h_html"><div class="ttname"><a href="ftcerror_8h.html">ftcerror.h</a></div></div>
+<div class="ttc" id="aftcmanag_8h_html_a8ed3e862c3edd26789b4f34475af6ffd"><div class="ttname"><a href="ftcmanag_8h.html#a8ed3e862c3edd26789b4f34475af6ffd">FTC_Manager_Register_Cache</a></div><div class="ttdeci">FTC_Manager_Register_Cache(FTC_Manager manager, FTC_Cache_Class clazz, FTC_Cache *acache)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:688</div></div>
+<div class="ttc" id="aftdebug_8h_html_a0edcd80581eabc970a562c5d284d5e7e"><div class="ttname"><a href="ftdebug_8h.html#a0edcd80581eabc970a562c5d284d5e7e">FT_ASSERT</a></div><div class="ttdeci">#define FT_ASSERT(condition)</div><div class="ttdef"><b>Definition</b> ftdebug.h:152</div></div>
+<div class="ttc" id="aftdebug_8h_html_a311092b5a8fece0a17cfb5b2d874e25d"><div class="ttname"><a href="ftdebug_8h.html#a311092b5a8fece0a17cfb5b2d874e25d">FT_ERROR</a></div><div class="ttdeci">#define FT_ERROR(varformat)</div><div class="ttdef"><b>Definition</b> ftdebug.h:129</div></div>
+<div class="ttc" id="aftobjs_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> ftobjs.h:60</div></div>
+<div class="ttc" id="afttypes_8h_html_a1a832a256bb5a7e6e884afaa1a07f3ae"><div class="ttname"><a href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef unsigned char FT_Bool</div><div class="ttdef"><b>Definition</b> fttypes.h:97</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a77b77ff4d86f1c3a791463b762cfe60e"><div class="ttname"><a href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div><div class="ttdeci">int FT_Int</div><div class="ttdef"><b>Definition</b> fttypes.h:187</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="afttypes_8h_html_adf712510036d534403cbddf4f18c2083"><div class="ttname"><a href="fttypes_8h.html#adf712510036d534403cbddf4f18c2083">FT_BOOL</a></div><div class="ttdeci">#define FT_BOOL(x)</div><div class="ttdef"><b>Definition</b> fttypes.h:551</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+<div class="ttc" id="astruct_f_t___char_map_rec___html_af10dd43eee8dc93e7d6191c663ae831a"><div class="ttname"><a href="struct_f_t___char_map_rec__.html#af10dd43eee8dc93e7d6191c663ae831a">FT_CharMapRec_::encoding_id</a></div><div class="ttdeci">FT_UShort encoding_id</div><div class="ttdef"><b>Definition</b> freetype.h:611</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_desc_rec___html_a1ece63112804914536f80aa9156987b1"><div class="ttname"><a href="struct_f_t_c___c_map_desc_rec__.html#a1ece63112804914536f80aa9156987b1">FTC_CMapDescRec_::face_id</a></div><div class="ttdeci">FTC_FaceID face_id</div><div class="ttdef"><b>Definition</b> ftccmap.h:139</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_desc_rec___html_a243c8a0b7a798b1e35e2182f647ca5a0"><div class="ttname"><a href="struct_f_t_c___c_map_desc_rec__.html#a243c8a0b7a798b1e35e2182f647ca5a0">FTC_CMapDescRec_::encoding</a></div><div class="ttdeci">FT_Encoding encoding</div><div class="ttdef"><b>Definition</b> ftccmap.h:145</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_desc_rec___html_aa0bb63304f6034294ed6b5c5cf1043b2"><div class="ttname"><a href="struct_f_t_c___c_map_desc_rec__.html#aa0bb63304f6034294ed6b5c5cf1043b2">FTC_CMapDescRec_::id</a></div><div class="ttdeci">FTC_CMapIdRec id</div><div class="ttdef"><b>Definition</b> ftccmap.h:146</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_desc_rec___html_aa346f38cfdfef79fa96b77687235a416"><div class="ttname"><a href="struct_f_t_c___c_map_desc_rec__.html#aa346f38cfdfef79fa96b77687235a416">FTC_CMapDescRec_::u</a></div><div class="ttdeci">union FTC_CMapDescRec_::@264245262211337356326360141375233206170226046324 u</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_desc_rec___html_af3a9d2eb783b0f637219b5542a3f8a98"><div class="ttname"><a href="struct_f_t_c___c_map_desc_rec__.html#af3a9d2eb783b0f637219b5542a3f8a98">FTC_CMapDescRec_::index</a></div><div class="ttdeci">FT_UInt index</div><div class="ttdef"><b>Definition</b> ftccmap.h:144</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_desc_rec___html_afec0920a962260d3117d6451f4eed3ee"><div class="ttname"><a href="struct_f_t_c___c_map_desc_rec__.html#afec0920a962260d3117d6451f4eed3ee">FTC_CMapDescRec_::type</a></div><div class="ttdeci">FTC_CMapType type</div><div class="ttdef"><b>Definition</b> ftccmap.h:140</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_family_rec___html"><div class="ttname"><a href="struct_f_t_c___c_map_family_rec__.html">FTC_CMapFamilyRec_</a></div><div class="ttdef"><b>Definition</b> ftccmap.c:83</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_family_rec___html_a59da5dda4e03a17b82a714d46b3c6d42"><div class="ttname"><a href="struct_f_t_c___c_map_family_rec__.html#a59da5dda4e03a17b82a714d46b3c6d42">FTC_CMapFamilyRec_::index</a></div><div class="ttdeci">FT_UInt index</div><div class="ttdef"><b>Definition</b> ftccmap.c:87</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_family_rec___html_a6e8b06b1bde3e518918a0f77bf35ada0"><div class="ttname"><a href="struct_f_t_c___c_map_family_rec__.html#a6e8b06b1bde3e518918a0f77bf35ada0">FTC_CMapFamilyRec_::family</a></div><div class="ttdeci">FTC_FamilyRec family</div><div class="ttdef"><b>Definition</b> ftccmap.c:84</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_family_rec___html_ac65964585637c1d988b78bef94b56b9e"><div class="ttname"><a href="struct_f_t_c___c_map_family_rec__.html#ac65964585637c1d988b78bef94b56b9e">FTC_CMapFamilyRec_::hash</a></div><div class="ttdeci">FT_UInt32 hash</div><div class="ttdef"><b>Definition</b> ftccmap.c:85</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_family_rec___html_ae22d12cebbec226a0dc15c760c5d76cf"><div class="ttname"><a href="struct_f_t_c___c_map_family_rec__.html#ae22d12cebbec226a0dc15c760c5d76cf">FTC_CMapFamilyRec_::desc</a></div><div class="ttdeci">FTC_CMapDescRec desc</div><div class="ttdef"><b>Definition</b> ftccmap.c:86</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_id_rec___html_a43806c52cc93153b83785f59a56c8d80"><div class="ttname"><a href="struct_f_t_c___c_map_id_rec__.html#a43806c52cc93153b83785f59a56c8d80">FTC_CMapIdRec_::platform</a></div><div class="ttdeci">FT_UInt platform</div><div class="ttdef"><b>Definition</b> ftccmap.h:108</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_id_rec___html_ad649cc8fc14d235d9a837ae662612e4e"><div class="ttname"><a href="struct_f_t_c___c_map_id_rec__.html#ad649cc8fc14d235d9a837ae662612e4e">FTC_CMapIdRec_::encoding</a></div><div class="ttdeci">FT_UInt encoding</div><div class="ttdef"><b>Definition</b> ftccmap.h:109</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_node_rec___html"><div class="ttname"><a href="struct_f_t_c___c_map_node_rec__.html">FTC_CMapNodeRec_</a></div><div class="ttdef"><b>Definition</b> ftccmap.c:48</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_node_rec___html_a027dbba40fff69333ec20b4bc311a4f0"><div class="ttname"><a href="struct_f_t_c___c_map_node_rec__.html#a027dbba40fff69333ec20b4bc311a4f0">FTC_CMapNodeRec_::node</a></div><div class="ttdeci">FTC_NodeRec node</div><div class="ttdef"><b>Definition</b> ftccmap.c:49</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_node_rec___html_a386e8bde9f720faeb8c1437fb0b6b593"><div class="ttname"><a href="struct_f_t_c___c_map_node_rec__.html#a386e8bde9f720faeb8c1437fb0b6b593">FTC_CMapNodeRec_::first</a></div><div class="ttdeci">FT_UInt32 first</div><div class="ttdef"><b>Definition</b> ftccmap.c:50</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_node_rec___html_ae3801fdfb4ec0e8c2ac9dd3e92207f44"><div class="ttname"><a href="struct_f_t_c___c_map_node_rec__.html#ae3801fdfb4ec0e8c2ac9dd3e92207f44">FTC_CMapNodeRec_::indices</a></div><div class="ttdeci">FT_UInt16 indices[FTC_CMAP_INDICES_MAX]</div><div class="ttdef"><b>Definition</b> ftccmap.c:51</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_query_rec___html"><div class="ttname"><a href="struct_f_t_c___c_map_query_rec__.html">FTC_CMapQueryRec_</a></div><div class="ttdef"><b>Definition</b> ftccmap.c:70</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_query_rec___html_a56d7630bd79dc5ae11edef9f7616e4fa"><div class="ttname"><a href="struct_f_t_c___c_map_query_rec__.html#a56d7630bd79dc5ae11edef9f7616e4fa">FTC_CMapQueryRec_::query</a></div><div class="ttdeci">FTC_QueryRec query</div><div class="ttdef"><b>Definition</b> ftccmap.c:71</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_query_rec___html_a5ecbf86c2215c73e0ceafef11138163b"><div class="ttname"><a href="struct_f_t_c___c_map_query_rec__.html#a5ecbf86c2215c73e0ceafef11138163b">FTC_CMapQueryRec_::desc</a></div><div class="ttdeci">FTC_CMapDesc desc</div><div class="ttdef"><b>Definition</b> ftccmap.c:72</div></div>
+<div class="ttc" id="astruct_f_t_c___c_map_query_rec___html_ad943d0c1bfbff84ce7d631faa0dbc18e"><div class="ttname"><a href="struct_f_t_c___c_map_query_rec__.html#ad943d0c1bfbff84ce7d631faa0dbc18e">FTC_CMapQueryRec_::char_code</a></div><div class="ttdeci">FT_UInt32 char_code</div><div class="ttdef"><b>Definition</b> ftccmap.c:73</div></div>
+<div class="ttc" id="atest__trig_8c_html_af10dacfa214e2575bb2e0ee407c242e0"><div class="ttname"><a href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a></div><div class="ttdeci">static error</div><div class="ttdef"><b>Definition</b> test_trig.c:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_1ecb25ace48afe747597ea1a7845e1b7.html">cache</a></li><li class="navelem"><a href="ftccmap_8c.html">ftccmap.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

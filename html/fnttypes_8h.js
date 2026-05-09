@@ -1,0 +1,25 @@
+var fnttypes_8h =
+[
+    [ "WinMZ_HeaderRec_", "struct_win_m_z___header_rec__.html", "struct_win_m_z___header_rec__" ],
+    [ "WinNE_HeaderRec_", "struct_win_n_e___header_rec__.html", "struct_win_n_e___header_rec__" ],
+    [ "WinNameInfoRec_", "struct_win_name_info_rec__.html", "struct_win_name_info_rec__" ],
+    [ "WinResourceInfoRec_", "struct_win_resource_info_rec__.html", "struct_win_resource_info_rec__" ],
+    [ "WinFNT_HeaderRec_", "struct_win_f_n_t___header_rec__.html", "struct_win_f_n_t___header_rec__" ],
+    [ "FNT_FontRec_", "struct_f_n_t___font_rec__.html", "struct_f_n_t___font_rec__" ],
+    [ "FNT_SizeRec_", "struct_f_n_t___size_rec__.html", "struct_f_n_t___size_rec__" ],
+    [ "FNT_FaceRec_", "struct_f_n_t___face_rec__.html", "struct_f_n_t___face_rec__" ],
+    [ "WINFNT_MZ_MAGIC", "fnttypes_8h.html#ae8c0951dc8ffb9f0f2cbb6810b056a06", null ],
+    [ "WINFNT_NE_MAGIC", "fnttypes_8h.html#ad195fc75642303f0aa380211d155fd43", null ],
+    [ "FNT_Face", "fnttypes_8h.html#aa4d0b98eaea68489b2051fb6347b2562", null ],
+    [ "FNT_FaceRec", "fnttypes_8h.html#a2c2488cee576a7aca97a6175eba59d7f", null ],
+    [ "FNT_Font", "fnttypes_8h.html#aa04459d4a37057672f933c04aacfd342", null ],
+    [ "FNT_FontRec", "fnttypes_8h.html#a956adc17376dac08e920526338590391", null ],
+    [ "FNT_Size", "fnttypes_8h.html#a786a96cd6caf5a648b36c319e7241a7c", null ],
+    [ "FNT_SizeRec", "fnttypes_8h.html#aecab47d2abbe112b766972945268bc8f", null ],
+    [ "WinFNT_Header", "fnttypes_8h.html#acce19a949b7927e3491216e9cada6113", null ],
+    [ "WinFNT_HeaderRec", "fnttypes_8h.html#aa932238b41b4c60e3b9007b534bcb388", null ],
+    [ "WinMZ_HeaderRec", "fnttypes_8h.html#a070da3186979eb676c2fbfe029c6f652", null ],
+    [ "WinNameInfoRec", "fnttypes_8h.html#afc7bc91b54626b06c13ba35d0cdb6ab1", null ],
+    [ "WinNE_HeaderRec", "fnttypes_8h.html#a241b8466b304292bf37477038a10752f", null ],
+    [ "WinResourceInfoRec", "fnttypes_8h.html#ab508c4fcbb5112eb6f037e8c3bd8e815", null ]
+];

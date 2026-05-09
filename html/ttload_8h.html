@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/sfnt/ttload.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ttload_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ttload.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ttload.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2sfnt_2ttload_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2sfnt_2ttload_8hdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ttload_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6b829262448d1619d67121184b364735" id="r_a6b829262448d1619d67121184b364735"><td class="memItemLeft"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6b829262448d1619d67121184b364735">tt_face_lookup_table</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> tag)</td></tr>
+<tr class="memitem:a8fd7b5e90714a25bba2b7fd79edb2856" id="r_a8fd7b5e90714a25bba2b7fd79edb2856"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8fd7b5e90714a25bba2b7fd79edb2856">tt_face_goto_table</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> tag, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *length)</td></tr>
+<tr class="memitem:ace139dd9cf9aec5d538c69b984f58ce6" id="r_ace139dd9cf9aec5d538c69b984f58ce6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ace139dd9cf9aec5d538c69b984f58ce6">tt_face_load_sfnt_header</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> face_index, <a class="el" href="tttypes_8h.html#a0c98d0ae8b58a330ad60a1cabd8596a5">SFNT_Header</a> sfnt)</td></tr>
+<tr class="memitem:a55d3d9b0cc374edafb838e97fcd1e544" id="r_a55d3d9b0cc374edafb838e97fcd1e544"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a55d3d9b0cc374edafb838e97fcd1e544">tt_face_load_directory</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="tttypes_8h.html#a0c98d0ae8b58a330ad60a1cabd8596a5">SFNT_Header</a> sfnt)</td></tr>
+<tr class="memitem:a895fd777114d6f1f97529e4ca29e37d5" id="r_a895fd777114d6f1f97529e4ca29e37d5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a895fd777114d6f1f97529e4ca29e37d5">tt_face_load_any</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> tag, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> offset, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *buffer, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *length)</td></tr>
+<tr class="memitem:aa9c414050bc1c10404091131bce0861a" id="r_aa9c414050bc1c10404091131bce0861a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa9c414050bc1c10404091131bce0861a">tt_face_load_header</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:aa1bfef7846344beb830fb08a6e302617" id="r_aa1bfef7846344beb830fb08a6e302617"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa1bfef7846344beb830fb08a6e302617">tt_face_load_metrics_header</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> vertical)</td></tr>
+<tr class="memitem:a95384aedb3f7a1eab12595c733b8a9fd" id="r_a95384aedb3f7a1eab12595c733b8a9fd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a95384aedb3f7a1eab12595c733b8a9fd">tt_face_load_cmap</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a184536df7719cd5d27444d2347107a8d" id="r_a184536df7719cd5d27444d2347107a8d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a184536df7719cd5d27444d2347107a8d">tt_face_load_max_profile</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:aabfa7cae24c2cbf3f7e725a2406b7aaf" id="r_aabfa7cae24c2cbf3f7e725a2406b7aaf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aabfa7cae24c2cbf3f7e725a2406b7aaf">tt_face_load_names</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a7628668b22e652d70343ba38cc220b81" id="r_a7628668b22e652d70343ba38cc220b81"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7628668b22e652d70343ba38cc220b81">tt_face_load_os2</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a0219e1f3d8530e6be26612315da94495" id="r_a0219e1f3d8530e6be26612315da94495"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0219e1f3d8530e6be26612315da94495">tt_face_load_postscript</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:ac9d599e301ffcf948b13a654cfa3d626" id="r_ac9d599e301ffcf948b13a654cfa3d626"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac9d599e301ffcf948b13a654cfa3d626">tt_face_load_hdmx</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a44338bfd981d75c1a5eb1a0218ab3517" id="r_a44338bfd981d75c1a5eb1a0218ab3517"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a44338bfd981d75c1a5eb1a0218ab3517">tt_face_load_pclt</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:addd406d0ae72788abcdb48437ea153aa" id="r_addd406d0ae72788abcdb48437ea153aa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#addd406d0ae72788abcdb48437ea153aa">tt_face_free_names</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a94fd85dc776a5ece34196417bbec4b87" id="r_a94fd85dc776a5ece34196417bbec4b87"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a94fd85dc776a5ece34196417bbec4b87">tt_face_free_hdmx</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:ae98654b918fd1c2bef3f93ece44c0feb" id="r_ae98654b918fd1c2bef3f93ece44c0feb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae98654b918fd1c2bef3f93ece44c0feb">tt_face_load_kern</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a47ba5a29a1efe75d4013c31f768e0a3a" id="r_a47ba5a29a1efe75d4013c31f768e0a3a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a47ba5a29a1efe75d4013c31f768e0a3a">tt_face_load_gasp</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a94fd85dc776a5ece34196417bbec4b87" name="a94fd85dc776a5ece34196417bbec4b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94fd85dc776a5ece34196417bbec4b87">&#9670;&#160;</a></span>tt_face_free_hdmx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_free_hdmx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a94fd85dc776a5ece34196417bbec4b87_cgraph.png" border="0" usemap="#attload_8h_a94fd85dc776a5ece34196417bbec4b87_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a94fd85dc776a5ece34196417bbec4b87_icgraph.png" border="0" usemap="#attload_8h_a94fd85dc776a5ece34196417bbec4b87_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="addd406d0ae72788abcdb48437ea153aa" name="addd406d0ae72788abcdb48437ea153aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd406d0ae72788abcdb48437ea153aa">&#9670;&#160;</a></span>tt_face_free_names()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_free_names </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_addd406d0ae72788abcdb48437ea153aa_cgraph.png" border="0" usemap="#attload_8h_addd406d0ae72788abcdb48437ea153aa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_addd406d0ae72788abcdb48437ea153aa_icgraph.png" border="0" usemap="#attload_8h_addd406d0ae72788abcdb48437ea153aa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a8fd7b5e90714a25bba2b7fd79edb2856" name="a8fd7b5e90714a25bba2b7fd79edb2856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fd7b5e90714a25bba2b7fd79edb2856">&#9670;&#160;</a></span>tt_face_goto_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_goto_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>tag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a8fd7b5e90714a25bba2b7fd79edb2856_cgraph.png" border="0" usemap="#attload_8h_a8fd7b5e90714a25bba2b7fd79edb2856_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a8fd7b5e90714a25bba2b7fd79edb2856_icgraph.png" border="0" usemap="#attload_8h_a8fd7b5e90714a25bba2b7fd79edb2856_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a895fd777114d6f1f97529e4ca29e37d5" name="a895fd777114d6f1f97529e4ca29e37d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895fd777114d6f1f97529e4ca29e37d5">&#9670;&#160;</a></span>tt_face_load_any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_any </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>tag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a895fd777114d6f1f97529e4ca29e37d5_cgraph.png" border="0" usemap="#attload_8h_a895fd777114d6f1f97529e4ca29e37d5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a895fd777114d6f1f97529e4ca29e37d5_icgraph.png" border="0" usemap="#attload_8h_a895fd777114d6f1f97529e4ca29e37d5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a95384aedb3f7a1eab12595c733b8a9fd" name="a95384aedb3f7a1eab12595c733b8a9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95384aedb3f7a1eab12595c733b8a9fd">&#9670;&#160;</a></span>tt_face_load_cmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_cmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a95384aedb3f7a1eab12595c733b8a9fd_cgraph.png" border="0" usemap="#attload_8h_a95384aedb3f7a1eab12595c733b8a9fd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a95384aedb3f7a1eab12595c733b8a9fd_icgraph.png" border="0" usemap="#attload_8h_a95384aedb3f7a1eab12595c733b8a9fd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a55d3d9b0cc374edafb838e97fcd1e544" name="a55d3d9b0cc374edafb838e97fcd1e544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d3d9b0cc374edafb838e97fcd1e544">&#9670;&#160;</a></span>tt_face_load_directory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_directory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a0c98d0ae8b58a330ad60a1cabd8596a5">SFNT_Header</a></td>          <td class="paramname"><span class="paramname"><em>sfnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a55d3d9b0cc374edafb838e97fcd1e544_cgraph.png" border="0" usemap="#attload_8h_a55d3d9b0cc374edafb838e97fcd1e544_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a55d3d9b0cc374edafb838e97fcd1e544_icgraph.png" border="0" usemap="#attload_8h_a55d3d9b0cc374edafb838e97fcd1e544_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a47ba5a29a1efe75d4013c31f768e0a3a" name="a47ba5a29a1efe75d4013c31f768e0a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ba5a29a1efe75d4013c31f768e0a3a">&#9670;&#160;</a></span>tt_face_load_gasp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_gasp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a47ba5a29a1efe75d4013c31f768e0a3a_cgraph.png" border="0" usemap="#attload_8h_a47ba5a29a1efe75d4013c31f768e0a3a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a47ba5a29a1efe75d4013c31f768e0a3a_icgraph.png" border="0" usemap="#attload_8h_a47ba5a29a1efe75d4013c31f768e0a3a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="ac9d599e301ffcf948b13a654cfa3d626" name="ac9d599e301ffcf948b13a654cfa3d626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d599e301ffcf948b13a654cfa3d626">&#9670;&#160;</a></span>tt_face_load_hdmx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_hdmx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_ac9d599e301ffcf948b13a654cfa3d626_cgraph.png" border="0" usemap="#attload_8h_ac9d599e301ffcf948b13a654cfa3d626_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_ac9d599e301ffcf948b13a654cfa3d626_icgraph.png" border="0" usemap="#attload_8h_ac9d599e301ffcf948b13a654cfa3d626_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="aa9c414050bc1c10404091131bce0861a" name="aa9c414050bc1c10404091131bce0861a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c414050bc1c10404091131bce0861a">&#9670;&#160;</a></span>tt_face_load_header()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_header </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_aa9c414050bc1c10404091131bce0861a_cgraph.png" border="0" usemap="#attload_8h_aa9c414050bc1c10404091131bce0861a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_aa9c414050bc1c10404091131bce0861a_icgraph.png" border="0" usemap="#attload_8h_aa9c414050bc1c10404091131bce0861a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="ae98654b918fd1c2bef3f93ece44c0feb" name="ae98654b918fd1c2bef3f93ece44c0feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98654b918fd1c2bef3f93ece44c0feb">&#9670;&#160;</a></span>tt_face_load_kern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_kern </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_ae98654b918fd1c2bef3f93ece44c0feb_cgraph.png" border="0" usemap="#attload_8h_ae98654b918fd1c2bef3f93ece44c0feb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_ae98654b918fd1c2bef3f93ece44c0feb_icgraph.png" border="0" usemap="#attload_8h_ae98654b918fd1c2bef3f93ece44c0feb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="a184536df7719cd5d27444d2347107a8d" name="a184536df7719cd5d27444d2347107a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184536df7719cd5d27444d2347107a8d">&#9670;&#160;</a></span>tt_face_load_max_profile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_max_profile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a184536df7719cd5d27444d2347107a8d_cgraph.png" border="0" usemap="#attload_8h_a184536df7719cd5d27444d2347107a8d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a184536df7719cd5d27444d2347107a8d_icgraph.png" border="0" usemap="#attload_8h_a184536df7719cd5d27444d2347107a8d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="aa1bfef7846344beb830fb08a6e302617" name="aa1bfef7846344beb830fb08a6e302617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1bfef7846344beb830fb08a6e302617">&#9670;&#160;</a></span>tt_face_load_metrics_header()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_metrics_header </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>vertical</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_aa1bfef7846344beb830fb08a6e302617_cgraph.png" border="0" usemap="#attload_8h_aa1bfef7846344beb830fb08a6e302617_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_aa1bfef7846344beb830fb08a6e302617_icgraph.png" border="0" usemap="#attload_8h_aa1bfef7846344beb830fb08a6e302617_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="aabfa7cae24c2cbf3f7e725a2406b7aaf" name="aabfa7cae24c2cbf3f7e725a2406b7aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabfa7cae24c2cbf3f7e725a2406b7aaf">&#9670;&#160;</a></span>tt_face_load_names()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_names </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_aabfa7cae24c2cbf3f7e725a2406b7aaf_cgraph.png" border="0" usemap="#attload_8h_aabfa7cae24c2cbf3f7e725a2406b7aaf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_aabfa7cae24c2cbf3f7e725a2406b7aaf_icgraph.png" border="0" usemap="#attload_8h_aabfa7cae24c2cbf3f7e725a2406b7aaf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a7628668b22e652d70343ba38cc220b81" name="a7628668b22e652d70343ba38cc220b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7628668b22e652d70343ba38cc220b81">&#9670;&#160;</a></span>tt_face_load_os2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_os2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a7628668b22e652d70343ba38cc220b81_cgraph.png" border="0" usemap="#attload_8h_a7628668b22e652d70343ba38cc220b81_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a7628668b22e652d70343ba38cc220b81_icgraph.png" border="0" usemap="#attload_8h_a7628668b22e652d70343ba38cc220b81_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a44338bfd981d75c1a5eb1a0218ab3517" name="a44338bfd981d75c1a5eb1a0218ab3517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44338bfd981d75c1a5eb1a0218ab3517">&#9670;&#160;</a></span>tt_face_load_pclt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_pclt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a44338bfd981d75c1a5eb1a0218ab3517_cgraph.png" border="0" usemap="#attload_8h_a44338bfd981d75c1a5eb1a0218ab3517_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a44338bfd981d75c1a5eb1a0218ab3517_icgraph.png" border="0" usemap="#attload_8h_a44338bfd981d75c1a5eb1a0218ab3517_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a0219e1f3d8530e6be26612315da94495" name="a0219e1f3d8530e6be26612315da94495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0219e1f3d8530e6be26612315da94495">&#9670;&#160;</a></span>tt_face_load_postscript()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_postscript </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a0219e1f3d8530e6be26612315da94495_cgraph.png" border="0" usemap="#attload_8h_a0219e1f3d8530e6be26612315da94495_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a0219e1f3d8530e6be26612315da94495_icgraph.png" border="0" usemap="#attload_8h_a0219e1f3d8530e6be26612315da94495_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="ace139dd9cf9aec5d538c69b984f58ce6" name="ace139dd9cf9aec5d538c69b984f58ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace139dd9cf9aec5d538c69b984f58ce6">&#9670;&#160;</a></span>tt_face_load_sfnt_header()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt_face_load_sfnt_header </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>face_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a0c98d0ae8b58a330ad60a1cabd8596a5">SFNT_Header</a></td>          <td class="paramname"><span class="paramname"><em>sfnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_ace139dd9cf9aec5d538c69b984f58ce6_cgraph.png" border="0" usemap="#attload_8h_ace139dd9cf9aec5d538c69b984f58ce6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_ace139dd9cf9aec5d538c69b984f58ce6_icgraph.png" border="0" usemap="#attload_8h_ace139dd9cf9aec5d538c69b984f58ce6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a6b829262448d1619d67121184b364735" name="a6b829262448d1619d67121184b364735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b829262448d1619d67121184b364735">&#9670;&#160;</a></span>tt_face_lookup_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> tt_face_lookup_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>tag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a6b829262448d1619d67121184b364735_cgraph.png" border="0" usemap="#attload_8h_a6b829262448d1619d67121184b364735_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ttload_8h_a6b829262448d1619d67121184b364735_icgraph.png" border="0" usemap="#attload_8h_a6b829262448d1619d67121184b364735_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_9b9502d2026701cffa9e192852b4ed66.html">sfnt</a></li><li class="navelem"><a href="ttload_8h.html">ttload.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

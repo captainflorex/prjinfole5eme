@@ -1,0 +1,27 @@
+var otlgsub_8c =
+[
+    [ "otl_alternate_set_validate", "otlgsub_8c.html#a27c5be540eaafd29e2e2c01b12ac1871", null ],
+    [ "otl_chain_sub_class_rule_validate", "otlgsub_8c.html#a3d32a6b4d31c03fac03f5451cd60c8cb", null ],
+    [ "otl_chain_sub_class_set_validate", "otlgsub_8c.html#a8359d681124c07d0e73ebc80a83867f3", null ],
+    [ "otl_chain_sub_rule_set_validate", "otlgsub_8c.html#a6be8ab0314e0c74b029f1b9e86063e16", null ],
+    [ "otl_chain_sub_rule_validate", "otlgsub_8c.html#a46b84ce4f8b6003ac7f419605e19e9e4", null ],
+    [ "otl_gsub_lookup1_apply", "otlgsub_8c.html#a97add227ad840c40be95f7ace043bbc4", null ],
+    [ "otl_gsub_lookup1_validate", "otlgsub_8c.html#a45179aa6f30cb8cc137b8f7b42bc972e", null ],
+    [ "otl_gsub_lookup2_apply", "otlgsub_8c.html#ae46628f42aae151cedab6383cc4007cb", null ],
+    [ "otl_gsub_lookup2_validate", "otlgsub_8c.html#a38436cc5f625af369b4c6dacb2361966", null ],
+    [ "otl_gsub_lookup3_apply", "otlgsub_8c.html#ae49dada35ae8ddd367822adc0af9780d", null ],
+    [ "otl_gsub_lookup3_validate", "otlgsub_8c.html#a82e703f553134687f5724011986a0d1e", null ],
+    [ "otl_gsub_lookup4_validate", "otlgsub_8c.html#aa797e4710b6b7be949f0e4845aac7b79", null ],
+    [ "otl_gsub_lookup5_validate", "otlgsub_8c.html#a367c264defc699101862fc97402806ad", null ],
+    [ "otl_gsub_lookup6_validate", "otlgsub_8c.html#a239f420466e0150addf6ead1e04e65c2", null ],
+    [ "otl_gsub_lookup7_validate", "otlgsub_8c.html#acdb2285d396cecdb2acbcc635d86522e", null ],
+    [ "otl_gsub_validate", "otlgsub_8c.html#a245f030618de3bd2083516dc57f2be94", null ],
+    [ "otl_ligature_set_validate", "otlgsub_8c.html#acf77258f703cc6994e994416e80ff0e9", null ],
+    [ "otl_ligature_validate", "otlgsub_8c.html#a2a9bb337c4b3e68d7844dad0e283389e", null ],
+    [ "otl_seq_validate", "otlgsub_8c.html#a84ee7c40424c9032e490575867c32950", null ],
+    [ "otl_sub_class_rule_set_validate", "otlgsub_8c.html#a5872795ffee23f71aa577c3edff61c1f", null ],
+    [ "otl_sub_class_rule_validate", "otlgsub_8c.html#acc778e2378c6ce47548cb7d56f9fed8d", null ],
+    [ "otl_sub_rule_set_validate", "otlgsub_8c.html#a1e6de772d7f860f6319d10fd9bbf6ddf", null ],
+    [ "otl_sub_rule_validate", "otlgsub_8c.html#a5327c44848ab8e37e65a550b00f41421", null ],
+    [ "otl_gsub_validate_funcs", "otlgsub_8c.html#acaf8f46a2421b0a6fde19a3609366dc8", null ]
+];

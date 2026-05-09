@@ -1,0 +1,16 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/tests"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_95a098809e4a27e03a0eec249d425569 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="freetype", rankdir=LR style="filled,dashed", URL="dir_95a098809e4a27e03a0eec249d425569.html",tooltip=""]
+  dir_0efbf6ef4eced45ce4b80ebd0fb47e9e [label="src", fillcolor="#a2b4d6", color="red", style="filled", URL="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html",tooltip=""];
+  dir_3603bed0816a62e1b0e4984ead63386d [label="include", fillcolor="#a2b4d6", color="red", style="filled", URL="dir_3603bed0816a62e1b0e4984ead63386d.html",tooltip=""];
+  dir_96b97eb8b24fffd6f926b8c8a40a1ea3 [label="tests", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_96b97eb8b24fffd6f926b8c8a40a1ea3.html",tooltip=""];
+  }
+  dir_96b97eb8b24fffd6f926b8c8a40a1ea3->dir_0efbf6ef4eced45ce4b80ebd0fb47e9e [headlabel="6", labeldistance=1.5 headhref="dir_000046_000044.html" href="dir_000046_000044.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_96b97eb8b24fffd6f926b8c8a40a1ea3->dir_3603bed0816a62e1b0e4984ead63386d [headlabel="1", labeldistance=1.5 headhref="dir_000046_000030.html" href="dir_000046_000030.html" color="steelblue1" fontcolor="steelblue1"];
+}

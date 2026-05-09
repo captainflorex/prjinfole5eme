@@ -1,0 +1,14 @@
+digraph "bdf_get_font_property"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="bdf_get_font_property",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [id="edge1_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge2_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="hash_lookup",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#a264c70afa66b9ae27def3e33afc1850f",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="hash_bucket",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#a9e06265a24feb234e232bc13b2788dda",tooltip=" "];
+}

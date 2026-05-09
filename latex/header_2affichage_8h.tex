@@ -1,0 +1,970 @@
+\doxysection{Référence du fichier header/\+affichage.h}
+\hypertarget{header_2affichage_8h}{}\label{header_2affichage_8h}\index{header/affichage.h@{header/affichage.h}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include "{}entites.\+h"{}}\newline
+{\ttfamily \+\#include "{}menu.\+h"{}}\newline
+Graphe des dépendances par inclusion de affichage.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{header_2affichage_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee}{affichage\+\_\+init}} (void)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827}{affichage\+\_\+charger\+\_\+ressources}} (void)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3}{affichage\+\_\+liberer\+\_\+ressources}} (void)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5}{afficher\+\_\+jeu}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33}{afficher\+\_\+pause}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6}{afficher\+\_\+hud}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb}{afficher\+\_\+bulle}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed}{afficher\+\_\+joueur}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}j)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb}{afficher\+\_\+projectile}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_projectile}{Projectile}} \texorpdfstring{$\ast$}{*}p)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b}{afficher\+\_\+boss}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03}{afficher\+\_\+decompte}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, int compte)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013}{afficher\+\_\+victoire}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e}{afficher\+\_\+defaite}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb}{afficher\+\_\+saisie\+\_\+pseudo}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80}{joueur\+\_\+signaler\+\_\+tir}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\+\_\+jeu}}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\+\_\+menu}}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\+\_\+bulle\+\_\+grande}}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\+\_\+bulle\+\_\+moyenne}}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\+\_\+bulle\+\_\+petite}}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\+\_\+bulle\+\_\+minuscule}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{header_2affichage_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827}\index{affichage.h@{affichage.h}!affichage\_charger\_ressources@{affichage\_charger\_ressources}}
+\index{affichage\_charger\_ressources@{affichage\_charger\_ressources}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{affichage\_charger\_ressources()}{affichage\_charger\_ressources()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827} 
+void affichage\+\_\+charger\+\_\+ressources (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00061}{61}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{/*\ Fond\ jeu\ */}}
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/fonds/fond\_jeu.bmp"{}},\ NULL);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}\ \&\&\ (\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}-\/>w\ !=\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ ||\ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}-\/>h\ !=\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}}))\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ BITMAP\ *redim\ =\ create\_bitmap(\doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ stretch\_blit(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}},\ redim,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}-\/>w,\ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}-\/>h,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}\ =\ redim;}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}})\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}\ =\ create\_bitmap(\doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ clear\_to\_color(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}},\ makecol(20,\ 20,\ 80));}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*\ Fond\ menu\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}}\ =\ create\_bitmap(\doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\_FENETRE}});}
+\DoxyCodeLine{00078\ \ \ \ \ stretch\_blit(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}},\ \doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}},\ 0,\ 0,\ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}-\/>w,\ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}-\/>h,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\_FENETRE}});}
+\DoxyCodeLine{00080\ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00081\ \ \ \ \ set\_trans\_blender(0,\ 0,\ 0,\ 150);}
+\DoxyCodeLine{00082\ \ \ \ \ rectfill(\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}},\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\_FENETRE}},\ makecol(0,\ 0,\ 0));}
+\DoxyCodeLine{00083\ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{/*\ Sprites\ bulles\ */}}
+\DoxyCodeLine{00086\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}}\ \ \ \ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bulle\_grande.bmp"{}},\ \ \ \ NULL);}
+\DoxyCodeLine{00087\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}}\ \ \ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bulle\_moyenne.bmp"{}},\ \ \ NULL);}
+\DoxyCodeLine{00088\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}}\ \ \ \ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bulle\_petite.bmp"{}},\ \ \ \ NULL);}
+\DoxyCodeLine{00089\ \ \ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bulle\_minuscule.bmp"{}},\ NULL);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}});}
+\DoxyCodeLine{00092\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}});}
+\DoxyCodeLine{00093\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}});}
+\DoxyCodeLine{00094\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}});}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{/*\ Sprites\ joueur\ */}}
+\DoxyCodeLine{00097\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\_idle}}\ \ \ \ \ \ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/joueur\_idle.bmp"{}},NULL);}
+\DoxyCodeLine{00098\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}}\ \ \ \ \ \ \ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/joueur\_tir.bmp"{}},NULL);}
+\DoxyCodeLine{00099\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\_marche\_d1}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/joueur\_marche\_d1.bmp"{}},NULL);}
+\DoxyCodeLine{00100\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\_marche\_d2}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/joueur\_marche\_d2.bmp"{}},NULL);}
+\DoxyCodeLine{00101\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\_marche\_g1}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/joueur\_marche\_g1.bmp"{}},NULL);}
+\DoxyCodeLine{00102\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\_marche\_g2}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/joueur\_marche\_g2.bmp"{}},NULL);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{/*\ BOSS\ */}}
+\DoxyCodeLine{00105\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[0]\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/boss1.bmp"{}},NULL);}
+\DoxyCodeLine{00106\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[1]\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/boss2.bmp"{}},NULL);}
+\DoxyCodeLine{00107\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[2]\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/boss3.bmp"{}},NULL);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[0]);}
+\DoxyCodeLine{00110\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[1]);}
+\DoxyCodeLine{00111\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[2]);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bonus\_explosion.bmp"{}},NULL);}
+\DoxyCodeLine{00114\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bonus\_triple.bmp"{}},NULL);}
+\DoxyCodeLine{00115\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}}\ =\ load\_bitmap(\textcolor{stringliteral}{"{}ressources/sprites/bonus\_rapide.bmp"{}},NULL);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}});}
+\DoxyCodeLine{00118\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}});}
+\DoxyCodeLine{00119\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}});}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\_idle}});}
+\DoxyCodeLine{00122\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}});}
+\DoxyCodeLine{00123\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\_marche\_d1}});}
+\DoxyCodeLine{00124\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\_marche\_d2}});}
+\DoxyCodeLine{00125\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\_marche\_g1}});}
+\DoxyCodeLine{00126\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\_masque}}(\doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\_marche\_g2}});}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee}\index{affichage.h@{affichage.h}!affichage\_init@{affichage\_init}}
+\index{affichage\_init@{affichage\_init}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{affichage\_init()}{affichage\_init()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee} 
+void affichage\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00051}{51}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ allegro\_init();}
+\DoxyCodeLine{00053\ \ \ \ \ install\_keyboard();}
+\DoxyCodeLine{00054\ \ \ \ \ install\_mouse();}
+\DoxyCodeLine{00055\ \ \ \ \ install\_timer();}
+\DoxyCodeLine{00056\ \ \ \ \ set\_color\_depth(32);}
+\DoxyCodeLine{00057\ \ \ \ \ set\_gfx\_mode(GFX\_AUTODETECT\_WINDOWED,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_afd1a1e285af564b849b17498e82e1a41}{HAUTEUR\_FENETRE}},\ 0,\ 0);}
+\DoxyCodeLine{00058\ \ \ \ \ set\_window\_title(\textcolor{stringliteral}{"{}Super\ Bulles"{}});}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3}\index{affichage.h@{affichage.h}!affichage\_liberer\_ressources@{affichage\_liberer\_ressources}}
+\index{affichage\_liberer\_ressources@{affichage\_liberer\_ressources}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{affichage\_liberer\_ressources()}{affichage\_liberer\_ressources()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3} 
+void affichage\+\_\+liberer\+\_\+ressources (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00129}{129}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}})\ \ \{\ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}});\ \ \doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}}\ \ =\ NULL;\ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}});\ \doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}});\ \ \ \doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}})\ \ \{\ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}});\ \ \doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}});\ \ \ \doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}}\ \ =\ NULL;\ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}});\ \doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\_idle}})\ \ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\_idle}});\ \doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\_idle}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}})\ \ \ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}});\ \doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\_marche\_d1}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\_marche\_d1}});\ \doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\_marche\_d1}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\_marche\_d2}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\_marche\_d2}});\ \doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\_marche\_d2}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\_marche\_g1}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\_marche\_g1}});\ \doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\_marche\_g1}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\_marche\_g2}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\_marche\_g2}});\ \doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\_marche\_g2}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[i])\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[i]);\ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[i]\ =\ NULL;\ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}});\ \doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}});\ \doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}})\ \{\ destroy\_bitmap(\doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}});\ \doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00151\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b}\index{affichage.h@{affichage.h}!afficher\_boss@{afficher\_boss}}
+\index{afficher\_boss@{afficher\_boss}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_boss()}{afficher\_boss()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b} 
+void afficher\+\_\+boss (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00317}{317}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{if}\ (!boss-\/>\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ (int)boss-\/>\doxymbox{\hyperlink{struct_boss_a8edf1d9d4cccf1a2b036d2c3f65c8681}{x}};}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ (int)boss-\/>\doxymbox{\hyperlink{struct_boss_a5872a3518b99314af857322c97c3b800}{y}};}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{comment}{/*\ Animation\ :\ change\ de\ frame\ toutes\ les\ 8\ tics\ */}}
+\DoxyCodeLine{00324\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af2fe3132c03e9f6ab1aaa9126048bab0}{timer\_anim\_boss}}++;}
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_af2fe3132c03e9f6ab1aaa9126048bab0}{timer\_anim\_boss}}\ >=\ 8)\ \{}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af2fe3132c03e9f6ab1aaa9126048bab0}{timer\_anim\_boss}}\ =\ 0;}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af73905919f29ad0812c2eadfd7f25108}{anim\_boss}}\ =\ (\doxymbox{\hyperlink{affichage_8c_af73905919f29ad0812c2eadfd7f25108}{anim\_boss}}\ +\ 1)\ \%\ 3;}
+\DoxyCodeLine{00328\ \ \ \ \ \}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{comment}{/*\ Sprite\ ou\ fallback\ cercle\ */}}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[\doxymbox{\hyperlink{affichage_8c_af73905919f29ad0812c2eadfd7f25108}{anim\_boss}}])\ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ draw\_sprite(tampon,\ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[\doxymbox{\hyperlink{affichage_8c_af73905919f29ad0812c2eadfd7f25108}{anim\_boss}}],}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ -\/\ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[\doxymbox{\hyperlink{affichage_8c_af73905919f29ad0812c2eadfd7f25108}{anim\_boss}}]-\/>w\ /\ 2,}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ -\/\ \doxymbox{\hyperlink{affichage_8c_a26bf62412515267738c23777b1f0de04}{sprite\_boss}}[\doxymbox{\hyperlink{affichage_8c_af73905919f29ad0812c2eadfd7f25108}{anim\_boss}}]-\/>h\ /\ 2);}
+\DoxyCodeLine{00335\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ circlefill(tampon,\ x,\ y,\ 40,\ makecol(180,\ \ \ 0,\ 180));}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ circle\ \ \ \ (tampon,\ x,\ y,\ 40,\ makecol(255,\ 100,\ 255));}
+\DoxyCodeLine{00338\ \ \ \ \ \}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{comment}{/*\ Barre\ de\ vie\ (conservÃ©e)\ */}}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordtype}{float}\ ratio\ \ \ =\ (float)boss-\/>\doxymbox{\hyperlink{struct_boss_a9276aeb24cc00e6bd8aada39190f0334}{points\_vie}}\ /\ (\textcolor{keywordtype}{float})boss-\/>\doxymbox{\hyperlink{struct_boss_aa8f84435dbb2670923e1908a9d4e46b9}{points\_vie\_max}};}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ barre\_w\ =\ 120;}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ barre\_x\ =\ x\ -\/\ barre\_w\ /\ 2;}
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ barre\_y\ =\ y\ -\/\ 70;}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ rectfill(tampon,\ barre\_x,\ barre\_y,}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ barre\_x\ +\ barre\_w,\ barre\_y\ +\ 10,\ makecol(40,\ 0,\ 0));}
+\DoxyCodeLine{00348\ \ \ \ \ rectfill(tampon,\ barre\_x\ +\ 1,\ barre\_y\ +\ 1,barre\_x\ +\ 1\ +\ (\textcolor{keywordtype}{int})((barre\_w\ -\/\ 2)\ *\ ratio),barre\_y\ +\ 9,}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ ratio\ >\ 0.5f\ ?\ makecol(0,\ 220,\ 0)\ :}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ ratio\ >\ 0.25f\ ?\ makecol(255,\ 180,\ 0)\ :}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(255,\ 0,\ 0));}
+\DoxyCodeLine{00352\ \ \ \ \ rect(tampon,\ barre\_x,\ barre\_y,}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ barre\_x\ +\ barre\_w,\ barre\_y\ +\ 10,\ makecol(255,\ 255,\ 255));}
+\DoxyCodeLine{00354\ \}}
+
+\end{DoxyCode}
+\Hypertarget{header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb}\index{affichage.h@{affichage.h}!afficher\_bulle@{afficher\_bulle}}
+\index{afficher\_bulle@{afficher\_bulle}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_bulle()}{afficher\_bulle()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb} 
+void afficher\+\_\+bulle (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00201}{201}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (!b-\/>\doxymbox{\hyperlink{struct_bulle_a192fc5bfc6280d8bc7b05a1b29483fe1}{active}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ BITMAP\ *sprite\ =\ NULL;}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{switch}\ (b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}})\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134}{BULLE\_GRANDE}}:\ \ \ \ sprite\ =\ \doxymbox{\hyperlink{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}};\ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc}{BULLE\_MOYENNE}}:\ \ \ sprite\ =\ \doxymbox{\hyperlink{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}};\ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979}{BULLE\_PETITE}}:\ \ \ \ sprite\ =\ \doxymbox{\hyperlink{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}};\ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983}{BULLE\_MINUSCULE}}:\ sprite\ =\ \doxymbox{\hyperlink{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (sprite)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ taille\ =\ (int)(\doxymbox{\hyperlink{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412}{rayon\_bulle}}(b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}})\ *\ 2);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ BITMAP\ *redim\ =\ create\_bitmap(taille,\ taille);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ clear\_to\_color(redim,\ bitmap\_mask\_color(redim));}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ stretch\_sprite(redim,\ sprite,\ 0,\ 0,\ taille,\ taille);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ draw\_sprite(tampon,\ redim,}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}}\ -\/\ taille\ /\ 2,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}}\ -\/\ taille\ /\ 2);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ destroy\_bitmap(redim);}
+\DoxyCodeLine{00221\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ couleurs[4]\ =\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ makecol(220,\ 50,\ \ 50),}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ makecol(230,\ 140,\ 20),}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ makecol(50,\ \ 180,\ 50),}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ makecol(50,\ \ 130,\ 230)}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ circlefill(tampon,\ (\textcolor{keywordtype}{int})b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}},\ (\textcolor{keywordtype}{int})b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}},}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})\doxymbox{\hyperlink{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412}{rayon\_bulle}}(b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}),\ couleurs[b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}]);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ circle(tampon,\ (\textcolor{keywordtype}{int})b-\/>\doxymbox{\hyperlink{struct_bulle_aad8ea0ff8121cd670c057a3e6198a922}{x}},\ (\textcolor{keywordtype}{int})b-\/>\doxymbox{\hyperlink{struct_bulle_a2d5e45806ebee08b3844d03b305cfdec}{y}},}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})\doxymbox{\hyperlink{header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412}{rayon\_bulle}}(b-\/>\doxymbox{\hyperlink{struct_bulle_aa2fe503d7861cc39def5d652acd65e10}{taille}}),\ makecol(255,\ 255,\ 255));}
+\DoxyCodeLine{00232\ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03}\index{affichage.h@{affichage.h}!afficher\_decompte@{afficher\_decompte}}
+\index{afficher\_decompte@{afficher\_decompte}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_decompte()}{afficher\_decompte()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03} 
+void afficher\+\_\+decompte (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{int}]{compte}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00477}{477}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00478\ \ \ \ \ \textcolor{comment}{/*\ Overlay\ sombre\ */}}
+\DoxyCodeLine{00479\ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00480\ \ \ \ \ set\_trans\_blender(0,\ 0,\ 0,\ 120);}
+\DoxyCodeLine{00481\ \ \ \ \ rectfill(tampon,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}},\ makecol(0,\ 0,\ 0));}
+\DoxyCodeLine{00482\ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordtype}{int}\ cx\ =\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2;}
+\DoxyCodeLine{00485\ \ \ \ \ \textcolor{keywordtype}{int}\ cy\ =\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}}\ \ \ \ /\ 2;}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \ \ \ \ \textcolor{comment}{/*\ Couleur\ selon\ le\ chiffre\ */}}
+\DoxyCodeLine{00488\ \ \ \ \ \textcolor{keywordtype}{int}\ couleur;}
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{keywordflow}{if}\ \ \ \ \ \ (compte\ ==\ 3)\ couleur\ =\ makecol(255,\ \ 60,\ \ 60);}
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (compte\ ==\ 2)\ couleur\ =\ makecol(255,\ 180,\ \ \ 0);}
+\DoxyCodeLine{00491\ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ couleur\ =\ makecol(50,\ \ 255,\ \ 80);}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \ \ \ \ \textcolor{comment}{/*\ Police\ externe\ dÃ©clarÃ©e\ dans\ menu.c\ â\ on\ la\ recharge\ ici\ */}}
+\DoxyCodeLine{00494\ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\_FONT}}\ *police\_decompte\ =\ \doxymbox{\hyperlink{header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}{alfont\_load\_font}}(\textcolor{stringliteral}{"{}ressources/police.ttf"{}});}
+\DoxyCodeLine{00495\ \ \ \ \ \textcolor{keywordflow}{if}\ (police\_decompte)\ \{}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(police\_decompte,\ 180);}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[4];}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ sprintf(buf,\ \textcolor{stringliteral}{"{}\%d"{}},\ compte);}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Ombre\ portÃ©e\ */}}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ police\_decompte,\ buf,}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 5,\ cy\ -\/\ 95,\ makecol(0,\ 0,\ 0),\ -\/1);}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Halo\ colorÃ©\ dÃ©calÃ©\ */}}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ police\_decompte,\ buf,}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 3,\ cy\ -\/\ 93,}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(getr(couleur)/3,\ getg(couleur)/3,\ getb(couleur)/3),\ -\/1);}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Chiffre\ principal\ */}}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ police\_decompte,\ buf,}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ cy\ -\/\ 90,\ couleur,\ -\/1);}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Reflet\ blanc\ lÃ©ger\ */}}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(police\_decompte,\ 180);}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ police\_decompte,\ buf,}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ cy\ -\/\ 92,\ makecol(}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getr(couleur)\ +\ (255\ -\/\ getr(couleur))\ /\ 2,}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getg(couleur)\ +\ (255\ -\/\ getg(couleur))\ /\ 2,}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getb(couleur)\ +\ (255\ -\/\ getb(couleur))\ /\ 2),\ -\/1);}
+\DoxyCodeLine{00518\ }
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Message\ en\ dessous\ */}}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\_set\_font\_size}}(police\_decompte,\ 28);}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *msg\ =\ (compte\ ==\ 1)\ ?\ \textcolor{stringliteral}{"{}C'EST\ PARTI\ !"{}}\ :\ \textcolor{stringliteral}{"{}PRET\ ?"{}};}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Ombre\ */}}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ police\_decompte,\ msg,}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx\ +\ 2,\ cy\ +\ 102,\ makecol(0,\ 0,\ 0),\ -\/1);}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Texte\ */}}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\_textout\_centre\_aa\_ex}}(tampon,\ police\_decompte,\ msg,}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cx,\ cy\ +\ 100,\ makecol(255,\ 255,\ 255),\ -\/1);}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f}{alfont\_destroy\_font}}(police\_decompte);}
+\DoxyCodeLine{00530\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Fallback\ texte\ basique\ */}}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[4];}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ sprintf(buf,\ \textcolor{stringliteral}{"{}\%d"{}},\ compte);}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ buf,\ cx,\ cy\ -\/\ 20,\ couleur,\ -\/1);}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *msg\ =\ (compte\ ==\ 1)\ ?\ \textcolor{stringliteral}{"{}C'EST\ PARTI\ !"{}}\ :\ \textcolor{stringliteral}{"{}PRET\ ?"{}};}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ msg,\ cx,\ cy\ +\ 30,\ makecol(255,\ 255,\ 255),\ -\/1);}
+\DoxyCodeLine{00537\ \ \ \ \ \}}
+\DoxyCodeLine{00538\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e}\index{affichage.h@{affichage.h}!afficher\_defaite@{afficher\_defaite}}
+\index{afficher\_defaite@{afficher\_defaite}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_defaite()}{afficher\_defaite()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e} 
+void afficher\+\_\+defaite (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00554}{554}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00555\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}})}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ blit(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}},\ tampon,\ 0,\ 0,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00557\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ clear\_to\_color(tampon,\ makecol(50,\ 0,\ 0));}
+\DoxyCodeLine{00559\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}GAME\ OVER"{}},}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W/2,\ SCREEN\_H/2-\/20,\ makecol(255,\ 0,\ 0),\ -\/1);}
+\DoxyCodeLine{00561\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}Appuyez\ sur\ Entree"{}},}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W/2,\ SCREEN\_H/2+20,\ makecol(255,\ 255,\ 255),\ -\/1);}
+\DoxyCodeLine{00563\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6}\index{affichage.h@{affichage.h}!afficher\_hud@{afficher\_hud}}
+\index{afficher\_hud@{afficher\_hud}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_hud()}{afficher\_hud()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6} 
+void afficher\+\_\+hud (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00235}{235}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{int}\ y0\ =\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}};\ \textcolor{comment}{/*\ 540\ */}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{comment}{/*\ Fond\ dÃ©gradÃ©\ sombre\ */}}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\_INFO}};\ i++)\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ val\ =\ 15\ +\ i\ /\ 3;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ hline(tampon,\ 0,\ y0\ +\ i,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ makecol(val,\ val,\ val\ +\ 30));}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{comment}{/*\ Ligne\ de\ sÃ©paration\ cyan\ */}}
+\DoxyCodeLine{00245\ \ \ \ \ hline(tampon,\ 0,\ y0,\ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ makecol(0,\ \ 200,\ 255));}
+\DoxyCodeLine{00246\ \ \ \ \ hline(tampon,\ 0,\ y0\ +\ 1,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ makecol(0,\ \ 100,\ 150));}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{comment}{/*\ ===\ PSEUDO\ (gauche)\ ===\ */}}
+\DoxyCodeLine{00249\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 15,\ y0\ +\ 10,}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(150,\ 150,\ 150),\ -\/1,\ \textcolor{stringliteral}{"{}JOUEUR"{}});}
+\DoxyCodeLine{00251\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 15,\ y0\ +\ 24,}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(255,\ 255,\ 255),\ -\/1,\ \textcolor{stringliteral}{"{}\%s"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a2f35193f146718ce5993497d8ad0f78b}{pseudo}});}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{comment}{/*\ SÃ©parateur\ vertical\ */}}
+\DoxyCodeLine{00255\ \ \ \ \ vline(tampon,\ 160,\ y0\ +\ 8,\ y0\ +\ \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\_INFO}}\ -\/\ 8,\ makecol(0,\ 100,\ 150));}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{comment}{/*\ ===\ SCORE\ (centre-\/gauche)\ ===\ */}}
+\DoxyCodeLine{00258\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 175,\ y0\ +\ 10,}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(150,\ 150,\ 150),\ -\/1,\ \textcolor{stringliteral}{"{}SCORE"{}});}
+\DoxyCodeLine{00260\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 175,\ y0\ +\ 24,}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(255,\ 220,\ 0),\ -\/1,\ \textcolor{stringliteral}{"{}\%06d"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}});}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{comment}{/*\ SÃ©parateur\ vertical\ */}}
+\DoxyCodeLine{00264\ \ \ \ \ vline(tampon,\ 320,\ y0\ +\ 8,\ y0\ +\ \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\_INFO}}\ -\/\ 8,\ makecol(0,\ 100,\ 150));}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{comment}{/*\ ===\ NIVEAU\ (centre)\ ===\ */}}
+\DoxyCodeLine{00267\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 335,\ y0\ +\ 10,\ makecol(150,\ 150,\ 150),\ -\/1,\ \textcolor{stringliteral}{"{}NIVEAU"{}});}
+\DoxyCodeLine{00268\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 335,\ y0\ +\ 24,\ makecol(0,\ 220,\ 255),\ -\/1,\ \textcolor{stringliteral}{"{}\%d\ /\ 4"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}});}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{/*\ SÃ©parateur\ vertical\ */}}
+\DoxyCodeLine{00271\ \ \ \ \ vline(tampon,\ 460,\ y0\ +\ 8,\ y0\ +\ \doxymbox{\hyperlink{header_2entites_8h_a5c447d32bd7b7c0b96e5abdee56eb251}{HAUTEUR\_INFO}}\ -\/\ 8,\ makecol(0,\ 100,\ 150));}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{comment}{/*\ ===\ TEMPS\ (droite)\ avec\ barre\ de\ progression\ ===\ */}}
+\DoxyCodeLine{00274\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 475,\ y0\ +\ 10,makecol(150,\ 150,\ 150),\ -\/1,\ \textcolor{stringliteral}{"{}TEMPS"{}});}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{comment}{/*\ Couleur\ qui\ vire\ au\ rouge\ quand\ il\ reste\ peu\ de\ temps\ */}}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{int}\ col\_temps;}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{if}\ \ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}}\ >\ 30.0f)\ col\_temps\ =\ makecol(0,\ \ \ 255,\ 100);}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}}\ >\ 10.0f)\ col\_temps\ =\ makecol(255,\ 180,\ \ \ 0);}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordflow}{else}\ \ col\_temps\ =\ makecol(255,\ \ 50,\ \ 50);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ textprintf\_ex(tampon,\ font,\ 475,\ y0\ +\ 24,\ col\_temps,\ -\/1,\ \textcolor{stringliteral}{"{}\%.0fs"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}});}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{comment}{/*\ Barre\ de\ temps\ */}}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{int}\ barre\_x\ =\ 540;}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{int}\ barre\_largeur\ =\ 240;}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordtype}{int}\ barre\_h\ =\ 10;}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{int}\ barre\_y\ =\ y0\ +\ 25;}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{float}\ ratio\ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\_restant}}\ /\ 60.0f;}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{if}\ (ratio\ <\ 0)\ ratio\ =\ 0;}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordflow}{if}\ (ratio\ >\ 1)\ ratio\ =\ 1;}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{comment}{/*\ Fond\ barre\ */}}
+\DoxyCodeLine{00294\ \ \ \ \ rectfill(tampon,\ barre\_x,\ barre\_y,barre\_x\ +\ barre\_largeur,\ barre\_y\ +\ barre\_h,makecol(20,\ 20,\ 40));}
+\DoxyCodeLine{00295\ \ \ \ \ rect(tampon,\ barre\_x,\ barre\_y,barre\_x\ +\ barre\_largeur,\ barre\_y\ +\ barre\_h,makecol(0,\ 80,\ 120));}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{comment}{/*\ Remplissage\ barre\ */}}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordflow}{if}\ (ratio\ >\ 0)}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ rectfill(tampon,\ barre\_x\ +\ 1,\ barre\_y\ +\ 1,}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ barre\_x\ +\ 1\ +\ (\textcolor{keywordtype}{int})((barre\_largeur\ -\/\ 2)\ *\ ratio),}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ barre\_y\ +\ barre\_h\ -\/\ 1,\ col\_temps);}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{comment}{/*\ Arme\ active\ */}}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}}\ !=\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43}{ARME\_BASIQUE}}\ \&\&\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}}\ >\ 0)\ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *nom\_arme\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a5c7d135fb5f360d696c4dc493e257ce9}{arme}})\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{ARME\_TIR\_RAPIDE}}:\ nom\_arme\ =\ \textcolor{stringliteral}{"{}TIR\ RAPIDE"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{ARME\_TIR\_TRIPLE}}:\ nom\_arme\ =\ \textcolor{stringliteral}{"{}TIR\ TRIPLE"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{ARME\_EXPLOSION}}:\ \ nom\_arme\ =\ \textcolor{stringliteral}{"{}EXPLOSION"{}};\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ textprintf\_ex(tampon,\ font,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ -\/\ 200,\ y0\ +\ 10,makecol(0,\ 255,\ 100),\ -\/1,\ \textcolor{stringliteral}{"{}\%s\ \ \%.0fs"{}},\ nom\_arme,\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\_arme\_speciale}});}
+\DoxyCodeLine{00313\ \ \ \ \ \}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \}}
+
+\end{DoxyCode}
+\Hypertarget{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5}\index{affichage.h@{affichage.h}!afficher\_jeu@{afficher\_jeu}}
+\index{afficher\_jeu@{afficher\_jeu}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_jeu()}{afficher\_jeu()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5} 
+void afficher\+\_\+jeu (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00376}{376}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}})}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ blit(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}},\ tampon,\ 0,\ 0,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ rectfill(tampon,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}},\ makecol(10,\ 10,\ 30));}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\_BULLES}};\ i++)}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_ade696254e724634f854cee7ce6ee56cb}{afficher\_bulle}}(tampon,\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}}[i]);}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\_PROJECTILES}};\ i++)}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb}{afficher\_projectile}}(tampon,\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}}[i]);}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{comment}{/*\ =====\ ECLAIRS\ =====\ */}}
+\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}\ >=\ 3)}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2eclair_8h_a693961ccc3b568ea454db1853e64393b}{dessiner\_eclairs}}(tampon,\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}{eclairs}});}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{comment}{/*\ Bonus\ */}}
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{MAX\_BONUS}};\ i++)\ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a4b7263158e47151b2fa1db82eb519cf0}{active}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bx\ =\ (int)ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ab35e606c33f4a3c608deffbb237f09a6}{x}};}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ by\ =\ (int)ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_a98456dfc3875b5a45bd599b192250a56}{y}};}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Clignote\ dans\ les\ 3\ derniÃ¨res\ secondes\ */}}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ad6efd20802414585049c50aa509e934a}{timer}}\ <\ 3.0f\ \&\&\ (\textcolor{keywordtype}{int})(ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_ad6efd20802414585049c50aa509e934a}{timer}}\ *\ 6)\ \%\ 2\ ==\ 0)}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};\ \ \ \textcolor{comment}{/*\ saute\ l'affichage\ une\ frame\ sur\ deux\ */}}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_aad545942fb407a2f1ee4fc19ac36b87e}{type}}\ ==\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a}{ARME\_TIR\_RAPIDE}}\ -\/\ 1\ \&\&\ \doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}})\ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ draw\_sprite(tampon,\ \doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}},}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bx\ -\/\ \doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}}-\/>w\ /\ 2,}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ by\ -\/\ \doxymbox{\hyperlink{affichage_8c_aa1c034983eacd0859511af3d2558d697}{sprite\_bonus\_rapide}}-\/>h\ /\ 2);}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_aad545942fb407a2f1ee4fc19ac36b87e}{type}}\ ==\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400}{ARME\_TIR\_TRIPLE}}\ -\/\ 1\ \&\&\ \doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}})\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ draw\_sprite(tampon,\ \doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}},}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bx\ -\/\ \doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}}-\/>w\ /\ 2,}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ by\ -\/\ \doxymbox{\hyperlink{affichage_8c_a4255eabc45043bd420d912d848de5378}{sprite\_bonus\_triple}}-\/>h\ /\ 2);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}}[i].\doxymbox{\hyperlink{struct_bonus_arme_aad545942fb407a2f1ee4fc19ac36b87e}{type}}\ ==\ \doxymbox{\hyperlink{header_2entites_8h_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453}{ARME\_EXPLOSION}}\ -\/\ 1\ \&\&\ \doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}})\ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ draw\_sprite(tampon,\ \doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}},}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bx\ -\/\ \doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}}-\/>w\ /\ 2,}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ by\ -\/\ \doxymbox{\hyperlink{affichage_8c_ab414e3a2b29c533b2b517d7494949632}{sprite\_bonus\_explosion}}-\/>h\ /\ 2);}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Fallback\ cercle\ */}}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ circlefill(tampon,\ bx,\ by,\ 10,\ makecol(255,\ 255,\ 255));}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ circle(tampon,\ \ \ \ \ bx,\ by,\ 10,\ makecol(200,\ 200,\ 200));}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Flash\ explosion\ */}}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}{explosion\_timer}}\ >\ 0)\ \{}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ratio\ =\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}{explosion\_timer}}\ /\ \doxymbox{\hyperlink{src_2jeu_8h_a242a7514f3f5838a8e0bc4ff7e4306d7}{DUREE\_EXPLOSION}};}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rayon\ =\ (int)(120\ *\ (1.0f\ -\/\ ratio));}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ alpha\ =\ (int)(200\ *\ ratio);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ set\_trans\_blender(255,\ 100,\ 0,\ alpha);}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ circlefill(tampon,\ (\textcolor{keywordtype}{int})ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afb5e772fa2c38d9e89f9473e89b7b794}{explosion\_x}},\ (\textcolor{keywordtype}{int})ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a92f49feda43c0f42a4aa2f15e8656fb7}{explosion\_y}},rayon,\ makecol(255,\ 100,\ 0));}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ circle(tampon,\ (\textcolor{keywordtype}{int})ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_afb5e772fa2c38d9e89f9473e89b7b794}{explosion\_x}},\ (\textcolor{keywordtype}{int})ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a92f49feda43c0f42a4aa2f15e8656fb7}{explosion\_y}},rayon,\ makecol(255,\ 220,\ 0));}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00430\ \ \ \ \ \}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed}{afficher\_joueur}}(tampon,\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}});}
+\DoxyCodeLine{00433\ \ \ \ \ \textcolor{keywordflow}{if}\ (ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}.\doxymbox{\hyperlink{struct_boss_a885e2a3d77e66c251358a887e8db4e39}{active}})}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b}{afficher\_boss}}(tampon,\ \&ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}});}
+\DoxyCodeLine{00435\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6}{afficher\_hud}}(tampon,\ ej);}
+\DoxyCodeLine{00436\ \}}
+
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed}\index{affichage.h@{affichage.h}!afficher\_joueur@{afficher\_joueur}}
+\index{afficher\_joueur@{afficher\_joueur}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_joueur()}{afficher\_joueur()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed} 
+void afficher\+\_\+joueur (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00159}{159}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{if}\ (!j-\/>\doxymbox{\hyperlink{struct_joueur_a83ffd7975e660463a18b1ad04b9429f3}{vivant}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ BITMAP\ *sprite\ =\ NULL;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{/*\ PrioritÃ©\ 1\ :\ tir\ */}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_a03d99c0ee63caab838bb59082eeee138}{duree\_tir}}\ >\ 0\ \&\&\ \doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}})\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ sprite\ =\ \doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\_tir}};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a03d99c0ee63caab838bb59082eeee138}{duree\_tir}}-\/-\/;}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{/*\ PrioritÃ©\ 2\ :\ marche\ droite\ */}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (j-\/>\doxymbox{\hyperlink{struct_joueur_a70d5fe053297331173073eb5d7e688bd}{vx}}\ >\ 0)\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}++;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ >=\ 16)\ \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ =\ 0;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ sprite\ =\ (\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ <\ 8)\ ?\ \doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\_marche\_d1}}\ :\ \doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\_marche\_d2}};}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{/*\ PrioritÃ©\ 3\ :\ marche\ gauche\ */}}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (j-\/>\doxymbox{\hyperlink{struct_joueur_a70d5fe053297331173073eb5d7e688bd}{vx}}\ <\ 0)\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}++;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ >=\ 16)\ \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ =\ 0;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ sprite\ =\ (\doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ <\ 8)\ ?\ \doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\_marche\_g1}}\ :\ \doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\_marche\_g2}};}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{/*\ PrioritÃ©\ 4\ :\ idle\ */}}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\_anim}}\ =\ 0;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ sprite\ =\ \doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\_idle}};}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{comment}{/*\ Fallback\ rectangle\ si\ sprite\ manquant\ */}}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordflow}{if}\ (!sprite)\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ rectfill(tampon,\ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ -\/\ 12,\ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ 20,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ +\ 12,\ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ +\ 20,\ makecol(0,\ 200,\ 255));}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ rect(tampon,\ \ \ \ \ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ -\/\ 12,\ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ 20,}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ +\ 12,\ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ +\ 20,\ makecol(255,\ 255,\ 255));}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ draw\_sprite(tampon,\ sprite,}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_a2107af8ce47a6f97d095b22690a2c4c4}{x}}\ -\/\ sprite-\/>w\ /\ 2,}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})j-\/>\doxymbox{\hyperlink{struct_joueur_ad20c25b41ed37bbd7bbbe8746c2160a2}{y}}\ -\/\ sprite-\/>h\ /\ 2);}
+\DoxyCodeLine{00199\ \}}
+
+\end{DoxyCode}
+\Hypertarget{header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33}\index{affichage.h@{affichage.h}!afficher\_pause@{afficher\_pause}}
+\index{afficher\_pause@{afficher\_pause}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_pause()}{afficher\_pause()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33} 
+void afficher\+\_\+pause (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00439}{439}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{comment}{/*\ Overlay\ sombre\ semi-\/transparent\ */}}
+\DoxyCodeLine{00441\ \ \ \ \ drawing\_mode(DRAW\_MODE\_TRANS,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00442\ \ \ \ \ set\_trans\_blender(0,\ 0,\ 0,\ 160);}
+\DoxyCodeLine{00443\ \ \ \ \ rectfill(tampon,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}},\ makecol(0,\ 0,\ 0));}
+\DoxyCodeLine{00444\ \ \ \ \ drawing\_mode(DRAW\_MODE\_SOLID,\ NULL,\ 0,\ 0);}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{comment}{/*\ Panneau\ central\ */}}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordtype}{int}\ px\ =\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2\ -\/\ 150;}
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keywordtype}{int}\ py\ =\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}}\ \ \ \ /\ 2\ -\/\ 80;}
+\DoxyCodeLine{00449\ \ \ \ \ rectfill(tampon,\ px,py,+300,\ py+160,\ makecol(10,\ \ 10,\ \ 40));}
+\DoxyCodeLine{00450\ \ \ \ \ rect\ (tampon,\ px,py,px+300,\ py+160,\ makecol(0,\ \ 200,\ 255));}
+\DoxyCodeLine{00451\ \ \ \ \ rect\ (tampon,\ px+2,py+2,px+298,\ py+158,\ makecol(0,\ \ 80,\ \ 120));}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \ \ \ \ \textcolor{comment}{/*\ Titre\ PAUSE\ */}}
+\DoxyCodeLine{00454\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}PAUSE"{}},\doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2,\ py\ +\ 20,makecol(0,\ 220,\ 255),\ -\/1);}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \ \ \ \ \textcolor{comment}{/*\ Ligne\ dÃ©corative\ */}}
+\DoxyCodeLine{00457\ \ \ \ \ hline(tampon,\ px\ +\ 20,\ py\ +\ 40,\ px\ +\ 280,\ makecol(0,\ 100,\ 150));}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{comment}{/*\ Instructions\ */}}
+\DoxyCodeLine{00460\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}P\ \ -\/\ \ Reprendre"{}},}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2,\ py\ +\ 60,}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(255,\ 255,\ 255),\ -\/1);}
+\DoxyCodeLine{00463\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}ECHAP\ \ -\/\ \ Menu\ principal"{}},}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2,\ py\ +\ 85,}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(200,\ 200,\ 200),\ -\/1);}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \ \ \ \ \textcolor{comment}{/*\ Ligne\ dÃ©corative\ bas\ */}}
+\DoxyCodeLine{00468\ \ \ \ \ hline(tampon,\ px\ +\ 20,\ py\ +\ 110,\ px\ +\ 280,\ makecol(0,\ 100,\ 150));}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ \ \ \ \ \textcolor{comment}{/*\ Score\ actuel\ */}}
+\DoxyCodeLine{00471\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[32];}
+\DoxyCodeLine{00472\ \ \ \ \ sprintf(buf,\ \textcolor{stringliteral}{"{}Score\ :\ \%06d"{}},\ ej-\/>\doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}.\doxymbox{\hyperlink{struct_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}{score}});}
+\DoxyCodeLine{00473\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ buf,\doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}}\ /\ 2,\ py\ +\ 128,makecol(255,\ 220,\ 0),\ -\/1);}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb}\index{affichage.h@{affichage.h}!afficher\_projectile@{afficher\_projectile}}
+\index{afficher\_projectile@{afficher\_projectile}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_projectile()}{afficher\_projectile()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb} 
+void afficher\+\_\+projectile (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_projectile}{Projectile}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00356}{356}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00357\ \ \ \ \ \textcolor{keywordflow}{if}\ (!p-\/>\doxymbox{\hyperlink{struct_projectile_adf17efc99b04360ba3e64b97971c299b}{active}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ (int)p-\/>\doxymbox{\hyperlink{struct_projectile_a0bf544bf90988687a910268b615aed08}{x}};}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ (int)p-\/>\doxymbox{\hyperlink{struct_projectile_a04963d09e6b45aee1d5d96f8112fb075}{y}};}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{comment}{/*\ TraÃ®nÃ©e\ */}}
+\DoxyCodeLine{00363\ \ \ \ \ circlefill(tampon,\ x,\ y\ +\ 6,\ 2,\ makecol(0,\ \ 80,\ 120));}
+\DoxyCodeLine{00364\ \ \ \ \ circlefill(tampon,\ x,\ y\ +\ 3,\ 3,\ makecol(0,\ 150,\ 200));}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{comment}{/*\ Boule\ principale\ */}}
+\DoxyCodeLine{00367\ \ \ \ \ circlefill(tampon,\ x,\ y,\ 4,\ makecol(0,\ \ 220,\ 255));}
+\DoxyCodeLine{00368\ \ \ \ \ circlefill(tampon,\ x,\ y,\ 2,\ makecol(200,\ 255,\ 255));}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{comment}{/*\ Halo\ */}}
+\DoxyCodeLine{00371\ \ \ \ \ circle(tampon,\ x,\ y,\ 5,\ makecol(0,\ 100,\ 180));}
+\DoxyCodeLine{00372\ \}}
+
+\end{DoxyCode}
+\Hypertarget{header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb}\index{affichage.h@{affichage.h}!afficher\_saisie\_pseudo@{afficher\_saisie\_pseudo}}
+\index{afficher\_saisie\_pseudo@{afficher\_saisie\_pseudo}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_saisie\_pseudo()}{afficher\_saisie\_pseudo()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb} 
+void afficher\+\_\+saisie\+\_\+pseudo (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00565}{565}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00566\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}})}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ blit(\doxymbox{\hyperlink{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}},\ tampon,\ 0,\ 0,\ 0,\ 0,\ SCREEN\_W,\ SCREEN\_H);}
+\DoxyCodeLine{00568\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ clear\_to\_color(tampon,\ makecol(10,\ 10,\ 50));}
+\DoxyCodeLine{00570\ }
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{keywordtype}{int}\ px\ =\ SCREEN\_W\ /\ 2\ -\/\ 200;}
+\DoxyCodeLine{00572\ \ \ \ \ \textcolor{keywordtype}{int}\ py\ =\ SCREEN\_H\ /\ 2\ -\/\ 80;}
+\DoxyCodeLine{00573\ \ \ \ \ rectfill(tampon,\ px,\ py,\ px\ +\ 400,\ py\ +\ 160,\ makecol(20,\ 20,\ 60));}
+\DoxyCodeLine{00574\ \ \ \ \ rect(tampon,\ \ \ \ \ px,\ py,\ px\ +\ 400,\ py\ +\ 160,\ makecol(100,\ 100,\ 255));}
+\DoxyCodeLine{00575\ }
+\DoxyCodeLine{00576\ \ \ \ \ textprintf\_centre\_ex(tampon,\ font,\ SCREEN\_W\ /\ 2,\ py\ +\ 20,}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(255,\ 220,\ 0),\ -\/1,\ \textcolor{stringliteral}{"{}ENTREZ\ VOTRE\ PSEUDO"{}});}
+\DoxyCodeLine{00578\ }
+\DoxyCodeLine{00579\ \ \ \ \ rectfill(tampon,\ px\ +\ 20,\ py\ +\ 60,\ px\ +\ 380,\ py\ +\ 90,\ makecol(10,\ 10,\ 40));}
+\DoxyCodeLine{00580\ \ \ \ \ rect(tampon,\ \ \ \ \ px\ +\ 20,\ py\ +\ 60,\ px\ +\ 380,\ py\ +\ 90,\ makecol(150,\ 150,\ 255));}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \ \ \ \ \textcolor{keywordtype}{char}\ affichage[\doxymbox{\hyperlink{header_2entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}\ +\ 2];}
+\DoxyCodeLine{00583\ \ \ \ \ sprintf(affichage,\ \textcolor{stringliteral}{"{}\%s\_"{}},\ em-\/>\doxymbox{\hyperlink{struct_etat_menu_a755e5e5d0bb2c1da07e6964478c4653a}{pseudo\_saisi}});}
+\DoxyCodeLine{00584\ \ \ \ \ textprintf\_ex(tampon,\ font,\ px\ +\ 30,\ py\ +\ 68,}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(255,\ 255,\ 255),\ -\/1,\ \textcolor{stringliteral}{"{}\%s"{}},\ affichage);}
+\DoxyCodeLine{00586\ }
+\DoxyCodeLine{00587\ \ \ \ \ textprintf\_centre\_ex(tampon,\ font,\ SCREEN\_W\ /\ 2,\ py\ +\ 120,}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makecol(180,\ 180,\ 180),\ -\/1,\ \textcolor{stringliteral}{"{}Appuyez\ sur\ ENTREE\ pour\ valider"{}});}
+\DoxyCodeLine{00589\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013}\index{affichage.h@{affichage.h}!afficher\_victoire@{afficher\_victoire}}
+\index{afficher\_victoire@{afficher\_victoire}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_victoire()}{afficher\_victoire()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013} 
+void afficher\+\_\+victoire (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00543}{543}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00544\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}})}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ blit(\doxymbox{\hyperlink{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}},\ tampon,\ 0,\ 0,\ 0,\ 0,\ \doxymbox{\hyperlink{header_2entites_8h_a6068a247ff9ece1b0a9773c58144906c}{LARGEUR\_FENETRE}},\ \doxymbox{\hyperlink{header_2entites_8h_a4cb45b19125880d6abd29cf7d7953d38}{HAUTEUR\_ZONE}});}
+\DoxyCodeLine{00546\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ clear\_to\_color(tampon,\ makecol(0,\ 50,\ 0));}
+\DoxyCodeLine{00548\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}VICTOIRE\ !"{}},}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W/2,\ SCREEN\_H/2-\/20,\ makecol(255,\ 255,\ 0),\ -\/1);}
+\DoxyCodeLine{00550\ \ \ \ \ textout\_centre\_ex(tampon,\ font,\ \textcolor{stringliteral}{"{}Appuyez\ sur\ Entree"{}},}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCREEN\_W/2,\ SCREEN\_H/2+20,\ makecol(255,\ 255,\ 255),\ -\/1);}
+\DoxyCodeLine{00552\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80}\index{affichage.h@{affichage.h}!joueur\_signaler\_tir@{joueur\_signaler\_tir}}
+\index{joueur\_signaler\_tir@{joueur\_signaler\_tir}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{joueur\_signaler\_tir()}{joueur\_signaler\_tir()}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80} 
+void joueur\+\_\+signaler\+\_\+tir (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00154}{154}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \doxymbox{\hyperlink{affichage_8c_a03d99c0ee63caab838bb59082eeee138}{duree\_tir}}\ =\ 10;\ \textcolor{comment}{/*\ affiche\ le\ sprite\ tir\ pendant\ 10\ tics\ */}}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{header_2affichage_8h_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59}\index{affichage.h@{affichage.h}!fond\_jeu@{fond\_jeu}}
+\index{fond\_jeu@{fond\_jeu}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{fond\_jeu}{fond\_jeu}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_aafdb4c150dee655e9e053ab74941ef59} 
+BITMAP\texorpdfstring{$\ast$}{*} fond\+\_\+jeu\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00010}{10}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+\Hypertarget{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207}\index{affichage.h@{affichage.h}!fond\_menu@{fond\_menu}}
+\index{fond\_menu@{fond\_menu}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{fond\_menu}{fond\_menu}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a95978b3edc79a3de210ad1d11fe78207} 
+BITMAP\texorpdfstring{$\ast$}{*} fond\+\_\+menu\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00011}{11}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+\Hypertarget{header_2affichage_8h_aca2075c4f049282c156ff6345994070b}\index{affichage.h@{affichage.h}!sprite\_bulle\_grande@{sprite\_bulle\_grande}}
+\index{sprite\_bulle\_grande@{sprite\_bulle\_grande}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_grande}{sprite\_bulle\_grande}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_aca2075c4f049282c156ff6345994070b} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+grande\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00013}{13}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+\Hypertarget{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a}\index{affichage.h@{affichage.h}!sprite\_bulle\_minuscule@{sprite\_bulle\_minuscule}}
+\index{sprite\_bulle\_minuscule@{sprite\_bulle\_minuscule}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_minuscule}{sprite\_bulle\_minuscule}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a17c8ac2bec834c0ce6174e71f674b22a} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+minuscule\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00016}{16}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+\Hypertarget{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06}\index{affichage.h@{affichage.h}!sprite\_bulle\_moyenne@{sprite\_bulle\_moyenne}}
+\index{sprite\_bulle\_moyenne@{sprite\_bulle\_moyenne}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_moyenne}{sprite\_bulle\_moyenne}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a707d80fcda5da578f3773783afb42b06} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+moyenne\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00014}{14}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+
+\Hypertarget{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948}\index{affichage.h@{affichage.h}!sprite\_bulle\_petite@{sprite\_bulle\_petite}}
+\index{sprite\_bulle\_petite@{sprite\_bulle\_petite}!affichage.h@{affichage.h}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_petite}{sprite\_bulle\_petite}}
+{\footnotesize\ttfamily \label{header_2affichage_8h_a7701096c3377f2b8c1610ee82c16c948} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+petite\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{affichage_8c_source_l00015}{15}} du fichier \doxymbox{\hyperlink{affichage_8c_source}{affichage.\+c}}.
+

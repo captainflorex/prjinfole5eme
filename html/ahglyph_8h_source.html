@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/autohint/ahglyph.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ahglyph_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ahglyph.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ahglyph_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  ahglyph.h                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    Routines used to load and analyze a given glyph before hinting       */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*    (specification).                                                     */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  Copyright 2000-2001, 2002 Catharon Productions Inc.                    */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*  Author: David Turner                                                   */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  This file is part of the Catharon Typography Project and shall only    */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  be used, modified, and distributed under the terms of the Catharon     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  Open Source License that should come with this file under the name     */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  `CatharonLicense.txt&#39;.  By continuing to use, modify, or distribute    */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/*  Note that this license is compatible with the FreeType license.        */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef __AHGLYPH_H__</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define __AHGLYPH_H__</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="ahtypes_8h.html">ahtypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53">   34</a></span>  <span class="keyword">typedef</span> <span class="keyword">enum</span>  <a class="code hl_enumeration" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53">AH_UV_</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a0df7e4d38def6b8cab42811f5d269b66">   36</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a0df7e4d38def6b8cab42811f5d269b66">AH_UV_FXY</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a672cb20dff6c5508d6afb8a8d306415a">   37</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a672cb20dff6c5508d6afb8a8d306415a">AH_UV_FYX</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53afabb3ad95d0eccd7ae726ed51a4d16cc">   38</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53afabb3ad95d0eccd7ae726ed51a4d16cc">AH_UV_OXY</a>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ad096ccfcc2b4072fd6391140e8218eb9">   39</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ad096ccfcc2b4072fd6391140e8218eb9">AH_UV_OYX</a>,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ad9e3032d85ecc6496354ec7d60694121">   40</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ad9e3032d85ecc6496354ec7d60694121">AH_UV_OX</a>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ab9e1f941b1a58f7cf9231b0eb0a1ffb1">   41</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ab9e1f941b1a58f7cf9231b0eb0a1ffb1">AH_UV_OY</a>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a075192f6b79f4a2f0d98dc41f704cb5c">   42</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a075192f6b79f4a2f0d98dc41f704cb5c">AH_UV_YX</a>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a1ce439f731203263d2cfb58393db26c0">   43</a></span>    <a class="code hl_enumvalue" href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a1ce439f731203263d2cfb58393db26c0">AH_UV_XY</a>  <span class="comment">/* should always be last! */</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="ahglyph_8h.html#ae26c60ed70f5d46cbc48c8f044c96aef">   45</a></span>  } <a class="code hl_typedef" href="ahglyph_8h.html#ae26c60ed70f5d46cbc48c8f044c96aef">AH_UV</a>;</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_function" href="ahglyph_8h.html#a3ac527785f3083544fa8f4edc774b89d">ah_setup_uv</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>               <a class="code hl_typedef" href="ahglyph_8h.html#ae26c60ed70f5d46cbc48c8f044c96aef">AH_UV</a>       source );</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">/* AH_OutlineRec functions - they should be typically called in this order */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_function" href="ahglyph_8h.html#a98d20e90697394c91597e51d63537edf">ah_outline_new</a>( <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>    <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                  <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>*  aoutline );</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_function" href="ahglyph_8h.html#aa771b6cdc56b393251dfff48cb9ac56f">ah_outline_load</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                   <a class="code hl_typedef" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a>     <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> );</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_function" href="ahglyph_8h.html#a11d664ccc9787855e7251023a8987b26">ah_outline_compute_segments</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline );</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_function" href="ahglyph_8h.html#a6f799d1b8c61f19c2e538cb8b48d69b1">ah_outline_link_segments</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_function" href="ahglyph_8h.html#ade6802882259d7d09368d9ed8cb5637e">ah_outline_detect_features</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_function" href="ahglyph_8h.html#a99d6aa2de7a457f4f61cda26e7628f75">ah_outline_compute_blue_edges</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>       outline,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                 <a class="code hl_typedef" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a>  globals );</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_function" href="ahglyph_8h.html#a1426e78b0ef174f32a1b305d10f131bd">ah_outline_scale_blue_edges</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>       outline,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                               <a class="code hl_typedef" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a>  globals );</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_function" href="ahglyph_8h.html#a28df97f404d56c78b7ca0fa175cd4f0f">ah_outline_save</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                   <a class="code hl_define" href="ahloader_8h.html#a01e7f2090bbeb566431dbe3a9a26be5d">AH_Loader</a>   loader );</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_function" href="ahglyph_8h.html#a498a1cdd21bd4b8375edae088874530f">ah_outline_done</a>( <a class="code hl_typedef" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a>  outline );</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">/* __AHGLYPH_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="aahglyph_8h_html_a11d664ccc9787855e7251023a8987b26"><div class="ttname"><a href="ahglyph_8h.html#a11d664ccc9787855e7251023a8987b26">ah_outline_compute_segments</a></div><div class="ttdeci">ah_outline_compute_segments(AH_Outline outline)</div><div class="ttdef"><b>Definition</b> ahglyph.c:797</div></div>
+<div class="ttc" id="aahglyph_8h_html_a1426e78b0ef174f32a1b305d10f131bd"><div class="ttname"><a href="ahglyph_8h.html#a1426e78b0ef174f32a1b305d10f131bd">ah_outline_scale_blue_edges</a></div><div class="ttdeci">ah_outline_scale_blue_edges(AH_Outline outline, AH_Face_Globals globals)</div><div class="ttdef"><b>Definition</b> ahglyph.c:1561</div></div>
+<div class="ttc" id="aahglyph_8h_html_a28df97f404d56c78b7ca0fa175cd4f0f"><div class="ttname"><a href="ahglyph_8h.html#a28df97f404d56c78b7ca0fa175cd4f0f">ah_outline_save</a></div><div class="ttdeci">ah_outline_save(AH_Outline outline, AH_Loader loader)</div><div class="ttdef"><b>Definition</b> ahglyph.c:356</div></div>
+<div class="ttc" id="aahglyph_8h_html_a3ac527785f3083544fa8f4edc774b89d"><div class="ttname"><a href="ahglyph_8h.html#a3ac527785f3083544fa8f4edc774b89d">ah_setup_uv</a></div><div class="ttdeci">ah_setup_uv(AH_Outline outline, AH_UV source)</div><div class="ttdef"><b>Definition</b> ahglyph.c:627</div></div>
+<div class="ttc" id="aahglyph_8h_html_a498a1cdd21bd4b8375edae088874530f"><div class="ttname"><a href="ahglyph_8h.html#a498a1cdd21bd4b8375edae088874530f">ah_outline_done</a></div><div class="ttdeci">ah_outline_done(AH_Outline outline)</div><div class="ttdef"><b>Definition</b> ahglyph.c:332</div></div>
+<div class="ttc" id="aahglyph_8h_html_a6f799d1b8c61f19c2e538cb8b48d69b1"><div class="ttname"><a href="ahglyph_8h.html#a6f799d1b8c61f19c2e538cb8b48d69b1">ah_outline_link_segments</a></div><div class="ttdeci">ah_outline_link_segments(AH_Outline outline)</div><div class="ttdef"><b>Definition</b> ahglyph.c:1039</div></div>
+<div class="ttc" id="aahglyph_8h_html_a98d20e90697394c91597e51d63537edf"><div class="ttname"><a href="ahglyph_8h.html#a98d20e90697394c91597e51d63537edf">ah_outline_new</a></div><div class="ttdeci">ah_outline_new(FT_Memory memory, AH_Outline *aoutline)</div><div class="ttdef"><b>Definition</b> ahglyph.c:306</div></div>
+<div class="ttc" id="aahglyph_8h_html_a99d6aa2de7a457f4f61cda26e7628f75"><div class="ttname"><a href="ahglyph_8h.html#a99d6aa2de7a457f4f61cda26e7628f75">ah_outline_compute_blue_edges</a></div><div class="ttdeci">ah_outline_compute_blue_edges(AH_Outline outline, AH_Face_Globals globals)</div><div class="ttdef"><b>Definition</b> ahglyph.c:1427</div></div>
+<div class="ttc" id="aahglyph_8h_html_aa771b6cdc56b393251dfff48cb9ac56f"><div class="ttname"><a href="ahglyph_8h.html#aa771b6cdc56b393251dfff48cb9ac56f">ah_outline_load</a></div><div class="ttdeci">ah_outline_load(AH_Outline outline, FT_Face face)</div><div class="ttdef"><b>Definition</b> ahglyph.c:391</div></div>
+<div class="ttc" id="aahglyph_8h_html_ade6802882259d7d09368d9ed8cb5637e"><div class="ttname"><a href="ahglyph_8h.html#ade6802882259d7d09368d9ed8cb5637e">ah_outline_detect_features</a></div><div class="ttdeci">ah_outline_detect_features(AH_Outline outline)</div><div class="ttdef"><b>Definition</b> ahglyph.c:1408</div></div>
+<div class="ttc" id="aahglyph_8h_html_ae26c60ed70f5d46cbc48c8f044c96aef"><div class="ttname"><a href="ahglyph_8h.html#ae26c60ed70f5d46cbc48c8f044c96aef">AH_UV</a></div><div class="ttdeci">FT_BEGIN_HEADER enum AH_UV_ AH_UV</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53">AH_UV_</a></div><div class="ttdeci">AH_UV_</div><div class="ttdef"><b>Definition</b> ahglyph.h:35</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53a075192f6b79f4a2f0d98dc41f704cb5c"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a075192f6b79f4a2f0d98dc41f704cb5c">AH_UV_YX</a></div><div class="ttdeci">@ AH_UV_YX</div><div class="ttdef"><b>Definition</b> ahglyph.h:42</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53a0df7e4d38def6b8cab42811f5d269b66"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a0df7e4d38def6b8cab42811f5d269b66">AH_UV_FXY</a></div><div class="ttdeci">@ AH_UV_FXY</div><div class="ttdef"><b>Definition</b> ahglyph.h:36</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53a1ce439f731203263d2cfb58393db26c0"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a1ce439f731203263d2cfb58393db26c0">AH_UV_XY</a></div><div class="ttdeci">@ AH_UV_XY</div><div class="ttdef"><b>Definition</b> ahglyph.h:43</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53a672cb20dff6c5508d6afb8a8d306415a"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53a672cb20dff6c5508d6afb8a8d306415a">AH_UV_FYX</a></div><div class="ttdeci">@ AH_UV_FYX</div><div class="ttdef"><b>Definition</b> ahglyph.h:37</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53ab9e1f941b1a58f7cf9231b0eb0a1ffb1"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ab9e1f941b1a58f7cf9231b0eb0a1ffb1">AH_UV_OY</a></div><div class="ttdeci">@ AH_UV_OY</div><div class="ttdef"><b>Definition</b> ahglyph.h:41</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53ad096ccfcc2b4072fd6391140e8218eb9"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ad096ccfcc2b4072fd6391140e8218eb9">AH_UV_OYX</a></div><div class="ttdeci">@ AH_UV_OYX</div><div class="ttdef"><b>Definition</b> ahglyph.h:39</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53ad9e3032d85ecc6496354ec7d60694121"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53ad9e3032d85ecc6496354ec7d60694121">AH_UV_OX</a></div><div class="ttdeci">@ AH_UV_OX</div><div class="ttdef"><b>Definition</b> ahglyph.h:40</div></div>
+<div class="ttc" id="aahglyph_8h_html_af37f0358479544b339faf67ec865ea53afabb3ad95d0eccd7ae726ed51a4d16cc"><div class="ttname"><a href="ahglyph_8h.html#af37f0358479544b339faf67ec865ea53afabb3ad95d0eccd7ae726ed51a4d16cc">AH_UV_OXY</a></div><div class="ttdeci">@ AH_UV_OXY</div><div class="ttdef"><b>Definition</b> ahglyph.h:38</div></div>
+<div class="ttc" id="aahloader_8h_html_a01e7f2090bbeb566431dbe3a9a26be5d"><div class="ttname"><a href="ahloader_8h.html#a01e7f2090bbeb566431dbe3a9a26be5d">AH_Loader</a></div><div class="ttdeci">#define AH_Loader</div><div class="ttdef"><b>Definition</b> ahloader.h:42</div></div>
+<div class="ttc" id="aahtypes_8h_html"><div class="ttname"><a href="ahtypes_8h.html">ahtypes.h</a></div></div>
+<div class="ttc" id="aahtypes_8h_html_a38ad2bc6ea282d84224752dff11a2c06"><div class="ttname"><a href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></div><div class="ttdeci">struct AH_OutlineRec_ * AH_Outline</div></div>
+<div class="ttc" id="aahtypes_8h_html_a6a93c22568ce41e4651ade8212362626"><div class="ttname"><a href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a></div><div class="ttdeci">struct AH_Face_GlobalsRec_ * AH_Face_Globals</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a58a8b2fb387665ef9652a54a9ad80bd3"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a></div><div class="ttdeci">#define FT_LOCAL(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:154</div></div>
+<div class="ttc" id="afreetype_8h_html_a7eba045ee20968354fa1bff0f69740fa"><div class="ttname"><a href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></div><div class="ttdeci">struct FT_FaceRec_ * FT_Face</div><div class="ttdef"><b>Definition</b> freetype.h:315</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_808c9a22bb2c2440b2d86bdaad927006.html">autohint</a></li><li class="navelem"><a href="ahglyph_8h.html">ahglyph.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

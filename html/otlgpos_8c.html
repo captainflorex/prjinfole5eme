@@ -1,0 +1,1238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/otlayout/otlgpos.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('otlgpos_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier otlgpos.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="otlgpos_8h_source.html">otlgpos.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="otlcommn_8h_source.html">otlcommn.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de otlgpos.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2otlayout_2otlgpos_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a5a5c8fca74f7918d3222831970a4510f" id="r_a5a5c8fca74f7918d3222831970a4510f"><td class="memItemLeft">static <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5a5c8fca74f7918d3222831970a4510f">otl_value_length</a> (<a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> format)</td></tr>
+<tr class="memitem:a66006998e220257ecf82e9d406b4b97e" id="r_a66006998e220257ecf82e9d406b4b97e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a66006998e220257ecf82e9d406b4b97e">otl_value_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> pos_table, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> format, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a22fce23ab291c1917fe94771e665044a" id="r_a22fce23ab291c1917fe94771e665044a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a22fce23ab291c1917fe94771e665044a">otl_anchor_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:ac3bab6726cbc9948d5d27bab32f9e3e8" id="r_ac3bab6726cbc9948d5d27bab32f9e3e8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac3bab6726cbc9948d5d27bab32f9e3e8">otl_mark_array_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:af901ca9da6c6eb5b76f4441ce4a21706" id="r_af901ca9da6c6eb5b76f4441ce4a21706"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af901ca9da6c6eb5b76f4441ce4a21706">otl_gpos_lookup1_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:abbf0f6cd56240266ddd577a6e86b850a" id="r_abbf0f6cd56240266ddd577a6e86b850a"><td class="memItemLeft">static&#160;</td><td class="memItemRight"><a class="el" href="#abbf0f6cd56240266ddd577a6e86b850a">otl_gpos_pairset_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> pos_table, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> format1, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> format2, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:af0699ad8e09b6bc27ee2b669fb2c7130" id="r_af0699ad8e09b6bc27ee2b669fb2c7130"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af0699ad8e09b6bc27ee2b669fb2c7130">otl_gpos_lookup2_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:ac3b0375a67ae9084e75062bd0d437015" id="r_ac3b0375a67ae9084e75062bd0d437015"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac3b0375a67ae9084e75062bd0d437015">otl_gpos_lookup3_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, OTL_Valid valid)</td></tr>
+<tr class="memitem:a87f10a4004fa973f13bee47bf1974eb3" id="r_a87f10a4004fa973f13bee47bf1974eb3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a87f10a4004fa973f13bee47bf1974eb3">otl_base_array_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> class_count, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a40d0faaeb32912e0c8967e24327e1d09" id="r_a40d0faaeb32912e0c8967e24327e1d09"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a40d0faaeb32912e0c8967e24327e1d09">otl_gpos_lookup4_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, OTL_Valid valid)</td></tr>
+<tr class="memitem:a04e505c2a82a815b1c85e000f274ff10" id="r_a04e505c2a82a815b1c85e000f274ff10"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a04e505c2a82a815b1c85e000f274ff10">otl_liga_attach_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> class_count, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a63c484c521271d0c7e0e990cf01a0914" id="r_a63c484c521271d0c7e0e990cf01a0914"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a63c484c521271d0c7e0e990cf01a0914">otl_liga_array_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> class_count, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:abf791682351c37f112d8390b9e108525" id="r_abf791682351c37f112d8390b9e108525"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abf791682351c37f112d8390b9e108525">otl_gpos_lookup5_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, OTL_Valid valid)</td></tr>
+<tr class="memitem:a821da29cd0c5beb9c14867065f463cf3" id="r_a821da29cd0c5beb9c14867065f463cf3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a821da29cd0c5beb9c14867065f463cf3">otl_mark2_array_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> class_count, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:aa1d9014a5fbe717400ce291c03541084" id="r_aa1d9014a5fbe717400ce291c03541084"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa1d9014a5fbe717400ce291c03541084">otl_gpos_lookup6_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, OTL_Valid valid)</td></tr>
+<tr class="memitem:a128beb64f03d562b551ee181449544fa" id="r_a128beb64f03d562b551ee181449544fa"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a128beb64f03d562b551ee181449544fa">otl_pos_rule_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a535d6eb14d7067759785e43b80746827" id="r_a535d6eb14d7067759785e43b80746827"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a535d6eb14d7067759785e43b80746827">otl_pos_rule_set_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a48b2b57c9d72c31843226136a2f942c6" id="r_a48b2b57c9d72c31843226136a2f942c6"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a48b2b57c9d72c31843226136a2f942c6">otl_pos_class_rule_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a808db79829d060dac66ce19adf9a44d4" id="r_a808db79829d060dac66ce19adf9a44d4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a808db79829d060dac66ce19adf9a44d4">otl_pos_class_set_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a69506910d97b87b37d0ee7f391eee1f1" id="r_a69506910d97b87b37d0ee7f391eee1f1"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a69506910d97b87b37d0ee7f391eee1f1">otl_gpos_lookup7_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a042e05b4f1841ac02dadf7ec77173c99" id="r_a042e05b4f1841ac02dadf7ec77173c99"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a042e05b4f1841ac02dadf7ec77173c99">otl_chain_pos_rule_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a1379887672692a886185a0165ea2283f" id="r_a1379887672692a886185a0165ea2283f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1379887672692a886185a0165ea2283f">otl_chain_pos_rule_set_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:afcaadaee24ee15bec432f148fb1827db" id="r_afcaadaee24ee15bec432f148fb1827db"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#afcaadaee24ee15bec432f148fb1827db">otl_chain_pos_class_rule_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:a63b870d34b6eeb8ea719b5b0484a2801" id="r_a63b870d34b6eeb8ea719b5b0484a2801"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a63b870d34b6eeb8ea719b5b0484a2801">otl_chain_pos_class_set_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:ab612da2fb0b43ee7cd7cffcd19cfbc4e" id="r_ab612da2fb0b43ee7cd7cffcd19cfbc4e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab612da2fb0b43ee7cd7cffcd19cfbc4e">otl_gpos_lookup8_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+<tr class="memitem:afc598723ea7ac0454af2f3504f51add4" id="r_afc598723ea7ac0454af2f3504f51add4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#afc598723ea7ac0454af2f3504f51add4">otl_gpos_lookup9_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, OTL_Valid valid)</td></tr>
+<tr class="memitem:a95acd0287b900ab2e26b5d711d6538cf" id="r_a95acd0287b900ab2e26b5d711d6538cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a95acd0287b900ab2e26b5d711d6538cf">otl_gpos_validate</a> (<a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a> table, <a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a> valid)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a66434834ec8925a022d20da7b9859fe4" id="r_a66434834ec8925a022d20da7b9859fe4"><td class="memItemLeft">static <a class="el" href="otlayout_8h.html#a858404bd085658d95d598b52ab9f0eb6">OTL_ValidateFunc</a>&#160;</td><td class="memItemRight"><a class="el" href="#a66434834ec8925a022d20da7b9859fe4">otl_gpos_validate_funcs</a> []</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a22fce23ab291c1917fe94771e665044a" name="a22fce23ab291c1917fe94771e665044a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22fce23ab291c1917fe94771e665044a">&#9670;&#160;</a></span>otl_anchor_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_anchor_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a22fce23ab291c1917fe94771e665044a_cgraph.png" border="0" usemap="#aotlgpos_8c_a22fce23ab291c1917fe94771e665044a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a22fce23ab291c1917fe94771e665044a_icgraph.png" border="0" usemap="#aotlgpos_8c_a22fce23ab291c1917fe94771e665044a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a87f10a4004fa973f13bee47bf1974eb3" name="a87f10a4004fa973f13bee47bf1974eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f10a4004fa973f13bee47bf1974eb3">&#9670;&#160;</a></span>otl_base_array_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_base_array_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>class_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a87f10a4004fa973f13bee47bf1974eb3_cgraph.png" border="0" usemap="#aotlgpos_8c_a87f10a4004fa973f13bee47bf1974eb3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a87f10a4004fa973f13bee47bf1974eb3_icgraph.png" border="0" usemap="#aotlgpos_8c_a87f10a4004fa973f13bee47bf1974eb3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="afcaadaee24ee15bec432f148fb1827db" name="afcaadaee24ee15bec432f148fb1827db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcaadaee24ee15bec432f148fb1827db">&#9670;&#160;</a></span>otl_chain_pos_class_rule_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_chain_pos_class_rule_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_afcaadaee24ee15bec432f148fb1827db_icgraph.png" border="0" usemap="#aotlgpos_8c_afcaadaee24ee15bec432f148fb1827db_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a63b870d34b6eeb8ea719b5b0484a2801" name="a63b870d34b6eeb8ea719b5b0484a2801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b870d34b6eeb8ea719b5b0484a2801">&#9670;&#160;</a></span>otl_chain_pos_class_set_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_chain_pos_class_set_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a63b870d34b6eeb8ea719b5b0484a2801_cgraph.png" border="0" usemap="#aotlgpos_8c_a63b870d34b6eeb8ea719b5b0484a2801_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a63b870d34b6eeb8ea719b5b0484a2801_icgraph.png" border="0" usemap="#aotlgpos_8c_a63b870d34b6eeb8ea719b5b0484a2801_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a1379887672692a886185a0165ea2283f" name="a1379887672692a886185a0165ea2283f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1379887672692a886185a0165ea2283f">&#9670;&#160;</a></span>otl_chain_pos_rule_set_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_chain_pos_rule_set_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a1379887672692a886185a0165ea2283f_cgraph.png" border="0" usemap="#aotlgpos_8c_a1379887672692a886185a0165ea2283f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a1379887672692a886185a0165ea2283f_icgraph.png" border="0" usemap="#aotlgpos_8c_a1379887672692a886185a0165ea2283f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a042e05b4f1841ac02dadf7ec77173c99" name="a042e05b4f1841ac02dadf7ec77173c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042e05b4f1841ac02dadf7ec77173c99">&#9670;&#160;</a></span>otl_chain_pos_rule_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_chain_pos_rule_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a042e05b4f1841ac02dadf7ec77173c99_icgraph.png" border="0" usemap="#aotlgpos_8c_a042e05b4f1841ac02dadf7ec77173c99_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="af901ca9da6c6eb5b76f4441ce4a21706" name="af901ca9da6c6eb5b76f4441ce4a21706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af901ca9da6c6eb5b76f4441ce4a21706">&#9670;&#160;</a></span>otl_gpos_lookup1_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup1_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_af901ca9da6c6eb5b76f4441ce4a21706_cgraph.png" border="0" usemap="#aotlgpos_8c_af901ca9da6c6eb5b76f4441ce4a21706_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="af0699ad8e09b6bc27ee2b669fb2c7130" name="af0699ad8e09b6bc27ee2b669fb2c7130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0699ad8e09b6bc27ee2b669fb2c7130">&#9670;&#160;</a></span>otl_gpos_lookup2_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup2_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_af0699ad8e09b6bc27ee2b669fb2c7130_cgraph.png" border="0" usemap="#aotlgpos_8c_af0699ad8e09b6bc27ee2b669fb2c7130_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="ac3b0375a67ae9084e75062bd0d437015" name="ac3b0375a67ae9084e75062bd0d437015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b0375a67ae9084e75062bd0d437015">&#9670;&#160;</a></span>otl_gpos_lookup3_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup3_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OTL_Valid</td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_ac3b0375a67ae9084e75062bd0d437015_cgraph.png" border="0" usemap="#aotlgpos_8c_ac3b0375a67ae9084e75062bd0d437015_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a40d0faaeb32912e0c8967e24327e1d09" name="a40d0faaeb32912e0c8967e24327e1d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d0faaeb32912e0c8967e24327e1d09">&#9670;&#160;</a></span>otl_gpos_lookup4_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup4_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OTL_Valid</td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a40d0faaeb32912e0c8967e24327e1d09_cgraph.png" border="0" usemap="#aotlgpos_8c_a40d0faaeb32912e0c8967e24327e1d09_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="abf791682351c37f112d8390b9e108525" name="abf791682351c37f112d8390b9e108525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf791682351c37f112d8390b9e108525">&#9670;&#160;</a></span>otl_gpos_lookup5_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup5_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OTL_Valid</td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_abf791682351c37f112d8390b9e108525_cgraph.png" border="0" usemap="#aotlgpos_8c_abf791682351c37f112d8390b9e108525_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="aa1d9014a5fbe717400ce291c03541084" name="aa1d9014a5fbe717400ce291c03541084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d9014a5fbe717400ce291c03541084">&#9670;&#160;</a></span>otl_gpos_lookup6_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup6_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OTL_Valid</td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_aa1d9014a5fbe717400ce291c03541084_cgraph.png" border="0" usemap="#aotlgpos_8c_aa1d9014a5fbe717400ce291c03541084_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="a69506910d97b87b37d0ee7f391eee1f1" name="a69506910d97b87b37d0ee7f391eee1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69506910d97b87b37d0ee7f391eee1f1">&#9670;&#160;</a></span>otl_gpos_lookup7_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup7_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a69506910d97b87b37d0ee7f391eee1f1_cgraph.png" border="0" usemap="#aotlgpos_8c_a69506910d97b87b37d0ee7f391eee1f1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="ab612da2fb0b43ee7cd7cffcd19cfbc4e" name="ab612da2fb0b43ee7cd7cffcd19cfbc4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab612da2fb0b43ee7cd7cffcd19cfbc4e">&#9670;&#160;</a></span>otl_gpos_lookup8_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup8_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_ab612da2fb0b43ee7cd7cffcd19cfbc4e_cgraph.png" border="0" usemap="#aotlgpos_8c_ab612da2fb0b43ee7cd7cffcd19cfbc4e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="afc598723ea7ac0454af2f3504f51add4" name="afc598723ea7ac0454af2f3504f51add4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc598723ea7ac0454af2f3504f51add4">&#9670;&#160;</a></span>otl_gpos_lookup9_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_gpos_lookup9_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OTL_Valid</td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbf0f6cd56240266ddd577a6e86b850a" name="abbf0f6cd56240266ddd577a6e86b850a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf0f6cd56240266ddd577a6e86b850a">&#9670;&#160;</a></span>otl_gpos_pairset_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otl_gpos_pairset_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>pos_table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>format1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>format2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_abbf0f6cd56240266ddd577a6e86b850a_cgraph.png" border="0" usemap="#aotlgpos_8c_abbf0f6cd56240266ddd577a6e86b850a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_abbf0f6cd56240266ddd577a6e86b850a_icgraph.png" border="0" usemap="#aotlgpos_8c_abbf0f6cd56240266ddd577a6e86b850a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="a95acd0287b900ab2e26b5d711d6538cf" name="a95acd0287b900ab2e26b5d711d6538cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95acd0287b900ab2e26b5d711d6538cf">&#9670;&#160;</a></span>otl_gpos_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">otl_gpos_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a95acd0287b900ab2e26b5d711d6538cf_cgraph.png" border="0" usemap="#aotlgpos_8c_a95acd0287b900ab2e26b5d711d6538cf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a95acd0287b900ab2e26b5d711d6538cf_icgraph.png" border="0" usemap="#aotlgpos_8c_a95acd0287b900ab2e26b5d711d6538cf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a63c484c521271d0c7e0e990cf01a0914" name="a63c484c521271d0c7e0e990cf01a0914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c484c521271d0c7e0e990cf01a0914">&#9670;&#160;</a></span>otl_liga_array_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_liga_array_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>class_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a63c484c521271d0c7e0e990cf01a0914_cgraph.png" border="0" usemap="#aotlgpos_8c_a63c484c521271d0c7e0e990cf01a0914_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a63c484c521271d0c7e0e990cf01a0914_icgraph.png" border="0" usemap="#aotlgpos_8c_a63c484c521271d0c7e0e990cf01a0914_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="a04e505c2a82a815b1c85e000f274ff10" name="a04e505c2a82a815b1c85e000f274ff10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e505c2a82a815b1c85e000f274ff10">&#9670;&#160;</a></span>otl_liga_attach_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_liga_attach_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>class_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a04e505c2a82a815b1c85e000f274ff10_cgraph.png" border="0" usemap="#aotlgpos_8c_a04e505c2a82a815b1c85e000f274ff10_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a04e505c2a82a815b1c85e000f274ff10_icgraph.png" border="0" usemap="#aotlgpos_8c_a04e505c2a82a815b1c85e000f274ff10_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="a821da29cd0c5beb9c14867065f463cf3" name="a821da29cd0c5beb9c14867065f463cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821da29cd0c5beb9c14867065f463cf3">&#9670;&#160;</a></span>otl_mark2_array_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_mark2_array_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>class_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a821da29cd0c5beb9c14867065f463cf3_cgraph.png" border="0" usemap="#aotlgpos_8c_a821da29cd0c5beb9c14867065f463cf3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a821da29cd0c5beb9c14867065f463cf3_icgraph.png" border="0" usemap="#aotlgpos_8c_a821da29cd0c5beb9c14867065f463cf3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="ac3bab6726cbc9948d5d27bab32f9e3e8" name="ac3bab6726cbc9948d5d27bab32f9e3e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bab6726cbc9948d5d27bab32f9e3e8">&#9670;&#160;</a></span>otl_mark_array_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_mark_array_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_ac3bab6726cbc9948d5d27bab32f9e3e8_cgraph.png" border="0" usemap="#aotlgpos_8c_ac3bab6726cbc9948d5d27bab32f9e3e8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_ac3bab6726cbc9948d5d27bab32f9e3e8_icgraph.png" border="0" usemap="#aotlgpos_8c_ac3bab6726cbc9948d5d27bab32f9e3e8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="a48b2b57c9d72c31843226136a2f942c6" name="a48b2b57c9d72c31843226136a2f942c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b2b57c9d72c31843226136a2f942c6">&#9670;&#160;</a></span>otl_pos_class_rule_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_pos_class_rule_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a808db79829d060dac66ce19adf9a44d4" name="a808db79829d060dac66ce19adf9a44d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808db79829d060dac66ce19adf9a44d4">&#9670;&#160;</a></span>otl_pos_class_set_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_pos_class_set_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a808db79829d060dac66ce19adf9a44d4_cgraph.png" border="0" usemap="#aotlgpos_8c_a808db79829d060dac66ce19adf9a44d4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a535d6eb14d7067759785e43b80746827" name="a535d6eb14d7067759785e43b80746827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535d6eb14d7067759785e43b80746827">&#9670;&#160;</a></span>otl_pos_rule_set_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_pos_rule_set_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a535d6eb14d7067759785e43b80746827_cgraph.png" border="0" usemap="#aotlgpos_8c_a535d6eb14d7067759785e43b80746827_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a535d6eb14d7067759785e43b80746827_icgraph.png" border="0" usemap="#aotlgpos_8c_a535d6eb14d7067759785e43b80746827_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="a128beb64f03d562b551ee181449544fa" name="a128beb64f03d562b551ee181449544fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128beb64f03d562b551ee181449544fa">&#9670;&#160;</a></span>otl_pos_rule_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_pos_rule_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a128beb64f03d562b551ee181449544fa_icgraph.png" border="0" usemap="#aotlgpos_8c_a128beb64f03d562b551ee181449544fa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="a5a5c8fca74f7918d3222831970a4510f" name="a5a5c8fca74f7918d3222831970a4510f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5c8fca74f7918d3222831970a4510f">&#9670;&#160;</a></span>otl_value_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a> otl_value_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a5a5c8fca74f7918d3222831970a4510f_icgraph.png" border="0" usemap="#aotlgpos_8c_a5a5c8fca74f7918d3222831970a4510f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a66006998e220257ecf82e9d406b4b97e" name="a66006998e220257ecf82e9d406b4b97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66006998e220257ecf82e9d406b4b97e">&#9670;&#160;</a></span>otl_value_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otl_value_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></td>          <td class="paramname"><span class="paramname"><em>pos_table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="otlayout_8h.html#a5df0e068415cd79be420d4394611e845">OTL_Validator</a></td>          <td class="paramname"><span class="paramname"><em>valid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a66006998e220257ecf82e9d406b4b97e_cgraph.png" border="0" usemap="#aotlgpos_8c_a66006998e220257ecf82e9d406b4b97e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="otlgpos_8c_a66006998e220257ecf82e9d406b4b97e_icgraph.png" border="0" usemap="#aotlgpos_8c_a66006998e220257ecf82e9d406b4b97e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a66434834ec8925a022d20da7b9859fe4" name="a66434834ec8925a022d20da7b9859fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66434834ec8925a022d20da7b9859fe4">&#9670;&#160;</a></span>otl_gpos_validate_funcs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="otlayout_8h.html#a858404bd085658d95d598b52ab9f0eb6">OTL_ValidateFunc</a> otl_gpos_validate_funcs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                 =</div>
+<div class="line">{</div>
+<div class="line">  <a class="code hl_function" href="#af901ca9da6c6eb5b76f4441ce4a21706">otl_gpos_lookup1_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#af0699ad8e09b6bc27ee2b669fb2c7130">otl_gpos_lookup2_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#ac3b0375a67ae9084e75062bd0d437015">otl_gpos_lookup3_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#a40d0faaeb32912e0c8967e24327e1d09">otl_gpos_lookup4_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#abf791682351c37f112d8390b9e108525">otl_gpos_lookup5_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#aa1d9014a5fbe717400ce291c03541084">otl_gpos_lookup6_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#a69506910d97b87b37d0ee7f391eee1f1">otl_gpos_lookup7_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#ab612da2fb0b43ee7cd7cffcd19cfbc4e">otl_gpos_lookup8_validate</a>,</div>
+<div class="line">  <a class="code hl_function" href="#afc598723ea7ac0454af2f3504f51add4">otl_gpos_lookup9_validate</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aotlgpos_8c_html_a40d0faaeb32912e0c8967e24327e1d09"><div class="ttname"><a href="#a40d0faaeb32912e0c8967e24327e1d09">otl_gpos_lookup4_validate</a></div><div class="ttdeci">static void otl_gpos_lookup4_validate(OTL_Bytes table, OTL_Valid valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:385</div></div>
+<div class="ttc" id="aotlgpos_8c_html_a69506910d97b87b37d0ee7f391eee1f1"><div class="ttname"><a href="#a69506910d97b87b37d0ee7f391eee1f1">otl_gpos_lookup7_validate</a></div><div class="ttdeci">static void otl_gpos_lookup7_validate(OTL_Bytes table, OTL_Validator valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:644</div></div>
+<div class="ttc" id="aotlgpos_8c_html_aa1d9014a5fbe717400ce291c03541084"><div class="ttname"><a href="#aa1d9014a5fbe717400ce291c03541084">otl_gpos_lookup6_validate</a></div><div class="ttdeci">static void otl_gpos_lookup6_validate(OTL_Bytes table, OTL_Valid valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:527</div></div>
+<div class="ttc" id="aotlgpos_8c_html_ab612da2fb0b43ee7cd7cffcd19cfbc4e"><div class="ttname"><a href="#ab612da2fb0b43ee7cd7cffcd19cfbc4e">otl_gpos_lookup8_validate</a></div><div class="ttdeci">static void otl_gpos_lookup8_validate(OTL_Bytes table, OTL_Validator valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:810</div></div>
+<div class="ttc" id="aotlgpos_8c_html_abf791682351c37f112d8390b9e108525"><div class="ttname"><a href="#abf791682351c37f112d8390b9e108525">otl_gpos_lookup5_validate</a></div><div class="ttdeci">static void otl_gpos_lookup5_validate(OTL_Bytes table, OTL_Valid valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:464</div></div>
+<div class="ttc" id="aotlgpos_8c_html_ac3b0375a67ae9084e75062bd0d437015"><div class="ttname"><a href="#ac3b0375a67ae9084e75062bd0d437015">otl_gpos_lookup3_validate</a></div><div class="ttdeci">static void otl_gpos_lookup3_validate(OTL_Bytes table, OTL_Valid valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:317</div></div>
+<div class="ttc" id="aotlgpos_8c_html_af0699ad8e09b6bc27ee2b669fb2c7130"><div class="ttname"><a href="#af0699ad8e09b6bc27ee2b669fb2c7130">otl_gpos_lookup2_validate</a></div><div class="ttdeci">static void otl_gpos_lookup2_validate(OTL_Bytes table, OTL_Validator valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:237</div></div>
+<div class="ttc" id="aotlgpos_8c_html_af901ca9da6c6eb5b76f4441ce4a21706"><div class="ttname"><a href="#af901ca9da6c6eb5b76f4441ce4a21706">otl_gpos_lookup1_validate</a></div><div class="ttdeci">static void otl_gpos_lookup1_validate(OTL_Bytes table, OTL_Validator valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:152</div></div>
+<div class="ttc" id="aotlgpos_8c_html_afc598723ea7ac0454af2f3504f51add4"><div class="ttname"><a href="#afc598723ea7ac0454af2f3504f51add4">otl_gpos_lookup9_validate</a></div><div class="ttdeci">static void otl_gpos_lookup9_validate(OTL_Bytes table, OTL_Valid valid)</div><div class="ttdef"><b>Definition</b> otlgpos.c:903</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_2abfe5e91ed096a20308029c05db5e9c.html">otlayout</a></li><li class="navelem"><a href="otlgpos_8c.html">otlgpos.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pfr/pfrdrivr.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pfrdrivr_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pfrdrivr.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pfrdrivr_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  pfrdrivr.c                                                             */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    FreeType PFR driver interface (body).                                */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2002 by                                                      */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include FT_INTERNAL_DEBUG_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include FT_INTERNAL_STREAM_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include FT_INTERNAL_PFR_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="pfrdrivr_8h.html">pfrdrivr.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="pfrobjs_8h.html">pfrobjs.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="pfrdrivr_8c.html#a2f1abe42c70c4c775e1225b039add060">   28</a></span>  <a class="code hl_function" href="pfrdrivr_8c.html#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>    <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                   <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>     left,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                   <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>     right,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                   <a class="code hl_typedef" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a>  *avector )</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>  <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = <a class="code hl_function" href="pfrobjs_8c.html#a24bea0a91b530a902a50cd210be30fc6">pfr_face_get_kerning</a>( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, left, right, avector );</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> ( !<a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <a class="code hl_typedef" href="pfrtypes_8h.html#a4eceb03c470e71bb2746b9ec46cca3b7">PFR_PhyFont</a>  phys = &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;phy_font;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="comment">/* convert from metrics to outline units when necessary */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordflow">if</span> ( phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a0cec8ec87a0e441c9d9ff0af6e821945">outline_resolution</a> != phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">metrics_resolution</a> )</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> ( avector-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">x</a> != 0 )</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>          avector-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">x</a> = <a class="code hl_function" href="freetype_8h.html#ae31c0f444ce1bba445af776b86beaa60">FT_MulDiv</a>( avector-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">x</a>, phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a0cec8ec87a0e441c9d9ff0af6e821945">outline_resolution</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                                              phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">metrics_resolution</a> );</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> ( avector-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#ac3246ed214e880047ec74eeb15f8b973">y</a> != 0 )</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          avector-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#ac3246ed214e880047ec74eeb15f8b973">y</a> = <a class="code hl_function" href="freetype_8h.html#ae31c0f444ce1bba445af776b86beaa60">FT_MulDiv</a>( avector-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">x</a>, phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a0cec8ec87a0e441c9d9ff0af6e821945">outline_resolution</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                              phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">metrics_resolution</a> );</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="pfrdrivr_8c.html#abe6bd0ad25c569a3766442dcd42e10aa">   57</a></span>  <a class="code hl_function" href="pfrdrivr_8c.html#abe6bd0ad25c569a3766442dcd42e10aa">pfr_get_advance</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>   <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                   <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    gindex,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                   <a class="code hl_variable" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>    *aadvance )</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>     <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = FT_Err_Bad_Argument;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    *aadvance = 0;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> ( <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> )</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <a class="code hl_typedef" href="pfrtypes_8h.html#a4eceb03c470e71bb2746b9ec46cca3b7">PFR_PhyFont</a>  phys  = &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;phy_font;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keywordflow">if</span> ( gindex &lt; phys-&gt;num_chars )</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        *aadvance = phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a9d4fa94ab939ff605f0dea23415475bc">chars</a>[ gindex ].<a class="code hl_variable" href="struct_p_f_r___char_rec__.html#a8078980b8602d36de6cf445304fa5d99">advance</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="pfrdrivr_8c.html#aaf0c622f73a2cbfc644b36155096719a">   80</a></span>  <a class="code hl_function" href="pfrdrivr_8c.html#aaf0c622f73a2cbfc644b36155096719a">pfr_get_metrics</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>   <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                   <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   *aoutline_resolution,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                   <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   *ametrics_resolution,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                   <a class="code hl_typedef" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>  *ametrics_x_scale,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                   <a class="code hl_typedef" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>  *ametrics_y_scale )</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_typedef" href="pfrtypes_8h.html#a4eceb03c470e71bb2746b9ec46cca3b7">PFR_PhyFont</a>  phys  = &amp;<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;phy_font;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_typedef" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>     x_scale, y_scale;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_typedef" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a>      size = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;root.size;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> ( aoutline_resolution )</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      *aoutline_resolution = phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a0cec8ec87a0e441c9d9ff0af6e821945">outline_resolution</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> ( ametrics_resolution )</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      *ametrics_resolution = phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">metrics_resolution</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    x_scale = 0x10000L;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    y_scale = 0x10000L;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> ( size )</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      x_scale = <a class="code hl_function" href="freetype_8h.html#a5248df90a0d076e6543b09284face353">FT_DivFix</a>( size-&gt;<a class="code hl_variable" href="struct_f_t___size_rec__.html#a29a6b518d09f6cf1714d9aed01eddc01">metrics</a>.<a class="code hl_variable" href="struct_f_t___size___metrics__.html#abb42b175a3450e9d8b84483f166d6c8a">x_ppem</a> &lt;&lt; 6,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                           phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">metrics_resolution</a> );</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      y_scale = <a class="code hl_function" href="freetype_8h.html#a5248df90a0d076e6543b09284face353">FT_DivFix</a>( size-&gt;<a class="code hl_variable" href="struct_f_t___size_rec__.html#a29a6b518d09f6cf1714d9aed01eddc01">metrics</a>.<a class="code hl_variable" href="struct_f_t___size___metrics__.html#abcdb70cb9e39a74679bc39c07f3275f7">y_ppem</a> &lt;&lt; 6,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                           phys-&gt;<a class="code hl_variable" href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">metrics_resolution</a> );</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span> ( ametrics_x_scale )</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      *ametrics_x_scale = x_scale;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> ( ametrics_y_scale )</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      *ametrics_y_scale = y_scale;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="};">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="pfrdrivr_8c.html#a3e65574b95d55cb037b5c6ca1ca19b6c">  119</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="pfr_8h.html#a774107cf0b97a6955c94e04bc0c7155f">FT_PFR_ServiceRec</a>  <a class="code hl_variable" href="pfrdrivr_8c.html#a3e65574b95d55cb037b5c6ca1ca19b6c">pfr_service_rec</a> =</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    (<a class="code hl_variable" href="pfr_8h.html#ab21fad849eb6704c93f76526928df372">FT_PFR_GetMetricsFunc</a>)  <a class="code hl_function" href="pfrdrivr_8c.html#aaf0c622f73a2cbfc644b36155096719a">pfr_get_metrics</a>,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    (<a class="code hl_typedef" href="pfr_8h.html#a20eaaef20dc0096e67973f240c5b121e">FT_PFR_GetKerningFunc</a>)  <a class="code hl_function" href="pfrdrivr_8c.html#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a>,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    (<a class="code hl_typedef" href="pfr_8h.html#aabfd6d5f6302418e87a808f7e1c77525">FT_PFR_GetAdvanceFunc</a>)  <a class="code hl_function" href="pfrdrivr_8c.html#abe6bd0ad25c569a3766442dcd42e10aa">pfr_get_advance</a></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  };</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="};">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="pfrdrivr_8c.html#ab7882c806340569473622c5c1b94461b">  128</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="ftdriver_8h.html#a57f9368fa4a66804639f104da3cb0780">FT_Driver_ClassRec</a>  <a class="code hl_variable" href="pfrdrivr_8c.html#ab7882c806340569473622c5c1b94461b">pfr_driver_class</a> =</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400ab4d1165618b8fe0962bd6b6f646c65f8">ft_module_font_driver</a>      |</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a3aac4aad00e1ed5d60d177be8f2ac1da">ft_module_driver_scalable</a>,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#a5c8ef9d643fe00f50ffa7c61345fb2b9">FT_DriverRec</a> ),</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="stringliteral">&quot;pfr&quot;</span>,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      0x10000L,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      0x20000L,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      (<a class="code hl_typedef" href="pfr_8h.html#ab0f14ab339a7cbcbdd79bf908a00faea">FT_PFR_Service</a>)  &amp;<a class="code hl_variable" href="pfrdrivr_8c.html#a3e65574b95d55cb037b5c6ca1ca19b6c">pfr_service_rec</a>,   <span class="comment">/* format interface */</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    },</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="pfrobjs_8h.html#a0539edfeca58f9e83963102d702e2e45">PFR_FaceRec</a> ),</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="pfrobjs_8h.html#ace73a056038ebca662bc671c3d67cec6">PFR_SizeRec</a> ),</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="pfrobjs_8h.html#a60d3473bb3d7dd4382453d44ba4f1036">PFR_SlotRec</a> ),</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    (<a class="code hl_variable" href="ftdriver_8h.html#af26746d2a05245d77ece407c7e0576b3">FT_Face_InitFunc</a>)        <a class="code hl_function" href="pfrobjs_8c.html#a1b1b01622d851f0da78d57dbcb9a7615">pfr_face_init</a>,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a13d29bae37d5389d84c0d7c2e433d593">FT_Face_DoneFunc</a>)        <a class="code hl_function" href="pfrobjs_8c.html#a558c5facc5a5904281c3a4fbd349d37e">pfr_face_done</a>,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#abb1c10610365a6a508a7434effbf994b">FT_Size_InitFunc</a>)        <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a76543caab721cef117cded600eebe0d3">FT_Size_DoneFunc</a>)        <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a9aeb6080b6d9190c4af4656e55d41ac8">FT_Slot_InitFunc</a>)        <a class="code hl_function" href="pfrobjs_8c.html#a9d10db7c28f2e3a66caaa37f6cd8c10e">pfr_slot_init</a>,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#abcb3d5f7769189d7c08a83a6149321c1">FT_Slot_DoneFunc</a>)        <a class="code hl_function" href="pfrobjs_8c.html#ae00a4e5976142dae13cbe4bca06deece">pfr_slot_done</a>,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#aa0f960aa0ae99a6c409238e1d4651845">FT_Size_ResetPointsFunc</a>) <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a4d4c4a2cfad7f505850a136709a18aa5">FT_Size_ResetPixelsFunc</a>) <a class="code hl_define" href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a45d2764127581beaa049b48f32cc5c39">FT_Slot_LoadFunc</a>)        <a class="code hl_function" href="pfrobjs_8c.html#a6907f89e20733ec3e3799486b5279da0">pfr_slot_load</a>,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a57ef03e416e28e6981e01e83fcf68b4e">FT_Face_GetKerningFunc</a>)  <a class="code hl_function" href="pfrdrivr_8c.html#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a>,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#aa74e8fd695d70c4d1ca220116172f33d">FT_Face_AttachFunc</a>)      0,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a2c53cbfdd6a7d380d03c1d3a5575b7af">FT_Face_GetAdvancesFunc</a>) 0</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  };</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3e7304105563eb715cae1b9c213858ed"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE_DEF</div><div class="ttdef"><b>Definition</b> ftconfig.h:229</div></div>
+<div class="ttc" id="afreetype_8h_html_a5248df90a0d076e6543b09284face353"><div class="ttname"><a href="freetype_8h.html#a5248df90a0d076e6543b09284face353">FT_DivFix</a></div><div class="ttdeci">FT_DivFix(FT_Long a, FT_Long b)</div><div class="ttdef"><b>Definition</b> ftcalc.c:367</div></div>
+<div class="ttc" id="afreetype_8h_html_a791d0ff3273ca9628a523efd98d138c1"><div class="ttname"><a href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></div><div class="ttdeci">struct FT_SizeRec_ * FT_Size</div><div class="ttdef"><b>Definition</b> freetype.h:340</div></div>
+<div class="ttc" id="afreetype_8h_html_ae31c0f444ce1bba445af776b86beaa60"><div class="ttname"><a href="freetype_8h.html#ae31c0f444ce1bba445af776b86beaa60">FT_MulDiv</a></div><div class="ttdeci">FT_MulDiv(FT_Long a, FT_Long b, FT_Long c)</div><div class="ttdef"><b>Definition</b> ftcalc.c:291</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftdriver_8h_html_a13d29bae37d5389d84c0d7c2e433d593"><div class="ttname"><a href="ftdriver_8h.html#a13d29bae37d5389d84c0d7c2e433d593">FT_Face_DoneFunc</a></div><div class="ttdeci">void(* FT_Face_DoneFunc)(FT_Face face)</div><div class="ttdef"><b>Definition</b> ftdriver.h:38</div></div>
+<div class="ttc" id="aftdriver_8h_html_a2c53cbfdd6a7d380d03c1d3a5575b7af"><div class="ttname"><a href="ftdriver_8h.html#a2c53cbfdd6a7d380d03c1d3a5575b7af">FT_Face_GetAdvancesFunc</a></div><div class="ttdeci">FT_Error(* FT_Face_GetAdvancesFunc)(FT_Face face, FT_UInt first, FT_UInt count, FT_Bool vertical, FT_UShort *advances)</div><div class="ttdef"><b>Definition</b> ftdriver.h:95</div></div>
+<div class="ttc" id="aftdriver_8h_html_a45d2764127581beaa049b48f32cc5c39"><div class="ttname"><a href="ftdriver_8h.html#a45d2764127581beaa049b48f32cc5c39">FT_Slot_LoadFunc</a></div><div class="ttdeci">FT_Error(* FT_Slot_LoadFunc)(FT_GlyphSlot slot, FT_Size size, FT_UInt glyph_index, FT_Int32 load_flags)</div><div class="ttdef"><b>Definition</b> ftdriver.h:68</div></div>
+<div class="ttc" id="aftdriver_8h_html_a4d4c4a2cfad7f505850a136709a18aa5"><div class="ttname"><a href="ftdriver_8h.html#a4d4c4a2cfad7f505850a136709a18aa5">FT_Size_ResetPixelsFunc</a></div><div class="ttdeci">FT_Error(* FT_Size_ResetPixelsFunc)(FT_Size size, FT_UInt pixel_width, FT_UInt pixel_height)</div><div class="ttdef"><b>Definition</b> ftdriver.h:63</div></div>
+<div class="ttc" id="aftdriver_8h_html_a57ef03e416e28e6981e01e83fcf68b4e"><div class="ttname"><a href="ftdriver_8h.html#a57ef03e416e28e6981e01e83fcf68b4e">FT_Face_GetKerningFunc</a></div><div class="ttdeci">FT_Error(* FT_Face_GetKerningFunc)(FT_Face face, FT_UInt left_glyph, FT_UInt right_glyph, FT_Vector *kerning)</div><div class="ttdef"><b>Definition</b> ftdriver.h:83</div></div>
+<div class="ttc" id="aftdriver_8h_html_a57f9368fa4a66804639f104da3cb0780"><div class="ttname"><a href="ftdriver_8h.html#a57f9368fa4a66804639f104da3cb0780">FT_Driver_ClassRec</a></div><div class="ttdeci">struct FT_Driver_ClassRec_ FT_Driver_ClassRec</div></div>
+<div class="ttc" id="aftdriver_8h_html_a76543caab721cef117cded600eebe0d3"><div class="ttname"><a href="ftdriver_8h.html#a76543caab721cef117cded600eebe0d3">FT_Size_DoneFunc</a></div><div class="ttdeci">void(* FT_Size_DoneFunc)(FT_Size size)</div><div class="ttdef"><b>Definition</b> ftdriver.h:45</div></div>
+<div class="ttc" id="aftdriver_8h_html_a9aeb6080b6d9190c4af4656e55d41ac8"><div class="ttname"><a href="ftdriver_8h.html#a9aeb6080b6d9190c4af4656e55d41ac8">FT_Slot_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_Slot_InitFunc)(FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftdriver.h:49</div></div>
+<div class="ttc" id="aftdriver_8h_html_aa0f960aa0ae99a6c409238e1d4651845"><div class="ttname"><a href="ftdriver_8h.html#aa0f960aa0ae99a6c409238e1d4651845">FT_Size_ResetPointsFunc</a></div><div class="ttdeci">FT_Error(* FT_Size_ResetPointsFunc)(FT_Size size, FT_F26Dot6 char_width, FT_F26Dot6 char_height, FT_UInt horz_resolution, FT_UInt vert_resolution)</div><div class="ttdef"><b>Definition</b> ftdriver.h:56</div></div>
+<div class="ttc" id="aftdriver_8h_html_aa74e8fd695d70c4d1ca220116172f33d"><div class="ttname"><a href="ftdriver_8h.html#aa74e8fd695d70c4d1ca220116172f33d">FT_Face_AttachFunc</a></div><div class="ttdeci">FT_Error(* FT_Face_AttachFunc)(FT_Face face, FT_Stream stream)</div><div class="ttdef"><b>Definition</b> ftdriver.h:90</div></div>
+<div class="ttc" id="aftdriver_8h_html_abb1c10610365a6a508a7434effbf994b"><div class="ttname"><a href="ftdriver_8h.html#abb1c10610365a6a508a7434effbf994b">FT_Size_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_Size_InitFunc)(FT_Size size)</div><div class="ttdef"><b>Definition</b> ftdriver.h:42</div></div>
+<div class="ttc" id="aftdriver_8h_html_abcb3d5f7769189d7c08a83a6149321c1"><div class="ttname"><a href="ftdriver_8h.html#abcb3d5f7769189d7c08a83a6149321c1">FT_Slot_DoneFunc</a></div><div class="ttdeci">void(* FT_Slot_DoneFunc)(FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftdriver.h:52</div></div>
+<div class="ttc" id="aftdriver_8h_html_af26746d2a05245d77ece407c7e0576b3"><div class="ttname"><a href="ftdriver_8h.html#af26746d2a05245d77ece407c7e0576b3">FT_Face_InitFunc</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef FT_Error(* FT_Face_InitFunc)(FT_Stream stream, FT_Face face, FT_Int typeface_index, FT_Int num_params, FT_Parameter *parameters)</div><div class="ttdef"><b>Definition</b> ftdriver.h:31</div></div>
+<div class="ttc" id="aftimage_8h_html_abfcb941b4b81f3a922d4ae57c620db27"><div class="ttname"><a href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a></div><div class="ttdeci">struct FT_Vector_ FT_Vector</div></div>
+<div class="ttc" id="aftimage_8h_html_af5f230f4b253d4c7715fd2e595614c90"><div class="ttname"><a href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef signed long FT_Pos</div><div class="ttdef"><b>Definition</b> ftimage.h:59</div></div>
+<div class="ttc" id="aftobjs_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ftobjs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> ftobjs.h:60</div></div>
+<div class="ttc" id="aftobjs_8h_html_a5c8ef9d643fe00f50ffa7c61345fb2b9"><div class="ttname"><a href="ftobjs_8h.html#a5c8ef9d643fe00f50ffa7c61345fb2b9">FT_DriverRec</a></div><div class="ttdeci">struct FT_DriverRec_ FT_DriverRec</div></div>
+<div class="ttc" id="afttypes_8h_html_a5f5a679cc09f758efdd0d1c5feed3c3d"><div class="ttname"><a href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></div><div class="ttdeci">signed long FT_Fixed</div><div class="ttdef"><b>Definition</b> fttypes.h:255</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_a7881ad6a13b0fe28b8473fa7ee6f28c2"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a></div><div class="ttdeci">void(* FT_Module_Destructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:73</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400a3aac4aad00e1ed5d60d177be8f2ac1da"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a3aac4aad00e1ed5d60d177be8f2ac1da">ft_module_driver_scalable</a></div><div class="ttdeci">@ ft_module_driver_scalable</div><div class="ttdef"><b>Definition</b> ftmodule.h:56</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400ab4d1165618b8fe0962bd6b6f646c65f8"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400ab4d1165618b8fe0962bd6b6f646c65f8">ft_module_font_driver</a></div><div class="ttdeci">@ ft_module_font_driver</div><div class="ttdef"><b>Definition</b> ftmodule.h:51</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ae0a0ec80683e4845d953fcbb7e6af093"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a></div><div class="ttdeci">FT_Error(* FT_Module_Constructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:70</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_af078ba2b906d2553add818593ab784ed"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a></div><div class="ttdeci">FT_Module_Interface(* FT_Module_Requester)(FT_Module module, const char *name)</div><div class="ttdef"><b>Definition</b> ftmodule.h:76</div></div>
+<div class="ttc" id="apfr_8h_html_a20eaaef20dc0096e67973f240c5b121e"><div class="ttname"><a href="pfr_8h.html#a20eaaef20dc0096e67973f240c5b121e">FT_PFR_GetKerningFunc</a></div><div class="ttdeci">FT_Error(* FT_PFR_GetKerningFunc)(FT_Face face, FT_UInt left, FT_UInt right, FT_Vector *avector)</div><div class="ttdef"><b>Definition</b> pfr.h:15</div></div>
+<div class="ttc" id="apfr_8h_html_a774107cf0b97a6955c94e04bc0c7155f"><div class="ttname"><a href="pfr_8h.html#a774107cf0b97a6955c94e04bc0c7155f">FT_PFR_ServiceRec</a></div><div class="ttdeci">struct FT_PFR_ServiceRec_ FT_PFR_ServiceRec</div></div>
+<div class="ttc" id="apfr_8h_html_aabfd6d5f6302418e87a808f7e1c77525"><div class="ttname"><a href="pfr_8h.html#aabfd6d5f6302418e87a808f7e1c77525">FT_PFR_GetAdvanceFunc</a></div><div class="ttdeci">FT_Error(* FT_PFR_GetAdvanceFunc)(FT_Face face, FT_UInt gindex, FT_Pos *aadvance)</div><div class="ttdef"><b>Definition</b> pfr.h:20</div></div>
+<div class="ttc" id="apfr_8h_html_ab0f14ab339a7cbcbdd79bf908a00faea"><div class="ttname"><a href="pfr_8h.html#ab0f14ab339a7cbcbdd79bf908a00faea">FT_PFR_Service</a></div><div class="ttdeci">struct FT_PFR_ServiceRec_ * FT_PFR_Service</div></div>
+<div class="ttc" id="apfr_8h_html_ab21fad849eb6704c93f76526928df372"><div class="ttname"><a href="pfr_8h.html#ab21fad849eb6704c93f76526928df372">FT_PFR_GetMetricsFunc</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef FT_Error(* FT_PFR_GetMetricsFunc)(FT_Face face, FT_UInt *aoutline, FT_UInt *ametrics, FT_Fixed *ax_scale, FT_Fixed *ay_scale)</div><div class="ttdef"><b>Definition</b> pfr.h:9</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_a2f1abe42c70c4c775e1225b039add060"><div class="ttname"><a href="pfrdrivr_8c.html#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a></div><div class="ttdeci">static FT_Error pfr_get_kerning(PFR_Face face, FT_UInt left, FT_UInt right, FT_Vector *avector)</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:28</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_a3e65574b95d55cb037b5c6ca1ca19b6c"><div class="ttname"><a href="pfrdrivr_8c.html#a3e65574b95d55cb037b5c6ca1ca19b6c">pfr_service_rec</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_PFR_ServiceRec pfr_service_rec</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:119</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_aaf0c622f73a2cbfc644b36155096719a"><div class="ttname"><a href="pfrdrivr_8c.html#aaf0c622f73a2cbfc644b36155096719a">pfr_get_metrics</a></div><div class="ttdeci">static FT_Error pfr_get_metrics(PFR_Face face, FT_UInt *aoutline_resolution, FT_UInt *ametrics_resolution, FT_Fixed *ametrics_x_scale, FT_Fixed *ametrics_y_scale)</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:80</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_ab7882c806340569473622c5c1b94461b"><div class="ttname"><a href="pfrdrivr_8c.html#ab7882c806340569473622c5c1b94461b">pfr_driver_class</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_Driver_ClassRec pfr_driver_class</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:128</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_abe6bd0ad25c569a3766442dcd42e10aa"><div class="ttname"><a href="pfrdrivr_8c.html#abe6bd0ad25c569a3766442dcd42e10aa">pfr_get_advance</a></div><div class="ttdeci">static FT_Error pfr_get_advance(PFR_Face face, FT_UInt gindex, FT_Pos *aadvance)</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:57</div></div>
+<div class="ttc" id="apfrdrivr_8h_html"><div class="ttname"><a href="pfrdrivr_8h.html">pfrdrivr.h</a></div></div>
+<div class="ttc" id="apfrobjs_8c_html_a1b1b01622d851f0da78d57dbcb9a7615"><div class="ttname"><a href="pfrobjs_8c.html#a1b1b01622d851f0da78d57dbcb9a7615">pfr_face_init</a></div><div class="ttdeci">pfr_face_init(FT_Stream stream, PFR_Face face, FT_Int face_index, FT_Int num_params, FT_Parameter *params)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:52</div></div>
+<div class="ttc" id="apfrobjs_8c_html_a24bea0a91b530a902a50cd210be30fc6"><div class="ttname"><a href="pfrobjs_8c.html#a24bea0a91b530a902a50cd210be30fc6">pfr_face_get_kerning</a></div><div class="ttdeci">pfr_face_get_kerning(PFR_Face face, FT_UInt glyph1, FT_UInt glyph2, FT_Vector *kerning)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:355</div></div>
+<div class="ttc" id="apfrobjs_8c_html_a558c5facc5a5904281c3a4fbd349d37e"><div class="ttname"><a href="pfrobjs_8c.html#a558c5facc5a5904281c3a4fbd349d37e">pfr_face_done</a></div><div class="ttdeci">pfr_face_done(PFR_Face face)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:42</div></div>
+<div class="ttc" id="apfrobjs_8c_html_a6907f89e20733ec3e3799486b5279da0"><div class="ttname"><a href="pfrobjs_8c.html#a6907f89e20733ec3e3799486b5279da0">pfr_slot_load</a></div><div class="ttdeci">pfr_slot_load(PFR_Slot slot, PFR_Size size, FT_UInt gindex, FT_Int32 load_flags)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:233</div></div>
+<div class="ttc" id="apfrobjs_8c_html_a9d10db7c28f2e3a66caaa37f6cd8c10e"><div class="ttname"><a href="pfrobjs_8c.html#a9d10db7c28f2e3a66caaa37f6cd8c10e">pfr_slot_init</a></div><div class="ttdeci">pfr_slot_init(PFR_Slot slot)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:215</div></div>
+<div class="ttc" id="apfrobjs_8c_html_ae00a4e5976142dae13cbe4bca06deece"><div class="ttname"><a href="pfrobjs_8c.html#ae00a4e5976142dae13cbe4bca06deece">pfr_slot_done</a></div><div class="ttdeci">pfr_slot_done(PFR_Slot slot)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:226</div></div>
+<div class="ttc" id="apfrobjs_8h_html"><div class="ttname"><a href="pfrobjs_8h.html">pfrobjs.h</a></div></div>
+<div class="ttc" id="apfrobjs_8h_html_a0539edfeca58f9e83963102d702e2e45"><div class="ttname"><a href="pfrobjs_8h.html#a0539edfeca58f9e83963102d702e2e45">PFR_FaceRec</a></div><div class="ttdeci">struct PFR_FaceRec_ PFR_FaceRec</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a59ef022bfa0a198447ffd8c9cde4c8af"><div class="ttname"><a href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct PFR_FaceRec_ * PFR_Face</div><div class="ttdef"><b>Definition</b> pfrobjs.h:27</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a60d3473bb3d7dd4382453d44ba4f1036"><div class="ttname"><a href="pfrobjs_8h.html#a60d3473bb3d7dd4382453d44ba4f1036">PFR_SlotRec</a></div><div class="ttdeci">struct PFR_SlotRec_ PFR_SlotRec</div></div>
+<div class="ttc" id="apfrobjs_8h_html_ace73a056038ebca662bc671c3d67cec6"><div class="ttname"><a href="pfrobjs_8h.html#ace73a056038ebca662bc671c3d67cec6">PFR_SizeRec</a></div><div class="ttdeci">struct PFR_SizeRec_ PFR_SizeRec</div></div>
+<div class="ttc" id="apfrtypes_8h_html_a4eceb03c470e71bb2746b9ec46cca3b7"><div class="ttname"><a href="pfrtypes_8h.html#a4eceb03c470e71bb2746b9ec46cca3b7">PFR_PhyFont</a></div><div class="ttdeci">struct PFR_PhyFontRec_ * PFR_PhyFont</div></div>
+<div class="ttc" id="astruct_f_t___size___metrics___html_abb42b175a3450e9d8b84483f166d6c8a"><div class="ttname"><a href="struct_f_t___size___metrics__.html#abb42b175a3450e9d8b84483f166d6c8a">FT_Size_Metrics_::x_ppem</a></div><div class="ttdeci">FT_UShort x_ppem</div><div class="ttdef"><b>Definition</b> freetype.h:1162</div></div>
+<div class="ttc" id="astruct_f_t___size___metrics___html_abcdb70cb9e39a74679bc39c07f3275f7"><div class="ttname"><a href="struct_f_t___size___metrics__.html#abcdb70cb9e39a74679bc39c07f3275f7">FT_Size_Metrics_::y_ppem</a></div><div class="ttdeci">FT_UShort y_ppem</div><div class="ttdef"><b>Definition</b> freetype.h:1163</div></div>
+<div class="ttc" id="astruct_f_t___size_rec___html_a29a6b518d09f6cf1714d9aed01eddc01"><div class="ttname"><a href="struct_f_t___size_rec__.html#a29a6b518d09f6cf1714d9aed01eddc01">FT_SizeRec_::metrics</a></div><div class="ttdeci">FT_Size_Metrics metrics</div><div class="ttdef"><b>Definition</b> freetype.h:1199</div></div>
+<div class="ttc" id="astruct_f_t___vector___html_a941e818e6dfca06409cddff4f325f74c"><div class="ttname"><a href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">FT_Vector_::x</a></div><div class="ttdeci">FT_Pos x</div><div class="ttdef"><b>Definition</b> ftimage.h:77</div></div>
+<div class="ttc" id="astruct_f_t___vector___html_ac3246ed214e880047ec74eeb15f8b973"><div class="ttname"><a href="struct_f_t___vector__.html#ac3246ed214e880047ec74eeb15f8b973">FT_Vector_::y</a></div><div class="ttdeci">FT_Pos y</div><div class="ttdef"><b>Definition</b> ftimage.h:78</div></div>
+<div class="ttc" id="astruct_p_f_r___char_rec___html_a8078980b8602d36de6cf445304fa5d99"><div class="ttname"><a href="struct_p_f_r___char_rec__.html#a8078980b8602d36de6cf445304fa5d99">PFR_CharRec_::advance</a></div><div class="ttdeci">FT_Int advance</div><div class="ttdef"><b>Definition</b> pfrtypes.h:175</div></div>
+<div class="ttc" id="astruct_p_f_r___phy_font_rec___html_a0cec8ec87a0e441c9d9ff0af6e821945"><div class="ttname"><a href="struct_p_f_r___phy_font_rec__.html#a0cec8ec87a0e441c9d9ff0af6e821945">PFR_PhyFontRec_::outline_resolution</a></div><div class="ttdeci">FT_UInt outline_resolution</div><div class="ttdef"><b>Definition</b> pfrtypes.h:228</div></div>
+<div class="ttc" id="astruct_p_f_r___phy_font_rec___html_a80aa46f6ce599f9ae1ba10c453794221"><div class="ttname"><a href="struct_p_f_r___phy_font_rec__.html#a80aa46f6ce599f9ae1ba10c453794221">PFR_PhyFontRec_::metrics_resolution</a></div><div class="ttdeci">FT_UInt metrics_resolution</div><div class="ttdef"><b>Definition</b> pfrtypes.h:229</div></div>
+<div class="ttc" id="astruct_p_f_r___phy_font_rec___html_a9d4fa94ab939ff605f0dea23415475bc"><div class="ttname"><a href="struct_p_f_r___phy_font_rec__.html#a9d4fa94ab939ff605f0dea23415475bc">PFR_PhyFontRec_::chars</a></div><div class="ttdeci">PFR_Char chars</div><div class="ttdef"><b>Definition</b> pfrtypes.h:250</div></div>
+<div class="ttc" id="atest__trig_8c_html_af10dacfa214e2575bb2e0ee407c242e0"><div class="ttname"><a href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a></div><div class="ttdeci">static error</div><div class="ttdef"><b>Definition</b> test_trig.c:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_d4ba0b202c3d42f5530bd6926753ce2f.html">pfr</a></li><li class="navelem"><a href="pfrdrivr_8c.html">pfrdrivr.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

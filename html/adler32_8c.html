@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/gzip/adler32.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('adler32_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier adler32.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="zlib_8h_source.html">zlib.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de adler32.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="adler32_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2gzip_2adler32_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a79bcfb6bde984f42d1124b068a509af7" id="r_a79bcfb6bde984f42d1124b068a509af7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a79bcfb6bde984f42d1124b068a509af7">BASE</a>&#160;&#160;&#160;65521L /* largest prime smaller than 65536 */</td></tr>
+<tr class="memitem:a5de5d183f9a6a8d53316f743e1ca6dc2" id="r_a5de5d183f9a6a8d53316f743e1ca6dc2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5de5d183f9a6a8d53316f743e1ca6dc2">NMAX</a>&#160;&#160;&#160;5552</td></tr>
+<tr class="memitem:a465ff70ce96dfc2e84b0e87548b4ecb4" id="r_a465ff70ce96dfc2e84b0e87548b4ecb4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a465ff70ce96dfc2e84b0e87548b4ecb4">DO1</a>(<a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,  i)</td></tr>
+<tr class="memitem:a3d7044f8ea7e75164fe5108048fd87eb" id="r_a3d7044f8ea7e75164fe5108048fd87eb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3d7044f8ea7e75164fe5108048fd87eb">DO2</a>(<a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,  i)</td></tr>
+<tr class="memitem:aef9bafc8b3d89e98b6e26320f99b9e31" id="r_aef9bafc8b3d89e98b6e26320f99b9e31"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aef9bafc8b3d89e98b6e26320f99b9e31">DO4</a>(<a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,  i)</td></tr>
+<tr class="memitem:a9aafc447614bf5c4dc0d484aba9edb89" id="r_a9aafc447614bf5c4dc0d484aba9edb89"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9aafc447614bf5c4dc0d484aba9edb89">DO8</a>(<a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,  i)</td></tr>
+<tr class="memitem:a6912c3e78e2b797f42f214d1b508aa0c" id="r_a6912c3e78e2b797f42f214d1b508aa0c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6912c3e78e2b797f42f214d1b508aa0c">DO16</a>(<a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a53c93f495b0eb20b33bd042f52fd971d" id="r_a53c93f495b0eb20b33bd042f52fd971d"><td class="memItemLeft"><a class="el" href="zconf_8h.html#a93c686e805380a2411d365b481e21536">ZEXTERNDEF</a> <a class="el" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a>&#160;</td><td class="memItemRight"><a class="el" href="#a53c93f495b0eb20b33bd042f52fd971d">adler32</a> (<a class="el" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> adler, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a> *<a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>, <a class="el" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> <a class="el" href="zutil_8h.html#a1ad7df71d6c906bb4ad423e29335de7d">len</a>)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a79bcfb6bde984f42d1124b068a509af7" name="a79bcfb6bde984f42d1124b068a509af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79bcfb6bde984f42d1124b068a509af7">&#9670;&#160;</a></span>BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BASE&#160;&#160;&#160;65521L /* largest prime smaller than 65536 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a465ff70ce96dfc2e84b0e87548b4ecb4" name="a465ff70ce96dfc2e84b0e87548b4ecb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465ff70ce96dfc2e84b0e87548b4ecb4">&#9670;&#160;</a></span>DO1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO1</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">{s1 += <a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>[i]; s2 += s1;}</div>
+<div class="ttc" id="azutil_8h_html_aef0121baf641abf75ec52860945e9bc4"><div class="ttname"><a href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a></div><div class="ttdeci">const Bytef * buf</div><div class="ttdef"><b>Definition</b> zutil.h:206</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6912c3e78e2b797f42f214d1b508aa0c" name="a6912c3e78e2b797f42f214d1b508aa0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6912c3e78e2b797f42f214d1b508aa0c">&#9670;&#160;</a></span>DO16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO16</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9aafc447614bf5c4dc0d484aba9edb89">DO8</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,0); <a class="code hl_define" href="#a9aafc447614bf5c4dc0d484aba9edb89">DO8</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,8);</div>
+<div class="ttc" id="aadler32_8c_html_a9aafc447614bf5c4dc0d484aba9edb89"><div class="ttname"><a href="#a9aafc447614bf5c4dc0d484aba9edb89">DO8</a></div><div class="ttdeci">#define DO8(buf, i)</div><div class="ttdef"><b>Definition</b> adler32.c:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d7044f8ea7e75164fe5108048fd87eb" name="a3d7044f8ea7e75164fe5108048fd87eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7044f8ea7e75164fe5108048fd87eb">&#9670;&#160;</a></span>DO2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO2</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a465ff70ce96dfc2e84b0e87548b4ecb4">DO1</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,i); <a class="code hl_define" href="#a465ff70ce96dfc2e84b0e87548b4ecb4">DO1</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,i+1);</div>
+<div class="ttc" id="aadler32_8c_html_a465ff70ce96dfc2e84b0e87548b4ecb4"><div class="ttname"><a href="#a465ff70ce96dfc2e84b0e87548b4ecb4">DO1</a></div><div class="ttdeci">#define DO1(buf, i)</div><div class="ttdef"><b>Definition</b> adler32.c:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aef9bafc8b3d89e98b6e26320f99b9e31" name="aef9bafc8b3d89e98b6e26320f99b9e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9bafc8b3d89e98b6e26320f99b9e31">&#9670;&#160;</a></span>DO4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO4</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a3d7044f8ea7e75164fe5108048fd87eb">DO2</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,i); <a class="code hl_define" href="#a3d7044f8ea7e75164fe5108048fd87eb">DO2</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,i+2);</div>
+<div class="ttc" id="aadler32_8c_html_a3d7044f8ea7e75164fe5108048fd87eb"><div class="ttname"><a href="#a3d7044f8ea7e75164fe5108048fd87eb">DO2</a></div><div class="ttdeci">#define DO2(buf, i)</div><div class="ttdef"><b>Definition</b> adler32.c:15</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9aafc447614bf5c4dc0d484aba9edb89" name="a9aafc447614bf5c4dc0d484aba9edb89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aafc447614bf5c4dc0d484aba9edb89">&#9670;&#160;</a></span>DO8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aef9bafc8b3d89e98b6e26320f99b9e31">DO4</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,i); <a class="code hl_define" href="#aef9bafc8b3d89e98b6e26320f99b9e31">DO4</a>(<a class="code hl_typedef" href="zutil_8h.html#aef0121baf641abf75ec52860945e9bc4">buf</a>,i+4);</div>
+<div class="ttc" id="aadler32_8c_html_aef9bafc8b3d89e98b6e26320f99b9e31"><div class="ttname"><a href="#aef9bafc8b3d89e98b6e26320f99b9e31">DO4</a></div><div class="ttdeci">#define DO4(buf, i)</div><div class="ttdef"><b>Definition</b> adler32.c:16</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5de5d183f9a6a8d53316f743e1ca6dc2" name="a5de5d183f9a6a8d53316f743e1ca6dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de5d183f9a6a8d53316f743e1ca6dc2">&#9670;&#160;</a></span>NMAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NMAX&#160;&#160;&#160;5552</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a53c93f495b0eb20b33bd042f52fd971d" name="a53c93f495b0eb20b33bd042f52fd971d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c93f495b0eb20b33bd042f52fd971d">&#9670;&#160;</a></span>adler32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a93c686e805380a2411d365b481e21536">ZEXTERNDEF</a> <a class="el" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a> <a class="el" href="zconf_8h.html#a181415878f03b95a7094309d824a14b6">ZEXPORT</a> adler32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#acd2a5701a3aecf6700d2c66c606ecb40">uLong</a></td>          <td class="paramname"><span class="paramname"><em>adler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="zconf_8h.html#aeb722a888064be47e12d05f692e0f407">Bytef</a> *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a></td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="adler32_8c_a53c93f495b0eb20b33bd042f52fd971d_icgraph.png" border="0" usemap="#aadler32_8c_a53c93f495b0eb20b33bd042f52fd971d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_e1b3ffecbbf501e7b3912974e971879c.html">gzip</a></li><li class="navelem"><a href="adler32_8c.html">adler32.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

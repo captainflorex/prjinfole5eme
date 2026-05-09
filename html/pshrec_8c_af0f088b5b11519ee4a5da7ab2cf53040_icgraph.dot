@@ -1,0 +1,21 @@
+digraph "ps_dimension_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ps_dimension_init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ps_hints_open",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshrec_8c.html#aef2b134bad73b787744ee66def3d102f",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="t1_hints_open",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshrec_8c.html#a227e38c077d54f5ca8187b11b39270c9",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="t1_hints_funcs_init",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$pshrec_8c.html#a3c586773756613b250c4f6f2122136f8",tooltip=" "];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="t2_hints_open",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshrec_8c.html#ac7a0ec0591d424d5fb8aee664c0097f6",tooltip=" "];
+  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="t2_hints_funcs_init",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$pshrec_8c.html#aaf430946d53ba020078a36ea1ac010bf",tooltip=" "];
+  Node7 -> Node7 [id="edge7_Node000007_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

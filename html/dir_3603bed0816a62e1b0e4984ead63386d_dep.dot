@@ -1,0 +1,17 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_95a098809e4a27e03a0eec249d425569 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="freetype", rankdir=LR style="filled,dashed", URL="dir_95a098809e4a27e03a0eec249d425569.html",tooltip=""]
+  subgraph clusterdir_3603bed0816a62e1b0e4984ead63386d {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", rankdir=LR style="filled,bold", URL="dir_3603bed0816a62e1b0e4984ead63386d.html",tooltip=""]
+    dir_3603bed0816a62e1b0e4984ead63386d [shape=plaintext, label="include"];
+  dir_d8ac8280a3ec2caf39957e3462e5441b [label="freetype", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d8ac8280a3ec2caf39957e3462e5441b.html",tooltip=""];
+  }
+  }
+  dir_3603bed0816a62e1b0e4984ead63386d->dir_d8ac8280a3ec2caf39957e3462e5441b [headlabel="1", labeldistance=1.5 headhref="dir_000030_000026.html" href="dir_000030_000026.html" color="steelblue1" fontcolor="steelblue1"];
+}

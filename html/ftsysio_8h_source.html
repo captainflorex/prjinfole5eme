@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/ftsysio.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftsysio_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftsysio.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftsysio_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __FT_SYSTEM_IO_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __FT_SYSTEM_IO_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> /*****                                                              *****/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> /*****    NOTE: THE CONTENT OF THIS FILE IS NOT CURRENTLY USED      *****/</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> /*****          IN NORMAL BUILDS.  CONSIDER IT EXPERIMENTAL.        *****/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> /*****                                                              *****/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> /************************************************************************/</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> /********************************************************************</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">  *  designing custom streams is a bit different now</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include FT_INTERNAL_OBJECT_H</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> <span class="comment">/*@*******************************************************************</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">  * @type: FT_Stream</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">  *   handle to an input stream object. These are also @FT_Object handles</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">   55</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___stream_rec__.html">FT_StreamRec_</a>*    <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> <span class="comment">/*@*******************************************************************</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">  * @type: FT_Stream_Class</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">  *   opaque handle to a @FT_Stream_ClassRec class structure describing</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">  *   the methods of input streams</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a5bdef6dd8deb5b4b6681d36f8aa8fe5c">   66</a></span>  <span class="keyword">typedef</span> <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___stream___class_rec__.html">FT_Stream_ClassRec_</a>*   <a class="code hl_typedef" href="ftsysio_8h.html#a5bdef6dd8deb5b4b6681d36f8aa8fe5c">FT_Stream_Class</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> <span class="comment">/*@*******************************************************************</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">  * @functype: FT_Stream_ReadFunc</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">  *   a method used to read bytes from an input stream into memory</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">  *   stream  :: target stream handle</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">  *   buffer  :: target buffer address</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">  *   size    :: number of bytes to read</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">  * @return:</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">  *   number of bytes effectively read. Must be &lt;= &#39;size&#39;.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a01d81907f76acb8487ba53f164d77fb0">   84</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  (*<a class="code hl_typedef" href="ftsysio_8h.html#a01d81907f76acb8487ba53f164d77fb0">FT_Stream_ReadFunc</a>)( <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>   stream,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                           <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*    buffer,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                           <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>    size );</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> <span class="comment">/*@*******************************************************************</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">  * @functype: FT_Stream_SeekFunc</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">  *   a method used to seek to a new position within a stream</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">  *   stream  :: target stream handle</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">  *   pos     :: new read position, from start of stream</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">  * @return:</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">  *   error code. 0 means success</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">  */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#aeb2297570e2d462c28fe72659640c9c0">  103</a></span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>  (*<a class="code hl_typedef" href="ftsysio_8h.html#aeb2297570e2d462c28fe72659640c9c0">FT_Stream_SeekFunc</a>)( <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>   stream,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                                           <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>    pos );</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> <span class="comment">/*@*******************************************************************</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">  * @struct: FT_Stream_ClassRec</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">  *   a structure used to describe an input stream class</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">  * @input:</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">  *   clazz       :: root @FT_ClassRec fields</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">  *   stream_read :: stream byte read method</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">  *   stream_seek :: stream seek method</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">  */</span></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="};">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="struct_f_t___stream___class_rec__.html">  119</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___stream___class_rec__.html">FT_Stream_ClassRec_</a></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="struct_f_t___stream___class_rec__.html#a503d672ef2cc64a2755ac28fabff5124">  121</a></span>    <a class="code hl_typedef" href="ftobject_8h.html#a237c4af67aae811030fa7f676f5c52cd">FT_ClassRec</a>          <a class="code hl_variable" href="struct_f_t___stream___class_rec__.html#a503d672ef2cc64a2755ac28fabff5124">clazz</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="struct_f_t___stream___class_rec__.html#ab1b5ab68d71967e69c39e83525315624">  122</a></span>    <a class="code hl_typedef" href="ftsysio_8h.html#a01d81907f76acb8487ba53f164d77fb0">FT_Stream_ReadFunc</a>   <a class="code hl_variable" href="struct_f_t___stream___class_rec__.html#ab1b5ab68d71967e69c39e83525315624">stream_read</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="struct_f_t___stream___class_rec__.html#af8daf3b9f82ba91162d4f2e6ab224dfd">  123</a></span>    <a class="code hl_typedef" href="ftsysio_8h.html#aeb2297570e2d462c28fe72659640c9c0">FT_Stream_SeekFunc</a>   <a class="code hl_variable" href="struct_f_t___stream___class_rec__.html#af8daf3b9f82ba91162d4f2e6ab224dfd">stream_seek</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a49de24105cd753f4923cebd116311305">  125</a></span>  } <a class="code hl_typedef" href="ftsysio_8h.html#a49de24105cd753f4923cebd116311305">FT_Stream_ClassRec</a>;</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> <span class="comment">/* */</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#ae4f631768a7ee38b2e24cd923f0b5d7d">  129</a></span><span class="preprocessor">#define  FT_STREAM_CLASS(x)        ((FT_Stream_Class)(x))</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a452fc4fc02ce8a32ba72c0e641811dff">  130</a></span><span class="preprocessor">#define  FT_STREAM_CLASS__READ(x)  FT_STREAM_CLASS(x)-&gt;stream_read</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#acd1e3c51967c31d51a6c868d2d318db1">  131</a></span><span class="preprocessor">#define  FT_STREAM_CLASS__SEEK(x)  FT_STREAM_CLASS(x)-&gt;stream_seek;</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> <span class="comment">/*@*******************************************************************</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">  * @struct: FT_StreamRec</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">  * @description:</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">  *   the input stream object structure. See @FT_Stream_ClassRec for</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">  *   its class descriptor</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">  * @fields:</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">  *   object      :: root @FT_ObjectRec fields</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">  *   size        :: size of stream in bytes (0 if unknown)</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">  *   pos         :: current position within stream</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">  *   base        :: for memory-based streams, the address of the stream&#39;s</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">  *                  first data byte in memory. NULL otherwise</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">  *   cursor      :: the current cursor position within an input stream</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">  *                  frame. Only valid within a FT_FRAME_ENTER .. FT_FRAME_EXIT</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">  *                  block; NULL otherwise</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">  *</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">  *   limit       :: the current frame limit within a FT_FRAME_ENTER ..</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">  *                  FT_FRAME_EXIT block. NULL otherwise</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">  */</span></div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="};">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html">  155</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___stream_rec__.html">FT_StreamRec_</a></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html#acf8d93fcb92a7e0f9e3db1a35a7bc9c1">  157</a></span>    <a class="code hl_typedef" href="ftobject_8h.html#aa83929e3d268e199a60dc550018ea000">FT_ObjectRec</a>        <a class="code hl_variable" href="struct_f_t___stream_rec__.html#acf8d93fcb92a7e0f9e3db1a35a7bc9c1">object</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html#a6dc6f15b0a3537cd1351eed8d63785d6">  158</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>            <a class="code hl_variable" href="struct_f_t___stream_rec__.html#a6dc6f15b0a3537cd1351eed8d63785d6">size</a>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html#aef088d5dcb22b523ba049d6a280ba41a">  159</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>            <a class="code hl_variable" href="struct_f_t___stream_rec__.html#aef088d5dcb22b523ba049d6a280ba41a">pos</a>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html#a864f68715a55ad9f09f18b14d587239f">  160</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*      <a class="code hl_variable" href="struct_f_t___stream_rec__.html#a864f68715a55ad9f09f18b14d587239f">base</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html#a6ebfbb1387e6ddc6b5bf7052c59a129e">  161</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*      <a class="code hl_variable" href="struct_f_t___stream_rec__.html#a6ebfbb1387e6ddc6b5bf7052c59a129e">cursor</a>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="struct_f_t___stream_rec__.html#a9ec0f8c4a79487cf43580493b883d049">  162</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*      <a class="code hl_variable" href="struct_f_t___stream_rec__.html#a9ec0f8c4a79487cf43580493b883d049">limit</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a0ac77b1942c2bf23e05e4f95976a993a">  164</a></span>  } <a class="code hl_typedef" href="ftsysio_8h.html#a0ac77b1942c2bf23e05e4f95976a993a">FT_StreamRec</a>;</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> <span class="comment">/* some useful macros */</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#ab7789923529a3808e823c420bc990167">  167</a></span><span class="preprocessor">#define  FT_STREAM(x)    ((FT_Stream)(x))</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a7fc9caa769a4d38d0018e03a250e6234">  168</a></span><span class="preprocessor">#define  FT_STREAM_P(x)  ((FT_Stream*)(x))</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a1c8d938f10ae0a12387846677b9cb740">  170</a></span><span class="preprocessor">#define  FT_STREAM__READ(x)  FT_STREAM_CLASS__READ(FT_OBJECT__CLASS(x))</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a03b75e04f3e6f6af3efcffc4da4a2edb">  171</a></span><span class="preprocessor">#define  FT_STREAM__SEEK(x)  FT_STREAM_CLASS__SEEK(FT_OBJECT__CLASS(x))</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a5b102c916281d78382d906427110fe29">  173</a></span><span class="preprocessor">#define  FT_STREAM_IS_BASED(x)  ( FT_STREAM(x)-&gt;base != NULL )</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> <span class="comment">/* */</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> <span class="comment">/* create new memory-based stream */</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#adcef3b3b8ec81f2ed083f5fb933747e3">  178</a></span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )   ft_stream_new_memory( <span class="keyword">const</span> <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*  stream_base,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a5381f884ea8f4dc986fab8f8421e339d">  179</a></span>                                              <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>        <a class="code hl_variable" href="ftsysio_8h.html#a5381f884ea8f4dc986fab8f8421e339d">stream_size</a>,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">  180</a></span>                                              <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>       <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#a3f8d3ab17617380a2aa17009e495d02a">  181</a></span>                                              <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>      *<a class="code hl_variable" href="ftsysio_8h.html#a3f8d3ab17617380a2aa17009e495d02a">astream</a> );</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )   ft_stream_new_iso( <span class="keyword">const</span> <span class="keywordtype">char</span>*  pathanme,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                                           <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>    <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                           <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>   *<a class="code hl_variable" href="ftsysio_8h.html#a3f8d3ab17617380a2aa17009e495d02a">astream</a> );</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> <span class="comment">/* handle to default stream class implementation for a given build */</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> <span class="comment">/* this is used by &quot;FT_New_Face&quot;                                   */</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> <span class="comment">/*                                                                 */</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="ftsysio_8h.html#ad4392d53799abdfc01e605d20bfc1b1b">  191</a></span>  <a class="code hl_function" href="ftsysio_8h.html#ad4392d53799abdfc01e605d20bfc1b1b">FT_APIVAR</a>( <a class="code hl_typedef" href="ftobject_8h.html#aae52fb899e106a4c92c426fcf6232278">FT_Type</a> )   ft_stream_default_type;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">#endif </span><span class="comment">/* __FT_SYSTEM_STREAM_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_ad9b0c555bd9c667187a720e265943bfc"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a></div><div class="ttdeci">#define FT_BASE(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:165</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftobject_8h_html_a237c4af67aae811030fa7f676f5c52cd"><div class="ttname"><a href="ftobject_8h.html#a237c4af67aae811030fa7f676f5c52cd">FT_ClassRec</a></div><div class="ttdeci">struct FT_ClassRec_ FT_ClassRec</div></div>
+<div class="ttc" id="aftobject_8h_html_aa83929e3d268e199a60dc550018ea000"><div class="ttname"><a href="ftobject_8h.html#aa83929e3d268e199a60dc550018ea000">FT_ObjectRec</a></div><div class="ttdeci">struct FT_ObjectRec_ FT_ObjectRec</div></div>
+<div class="ttc" id="aftobject_8h_html_aae52fb899e106a4c92c426fcf6232278"><div class="ttname"><a href="ftobject_8h.html#aae52fb899e106a4c92c426fcf6232278">FT_Type</a></div><div class="ttdeci">const struct FT_TypeRec_ * FT_Type</div><div class="ttdef"><b>Definition</b> ftobject.h:44</div></div>
+<div class="ttc" id="aftsysio_8h_html_a01d81907f76acb8487ba53f164d77fb0"><div class="ttname"><a href="ftsysio_8h.html#a01d81907f76acb8487ba53f164d77fb0">FT_Stream_ReadFunc</a></div><div class="ttdeci">FT_ULong(* FT_Stream_ReadFunc)(FT_Stream stream, FT_Byte *buffer, FT_ULong size)</div><div class="ttdef"><b>Definition</b> ftsysio.h:84</div></div>
+<div class="ttc" id="aftsysio_8h_html_a0ac77b1942c2bf23e05e4f95976a993a"><div class="ttname"><a href="ftsysio_8h.html#a0ac77b1942c2bf23e05e4f95976a993a">FT_StreamRec</a></div><div class="ttdeci">struct FT_StreamRec_ FT_StreamRec</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+<div class="ttc" id="aftsysio_8h_html_a3f8d3ab17617380a2aa17009e495d02a"><div class="ttname"><a href="ftsysio_8h.html#a3f8d3ab17617380a2aa17009e495d02a">astream</a></div><div class="ttdeci">FT_ULong FT_Memory FT_Stream * astream</div><div class="ttdef"><b>Definition</b> ftsysio.h:181</div></div>
+<div class="ttc" id="aftsysio_8h_html_a49de24105cd753f4923cebd116311305"><div class="ttname"><a href="ftsysio_8h.html#a49de24105cd753f4923cebd116311305">FT_Stream_ClassRec</a></div><div class="ttdeci">struct FT_Stream_ClassRec_ FT_Stream_ClassRec</div></div>
+<div class="ttc" id="aftsysio_8h_html_a5381f884ea8f4dc986fab8f8421e339d"><div class="ttname"><a href="ftsysio_8h.html#a5381f884ea8f4dc986fab8f8421e339d">stream_size</a></div><div class="ttdeci">FT_ULong stream_size</div><div class="ttdef"><b>Definition</b> ftsysio.h:179</div></div>
+<div class="ttc" id="aftsysio_8h_html_a5bdef6dd8deb5b4b6681d36f8aa8fe5c"><div class="ttname"><a href="ftsysio_8h.html#a5bdef6dd8deb5b4b6681d36f8aa8fe5c">FT_Stream_Class</a></div><div class="ttdeci">const struct FT_Stream_ClassRec_ * FT_Stream_Class</div><div class="ttdef"><b>Definition</b> ftsysio.h:66</div></div>
+<div class="ttc" id="aftsysio_8h_html_a99e9995ed3299cabc8874b89ee1ee407"><div class="ttname"><a href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_StreamRec_ * FT_Stream</div><div class="ttdef"><b>Definition</b> ftsysio.h:55</div></div>
+<div class="ttc" id="aftsysio_8h_html_ad4392d53799abdfc01e605d20bfc1b1b"><div class="ttname"><a href="ftsysio_8h.html#ad4392d53799abdfc01e605d20bfc1b1b">FT_APIVAR</a></div><div class="ttdeci">FT_APIVAR(FT_Type) ft_stream_default_type</div></div>
+<div class="ttc" id="aftsysio_8h_html_aeb2297570e2d462c28fe72659640c9c0"><div class="ttname"><a href="ftsysio_8h.html#aeb2297570e2d462c28fe72659640c9c0">FT_Stream_SeekFunc</a></div><div class="ttdeci">FT_Error(* FT_Stream_SeekFunc)(FT_Stream stream, FT_ULong pos)</div><div class="ttdef"><b>Definition</b> ftsysio.h:103</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a51f26183ca0c9f4af958939648caeccd"><div class="ttname"><a href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></div><div class="ttdeci">unsigned char FT_Byte</div><div class="ttdef"><b>Definition</b> fttypes.h:143</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="astruct_f_t___stream___class_rec___html"><div class="ttname"><a href="struct_f_t___stream___class_rec__.html">FT_Stream_ClassRec_</a></div><div class="ttdef"><b>Definition</b> ftsysio.h:120</div></div>
+<div class="ttc" id="astruct_f_t___stream___class_rec___html_a503d672ef2cc64a2755ac28fabff5124"><div class="ttname"><a href="struct_f_t___stream___class_rec__.html#a503d672ef2cc64a2755ac28fabff5124">FT_Stream_ClassRec_::clazz</a></div><div class="ttdeci">FT_ClassRec clazz</div><div class="ttdef"><b>Definition</b> ftsysio.h:121</div></div>
+<div class="ttc" id="astruct_f_t___stream___class_rec___html_ab1b5ab68d71967e69c39e83525315624"><div class="ttname"><a href="struct_f_t___stream___class_rec__.html#ab1b5ab68d71967e69c39e83525315624">FT_Stream_ClassRec_::stream_read</a></div><div class="ttdeci">FT_Stream_ReadFunc stream_read</div><div class="ttdef"><b>Definition</b> ftsysio.h:122</div></div>
+<div class="ttc" id="astruct_f_t___stream___class_rec___html_af8daf3b9f82ba91162d4f2e6ab224dfd"><div class="ttname"><a href="struct_f_t___stream___class_rec__.html#af8daf3b9f82ba91162d4f2e6ab224dfd">FT_Stream_ClassRec_::stream_seek</a></div><div class="ttdeci">FT_Stream_SeekFunc stream_seek</div><div class="ttdef"><b>Definition</b> ftsysio.h:123</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html"><div class="ttname"><a href="struct_f_t___stream_rec__.html">FT_StreamRec_</a></div><div class="ttdef"><b>Definition</b> ftsysio.h:156</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html_a6dc6f15b0a3537cd1351eed8d63785d6"><div class="ttname"><a href="struct_f_t___stream_rec__.html#a6dc6f15b0a3537cd1351eed8d63785d6">FT_StreamRec_::size</a></div><div class="ttdeci">FT_ULong size</div><div class="ttdef"><b>Definition</b> ftsysio.h:158</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html_a6ebfbb1387e6ddc6b5bf7052c59a129e"><div class="ttname"><a href="struct_f_t___stream_rec__.html#a6ebfbb1387e6ddc6b5bf7052c59a129e">FT_StreamRec_::cursor</a></div><div class="ttdeci">const FT_Byte * cursor</div><div class="ttdef"><b>Definition</b> ftsysio.h:161</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html_a864f68715a55ad9f09f18b14d587239f"><div class="ttname"><a href="struct_f_t___stream_rec__.html#a864f68715a55ad9f09f18b14d587239f">FT_StreamRec_::base</a></div><div class="ttdeci">const FT_Byte * base</div><div class="ttdef"><b>Definition</b> ftsysio.h:160</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html_a9ec0f8c4a79487cf43580493b883d049"><div class="ttname"><a href="struct_f_t___stream_rec__.html#a9ec0f8c4a79487cf43580493b883d049">FT_StreamRec_::limit</a></div><div class="ttdeci">const FT_Byte * limit</div><div class="ttdef"><b>Definition</b> ftsysio.h:162</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html_acf8d93fcb92a7e0f9e3db1a35a7bc9c1"><div class="ttname"><a href="struct_f_t___stream_rec__.html#acf8d93fcb92a7e0f9e3db1a35a7bc9c1">FT_StreamRec_::object</a></div><div class="ttdeci">FT_ObjectRec object</div><div class="ttdef"><b>Definition</b> ftsysio.h:157</div></div>
+<div class="ttc" id="astruct_f_t___stream_rec___html_aef088d5dcb22b523ba049d6a280ba41a"><div class="ttname"><a href="struct_f_t___stream_rec__.html#aef088d5dcb22b523ba049d6a280ba41a">FT_StreamRec_::pos</a></div><div class="ttdeci">FT_ULong pos</div><div class="ttdef"><b>Definition</b> ftsysio.h:159</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="ftsysio_8h.html">ftsysio.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+digraph "FT_Vector_Normalize"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FT_Vector_Normalize",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Vector_From_Polar",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a07535f29fc4f5d2fa010ad38fdfac144",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_Vector_Rotate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#ae39fb94254591c5933ebcbe17d47a948",tooltip=" "];
+  Node3 -> Node3 [id="edge4_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge5_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node4 [id="edge6_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_Vector_Polarize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a094b81c6ad2356b206b14e0387101865",tooltip=" "];
+  Node4 -> Node5 [id="edge7_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ft_trig_downscale",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#a1da1c321b8f3e8acd0b29fa675ab4081",tooltip=" "];
+  Node4 -> Node6 [id="edge8_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ft_trig_prenorm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#afdeaa60df62d7b2d17bccf007ee02ede",tooltip=" "];
+  Node4 -> Node7 [id="edge9_Node000004_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="ft_trig_pseudo_polarize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fttrigon_8c.html#abe2cdf9da354b1693a65a4de219114d9",tooltip=" "];
+  Node4 -> Node4 [id="edge10_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+}

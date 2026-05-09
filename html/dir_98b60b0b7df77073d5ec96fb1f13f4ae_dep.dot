@@ -1,0 +1,12 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/config"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_d8ac8280a3ec2caf39957e3462e5441b {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="freetype", rankdir=LR style="filled,dashed", URL="dir_d8ac8280a3ec2caf39957e3462e5441b.html",tooltip=""]
+  dir_98b60b0b7df77073d5ec96fb1f13f4ae [label="config", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_98b60b0b7df77073d5ec96fb1f13f4ae.html",tooltip=""];
+  }
+}

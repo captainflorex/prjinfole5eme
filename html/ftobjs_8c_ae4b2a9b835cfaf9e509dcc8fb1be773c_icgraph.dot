@@ -1,0 +1,54 @@
+digraph "FT_Lookup_Renderer"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="FT_Lookup_Renderer",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Get_Renderer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a8b85f16751ce80fd73908fff04276d15",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_lookup_glyph_renderer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a47574eb59d73e20f7905cb0c34ce42f3",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_Load_Glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a01806ddba7989d0ad132e3318301e72d",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="_alfont_cache_glyph",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$alfont_8c.html#a0666628364488a824cb42afc68e8b912",tooltip=" "];
+  Node4 -> Node12 [id="edge6_Node000004_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="ah_hinter_compute_blues",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ahglobal_8c.html#ada20befa7c0c853b2393c09e10c95a6a",tooltip=" "];
+  Node4 -> Node19 [id="edge7_Node000004_Node000019",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="ah_hinter_compute_widths",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ahglobal_8c.html#a4c139a1741745f496883ab2e6bc9ac02",tooltip=" "];
+  Node4 -> Node20 [id="edge8_Node000004_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="ah_hinter_load",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ahhint_8c.html#ad5f7274fb7019501ec29695ad4956b73",tooltip=" "];
+  Node20 -> Node20 [id="edge9_Node000020_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node21 [id="edge10_Node000004_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="draw_glyph",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$gview_8c.html#ab40bd045bfa336369164696f296ba091",tooltip=" "];
+  Node4 -> Node23 [id="edge11_Node000004_Node000023",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="FT_Load_Char",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#aeea4c9699584228c2244e4f6d9f09380",tooltip=" "];
+  Node23 -> Node23 [id="edge12_Node000023_Node000023",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node4 [id="edge13_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node24 [id="edge14_Node000004_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="ftc_image_node_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcimage_8c.html#acc99987247fee24c5bfb0bcef82b4bbb",tooltip=" "];
+  Node24 -> Node24 [id="edge15_Node000024_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node25 [id="edge16_Node000004_Node000025",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="ftc_sbit_node_load",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftcsbits_8c.html#ab01bcbe8fabb0ab23da22f97c23e02ca",tooltip=" "];
+  Node1 -> Node1 [id="edge17_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node28 [id="edge18_Node000001_Node000028",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node28 [id="Node000028",label="FT_Outline_Render",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftoutln_8c.html#ae3b0bf0cc293b66aa56846054c3fe9e9",tooltip=" "];
+  Node28 -> Node29 [id="edge19_Node000028_Node000029",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="FT_Outline_Get_Bitmap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftoutln_8c.html#ade9cf51f8217cfb10c9dbffbba137973",tooltip=" "];
+  Node29 -> Node29 [id="edge20_Node000029_Node000029",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node28 -> Node28 [id="edge21_Node000028_Node000028",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node30 [id="edge22_Node000001_Node000030",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node30 [id="Node000030",label="ft_set_current_renderer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#acaefac9110b7b49a692b6e2e5327d81b",tooltip=" "];
+  Node30 -> Node31 [id="edge23_Node000030_Node000031",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node31 [id="Node000031",label="ft_add_renderer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a038f96cdeebcf981be0463505f24e087",tooltip=" "];
+  Node31 -> Node32 [id="edge24_Node000031_Node000032",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node32 [id="Node000032",label="FT_Add_Module",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a537c6119249420ea935f0e61cbee5079",tooltip=" "];
+  Node32 -> Node32 [id="edge25_Node000032_Node000032",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node30 -> Node37 [id="edge26_Node000030_Node000037",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node37 [id="Node000037",label="ft_remove_renderer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#aeeb6b8fbcabf0937b7e5b0a9457c829d",tooltip=" "];
+  Node37 -> Node38 [id="edge27_Node000037_Node000038",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node38 [id="Node000038",label="Destroy_Module",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a3e1ed8be3b28f02ad5fb8ea1f90bde53",tooltip=" "];
+}

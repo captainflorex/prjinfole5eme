@@ -1,0 +1,46 @@
+digraph "FT_New_Face_From_LWFN"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FT_New_Face_From_LWFN",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="open_face_from_buffer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ab966e870e9df99a387b5e915c7d93693",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_Get_Module",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a9aae78d37c4eadf2cd3c702ab138d3d1",tooltip=" "];
+  Node3 -> Node3 [id="edge3_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node4 [id="edge4_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_Open_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a3bdf12232d495ca7d4d40f47b4bc157c",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_Done_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a2d1542be3d3af3d7699cee3425b2bc79",tooltip=" "];
+  Node5 -> Node5 [id="edge6_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node6 [id="edge7_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ft_input_stream_free",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a37900af0fd3360c2bff7eb93e7606a30",tooltip=" "];
+  Node4 -> Node8 [id="edge8_Node000004_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="ft_input_stream_new",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a39b78dde92f846a8649c93f7009ad642",tooltip=" "];
+  Node8 -> Node12 [id="edge9_Node000008_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="FT_Stream_OpenMemory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstream_8c.html#adef0df22d5202d491bd9c8a93fb4bffd",tooltip=" "];
+  Node12 -> Node12 [id="edge10_Node000012_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node13 [id="edge11_Node000004_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="FT_List_Add",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftutil_8c.html#afc59903c201f367a5d77dc6b7daf8f3c",tooltip=" "];
+  Node13 -> Node13 [id="edge12_Node000013_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node14 [id="edge13_Node000004_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="FT_New_GlyphSlot",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a6b8a7296866810c4feff8dc562e55c4c",tooltip=" "];
+  Node14 -> Node14 [id="edge14_Node000014_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node15 [id="edge15_Node000004_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="FT_New_Size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a9b4a1faa77e9bd3f24250affb24c1518",tooltip=" "];
+  Node15 -> Node13 [id="edge16_Node000015_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node15 -> Node15 [id="edge17_Node000015_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node4 [id="edge18_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node16 [id="edge19_Node000004_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="open_face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a298534074e91baa2a5a15d69dd623c04",tooltip=" "];
+  Node2 -> Node17 [id="edge20_Node000002_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="memory_stream_close",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a197f1a3bb4e2619678651c6b95d5bb0b",tooltip=" "];
+  Node2 -> Node18 [id="edge21_Node000002_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="new_memory_stream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ad887ba62210690cef00695ea15c39a12",tooltip=" "];
+  Node18 -> Node12 [id="edge22_Node000018_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node19 [id="edge23_Node000001_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="read_lwfn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a71a282749af0a4d1df97d8f20d86ab04",tooltip=" "];
+}

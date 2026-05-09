@@ -1,0 +1,57 @@
+digraph "bdf_load_font"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="bdf_load_font",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="_bdf_parse_start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#ac7560dbb20e4a4eb0dfc4540a3a92a02",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="_bdf_add_comment",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#aa508ff1c8eb9b515d31885419ed49dd5",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="_bdf_atos",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#a919590bcf83928124670e0bd98217cae",tooltip=" "];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="_bdf_atoul",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#aeadd1c54f3491e3e4b28bc08dee1f0d0",tooltip=" "];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="_bdf_join",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#a816ebb1658337ca52112fb452e51fa97",tooltip=" "];
+  Node2 -> Node7 [id="edge6_Node000002_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="_bdf_parse_properties",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#a199139d01fec6d3da8d0c3d1dcb8bf10",tooltip=" "];
+  Node7 -> Node8 [id="edge7_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="_bdf_add_property",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$bdflib_8c.html#a92bb7c1da70ebe11bbe860922bb82ec7",tooltip=" "];
+  Node8 -> Node5 [id="edge8_Node000008_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node11 [id="edge9_Node000008_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="hash_insert",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$bdflib_8c.html#ab916868a207429e765c433cd3d67b63b",tooltip=" "];
+  Node7 -> Node15 [id="edge10_Node000007_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="_bdf_is_atom",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$bdflib_8c.html#a194239cee84022263b1142e385560549",tooltip=" "];
+  Node7 -> Node6 [id="edge11_Node000007_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node17 [id="edge12_Node000007_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="_bdf_parse_glyphs",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$bdflib_8c.html#a0f73c2c72cc7058fdb8db91347a79f65",tooltip=" "];
+  Node17 -> Node3 [id="edge13_Node000017_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node4 [id="edge14_Node000017_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node5 [id="edge15_Node000017_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node6 [id="edge16_Node000017_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node18 [id="edge17_Node000017_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="_bdf_shift",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#ac2a86dd652365fa892478c58d5867c6c",tooltip=" "];
+  Node17 -> Node19 [id="edge18_Node000017_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="_bdf_split",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#ab493227fb915f3c88666a6f6eab00169",tooltip=" "];
+  Node7 -> Node18 [id="edge19_Node000007_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node19 [id="edge20_Node000007_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node25 [id="edge21_Node000007_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="bdf_get_font_property",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$bdflib_8c.html#a0a4731b315c8ce97ebc348996493488f",tooltip=" "];
+  Node25 -> Node25 [id="edge22_Node000025_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node26 [id="edge23_Node000002_Node000026",color="steelblue1",style="solid",tooltip=" "];
+  Node26 [id="Node000026",label="_bdf_set_default_spacing",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#ad29053a988b08a3c84360e92569ac187",tooltip=" "];
+  Node26 -> Node19 [id="edge24_Node000026_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node18 [id="edge25_Node000002_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node19 [id="edge26_Node000002_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node27 [id="edge27_Node000002_Node000027",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="hash_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#aaae7909bf6cba80a00463295cdabb65c",tooltip=" "];
+  Node2 -> Node11 [id="edge28_Node000002_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node28 [id="edge29_Node000001_Node000028",color="steelblue1",style="solid",tooltip=" "];
+  Node28 [id="Node000028",label="_bdf_readstream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#ac46014e661a929b41dd6bcf6d2f72b88",tooltip=" "];
+  Node28 -> Node29 [id="edge30_Node000028_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="bdf_internal_readstream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bdflib_8c.html#ad22c456947d7992ec7fd6380c42a1d9c",tooltip=" "];
+  Node1 -> Node1 [id="edge31_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+}

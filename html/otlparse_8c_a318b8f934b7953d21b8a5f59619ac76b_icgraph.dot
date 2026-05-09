@@ -1,0 +1,17 @@
+digraph "otl_parser_replace_1"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="otl_parser_replace_1",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="otl_gsub_lookup1_apply",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlgsub_8c.html#a97add227ad840c40be95f7ace043bbc4",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="otl_gsub_lookup3_apply",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlgsub_8c.html#ae49dada35ae8ddd367822adc0af9780d",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="otl_parser_copy_1",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$otlparse_8h.html#a228758742004e532e63eeba3771960bb",tooltip=" "];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge5_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

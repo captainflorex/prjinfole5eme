@@ -1,0 +1,13 @@
+digraph "parse_encoding"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="parse_encoding",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="is_alpha",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#a91c227ac9b0c241b966e78d4bf589d57",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="is_space",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1load_8c.html#acf35ffaac748083fd557f93730c15f02",tooltip=" "];
+}

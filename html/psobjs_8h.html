@@ -1,0 +1,1115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/psaux/psobjs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('psobjs_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier psobjs.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de psobjs.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2psaux_2psobjs_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2psaux_2psobjs_8hdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="psobjs_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a866fb7cb0e780052ce22cb5e45e7462f" id="r_a866fb7cb0e780052ce22cb5e45e7462f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a866fb7cb0e780052ce22cb5e45e7462f">ps_table_new</a> (<a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a> table, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> count, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:ae000679f089c270fb3a0359ff14b8466" id="r_ae000679f089c270fb3a0359ff14b8466"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae000679f089c270fb3a0359ff14b8466">ps_table_add</a> (<a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a> table, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> idx, void *object, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> length)</td></tr>
+<tr class="memitem:a4137a6366bb3a41af6ba9f2e47ea0929" id="r_a4137a6366bb3a41af6ba9f2e47ea0929"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4137a6366bb3a41af6ba9f2e47ea0929">ps_table_done</a> (<a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a> table)</td></tr>
+<tr class="memitem:a5d556c7d419670d2ee58efc1346ac659" id="r_a5d556c7d419670d2ee58efc1346ac659"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5d556c7d419670d2ee58efc1346ac659">ps_table_release</a> (<a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a> table)</td></tr>
+<tr class="memitem:a76232729a9ca83ed589b3849e9a5f4a2" id="r_a76232729a9ca83ed589b3849e9a5f4a2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a76232729a9ca83ed589b3849e9a5f4a2">ps_parser_skip_spaces</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser)</td></tr>
+<tr class="memitem:a0e116765e5cf732a9dfb8080139683a0" id="r_a0e116765e5cf732a9dfb8080139683a0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0e116765e5cf732a9dfb8080139683a0">ps_parser_skip_alpha</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser)</td></tr>
+<tr class="memitem:a6c9e220df71a723d67c21a5d307135cf" id="r_a6c9e220df71a723d67c21a5d307135cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6c9e220df71a723d67c21a5d307135cf">ps_parser_to_token</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="psaux_8h.html#aaee5fcb159a39e09f57597e140a6ce38">T1_Token</a> token)</td></tr>
+<tr class="memitem:a12b70c2c4bdc0148b2df2bb713805964" id="r_a12b70c2c4bdc0148b2df2bb713805964"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a12b70c2c4bdc0148b2df2bb713805964">ps_parser_to_token_array</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="psaux_8h.html#aaee5fcb159a39e09f57597e140a6ce38">T1_Token</a> tokens, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> max_tokens, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *pnum_tokens)</td></tr>
+<tr class="memitem:aef7f5f19a63c87a96130fc34c231e2af" id="r_aef7f5f19a63c87a96130fc34c231e2af"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aef7f5f19a63c87a96130fc34c231e2af">ps_parser_load_field</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a> field, void **objects, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> max_objects, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *pflags)</td></tr>
+<tr class="memitem:a60f1ff77074003816b16369d6df4eb4a" id="r_a60f1ff77074003816b16369d6df4eb4a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a60f1ff77074003816b16369d6df4eb4a">ps_parser_load_field_table</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a> field, void **objects, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> max_objects, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *pflags)</td></tr>
+<tr class="memitem:a6c515798e1a65188354efbde777689dd" id="r_a6c515798e1a65188354efbde777689dd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6c515798e1a65188354efbde777689dd">ps_parser_to_int</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser)</td></tr>
+<tr class="memitem:a12b187ddd687c2245b2cfab317a14ff6" id="r_a12b187ddd687c2245b2cfab317a14ff6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a12b187ddd687c2245b2cfab317a14ff6">ps_parser_to_fixed</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> power_ten)</td></tr>
+<tr class="memitem:a5c81c61bea61593d7e021449e824f062" id="r_a5c81c61bea61593d7e021449e824f062"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5c81c61bea61593d7e021449e824f062">ps_parser_to_coord_array</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> max_coords, <a class="el" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a> *coords)</td></tr>
+<tr class="memitem:ad91e1a73c8dc09aa96164bfa88acd5e8" id="r_ad91e1a73c8dc09aa96164bfa88acd5e8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad91e1a73c8dc09aa96164bfa88acd5e8">ps_parser_to_fixed_array</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> max_values, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *values, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> power_ten)</td></tr>
+<tr class="memitem:a25ec0d62eaa8da27600bfbb958c2ef53" id="r_a25ec0d62eaa8da27600bfbb958c2ef53"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a25ec0d62eaa8da27600bfbb958c2ef53">ps_parser_init</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *base, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *limit, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:aac9d7cb21fc30f625de9969d73f7db58" id="r_aac9d7cb21fc30f625de9969d73f7db58"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aac9d7cb21fc30f625de9969d73f7db58">ps_parser_done</a> (<a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a> parser)</td></tr>
+<tr class="memitem:a2cfc0562d4af96220c2305f2cba9a13b" id="r_a2cfc0562d4af96220c2305f2cba9a13b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2cfc0562d4af96220c2305f2cba9a13b">t1_builder_init</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> size, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> glyph, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> hinting)</td></tr>
+<tr class="memitem:a7f2f12ed5bb55f818d208d5d1a793262" id="r_a7f2f12ed5bb55f818d208d5d1a793262"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7f2f12ed5bb55f818d208d5d1a793262">t1_builder_done</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder)</td></tr>
+<tr class="memitem:a5b30f992be9fd59d72e1176653d5abff" id="r_a5b30f992be9fd59d72e1176653d5abff"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5b30f992be9fd59d72e1176653d5abff">t1_builder_check_points</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> count)</td></tr>
+<tr class="memitem:a87edc9e233e8cfc7cb364fd3d34bf248" id="r_a87edc9e233e8cfc7cb364fd3d34bf248"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a87edc9e233e8cfc7cb364fd3d34bf248">t1_builder_add_point</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> y, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> flag)</td></tr>
+<tr class="memitem:a44ef2e16b3d8276b05289fdba102fa52" id="r_a44ef2e16b3d8276b05289fdba102fa52"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a44ef2e16b3d8276b05289fdba102fa52">t1_builder_add_point1</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> y)</td></tr>
+<tr class="memitem:aa5bb404da5ed8945ab386e94783594c6" id="r_aa5bb404da5ed8945ab386e94783594c6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa5bb404da5ed8945ab386e94783594c6">t1_builder_add_contour</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder)</td></tr>
+<tr class="memitem:a2694b2545e7d85ce234fc7d2af9b2547" id="r_a2694b2545e7d85ce234fc7d2af9b2547"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2694b2545e7d85ce234fc7d2af9b2547">t1_builder_start_point</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> y)</td></tr>
+<tr class="memitem:a0d8c77804c08a8c0dfa334bac9c9e990" id="r_a0d8c77804c08a8c0dfa334bac9c9e990"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0d8c77804c08a8c0dfa334bac9c9e990">t1_builder_close_contour</a> (<a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a> builder)</td></tr>
+<tr class="memitem:a90a6a4b0c97b50b58d8f72cd245a4d91" id="r_a90a6a4b0c97b50b58d8f72cd245a4d91"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a90a6a4b0c97b50b58d8f72cd245a4d91">t1_decrypt</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *buffer, <a class="el" href="fttypes_8h.html#af7b5edd727ac01b0d4729ac848bd4175">FT_Offset</a> length, <a class="el" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a> seed)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa09cb895adf2276630c8c1c5e505e7eb" id="r_aa09cb895adf2276630c8c1c5e505e7eb"><td class="memItemLeft"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> <a class="el" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#ae1dd1e776643bdb8aa3d4e9f34f8c322">PS_Table_FuncsRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa09cb895adf2276630c8c1c5e505e7eb">ps_table_funcs</a></td></tr>
+<tr class="memitem:acddf5755f954f2ac8a3d01d04939eb31" id="r_acddf5755f954f2ac8a3d01d04939eb31"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#a60c32aa3a1dd1f98fd236dc2ae24c418">PS_Parser_FuncsRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#acddf5755f954f2ac8a3d01d04939eb31">ps_parser_funcs</a></td></tr>
+<tr class="memitem:afc4c2c1eb83245e6558f05cd4263ac94" id="r_afc4c2c1eb83245e6558f05cd4263ac94"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#ae82f1eae40f3b91789a38ecd2267f979">T1_Builder_FuncsRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#afc4c2c1eb83245e6558f05cd4263ac94">t1_builder_funcs</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="aac9d7cb21fc30f625de9969d73f7db58" name="aac9d7cb21fc30f625de9969d73f7db58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9d7cb21fc30f625de9969d73f7db58">&#9670;&#160;</a></span>ps_parser_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_aac9d7cb21fc30f625de9969d73f7db58_cgraph.png" border="0" usemap="#apsobjs_8h_aac9d7cb21fc30f625de9969d73f7db58_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_aac9d7cb21fc30f625de9969d73f7db58_icgraph.png" border="0" usemap="#apsobjs_8h_aac9d7cb21fc30f625de9969d73f7db58_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a25ec0d62eaa8da27600bfbb958c2ef53" name="a25ec0d62eaa8da27600bfbb958c2ef53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ec0d62eaa8da27600bfbb958c2ef53">&#9670;&#160;</a></span>ps_parser_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a25ec0d62eaa8da27600bfbb958c2ef53_cgraph.png" border="0" usemap="#apsobjs_8h_a25ec0d62eaa8da27600bfbb958c2ef53_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a25ec0d62eaa8da27600bfbb958c2ef53_icgraph.png" border="0" usemap="#apsobjs_8h_a25ec0d62eaa8da27600bfbb958c2ef53_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="aef7f5f19a63c87a96130fc34c231e2af" name="aef7f5f19a63c87a96130fc34c231e2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7f5f19a63c87a96130fc34c231e2af">&#9670;&#160;</a></span>ps_parser_load_field()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_load_field </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a></td>          <td class="paramname"><span class="paramname"><em>field</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>objects</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>max_objects</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>pflags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_aef7f5f19a63c87a96130fc34c231e2af_cgraph.png" border="0" usemap="#apsobjs_8h_aef7f5f19a63c87a96130fc34c231e2af_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_aef7f5f19a63c87a96130fc34c231e2af_icgraph.png" border="0" usemap="#apsobjs_8h_aef7f5f19a63c87a96130fc34c231e2af_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a60f1ff77074003816b16369d6df4eb4a" name="a60f1ff77074003816b16369d6df4eb4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f1ff77074003816b16369d6df4eb4a">&#9670;&#160;</a></span>ps_parser_load_field_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_load_field_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a></td>          <td class="paramname"><span class="paramname"><em>field</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>objects</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>max_objects</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>pflags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a60f1ff77074003816b16369d6df4eb4a_cgraph.png" border="0" usemap="#apsobjs_8h_a60f1ff77074003816b16369d6df4eb4a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a60f1ff77074003816b16369d6df4eb4a_icgraph.png" border="0" usemap="#apsobjs_8h_a60f1ff77074003816b16369d6df4eb4a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a0e116765e5cf732a9dfb8080139683a0" name="a0e116765e5cf732a9dfb8080139683a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e116765e5cf732a9dfb8080139683a0">&#9670;&#160;</a></span>ps_parser_skip_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_skip_alpha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a0e116765e5cf732a9dfb8080139683a0_cgraph.png" border="0" usemap="#apsobjs_8h_a0e116765e5cf732a9dfb8080139683a0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a0e116765e5cf732a9dfb8080139683a0_icgraph.png" border="0" usemap="#apsobjs_8h_a0e116765e5cf732a9dfb8080139683a0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a76232729a9ca83ed589b3849e9a5f4a2" name="a76232729a9ca83ed589b3849e9a5f4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76232729a9ca83ed589b3849e9a5f4a2">&#9670;&#160;</a></span>ps_parser_skip_spaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_skip_spaces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a76232729a9ca83ed589b3849e9a5f4a2_cgraph.png" border="0" usemap="#apsobjs_8h_a76232729a9ca83ed589b3849e9a5f4a2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a76232729a9ca83ed589b3849e9a5f4a2_icgraph.png" border="0" usemap="#apsobjs_8h_a76232729a9ca83ed589b3849e9a5f4a2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a5c81c61bea61593d7e021449e824f062" name="a5c81c61bea61593d7e021449e824f062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c81c61bea61593d7e021449e824f062">&#9670;&#160;</a></span>ps_parser_to_coord_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_to_coord_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>max_coords</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a> *</td>          <td class="paramname"><span class="paramname"><em>coords</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a5c81c61bea61593d7e021449e824f062_cgraph.png" border="0" usemap="#apsobjs_8h_a5c81c61bea61593d7e021449e824f062_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a5c81c61bea61593d7e021449e824f062_icgraph.png" border="0" usemap="#apsobjs_8h_a5c81c61bea61593d7e021449e824f062_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a12b187ddd687c2245b2cfab317a14ff6" name="a12b187ddd687c2245b2cfab317a14ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b187ddd687c2245b2cfab317a14ff6">&#9670;&#160;</a></span>ps_parser_to_fixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_to_fixed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>power_ten</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a12b187ddd687c2245b2cfab317a14ff6_cgraph.png" border="0" usemap="#apsobjs_8h_a12b187ddd687c2245b2cfab317a14ff6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a12b187ddd687c2245b2cfab317a14ff6_icgraph.png" border="0" usemap="#apsobjs_8h_a12b187ddd687c2245b2cfab317a14ff6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="ad91e1a73c8dc09aa96164bfa88acd5e8" name="ad91e1a73c8dc09aa96164bfa88acd5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91e1a73c8dc09aa96164bfa88acd5e8">&#9670;&#160;</a></span>ps_parser_to_fixed_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_to_fixed_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>max_values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>power_ten</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_ad91e1a73c8dc09aa96164bfa88acd5e8_cgraph.png" border="0" usemap="#apsobjs_8h_ad91e1a73c8dc09aa96164bfa88acd5e8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_ad91e1a73c8dc09aa96164bfa88acd5e8_icgraph.png" border="0" usemap="#apsobjs_8h_ad91e1a73c8dc09aa96164bfa88acd5e8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a6c515798e1a65188354efbde777689dd" name="a6c515798e1a65188354efbde777689dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c515798e1a65188354efbde777689dd">&#9670;&#160;</a></span>ps_parser_to_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_to_int </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a6c515798e1a65188354efbde777689dd_cgraph.png" border="0" usemap="#apsobjs_8h_a6c515798e1a65188354efbde777689dd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a6c515798e1a65188354efbde777689dd_icgraph.png" border="0" usemap="#apsobjs_8h_a6c515798e1a65188354efbde777689dd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="a6c9e220df71a723d67c21a5d307135cf" name="a6c9e220df71a723d67c21a5d307135cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9e220df71a723d67c21a5d307135cf">&#9670;&#160;</a></span>ps_parser_to_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_to_token </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#aaee5fcb159a39e09f57597e140a6ce38">T1_Token</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a6c9e220df71a723d67c21a5d307135cf_cgraph.png" border="0" usemap="#apsobjs_8h_a6c9e220df71a723d67c21a5d307135cf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a6c9e220df71a723d67c21a5d307135cf_icgraph.png" border="0" usemap="#apsobjs_8h_a6c9e220df71a723d67c21a5d307135cf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a12b70c2c4bdc0148b2df2bb713805964" name="a12b70c2c4bdc0148b2df2bb713805964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b70c2c4bdc0148b2df2bb713805964">&#9670;&#160;</a></span>ps_parser_to_token_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_parser_to_token_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#ac4ccf6a7b29344497180cdbc540b31de">PS_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#aaee5fcb159a39e09f57597e140a6ce38">T1_Token</a></td>          <td class="paramname"><span class="paramname"><em>tokens</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>max_tokens</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> *</td>          <td class="paramname"><span class="paramname"><em>pnum_tokens</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a12b70c2c4bdc0148b2df2bb713805964_cgraph.png" border="0" usemap="#apsobjs_8h_a12b70c2c4bdc0148b2df2bb713805964_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a12b70c2c4bdc0148b2df2bb713805964_icgraph.png" border="0" usemap="#apsobjs_8h_a12b70c2c4bdc0148b2df2bb713805964_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="ae000679f089c270fb3a0359ff14b8466" name="ae000679f089c270fb3a0359ff14b8466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae000679f089c270fb3a0359ff14b8466">&#9670;&#160;</a></span>ps_table_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_table_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_ae000679f089c270fb3a0359ff14b8466_cgraph.png" border="0" usemap="#apsobjs_8h_ae000679f089c270fb3a0359ff14b8466_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_ae000679f089c270fb3a0359ff14b8466_icgraph.png" border="0" usemap="#apsobjs_8h_ae000679f089c270fb3a0359ff14b8466_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a4137a6366bb3a41af6ba9f2e47ea0929" name="a4137a6366bb3a41af6ba9f2e47ea0929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4137a6366bb3a41af6ba9f2e47ea0929">&#9670;&#160;</a></span>ps_table_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_table_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a4137a6366bb3a41af6ba9f2e47ea0929_cgraph.png" border="0" usemap="#apsobjs_8h_a4137a6366bb3a41af6ba9f2e47ea0929_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a4137a6366bb3a41af6ba9f2e47ea0929_icgraph.png" border="0" usemap="#apsobjs_8h_a4137a6366bb3a41af6ba9f2e47ea0929_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a866fb7cb0e780052ce22cb5e45e7462f" name="a866fb7cb0e780052ce22cb5e45e7462f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866fb7cb0e780052ce22cb5e45e7462f">&#9670;&#160;</a></span>ps_table_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_table_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a866fb7cb0e780052ce22cb5e45e7462f_cgraph.png" border="0" usemap="#apsobjs_8h_a866fb7cb0e780052ce22cb5e45e7462f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a866fb7cb0e780052ce22cb5e45e7462f_icgraph.png" border="0" usemap="#apsobjs_8h_a866fb7cb0e780052ce22cb5e45e7462f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a5d556c7d419670d2ee58efc1346ac659" name="a5d556c7d419670d2ee58efc1346ac659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d556c7d419670d2ee58efc1346ac659">&#9670;&#160;</a></span>ps_table_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ps_table_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a4f28fe0f04a5112d1ffcebb1fb3bcef0">PS_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a5d556c7d419670d2ee58efc1346ac659_cgraph.png" border="0" usemap="#apsobjs_8h_a5d556c7d419670d2ee58efc1346ac659_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a5d556c7d419670d2ee58efc1346ac659_icgraph.png" border="0" usemap="#apsobjs_8h_a5d556c7d419670d2ee58efc1346ac659_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="aa5bb404da5ed8945ab386e94783594c6" name="aa5bb404da5ed8945ab386e94783594c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5bb404da5ed8945ab386e94783594c6">&#9670;&#160;</a></span>t1_builder_add_contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_add_contour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_aa5bb404da5ed8945ab386e94783594c6_cgraph.png" border="0" usemap="#apsobjs_8h_aa5bb404da5ed8945ab386e94783594c6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_aa5bb404da5ed8945ab386e94783594c6_icgraph.png" border="0" usemap="#apsobjs_8h_aa5bb404da5ed8945ab386e94783594c6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a87edc9e233e8cfc7cb364fd3d34bf248" name="a87edc9e233e8cfc7cb364fd3d34bf248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87edc9e233e8cfc7cb364fd3d34bf248">&#9670;&#160;</a></span>t1_builder_add_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_add_point </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a87edc9e233e8cfc7cb364fd3d34bf248_cgraph.png" border="0" usemap="#apsobjs_8h_a87edc9e233e8cfc7cb364fd3d34bf248_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a87edc9e233e8cfc7cb364fd3d34bf248_icgraph.png" border="0" usemap="#apsobjs_8h_a87edc9e233e8cfc7cb364fd3d34bf248_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a id="a44ef2e16b3d8276b05289fdba102fa52" name="a44ef2e16b3d8276b05289fdba102fa52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ef2e16b3d8276b05289fdba102fa52">&#9670;&#160;</a></span>t1_builder_add_point1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_add_point1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a44ef2e16b3d8276b05289fdba102fa52_cgraph.png" border="0" usemap="#apsobjs_8h_a44ef2e16b3d8276b05289fdba102fa52_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a44ef2e16b3d8276b05289fdba102fa52_icgraph.png" border="0" usemap="#apsobjs_8h_a44ef2e16b3d8276b05289fdba102fa52_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+
+</div>
+</div>
+<a id="a5b30f992be9fd59d72e1176653d5abff" name="a5b30f992be9fd59d72e1176653d5abff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b30f992be9fd59d72e1176653d5abff">&#9670;&#160;</a></span>t1_builder_check_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_check_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a5b30f992be9fd59d72e1176653d5abff_cgraph.png" border="0" usemap="#apsobjs_8h_a5b30f992be9fd59d72e1176653d5abff_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a5b30f992be9fd59d72e1176653d5abff_icgraph.png" border="0" usemap="#apsobjs_8h_a5b30f992be9fd59d72e1176653d5abff_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+
+</div>
+</div>
+<a id="a0d8c77804c08a8c0dfa334bac9c9e990" name="a0d8c77804c08a8c0dfa334bac9c9e990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8c77804c08a8c0dfa334bac9c9e990">&#9670;&#160;</a></span>t1_builder_close_contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_close_contour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a0d8c77804c08a8c0dfa334bac9c9e990_cgraph.png" border="0" usemap="#apsobjs_8h_a0d8c77804c08a8c0dfa334bac9c9e990_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a0d8c77804c08a8c0dfa334bac9c9e990_icgraph.png" border="0" usemap="#apsobjs_8h_a0d8c77804c08a8c0dfa334bac9c9e990_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+
+</div>
+</div>
+<a id="a7f2f12ed5bb55f818d208d5d1a793262" name="a7f2f12ed5bb55f818d208d5d1a793262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2f12ed5bb55f818d208d5d1a793262">&#9670;&#160;</a></span>t1_builder_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a7f2f12ed5bb55f818d208d5d1a793262_cgraph.png" border="0" usemap="#apsobjs_8h_a7f2f12ed5bb55f818d208d5d1a793262_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a7f2f12ed5bb55f818d208d5d1a793262_icgraph.png" border="0" usemap="#apsobjs_8h_a7f2f12ed5bb55f818d208d5d1a793262_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+
+</div>
+</div>
+<a id="a2cfc0562d4af96220c2305f2cba9a13b" name="a2cfc0562d4af96220c2305f2cba9a13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfc0562d4af96220c2305f2cba9a13b">&#9670;&#160;</a></span>t1_builder_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>hinting</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a2cfc0562d4af96220c2305f2cba9a13b_cgraph.png" border="0" usemap="#apsobjs_8h_a2cfc0562d4af96220c2305f2cba9a13b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a2cfc0562d4af96220c2305f2cba9a13b_icgraph.png" border="0" usemap="#apsobjs_8h_a2cfc0562d4af96220c2305f2cba9a13b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="a2694b2545e7d85ce234fc7d2af9b2547" name="a2694b2545e7d85ce234fc7d2af9b2547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2694b2545e7d85ce234fc7d2af9b2547">&#9670;&#160;</a></span>t1_builder_start_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_builder_start_point </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a663b21b57e6b519b1d1b7a80939e5c7c">T1_Builder</a></td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a2694b2545e7d85ce234fc7d2af9b2547_cgraph.png" border="0" usemap="#apsobjs_8h_a2694b2545e7d85ce234fc7d2af9b2547_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a2694b2545e7d85ce234fc7d2af9b2547_icgraph.png" border="0" usemap="#apsobjs_8h_a2694b2545e7d85ce234fc7d2af9b2547_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+
+</div>
+</div>
+<a id="a90a6a4b0c97b50b58d8f72cd245a4d91" name="a90a6a4b0c97b50b58d8f72cd245a4d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a6a4b0c97b50b58d8f72cd245a4d91">&#9670;&#160;</a></span>t1_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1_decrypt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#af7b5edd727ac01b0d4729ac848bd4175">FT_Offset</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a></td>          <td class="paramname"><span class="paramname"><em>seed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a90a6a4b0c97b50b58d8f72cd245a4d91_cgraph.png" border="0" usemap="#apsobjs_8h_a90a6a4b0c97b50b58d8f72cd245a4d91_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 50 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="psobjs_8h_a90a6a4b0c97b50b58d8f72cd245a4d91_icgraph.png" border="0" usemap="#apsobjs_8h_a90a6a4b0c97b50b58d8f72cd245a4d91_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 51 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="acddf5755f954f2ac8a3d01d04939eb31" name="acddf5755f954f2ac8a3d01d04939eb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddf5755f954f2ac8a3d01d04939eb31">&#9670;&#160;</a></span>ps_parser_funcs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#a60c32aa3a1dd1f98fd236dc2ae24c418">PS_Parser_FuncsRec</a> ps_parser_funcs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa09cb895adf2276630c8c1c5e505e7eb" name="aa09cb895adf2276630c8c1c5e505e7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09cb895adf2276630c8c1c5e505e7eb">&#9670;&#160;</a></span>ps_table_funcs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a> <a class="el" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#ae1dd1e776643bdb8aa3d4e9f34f8c322">PS_Table_FuncsRec</a> ps_table_funcs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc4c2c1eb83245e6558f05cd4263ac94" name="afc4c2c1eb83245e6558f05cd4263ac94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4c2c1eb83245e6558f05cd4263ac94">&#9670;&#160;</a></span>t1_builder_funcs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#ae82f1eae40f3b91789a38ecd2267f979">T1_Builder_FuncsRec</a> t1_builder_funcs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_94c7abbf20057b94b7cab758e0159797.html">psaux</a></li><li class="navelem"><a href="psobjs_8h.html">psobjs.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+digraph "FT_New_Memory"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="FT_New_Memory",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Init_FreeType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftinit_8c.html#af93e2afa8ab5ba5675ae8d67b84df079",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="alfont_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#ab9ea80fe0745e4ccac48da9c40233950",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$example1_8c.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node3 -> Node5 [id="edge4_Node000003_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip=" "];
+  Node2 -> Node2 [id="edge5_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node6 [id="edge6_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gview_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip=" "];
+  Node1 -> Node7 [id="edge7_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_New_Memory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a3ee8ecceb93e5ba4106a00f778f11609",tooltip=" "];
+  Node7 -> Node2 [id="edge8_Node000007_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node7 [id="edge9_Node000007_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

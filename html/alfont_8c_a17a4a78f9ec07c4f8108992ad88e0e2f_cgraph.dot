@@ -1,0 +1,47 @@
+digraph "alfont_load_font"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="alfont_load_font",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="_alfont_new_cache_glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a3fec666a842e064ff5bdc225e54d6787",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="_alfont_reget_fixed\l_sizes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#af26616982f869c93bfa32a7a72c35d0d",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="alfont_set_char_extra\l_spacing",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#afeb82eab4c4a339446683504bf033d1d",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="alfont_set_font_size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a0d8fd92bea789910bf30c10c80360b40",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="_alfont_uncache_glyphs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a219efdb79ad967a82ef9300c0adefd23",tooltip=" "];
+  Node5 -> Node7 [id="edge6_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_Set_Pixel_Sizes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a229ad0ad247b9952677d09378c813988",tooltip=" "];
+  Node7 -> Node7 [id="edge7_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge8_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="FT_New_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a549a19bbea568f3a6d60207f1b787070",tooltip=" "];
+  Node8 -> Node9 [id="edge9_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="file_spec_from_path",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ace0b09ccfa4dbb715225ad369a242a31",tooltip=" "];
+  Node8 -> Node8 [id="edge10_Node000008_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node10 [id="edge11_Node000008_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="FT_New_Face_From_LWFN",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a3cd18fa4466c9360932e04a02d4f8864",tooltip=" "];
+  Node10 -> Node11 [id="edge12_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="open_face_from_buffer",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#ab966e870e9df99a387b5e915c7d93693",tooltip=" "];
+  Node11 -> Node13 [id="edge13_Node000011_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="FT_Open_Face",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a3bdf12232d495ca7d4d40f47b4bc157c",tooltip=" "];
+  Node13 -> Node13 [id="edge14_Node000013_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node28 [id="edge15_Node000010_Node000028",color="steelblue1",style="solid",tooltip=" "];
+  Node28 [id="Node000028",label="read_lwfn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a71a282749af0a4d1df97d8f20d86ab04",tooltip=" "];
+  Node8 -> Node29 [id="edge16_Node000008_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="FT_New_Face_From_Suitcase",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a74f46a9ba6609c2b12b31c9e31f3defe",tooltip=" "];
+  Node29 -> Node30 [id="edge17_Node000029_Node000030",color="steelblue1",style="solid",tooltip=" "];
+  Node30 [id="Node000030",label="FT_New_Face_From_FOND",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#a3b73f76d0a579936aca8281254f1a8e9",tooltip=" "];
+  Node30 -> Node30 [id="edge18_Node000030_Node000030",color="steelblue1",style="solid",tooltip=" "];
+  Node30 -> Node10 [id="edge19_Node000030_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node13 [id="edge20_Node000008_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node36 [id="edge21_Node000008_Node000036",color="steelblue1",style="solid",tooltip=" "];
+  Node36 [id="Node000036",label="get_file_type",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a6832dcaa23dc83f342462267e178a6d4",tooltip=" "];
+  Node8 -> Node37 [id="edge22_Node000008_Node000037",color="steelblue1",style="solid",tooltip=" "];
+  Node37 [id="Node000037",label="ResourceForkSize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a744a0ddf9f5908d0fbb7bf37b505d523",tooltip=" "];
+}

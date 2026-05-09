@@ -1,0 +1,3968 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.9)  9 MAY 2026 22:18
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./refman.tex
+(refman.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+package info suppressed
+) (doxygen.sty
+Package: doxygen 
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\alltt.sty
+Package: alltt 2024/07/07 v2.0g defines alltt environment
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen151
+\ar@mcellbox=\box53
+\extrarowheight=\dimen152
+\NC@list=\toks17
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count284
+\calc@Bcount=\count285
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count286
+\calc@Cskip=\skip55
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count287
+\float@exts=\toks18
+\float@box=\box55
+\@float@everytoks=\toks19
+\@floatcapt=\box56
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read2
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box57
+\sift@deathcycles=\count288
+\@vwid@loff=\dimen155
+\@vwid@roff=\dimen156
+)
+==> First Aid for varwidth.sty applied!
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks22
+\minrowclearance=\skip56
+\rownum=\count289
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count290
+\LTcapwidth=\dimen157
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count291
+\LT@rows=\count292
+\c@LT@tables=\count293
+\c@LT@chunks=\count294
+\LT@p@ftn=\toks23
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/xltabular\xltabular.sty
+Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen158
+\TX@old@table=\dimen159
+\TX@old@col=\dimen160
+\TX@target=\dimen161
+\TX@delta=\dimen162
+\TX@cols=\count295
+\TX@ftn=\toks24
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count296
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/ltablex\ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+))
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabularray.s
+ty
+Package: tabularray 2025-11-27 v2025C Typeset tabulars and arrays with LaTeX3
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors.s
+ty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.st
+y
+Package: expl3 2026-03-20 L3 programming layer (loader) 
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+))
+\g__tblr_nohyper_int=\count298
+\l__tblr_a_int=\count299
+\l__tblr_c_int=\count300
+\l__tblr_r_int=\count301
+\l__tblr_d_dim=\dimen163
+\l__tblr_h_dim=\dimen164
+\l__tblr_o_dim=\dimen165
+\l__tblr_p_dim=\dimen166
+\l__tblr_q_dim=\dimen167
+\l__tblr_r_dim=\dimen168
+\l__tblr_s_dim=\dimen169
+\l__tblr_t_dim=\dimen170
+\l__tblr_v_dim=\dimen171
+\l__tblr_w_dim=\dimen172
+\l__tblr_a_box=\box63
+\l__tblr_b_box=\box64
+\l__tblr_c_box=\box65
+\l__tblr_d_box=\box66
+\c@tblrcount=\count302
+\c@colnum=\count303
+\c@rowcount=\count304
+\c@colcount=\count305
+\abovesep=\dimen173
+\belowsep=\dimen174
+\leftsep=\dimen175
+\rightsep=\dimen176
+\gTblrLevelInt=\count306
+\g__tblr_data_row_key_count_int=\count307
+\g__tblr_data_column_key_count_int=\count308
+\g__tblr_data_cell_key_count_int=\count309
+\g__tblr_array_int=\count310
+\l__tblr_key_count_int=\count311
+\l__tblr_key_quotient_int=\count312
+\l__tblr_key_quotient_two_int=\count313
+\l__tblr_key_remainder_int=\count314
+\g__tblr_data_str_value_count_int=\count315
+\lTblrChildTotalInt=\count316
+\lTblrChildHtotalInt=\count317
+\lTblrChildVtotalInt=\count318
+\l__child_diff_h_int=\count319
+\l__child_diff_v_int=\count320
+\l__child_sign_h_int=\count321
+\l__child_sign_v_int=\count322
+\l__child_step_int=\count323
+\lTblrDefaultHruleWidthDim=\dimen177
+\lTblrDefaultVruleWidthDim=\dimen178
+\l__tblr_split_balance_int=\count324
+\l__tblr_strut_dp_dim=\dimen179
+\l__tblr_strut_ht_dim=\dimen180
+\g__tblr_cell_wd_dim=\dimen181
+\g__tblr_cell_ht_dim=\dimen182
+\g__tblr_cell_head_dim=\dimen183
+\g__tblr_cell_foot_dim=\dimen184
+\l__tblr_measured_cell_box=\box67
+\g__tblr_last_box=\box68
+\l__tblr_temp_box=\box69
+\l__tblr_column_target_dim=\dimen185
+\l__tblr_hfuzz_dim=\dimen186
+\l__tblr_caption_box=\box70
+\l__tblr_caption_left_box=\box71
+\lTblrRowHeadInt=\count325
+\lTblrRowFootInt=\count326
+\l__tblr_row_head_box=\box72
+\l__tblr_row_foot_box=\box73
+\l__tblr_row_head_foot_dim=\dimen187
+\lTblrTableWidthDim=\dimen188
+\l__tblr_table_firsthead_box=\box74
+\l__tblr_table_middlehead_box=\box75
+\l__tblr_table_lasthead_box=\box76
+\l__tblr_table_firstfoot_box=\box77
+\l__tblr_table_middlefoot_box=\box78
+\l__tblr_table_lastfoot_box=\box79
+\l__tblr_remain_height_dim=\dimen189
+\l__tblr_next_rows_dim=\dimen190
+\l__tblr_page_overfill_dim=\dimen191
+\l__tblr_long_from_int=\count327
+\l__tblr_long_to_int=\count328
+\l__tblr_curr_i_int=\count329
+\l__tblr_prev_i_int=\count330
+\lTblrTablePageInt=\count331
+\l__tblr_table_head_box=\box80
+\l__tblr_table_foot_box=\box81
+\l__tblr_table_head_foot_dim=\dimen192
+\l__tblr_table_head_body_foot_dim=\dimen193
+\l__tblr_table_box=\box82
+\lTblrRowFirstInt=\count332
+\lTblrRowLastInt=\count333
+\l__tblr_cover_box_a_dim=\dimen194
+\l__tblr_cover_box_b_dim=\dimen195
+\l__tblr_table_hlines_box=\box83
+\l__tblr_hline_box=\box84
+\l__tblr_row_box=\box85
+\l__tblr_col_o_wd_dim=\dimen196
+\l__tblr_col_b_wd_dim=\dimen197
+\l__tblr_hline_leftskip_dim=\dimen198
+\l__tblr_hline_rightskip_dim=\dimen199
+\l__tblr_row_ht_dim=\dimen256
+\l__tblr_row_dp_dim=\dimen257
+\l__tblr_row_abovesep_dim=\dimen258
+\l__tblr_row_belowsep_dim=\dimen259
+\l__tblr_row_vlines_box=\box86
+\l__tblr_vline_box=\box87
+\l__tblr_cell_box=\box88
+\l__tblr_row_upper_dim=\dimen260
+\l__tblr_row_lower_dim=\dimen261
+\l__tblr_row_vpace_dim=\dimen262
+\l__tblr_vline_aboveskip_dim=\dimen263
+\l__tblr_vline_belowskip_dim=\dimen264
+\lTblrCellRowSpanInt=\count334
+\lTblrCellColSpanInt=\count335
+\l__tblr_cell_wd_dim=\dimen265
+\l__tblr_cell_ht_dim=\dimen266
+\lTblrCellAboveBorderWidthDim=\dimen267
+\lTblrCellBelowBorderWidthDim=\dimen268
+\lTblrCellLeftBorderWidthDim=\dimen269
+\lTblrCellRightBorderWidthDim=\dimen270
+\l__tblr_diag_box=\box89
+\l__tblr_cell_inner_wd_dim=\dimen271
+\l__tblr_cell_inner_dp_dim=\dimen272
+\l__tblr_cell_hanchor_dim=\dimen273
+\l__tblr_last_cell_table_ht_dim=\dimen274
+\l__tblr_last_cell_table_dp_dim=\dimen275
+\l__tblr_last_vline_wd_dim=\dimen276
+\l__tblr_tikz_node_box=\box90
+)
+\g__doxy_nohyper_int=\count336
+\doxytablewidth=\dimen277
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+\FV@CodeLineNo=\count337
+\FV@InFile=\read3
+\FV@TabBox=\box91
+\c@FancyVerbLine=\count338
+\FV@StepNumber=\count339
+\FV@OutFile=\write3
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count340
+\mult@box=\box92
+\multicol@leftmargin=\dimen278
+\c@unbalance=\count341
+\c@collectmore=\count342
+\doublecol@number=\count343
+\multicoltolerance=\count344
+\multicolpretolerance=\count345
+\full@width=\dimen279
+\page@free=\dimen280
+\premulticols=\dimen281
+\postmulticols=\dimen282
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box93
+\last@line=\box94
+\mc@boxedresult=\box95
+\maxbalancingoverflow=\dimen283
+\mult@rightbox=\box96
+\mult@grightbox=\box97
+\mult@firstbox=\box98
+\mult@gfirstbox=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\c@minrows=\count346
+\c@columnbadness=\count347
+\c@finalcolumnbadness=\count348
+\last@try=\dimen284
+\multicolovershoot=\dimen285
+\multicolundershoot=\dimen286
+\mult@nat@firstbox=\box136
+\colbreak@box=\box137
+\mc@col@check@num=\count349
+\g__mc_curr_col_int=\count350
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count351
+\multirow@dima=\skip64
+\bigstrutjot=\dimen287
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hanging\hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip65
+\h@ngfstopwd=\skip66
+\h@ngquotewd=\skip67
+\h@ngdquotewd=\skip68
+\h@ngquerywd=\skip69
+\h@ngexclwd=\skip70
+\h@ngcolonwd=\skip71
+\h@ngscolonwd=\skip72
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (
+C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count352
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.st
+y
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.st
+y
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen288
+\Gin@req@width=\dimen289
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box138
+)
+\tc@llx=\dimen290
+\tc@lly=\dimen291
+\tc@urx=\dimen292
+\tc@ury=\dimen293
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen294
+\adjbox@Height=\dimen295
+\adjbox@Depth=\dimen296
+\adjbox@Totalheight=\dimen297
+\adjbox@pwidth=\dimen298
+\adjbox@pheight=\dimen299
+\adjbox@pdepth=\dimen300
+\adjbox@ptotalheight=\dimen301
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count353
+)) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/stackengine\stackengine
+.sty
+Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient 
+ways
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/listofitems\listofitems
+.sty
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/listofitems\listofite
+ms.tex
+\loi_cnt_foreach_nest=\count354
+\loi_nestcnt=\count355
+)
+Package: listofitems 2024/03/09 v1.65 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count356
+\@boxshift=\skip73
+\stack@tmplength=\skip74
+\temp@stkl=\skip75
+\@stackedboxwidth=\skip76
+\@addedbox=\box139
+\@anchorbox=\box140
+\@insetbox=\box141
+\se@backgroundbox=\box142
+\stackedbox=\box143
+\@centerbox=\box144
+\c@ROWcellindex@=\count357
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip77
+\enit@outerparindent=\dimen302
+\enit@toks=\toks29
+\enit@inbox=\box145
+\enit@count@id=\count358
+\enitdp@description=\count359
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/alphalph\alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box146
+\UL@hyphenbox=\box147
+\UL@skip=\skip78
+\UL@hook=\toks30
+\UL@height=\dimen303
+\UL@pe=\count360
+\UL@pixel=\dimen304
+\ULC@box=\box148
+Package: ulem 2019/11/18
+\ULdepth=\dimen305
+)
+\xrefbox=\box149
+\xreflength=\skip79
+\CodeWidthChar=\skip80
+\CodeHeightChar=\skip81
+\DoxyCodeWidth=\skip82
+\ttcharwidth=\skip83
+\c@DoxyEnumeratei=\count361
+\c@DoxyEnumerateii=\count362
+\c@DoxyEnumerateiii=\count363
+\c@DoxyEnumerateiv=\count364
+\c@DoxyEnumeratev=\count365
+\c@DoxyEnumeratevi=\count366
+\c@DoxyEnumeratevii=\count367
+\c@DoxyEnumerateviii=\count368
+\c@DoxyEnumerateix=\count369
+\c@DoxyEnumeratex=\count370
+\c@DoxyEnumeratexi=\count371
+\c@DoxyEnumeratexii=\count372
+\enitdp@DoxyEnumerate=\count373
+\enitdp@DoxyItemize=\count374
+\doxymboxbox=\box150
+\doxymboxlength=\skip84
+\c@subsubsubsection=\count375
+\c@subsubsubsubsection=\count376
+\c@subsubsubsubsubsection=\count377
+\c@subsubsubsubsubsubsection=\count378
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks31
+\inpenc@posthook=\toks32
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\omsenc.dfu
+File: omsenc.dfu 2022/06/07 v1.3c UTF-8 support
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\ot1enc.dfu
+File: ot1enc.dfu 2022/06/07 v1.3c UTF-8 support
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+)
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\t1enc.dfu
+File: t1enc.dfu 2022/06/07 v1.3c UTF-8 support
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01C4 (decimal 452)
+   defining Unicode char U+01C5 (decimal 453)
+   defining Unicode char U+01C6 (decimal 454)
+   defining Unicode char U+01C7 (decimal 455)
+   defining Unicode char U+01C8 (decimal 456)
+   defining Unicode char U+01C9 (decimal 457)
+   defining Unicode char U+01CA (decimal 458)
+   defining Unicode char U+01CB (decimal 459)
+   defining Unicode char U+01CC (decimal 460)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+02D9 (decimal 729)
+   defining Unicode char U+02DB (decimal 731)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+1E0D (decimal 7693)
+   defining Unicode char U+1E1E (decimal 7710)
+   defining Unicode char U+1E1F (decimal 7711)
+   defining Unicode char U+1E25 (decimal 7717)
+   defining Unicode char U+1E30 (decimal 7728)
+   defining Unicode char U+1E31 (decimal 7729)
+   defining Unicode char U+1E37 (decimal 7735)
+   defining Unicode char U+1E8E (decimal 7822)
+   defining Unicode char U+1E8F (decimal 7823)
+   defining Unicode char U+1E43 (decimal 7747)
+   defining Unicode char U+1E45 (decimal 7749)
+   defining Unicode char U+1E47 (decimal 7751)
+   defining Unicode char U+1E5B (decimal 7771)
+   defining Unicode char U+1E63 (decimal 7779)
+   defining Unicode char U+1E6D (decimal 7789)
+   defining Unicode char U+1E90 (decimal 7824)
+   defining Unicode char U+1E91 (decimal 7825)
+   defining Unicode char U+1E9E (decimal 7838)
+   defining Unicode char U+1EF2 (decimal 7922)
+   defining Unicode char U+1EF3 (decimal 7923)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+)
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1enc.dfu
+File: ts1enc.dfu 2022/06/07 v1.3c UTF-8 support
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+3008 (decimal 12296)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+3009 (decimal 12297)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FEFF (decimal 65279)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+FEFF (decimal 65279)
+)) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count379
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
+\U@D=\dimen306
+\l@unhyphenated=\language79
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read4
+\bbl@dirlevel=\count380
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel
+-french.tex)
+Package babel Info: Importing font and identification data for french
+(babel)             from babel-fr.ini. Reported on input line 4330.
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french.l
+df
+Language: french 2025-08-15 v4.0e French support from the babel system
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french3.
+ldf
+Language: french 2025-08-15 v3.7e French support from the babel system
+\FB@stdchar=\count381
+Package babel Info: Making : an active character on input line 273.
+Package babel Info: Making ; an active character on input line 274.
+Package babel Info: Making ! an active character on input line 275.
+Package babel Info: Making ? an active character on input line 276.
+\FBguill@level=\count382
+\FBold@everypar=\toks33
+\FB@Mht=\dimen307
+\mc@charclass=\count383
+\mc@charfam=\count384
+\mc@charslot=\count385
+\std@mcc=\count386
+\dec@mcc=\count387
+\FB@pardim=\dimen308
+\listindentFB=\dimen309
+\descindentFB=\dimen310
+\labelindentFB=\dimen311
+\labelwidthFB=\dimen312
+\leftmarginFB=\dimen313
+\parindentFFN=\dimen314
+\FBfnindent=\dimen315
+))) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.s
+ty) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count388
+\Gm@cntv=\count389
+\c@Gm@tempcnt=\count390
+\Gm@bindingoffset=\dimen316
+\Gm@wd@mp=\dimen317
+\Gm@odd@mp=\dimen318
+\Gm@even@mp=\dimen319
+\Gm@layoutwidth=\dimen320
+\Gm@layoutheight=\dimen321
+\Gm@layouthoffset=\dimen322
+\Gm@layoutvoffset=\dimen323
+\Gm@dimlist=\toks34
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count391
+\cp@tempcnt=\count392
+LaTeX Info: Redefining \checkoddpage on input line 59.
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip85
+\f@nch@offset@elh=\skip86
+\f@nch@offset@erh=\skip87
+\f@nch@offset@olh=\skip88
+\f@nch@offset@orh=\skip89
+\f@nch@offset@elf=\skip90
+\f@nch@offset@erf=\skip91
+\f@nch@offset@olf=\skip92
+\f@nch@offset@orf=\skip93
+\f@nch@height=\skip94
+\f@nch@footalignment=\skip95
+\f@nch@widthL=\skip96
+\f@nch@widthC=\skip97
+\f@nch@widthR=\skip98
+\@temptokenb=\toks35
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip99
+\bibsep=\skip100
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count393
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip101
+\cftbeforetoctitleskip=\skip102
+\cftaftertoctitleskip=\skip103
+\cftbeforepartskip=\skip104
+\cftpartnumwidth=\skip105
+\cftpartindent=\skip106
+\cftbeforechapskip=\skip107
+\cftchapindent=\skip108
+\cftchapnumwidth=\skip109
+\cftbeforesecskip=\skip110
+\cftsecindent=\skip111
+\cftsecnumwidth=\skip112
+\cftbeforesubsecskip=\skip113
+\cftsubsecindent=\skip114
+\cftsubsecnumwidth=\skip115
+\cftbeforesubsubsecskip=\skip116
+\cftsubsubsecindent=\skip117
+\cftsubsubsecnumwidth=\skip118
+\cftbeforeparaskip=\skip119
+\cftparaindent=\skip120
+\cftparanumwidth=\skip121
+\cftbeforesubparaskip=\skip122
+\cftsubparaindent=\skip123
+\cftsubparanumwidth=\skip124
+\cftbeforeloftitleskip=\skip125
+\cftafterloftitleskip=\skip126
+\cftbeforefigskip=\skip127
+\cftfigindent=\skip128
+\cftfignumwidth=\skip129
+\c@lofdepth=\count394
+\c@lotdepth=\count395
+\cftbeforelottitleskip=\skip130
+\cftafterlottitleskip=\skip131
+\cftbeforetabskip=\skip132
+\cfttabindent=\skip133
+\cfttabnumwidth=\skip134
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+Writing index file refman.idx
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/newunicodechar\newunico
+dechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count396
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen324
+\Hy@linkcounter=\count397
+\Hy@pagecounter=\count398
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count399
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing ON on input line 4217.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
+Package: backref 2025-06-21 v1.45 Bibliographical back referencing
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+))
+\c@Hy@tempcnt=\count400
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen325
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count401
+\Field@Width=\dimen326
+\Fld@charsize=\dimen327
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing ON on input line 6104.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count402
+\c@Item=\count403
+\c@Hfootnote=\count404
+)
+Package hyperref Info: Driver: hpdftex.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+\Fld@listcount=\count405
+\c@bookmark@seq@number=\count406
+\Hy@SectionHShift=\skip135
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 184.
+Package hyperref Info: Option `unicode' set `true' on input line 184.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen328
+\captionmargin=\dimen329
+\caption@leftmargin=\dimen330
+\caption@rightmargin=\dimen331
+\caption@width=\dimen332
+\caption@indent=\dimen333
+\caption@parindent=\dimen334
+\caption@hangindent=\dimen335
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count407
+\c@continuedfloat=\count408
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen336
+\caption@adjustwidth@linewidth=\dimen337
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks36
+\c@etoc@tocid=\count409
+\etoc@framed@titlebox=\box151
+\etoc@framed@contentsbox=\box152
+)
+
+Package french3.ldf Warning: Please load the "natbib" package
+(french3.ldf)                BEFORE babel/french; reported on input line 206.
+
+Package french3.ldf Info: Setting StandardItemizeEnv=true for
+(french3.ldf)             compatibility with enumitem package,
+(french3.ldf)             reported on input line 206.
+Package french3.ldf Info: Setting StandardEnumerateEnv=true for
+(french3.ldf)             compatibility with enumitem package,
+(french3.ldf)             reported on input line 206.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 20
+6.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 206.
+(refman.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 13.
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-var-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-enum-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-enum-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-enum-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-var-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-var-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-enum-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-var-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-var-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-define-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count410
+\scratchdimen=\dimen338
+\scratchbox=\box153
+\nofMPsegments=\count411
+\nofMParguments=\count412
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count413
+\MPscratchDim=\dimen339
+\MPnumerator=\count414
+\makeMPintoPDFobject=\count415
+\everyMPtoPDFconversion=\toks38
+)
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Info: Redefining \degres on input line 206.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package backref Info: ** backref set up for natbib ** on input line 206.
+Package hyperref Info: Link coloring ON on input line 206.
+(refman.out) (refman.out)
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\Etoc@tf=\read5
+Package hyperref Info: Option `pageanchor' set `false' on input line 214.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 214.
+
+Package hyperref Info: Option `unicode' set `true' on input line 214.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 219.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 220.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 220.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 220
+.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 220
+.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 22
+0.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+) [1
+
+
+{C:/Users/flori/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/flor
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2
+
+]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 228.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 228.
+[1] [2] [3] [4] [5] [6] [7]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+28.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 228.
+[8] [9] [10] [11] [12] [13] [14]
+Package hyperref Info: Option `pageanchor' set `true' on input line 231.
+(md__r_e_a_d_m_e.tex
+Chapitre 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 7.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
+.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [1
+
+
+]
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 112.
+[2]) [3] [4
+
+]
+Chapitre 2.
+(dirs.tex [5]) [6]
+Chapitre 3.
+(annotated.tex) [7
+
+] [8
+
+]
+Chapitre 4.
+(files.tex) [9] [10
+
+]
+Chapitre 5.
+(dir_087e898b439a470c6c6e9d7fbce2a58e.tex <./dir_087e898b439a470c6c6e9d7fbce2a5
+8e_dep.pdf>
+<dir_087e898b439a470c6c6e9d7fbce2a58e_dep.pdf, id=3121, 279.0425pt x 177.66376p
+t>
+File: dir_087e898b439a470c6c6e9d7fbce2a58e_dep.pdf Graphic file (type pdf)
+<use dir_087e898b439a470c6c6e9d7fbce2a58e_dep.pdf>
+Package pdftex.def Info: dir_087e898b439a470c6c6e9d7fbce2a58e_dep.pdf  used on 
+input line 8.
+(pdftex.def)             Requested size: 278.0pt x 177.00455pt.
+) (dir_020e4a53e97f78b22783b09a7c932b0c.tex <./dir_020e4a53e97f78b22783b09a7c93
+2b0c_dep.pdf>
+<dir_020e4a53e97f78b22783b09a7c932b0c_dep.pdf, id=3131, 351.3125pt x 177.66376p
+t>
+File: dir_020e4a53e97f78b22783b09a7c932b0c_dep.pdf Graphic file (type pdf)
+<use dir_020e4a53e97f78b22783b09a7c932b0c_dep.pdf>
+Package pdftex.def Info: dir_020e4a53e97f78b22783b09a7c932b0c_dep.pdf  used on 
+input line 8.
+(pdftex.def)             Requested size: 350.0pt x 177.01268pt.
+[11]) (dir_15e745cfa6718f09f4a3a3482dd2e260.tex <./dir_15e745cfa6718f09f4a3a348
+2dd2e260_dep.pdf>
+<dir_15e745cfa6718f09f4a3a3482dd2e260_dep.pdf, id=3150, 273.02pt x 177.66376pt>
+
+File: dir_15e745cfa6718f09f4a3a3482dd2e260_dep.pdf Graphic file (type pdf)
+<use dir_15e745cfa6718f09f4a3a3482dd2e260_dep.pdf>
+Package pdftex.def Info: dir_15e745cfa6718f09f4a3a3482dd2e260_dep.pdf  used on 
+input line 8.
+(pdftex.def)             Requested size: 272.0pt x 177.00998pt.
+) (dir_5b047ffbcbd3a1161ac587c6cba2a767.tex <./dir_5b047ffbcbd3a1161ac587c6cba2
+a767_dep.pdf>
+<dir_5b047ffbcbd3a1161ac587c6cba2a767_dep.pdf, id=3160, 200.75pt x 161.60374pt>
+
+File: dir_5b047ffbcbd3a1161ac587c6cba2a767_dep.pdf Graphic file (type pdf)
+<use dir_5b047ffbcbd3a1161ac587c6cba2a767_dep.pdf>
+Package pdftex.def Info: dir_5b047ffbcbd3a1161ac587c6cba2a767_dep.pdf  used on 
+input line 8.
+(pdftex.def)             Requested size: 200.0pt x 161.01154pt.
+[12]) (dir_1ec98ce50fa6ec55b40b8ffb1df38c3c.tex) (dir_68267d1309a1af8e8297ef4c3
+efbcdba.tex [13]) [14]
+Chapitre 6.
+(struct_bonus_arme.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 22.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 35.
+[15
+
+]) (struct_boss.tex [16]) (struct_bulle.tex [17] [18]) (struct_eclair.tex [19])
+(struct_etat_entrees.tex [20] [21]) (struct_etat_jeu.tex <./struct_etat_jeu__co
+ll__graph.pdf>
+<struct_etat_jeu__coll__graph.pdf, id=3589, 542.025pt x 272.01625pt>
+File: struct_etat_jeu__coll__graph.pdf Graphic file (type pdf)
+<use struct_etat_jeu__coll__graph.pdf>
+Package pdftex.def Info: struct_etat_jeu__coll__graph.pdf  used on input line 1
+4.
+(pdftex.def)             Requested size: 350.0pt x 175.65459pt.
+[22] [23] [24]) (struct_etat_menu.tex [25]) (struct_joueur.tex [26] [27]) (stru
+ct_liste_eclairs.tex <./struct_liste_eclairs__coll__graph.pdf>
+<struct_liste_eclairs__coll__graph.pdf, id=3930, 161.60374pt x 188.705pt>
+File: struct_liste_eclairs__coll__graph.pdf Graphic file (type pdf)
+<use struct_liste_eclairs__coll__graph.pdf>
+Package pdftex.def Info: struct_liste_eclairs__coll__graph.pdf  used on input l
+ine 14.
+(pdftex.def)             Requested size: 161.0pt x 188.01059pt.
+[28]) (struct_projectile.tex [29]) [30]
+Chapitre 7.
+(header_2affichage_8h.tex <./header_2affichage_8h__incl.pdf>
+<header_2affichage_8h__incl.pdf, id=4046, 224.84pt x 348.30125pt>
+File: header_2affichage_8h__incl.pdf Graphic file (type pdf)
+<use header_2affichage_8h__incl.pdf>
+Package pdftex.def Info: header_2affichage_8h__incl.pdf  used on input line 11.
+
+(pdftex.def)             Requested size: 224.0pt x 347.01425pt.
+[31
+
+]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 71.
+[32] <./header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf>
+<header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf, id=4313, 40
+9.53pt x 105.39375pt>
+File: header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf Graphic
+ file (type pdf)
+<use header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827
+_cgraph.pdf  used on input line 153.
+(pdftex.def)             Requested size: 350.0pt x 90.0788pt.
+ <./header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf>
+<header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf, id=4321, 3
+37.26pt x 105.39375pt>
+File: header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a7a02878ba4c6ec45dd0519a58739a827
+_icgraph.pdf  used on input line 161.
+(pdftex.def)             Requested size: 336.0pt x 105.00269pt.
+[33] <./header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf>
+<header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf, id=4358, 2
+51.94125pt x 105.39375pt>
+File: header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee
+_icgraph.pdf  used on input line 192.
+(pdftex.def)             Requested size: 251.0pt x 105.00107pt.
+[34] <./header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf>
+<header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf, id=4475, 3
+32.24126pt x 105.39375pt>
+File: header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a471bebb0f446aa0133a5ca961fc275e3
+_icgraph.pdf  used on input line 237.
+(pdftex.def)             Requested size: 331.0pt x 105.0059pt.
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
+75.
+(C:\Users\flori\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+) [35] <./header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf>
+<header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf, id=4588, 28
+9.08pt x 105.39375pt>
+File: header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf Graphic
+ file (type pdf)
+<use header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_ade696254e724634f854cee7ce6ee56cb
+_cgraph.pdf  used on input line 344.
+(pdftex.def)             Requested size: 288.0pt x 105.0059pt.
+[36]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.375 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.375 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+ <./header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf>
+<header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf, id=4645, 36
+7.3725pt x 250.9375pt>
+File: header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf Graphic
+ file (type pdf)
+<use header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03
+_cgraph.pdf  used on input line 428.
+(pdftex.def)             Requested size: 350.0pt x 239.08614pt.
+[37] <./header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf>
+<header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf, id=4662, 2
+79.0425pt x 105.39375pt>
+File: header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03
+_icgraph.pdf  used on input line 436.
+(pdftex.def)             Requested size: 278.0pt x 105.00269pt.
+ <./header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf>
+<header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf, id=4682, 2
+61.97874pt x 105.39375pt>
+File: header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a3d37afe9287430123b96a943a23ea26e
+_icgraph.pdf  used on input line 468.
+(pdftex.def)             Requested size: 261.0pt x 105.00269pt.
+[38] [39]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 599.
+
+[40] <./header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_cgraph.pdf>
+<header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_cgraph.pdf, id=4913, 43
+1.6125pt x 321.2pt>
+File: header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_cgraph.pdf Graphic
+ file (type pdf)
+<use header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_cgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a5056814c53d4eec079dec720b21324a5
+_cgraph.pdf  used on input line 646.
+(pdftex.def)             Requested size: 350.0pt x 260.47444pt.
+ <./header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_icgraph.pdf>
+<header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_icgraph.pdf, id=4921, 2
+41.90375pt x 105.39375pt>
+File: header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a5056814c53d4eec079dec720b21324a5_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a5056814c53d4eec079dec720b21324a5
+_icgraph.pdf  used on input line 654.
+(pdftex.def)             Requested size: 241.0pt x 105.00429pt.
+[41] [42] <./header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf
+>
+<header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf, id=5042, 2
+55.95625pt x 105.39375pt>
+File: header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a416f9b7333b0226e5cab25214be7ec33
+_icgraph.pdf  used on input line 768.
+(pdftex.def)             Requested size: 255.0pt x 104.99947pt.
+[43] <./header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf>
+<header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf, id=5084, 3
+01.125pt x 105.39375pt>
+File: header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb
+_icgraph.pdf  used on input line 846.
+(pdftex.def)             Requested size: 300.0pt x 105.00911pt.
+ <./header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf>
+<header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf, id=5104, 2
+66.9975pt x 105.39375pt>
+File: header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013
+_icgraph.pdf  used on input line 878.
+(pdftex.def)             Requested size: 266.0pt x 105.01073pt.
+ <./header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf>
+<header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf, id=5118, 2
+80.04625pt x 105.39375pt>
+File: header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf Graphi
+c file (type pdf)
+<use header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf>
+Package pdftex.def Info: header_2affichage_8h_a8a136500425935baff6b4aefc3d7ba80
+_icgraph.pdf  used on input line 903.
+(pdftex.def)             Requested size: 279.0pt x 105.00429pt.
+[44]) (header_2affichage_8h_source.tex [45]) (src_2affichage_8h.tex <./src_2aff
+ichage_8h__incl.pdf>
+<src_2affichage_8h__incl.pdf, id=5235, 214.8025pt x 348.30125pt>
+File: src_2affichage_8h__incl.pdf Graphic file (type pdf)
+<use src_2affichage_8h__incl.pdf>
+Package pdftex.def Info: src_2affichage_8h__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 214.0pt x 347.00362pt.
+[46] <./src_2affichage_8h__dep__incl.pdf>
+<src_2affichage_8h__dep__incl.pdf, id=5286, 362.35374pt x 165.61874pt>
+File: src_2affichage_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2affichage_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2affichage_8h__dep__incl.pdf  used on input line 1
+9.
+(pdftex.def)             Requested size: 350.0pt x 159.97523pt.
+[47] [48] [49] <./src_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.p
+df>
+<src_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf, id=5715, 367.
+3725pt x 105.39375pt>
+File: src_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b_ic
+graph.pdf  used on input line 277.
+(pdftex.def)             Requested size: 350.0pt x 100.41617pt.
+[50] <./src_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf>
+<src_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf, id=5779, 370.
+38374pt x 105.39375pt>
+File: src_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_ade696254e724634f854cee7ce6ee56cb_ic
+graph.pdf  used on input line 332.
+(pdftex.def)             Requested size: 350.0pt x 99.59439pt.
+[51]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.363 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.363 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[52] <./src_2affichage_8h_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf>
+<src_2affichage_8h_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf, id=5875, 322.
+20375pt x 105.39375pt>
+File: src_2affichage_8h_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_ab4a51dce181769925f8e3d8e268e6a61_ic
+graph.pdf  used on input line 495.
+(pdftex.def)             Requested size: 321.0pt x 105.00429pt.
+[53] [54] <./src_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf>
+<src_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf, id=5956, 363.
+3575pt x 105.39375pt>
+File: src_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6_ic
+graph.pdf  used on input line 598.
+(pdftex.def)             Requested size: 350.0pt x 101.52258pt.
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 634.
+
+[55] <./src_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf>
+<src_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf, id=6166, 377.
+41pt x 105.39375pt>
+File: src_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed_ic
+graph.pdf  used on input line 736.
+(pdftex.def)             Requested size: 350.0pt x 97.73856pt.
+[56] <./src_2affichage_8h_a9662fd89470ff912257e700f3014cabb_icgraph.pdf>
+<src_2affichage_8h_a9662fd89470ff912257e700f3014cabb_icgraph.pdf, id=6190, 321.
+2pt x 105.39375pt>
+File: src_2affichage_8h_a9662fd89470ff912257e700f3014cabb_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_a9662fd89470ff912257e700f3014cabb_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_a9662fd89470ff912257e700f3014cabb_ic
+graph.pdf  used on input line 784.
+(pdftex.def)             Requested size: 320.0pt x 105.00269pt.
+[57] <./src_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf>
+<src_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf, id=6244, 394.
+47375pt x 105.39375pt>
+File: src_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf Graphic f
+ile (type pdf)
+<use src_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf>
+Package pdftex.def Info: src_2affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb_ic
+graph.pdf  used on input line 874.
+(pdftex.def)             Requested size: 350.0pt x 93.51225pt.
+[58] [59]) (src_2affichage_8h_source.tex [60]) (header_2alfont_8h.tex <./header
+_2alfont_8h__incl.pdf>
+<header_2alfont_8h__incl.pdf, id=6419, 234.8775pt x 165.61874pt>
+File: header_2alfont_8h__incl.pdf Graphic file (type pdf)
+<use header_2alfont_8h__incl.pdf>
+Package pdftex.def Info: header_2alfont_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 234.0pt x 164.99918pt.
+[61] [62] [63] <./header_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f_icgraph.p
+df>
+<header_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f_icgraph.pdf, id=6808, 437.
+635pt x 105.39375pt>
+File: header_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f_ic
+graph.pdf  used on input line 236.
+(pdftex.def)             Requested size: 350.0pt x 84.28937pt.
+[64] <./header_2alfont_8h_af2bcc3c080bd6827885dd7728d504800_icgraph.pdf>
+<header_2alfont_8h_af2bcc3c080bd6827885dd7728d504800_icgraph.pdf, id=6831, 234.
+8775pt x 105.39375pt>
+File: header_2alfont_8h_af2bcc3c080bd6827885dd7728d504800_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_af2bcc3c080bd6827885dd7728d504800_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_af2bcc3c080bd6827885dd7728d504800_ic
+graph.pdf  used on input line 250.
+(pdftex.def)             Requested size: 234.0pt x 104.99947pt.
+[65] <./header_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3_icgraph.pdf>
+<header_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3_icgraph.pdf, id=6864, 232.
+87pt x 105.39375pt>
+File: header_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3_ic
+graph.pdf  used on input line 288.
+(pdftex.def)             Requested size: 232.0pt x 105.00429pt.
+ <./header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132_icgraph.pdf>
+<header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132_icgraph.pdf, id=6884, 421.
+575pt x 148.555pt>
+File: header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132_ic
+graph.pdf  used on input line 314.
+(pdftex.def)             Requested size: 350.0pt x 123.33461pt.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 321.
+[66] <./header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86_icgraph.pdf>
+<header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86_icgraph.pdf, id=6911, 440.
+64626pt x 234.8775pt>
+File: header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86_ic
+graph.pdf  used on input line 340.
+(pdftex.def)             Requested size: 350.0pt x 186.56544pt.
+[67] <./header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935_icgraph.pdf>
+<header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935_icgraph.pdf, id=6947, 424.
+58624pt x 148.555pt>
+File: header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_a603d851978e42deb44b6a0365a5e4935_ic
+graph.pdf  used on input line 384.
+(pdftex.def)             Requested size: 350.0pt x 122.46417pt.
+[68] <./header_2alfont_8h_adb9bc67114024dedb1998866922f6271_icgraph.pdf>
+<header_2alfont_8h_adb9bc67114024dedb1998866922f6271_icgraph.pdf, id=6973, 446.
+66875pt x 191.71625pt>
+File: header_2alfont_8h_adb9bc67114024dedb1998866922f6271_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2alfont_8h_adb9bc67114024dedb1998866922f6271_icgraph.pdf>
+Package pdftex.def Info: header_2alfont_8h_adb9bc67114024dedb1998866922f6271_ic
+graph.pdf  used on input line 410.
+(pdftex.def)             Requested size: 350.0pt x 150.22844pt.
+[69] [70] [71] [72]) (header_2alfont_8h_source.tex [73] [74]) (src_2alfont_8h.t
+ex <./src_2alfont_8h__incl.pdf>
+<src_2alfont_8h__incl.pdf, id=7484, 234.8775pt x 165.61874pt>
+File: src_2alfont_8h__incl.pdf Graphic file (type pdf)
+<use src_2alfont_8h__incl.pdf>
+Package pdftex.def Info: src_2alfont_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 234.0pt x 164.99918pt.
+[75] <./src_2alfont_8h__dep__incl.pdf>
+<src_2alfont_8h__dep__incl.pdf, id=7534, 362.35374pt x 165.61874pt>
+File: src_2alfont_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2alfont_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2alfont_8h__dep__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 159.97523pt.
+[76] [77] [78] [79] [80] [81] [82] [83] [84] [85]) (src_2alfont_8h_source.tex [
+86] [87]) (header_2alfontdll_8h.tex <./header_2alfontdll_8h__dep__incl.pdf>
+<header_2alfontdll_8h__dep__incl.pdf, id=8495, 192.72pt x 165.61874pt>
+File: header_2alfontdll_8h__dep__incl.pdf Graphic file (type pdf)
+<use header_2alfontdll_8h__dep__incl.pdf>
+Package pdftex.def Info: header_2alfontdll_8h__dep__incl.pdf  used on input lin
+e 8.
+(pdftex.def)             Requested size: 192.0pt x 164.99918pt.
+[88]) (header_2alfontdll_8h_source.tex) (src_2alfontdll_8h.tex <./src_2alfontdl
+l_8h__dep__incl.pdf>
+<src_2alfontdll_8h__dep__incl.pdf, id=8556, 362.35374pt x 226.8475pt>
+File: src_2alfontdll_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2alfontdll_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2alfontdll_8h__dep__incl.pdf  used on input line 8
+.
+(pdftex.def)             Requested size: 350.0pt x 219.1176pt.
+[89]) (src_2alfontdll_8h_source.tex) (header_2eclair_8h.tex <./header_2eclair_8
+h__incl.pdf>
+<header_2eclair_8h__incl.pdf, id=8605, 176.66pt x 165.61874pt>
+File: header_2eclair_8h__incl.pdf Graphic file (type pdf)
+<use header_2eclair_8h__incl.pdf>
+Package pdftex.def Info: header_2eclair_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 176.0pt x 165.00171pt.
+ <./header_2eclair_8h__dep__incl.pdf>
+<header_2eclair_8h__dep__incl.pdf, id=8613, 437.635pt x 287.0725pt>
+File: header_2eclair_8h__dep__incl.pdf Graphic file (type pdf)
+<use header_2eclair_8h__dep__incl.pdf>
+Package pdftex.def Info: header_2eclair_8h__dep__incl.pdf  used on input line 1
+7.
+(pdftex.def)             Requested size: 350.0pt x 229.58821pt.
+[90] [91] <./header_2eclair_8h_a693961ccc3b568ea454db1853e64393b_icgraph.pdf>
+<header_2eclair_8h_a693961ccc3b568ea454db1853e64393b_icgraph.pdf, id=8739, 380.
+42125pt x 105.39375pt>
+File: header_2eclair_8h_a693961ccc3b568ea454db1853e64393b_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2eclair_8h_a693961ccc3b568ea454db1853e64393b_icgraph.pdf>
+Package pdftex.def Info: header_2eclair_8h_a693961ccc3b568ea454db1853e64393b_ic
+graph.pdf  used on input line 138.
+(pdftex.def)             Requested size: 350.0pt x 96.96823pt.
+[92] <./header_2eclair_8h_a94d73eb8a889534102b2442ed022db13_icgraph.pdf>
+<header_2eclair_8h_a94d73eb8a889534102b2442ed022db13_icgraph.pdf, id=8798, 410.
+53375pt x 105.39375pt>
+File: header_2eclair_8h_a94d73eb8a889534102b2442ed022db13_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2eclair_8h_a94d73eb8a889534102b2442ed022db13_icgraph.pdf>
+Package pdftex.def Info: header_2eclair_8h_a94d73eb8a889534102b2442ed022db13_ic
+graph.pdf  used on input line 174.
+(pdftex.def)             Requested size: 350.0pt x 89.85205pt.
+ <./header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf>
+<header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf, id=8828, 485.
+815pt x 105.39375pt>
+File: header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf>
+Package pdftex.def Info: header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b_ic
+graph.pdf  used on input line 213.
+(pdftex.def)             Requested size: 350.0pt x 75.92845pt.
+[93] <./header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf>
+<header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf, id=8855, 373.
+395pt x 105.39375pt>
+File: header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf>
+Package pdftex.def Info: header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686_ic
+graph.pdf  used on input line 239.
+(pdftex.def)             Requested size: 350.0pt x 98.79512pt.
+ <./header_2eclair_8h_a41927b1d41e1bda12297701119910c62_icgraph.pdf>
+<header_2eclair_8h_a41927b1d41e1bda12297701119910c62_icgraph.pdf, id=8897, 447.
+6725pt x 105.39375pt>
+File: header_2eclair_8h_a41927b1d41e1bda12297701119910c62_icgraph.pdf Graphic f
+ile (type pdf)
+<use header_2eclair_8h_a41927b1d41e1bda12297701119910c62_icgraph.pdf>
+Package pdftex.def Info: header_2eclair_8h_a41927b1d41e1bda12297701119910c62_ic
+graph.pdf  used on input line 273.
+(pdftex.def)             Requested size: 350.0pt x 82.40137pt.
+) (header_2eclair_8h_source.tex [94]) (src_2eclair_8h.tex <./src_2eclair_8h__in
+cl.pdf>
+<src_2eclair_8h__incl.pdf, id=8979, 155.58125pt x 165.61874pt>
+File: src_2eclair_8h__incl.pdf Graphic file (type pdf)
+<use src_2eclair_8h__incl.pdf>
+Package pdftex.def Info: src_2eclair_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 155.0pt x 165.00171pt.
+ <./src_2eclair_8h__dep__incl.pdf>
+<src_2eclair_8h__dep__incl.pdf, id=8987, 648.4225pt x 348.30125pt>
+File: src_2eclair_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2eclair_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2eclair_8h__dep__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 188.00546pt.
+[95] [96] [97]) (src_2eclair_8h_source.tex [98]) (header_2entites_8h.tex <./hea
+der_2entites_8h__incl.pdf>
+<header_2entites_8h__incl.pdf, id=9270, 182.6825pt x 226.8475pt>
+File: header_2entites_8h__incl.pdf Graphic file (type pdf)
+<use header_2entites_8h__incl.pdf>
+Package pdftex.def Info: header_2entites_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 182.0pt x 226.00928pt.
+ <./header_2entites_8h__dep__incl.pdf>
+<header_2entites_8h__dep__incl.pdf, id=9278, 437.635pt x 226.8475pt>
+File: header_2entites_8h__dep__incl.pdf Graphic file (type pdf)
+<use header_2entites_8h__dep__incl.pdf>
+Package pdftex.def Info: header_2entites_8h__dep__incl.pdf  used on input line 
+17.
+(pdftex.def)             Requested size: 350.0pt x 181.42285pt.
+[99] [100] [101]
+LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 187.
+[102] <./header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf>
+<header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf, id=9513, 289
+.08pt x 105.39375pt>
+File: header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf Graphic 
+file (type pdf)
+<use header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf>
+Package pdftex.def Info: header_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_i
+cgraph.pdf  used on input line 313.
+(pdftex.def)             Requested size: 288.0pt x 105.0059pt.
+) (header_2entites_8h_source.tex [103]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 91.
+
+[104]) (src_2entites_8h.tex <./src_2entites_8h__incl.pdf>
+<src_2entites_8h__incl.pdf, id=9864, 161.60374pt x 226.8475pt>
+File: src_2entites_8h__incl.pdf Graphic file (type pdf)
+<use src_2entites_8h__incl.pdf>
+Package pdftex.def Info: src_2entites_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 161.0pt x 226.01273pt.
+ <./src_2entites_8h__dep__incl.pdf>
+<src_2entites_8h__dep__incl.pdf, id=9872, 640.3925pt x 287.0725pt>
+File: src_2entites_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2entites_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2entites_8h__dep__incl.pdf  used on input line 17.
+
+(pdftex.def)             Requested size: 350.0pt x 156.90039pt.
+[105] [106] [107] [108] <./src_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_ic
+graph.pdf>
+<src_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf, id=10092, 335.2
+525pt x 148.555pt>
+File: src_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf Graphic fil
+e (type pdf)
+<use src_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf>
+Package pdftex.def Info: src_2entites_8h_a04fd5d00b05181b0046eec5c7a877412_icgr
+aph.pdf  used on input line 313.
+(pdftex.def)             Requested size: 334.0pt x 147.99927pt.
+) (src_2entites_8h_source.tex [109]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 93.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 97.
+
+) (header_2entrees_8h.tex [110] <./header_2entrees_8h_abc687d8db5c36a1f566b70e4
+8d7a1e4f_icgraph.pdf>
+<header_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf, id=10337, 23
+9.89626pt x 105.39375pt>
+File: header_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf Graphic 
+file (type pdf)
+<use header_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf>
+Package pdftex.def Info: header_2entrees_8h_abc687d8db5c36a1f566b70e48d7a1e4f_i
+cgraph.pdf  used on input line 50.
+(pdftex.def)             Requested size: 239.0pt x 105.00107pt.
+) (header_2entrees_8h_source.tex) (src_2entrees_8h.tex <./src_2entrees_8h__dep_
+_incl.pdf>
+<src_2entrees_8h__dep__incl.pdf, id=10379, 254.9525pt x 165.61874pt>
+File: src_2entrees_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2entrees_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2entrees_8h__dep__incl.pdf  used on input line 8.
+(pdftex.def)             Requested size: 254.0pt x 165.00676pt.
+[111]) (src_2entrees_8h_source.tex [112]) (header_2jeu_8h.tex <./header_2jeu_8h
+__incl.pdf>
+<header_2jeu_8h__incl.pdf, id=10449, 163.61125pt x 287.0725pt>
+File: header_2jeu_8h__incl.pdf Graphic file (type pdf)
+<use header_2jeu_8h__incl.pdf>
+Package pdftex.def Info: header_2jeu_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 163.0pt x 285.9986pt.
+[113] <./header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf>
+<header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf, id=10607, 293.095
+pt x 105.39375pt>
+File: header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf Graphic file 
+(type pdf)
+<use header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgrap
+h.pdf  used on input line 97.
+(pdftex.def)             Requested size: 292.0pt x 104.99947pt.
+[114] [115]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 173.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 188.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 199.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 200.
+
+ <./header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf>
+<header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf, id=10860, 293.095
+pt x 105.39375pt>
+File: header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf Graphic file 
+(type pdf)
+<use header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgrap
+h.pdf  used on input line 218.
+(pdftex.def)             Requested size: 292.0pt x 104.99947pt.
+ <./header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf>
+<header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf, id=10868, 260.97
+5pt x 105.39375pt>
+File: header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf Graphic file
+ (type pdf)
+<use header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgra
+ph.pdf  used on input line 226.
+(pdftex.def)             Requested size: 260.0pt x 105.00107pt.
+[116]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 ...4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 ...4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.282 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.282 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[117] <./header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf>
+<header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf, id=11227, 528.976
+26pt x 321.2pt>
+File: header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf Graphic file 
+(type pdf)
+<use header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgrap
+h.pdf  used on input line 384.
+(pdftex.def)             Requested size: 350.0pt x 212.52197pt.
+[118] <./header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf>
+<header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf, id=11242, 277.03
+5pt x 105.39375pt>
+File: header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf Graphic file
+ (type pdf)
+<use header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgra
+ph.pdf  used on input line 392.
+(pdftex.def)             Requested size: 276.0pt x 105.00107pt.
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.414 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.414 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+ <./header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf>
+<header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf, id=11278, 275.02
+75pt x 105.39375pt>
+File: header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf Graphic file
+ (type pdf)
+<use header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgra
+ph.pdf  used on input line 430.
+(pdftex.def)             Requested size: 274.0pt x 105.00911pt.
+[119] <./header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf>
+<header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf, id=11306, 274.02
+374pt x 105.39375pt>
+File: header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf Graphic file
+ (type pdf)
+<use header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgra
+ph.pdf  used on input line 455.
+(pdftex.def)             Requested size: 273.0pt x 105.0075pt.
+[120] <./header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf>
+<header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf, id=11481, 341.275
+pt x 148.555pt>
+File: header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf Graphic file 
+(type pdf)
+<use header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgrap
+h.pdf  used on input line 546.
+(pdftex.def)             Requested size: 340.0pt x 148.00833pt.
+[121]
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+ <./header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf>
+<header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf, id=11676, 240.9p
+t x 105.39375pt>
+File: header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf Graphic file
+ (type pdf)
+<use header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf>
+Package pdftex.def Info: header_2jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgra
+ph.pdf  used on input line 642.
+(pdftex.def)             Requested size: 240.0pt x 105.00269pt.
+[122]) (header_2jeu_8h_source.tex) (src_2jeu_8h.tex <./src_2jeu_8h__incl.pdf>
+<src_2jeu_8h__incl.pdf, id=11735, 172.645pt x 287.0725pt>
+File: src_2jeu_8h__incl.pdf Graphic file (type pdf)
+<use src_2jeu_8h__incl.pdf>
+Package pdftex.def Info: src_2jeu_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 172.0pt x 286.00298pt.
+[123] <./src_2jeu_8h__dep__incl.pdf>
+<src_2jeu_8h__dep__incl.pdf, id=11770, 347.2975pt x 165.61874pt>
+File: src_2jeu_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2jeu_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2jeu_8h__dep__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 346.0pt x 165.00676pt.
+[124] <./src_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf>
+<src_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf, id=11862, 405.515pt
+ x 105.39375pt>
+File: src_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf Graphic file (t
+ype pdf)
+<use src_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf>
+Package pdftex.def Info: src_2jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.
+pdf  used on input line 98.
+(pdftex.def)             Requested size: 350.0pt x 90.96812pt.
+[125] <./src_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf>
+<src_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf, id=11945, 408.52625
+pt x 105.39375pt>
+File: src_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf Graphic file (t
+ype pdf)
+<use src_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf>
+Package pdftex.def Info: src_2jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_icgraph.
+pdf  used on input line 134.
+(pdftex.def)             Requested size: 350.0pt x 90.29912pt.
+[126] <./src_2jeu_8h_a95bdea7c66358469b0f5587032814c83_icgraph.pdf>
+<src_2jeu_8h_a95bdea7c66358469b0f5587032814c83_icgraph.pdf, id=12057, 341.275pt
+ x 105.39375pt>
+File: src_2jeu_8h_a95bdea7c66358469b0f5587032814c83_icgraph.pdf Graphic file (t
+ype pdf)
+<use src_2jeu_8h_a95bdea7c66358469b0f5587032814c83_icgraph.pdf>
+Package pdftex.def Info: src_2jeu_8h_a95bdea7c66358469b0f5587032814c83_icgraph.
+pdf  used on input line 194.
+(pdftex.def)             Requested size: 340.0pt x 105.0059pt.
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 218.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 233.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 244.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 245.
+
+[127]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 ...4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 ...4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[128] [129]
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[130] <./src_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf>
+<src_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf, id=12744, 450.68375
+pt x 105.39375pt>
+File: src_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf Graphic file (t
+ype pdf)
+<use src_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf>
+Package pdftex.def Info: src_2jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.
+pdf  used on input line 543.
+(pdftex.def)             Requested size: 350.0pt x 81.85298pt.
+[131]
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.616 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.616 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+) (src_2jeu_8h_source.tex [132]) (header_2menu_8h.tex <./header_2menu_8h__incl.
+pdf>
+<header_2menu_8h__incl.pdf, id=12995, 189.70876pt x 287.0725pt>
+File: header_2menu_8h__incl.pdf Graphic file (type pdf)
+<use header_2menu_8h__incl.pdf>
+Package pdftex.def Info: header_2menu_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 189.0pt x 286.00735pt.
+ <./header_2menu_8h__dep__incl.pdf>
+<header_2menu_8h__dep__incl.pdf, id=13003, 197.73875pt x 165.61874pt>
+File: header_2menu_8h__dep__incl.pdf Graphic file (type pdf)
+<use header_2menu_8h__dep__incl.pdf>
+Package pdftex.def Info: header_2menu_8h__dep__incl.pdf  used on input line 18.
+
+(pdftex.def)             Requested size: 197.0pt x 165.00171pt.
+[133] [134] [135]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 225.
+
+[136] <./header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf>
+<header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf, id=13233, 344.28
+625pt x 207.77625pt>
+File: header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf Graphic file
+ (type pdf)
+<use header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgra
+ph.pdf  used on input line 276.
+(pdftex.def)             Requested size: 343.0pt x 207.00214pt.
+ <./header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf>
+<header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf, id=13241, 255.9
+5625pt x 105.39375pt>
+File: header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf Graphic fil
+e (type pdf)
+<use header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgr
+aph.pdf  used on input line 284.
+(pdftex.def)             Requested size: 255.0pt x 104.99947pt.
+[137]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 313.
+
+ <./header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf>
+<header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf, id=13289, 346.29
+375pt x 207.77625pt>
+File: header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf Graphic file
+ (type pdf)
+<use header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_cgra
+ph.pdf  used on input line 385.
+(pdftex.def)             Requested size: 345.0pt x 207.00531pt.
+[138] <./header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf>
+<header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf, id=13302, 257.9
+6375pt x 105.39375pt>
+File: header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf Graphic fil
+e (type pdf)
+<use header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_aa21de65fbde7933c3234a51ff1cf192f_icgr
+aph.pdf  used on input line 393.
+(pdftex.def)             Requested size: 257.0pt x 105.00911pt.
+ <./header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf>
+<header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf, id=13366, 314.17
+375pt x 148.555pt>
+File: header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf Graphic file
+ (type pdf)
+<use header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_cgra
+ph.pdf  used on input line 431.
+(pdftex.def)             Requested size: 313.0pt x 148.00606pt.
+[139] <./header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf>
+<header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf, id=13382, 231.8
+6626pt x 105.39375pt>
+File: header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf Graphic fil
+e (type pdf)
+<use header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_icgr
+aph.pdf  used on input line 439.
+(pdftex.def)             Requested size: 231.0pt x 105.00269pt.
+[140] <./header_2menu_8h_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf>
+<header_2menu_8h_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf, id=13432, 291.0
+875pt x 105.39375pt>
+File: header_2menu_8h_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf Graphic fil
+e (type pdf)
+<use header_2menu_8h_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf>
+Package pdftex.def Info: header_2menu_8h_a3913bce4e975a52d19ed8450f553b4f2_icgr
+aph.pdf  used on input line 495.
+(pdftex.def)             Requested size: 290.0pt x 105.0075pt.
+) (header_2menu_8h_source.tex [141]) (src_2menu_8h.tex <./src_2menu_8h__incl.pd
+f>
+<src_2menu_8h__incl.pdf, id=13543, 179.67125pt x 287.0725pt>
+File: src_2menu_8h__incl.pdf Graphic file (type pdf)
+<use src_2menu_8h__incl.pdf>
+Package pdftex.def Info: src_2menu_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 179.0pt x 286.0205pt.
+ <./src_2menu_8h__dep__incl.pdf>
+<src_2menu_8h__dep__incl.pdf, id=13551, 362.35374pt x 226.8475pt>
+File: src_2menu_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2menu_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2menu_8h__dep__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 219.1176pt.
+[142] [143] [144]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 225.
+
+[145]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 297.
+
+[146] [147]) (src_2menu_8h_source.tex [148]) (header_2sauvegarde_8h.tex <./head
+er_2sauvegarde_8h__incl.pdf>
+<header_2sauvegarde_8h__incl.pdf, id=13983, 207.77625pt x 287.0725pt>
+File: header_2sauvegarde_8h__incl.pdf Graphic file (type pdf)
+<use header_2sauvegarde_8h__incl.pdf>
+Package pdftex.def Info: header_2sauvegarde_8h__incl.pdf  used on input line 9.
+
+(pdftex.def)             Requested size: 207.0pt x 286.01173pt.
+[149]) (header_2sauvegarde_8h_source.tex
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 21.
+
+) (src_2sauvegarde_8h.tex <./src_2sauvegarde_8h__incl.pdf>
+<src_2sauvegarde_8h__incl.pdf, id=14051, 187.70125pt x 287.0725pt>
+File: src_2sauvegarde_8h__incl.pdf Graphic file (type pdf)
+<use src_2sauvegarde_8h__incl.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 187.0pt x 286.01611pt.
+[150] <./src_2sauvegarde_8h__dep__incl.pdf>
+<src_2sauvegarde_8h__dep__incl.pdf, id=14098, 279.0425pt x 165.61874pt>
+File: src_2sauvegarde_8h__dep__incl.pdf Graphic file (type pdf)
+<use src_2sauvegarde_8h__dep__incl.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h__dep__incl.pdf  used on input line 
+17.
+(pdftex.def)             Requested size: 278.0pt x 165.00423pt.
+[151] <./src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf>
+<src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf, id=14157, 314
+.17375pt x 105.39375pt>
+File: src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf Graphic f
+ile (type pdf)
+<use src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_c
+graph.pdf  used on input line 83.
+(pdftex.def)             Requested size: 313.0pt x 105.00429pt.
+ <./src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf>
+<src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf, id=14165, 27
+5.0275pt x 105.39375pt>
+File: src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf Graphic 
+file (type pdf)
+<use src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h_a07c35849f53b33522cbc3cc8e1784779_i
+cgraph.pdf  used on input line 91.
+(pdftex.def)             Requested size: 274.0pt x 105.00911pt.
+[152] <./src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf>
+<src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf, id=14198, 315
+.1775pt x 105.39375pt>
+File: src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf Graphic f
+ile (type pdf)
+<use src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h_a8422aabf50c82f48020bb8896a36abb5_c
+graph.pdf  used on input line 121.
+(pdftex.def)             Requested size: 314.0pt x 105.0059pt.
+ <./src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf>
+<src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf, id=14232, 301
+.125pt x 105.39375pt>
+File: src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf Graphic f
+ile (type pdf)
+<use src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_c
+graph.pdf  used on input line 159.
+(pdftex.def)             Requested size: 300.0pt x 105.00911pt.
+ <./src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf>
+<src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf, id=14240, 26
+1.97874pt x 105.39375pt>
+File: src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf Graphic 
+file (type pdf)
+<use src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h_a5a6a2ce1cbb6732733a1fc058fe29996_i
+cgraph.pdf  used on input line 167.
+(pdftex.def)             Requested size: 261.0pt x 105.00269pt.
+[153] <./src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf>
+<src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf, id=14264, 27
+1.0125pt x 105.39375pt>
+File: src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf Graphic 
+file (type pdf)
+<use src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf>
+Package pdftex.def Info: src_2sauvegarde_8h_a5d6bc09d3f024cea1682331f9857b868_i
+cgraph.pdf  used on input line 217.
+(pdftex.def)             Requested size: 270.0pt x 105.00429pt.
+) (src_2sauvegarde_8h_source.tex [154]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 13.
+
+) (_r_e_a_d_m_e_8md.tex) (affichage_8c.tex <./affichage_8c__incl.pdf>
+<affichage_8c__incl.pdf, id=14300, 557.08125pt x 408.52625pt>
+File: affichage_8c__incl.pdf Graphic file (type pdf)
+<use affichage_8c__incl.pdf>
+Package pdftex.def Info: affichage_8c__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 256.6685pt.
+[155] [156] [157] <./affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf>
+<affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf, id=14616, 409.53pt 
+x 105.39375pt>
+File: affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf Graphic file (t
+ype pdf)
+<use affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_cgraph.pdf>
+Package pdftex.def Info: affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_cgraph.
+pdf  used on input line 192.
+(pdftex.def)             Requested size: 350.0pt x 90.0788pt.
+ <./affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf>
+<affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf, id=14624, 337.26pt
+ x 105.39375pt>
+File: affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_icgraph
+.pdf  used on input line 200.
+(pdftex.def)             Requested size: 336.0pt x 105.00269pt.
+ <./affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf>
+<affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf, id=14640, 251.9412
+5pt x 105.39375pt>
+File: affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee_icgraph
+.pdf  used on input line 231.
+(pdftex.def)             Requested size: 251.0pt x 105.00107pt.
+[158] <./affichage_8c_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf>
+<affichage_8c_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf, id=14755, 332.2412
+6pt x 105.39375pt>
+File: affichage_8c_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a471bebb0f446aa0133a5ca961fc275e3_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a471bebb0f446aa0133a5ca961fc275e3_icgraph
+.pdf  used on input line 276.
+(pdftex.def)             Requested size: 331.0pt x 105.0059pt.
+[159] <./affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf>
+<affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf, id=14813, 367.3725
+pt x 105.39375pt>
+File: affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph
+.pdf  used on input line 336.
+(pdftex.def)             Requested size: 350.0pt x 100.41617pt.
+[160] <./affichage_8c_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf>
+<affichage_8c_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf, id=14879, 289.08pt 
+x 105.39375pt>
+File: affichage_8c_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf Graphic file (t
+ype pdf)
+<use affichage_8c_ade696254e724634f854cee7ce6ee56cb_cgraph.pdf>
+Package pdftex.def Info: affichage_8c_ade696254e724634f854cee7ce6ee56cb_cgraph.
+pdf  used on input line 391.
+(pdftex.def)             Requested size: 288.0pt x 105.0059pt.
+ <./affichage_8c_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf>
+<affichage_8c_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf, id=14887, 370.3837
+4pt x 105.39375pt>
+File: affichage_8c_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_ade696254e724634f854cee7ce6ee56cb_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_ade696254e724634f854cee7ce6ee56cb_icgraph
+.pdf  used on input line 399.
+(pdftex.def)             Requested size: 350.0pt x 99.59439pt.
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[161] <./affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf>
+<affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf, id=14938, 367.3725p
+t x 250.9375pt>
+File: affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf Graphic file (t
+ype pdf)
+<use affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.pdf>
+Package pdftex.def Info: affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph.
+pdf  used on input line 483.
+(pdftex.def)             Requested size: 350.0pt x 239.08614pt.
+ <./affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf>
+<affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf, id=14946, 279.0425
+pt x 105.39375pt>
+File: affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph
+.pdf  used on input line 491.
+(pdftex.def)             Requested size: 278.0pt x 105.00269pt.
+[162] <./affichage_8c_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf>
+<affichage_8c_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf, id=14972, 261.9787
+4pt x 105.39375pt>
+File: affichage_8c_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a3d37afe9287430123b96a943a23ea26e_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a3d37afe9287430123b96a943a23ea26e_icgraph
+.pdf  used on input line 523.
+(pdftex.def)             Requested size: 261.0pt x 105.00269pt.
+[163] <./affichage_8c_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf>
+<affichage_8c_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf, id=15015, 322.2037
+5pt x 105.39375pt>
+File: affichage_8c_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_ab4a51dce181769925f8e3d8e268e6a61_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_ab4a51dce181769925f8e3d8e268e6a61_icgraph
+.pdf  used on input line 586.
+(pdftex.def)             Requested size: 321.0pt x 105.00429pt.
+[164] <./affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf>
+<affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf, id=15091, 363.3575
+pt x 105.39375pt>
+File: affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6_icgraph
+.pdf  used on input line 689.
+(pdftex.def)             Requested size: 350.0pt x 101.52258pt.
+[165]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 725.
+
+ <./affichage_8c_a5056814c53d4eec079dec720b21324a5_cgraph.pdf>
+<affichage_8c_a5056814c53d4eec079dec720b21324a5_cgraph.pdf, id=15234, 431.6125p
+t x 321.2pt>
+File: affichage_8c_a5056814c53d4eec079dec720b21324a5_cgraph.pdf Graphic file (t
+ype pdf)
+<use affichage_8c_a5056814c53d4eec079dec720b21324a5_cgraph.pdf>
+Package pdftex.def Info: affichage_8c_a5056814c53d4eec079dec720b21324a5_cgraph.
+pdf  used on input line 772.
+(pdftex.def)             Requested size: 350.0pt x 260.47444pt.
+[166] <./affichage_8c_a5056814c53d4eec079dec720b21324a5_icgraph.pdf>
+<affichage_8c_a5056814c53d4eec079dec720b21324a5_icgraph.pdf, id=15246, 241.9037
+5pt x 105.39375pt>
+File: affichage_8c_a5056814c53d4eec079dec720b21324a5_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a5056814c53d4eec079dec720b21324a5_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a5056814c53d4eec079dec720b21324a5_icgraph
+.pdf  used on input line 780.
+(pdftex.def)             Requested size: 241.0pt x 105.00429pt.
+[167] <./affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf>
+<affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf, id=15329, 377.41pt
+ x 105.39375pt>
+File: affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph
+.pdf  used on input line 843.
+(pdftex.def)             Requested size: 350.0pt x 97.73856pt.
+[168] <./affichage_8c_a9662fd89470ff912257e700f3014cabb_icgraph.pdf>
+<affichage_8c_a9662fd89470ff912257e700f3014cabb_icgraph.pdf, id=15353, 321.2pt 
+x 105.39375pt>
+File: affichage_8c_a9662fd89470ff912257e700f3014cabb_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a9662fd89470ff912257e700f3014cabb_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a9662fd89470ff912257e700f3014cabb_icgraph
+.pdf  used on input line 891.
+(pdftex.def)             Requested size: 320.0pt x 105.00269pt.
+ <./affichage_8c_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf>
+<affichage_8c_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf, id=15387, 255.9562
+5pt x 105.39375pt>
+File: affichage_8c_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a416f9b7333b0226e5cab25214be7ec33_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a416f9b7333b0226e5cab25214be7ec33_icgraph
+.pdf  used on input line 950.
+(pdftex.def)             Requested size: 255.0pt x 104.99947pt.
+[169] <./affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf>
+<affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf, id=15413, 394.4737
+5pt x 105.39375pt>
+File: affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb_icgraph
+.pdf  used on input line 989.
+(pdftex.def)             Requested size: 350.0pt x 93.51225pt.
+[170] <./affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf>
+<affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf, id=15442, 301.125p
+t x 105.39375pt>
+File: affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph
+.pdf  used on input line 1036.
+(pdftex.def)             Requested size: 300.0pt x 105.00911pt.
+ <./affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf>
+<affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf, id=15462, 266.9975
+pt x 105.39375pt>
+File: affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013_icgraph
+.pdf  used on input line 1068.
+(pdftex.def)             Requested size: 266.0pt x 105.01073pt.
+[171] <./affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc_icgraph.pdf>
+<affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc_icgraph.pdf, id=15482, 489.83pt
+ x 105.39375pt>
+File: affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc_icgraph
+.pdf  used on input line 1099.
+(pdftex.def)             Requested size: 350.0pt x 75.30931pt.
+ <./affichage_8c_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf>
+<affichage_8c_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf, id=15496, 280.0462
+5pt x 105.39375pt>
+File: affichage_8c_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf Graphic file (
+type pdf)
+<use affichage_8c_a8a136500425935baff6b4aefc3d7ba80_icgraph.pdf>
+Package pdftex.def Info: affichage_8c_a8a136500425935baff6b4aefc3d7ba80_icgraph
+.pdf  used on input line 1124.
+(pdftex.def)             Requested size: 279.0pt x 105.00429pt.
+[172] [173] [174]) (affichage_8c_source.tex
+
+! LaTeX Error: Unicode character  (U+0089)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...ment}{/*\ Ãtat\ animation\ joueur\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[175] [176] [177] [178] [179]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 401.
+
+[180]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.497 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.497 ...nu.c\ â\ on\ la\ recharge\ ici\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[181] [182]) (_c_make_c_compiler_id_8c.tex [183] [184] [185] [186]) (_c_make_c_
+compiler_id_8c_source.tex [187] [188] [189] [190] [191] [192] [193] [194] [195]
+[196] [197]) (eclair_8c.tex <./eclair_8c__incl.pdf>
+<eclair_8c__incl.pdf, id=18328, 250.9375pt x 226.8475pt>
+File: eclair_8c__incl.pdf Graphic file (type pdf)
+<use eclair_8c__incl.pdf>
+Package pdftex.def Info: eclair_8c__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 250.0pt x 226.01273pt.
+[198] <./eclair_8c_a693961ccc3b568ea454db1853e64393b_icgraph.pdf>
+<eclair_8c_a693961ccc3b568ea454db1853e64393b_icgraph.pdf, id=18429, 380.42125pt
+ x 105.39375pt>
+File: eclair_8c_a693961ccc3b568ea454db1853e64393b_icgraph.pdf Graphic file (typ
+e pdf)
+<use eclair_8c_a693961ccc3b568ea454db1853e64393b_icgraph.pdf>
+Package pdftex.def Info: eclair_8c_a693961ccc3b568ea454db1853e64393b_icgraph.pd
+f  used on input line 69.
+(pdftex.def)             Requested size: 350.0pt x 96.96823pt.
+[199] <./eclair_8c_a94d73eb8a889534102b2442ed022db13_icgraph.pdf>
+<eclair_8c_a94d73eb8a889534102b2442ed022db13_icgraph.pdf, id=18488, 410.53375pt
+ x 105.39375pt>
+File: eclair_8c_a94d73eb8a889534102b2442ed022db13_icgraph.pdf Graphic file (typ
+e pdf)
+<use eclair_8c_a94d73eb8a889534102b2442ed022db13_icgraph.pdf>
+Package pdftex.def Info: eclair_8c_a94d73eb8a889534102b2442ed022db13_icgraph.pd
+f  used on input line 105.
+(pdftex.def)             Requested size: 350.0pt x 89.85205pt.
+[200] <./eclair_8c_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf>
+<eclair_8c_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf, id=18525, 485.815pt x
+ 105.39375pt>
+File: eclair_8c_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf Graphic file (typ
+e pdf)
+<use eclair_8c_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pdf>
+Package pdftex.def Info: eclair_8c_a015f8251e73ed40f9236a4eabc7f037b_icgraph.pd
+f  used on input line 144.
+(pdftex.def)             Requested size: 350.0pt x 75.92845pt.
+ <./eclair_8c_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf>
+<eclair_8c_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf, id=18543, 373.395pt x
+ 105.39375pt>
+File: eclair_8c_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf Graphic file (typ
+e pdf)
+<use eclair_8c_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pdf>
+Package pdftex.def Info: eclair_8c_a4dcdbb9f937d5a1b7c8fe252e7c04686_icgraph.pd
+f  used on input line 170.
+(pdftex.def)             Requested size: 350.0pt x 98.79512pt.
+[201] <./eclair_8c_a41927b1d41e1bda12297701119910c62_icgraph.pdf>
+<eclair_8c_a41927b1d41e1bda12297701119910c62_icgraph.pdf, id=18593, 447.6725pt 
+x 105.39375pt>
+File: eclair_8c_a41927b1d41e1bda12297701119910c62_icgraph.pdf Graphic file (typ
+e pdf)
+<use eclair_8c_a41927b1d41e1bda12297701119910c62_icgraph.pdf>
+Package pdftex.def Info: eclair_8c_a41927b1d41e1bda12297701119910c62_icgraph.pd
+f  used on input line 204.
+(pdftex.def)             Requested size: 350.0pt x 82.40137pt.
+) (eclair_8c_source.tex [202]) (entrees_8c.tex <./entrees_8c__incl.pdf>
+<entrees_8c__incl.pdf, id=18770, 226.8475pt x 165.61874pt>
+File: entrees_8c__incl.pdf Graphic file (type pdf)
+<use entrees_8c__incl.pdf>
+Package pdftex.def Info: entrees_8c__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 226.0pt x 165.00171pt.
+[203] <./entrees_8c_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf>
+<entrees_8c_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf, id=18844, 239.89626p
+t x 105.39375pt>
+File: entrees_8c_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf Graphic file (ty
+pe pdf)
+<use entrees_8c_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.pdf>
+Package pdftex.def Info: entrees_8c_abc687d8db5c36a1f566b70e48d7a1e4f_icgraph.p
+df  used on input line 55.
+(pdftex.def)             Requested size: 239.0pt x 105.00107pt.
+) (entrees_8c_source.tex) (jeu_8c.tex <./jeu_8c__incl.pdf>
+<jeu_8c__incl.pdf, id=18874, 442.65375pt x 287.0725pt>
+File: jeu_8c__incl.pdf Graphic file (type pdf)
+<use jeu_8c__incl.pdf>
+Package pdftex.def Info: jeu_8c__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 226.99504pt.
+[204] [205] <./jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf>
+<jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf, id=18993, 405.515pt x 10
+5.39375pt>
+File: jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.pdf  
+used on input line 76.
+(pdftex.def)             Requested size: 350.0pt x 90.96812pt.
+ <./jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf>
+<jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf, id=19055, 293.095pt x 105
+.39375pt>
+File: jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf Graphic file (type pd
+f)
+<use jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf>
+Package pdftex.def Info: jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph.pdf  u
+sed on input line 112.
+(pdftex.def)             Requested size: 292.0pt x 104.99947pt.
+ <./jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf>
+<jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf, id=19063, 408.52625pt x 
+105.39375pt>
+File: jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph.pdf  
+used on input line 120.
+(pdftex.def)             Requested size: 350.0pt x 90.29912pt.
+[206] <./jeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph.pdf>
+<jeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph.pdf, id=19176, 341.275pt x 10
+5.39375pt>
+File: jeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph.pdf  
+used on input line 180.
+(pdftex.def)             Requested size: 340.0pt x 105.0059pt.
+[207]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 204.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 219.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 230.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 231.
+
+ <./jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf>
+<jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf, id=19316, 293.095pt x 105
+.39375pt>
+File: jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf Graphic file (type pd
+f)
+<use jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf>
+Package pdftex.def Info: jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.pdf  u
+sed on input line 249.
+(pdftex.def)             Requested size: 292.0pt x 104.99947pt.
+ <./jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf>
+<jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf, id=19324, 260.975pt x 10
+5.39375pt>
+File: jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.pdf  
+used on input line 257.
+(pdftex.def)             Requested size: 260.0pt x 105.00107pt.
+[208]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 ...4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 ...4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[209] <./jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf>
+<jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf, id=19682, 528.97626pt x 3
+21.2pt>
+File: jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf Graphic file (type pd
+f)
+<use jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf>
+Package pdftex.def Info: jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph.pdf  u
+sed on input line 415.
+(pdftex.def)             Requested size: 350.0pt x 212.52197pt.
+[210] <./jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf>
+<jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf, id=19694, 277.035pt x 10
+5.39375pt>
+File: jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph.pdf  
+used on input line 423.
+(pdftex.def)             Requested size: 276.0pt x 105.00107pt.
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.445 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.445 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+ <./jeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf>
+<jeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf, id=19730, 275.0275pt x 1
+05.39375pt>
+File: jeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph.pdf  
+used on input line 461.
+(pdftex.def)             Requested size: 274.0pt x 105.00911pt.
+[211] <./jeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf>
+<jeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf, id=19757, 274.02374pt x 
+105.39375pt>
+File: jeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph.pdf  
+used on input line 486.
+(pdftex.def)             Requested size: 273.0pt x 105.0075pt.
+[212] <./jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf>
+<jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf, id=19930, 341.275pt x 148
+.555pt>
+File: jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf Graphic file (type pd
+f)
+<use jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf>
+Package pdftex.def Info: jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.pdf  u
+sed on input line 577.
+(pdftex.def)             Requested size: 340.0pt x 148.00833pt.
+ <./jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf>
+<jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf, id=19938, 450.68375pt x 
+105.39375pt>
+File: jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.pdf  
+used on input line 585.
+(pdftex.def)             Requested size: 350.0pt x 81.85298pt.
+[213]
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.658 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.658 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[214] <./jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf>
+<jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf, id=20139, 240.9pt x 105.
+39375pt>
+File: jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.pdf  
+used on input line 681.
+(pdftex.def)             Requested size: 240.0pt x 105.00269pt.
+ <./jeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf>
+<jeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf, id=20161, 335.2525pt x 1
+91.71625pt>
+File: jeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf Graphic file (type p
+df)
+<use jeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf>
+Package pdftex.def Info: jeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph.pdf  
+used on input line 712.
+(pdftex.def)             Requested size: 334.0pt x 190.99905pt.
+[215]) (jeu_8c_source.tex
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 31.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 46.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 57.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 58.
+
+[216]
+
+! LaTeX Error: Unicode character  (U+0080)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 ... 4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0094)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 ... 4\ â\ condition\ sÃ©parÃ©e\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 ...r{comment}{/*\ â\ disparaÃ®t\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[217] [218] [219]
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.390 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.390 ...nt}{/*\ â\ AJOUTE\ CE\ BLOCAGE\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[220]
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 ...nt}{/*\ â\ pas\ encore\ apparu\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0086)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0090)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...comment}{/*\ â\ encore\ vivant\ */}}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+) (main_8c.tex <./main_8c__incl.pdf>
+<main_8c__incl.pdf, id=21644, 618.31pt x 408.52625pt>
+File: main_8c__incl.pdf Graphic file (type pdf)
+<use main_8c__incl.pdf>
+Package pdftex.def Info: main_8c__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 231.2541pt.
+[221] [222] <./main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph.pdf>
+<main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph.pdf, id=21793, 228.855pt x 1
+05.39375pt>
+File: main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph.pdf Graphic file (type 
+pdf)
+<use main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph.pdf>
+Package pdftex.def Info: main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph.pdf 
+ used on input line 193.
+(pdftex.def)             Requested size: 228.0pt x 105.00429pt.
+[223] [224] [225] [226] <./main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.pdf
+>
+<main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.pdf, id=22079, 664.4825pt x 1
+270.7475pt>
+File: main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.pdf Graphic file (type p
+df)
+<use main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.pdf>
+Package pdftex.def Info: main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.pdf  
+used on input line 480.
+(pdftex.def)             Requested size: 287.60779pt x 550.0pt.
+[227]) (main_8c_source.tex [228] [229] [230] [231]) (menu_8c.tex <./menu_8c__in
+cl.pdf>
+<menu_8c__incl.pdf, id=22683, 572.1375pt x 408.52625pt>
+File: menu_8c__incl.pdf Graphic file (type pdf)
+<use menu_8c__incl.pdf>
+Package pdftex.def Info: menu_8c__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 249.91127pt.
+[232] [233]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 152.
+
+[234] <./menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf>
+<menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf, id=22887, 344.28625pt x 
+207.77625pt>
+File: menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf Graphic file (type p
+df)
+<use menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf>
+Package pdftex.def Info: menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.pdf  
+used on input line 203.
+(pdftex.def)             Requested size: 343.0pt x 207.00214pt.
+ <./menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf>
+<menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf, id=22895, 255.95625pt x
+ 105.39375pt>
+File: menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf Graphic file (type 
+pdf)
+<use menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf>
+Package pdftex.def Info: menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.pdf 
+ used on input line 211.
+(pdftex.def)             Requested size: 255.0pt x 104.99947pt.
+[235]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 240.
+
+ <./menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf>
+<menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf, id=22942, 346.29375pt x 
+207.77625pt>
+File: menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf Graphic file (type p
+df)
+<use menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf>
+Package pdftex.def Info: menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph.pdf  
+used on input line 312.
+(pdftex.def)             Requested size: 345.0pt x 207.00531pt.
+[236] <./menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf>
+<menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf, id=22954, 257.96375pt x
+ 105.39375pt>
+File: menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf Graphic file (type 
+pdf)
+<use menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf>
+Package pdftex.def Info: menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph.pdf 
+ used on input line 320.
+(pdftex.def)             Requested size: 257.0pt x 105.00911pt.
+ <./menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf>
+<menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf, id=23018, 314.17375pt x 
+148.555pt>
+File: menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf Graphic file (type p
+df)
+<use menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf>
+Package pdftex.def Info: menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.pdf  
+used on input line 358.
+(pdftex.def)             Requested size: 313.0pt x 148.00606pt.
+[237] <./menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf>
+<menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf, id=23034, 231.86626pt x
+ 105.39375pt>
+File: menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf Graphic file (type 
+pdf)
+<use menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf>
+Package pdftex.def Info: menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.pdf 
+ used on input line 366.
+(pdftex.def)             Requested size: 231.0pt x 105.00269pt.
+[238] <./menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf>
+<menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf, id=23083, 291.0875pt x 
+105.39375pt>
+File: menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf Graphic file (type 
+pdf)
+<use menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf>
+Package pdftex.def Info: menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph.pdf 
+ used on input line 422.
+(pdftex.def)             Requested size: 290.0pt x 105.0075pt.
+[239]) (menu_8c_source.tex [240] [241] [242]
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 186.
+
+
+Package textcomp Warning: Symbol \textasciidieresis not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 245.
+
+[243]) (sauvegarde_8c.tex <./sauvegarde_8c__incl.pdf>
+<sauvegarde_8c__incl.pdf, id=23695, 407.5225pt x 287.0725pt>
+File: sauvegarde_8c__incl.pdf Graphic file (type pdf)
+<use sauvegarde_8c__incl.pdf>
+Package pdftex.def Info: sauvegarde_8c__incl.pdf  used on input line 12.
+(pdftex.def)             Requested size: 350.0pt x 246.56215pt.
+[244] [245] <./sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph.pdf>
+<sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph.pdf, id=23808, 395.477
+5pt x 191.71625pt>
+File: sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph.pdf Graphic file 
+(type pdf)
+<use sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgrap
+h.pdf  used on input line 87.
+(pdftex.def)             Requested size: 350.0pt x 169.67325pt.
+ <./sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf>
+<sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf, id=23838, 314.1737
+5pt x 105.39375pt>
+File: sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf Graphic file (
+type pdf)
+<use sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph
+.pdf  used on input line 117.
+(pdftex.def)             Requested size: 313.0pt x 105.00429pt.
+[246] <./sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf>
+<sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf, id=23855, 275.027
+5pt x 105.39375pt>
+File: sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf Graphic file 
+(type pdf)
+<use sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgrap
+h.pdf  used on input line 125.
+(pdftex.def)             Requested size: 274.0pt x 105.00911pt.
+ <./sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf>
+<sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf, id=23869, 315.1775
+pt x 105.39375pt>
+File: sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf Graphic file (
+type pdf)
+<use sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph
+.pdf  used on input line 155.
+(pdftex.def)             Requested size: 314.0pt x 105.0059pt.
+[247] <./sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf>
+<sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf, id=23911, 301.125p
+t x 105.39375pt>
+File: sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf Graphic file (
+type pdf)
+<use sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph
+.pdf  used on input line 193.
+(pdftex.def)             Requested size: 300.0pt x 105.00911pt.
+ <./sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf>
+<sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf, id=23919, 261.978
+74pt x 105.39375pt>
+File: sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf Graphic file 
+(type pdf)
+<use sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgrap
+h.pdf  used on input line 201.
+(pdftex.def)             Requested size: 261.0pt x 105.00269pt.
+[248] <./sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf>
+<sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf, id=23940, 271.012
+5pt x 105.39375pt>
+File: sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf Graphic file 
+(type pdf)
+<use sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph.pdf>
+Package pdftex.def Info: sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgrap
+h.pdf  used on input line 251.
+(pdftex.def)             Requested size: 270.0pt x 105.00429pt.
+) (sauvegarde_8c_source.tex [249]) [250] (refman.ind
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 22.39185pt on input line 1.
+[251
+
+
+
+] [252] [253] [254] [255] [256]
+Overfull \hbox (28.22153pt too wide) in paragraph at lines 848--850
+[]\T1/phv/m/n/10 R�pertoire de r�-f�-rence de src/cmake-build-debug/CMakeFiles,
+
+ []
+
+
+Overfull \hbox (50.73892pt too wide) in paragraph at lines 850--852
+[]\T1/phv/m/n/10 R�pertoire de r�-f�-rence de src/cmake-build-debug/CMakeFiles/
+4.2.2,
+ []
+
+
+Overfull \hbox (103.24393pt too wide) in paragraph at lines 852--854
+[]\T1/phv/m/n/10 R�pertoire de r�-f�-rence de src/cmake-build-debug/CMakeFiles/
+4.2.2/CompilerIdC,
+ []
+
+[257]
+Overfull \hbox (83.03958pt too wide) in paragraph at lines 928--930
+[]\T1/phv/m/n/10 src/cmake-build-debug/CMakeFiles/4.2.2/CompilerIdC/CMakeCCompi
+lerId.c,
+ []
+
+[258] [259
+
+]) (refman.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: FE87C0956012BE40E79D52A257DDCF98;120765.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 30588 strings out of 467691
+ 685762 string characters out of 5414988
+ 1015769 words of memory out of 5000000
+ 53898 multiletter control sequences out of 15000+600000
+ 670982 words of font info for 103 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 103i,16n,117p,1505b,1230s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\flori\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\tctt
+0800.pk><C:/Users/flori/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/Users/flori/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb><C:/Users/flori/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/flori/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/flori/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/flori/AppData/Local
+/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/flori/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/flori/AppData/
+Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/flori/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on refman.pdf (275 pages, 6376880 bytes).
+PDF statistics:
+ 26176 PDF objects out of 26593 (max. 8388607)
+ 5219 named destinations out of 6186 (max. 500000)
+ 5305 words of extra memory for PDF output out of 10000 (max. 10000000)
+

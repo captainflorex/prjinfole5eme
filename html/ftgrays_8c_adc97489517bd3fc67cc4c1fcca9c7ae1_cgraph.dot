@@ -1,0 +1,11 @@
+digraph "gray_raster_reset"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="gray_raster_reset",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gray_init_cells",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgrays_8c.html#acca1179c2cffd6b20f2de52918e3f34a",tooltip=" "];
+}

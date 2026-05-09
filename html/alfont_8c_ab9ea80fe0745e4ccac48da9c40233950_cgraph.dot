@@ -1,0 +1,38 @@
+digraph "alfont_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="alfont_init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Init_FreeType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftinit_8c.html#af93e2afa8ab5ba5675ae8d67b84df079",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_Add_Default_Modules",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftinit_8c.html#a7f6a6ac2b28809bbf966b2c901fa906c",tooltip=" "];
+  Node3 -> Node3 [id="edge3_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_Add_Module",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a537c6119249420ea935f0e61cbee5079",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node2 [id="edge6_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node27 [id="edge7_Node000002_Node000027",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="FT_New_Library",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a7bee32bd20d4e35dd5a87a169f76fc82",tooltip=" "];
+  Node27 -> Node28 [id="edge8_Node000027_Node000028",color="steelblue1",style="solid",tooltip=" "];
+  Node28 [id="Node000028",label="ft_debug_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$src_2base_2ftdebug_8c.html#ac3debabea06dc9fd9c6997342d234eee",tooltip=" "];
+  Node28 -> Node28 [id="edge9_Node000028_Node000028",color="steelblue1",style="solid",tooltip=" "];
+  Node27 -> Node27 [id="edge10_Node000027_Node000027",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node29 [id="edge11_Node000002_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="FT_New_Memory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a3ee8ecceb93e5ba4106a00f778f11609",tooltip=" "];
+  Node29 -> Node30 [id="edge12_Node000029_Node000030",color="steelblue1",style="solid",tooltip=" "];
+  Node30 [id="Node000030",label="AsmCreatePool",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a8b7d0c6bf3ebafe9b31ff2de7e04d108",tooltip=" "];
+  Node29 -> Node31 [id="edge13_Node000029_Node000031",color="steelblue1",style="solid",tooltip=" "];
+  Node31 [id="Node000031",label="ft_alloc",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a5f58c8d044a0bc495871558594c133ef",tooltip=" "];
+  Node31 -> Node31 [id="edge14_Node000031_Node000031",color="steelblue1",style="solid",tooltip=" "];
+  Node29 -> Node34 [id="edge15_Node000029_Node000034",color="steelblue1",style="solid",tooltip=" "];
+  Node34 [id="Node000034",label="ft_free",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a5905713c59cb5faa989548ca0016e6ba",tooltip=" "];
+  Node34 -> Node34 [id="edge16_Node000034_Node000034",color="steelblue1",style="solid",tooltip=" "];
+  Node29 -> Node29 [id="edge17_Node000029_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 -> Node37 [id="edge18_Node000029_Node000037",color="steelblue1",style="solid",tooltip=" "];
+  Node37 [id="Node000037",label="ft_realloc",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$builds_2amiga_2src_2base_2ftsystem_8c.html#a3118a9054785c3bb1d7c4261b240d623",tooltip=" "];
+  Node37 -> Node37 [id="edge19_Node000037_Node000037",color="steelblue1",style="solid",tooltip=" "];
+}

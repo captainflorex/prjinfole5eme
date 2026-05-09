@@ -1,0 +1,38 @@
+digraph "FT_Stream_Close"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="FT_Stream_Close",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ft_input_stream_free",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a37900af0fd3360c2bff7eb93e7606a30",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="destroy_face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a126576c1e9c9e19fd7fd29eee6a3d47d",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Destroy_Driver",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a59a7661c2e189f019982eb38d8b7136d",tooltip=" "];
+  Node2 -> Node17 [id="edge4_Node000002_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="FT_Attach_Stream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#aced0db97521cb20e44bed22d03ea4b6b",tooltip=" "];
+  Node17 -> Node18 [id="edge5_Node000017_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="FT_Attach_File",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#ae97b04528da5fc081e0ce9be40c5b036",tooltip=" "];
+  Node18 -> Node18 [id="edge6_Node000018_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node17 [id="edge7_Node000017_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node19 [id="edge8_Node000002_Node000019",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="FT_Open_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a3bdf12232d495ca7d4d40f47b4bc157c",tooltip=" "];
+  Node19 -> Node20 [id="edge9_Node000019_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="FT_New_Face",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a549a19bbea568f3a6d60207f1b787070",tooltip=" "];
+  Node20 -> Node20 [id="edge10_Node000020_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node20 [id="edge11_Node000020_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node20 [id="edge12_Node000019_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node24 [id="edge13_Node000019_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="FT_New_Memory_Face",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#ae9bce7676556ee5611ecbaf370023a86",tooltip=" "];
+  Node24 -> Node24 [id="edge14_Node000024_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node19 [id="edge15_Node000019_Node000019",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node27 [id="edge16_Node000019_Node000027",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="open_face_from_buffer",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#ab966e870e9df99a387b5e915c7d93693",tooltip=" "];
+  Node1 -> Node1 [id="edge17_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node32 [id="edge18_Node000001_Node000032",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node32 [id="Node000032",label="PCF_Face_Done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfdriver_8c.html#aafd0720036c62fac62bc6f3a2b175a0c",tooltip=" "];
+  Node32 -> Node32 [id="edge19_Node000032_Node000032",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

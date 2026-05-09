@@ -1,0 +1,58 @@
+digraph "ftc_sbit_node_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="ftc_sbit_node_init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ftc_glyph_node_done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcglyph_8c.html#a35dc6dce8231c98d9643583b2510686b",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ftc_node_done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftccache_8c.html#a74516f61eef430ec9c782a308f452e2c",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_LruList_Remove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftlru_8c.html#a03de6a1a6726221414b571462b07706c",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node3 [id="edge6_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge7_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ftc_glyph_node_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcglyph_8c.html#a4c7c1259bcbf6c7d172b493ef5989a38",tooltip=" "];
+  Node5 -> Node5 [id="edge8_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge9_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge10_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ftc_sbit_node_load",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcsbits_8c.html#ab01bcbe8fabb0ab23da22f97c23e02ca",tooltip=" "];
+  Node6 -> Node7 [id="edge11_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_Load_Glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a01806ddba7989d0ad132e3318301e72d",tooltip=" "];
+  Node7 -> Node8 [id="edge12_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="ft_glyphslot_clear",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a24f6b28dae62ce7050967b4b8dec77b4",tooltip=" "];
+  Node7 -> Node7 [id="edge13_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node9 [id="edge14_Node000007_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="ft_lookup_glyph_renderer",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a47574eb59d73e20f7905cb0c34ce42f3",tooltip=" "];
+  Node7 -> Node11 [id="edge15_Node000007_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="FT_MulDiv",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftcalc_8c.html#ae31c0f444ce1bba445af776b86beaa60",tooltip=" "];
+  Node11 -> Node11 [id="edge16_Node000011_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node15 [id="edge17_Node000007_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="FT_Outline_Check",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftoutln_8c.html#a163a3f538ff84fb340c799ccfbade5e3",tooltip=" "];
+  Node15 -> Node15 [id="edge18_Node000015_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node16 [id="edge19_Node000007_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="FT_Render_Glyph",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#ab463acb65581abb6dd4a70a33b5f435f",tooltip=" "];
+  Node16 -> Node16 [id="edge20_Node000016_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node18 [id="edge21_Node000007_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="FT_Vector_Transform",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftoutln_8c.html#a0f3672661d6ae5398aee1f16476aa475",tooltip=" "];
+  Node18 -> Node18 [id="edge22_Node000018_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node20 [id="edge23_Node000006_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="FTC_Manager_Lookup_Size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcmanag_8c.html#a94de5a508e8599cd87698f65d2bd27f8",tooltip=" "];
+  Node20 -> Node21 [id="edge24_Node000020_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="FT_Activate_Size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a64b78b9733d559cd38d3db1ad91ae14d",tooltip=" "];
+  Node21 -> Node21 [id="edge25_Node000021_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node22 [id="edge26_Node000020_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node22 [id="Node000022",label="FT_LruList_Lookup",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftlru_8c.html#a447e3f7cb6ce2399bf47fab91c5022ee",tooltip=" "];
+  Node22 -> Node22 [id="edge27_Node000022_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node23 [id="edge28_Node000020_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="FTC_Manager_Lookup_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcmanag_8c.html#a4e3e4336009353906dece81c0c9cf98e",tooltip=" "];
+  Node23 -> Node22 [id="edge29_Node000023_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node23 -> Node23 [id="edge30_Node000023_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node20 -> Node20 [id="edge31_Node000020_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node24 [id="edge32_Node000006_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="ftc_sbit_copy_bitmap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcsbits_8c.html#ab44c1a1e41bfe9fe5a1a3ead0f12aab9",tooltip=" "];
+}

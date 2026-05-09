@@ -1,0 +1,1244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pshinter/pshalgo3.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pshalgo3_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier pshalgo3.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="pshalgo3_8h_source.html">pshalgo3.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de pshalgo3.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pshinter_2pshalgo3_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pshinter_2pshalgo3_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="pshalgo3_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_pshalgo2</td></tr>
+<tr class="memitem:a138b8f90db477181975efea4b0163c7a" id="r_a138b8f90db477181975efea4b0163c7a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a138b8f90db477181975efea4b0163c7a">COMPUTE_INFLEXS</a>&#160;&#160;&#160;/* compute inflection points to optimize &quot;S&quot; and others */</td></tr>
+<tr class="memitem:ad18264a730263e6d1ac5932a748c3bff" id="r_ad18264a730263e6d1ac5932a748c3bff"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad18264a730263e6d1ac5932a748c3bff">STRONGER</a>&#160;&#160;&#160;/* slightly increase the contrast of smooth hinting */</td></tr>
+<tr class="memitem:a786072a660dce313981db16f5396cf61" id="r_a786072a660dce313981db16f5396cf61"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a786072a660dce313981db16f5396cf61">PSH3_ZONE_MIN</a>&#160;&#160;&#160;-3200000L</td></tr>
+<tr class="memitem:ae30725cb159b1239ca52a49430b1dfde" id="r_ae30725cb159b1239ca52a49430b1dfde"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae30725cb159b1239ca52a49430b1dfde">PSH3_ZONE_MAX</a>&#160;&#160;&#160;+3200000L</td></tr>
+<tr class="memitem:acafc0ef4600c8f44877d36412a988b83" id="r_acafc0ef4600c8f44877d36412a988b83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acafc0ef4600c8f44877d36412a988b83">xxDEBUG_ZONES</a></td></tr>
+<tr class="memitem:a29fd94b81eee7b702c3789bf6377022a" id="r_a29fd94b81eee7b702c3789bf6377022a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a29fd94b81eee7b702c3789bf6377022a">psh3_print_zone</a>(x)</td></tr>
+<tr class="memitem:a4c9ad08c0806dfd3238351c81a0af138" id="r_a4c9ad08c0806dfd3238351c81a0af138"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4c9ad08c0806dfd3238351c81a0af138">PSH3_STRONG_THRESHOLD</a>&#160;&#160;&#160;30</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ac2ddc833fc99b0b1bdf98d1025825e63" id="r_ac2ddc833fc99b0b1bdf98d1025825e63"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac2ddc833fc99b0b1bdf98d1025825e63">psh3_hint_overlap</a> (<a class="el" href="pshalgo3_8h.html#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a> hint1, <a class="el" href="pshalgo3_8h.html#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a> hint2)</td></tr>
+<tr class="memitem:a4ae6e90eba1e766660dfa7323bdd8ee1" id="r_a4ae6e90eba1e766660dfa7323bdd8ee1"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4ae6e90eba1e766660dfa7323bdd8ee1">psh3_hint_table_done</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:a03d633788b3e5cbce6c19e7cbf70a03b" id="r_a03d633788b3e5cbce6c19e7cbf70a03b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a03d633788b3e5cbce6c19e7cbf70a03b">psh3_hint_table_deactivate</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table)</td></tr>
+<tr class="memitem:a12371480183ed8e2dd628245815e8333" id="r_a12371480183ed8e2dd628245815e8333"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a12371480183ed8e2dd628245815e8333">psh3_hint_table_record</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> idx)</td></tr>
+<tr class="memitem:a9a0dbb7d700b66fc27b216f6fd7f1200" id="r_a9a0dbb7d700b66fc27b216f6fd7f1200"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9a0dbb7d700b66fc27b216f6fd7f1200">psh3_hint_table_record_mask</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="pshrec_8h.html#ac6a9fe3257f3d0d0a00dd3c4a106323c">PS_Mask</a> hint_mask)</td></tr>
+<tr class="memitem:a40acbe6aa5d6120bc109c1d75070851b" id="r_a40acbe6aa5d6120bc109c1d75070851b"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a40acbe6aa5d6120bc109c1d75070851b">psh3_hint_table_init</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="pshrec_8h.html#aa80949735ca10f17ec4e8a3005c5ed8c">PS_Hint_Table</a> hints, <a class="el" href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a> hint_masks, <a class="el" href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a> counter_masks, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:ab068f9bebb8c148eb21f1b0a67dd0992" id="r_ab068f9bebb8c148eb21f1b0a67dd0992"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab068f9bebb8c148eb21f1b0a67dd0992">psh3_hint_table_activate_mask</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="pshrec_8h.html#ac6a9fe3257f3d0d0a00dd3c4a106323c">PS_Mask</a> hint_mask)</td></tr>
+<tr class="memitem:a14ec8f194722b762e3a90a06ba19db77" id="r_a14ec8f194722b762e3a90a06ba19db77"><td class="memItemLeft">static <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>&#160;</td><td class="memItemRight"><a class="el" href="#a14ec8f194722b762e3a90a06ba19db77">psh3_dimension_quantize_len</a> (<a class="el" href="pshglob_8h.html#ac5d671c87f3ef05a1dd8b7c91a1c0b27">PSH_Dimension</a> dim, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> <a class="el" href="zutil_8h.html#a1ad7df71d6c906bb4ad423e29335de7d">len</a>, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> do_snapping)</td></tr>
+<tr class="memitem:a5c0f1b2604b83ba268735a71a380a889" id="r_a5c0f1b2604b83ba268735a71a380a889"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5c0f1b2604b83ba268735a71a380a889">psh3_hint_snap_stem_side_delta</a> (<a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> pos, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> <a class="el" href="zutil_8h.html#a1ad7df71d6c906bb4ad423e29335de7d">len</a>)</td></tr>
+<tr class="memitem:a2e4f579ee397dbe46f02b06e74e9bd09" id="r_a2e4f579ee397dbe46f02b06e74e9bd09"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2e4f579ee397dbe46f02b06e74e9bd09">psh3_hint_align</a> (<a class="el" href="pshalgo3_8h.html#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a> hint, <a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a> globals, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension, <a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph)</td></tr>
+<tr class="memitem:a7fa4d9008ff7ff8ccff5364f0ed3af82" id="r_a7fa4d9008ff7ff8ccff5364f0ed3af82"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7fa4d9008ff7ff8ccff5364f0ed3af82">psh3_hint_table_align_hints</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a> globals, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension, <a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph)</td></tr>
+<tr class="memitem:a359ae49053ff9895d5896679c214c2a1" id="r_a359ae49053ff9895d5896679c214c2a1"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a359ae49053ff9895d5896679c214c2a1">psh3_glyph_compute_inflections</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph)</td></tr>
+<tr class="memitem:a62e60412bcc630bfa658ae2766ad7f39" id="r_a62e60412bcc630bfa658ae2766ad7f39"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62e60412bcc630bfa658ae2766ad7f39">psh3_glyph_done</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph)</td></tr>
+<tr class="memitem:ac0813f72490a076f787285cc7e5d8af2" id="r_ac0813f72490a076f787285cc7e5d8af2"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ac0813f72490a076f787285cc7e5d8af2">psh3_compute_dir</a> (<a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> dx, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> dy)</td></tr>
+<tr class="memitem:ae09a3f68f66322ef6fd2386fe120a9e9" id="r_ae09a3f68f66322ef6fd2386fe120a9e9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae09a3f68f66322ef6fd2386fe120a9e9">psh3_glyph_load_points</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension)</td></tr>
+<tr class="memitem:a2dc98d2027b31a0f619415f49b3d8b47" id="r_a2dc98d2027b31a0f619415f49b3d8b47"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2dc98d2027b31a0f619415f49b3d8b47">psh3_glyph_save_points</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension)</td></tr>
+<tr class="memitem:a359ac657973c8778cac34b2f5cad17d2" id="r_a359ac657973c8778cac34b2f5cad17d2"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a359ac657973c8778cac34b2f5cad17d2">psh3_glyph_init</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline, <a class="el" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a> ps_hints, <a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a> globals)</td></tr>
+<tr class="memitem:a24cc304d84014e02b929d892022e131b" id="r_a24cc304d84014e02b929d892022e131b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a24cc304d84014e02b929d892022e131b">psh3_glyph_compute_extrema</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph)</td></tr>
+<tr class="memitem:a7443c8978cb10d7fe0f4e7901582c4f9" id="r_a7443c8978cb10d7fe0f4e7901582c4f9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7443c8978cb10d7fe0f4e7901582c4f9">psh3_hint_table_find_strong_point</a> (<a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a> table, <a class="el" href="pshalgo3_8h.html#a695f291fbb421c1025f47ca61bc9fa07">PSH3_Point</a> point, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> major_dir)</td></tr>
+<tr class="memitem:a085862c1c9f46888f24b62185ebf8627" id="r_a085862c1c9f46888f24b62185ebf8627"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a085862c1c9f46888f24b62185ebf8627">psh3_glyph_find_strong_points</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension)</td></tr>
+<tr class="memitem:aea447ab0ff25409f8d3e718ed52d33bd" id="r_aea447ab0ff25409f8d3e718ed52d33bd"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aea447ab0ff25409f8d3e718ed52d33bd">psh3_glyph_interpolate_strong_points</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension)</td></tr>
+<tr class="memitem:a5a64548de11344a69984f0bacaed879d" id="r_a5a64548de11344a69984f0bacaed879d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5a64548de11344a69984f0bacaed879d">psh3_glyph_interpolate_normal_points</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension)</td></tr>
+<tr class="memitem:ae3b963a0002f0f417ec8f8bd74358ea2" id="r_ae3b963a0002f0f417ec8f8bd74358ea2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae3b963a0002f0f417ec8f8bd74358ea2">psh3_glyph_interpolate_other_points</a> (<a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> dimension)</td></tr>
+<tr class="memitem:af275dc3e5186a5322f88c768c079894a" id="r_af275dc3e5186a5322f88c768c079894a"><td class="memItemLeft"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#af275dc3e5186a5322f88c768c079894a">ps3_hints_apply</a> (<a class="el" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a> ps_hints, <a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline, <a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a> globals, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> hint_mode)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a138b8f90db477181975efea4b0163c7a" name="a138b8f90db477181975efea4b0163c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a138b8f90db477181975efea4b0163c7a">&#9670;&#160;</a></span>COMPUTE_INFLEXS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPUTE_INFLEXS&#160;&#160;&#160;/* compute inflection points to optimize &quot;S&quot; and others */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_pshalgo2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29fd94b81eee7b702c3789bf6377022a" name="a29fd94b81eee7b702c3789bf6377022a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fd94b81eee7b702c3789bf6377022a">&#9670;&#160;</a></span>psh3_print_zone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_print_zone</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { } <span class="keywordflow">while</span> ( 0 )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c9ad08c0806dfd3238351c81a0af138" name="a4c9ad08c0806dfd3238351c81a0af138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9ad08c0806dfd3238351c81a0af138">&#9670;&#160;</a></span>PSH3_STRONG_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_STRONG_THRESHOLD&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae30725cb159b1239ca52a49430b1dfde" name="ae30725cb159b1239ca52a49430b1dfde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30725cb159b1239ca52a49430b1dfde">&#9670;&#160;</a></span>PSH3_ZONE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_ZONE_MAX&#160;&#160;&#160;+3200000L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a786072a660dce313981db16f5396cf61" name="a786072a660dce313981db16f5396cf61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786072a660dce313981db16f5396cf61">&#9670;&#160;</a></span>PSH3_ZONE_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_ZONE_MIN&#160;&#160;&#160;-3200000L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad18264a730263e6d1ac5932a748c3bff" name="ad18264a730263e6d1ac5932a748c3bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad18264a730263e6d1ac5932a748c3bff">&#9670;&#160;</a></span>STRONGER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRONGER&#160;&#160;&#160;/* slightly increase the contrast of smooth hinting */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acafc0ef4600c8f44877d36412a988b83" name="acafc0ef4600c8f44877d36412a988b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafc0ef4600c8f44877d36412a988b83">&#9670;&#160;</a></span>xxDEBUG_ZONES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xxDEBUG_ZONES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="af275dc3e5186a5322f88c768c079894a" name="af275dc3e5186a5322f88c768c079894a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af275dc3e5186a5322f88c768c079894a">&#9670;&#160;</a></span>ps3_hints_apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ps3_hints_apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a></td>          <td class="paramname"><span class="paramname"><em>ps_hints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>hint_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_af275dc3e5186a5322f88c768c079894a_cgraph.png" border="0" usemap="#apshalgo3_8c_af275dc3e5186a5322f88c768c079894a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ac0813f72490a076f787285cc7e5d8af2" name="ac0813f72490a076f787285cc7e5d8af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0813f72490a076f787285cc7e5d8af2">&#9670;&#160;</a></span>psh3_compute_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int psh3_compute_dir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>dy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ac0813f72490a076f787285cc7e5d8af2_icgraph.png" border="0" usemap="#apshalgo3_8c_ac0813f72490a076f787285cc7e5d8af2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a14ec8f194722b762e3a90a06ba19db77" name="a14ec8f194722b762e3a90a06ba19db77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ec8f194722b762e3a90a06ba19db77">&#9670;&#160;</a></span>psh3_dimension_quantize_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> psh3_dimension_quantize_len </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshglob_8h.html#ac5d671c87f3ef05a1dd8b7c91a1c0b27">PSH_Dimension</a></td>          <td class="paramname"><span class="paramname"><em>dim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>do_snapping</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a14ec8f194722b762e3a90a06ba19db77_icgraph.png" border="0" usemap="#apshalgo3_8c_a14ec8f194722b762e3a90a06ba19db77_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a24cc304d84014e02b929d892022e131b" name="a24cc304d84014e02b929d892022e131b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24cc304d84014e02b929d892022e131b">&#9670;&#160;</a></span>psh3_glyph_compute_extrema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_compute_extrema </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a24cc304d84014e02b929d892022e131b_icgraph.png" border="0" usemap="#apshalgo3_8c_a24cc304d84014e02b929d892022e131b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a359ae49053ff9895d5896679c214c2a1" name="a359ae49053ff9895d5896679c214c2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359ae49053ff9895d5896679c214c2a1">&#9670;&#160;</a></span>psh3_glyph_compute_inflections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_compute_inflections </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a359ae49053ff9895d5896679c214c2a1_cgraph.png" border="0" usemap="#apshalgo3_8c_a359ae49053ff9895d5896679c214c2a1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a359ae49053ff9895d5896679c214c2a1_icgraph.png" border="0" usemap="#apshalgo3_8c_a359ae49053ff9895d5896679c214c2a1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a62e60412bcc630bfa658ae2766ad7f39" name="a62e60412bcc630bfa658ae2766ad7f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e60412bcc630bfa658ae2766ad7f39">&#9670;&#160;</a></span>psh3_glyph_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a62e60412bcc630bfa658ae2766ad7f39_cgraph.png" border="0" usemap="#apshalgo3_8c_a62e60412bcc630bfa658ae2766ad7f39_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a62e60412bcc630bfa658ae2766ad7f39_icgraph.png" border="0" usemap="#apshalgo3_8c_a62e60412bcc630bfa658ae2766ad7f39_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a085862c1c9f46888f24b62185ebf8627" name="a085862c1c9f46888f24b62185ebf8627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085862c1c9f46888f24b62185ebf8627">&#9670;&#160;</a></span>psh3_glyph_find_strong_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_find_strong_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a085862c1c9f46888f24b62185ebf8627_cgraph.png" border="0" usemap="#apshalgo3_8c_a085862c1c9f46888f24b62185ebf8627_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a085862c1c9f46888f24b62185ebf8627_icgraph.png" border="0" usemap="#apshalgo3_8c_a085862c1c9f46888f24b62185ebf8627_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a359ac657973c8778cac34b2f5cad17d2" name="a359ac657973c8778cac34b2f5cad17d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359ac657973c8778cac34b2f5cad17d2">&#9670;&#160;</a></span>psh3_glyph_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> psh3_glyph_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a></td>          <td class="paramname"><span class="paramname"><em>ps_hints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a359ac657973c8778cac34b2f5cad17d2_cgraph.png" border="0" usemap="#apshalgo3_8c_a359ac657973c8778cac34b2f5cad17d2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a359ac657973c8778cac34b2f5cad17d2_icgraph.png" border="0" usemap="#apshalgo3_8c_a359ac657973c8778cac34b2f5cad17d2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a5a64548de11344a69984f0bacaed879d" name="a5a64548de11344a69984f0bacaed879d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a64548de11344a69984f0bacaed879d">&#9670;&#160;</a></span>psh3_glyph_interpolate_normal_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_interpolate_normal_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a5a64548de11344a69984f0bacaed879d_cgraph.png" border="0" usemap="#apshalgo3_8c_a5a64548de11344a69984f0bacaed879d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a5a64548de11344a69984f0bacaed879d_icgraph.png" border="0" usemap="#apshalgo3_8c_a5a64548de11344a69984f0bacaed879d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="ae3b963a0002f0f417ec8f8bd74358ea2" name="ae3b963a0002f0f417ec8f8bd74358ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b963a0002f0f417ec8f8bd74358ea2">&#9670;&#160;</a></span>psh3_glyph_interpolate_other_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_interpolate_other_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ae3b963a0002f0f417ec8f8bd74358ea2_cgraph.png" border="0" usemap="#apshalgo3_8c_ae3b963a0002f0f417ec8f8bd74358ea2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ae3b963a0002f0f417ec8f8bd74358ea2_icgraph.png" border="0" usemap="#apshalgo3_8c_ae3b963a0002f0f417ec8f8bd74358ea2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="aea447ab0ff25409f8d3e718ed52d33bd" name="aea447ab0ff25409f8d3e718ed52d33bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea447ab0ff25409f8d3e718ed52d33bd">&#9670;&#160;</a></span>psh3_glyph_interpolate_strong_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_interpolate_strong_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_aea447ab0ff25409f8d3e718ed52d33bd_cgraph.png" border="0" usemap="#apshalgo3_8c_aea447ab0ff25409f8d3e718ed52d33bd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_aea447ab0ff25409f8d3e718ed52d33bd_icgraph.png" border="0" usemap="#apshalgo3_8c_aea447ab0ff25409f8d3e718ed52d33bd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="ae09a3f68f66322ef6fd2386fe120a9e9" name="ae09a3f68f66322ef6fd2386fe120a9e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae09a3f68f66322ef6fd2386fe120a9e9">&#9670;&#160;</a></span>psh3_glyph_load_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_load_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ae09a3f68f66322ef6fd2386fe120a9e9_icgraph.png" border="0" usemap="#apshalgo3_8c_ae09a3f68f66322ef6fd2386fe120a9e9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="a2dc98d2027b31a0f619415f49b3d8b47" name="a2dc98d2027b31a0f619415f49b3d8b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc98d2027b31a0f619415f49b3d8b47">&#9670;&#160;</a></span>psh3_glyph_save_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_glyph_save_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a2dc98d2027b31a0f619415f49b3d8b47_icgraph.png" border="0" usemap="#apshalgo3_8c_a2dc98d2027b31a0f619415f49b3d8b47_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="a2e4f579ee397dbe46f02b06e74e9bd09" name="a2e4f579ee397dbe46f02b06e74e9bd09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4f579ee397dbe46f02b06e74e9bd09">&#9670;&#160;</a></span>psh3_hint_align()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_align </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a></td>          <td class="paramname"><span class="paramname"><em>hint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a2e4f579ee397dbe46f02b06e74e9bd09_cgraph.png" border="0" usemap="#apshalgo3_8c_a2e4f579ee397dbe46f02b06e74e9bd09_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a2e4f579ee397dbe46f02b06e74e9bd09_icgraph.png" border="0" usemap="#apshalgo3_8c_a2e4f579ee397dbe46f02b06e74e9bd09_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="ac2ddc833fc99b0b1bdf98d1025825e63" name="ac2ddc833fc99b0b1bdf98d1025825e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ddc833fc99b0b1bdf98d1025825e63">&#9670;&#160;</a></span>psh3_hint_overlap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> psh3_hint_overlap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a></td>          <td class="paramname"><span class="paramname"><em>hint1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a></td>          <td class="paramname"><span class="paramname"><em>hint2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ac2ddc833fc99b0b1bdf98d1025825e63_icgraph.png" border="0" usemap="#apshalgo3_8c_ac2ddc833fc99b0b1bdf98d1025825e63_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="a5c0f1b2604b83ba268735a71a380a889" name="a5c0f1b2604b83ba268735a71a380a889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0f1b2604b83ba268735a71a380a889">&#9670;&#160;</a></span>psh3_hint_snap_stem_side_delta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> psh3_hint_snap_stem_side_delta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a5c0f1b2604b83ba268735a71a380a889_icgraph.png" border="0" usemap="#apshalgo3_8c_a5c0f1b2604b83ba268735a71a380a889_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="ab068f9bebb8c148eb21f1b0a67dd0992" name="ab068f9bebb8c148eb21f1b0a67dd0992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab068f9bebb8c148eb21f1b0a67dd0992">&#9670;&#160;</a></span>psh3_hint_table_activate_mask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_activate_mask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#ac6a9fe3257f3d0d0a00dd3c4a106323c">PS_Mask</a></td>          <td class="paramname"><span class="paramname"><em>hint_mask</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ab068f9bebb8c148eb21f1b0a67dd0992_cgraph.png" border="0" usemap="#apshalgo3_8c_ab068f9bebb8c148eb21f1b0a67dd0992_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_ab068f9bebb8c148eb21f1b0a67dd0992_icgraph.png" border="0" usemap="#apshalgo3_8c_ab068f9bebb8c148eb21f1b0a67dd0992_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a7fa4d9008ff7ff8ccff5364f0ed3af82" name="a7fa4d9008ff7ff8ccff5364f0ed3af82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa4d9008ff7ff8ccff5364f0ed3af82">&#9670;&#160;</a></span>psh3_hint_table_align_hints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_align_hints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a7fa4d9008ff7ff8ccff5364f0ed3af82_cgraph.png" border="0" usemap="#apshalgo3_8c_a7fa4d9008ff7ff8ccff5364f0ed3af82_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a7fa4d9008ff7ff8ccff5364f0ed3af82_icgraph.png" border="0" usemap="#apshalgo3_8c_a7fa4d9008ff7ff8ccff5364f0ed3af82_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a03d633788b3e5cbce6c19e7cbf70a03b" name="a03d633788b3e5cbce6c19e7cbf70a03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d633788b3e5cbce6c19e7cbf70a03b">&#9670;&#160;</a></span>psh3_hint_table_deactivate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_deactivate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a03d633788b3e5cbce6c19e7cbf70a03b_icgraph.png" border="0" usemap="#apshalgo3_8c_a03d633788b3e5cbce6c19e7cbf70a03b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="a4ae6e90eba1e766660dfa7323bdd8ee1" name="a4ae6e90eba1e766660dfa7323bdd8ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae6e90eba1e766660dfa7323bdd8ee1">&#9670;&#160;</a></span>psh3_hint_table_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a4ae6e90eba1e766660dfa7323bdd8ee1_icgraph.png" border="0" usemap="#apshalgo3_8c_a4ae6e90eba1e766660dfa7323bdd8ee1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a7443c8978cb10d7fe0f4e7901582c4f9" name="a7443c8978cb10d7fe0f4e7901582c4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7443c8978cb10d7fe0f4e7901582c4f9">&#9670;&#160;</a></span>psh3_hint_table_find_strong_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_find_strong_point </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#a695f291fbb421c1025f47ca61bc9fa07">PSH3_Point</a></td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>major_dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a7443c8978cb10d7fe0f4e7901582c4f9_icgraph.png" border="0" usemap="#apshalgo3_8c_a7443c8978cb10d7fe0f4e7901582c4f9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+
+</div>
+</div>
+<a id="a40acbe6aa5d6120bc109c1d75070851b" name="a40acbe6aa5d6120bc109c1d75070851b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40acbe6aa5d6120bc109c1d75070851b">&#9670;&#160;</a></span>psh3_hint_table_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> psh3_hint_table_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#aa80949735ca10f17ec4e8a3005c5ed8c">PS_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>hints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a></td>          <td class="paramname"><span class="paramname"><em>hint_masks</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a></td>          <td class="paramname"><span class="paramname"><em>counter_masks</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a40acbe6aa5d6120bc109c1d75070851b_cgraph.png" border="0" usemap="#apshalgo3_8c_a40acbe6aa5d6120bc109c1d75070851b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a40acbe6aa5d6120bc109c1d75070851b_icgraph.png" border="0" usemap="#apshalgo3_8c_a40acbe6aa5d6120bc109c1d75070851b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="a12371480183ed8e2dd628245815e8333" name="a12371480183ed8e2dd628245815e8333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12371480183ed8e2dd628245815e8333">&#9670;&#160;</a></span>psh3_hint_table_record()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_record </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a12371480183ed8e2dd628245815e8333_cgraph.png" border="0" usemap="#apshalgo3_8c_a12371480183ed8e2dd628245815e8333_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a12371480183ed8e2dd628245815e8333_icgraph.png" border="0" usemap="#apshalgo3_8c_a12371480183ed8e2dd628245815e8333_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="a9a0dbb7d700b66fc27b216f6fd7f1200" name="a9a0dbb7d700b66fc27b216f6fd7f1200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0dbb7d700b66fc27b216f6fd7f1200">&#9670;&#160;</a></span>psh3_hint_table_record_mask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void psh3_hint_table_record_mask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshalgo3_8h.html#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#ac6a9fe3257f3d0d0a00dd3c4a106323c">PS_Mask</a></td>          <td class="paramname"><span class="paramname"><em>hint_mask</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a9a0dbb7d700b66fc27b216f6fd7f1200_cgraph.png" border="0" usemap="#apshalgo3_8c_a9a0dbb7d700b66fc27b216f6fd7f1200_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8c_a9a0dbb7d700b66fc27b216f6fd7f1200_icgraph.png" border="0" usemap="#apshalgo3_8c_a9a0dbb7d700b66fc27b216f6fd7f1200_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_0e00759a5aa6a0b13a1caf75240cc41e.html">pshinter</a></li><li class="navelem"><a href="pshalgo3_8c.html">pshalgo3.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

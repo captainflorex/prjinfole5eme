@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cid/cidriver.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('cidriver_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">cidriver.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="cidriver_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  cidriver.c                                                             */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    CID driver interface (body).                                         */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 1996-2001, 2002 by                                           */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="cidriver_8h.html">cidriver.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="cidgload_8h.html">cidgload.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include FT_INTERNAL_DEBUG_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include FT_INTERNAL_STREAM_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include FT_INTERNAL_POSTSCRIPT_NAMES_H</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="ciderrs_8h.html">ciderrs.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="comment">/* The macro FT_COMPONENT is used in trace mode.  It is an implicit      */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">/* parameter of the FT_TRACE() and FT_ERROR() macros, used to print/log  */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="comment">/* messages during execution.                                            */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#undef  FT_COMPONENT</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="cidriver_8c.html#a9c208ea57bc9a5fcbfc81a6106d28f3a">   36</a></span><span class="preprocessor">#define FT_COMPONENT  trace_ciddriver</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="cidriver_8c.html#a606b0c982047593200cc1f1a4c832bd1">   40</a></span>  <a class="code hl_function" href="cidriver_8c.html#a606b0c982047593200cc1f1a4c832bd1">cid_get_postscript_name</a>( <a class="code hl_typedef" href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a>  <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> )</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>*  result = <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>-&gt;cid.cid_font_name;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> ( result &amp;&amp; result[0] == <span class="charliteral">&#39;/&#39;</span> )</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      result++;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#aecd42ee632fd05146a419e4d1ebe79e4">FT_Module_Interface</a></div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="cidriver_8c.html#a3377ae32354b5b073fbe9cbf9f4a578d">   53</a></span>  <a class="code hl_function" href="cidriver_8c.html#a3377ae32354b5b073fbe9cbf9f4a578d">cid_get_interface</a>( <a class="code hl_typedef" href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a>         driver,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                     <span class="keyword">const</span> <a class="code hl_typedef" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a>*  cid_interface )</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a>( driver );</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a>( cid_interface );</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> ( <a class="code hl_define" href="ftstdlib_8h.html#a6b4c8a4f84eee3fe618812761ae78adb">ft_strcmp</a>( (<span class="keyword">const</span> <span class="keywordtype">char</span>*)cid_interface, <span class="stringliteral">&quot;postscript_name&quot;</span> ) == 0 )</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordflow">return</span> (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#aecd42ee632fd05146a419e4d1ebe79e4">FT_Module_Interface</a>)<a class="code hl_function" href="cidriver_8c.html#a606b0c982047593200cc1f1a4c832bd1">cid_get_postscript_name</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="cidriver_8c.html#af1f35e994fe712fdae586c739faa53a0">   68</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="ftdriver_8h.html#a57f9368fa4a66804639f104da3cb0780">FT_Driver_ClassRec</a>  <a class="code hl_variable" href="cidriver_8c.html#af1f35e994fe712fdae586c739faa53a0">t1cid_driver_class</a> =</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">/* first of all, the FT_Module_Class fields */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400ab4d1165618b8fe0962bd6b6f646c65f8">ft_module_font_driver</a>       |</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a3aac4aad00e1ed5d60d177be8f2ac1da">ft_module_driver_scalable</a>   |</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400ae7582c7071f20e939142b77d547b71df">ft_module_driver_has_hinter</a> ,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#a5c8ef9d643fe00f50ffa7c61345fb2b9">FT_DriverRec</a> ),</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="stringliteral">&quot;t1cid&quot;</span>,   <span class="comment">/* module name           */</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      0x10000L,  <span class="comment">/* version 1.0 of driver */</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      0x20000L,  <span class="comment">/* requires FreeType 2.0 */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      0,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_function" href="cidobjs_8c.html#a70f39cc3fc3c82413441242d2b4ba487">cid_driver_init</a>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) <a class="code hl_function" href="cidobjs_8c.html#adc61630e4c82a28f1ce7e1509a5ae1e8">cid_driver_done</a>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  <a class="code hl_function" href="cidriver_8c.html#a3377ae32354b5b073fbe9cbf9f4a578d">cid_get_interface</a></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    },</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">/* then the other font drivers fields */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="t1types_8h.html#a2a8d4a05cd1f14c64acec6bf667652c7">CID_FaceRec</a> ),</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="cidobjs_8h.html#a5f233d2917ccbc0e3fe32718c25cd596">CID_SizeRec</a> ),</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="cidobjs_8h.html#ae1f436094a4d4db2983be35fefa2d2fe">CID_GlyphSlotRec</a> ),</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    (<a class="code hl_variable" href="ftdriver_8h.html#af26746d2a05245d77ece407c7e0576b3">FT_Face_InitFunc</a>)       <a class="code hl_function" href="cidobjs_8c.html#a89593eadb07d2f6cdf0a6966c44f366b">cid_face_init</a>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a13d29bae37d5389d84c0d7c2e433d593">FT_Face_DoneFunc</a>)       <a class="code hl_function" href="cidobjs_8c.html#a5ec27b01908e4be04c0879be2826b822">cid_face_done</a>,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#abb1c10610365a6a508a7434effbf994b">FT_Size_InitFunc</a>)       <a class="code hl_function" href="cidobjs_8c.html#a70055a6e76caa9ce7e58cb7cab002af5">cid_size_init</a>,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a76543caab721cef117cded600eebe0d3">FT_Size_DoneFunc</a>)       <a class="code hl_function" href="cidobjs_8c.html#a95296caaa192afd47356b24778e2a515">cid_size_done</a>,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a9aeb6080b6d9190c4af4656e55d41ac8">FT_Slot_InitFunc</a>)       <a class="code hl_function" href="cidobjs_8c.html#a31ba53ea2261666ce9e14793dd56fdeb">cid_slot_init</a>,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#abcb3d5f7769189d7c08a83a6149321c1">FT_Slot_DoneFunc</a>)       <a class="code hl_function" href="cidobjs_8c.html#a9e1e93ab72a35d68f209a107e7d3490e">cid_slot_done</a>,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#aa0f960aa0ae99a6c409238e1d4651845">FT_Size_ResetPointsFunc</a>)<a class="code hl_function" href="cidobjs_8c.html#a5668623060c8fe79a5144102956a9f59">cid_size_reset</a>,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a4d4c4a2cfad7f505850a136709a18aa5">FT_Size_ResetPixelsFunc</a>)<a class="code hl_function" href="cidobjs_8c.html#a5668623060c8fe79a5144102956a9f59">cid_size_reset</a>,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a45d2764127581beaa049b48f32cc5c39">FT_Slot_LoadFunc</a>)       <a class="code hl_function" href="cidgload_8c.html#a58cebda75d644bed0b388593d62450cf">cid_slot_load_glyph</a>,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a57ef03e416e28e6981e01e83fcf68b4e">FT_Face_GetKerningFunc</a>) 0,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#aa74e8fd695d70c4d1ca220116172f33d">FT_Face_AttachFunc</a>)     0,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    (<a class="code hl_typedef" href="ftdriver_8h.html#a2c53cbfdd6a7d380d03c1d3a5575b7af">FT_Face_GetAdvancesFunc</a>)0,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  };</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3e7304105563eb715cae1b9c213858ed"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE_DEF</div><div class="ttdef"><b>Definition</b> ftconfig.h:229</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a4db62b7638f149986cdc24d0c03e062f"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a></div><div class="ttdeci">#define FT_UNUSED(arg)</div><div class="ttdef"><b>Definition</b> ftconfig.h:77</div></div>
+<div class="ttc" id="aciderrs_8h_html"><div class="ttname"><a href="ciderrs_8h.html">ciderrs.h</a></div></div>
+<div class="ttc" id="acidgload_8c_html_a58cebda75d644bed0b388593d62450cf"><div class="ttname"><a href="cidgload_8c.html#a58cebda75d644bed0b388593d62450cf">cid_slot_load_glyph</a></div><div class="ttdeci">cid_slot_load_glyph(CID_GlyphSlot glyph, CID_Size size, FT_Int glyph_index, FT_Int32 load_flags)</div><div class="ttdef"><b>Definition</b> cidgload.c:273</div></div>
+<div class="ttc" id="acidgload_8h_html"><div class="ttname"><a href="cidgload_8h.html">cidgload.h</a></div></div>
+<div class="ttc" id="acidobjs_8c_html_a31ba53ea2261666ce9e14793dd56fdeb"><div class="ttname"><a href="cidobjs_8c.html#a31ba53ea2261666ce9e14793dd56fdeb">cid_slot_init</a></div><div class="ttdeci">cid_slot_init(CID_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> cidobjs.c:55</div></div>
+<div class="ttc" id="acidobjs_8c_html_a5668623060c8fe79a5144102956a9f59"><div class="ttname"><a href="cidobjs_8c.html#a5668623060c8fe79a5144102956a9f59">cid_size_reset</a></div><div class="ttdeci">cid_size_reset(CID_Size size)</div><div class="ttdef"><b>Definition</b> cidobjs.c:150</div></div>
+<div class="ttc" id="acidobjs_8c_html_a5ec27b01908e4be04c0879be2826b822"><div class="ttname"><a href="cidobjs_8c.html#a5ec27b01908e4be04c0879be2826b822">cid_face_done</a></div><div class="ttdeci">cid_face_done(CID_Face face)</div><div class="ttdef"><b>Definition</b> cidobjs.c:183</div></div>
+<div class="ttc" id="acidobjs_8c_html_a70055a6e76caa9ce7e58cb7cab002af5"><div class="ttname"><a href="cidobjs_8c.html#a70055a6e76caa9ce7e58cb7cab002af5">cid_size_init</a></div><div class="ttdeci">cid_size_init(CID_Size size)</div><div class="ttdef"><b>Definition</b> cidobjs.c:126</div></div>
+<div class="ttc" id="acidobjs_8c_html_a70f39cc3fc3c82413441242d2b4ba487"><div class="ttname"><a href="cidobjs_8c.html#a70f39cc3fc3c82413441242d2b4ba487">cid_driver_init</a></div><div class="ttdeci">cid_driver_init(CID_Driver driver)</div><div class="ttdef"><b>Definition</b> cidobjs.c:422</div></div>
+<div class="ttc" id="acidobjs_8c_html_a89593eadb07d2f6cdf0a6966c44f366b"><div class="ttname"><a href="cidobjs_8c.html#a89593eadb07d2f6cdf0a6966c44f366b">cid_face_init</a></div><div class="ttdeci">cid_face_init(FT_Stream stream, CID_Face face, FT_Int face_index, FT_Int num_params, FT_Parameter *params)</div><div class="ttdef"><b>Definition</b> cidobjs.c:263</div></div>
+<div class="ttc" id="acidobjs_8c_html_a95296caaa192afd47356b24778e2a515"><div class="ttname"><a href="cidobjs_8c.html#a95296caaa192afd47356b24778e2a515">cid_size_done</a></div><div class="ttdeci">cid_size_done(CID_Size size)</div><div class="ttdef"><b>Definition</b> cidobjs.c:109</div></div>
+<div class="ttc" id="acidobjs_8c_html_a9e1e93ab72a35d68f209a107e7d3490e"><div class="ttname"><a href="cidobjs_8c.html#a9e1e93ab72a35d68f209a107e7d3490e">cid_slot_done</a></div><div class="ttdeci">cid_slot_done(CID_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> cidobjs.c:48</div></div>
+<div class="ttc" id="acidobjs_8c_html_adc61630e4c82a28f1ce7e1509a5ae1e8"><div class="ttname"><a href="cidobjs_8c.html#adc61630e4c82a28f1ce7e1509a5ae1e8">cid_driver_done</a></div><div class="ttdeci">cid_driver_done(CID_Driver driver)</div><div class="ttdef"><b>Definition</b> cidobjs.c:442</div></div>
+<div class="ttc" id="acidobjs_8h_html_a5f233d2917ccbc0e3fe32718c25cd596"><div class="ttname"><a href="cidobjs_8h.html#a5f233d2917ccbc0e3fe32718c25cd596">CID_SizeRec</a></div><div class="ttdeci">struct CID_SizeRec_ CID_SizeRec</div></div>
+<div class="ttc" id="acidobjs_8h_html_ae1f436094a4d4db2983be35fefa2d2fe"><div class="ttname"><a href="cidobjs_8h.html#ae1f436094a4d4db2983be35fefa2d2fe">CID_GlyphSlotRec</a></div><div class="ttdeci">struct CID_GlyphSlotRec_ CID_GlyphSlotRec</div></div>
+<div class="ttc" id="acidriver_8c_html_a3377ae32354b5b073fbe9cbf9f4a578d"><div class="ttname"><a href="cidriver_8c.html#a3377ae32354b5b073fbe9cbf9f4a578d">cid_get_interface</a></div><div class="ttdeci">static FT_Module_Interface cid_get_interface(FT_Driver driver, const FT_String *cid_interface)</div><div class="ttdef"><b>Definition</b> cidriver.c:53</div></div>
+<div class="ttc" id="acidriver_8c_html_a606b0c982047593200cc1f1a4c832bd1"><div class="ttname"><a href="cidriver_8c.html#a606b0c982047593200cc1f1a4c832bd1">cid_get_postscript_name</a></div><div class="ttdeci">static const char * cid_get_postscript_name(CID_Face face)</div><div class="ttdef"><b>Definition</b> cidriver.c:40</div></div>
+<div class="ttc" id="acidriver_8c_html_af1f35e994fe712fdae586c739faa53a0"><div class="ttname"><a href="cidriver_8c.html#af1f35e994fe712fdae586c739faa53a0">t1cid_driver_class</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_Driver_ClassRec t1cid_driver_class</div><div class="ttdef"><b>Definition</b> cidriver.c:68</div></div>
+<div class="ttc" id="acidriver_8h_html"><div class="ttname"><a href="cidriver_8h.html">cidriver.h</a></div></div>
+<div class="ttc" id="afreetype_8h_html_a5503c06c138ccdfeef486f2ce87bb8ec"><div class="ttname"><a href="freetype_8h.html#a5503c06c138ccdfeef486f2ce87bb8ec">FT_Driver</a></div><div class="ttdeci">struct FT_DriverRec_ * FT_Driver</div><div class="ttdef"><b>Definition</b> freetype.h:276</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftdriver_8h_html_a13d29bae37d5389d84c0d7c2e433d593"><div class="ttname"><a href="ftdriver_8h.html#a13d29bae37d5389d84c0d7c2e433d593">FT_Face_DoneFunc</a></div><div class="ttdeci">void(* FT_Face_DoneFunc)(FT_Face face)</div><div class="ttdef"><b>Definition</b> ftdriver.h:38</div></div>
+<div class="ttc" id="aftdriver_8h_html_a2c53cbfdd6a7d380d03c1d3a5575b7af"><div class="ttname"><a href="ftdriver_8h.html#a2c53cbfdd6a7d380d03c1d3a5575b7af">FT_Face_GetAdvancesFunc</a></div><div class="ttdeci">FT_Error(* FT_Face_GetAdvancesFunc)(FT_Face face, FT_UInt first, FT_UInt count, FT_Bool vertical, FT_UShort *advances)</div><div class="ttdef"><b>Definition</b> ftdriver.h:95</div></div>
+<div class="ttc" id="aftdriver_8h_html_a45d2764127581beaa049b48f32cc5c39"><div class="ttname"><a href="ftdriver_8h.html#a45d2764127581beaa049b48f32cc5c39">FT_Slot_LoadFunc</a></div><div class="ttdeci">FT_Error(* FT_Slot_LoadFunc)(FT_GlyphSlot slot, FT_Size size, FT_UInt glyph_index, FT_Int32 load_flags)</div><div class="ttdef"><b>Definition</b> ftdriver.h:68</div></div>
+<div class="ttc" id="aftdriver_8h_html_a4d4c4a2cfad7f505850a136709a18aa5"><div class="ttname"><a href="ftdriver_8h.html#a4d4c4a2cfad7f505850a136709a18aa5">FT_Size_ResetPixelsFunc</a></div><div class="ttdeci">FT_Error(* FT_Size_ResetPixelsFunc)(FT_Size size, FT_UInt pixel_width, FT_UInt pixel_height)</div><div class="ttdef"><b>Definition</b> ftdriver.h:63</div></div>
+<div class="ttc" id="aftdriver_8h_html_a57ef03e416e28e6981e01e83fcf68b4e"><div class="ttname"><a href="ftdriver_8h.html#a57ef03e416e28e6981e01e83fcf68b4e">FT_Face_GetKerningFunc</a></div><div class="ttdeci">FT_Error(* FT_Face_GetKerningFunc)(FT_Face face, FT_UInt left_glyph, FT_UInt right_glyph, FT_Vector *kerning)</div><div class="ttdef"><b>Definition</b> ftdriver.h:83</div></div>
+<div class="ttc" id="aftdriver_8h_html_a57f9368fa4a66804639f104da3cb0780"><div class="ttname"><a href="ftdriver_8h.html#a57f9368fa4a66804639f104da3cb0780">FT_Driver_ClassRec</a></div><div class="ttdeci">struct FT_Driver_ClassRec_ FT_Driver_ClassRec</div></div>
+<div class="ttc" id="aftdriver_8h_html_a76543caab721cef117cded600eebe0d3"><div class="ttname"><a href="ftdriver_8h.html#a76543caab721cef117cded600eebe0d3">FT_Size_DoneFunc</a></div><div class="ttdeci">void(* FT_Size_DoneFunc)(FT_Size size)</div><div class="ttdef"><b>Definition</b> ftdriver.h:45</div></div>
+<div class="ttc" id="aftdriver_8h_html_a9aeb6080b6d9190c4af4656e55d41ac8"><div class="ttname"><a href="ftdriver_8h.html#a9aeb6080b6d9190c4af4656e55d41ac8">FT_Slot_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_Slot_InitFunc)(FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftdriver.h:49</div></div>
+<div class="ttc" id="aftdriver_8h_html_aa0f960aa0ae99a6c409238e1d4651845"><div class="ttname"><a href="ftdriver_8h.html#aa0f960aa0ae99a6c409238e1d4651845">FT_Size_ResetPointsFunc</a></div><div class="ttdeci">FT_Error(* FT_Size_ResetPointsFunc)(FT_Size size, FT_F26Dot6 char_width, FT_F26Dot6 char_height, FT_UInt horz_resolution, FT_UInt vert_resolution)</div><div class="ttdef"><b>Definition</b> ftdriver.h:56</div></div>
+<div class="ttc" id="aftdriver_8h_html_aa74e8fd695d70c4d1ca220116172f33d"><div class="ttname"><a href="ftdriver_8h.html#aa74e8fd695d70c4d1ca220116172f33d">FT_Face_AttachFunc</a></div><div class="ttdeci">FT_Error(* FT_Face_AttachFunc)(FT_Face face, FT_Stream stream)</div><div class="ttdef"><b>Definition</b> ftdriver.h:90</div></div>
+<div class="ttc" id="aftdriver_8h_html_abb1c10610365a6a508a7434effbf994b"><div class="ttname"><a href="ftdriver_8h.html#abb1c10610365a6a508a7434effbf994b">FT_Size_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_Size_InitFunc)(FT_Size size)</div><div class="ttdef"><b>Definition</b> ftdriver.h:42</div></div>
+<div class="ttc" id="aftdriver_8h_html_abcb3d5f7769189d7c08a83a6149321c1"><div class="ttname"><a href="ftdriver_8h.html#abcb3d5f7769189d7c08a83a6149321c1">FT_Slot_DoneFunc</a></div><div class="ttdeci">void(* FT_Slot_DoneFunc)(FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftdriver.h:52</div></div>
+<div class="ttc" id="aftdriver_8h_html_af26746d2a05245d77ece407c7e0576b3"><div class="ttname"><a href="ftdriver_8h.html#af26746d2a05245d77ece407c7e0576b3">FT_Face_InitFunc</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef FT_Error(* FT_Face_InitFunc)(FT_Stream stream, FT_Face face, FT_Int typeface_index, FT_Int num_params, FT_Parameter *parameters)</div><div class="ttdef"><b>Definition</b> ftdriver.h:31</div></div>
+<div class="ttc" id="aftobjs_8h_html_a5c8ef9d643fe00f50ffa7c61345fb2b9"><div class="ttname"><a href="ftobjs_8h.html#a5c8ef9d643fe00f50ffa7c61345fb2b9">FT_DriverRec</a></div><div class="ttdeci">struct FT_DriverRec_ FT_DriverRec</div></div>
+<div class="ttc" id="aftstdlib_8h_html_a6b4c8a4f84eee3fe618812761ae78adb"><div class="ttname"><a href="ftstdlib_8h.html#a6b4c8a4f84eee3fe618812761ae78adb">ft_strcmp</a></div><div class="ttdeci">#define ft_strcmp</div><div class="ttdef"><b>Definition</b> ftstdlib.h:85</div></div>
+<div class="ttc" id="afttypes_8h_html_a9846214585359eb2ba6bbb0e6de30639"><div class="ttname"><a href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a></div><div class="ttdeci">char FT_String</div><div class="ttdef"><b>Definition</b> fttypes.h:154</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_a7881ad6a13b0fe28b8473fa7ee6f28c2"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a></div><div class="ttdeci">void(* FT_Module_Destructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:73</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400a3aac4aad00e1ed5d60d177be8f2ac1da"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a3aac4aad00e1ed5d60d177be8f2ac1da">ft_module_driver_scalable</a></div><div class="ttdeci">@ ft_module_driver_scalable</div><div class="ttdef"><b>Definition</b> ftmodule.h:56</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400ab4d1165618b8fe0962bd6b6f646c65f8"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400ab4d1165618b8fe0962bd6b6f646c65f8">ft_module_font_driver</a></div><div class="ttdeci">@ ft_module_font_driver</div><div class="ttdef"><b>Definition</b> ftmodule.h:51</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400ae7582c7071f20e939142b77d547b71df"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400ae7582c7071f20e939142b77d547b71df">ft_module_driver_has_hinter</a></div><div class="ttdeci">@ ft_module_driver_has_hinter</div><div class="ttdef"><b>Definition</b> ftmodule.h:60</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ae0a0ec80683e4845d953fcbb7e6af093"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a></div><div class="ttdeci">FT_Error(* FT_Module_Constructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:70</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_aecd42ee632fd05146a419e4d1ebe79e4"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#aecd42ee632fd05146a419e4d1ebe79e4">FT_Module_Interface</a></div><div class="ttdeci">void(* FT_Module_Interface)(void)</div><div class="ttdef"><b>Definition</b> ftmodule.h:67</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_af078ba2b906d2553add818593ab784ed"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a></div><div class="ttdeci">FT_Module_Interface(* FT_Module_Requester)(FT_Module module, const char *name)</div><div class="ttdef"><b>Definition</b> ftmodule.h:76</div></div>
+<div class="ttc" id="at1types_8h_html_a227f83a5b84ac73273f72dc90b39a55e"><div class="ttname"><a href="t1types_8h.html#a227f83a5b84ac73273f72dc90b39a55e">CID_Face</a></div><div class="ttdeci">struct CID_FaceRec_ * CID_Face</div><div class="ttdef"><b>Definition</b> t1types.h:156</div></div>
+<div class="ttc" id="at1types_8h_html_a2a8d4a05cd1f14c64acec6bf667652c7"><div class="ttname"><a href="t1types_8h.html#a2a8d4a05cd1f14c64acec6bf667652c7">CID_FaceRec</a></div><div class="ttdeci">struct CID_FaceRec_ CID_FaceRec</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_6142772ec078ae34fbb9714b7c3220bd.html">cid</a></li><li class="navelem"><a href="cidriver_8c.html">cidriver.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

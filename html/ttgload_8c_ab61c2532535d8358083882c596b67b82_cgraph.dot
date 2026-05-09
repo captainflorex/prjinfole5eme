@@ -1,0 +1,32 @@
+digraph "compute_glyph_metrics"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="compute_glyph_metrics",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_GlyphLoader_CopyPoints",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a336934f4b883906ed8ff0560140a74e3",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_GlyphLoader_Adjust\l_Points",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#acb7c42abf11390f0a2061fbfaf9d9d6a",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_GlyphLoader_CheckPoints",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a33ec2edf52ffdde913e4ec66dcd16795",tooltip=" "];
+  Node4 -> Node3 [id="edge4_Node000004_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node2 [id="edge6_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge7_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_MulFix",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcalc_8c.html#aeb37c2858e2851e15465580de1d1d218",tooltip=" "];
+  Node5 -> Node5 [id="edge8_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge9_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_Outline_Get_CBox",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftoutln_8c.html#a07e9fb42cdb19448416dc68ca94af4e7",tooltip=" "];
+  Node6 -> Node6 [id="edge10_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge11_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_Outline_Translate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftoutln_8c.html#a49b44c000fe73a2f18b05b95ff710471",tooltip=" "];
+  Node7 -> Node7 [id="edge12_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge13_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Get_Advance_Widths",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a282185cf11fb239f7961ba5d00044519",tooltip=" "];
+  Node1 -> Node9 [id="edge14_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="TT_Get_Metrics",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a937bd6fa56c589875984bf63e7dd0b7a",tooltip=" "];
+  Node9 -> Node9 [id="edge15_Node000009_Node000009",color="steelblue1",style="solid",tooltip=" "];
+}

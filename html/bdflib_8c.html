@@ -1,0 +1,2272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/bdf/bdflib.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('bdflib_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier bdflib.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="bdf_8h_source.html">bdf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bdferror_8h_source.html">bdferror.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de bdflib.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2bdf_2bdflib_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2bdf_2bdflib_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="bdflib_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:_5Fbdf_5Flist_5Ft_5F" id="r__5Fbdf_5Flist_5Ft_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct__bdf__list__t__.html">_bdf_list_t_</a></td></tr>
+<tr class="memitem:_5Fbdf_5Fparse_5Ft_5F" id="r__5Fbdf_5Fparse_5Ft_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct__bdf__parse__t__.html">_bdf_parse_t_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_bdflib</td></tr>
+<tr class="memitem:a0eeddb675efb4c080fe36fb4cb18e1fe" id="r_a0eeddb675efb4c080fe36fb4cb18e1fe"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0eeddb675efb4c080fe36fb4cb18e1fe">INITIAL_HT_SIZE</a>&#160;&#160;&#160;241</td></tr>
+<tr class="memitem:aac409db7e6a7a8a99389d893bd7b1f4e" id="r_aac409db7e6a7a8a99389d893bd7b1f4e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aac409db7e6a7a8a99389d893bd7b1f4e">setsbit</a>(m,  cc)</td></tr>
+<tr class="memitem:a659cc477ae9c1db560c963374f6f17ba" id="r_a659cc477ae9c1db560c963374f6f17ba"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a659cc477ae9c1db560c963374f6f17ba">sbitset</a>(m,  cc)</td></tr>
+<tr class="memitem:a6bfda50dd9b0abd276a8f63620a18264" id="r_a6bfda50dd9b0abd276a8f63620a18264"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6bfda50dd9b0abd276a8f63620a18264">isdigok</a>(m,  d)</td></tr>
+<tr class="memitem:a47e9b0b186fdc290aa739fa66b7d749d" id="r_a47e9b0b186fdc290aa739fa66b7d749d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a47e9b0b186fdc290aa739fa66b7d749d">_BDF_START</a>&#160;&#160;&#160;0x0001</td></tr>
+<tr class="memitem:a9e5840982339b57ba345ca33c68f429d" id="r_a9e5840982339b57ba345ca33c68f429d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9e5840982339b57ba345ca33c68f429d">_BDF_FONT_NAME</a>&#160;&#160;&#160;0x0002</td></tr>
+<tr class="memitem:aab0cb8fac33d82f4dccaaf869c9679f6" id="r_aab0cb8fac33d82f4dccaaf869c9679f6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aab0cb8fac33d82f4dccaaf869c9679f6">_BDF_SIZE</a>&#160;&#160;&#160;0x0004</td></tr>
+<tr class="memitem:a3fe174a6f758ebc1f7b60ec715f17472" id="r_a3fe174a6f758ebc1f7b60ec715f17472"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3fe174a6f758ebc1f7b60ec715f17472">_BDF_FONT_BBX</a>&#160;&#160;&#160;0x0008</td></tr>
+<tr class="memitem:afa3d01bf8c9ea517fe604b102d149485" id="r_afa3d01bf8c9ea517fe604b102d149485"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afa3d01bf8c9ea517fe604b102d149485">_BDF_PROPS</a>&#160;&#160;&#160;0x0010</td></tr>
+<tr class="memitem:a1e788568bea4c83592694e22b89bdfd3" id="r_a1e788568bea4c83592694e22b89bdfd3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1e788568bea4c83592694e22b89bdfd3">_BDF_GLYPHS</a>&#160;&#160;&#160;0x0020</td></tr>
+<tr class="memitem:a06092450eb36de57d658f6aa228485b7" id="r_a06092450eb36de57d658f6aa228485b7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a06092450eb36de57d658f6aa228485b7">_BDF_GLYPH</a>&#160;&#160;&#160;0x0040</td></tr>
+<tr class="memitem:a314f1c87aadfcd80289300edb101abb8" id="r_a314f1c87aadfcd80289300edb101abb8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a314f1c87aadfcd80289300edb101abb8">_BDF_ENCODING</a>&#160;&#160;&#160;0x0080</td></tr>
+<tr class="memitem:a7966767dd087c2c80f83804cc3d7784c" id="r_a7966767dd087c2c80f83804cc3d7784c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7966767dd087c2c80f83804cc3d7784c">_BDF_SWIDTH</a>&#160;&#160;&#160;0x0100</td></tr>
+<tr class="memitem:aedbdf3d9230a84d52cbb367ed45930b3" id="r_aedbdf3d9230a84d52cbb367ed45930b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aedbdf3d9230a84d52cbb367ed45930b3">_BDF_DWIDTH</a>&#160;&#160;&#160;0x0200</td></tr>
+<tr class="memitem:a9c35c2f1e7ae6fc9628de823d1ff796f" id="r_a9c35c2f1e7ae6fc9628de823d1ff796f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c35c2f1e7ae6fc9628de823d1ff796f">_BDF_BBX</a>&#160;&#160;&#160;0x0400</td></tr>
+<tr class="memitem:a12c17058f354e966b07e38efb47d275e" id="r_a12c17058f354e966b07e38efb47d275e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a12c17058f354e966b07e38efb47d275e">_BDF_BITMAP</a>&#160;&#160;&#160;0x0800</td></tr>
+<tr class="memitem:a6f510dcbd02809c398411e2c3ca22bd4" id="r_a6f510dcbd02809c398411e2c3ca22bd4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6f510dcbd02809c398411e2c3ca22bd4">_BDF_SWIDTH_ADJ</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="memitem:aa73ffdd4446910abe6b11cd1b169ead8" id="r_aa73ffdd4446910abe6b11cd1b169ead8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa73ffdd4446910abe6b11cd1b169ead8">_BDF_GLYPH_BITS</a></td></tr>
+<tr class="memitem:a5ee6dd6cae581e45458a02f0c96988b8" id="r_a5ee6dd6cae581e45458a02f0c96988b8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5ee6dd6cae581e45458a02f0c96988b8">_BDF_GLYPH_WIDTH_CHECK</a>&#160;&#160;&#160;0x40000000L</td></tr>
+<tr class="memitem:ace26a6fbd09efb22bef5456a1c5dc0c7" id="r_ace26a6fbd09efb22bef5456a1c5dc0c7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ace26a6fbd09efb22bef5456a1c5dc0c7">_BDF_GLYPH_HEIGHT_CHECK</a>&#160;&#160;&#160;0x80000000L</td></tr>
+<tr class="memitem:a59f34ec50935701c7874a8898593d941" id="r_a59f34ec50935701c7874a8898593d941"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a59f34ec50935701c7874a8898593d941">ACMSG1</a></td></tr>
+<tr class="memitem:ae907eb192ad07ccc3047aed6acc42438" id="r_ae907eb192ad07ccc3047aed6acc42438"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae907eb192ad07ccc3047aed6acc42438">ACMSG2</a></td></tr>
+<tr class="memitem:a38818e0206d6281b167f2a6ae232efdb" id="r_a38818e0206d6281b167f2a6ae232efdb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a38818e0206d6281b167f2a6ae232efdb">ACMSG3</a>&#160;&#160;&#160;&quot;Font width != actual width.  Old: %hd New: %hd.\n&quot;</td></tr>
+<tr class="memitem:a9415cd17409e53738a50211b867f4508" id="r_a9415cd17409e53738a50211b867f4508"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9415cd17409e53738a50211b867f4508">ACMSG4</a></td></tr>
+<tr class="memitem:ae20647306a1109d962bae48fac884a46" id="r_ae20647306a1109d962bae48fac884a46"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae20647306a1109d962bae48fac884a46">ACMSG5</a>&#160;&#160;&#160;&quot;Font ascent != actual ascent.  Old: %hd New: %hd.\n&quot;</td></tr>
+<tr class="memitem:a575f39aa420c8a4d2438d13974ff5599" id="r_a575f39aa420c8a4d2438d13974ff5599"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a575f39aa420c8a4d2438d13974ff5599">ACMSG6</a>&#160;&#160;&#160;&quot;Font descent != actual descent.  Old: %hd New: %hd.\n&quot;</td></tr>
+<tr class="memitem:a99d2cc5cfa38a5f2b93c148f6d225802" id="r_a99d2cc5cfa38a5f2b93c148f6d225802"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a99d2cc5cfa38a5f2b93c148f6d225802">ACMSG7</a>&#160;&#160;&#160;&quot;Font height != actual height. Old: %hd New: %hd.\n&quot;</td></tr>
+<tr class="memitem:aea3a65957a41de35905030aae95ffa27" id="r_aea3a65957a41de35905030aae95ffa27"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aea3a65957a41de35905030aae95ffa27">ACMSG8</a>&#160;&#160;&#160;&quot;Glyph scalable width (SWIDTH) adjustments made.\n&quot;</td></tr>
+<tr class="memitem:a303134c7bc72528f43d0b4f24dc06990" id="r_a303134c7bc72528f43d0b4f24dc06990"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a303134c7bc72528f43d0b4f24dc06990">ACMSG9</a>&#160;&#160;&#160;&quot;SWIDTH field missing at line %ld.  Set automatically.\n&quot;</td></tr>
+<tr class="memitem:a69a73a28c354f94b0be56853a6499630" id="r_a69a73a28c354f94b0be56853a6499630"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a69a73a28c354f94b0be56853a6499630">ACMSG10</a>&#160;&#160;&#160;&quot;DWIDTH field missing at line %ld.  Set to glyph width.\n&quot;</td></tr>
+<tr class="memitem:ae2309797ff85936fa43a14e346b8b9a1" id="r_ae2309797ff85936fa43a14e346b8b9a1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae2309797ff85936fa43a14e346b8b9a1">ACMSG11</a>&#160;&#160;&#160;&quot;SIZE <a class="el" href="infblock_8c.html#a5a8bfbb66d29fa73601b7d47438dec06">bits</a> per pixel field adjusted to %hd.\n&quot;</td></tr>
+<tr class="memitem:aa7e989d601e4610cda60fc78732e9d92" id="r_aa7e989d601e4610cda60fc78732e9d92"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa7e989d601e4610cda60fc78732e9d92">ACMSG12</a>&#160;&#160;&#160;&quot;Duplicate encoding %ld (%s) changed to unencoded.\n&quot;</td></tr>
+<tr class="memitem:aa706591a819adf4263608bfeccee8127" id="r_aa706591a819adf4263608bfeccee8127"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa706591a819adf4263608bfeccee8127">ACMSG13</a>&#160;&#160;&#160;&quot;Glyph %ld extra rows removed.\n&quot;</td></tr>
+<tr class="memitem:a9f18b2d6746cbf4a257d77143cd416a3" id="r_a9f18b2d6746cbf4a257d77143cd416a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f18b2d6746cbf4a257d77143cd416a3">ACMSG14</a>&#160;&#160;&#160;&quot;Glyph %ld extra columns removed.\n&quot;</td></tr>
+<tr class="memitem:a6292c375009661933c69f3ae8231cef7" id="r_a6292c375009661933c69f3ae8231cef7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6292c375009661933c69f3ae8231cef7">ACMSG15</a>&#160;&#160;&#160;&quot;Incorrect glyph count: %ld indicated but %ld found.\n&quot;</td></tr>
+<tr class="memitem:a68dd2f7e1008b82de19642f57bfed78e" id="r_a68dd2f7e1008b82de19642f57bfed78e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a68dd2f7e1008b82de19642f57bfed78e">ERRMSG1</a>&#160;&#160;&#160;&quot;[line %ld] Missing \&quot;%s\&quot; line.\n&quot;</td></tr>
+<tr class="memitem:a650f5e85f2b0b3dc2ecbe13ecf594be4" id="r_a650f5e85f2b0b3dc2ecbe13ecf594be4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a650f5e85f2b0b3dc2ecbe13ecf594be4">ERRMSG2</a>&#160;&#160;&#160;&quot;[line %ld] Font header corrupted or missing fields.\n&quot;</td></tr>
+<tr class="memitem:afdebafa0276829bf77f30c9aba941d83" id="r_afdebafa0276829bf77f30c9aba941d83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afdebafa0276829bf77f30c9aba941d83">ERRMSG3</a>&#160;&#160;&#160;&quot;[line %ld] Font glyphs corrupted or missing fields.\n&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a1fe4f30c7585243050d42535791e5c62" id="r_a1fe4f30c7585243050d42535791e5c62"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#a1fe4f30c7585243050d42535791e5c62">hash_free_func</a>) (<a class="el" href="bdf_8h.html#a6a90f4ec6d32a7d65809a231d0183dec">hashnode</a> node)</td></tr>
+<tr class="memitem:a5707f86c0a2fd472654dfd629b5c4c7f" id="r_a5707f86c0a2fd472654dfd629b5c4c7f"><td class="memItemLeft">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#a5707f86c0a2fd472654dfd629b5c4c7f">_bdf_line_func_t</a>) (char *line, unsigned long linelen, unsigned long lineno, void *call_data, void *client_data)</td></tr>
+<tr class="memitem:a7860f7606a6885c06c54b53eaf94e175" id="r_a7860f7606a6885c06c54b53eaf94e175"><td class="memItemLeft">typedef struct <a class="el" href="struct__bdf__list__t__.html">_bdf_list_t_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a></td></tr>
+<tr class="memitem:a0ee5e5b2c4fdeeac7a8955edd491dd8c" id="r_a0ee5e5b2c4fdeeac7a8955edd491dd8c"><td class="memItemLeft">typedef struct <a class="el" href="struct__bdf__parse__t__.html">_bdf_parse_t_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0ee5e5b2c4fdeeac7a8955edd491dd8c">_bdf_parse_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a9e06265a24feb234e232bc13b2788dda" id="r_a9e06265a24feb234e232bc13b2788dda"><td class="memItemLeft">static <a class="el" href="bdf_8h.html#a6a90f4ec6d32a7d65809a231d0183dec">hashnode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9e06265a24feb234e232bc13b2788dda">hash_bucket</a> (char *key, <a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *ht)</td></tr>
+<tr class="memitem:a59ac8a0173db31096ba501c7e92a13bc" id="r_a59ac8a0173db31096ba501c7e92a13bc"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a59ac8a0173db31096ba501c7e92a13bc">hash_rehash</a> (<a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *ht, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:aaae7909bf6cba80a00463295cdabb65c" id="r_aaae7909bf6cba80a00463295cdabb65c"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaae7909bf6cba80a00463295cdabb65c">hash_init</a> (<a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *ht, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:a16b03f6ad2e02cd0a86a3e4a77f21309" id="r_a16b03f6ad2e02cd0a86a3e4a77f21309"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a16b03f6ad2e02cd0a86a3e4a77f21309">hash_free</a> (<a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *ht, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:ab916868a207429e765c433cd3d67b63b" id="r_ab916868a207429e765c433cd3d67b63b"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab916868a207429e765c433cd3d67b63b">hash_insert</a> (char *key, void *data, <a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *ht, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:a264c70afa66b9ae27def3e33afc1850f" id="r_a264c70afa66b9ae27def3e33afc1850f"><td class="memItemLeft">static <a class="el" href="bdf_8h.html#a6a90f4ec6d32a7d65809a231d0183dec">hashnode</a>&#160;</td><td class="memItemRight"><a class="el" href="#a264c70afa66b9ae27def3e33afc1850f">hash_lookup</a> (char *key, <a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *ht)</td></tr>
+<tr class="memitem:ab493227fb915f3c88666a6f6eab00169" id="r_ab493227fb915f3c88666a6f6eab00169"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab493227fb915f3c88666a6f6eab00169">_bdf_split</a> (char *separators, char *line, unsigned long linelen, <a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a> *list, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:ac2a86dd652365fa892478c58d5867c6c" id="r_ac2a86dd652365fa892478c58d5867c6c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac2a86dd652365fa892478c58d5867c6c">_bdf_shift</a> (unsigned long n, <a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a> *list)</td></tr>
+<tr class="memitem:a816ebb1658337ca52112fb452e51fa97" id="r_a816ebb1658337ca52112fb452e51fa97"><td class="memItemLeft">static char *&#160;</td><td class="memItemRight"><a class="el" href="#a816ebb1658337ca52112fb452e51fa97">_bdf_join</a> (int c, unsigned long *<a class="el" href="zutil_8h.html#a1ad7df71d6c906bb4ad423e29335de7d">len</a>, <a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a> *list)</td></tr>
+<tr class="memitem:ad22c456947d7992ec7fd6380c42a1d9c" id="r_ad22c456947d7992ec7fd6380c42a1d9c"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad22c456947d7992ec7fd6380c42a1d9c">bdf_internal_readstream</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, char *buffer, int count, int *read_bytes)</td></tr>
+<tr class="memitem:ac46014e661a929b41dd6bcf6d2f72b88" id="r_ac46014e661a929b41dd6bcf6d2f72b88"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac46014e661a929b41dd6bcf6d2f72b88">_bdf_readstream</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="#a5707f86c0a2fd472654dfd629b5c4c7f">_bdf_line_func_t</a> callback, void *client_data, unsigned long *lno)</td></tr>
+<tr class="memitem:aeadd1c54f3491e3e4b28bc08dee1f0d0" id="r_aeadd1c54f3491e3e4b28bc08dee1f0d0"><td class="memItemLeft">static unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#aeadd1c54f3491e3e4b28bc08dee1f0d0">_bdf_atoul</a> (char *s, char **end, int base)</td></tr>
+<tr class="memitem:a4115a462129f803ea47d76b0a1aa8c13" id="r_a4115a462129f803ea47d76b0a1aa8c13"><td class="memItemLeft">static long&#160;</td><td class="memItemRight"><a class="el" href="#a4115a462129f803ea47d76b0a1aa8c13">_bdf_atol</a> (char *s, char **end, int base)</td></tr>
+<tr class="memitem:a919590bcf83928124670e0bd98217cae" id="r_a919590bcf83928124670e0bd98217cae"><td class="memItemLeft">static short&#160;</td><td class="memItemRight"><a class="el" href="#a919590bcf83928124670e0bd98217cae">_bdf_atos</a> (char *s, char **end, int base)</td></tr>
+<tr class="memitem:ab23b2cc467ed4fdca8be9b240d7f9e31" id="r_ab23b2cc467ed4fdca8be9b240d7f9e31"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ab23b2cc467ed4fdca8be9b240d7f9e31">by_encoding</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *a, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *b)</td></tr>
+<tr class="memitem:a5755ef90aa4a510b3cd188649c1e7877" id="r_a5755ef90aa4a510b3cd188649c1e7877"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5755ef90aa4a510b3cd188649c1e7877">bdf_create_property</a> (char *name, int format, <a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font)</td></tr>
+<tr class="memitem:a04fa944f2694027db53677a291ece2d2" id="r_a04fa944f2694027db53677a291ece2d2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a04fa944f2694027db53677a291ece2d2">bdf_get_property</a> (char *name, <a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font)</td></tr>
+<tr class="memitem:aa508ff1c8eb9b515d31885419ed49dd5" id="r_aa508ff1c8eb9b515d31885419ed49dd5"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa508ff1c8eb9b515d31885419ed49dd5">_bdf_add_comment</a> (<a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font, char *comment, unsigned long <a class="el" href="zutil_8h.html#a1ad7df71d6c906bb4ad423e29335de7d">len</a>)</td></tr>
+<tr class="memitem:ad29053a988b08a3c84360e92569ac187" id="r_ad29053a988b08a3c84360e92569ac187"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad29053a988b08a3c84360e92569ac187">_bdf_set_default_spacing</a> (<a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font, <a class="el" href="bdf_8h.html#a2ed2a3c46a476bf42a83185360dd47da">bdf_options_t</a> *opts)</td></tr>
+<tr class="memitem:a194239cee84022263b1142e385560549" id="r_a194239cee84022263b1142e385560549"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a194239cee84022263b1142e385560549">_bdf_is_atom</a> (char *line, unsigned long linelen, char **name, char **value, <a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font)</td></tr>
+<tr class="memitem:a92bb7c1da70ebe11bbe860922bb82ec7" id="r_a92bb7c1da70ebe11bbe860922bb82ec7"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a92bb7c1da70ebe11bbe860922bb82ec7">_bdf_add_property</a> (<a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font, char *name, char *value)</td></tr>
+<tr class="memitem:a0f73c2c72cc7058fdb8db91347a79f65" id="r_a0f73c2c72cc7058fdb8db91347a79f65"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0f73c2c72cc7058fdb8db91347a79f65">_bdf_parse_glyphs</a> (char *line, unsigned long linelen, unsigned long lineno, void *call_data, void *client_data)</td></tr>
+<tr class="memitem:a199139d01fec6d3da8d0c3d1dcb8bf10" id="r_a199139d01fec6d3da8d0c3d1dcb8bf10"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a199139d01fec6d3da8d0c3d1dcb8bf10">_bdf_parse_properties</a> (char *line, unsigned long linelen, unsigned long lineno, void *call_data, void *client_data)</td></tr>
+<tr class="memitem:ac7560dbb20e4a4eb0dfc4540a3a92a02" id="r_ac7560dbb20e4a4eb0dfc4540a3a92a02"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac7560dbb20e4a4eb0dfc4540a3a92a02">_bdf_parse_start</a> (char *line, unsigned long linelen, unsigned long lineno, void *call_data, void *client_data)</td></tr>
+<tr class="memitem:a911a631a0e95d260496fc821e7b3f3e0" id="r_a911a631a0e95d260496fc821e7b3f3e0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a911a631a0e95d260496fc821e7b3f3e0">bdf_load_font</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> extmemory, <a class="el" href="bdf_8h.html#a2ed2a3c46a476bf42a83185360dd47da">bdf_options_t</a> *opts, <a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> **font)</td></tr>
+<tr class="memitem:adb0c7636be0de8860798e9436079ad6d" id="r_adb0c7636be0de8860798e9436079ad6d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adb0c7636be0de8860798e9436079ad6d">bdf_free_font</a> (<a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font)</td></tr>
+<tr class="memitem:a0a4731b315c8ce97ebc348996493488f" id="r_a0a4731b315c8ce97ebc348996493488f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0a4731b315c8ce97ebc348996493488f">bdf_get_font_property</a> (<a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *font, char *name)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0e5947f90ef27868a1debbbca38198a2" id="r_a0e5947f90ef27868a1debbbca38198a2"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="bdf_8h.html#a2ed2a3c46a476bf42a83185360dd47da">bdf_options_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0e5947f90ef27868a1debbbca38198a2">_bdf_opts</a></td></tr>
+<tr class="memitem:a2878bf5fd6d02082beff19100609a71e" id="r_a2878bf5fd6d02082beff19100609a71e"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="bdf_8h.html#ae449db4c383527f1969adfe2cffaa304">bdf_property_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2878bf5fd6d02082beff19100609a71e">_bdf_properties</a> []</td></tr>
+<tr class="memitem:a2c6d120b182af176ecdbbc9d3ae0a931" id="r_a2c6d120b182af176ecdbbc9d3ae0a931"><td class="memItemLeft">static unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#a2c6d120b182af176ecdbbc9d3ae0a931">_num_bdf_properties</a></td></tr>
+<tr class="memitem:af603b63d08647e2f198e8f54a3722fb1" id="r_af603b63d08647e2f198e8f54a3722fb1"><td class="memItemLeft">static char&#160;</td><td class="memItemRight"><a class="el" href="#af603b63d08647e2f198e8f54a3722fb1">empty</a> [1] = { 0 }</td></tr>
+<tr class="memitem:a1577247c81480a0ea11819bae38a2d36" id="r_a1577247c81480a0ea11819bae38a2d36"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a1577247c81480a0ea11819bae38a2d36">a2i</a> [128]</td></tr>
+<tr class="memitem:a432d9ae681d6434f069fa34551ec749b" id="r_a432d9ae681d6434f069fa34551ec749b"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a432d9ae681d6434f069fa34551ec749b">odigits</a> [32]</td></tr>
+<tr class="memitem:a2bc390a84a3dab049a513cbfbd330fc7" id="r_a2bc390a84a3dab049a513cbfbd330fc7"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a2bc390a84a3dab049a513cbfbd330fc7">ddigits</a> [32]</td></tr>
+<tr class="memitem:a97a98d3413a5de8e970370a5eaea5e24" id="r_a97a98d3413a5de8e970370a5eaea5e24"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a97a98d3413a5de8e970370a5eaea5e24">hdigits</a> [32]</td></tr>
+<tr class="memitem:a2d61d081e0204bce80072430393730d9" id="r_a2d61d081e0204bce80072430393730d9"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a2d61d081e0204bce80072430393730d9">nibble_mask</a> [8]</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c35c2f1e7ae6fc9628de823d1ff796f" name="a9c35c2f1e7ae6fc9628de823d1ff796f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c35c2f1e7ae6fc9628de823d1ff796f">&#9670;&#160;</a></span>_BDF_BBX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_BBX&#160;&#160;&#160;0x0400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12c17058f354e966b07e38efb47d275e" name="a12c17058f354e966b07e38efb47d275e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c17058f354e966b07e38efb47d275e">&#9670;&#160;</a></span>_BDF_BITMAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_BITMAP&#160;&#160;&#160;0x0800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedbdf3d9230a84d52cbb367ed45930b3" name="aedbdf3d9230a84d52cbb367ed45930b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedbdf3d9230a84d52cbb367ed45930b3">&#9670;&#160;</a></span>_BDF_DWIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_DWIDTH&#160;&#160;&#160;0x0200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a314f1c87aadfcd80289300edb101abb8" name="a314f1c87aadfcd80289300edb101abb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314f1c87aadfcd80289300edb101abb8">&#9670;&#160;</a></span>_BDF_ENCODING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_ENCODING&#160;&#160;&#160;0x0080</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fe174a6f758ebc1f7b60ec715f17472" name="a3fe174a6f758ebc1f7b60ec715f17472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe174a6f758ebc1f7b60ec715f17472">&#9670;&#160;</a></span>_BDF_FONT_BBX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_FONT_BBX&#160;&#160;&#160;0x0008</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e5840982339b57ba345ca33c68f429d" name="a9e5840982339b57ba345ca33c68f429d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5840982339b57ba345ca33c68f429d">&#9670;&#160;</a></span>_BDF_FONT_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_FONT_NAME&#160;&#160;&#160;0x0002</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06092450eb36de57d658f6aa228485b7" name="a06092450eb36de57d658f6aa228485b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06092450eb36de57d658f6aa228485b7">&#9670;&#160;</a></span>_BDF_GLYPH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_GLYPH&#160;&#160;&#160;0x0040</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa73ffdd4446910abe6b11cd1b169ead8" name="aa73ffdd4446910abe6b11cd1b169ead8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa73ffdd4446910abe6b11cd1b169ead8">&#9670;&#160;</a></span>_BDF_GLYPH_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_GLYPH_BITS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( <a class="code hl_define" href="#a06092450eb36de57d658f6aa228485b7">_BDF_GLYPH</a>    | \</div>
+<div class="line"><a class="code hl_define" href="#a314f1c87aadfcd80289300edb101abb8">_BDF_ENCODING</a> | \</div>
+<div class="line"><a class="code hl_define" href="#a7966767dd087c2c80f83804cc3d7784c">_BDF_SWIDTH</a>   | \</div>
+<div class="line"><a class="code hl_define" href="#aedbdf3d9230a84d52cbb367ed45930b3">_BDF_DWIDTH</a>   | \</div>
+<div class="line"><a class="code hl_define" href="#a9c35c2f1e7ae6fc9628de823d1ff796f">_BDF_BBX</a>      | \</div>
+<div class="line"><a class="code hl_define" href="#a12c17058f354e966b07e38efb47d275e">_BDF_BITMAP</a>   )</div>
+<div class="ttc" id="abdflib_8c_html_a06092450eb36de57d658f6aa228485b7"><div class="ttname"><a href="#a06092450eb36de57d658f6aa228485b7">_BDF_GLYPH</a></div><div class="ttdeci">#define _BDF_GLYPH</div><div class="ttdef"><b>Definition</b> bdflib.c:1057</div></div>
+<div class="ttc" id="abdflib_8c_html_a12c17058f354e966b07e38efb47d275e"><div class="ttname"><a href="#a12c17058f354e966b07e38efb47d275e">_BDF_BITMAP</a></div><div class="ttdeci">#define _BDF_BITMAP</div><div class="ttdef"><b>Definition</b> bdflib.c:1062</div></div>
+<div class="ttc" id="abdflib_8c_html_a314f1c87aadfcd80289300edb101abb8"><div class="ttname"><a href="#a314f1c87aadfcd80289300edb101abb8">_BDF_ENCODING</a></div><div class="ttdeci">#define _BDF_ENCODING</div><div class="ttdef"><b>Definition</b> bdflib.c:1058</div></div>
+<div class="ttc" id="abdflib_8c_html_a7966767dd087c2c80f83804cc3d7784c"><div class="ttname"><a href="#a7966767dd087c2c80f83804cc3d7784c">_BDF_SWIDTH</a></div><div class="ttdeci">#define _BDF_SWIDTH</div><div class="ttdef"><b>Definition</b> bdflib.c:1059</div></div>
+<div class="ttc" id="abdflib_8c_html_a9c35c2f1e7ae6fc9628de823d1ff796f"><div class="ttname"><a href="#a9c35c2f1e7ae6fc9628de823d1ff796f">_BDF_BBX</a></div><div class="ttdeci">#define _BDF_BBX</div><div class="ttdef"><b>Definition</b> bdflib.c:1061</div></div>
+<div class="ttc" id="abdflib_8c_html_aedbdf3d9230a84d52cbb367ed45930b3"><div class="ttname"><a href="#aedbdf3d9230a84d52cbb367ed45930b3">_BDF_DWIDTH</a></div><div class="ttdeci">#define _BDF_DWIDTH</div><div class="ttdef"><b>Definition</b> bdflib.c:1060</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ace26a6fbd09efb22bef5456a1c5dc0c7" name="ace26a6fbd09efb22bef5456a1c5dc0c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace26a6fbd09efb22bef5456a1c5dc0c7">&#9670;&#160;</a></span>_BDF_GLYPH_HEIGHT_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_GLYPH_HEIGHT_CHECK&#160;&#160;&#160;0x80000000L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ee6dd6cae581e45458a02f0c96988b8" name="a5ee6dd6cae581e45458a02f0c96988b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee6dd6cae581e45458a02f0c96988b8">&#9670;&#160;</a></span>_BDF_GLYPH_WIDTH_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_GLYPH_WIDTH_CHECK&#160;&#160;&#160;0x40000000L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e788568bea4c83592694e22b89bdfd3" name="a1e788568bea4c83592694e22b89bdfd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e788568bea4c83592694e22b89bdfd3">&#9670;&#160;</a></span>_BDF_GLYPHS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_GLYPHS&#160;&#160;&#160;0x0020</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa3d01bf8c9ea517fe604b102d149485" name="afa3d01bf8c9ea517fe604b102d149485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3d01bf8c9ea517fe604b102d149485">&#9670;&#160;</a></span>_BDF_PROPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_PROPS&#160;&#160;&#160;0x0010</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab0cb8fac33d82f4dccaaf869c9679f6" name="aab0cb8fac33d82f4dccaaf869c9679f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0cb8fac33d82f4dccaaf869c9679f6">&#9670;&#160;</a></span>_BDF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_SIZE&#160;&#160;&#160;0x0004</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47e9b0b186fdc290aa739fa66b7d749d" name="a47e9b0b186fdc290aa739fa66b7d749d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e9b0b186fdc290aa739fa66b7d749d">&#9670;&#160;</a></span>_BDF_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_START&#160;&#160;&#160;0x0001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7966767dd087c2c80f83804cc3d7784c" name="a7966767dd087c2c80f83804cc3d7784c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7966767dd087c2c80f83804cc3d7784c">&#9670;&#160;</a></span>_BDF_SWIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_SWIDTH&#160;&#160;&#160;0x0100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f510dcbd02809c398411e2c3ca22bd4" name="a6f510dcbd02809c398411e2c3ca22bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f510dcbd02809c398411e2c3ca22bd4">&#9670;&#160;</a></span>_BDF_SWIDTH_ADJ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BDF_SWIDTH_ADJ&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59f34ec50935701c7874a8898593d941" name="a59f34ec50935701c7874a8898593d941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f34ec50935701c7874a8898593d941">&#9670;&#160;</a></span>ACMSG1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;FONT_ASCENT property missing.  &quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot;Added \&quot;FONT_ASCENT %hd\&quot;.\n&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a69a73a28c354f94b0be56853a6499630" name="a69a73a28c354f94b0be56853a6499630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a73a28c354f94b0be56853a6499630">&#9670;&#160;</a></span>ACMSG10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG10&#160;&#160;&#160;&quot;DWIDTH field missing at line %ld.  Set to glyph width.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2309797ff85936fa43a14e346b8b9a1" name="ae2309797ff85936fa43a14e346b8b9a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2309797ff85936fa43a14e346b8b9a1">&#9670;&#160;</a></span>ACMSG11</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG11&#160;&#160;&#160;&quot;SIZE <a class="el" href="infblock_8c.html#a5a8bfbb66d29fa73601b7d47438dec06">bits</a> per pixel field adjusted to %hd.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7e989d601e4610cda60fc78732e9d92" name="aa7e989d601e4610cda60fc78732e9d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e989d601e4610cda60fc78732e9d92">&#9670;&#160;</a></span>ACMSG12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG12&#160;&#160;&#160;&quot;Duplicate encoding %ld (%s) changed to unencoded.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa706591a819adf4263608bfeccee8127" name="aa706591a819adf4263608bfeccee8127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa706591a819adf4263608bfeccee8127">&#9670;&#160;</a></span>ACMSG13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG13&#160;&#160;&#160;&quot;Glyph %ld extra rows removed.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f18b2d6746cbf4a257d77143cd416a3" name="a9f18b2d6746cbf4a257d77143cd416a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f18b2d6746cbf4a257d77143cd416a3">&#9670;&#160;</a></span>ACMSG14</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG14&#160;&#160;&#160;&quot;Glyph %ld extra columns removed.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6292c375009661933c69f3ae8231cef7" name="a6292c375009661933c69f3ae8231cef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6292c375009661933c69f3ae8231cef7">&#9670;&#160;</a></span>ACMSG15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG15&#160;&#160;&#160;&quot;Incorrect glyph count: %ld indicated but %ld found.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae907eb192ad07ccc3047aed6acc42438" name="ae907eb192ad07ccc3047aed6acc42438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae907eb192ad07ccc3047aed6acc42438">&#9670;&#160;</a></span>ACMSG2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;FONT_DESCENT property missing.  &quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot;Added \&quot;FONT_DESCENT %hd\&quot;.\n&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a38818e0206d6281b167f2a6ae232efdb" name="a38818e0206d6281b167f2a6ae232efdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38818e0206d6281b167f2a6ae232efdb">&#9670;&#160;</a></span>ACMSG3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG3&#160;&#160;&#160;&quot;Font width != actual width.  Old: %hd New: %hd.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9415cd17409e53738a50211b867f4508" name="a9415cd17409e53738a50211b867f4508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9415cd17409e53738a50211b867f4508">&#9670;&#160;</a></span>ACMSG4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;Font left bearing != actual left bearing.  &quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot;Old: %hd New: %hd.\n&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae20647306a1109d962bae48fac884a46" name="ae20647306a1109d962bae48fac884a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20647306a1109d962bae48fac884a46">&#9670;&#160;</a></span>ACMSG5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG5&#160;&#160;&#160;&quot;Font ascent != actual ascent.  Old: %hd New: %hd.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a575f39aa420c8a4d2438d13974ff5599" name="a575f39aa420c8a4d2438d13974ff5599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575f39aa420c8a4d2438d13974ff5599">&#9670;&#160;</a></span>ACMSG6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG6&#160;&#160;&#160;&quot;Font descent != actual descent.  Old: %hd New: %hd.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99d2cc5cfa38a5f2b93c148f6d225802" name="a99d2cc5cfa38a5f2b93c148f6d225802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d2cc5cfa38a5f2b93c148f6d225802">&#9670;&#160;</a></span>ACMSG7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG7&#160;&#160;&#160;&quot;Font height != actual height. Old: %hd New: %hd.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea3a65957a41de35905030aae95ffa27" name="aea3a65957a41de35905030aae95ffa27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3a65957a41de35905030aae95ffa27">&#9670;&#160;</a></span>ACMSG8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG8&#160;&#160;&#160;&quot;Glyph scalable width (SWIDTH) adjustments made.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a303134c7bc72528f43d0b4f24dc06990" name="a303134c7bc72528f43d0b4f24dc06990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303134c7bc72528f43d0b4f24dc06990">&#9670;&#160;</a></span>ACMSG9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACMSG9&#160;&#160;&#160;&quot;SWIDTH field missing at line %ld.  Set automatically.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68dd2f7e1008b82de19642f57bfed78e" name="a68dd2f7e1008b82de19642f57bfed78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68dd2f7e1008b82de19642f57bfed78e">&#9670;&#160;</a></span>ERRMSG1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERRMSG1&#160;&#160;&#160;&quot;[line %ld] Missing \&quot;%s\&quot; line.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a650f5e85f2b0b3dc2ecbe13ecf594be4" name="a650f5e85f2b0b3dc2ecbe13ecf594be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650f5e85f2b0b3dc2ecbe13ecf594be4">&#9670;&#160;</a></span>ERRMSG2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERRMSG2&#160;&#160;&#160;&quot;[line %ld] Font header corrupted or missing fields.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdebafa0276829bf77f30c9aba941d83" name="afdebafa0276829bf77f30c9aba941d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdebafa0276829bf77f30c9aba941d83">&#9670;&#160;</a></span>ERRMSG3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERRMSG3&#160;&#160;&#160;&quot;[line %ld] Font glyphs corrupted or missing fields.\n&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_bdflib</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eeddb675efb4c080fe36fb4cb18e1fe" name="a0eeddb675efb4c080fe36fb4cb18e1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eeddb675efb4c080fe36fb4cb18e1fe">&#9670;&#160;</a></span>INITIAL_HT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INITIAL_HT_SIZE&#160;&#160;&#160;241</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bfda50dd9b0abd276a8f63620a18264" name="a6bfda50dd9b0abd276a8f63620a18264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bfda50dd9b0abd276a8f63620a18264">&#9670;&#160;</a></span>isdigok</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define isdigok</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(m[(d) &gt;&gt; 3] &amp; ( 1 &lt;&lt; ( (d) &amp; 7 ) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a659cc477ae9c1db560c963374f6f17ba" name="a659cc477ae9c1db560c963374f6f17ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659cc477ae9c1db560c963374f6f17ba">&#9670;&#160;</a></span>sbitset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sbitset</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( m[(cc) &gt;&gt; 3]  &amp; ( 1 &lt;&lt; ( (cc) &amp; 7 ) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac409db7e6a7a8a99389d893bd7b1f4e" name="aac409db7e6a7a8a99389d893bd7b1f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac409db7e6a7a8a99389d893bd7b1f4e">&#9670;&#160;</a></span>setsbit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define setsbit</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( m[(cc) &gt;&gt; 3] |= (<a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>)( 1 &lt;&lt; ( (cc) &amp; 7 ) ) )</div>
+<div class="ttc" id="afttypes_8h_html_a51f26183ca0c9f4af958939648caeccd"><div class="ttname"><a href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></div><div class="ttdeci">unsigned char FT_Byte</div><div class="ttdef"><b>Definition</b> fttypes.h:143</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a5707f86c0a2fd472654dfd629b5c4c7f" name="a5707f86c0a2fd472654dfd629b5c4c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5707f86c0a2fd472654dfd629b5c4c7f">&#9670;&#160;</a></span>_bdf_line_func_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>(* _bdf_line_func_t) (char *line, unsigned long linelen, unsigned long lineno, void *call_data, void *client_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7860f7606a6885c06c54b53eaf94e175" name="a7860f7606a6885c06c54b53eaf94e175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7860f7606a6885c06c54b53eaf94e175">&#9670;&#160;</a></span>_bdf_list_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__bdf__list__t__.html">_bdf_list_t_</a> <a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ee5e5b2c4fdeeac7a8955edd491dd8c" name="a0ee5e5b2c4fdeeac7a8955edd491dd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee5e5b2c4fdeeac7a8955edd491dd8c">&#9670;&#160;</a></span>_bdf_parse_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__bdf__parse__t__.html">_bdf_parse_t_</a> <a class="el" href="#a0ee5e5b2c4fdeeac7a8955edd491dd8c">_bdf_parse_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fe4f30c7585243050d42535791e5c62" name="a1fe4f30c7585243050d42535791e5c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe4f30c7585243050d42535791e5c62">&#9670;&#160;</a></span>hash_free_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* hash_free_func) (<a class="el" href="bdf_8h.html#a6a90f4ec6d32a7d65809a231d0183dec">hashnode</a> node)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="aa508ff1c8eb9b515d31885419ed49dd5" name="aa508ff1c8eb9b515d31885419ed49dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa508ff1c8eb9b515d31885419ed49dd5">&#9670;&#160;</a></span>_bdf_add_comment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_add_comment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>comment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_aa508ff1c8eb9b515d31885419ed49dd5_icgraph.png" border="0" usemap="#abdflib_8c_aa508ff1c8eb9b515d31885419ed49dd5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a92bb7c1da70ebe11bbe860922bb82ec7" name="a92bb7c1da70ebe11bbe860922bb82ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92bb7c1da70ebe11bbe860922bb82ec7">&#9670;&#160;</a></span>_bdf_add_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_add_property </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a92bb7c1da70ebe11bbe860922bb82ec7_cgraph.png" border="0" usemap="#abdflib_8c_a92bb7c1da70ebe11bbe860922bb82ec7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a92bb7c1da70ebe11bbe860922bb82ec7_icgraph.png" border="0" usemap="#abdflib_8c_a92bb7c1da70ebe11bbe860922bb82ec7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a4115a462129f803ea47d76b0a1aa8c13" name="a4115a462129f803ea47d76b0a1aa8c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4115a462129f803ea47d76b0a1aa8c13">&#9670;&#160;</a></span>_bdf_atol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long _bdf_atol </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>base</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a4115a462129f803ea47d76b0a1aa8c13_icgraph.png" border="0" usemap="#abdflib_8c_a4115a462129f803ea47d76b0a1aa8c13_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a919590bcf83928124670e0bd98217cae" name="a919590bcf83928124670e0bd98217cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919590bcf83928124670e0bd98217cae">&#9670;&#160;</a></span>_bdf_atos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _bdf_atos </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>base</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a919590bcf83928124670e0bd98217cae_icgraph.png" border="0" usemap="#abdflib_8c_a919590bcf83928124670e0bd98217cae_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="aeadd1c54f3491e3e4b28bc08dee1f0d0" name="aeadd1c54f3491e3e4b28bc08dee1f0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeadd1c54f3491e3e4b28bc08dee1f0d0">&#9670;&#160;</a></span>_bdf_atoul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long _bdf_atoul </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>base</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_aeadd1c54f3491e3e4b28bc08dee1f0d0_icgraph.png" border="0" usemap="#abdflib_8c_aeadd1c54f3491e3e4b28bc08dee1f0d0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a194239cee84022263b1142e385560549" name="a194239cee84022263b1142e385560549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194239cee84022263b1142e385560549">&#9670;&#160;</a></span>_bdf_is_atom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _bdf_is_atom </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>linelen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a194239cee84022263b1142e385560549_cgraph.png" border="0" usemap="#abdflib_8c_a194239cee84022263b1142e385560549_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a194239cee84022263b1142e385560549_icgraph.png" border="0" usemap="#abdflib_8c_a194239cee84022263b1142e385560549_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a816ebb1658337ca52112fb452e51fa97" name="a816ebb1658337ca52112fb452e51fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816ebb1658337ca52112fb452e51fa97">&#9670;&#160;</a></span>_bdf_join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * _bdf_join </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a816ebb1658337ca52112fb452e51fa97_icgraph.png" border="0" usemap="#abdflib_8c_a816ebb1658337ca52112fb452e51fa97_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a0f73c2c72cc7058fdb8db91347a79f65" name="a0f73c2c72cc7058fdb8db91347a79f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f73c2c72cc7058fdb8db91347a79f65">&#9670;&#160;</a></span>_bdf_parse_glyphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_parse_glyphs </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>linelen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>lineno</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>call_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>client_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a0f73c2c72cc7058fdb8db91347a79f65_cgraph.png" border="0" usemap="#abdflib_8c_a0f73c2c72cc7058fdb8db91347a79f65_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a0f73c2c72cc7058fdb8db91347a79f65_icgraph.png" border="0" usemap="#abdflib_8c_a0f73c2c72cc7058fdb8db91347a79f65_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a199139d01fec6d3da8d0c3d1dcb8bf10" name="a199139d01fec6d3da8d0c3d1dcb8bf10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a199139d01fec6d3da8d0c3d1dcb8bf10">&#9670;&#160;</a></span>_bdf_parse_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_parse_properties </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>linelen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>lineno</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>call_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>client_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a199139d01fec6d3da8d0c3d1dcb8bf10_cgraph.png" border="0" usemap="#abdflib_8c_a199139d01fec6d3da8d0c3d1dcb8bf10_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a199139d01fec6d3da8d0c3d1dcb8bf10_icgraph.png" border="0" usemap="#abdflib_8c_a199139d01fec6d3da8d0c3d1dcb8bf10_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="ac7560dbb20e4a4eb0dfc4540a3a92a02" name="ac7560dbb20e4a4eb0dfc4540a3a92a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7560dbb20e4a4eb0dfc4540a3a92a02">&#9670;&#160;</a></span>_bdf_parse_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_parse_start </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>linelen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>lineno</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>call_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>client_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ac7560dbb20e4a4eb0dfc4540a3a92a02_cgraph.png" border="0" usemap="#abdflib_8c_ac7560dbb20e4a4eb0dfc4540a3a92a02_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ac7560dbb20e4a4eb0dfc4540a3a92a02_icgraph.png" border="0" usemap="#abdflib_8c_ac7560dbb20e4a4eb0dfc4540a3a92a02_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="ac46014e661a929b41dd6bcf6d2f72b88" name="ac46014e661a929b41dd6bcf6d2f72b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46014e661a929b41dd6bcf6d2f72b88">&#9670;&#160;</a></span>_bdf_readstream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_readstream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a5707f86c0a2fd472654dfd629b5c4c7f">_bdf_line_func_t</a></td>          <td class="paramname"><span class="paramname"><em>callback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>client_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *</td>          <td class="paramname"><span class="paramname"><em>lno</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ac46014e661a929b41dd6bcf6d2f72b88_cgraph.png" border="0" usemap="#abdflib_8c_ac46014e661a929b41dd6bcf6d2f72b88_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ac46014e661a929b41dd6bcf6d2f72b88_icgraph.png" border="0" usemap="#abdflib_8c_ac46014e661a929b41dd6bcf6d2f72b88_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="ad29053a988b08a3c84360e92569ac187" name="ad29053a988b08a3c84360e92569ac187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29053a988b08a3c84360e92569ac187">&#9670;&#160;</a></span>_bdf_set_default_spacing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_set_default_spacing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a2ed2a3c46a476bf42a83185360dd47da">bdf_options_t</a> *</td>          <td class="paramname"><span class="paramname"><em>opts</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ad29053a988b08a3c84360e92569ac187_cgraph.png" border="0" usemap="#abdflib_8c_ad29053a988b08a3c84360e92569ac187_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ad29053a988b08a3c84360e92569ac187_icgraph.png" border="0" usemap="#abdflib_8c_ad29053a988b08a3c84360e92569ac187_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="ac2a86dd652365fa892478c58d5867c6c" name="ac2a86dd652365fa892478c58d5867c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a86dd652365fa892478c58d5867c6c">&#9670;&#160;</a></span>_bdf_shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _bdf_shift </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ac2a86dd652365fa892478c58d5867c6c_icgraph.png" border="0" usemap="#abdflib_8c_ac2a86dd652365fa892478c58d5867c6c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="ab493227fb915f3c88666a6f6eab00169" name="ab493227fb915f3c88666a6f6eab00169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab493227fb915f3c88666a6f6eab00169">&#9670;&#160;</a></span>_bdf_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> _bdf_split </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>separators</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>linelen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7860f7606a6885c06c54b53eaf94e175">_bdf_list_t</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ab493227fb915f3c88666a6f6eab00169_icgraph.png" border="0" usemap="#abdflib_8c_ab493227fb915f3c88666a6f6eab00169_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a5755ef90aa4a510b3cd188649c1e7877" name="a5755ef90aa4a510b3cd188649c1e7877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5755ef90aa4a510b3cd188649c1e7877">&#9670;&#160;</a></span>bdf_create_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> bdf_create_property </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a5755ef90aa4a510b3cd188649c1e7877_cgraph.png" border="0" usemap="#abdflib_8c_a5755ef90aa4a510b3cd188649c1e7877_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a5755ef90aa4a510b3cd188649c1e7877_icgraph.png" border="0" usemap="#abdflib_8c_a5755ef90aa4a510b3cd188649c1e7877_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="adb0c7636be0de8860798e9436079ad6d" name="adb0c7636be0de8860798e9436079ad6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0c7636be0de8860798e9436079ad6d">&#9670;&#160;</a></span>bdf_free_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bdf_free_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_adb0c7636be0de8860798e9436079ad6d_cgraph.png" border="0" usemap="#abdflib_8c_adb0c7636be0de8860798e9436079ad6d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_adb0c7636be0de8860798e9436079ad6d_icgraph.png" border="0" usemap="#abdflib_8c_adb0c7636be0de8860798e9436079ad6d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="a0a4731b315c8ce97ebc348996493488f" name="a0a4731b315c8ce97ebc348996493488f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4731b315c8ce97ebc348996493488f">&#9670;&#160;</a></span>bdf_get_font_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bdf_get_font_property </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a0a4731b315c8ce97ebc348996493488f_cgraph.png" border="0" usemap="#abdflib_8c_a0a4731b315c8ce97ebc348996493488f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a0a4731b315c8ce97ebc348996493488f_icgraph.png" border="0" usemap="#abdflib_8c_a0a4731b315c8ce97ebc348996493488f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="a04fa944f2694027db53677a291ece2d2" name="a04fa944f2694027db53677a291ece2d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fa944f2694027db53677a291ece2d2">&#9670;&#160;</a></span>bdf_get_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bdf_get_property </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a04fa944f2694027db53677a291ece2d2_cgraph.png" border="0" usemap="#abdflib_8c_a04fa944f2694027db53677a291ece2d2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a04fa944f2694027db53677a291ece2d2_icgraph.png" border="0" usemap="#abdflib_8c_a04fa944f2694027db53677a291ece2d2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="ad22c456947d7992ec7fd6380c42a1d9c" name="ad22c456947d7992ec7fd6380c42a1d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22c456947d7992ec7fd6380c42a1d9c">&#9670;&#160;</a></span>bdf_internal_readstream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> bdf_internal_readstream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>read_bytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ad22c456947d7992ec7fd6380c42a1d9c_icgraph.png" border="0" usemap="#abdflib_8c_ad22c456947d7992ec7fd6380c42a1d9c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a911a631a0e95d260496fc821e7b3f3e0" name="a911a631a0e95d260496fc821e7b3f3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911a631a0e95d260496fc821e7b3f3e0">&#9670;&#160;</a></span>bdf_load_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bdf_load_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>extmemory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a2ed2a3c46a476bf42a83185360dd47da">bdf_options_t</a> *</td>          <td class="paramname"><span class="paramname"><em>opts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#aa9d8b6f343f3c6a240435bbc730d54e4">bdf_font_t</a> **</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a911a631a0e95d260496fc821e7b3f3e0_cgraph.png" border="0" usemap="#abdflib_8c_a911a631a0e95d260496fc821e7b3f3e0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a911a631a0e95d260496fc821e7b3f3e0_icgraph.png" border="0" usemap="#abdflib_8c_a911a631a0e95d260496fc821e7b3f3e0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="ab23b2cc467ed4fdca8be9b240d7f9e31" name="ab23b2cc467ed4fdca8be9b240d7f9e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23b2cc467ed4fdca8be9b240d7f9e31">&#9670;&#160;</a></span>by_encoding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int by_encoding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> void *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ab23b2cc467ed4fdca8be9b240d7f9e31_icgraph.png" border="0" usemap="#abdflib_8c_ab23b2cc467ed4fdca8be9b240d7f9e31_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="a9e06265a24feb234e232bc13b2788dda" name="a9e06265a24feb234e232bc13b2788dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e06265a24feb234e232bc13b2788dda">&#9670;&#160;</a></span>hash_bucket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bdf_8h.html#a6a90f4ec6d32a7d65809a231d0183dec">hashnode</a> * hash_bucket </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a9e06265a24feb234e232bc13b2788dda_icgraph.png" border="0" usemap="#abdflib_8c_a9e06265a24feb234e232bc13b2788dda_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a16b03f6ad2e02cd0a86a3e4a77f21309" name="a16b03f6ad2e02cd0a86a3e4a77f21309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b03f6ad2e02cd0a86a3e4a77f21309">&#9670;&#160;</a></span>hash_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hash_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a16b03f6ad2e02cd0a86a3e4a77f21309_icgraph.png" border="0" usemap="#abdflib_8c_a16b03f6ad2e02cd0a86a3e4a77f21309_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="aaae7909bf6cba80a00463295cdabb65c" name="aaae7909bf6cba80a00463295cdabb65c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae7909bf6cba80a00463295cdabb65c">&#9670;&#160;</a></span>hash_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> hash_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_aaae7909bf6cba80a00463295cdabb65c_icgraph.png" border="0" usemap="#abdflib_8c_aaae7909bf6cba80a00463295cdabb65c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a id="ab916868a207429e765c433cd3d67b63b" name="ab916868a207429e765c433cd3d67b63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab916868a207429e765c433cd3d67b63b">&#9670;&#160;</a></span>hash_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> hash_insert </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ab916868a207429e765c433cd3d67b63b_cgraph.png" border="0" usemap="#abdflib_8c_ab916868a207429e765c433cd3d67b63b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_ab916868a207429e765c433cd3d67b63b_icgraph.png" border="0" usemap="#abdflib_8c_ab916868a207429e765c433cd3d67b63b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+
+</div>
+</div>
+<a id="a264c70afa66b9ae27def3e33afc1850f" name="a264c70afa66b9ae27def3e33afc1850f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264c70afa66b9ae27def3e33afc1850f">&#9670;&#160;</a></span>hash_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bdf_8h.html#a6a90f4ec6d32a7d65809a231d0183dec">hashnode</a> hash_lookup </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a264c70afa66b9ae27def3e33afc1850f_cgraph.png" border="0" usemap="#abdflib_8c_a264c70afa66b9ae27def3e33afc1850f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a264c70afa66b9ae27def3e33afc1850f_icgraph.png" border="0" usemap="#abdflib_8c_a264c70afa66b9ae27def3e33afc1850f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+
+</div>
+</div>
+<a id="a59ac8a0173db31096ba501c7e92a13bc" name="a59ac8a0173db31096ba501c7e92a13bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ac8a0173db31096ba501c7e92a13bc">&#9670;&#160;</a></span>hash_rehash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> hash_rehash </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bdf_8h.html#a33ab93bdcddab44bc1c01df0cd221fae">hashtable</a> *</td>          <td class="paramname"><span class="paramname"><em>ht</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a59ac8a0173db31096ba501c7e92a13bc_cgraph.png" border="0" usemap="#abdflib_8c_a59ac8a0173db31096ba501c7e92a13bc_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bdflib_8c_a59ac8a0173db31096ba501c7e92a13bc_icgraph.png" border="0" usemap="#abdflib_8c_a59ac8a0173db31096ba501c7e92a13bc_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a0e5947f90ef27868a1debbbca38198a2" name="a0e5947f90ef27868a1debbbca38198a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5947f90ef27868a1debbbca38198a2">&#9670;&#160;</a></span>_bdf_opts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="bdf_8h.html#a2ed2a3c46a476bf42a83185360dd47da">bdf_options_t</a> _bdf_opts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                      =</div>
+<div class="line">{</div>
+<div class="line">  1,                </div>
+<div class="line">  1,                </div>
+<div class="line">  0,                </div>
+<div class="line">  <a class="code hl_define" href="bdf_8h.html#a2a352da78898f4be3fba40949e2c3e0f">BDF_PROPORTIONAL</a>  </div>
+<div class="line">}</div>
+<div class="ttc" id="abdf_8h_html_a2a352da78898f4be3fba40949e2c3e0f"><div class="ttname"><a href="bdf_8h.html#a2a352da78898f4be3fba40949e2c3e0f">BDF_PROPORTIONAL</a></div><div class="ttdeci">#define BDF_PROPORTIONAL</div><div class="ttdef"><b>Definition</b> bdf.h:63</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2878bf5fd6d02082beff19100609a71e" name="a2878bf5fd6d02082beff19100609a71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2878bf5fd6d02082beff19100609a71e">&#9670;&#160;</a></span>_bdf_properties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="bdf_8h.html#ae449db4c383527f1969adfe2cffaa304">bdf_property_t</a> _bdf_properties[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c6d120b182af176ecdbbc9d3ae0a931" name="a2c6d120b182af176ecdbbc9d3ae0a931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6d120b182af176ecdbbc9d3ae0a931">&#9670;&#160;</a></span>_num_bdf_properties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long _num_bdf_properties</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= <span class="keyword">sizeof</span> ( <a class="code hl_variable" href="#a2878bf5fd6d02082beff19100609a71e">_bdf_properties</a> ) /</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_variable" href="#a2878bf5fd6d02082beff19100609a71e">_bdf_properties</a>[0] )</div>
+<div class="ttc" id="abdflib_8c_html_a2878bf5fd6d02082beff19100609a71e"><div class="ttname"><a href="#a2878bf5fd6d02082beff19100609a71e">_bdf_properties</a></div><div class="ttdeci">static const bdf_property_t _bdf_properties[]</div><div class="ttdef"><b>Definition</b> bdflib.c:79</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1577247c81480a0ea11819bae38a2d36" name="a1577247c81480a0ea11819bae38a2d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1577247c81480a0ea11819bae38a2d36">&#9670;&#160;</a></span>a2i</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char a2i[128]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                =</div>
+<div class="line">{</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2bc390a84a3dab049a513cbfbd330fc7" name="a2bc390a84a3dab049a513cbfbd330fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc390a84a3dab049a513cbfbd330fc7">&#9670;&#160;</a></span>ddigits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char ddigits[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                    =</div>
+<div class="line">{</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0x03,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af603b63d08647e2f198e8f54a3722fb1" name="af603b63d08647e2f198e8f54a3722fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af603b63d08647e2f198e8f54a3722fb1">&#9670;&#160;</a></span>empty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char empty[1] = { 0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97a98d3413a5de8e970370a5eaea5e24" name="a97a98d3413a5de8e970370a5eaea5e24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a98d3413a5de8e970370a5eaea5e24">&#9670;&#160;</a></span>hdigits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char hdigits[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                    =</div>
+<div class="line">{</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0x03,</div>
+<div class="line">  0x7e, 0x00, 0x00, 0x00, 0x7e, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2d61d081e0204bce80072430393730d9" name="a2d61d081e0204bce80072430393730d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d61d081e0204bce80072430393730d9">&#9670;&#160;</a></span>nibble_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char nibble_mask[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                       =</div>
+<div class="line">{</div>
+<div class="line">  0xFF, 0x80, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC, 0xFE</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a432d9ae681d6434f069fa34551ec749b" name="a432d9ae681d6434f069fa34551ec749b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432d9ae681d6434f069fa34551ec749b">&#9670;&#160;</a></span>odigits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char odigits[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                    =</div>
+<div class="line">{</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_c5def397d0967056b6b3a445c073694d.html">bdf</a></li><li class="navelem"><a href="bdflib_8c.html">bdflib.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

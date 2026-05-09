@@ -1,0 +1,2647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/raster/ftraster.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftraster_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftraster.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ftraster_8h_source.html">ftraster.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rasterrs_8h_source.html">rasterrs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftraster.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2raster_2ftraster_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2raster_2ftraster_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ftraster_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:TPoint_5F" id="r_TPoint_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_t_point__.html">TPoint_</a></td></tr>
+<tr class="memitem:TProfile_5F" id="r_TProfile_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_t_profile__.html">TProfile_</a></td></tr>
+<tr class="memitem:TBand_5F" id="r_TBand_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_t_band__.html">TBand_</a></td></tr>
+<tr class="memitem:TRaster_5FInstance_5F" id="r_TRaster_5FInstance_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_t_raster___instance__.html">TRaster_Instance_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:adc81a156cdb333a744b462ff95f0498c" id="r_adc81a156cdb333a744b462ff95f0498c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adc81a156cdb333a744b462ff95f0498c">xxxDEBUG_RASTER</a></td></tr>
+<tr class="memitem:a97976244ba85832d1edd4d4c91eed0bb" id="r_a97976244ba85832d1edd4d4c91eed0bb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a97976244ba85832d1edd4d4c91eed0bb">RASTER_RENDER_POOL</a>&#160;&#160;&#160;8192</td></tr>
+<tr class="memitem:a5bb70584f6547f691710d335dd049d66" id="r_a5bb70584f6547f691710d335dd049d66"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5bb70584f6547f691710d335dd049d66">RASTER_GRAY_LINES</a>&#160;&#160;&#160;2048</td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_raster</td></tr>
+<tr class="memitem:a360d62e6e3bb4c2ca29f6da5ad6ca76e" id="r_a360d62e6e3bb4c2ca29f6da5ad6ca76e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a360d62e6e3bb4c2ca29f6da5ad6ca76e">Raster_Err_None</a>&#160;&#160;&#160;Raster_Err_Ok</td></tr>
+<tr class="memitem:a6e187bd68a2d95cc7bc4c9452998b0d7" id="r_a6e187bd68a2d95cc7bc4c9452998b0d7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6e187bd68a2d95cc7bc4c9452998b0d7">Raster_Err_Not_Ini</a>&#160;&#160;&#160;Raster_Err_Raster_Uninitialized</td></tr>
+<tr class="memitem:afa1a98ddca71b12a14933715110d76c6" id="r_afa1a98ddca71b12a14933715110d76c6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afa1a98ddca71b12a14933715110d76c6">Raster_Err_Overflow</a>&#160;&#160;&#160;Raster_Err_Raster_Overflow</td></tr>
+<tr class="memitem:ac0184c290ceee0dd36b5f47cc9dea63a" id="r_ac0184c290ceee0dd36b5f47cc9dea63a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac0184c290ceee0dd36b5f47cc9dea63a">Raster_Err_Neg_Height</a>&#160;&#160;&#160;Raster_Err_Raster_Negative_Height</td></tr>
+<tr class="memitem:a74d0915e0942db789de171fb35dcabf4" id="r_a74d0915e0942db789de171fb35dcabf4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a74d0915e0942db789de171fb35dcabf4">Raster_Err_Invalid</a>&#160;&#160;&#160;Raster_Err_Invalid_Outline</td></tr>
+<tr class="memitem:a7c68ddd5a04fd4500e084d9eefd87a72" id="r_a7c68ddd5a04fd4500e084d9eefd87a72"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7c68ddd5a04fd4500e084d9eefd87a72">Raster_Err_Unsupported</a>&#160;&#160;&#160;Raster_Err_Cannot_Render_Glyph</td></tr>
+<tr class="memitem:a6475871875685d4e791a1d0f3780744e" id="r_a6475871875685d4e791a1d0f3780744e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6475871875685d4e791a1d0f3780744e">FT_MEM_SET</a>(d,  s,  c)</td></tr>
+<tr class="memitem:accd5c76c2588927f681c1acac544b6e8" id="r_accd5c76c2588927f681c1acac544b6e8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#accd5c76c2588927f681c1acac544b6e8">FMulDiv</a>(a,  b,  c)</td></tr>
+<tr class="memitem:ac65bedc5e6341995936792cb3a13777b" id="r_ac65bedc5e6341995936792cb3a13777b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac65bedc5e6341995936792cb3a13777b">SMulDiv</a>&#160;&#160;&#160;<a class="el" href="freetype_8h.html#ae31c0f444ce1bba445af776b86beaa60">FT_MulDiv</a></td></tr>
+<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d" id="r_aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1" id="r_aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a070d2ce7b6bb7e5c05602aa8c308d0c4" id="r_a070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&#160;&#160;&#160;(void*)0</td></tr>
+<tr class="memitem:aa90cac659d18e8ef6294c7ae337f6b58" id="r_aa90cac659d18e8ef6294c7ae337f6b58"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a6d58f9ac447476b4e084d7ca383f5183" id="r_a6d58f9ac447476b4e084d7ca383f5183"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a34a02abdca51978cb9fc46a9c376d645" id="r_a34a02abdca51978cb9fc46a9c376d645"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a34a02abdca51978cb9fc46a9c376d645">MaxBezier</a>&#160;&#160;&#160;32   /* The maximum number of stacked Bezier curves. */</td></tr>
+<tr class="memitem:ad4e144632537469446509a116f7b5a5e" id="r_ad4e144632537469446509a116f7b5a5e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad4e144632537469446509a116f7b5a5e">Pixel_Bits</a>&#160;&#160;&#160;6   /* fractional <a class="el" href="infblock_8c.html#a5a8bfbb66d29fa73601b7d47438dec06">bits</a> of *input* coordinates */</td></tr>
+<tr class="memitem:a6347fc31c8eaf37c0603d4e581a26754" id="r_a6347fc31c8eaf37c0603d4e581a26754"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6347fc31c8eaf37c0603d4e581a26754">AlignProfileSize</a>&#160;&#160;&#160;( ( sizeof ( <a class="el" href="#a96af020a25c7933a3b37f10bb7aca083">TProfile</a> ) + sizeof ( long ) - 1 ) / sizeof ( long ) )</td></tr>
+<tr class="memitem:a4515e53b675c0edc396aeb64a55f6404" id="r_a4515e53b675c0edc396aeb64a55f6404"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a>&#160;&#160;&#160;<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a>*  raster,</td></tr>
+<tr class="memitem:a1523f79d603e23dfea98f6f5a2dcd8b4" id="r_a1523f79d603e23dfea98f6f5a2dcd8b4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>&#160;&#160;&#160;<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a>*  raster</td></tr>
+<tr class="memitem:a9e730202e2cfcc45b4f9ce1f8cf1065d" id="r_a9e730202e2cfcc45b4f9ce1f8cf1065d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9e730202e2cfcc45b4f9ce1f8cf1065d">RAS_VARS</a>&#160;&#160;&#160;raster,</td></tr>
+<tr class="memitem:a71d83a981d5845ee2392a85c2369311a" id="r_a71d83a981d5845ee2392a85c2369311a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a71d83a981d5845ee2392a85c2369311a">RAS_VAR</a>&#160;&#160;&#160;raster</td></tr>
+<tr class="memitem:a89f28437eb4324b5bf6087f35a542c5f" id="r_a89f28437eb4324b5bf6087f35a542c5f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a89f28437eb4324b5bf6087f35a542c5f">FT_UNUSED_RASTER</a>&#160;&#160;&#160;<a class="el" href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a>( raster )</td></tr>
+<tr class="memitem:a2f0eecb0f7856721f56faff8f27b0dc1" id="r_a2f0eecb0f7856721f56faff8f27b0dc1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2f0eecb0f7856721f56faff8f27b0dc1">FLOOR</a>(x)</td></tr>
+<tr class="memitem:a6288138452f7c77b85d2ea4ea2a168e1" id="r_a6288138452f7c77b85d2ea4ea2a168e1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6288138452f7c77b85d2ea4ea2a168e1">CEILING</a>(x)</td></tr>
+<tr class="memitem:a2f76c7f0d1d2b7f4abfbcbe4013be53f" id="r_a2f76c7f0d1d2b7f4abfbcbe4013be53f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2f76c7f0d1d2b7f4abfbcbe4013be53f">TRUNC</a>(x)</td></tr>
+<tr class="memitem:a18062fa912e72dd3a06901f394c91ce0" id="r_a18062fa912e72dd3a06901f394c91ce0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a18062fa912e72dd3a06901f394c91ce0">FRAC</a>(x)</td></tr>
+<tr class="memitem:aa3355c3bbfb75450fa0574e56756b493" id="r_aa3355c3bbfb75450fa0574e56756b493"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa3355c3bbfb75450fa0574e56756b493">SCALED</a>(x)</td></tr>
+<tr class="memitem:a8e181e0a2fa64bf35d8f9e6994fb1c60" id="r_a8e181e0a2fa64bf35d8f9e6994fb1c60"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>&#160;&#160;&#160;(*raster)</td></tr>
+<tr class="memitem:a223c037364d1a882bd3aeee45c473f5e" id="r_a223c037364d1a882bd3aeee45c473f5e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a223c037364d1a882bd3aeee45c473f5e">SWAP_</a>(x,  y)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a7cc214a236ad3bb6ad435bdcf5262a3f" id="r_a7cc214a236ad3bb6ad435bdcf5262a3f"><td class="memItemLeft">typedef int&#160;</td><td class="memItemRight"><a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a></td></tr>
+<tr class="memitem:aba0996d26f7be2572973245b51852757" id="r_aba0996d26f7be2572973245b51852757"><td class="memItemLeft">typedef unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#aba0996d26f7be2572973245b51852757">UInt</a></td></tr>
+<tr class="memitem:afda09e1b042bc53383781ffa6c879100" id="r_afda09e1b042bc53383781ffa6c879100"><td class="memItemLeft">typedef short&#160;</td><td class="memItemRight"><a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a></td></tr>
+<tr class="memitem:a18e281e95408f2e45895ae32957c4888" id="r_a18e281e95408f2e45895ae32957c4888"><td class="memItemLeft">typedef unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#a18e281e95408f2e45895ae32957c4888">UShort</a></td></tr>
+<tr class="memitem:a178aad43b7bdda15fa8b7b941e04637d" id="r_a178aad43b7bdda15fa8b7b941e04637d"><td class="memItemLeft">typedef unsigned short *&#160;</td><td class="memItemRight"><a class="el" href="#a178aad43b7bdda15fa8b7b941e04637d">PUShort</a></td></tr>
+<tr class="memitem:a3bb1dddc49d9e4f6f66634f964e6131c" id="r_a3bb1dddc49d9e4f6f66634f964e6131c"><td class="memItemLeft">typedef long&#160;</td><td class="memItemRight"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td></tr>
+<tr class="memitem:abc5145436a86fa202741749795698353" id="r_abc5145436a86fa202741749795698353"><td class="memItemLeft">typedef long *&#160;</td><td class="memItemRight"><a class="el" href="#abc5145436a86fa202741749795698353">PLong</a></td></tr>
+<tr class="memitem:a758b09c0b13933408d1f96e0b78f0c17" id="r_a758b09c0b13933408d1f96e0b78f0c17"><td class="memItemLeft">typedef unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#a758b09c0b13933408d1f96e0b78f0c17">ULong</a></td></tr>
+<tr class="memitem:af6dee9a5e5a9c9820f792e32bfb8f198" id="r_af6dee9a5e5a9c9820f792e32bfb8f198"><td class="memItemLeft">typedef unsigned char *&#160;</td><td class="memItemRight"><a class="el" href="#af6dee9a5e5a9c9820f792e32bfb8f198">PByte</a></td></tr>
+<tr class="memitem:a6ad580534158bb13523c8d50ea902f1f" id="r_a6ad580534158bb13523c8d50ea902f1f"><td class="memItemLeft">typedef char&#160;</td><td class="memItemRight"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a></td></tr>
+<tr class="memitem:aac0bbea26bebd968ed0b29ed260b9a06" id="r_aac0bbea26bebd968ed0b29ed260b9a06"><td class="memItemLeft">typedef struct <a class="el" href="struct_t_point__.html">TPoint_</a>&#160;</td><td class="memItemRight"><a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a></td></tr>
+<tr class="memitem:ae6b6a178c8ef1ce1a1821525db1da170" id="r_ae6b6a178c8ef1ce1a1821525db1da170"><td class="memItemLeft">typedef enum <a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05">TFlow_</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae6b6a178c8ef1ce1a1821525db1da170">TFlow</a></td></tr>
+<tr class="memitem:a9711e805bcae4ead8beecb9c1aacc4fb" id="r_a9711e805bcae4ead8beecb9c1aacc4fb"><td class="memItemLeft">typedef enum <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5">TStates_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9711e805bcae4ead8beecb9c1aacc4fb">TStates</a></td></tr>
+<tr class="memitem:a96af020a25c7933a3b37f10bb7aca083" id="r_a96af020a25c7933a3b37f10bb7aca083"><td class="memItemLeft">typedef struct <a class="el" href="struct_t_profile__.html">TProfile_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a96af020a25c7933a3b37f10bb7aca083">TProfile</a></td></tr>
+<tr class="memitem:a7112beb232e4b281302051d0525e0c10" id="r_a7112beb232e4b281302051d0525e0c10"><td class="memItemLeft">typedef <a class="el" href="#a96af020a25c7933a3b37f10bb7aca083">TProfile</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td></tr>
+<tr class="memitem:a7eb5ca62e35a2f73bac47e7b1ecd7273" id="r_a7eb5ca62e35a2f73bac47e7b1ecd7273"><td class="memItemLeft">typedef <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7eb5ca62e35a2f73bac47e7b1ecd7273">TProfileList</a></td></tr>
+<tr class="memitem:ac8ca44defcb2c08b38c9505321253bc5" id="r_ac8ca44defcb2c08b38c9505321253bc5"><td class="memItemLeft">typedef <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a></td></tr>
+<tr class="memitem:a0de30b99d302950e481108a14d828702" id="r_a0de30b99d302950e481108a14d828702"><td class="memItemLeft">typedef struct <a class="el" href="struct_t_band__.html">TBand_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0de30b99d302950e481108a14d828702">TBand</a></td></tr>
+<tr class="memitem:a7dae555bfc385a6e35b6b49489069941" id="r_a7dae555bfc385a6e35b6b49489069941"><td class="memItemLeft">typedef struct <a class="el" href="struct_t_raster___instance__.html">TRaster_Instance_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a></td></tr>
+<tr class="memitem:a8dead1cc07abb35e03b7237aa9e1352f" id="r_a8dead1cc07abb35e03b7237aa9e1352f"><td class="memItemLeft">typedef void&#160;</td><td class="memItemRight"><a class="el" href="#a8dead1cc07abb35e03b7237aa9e1352f">Function_Sweep_Init</a>(<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *min, <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *max)</td></tr>
+<tr class="memitem:ab41f6b509bca431db5960503f1673434" id="r_ab41f6b509bca431db5960503f1673434"><td class="memItemLeft">typedef void&#160;</td><td class="memItemRight"><a class="el" href="#ab41f6b509bca431db5960503f1673434">Function_Sweep_Span</a>(<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> y, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x1, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x2, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> left, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> right)</td></tr>
+<tr class="memitem:a725d9914f0d8e24b2a78f13586881992" id="r_a725d9914f0d8e24b2a78f13586881992"><td class="memItemLeft">typedef void&#160;</td><td class="memItemRight"><a class="el" href="#a725d9914f0d8e24b2a78f13586881992">Function_Sweep_Step</a>(<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:a19365ab7e3d4d45b87a6abb1823ea247" id="r_a19365ab7e3d4d45b87a6abb1823ea247"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#a19365ab7e3d4d45b87a6abb1823ea247">TSplitter</a>) (<a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a> *base)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a2ea8ad150eb1876d2130f715a7f50c05" id="r_a2ea8ad150eb1876d2130f715a7f50c05"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05">TFlow_</a> { <a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05aca0144d66c59284c531d8c81466044fb">Flow_None</a> = 0
+, <a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05a63cd1a4178e5e7fbabc8eb2ff18249ed">Flow_Up</a> = 1
+, <a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05a0face1e6d139f197ccdc6da7384edeef">Flow_Down</a> = -1
+ }</td></tr>
+<tr class="memitem:a1c86d16639633f0ab114f234b91c54e5" id="r_a1c86d16639633f0ab114f234b91c54e5"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a1c86d16639633f0ab114f234b91c54e5">TStates_</a> { <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5a9bc0418eca54744d40ce7a54484767ec">Unknown_State</a>
+, <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5a1d8de6f63a8904bf57e59f007872acda">Ascending_State</a>
+, <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5a9decf67f642a23760c8488c2966db6d1">Descending_State</a>
+, <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5addcf2d43a493f87c33d3243735666979">Flat_State</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a131642a814658a65be5c4c34f423ec8e" id="r_a131642a814658a65be5c4c34f423ec8e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a131642a814658a65be5c4c34f423ec8e">Set_High_Precision</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a> High)</td></tr>
+<tr class="memitem:a2ed1f9f83eafa69bf5c8704c09c2aaa8" id="r_a2ed1f9f83eafa69bf5c8704c09c2aaa8"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2ed1f9f83eafa69bf5c8704c09c2aaa8">New_Profile</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a9711e805bcae4ead8beecb9c1aacc4fb">TStates</a> aState)</td></tr>
+<tr class="memitem:a062e62c20c843fca61de8f8a16723bca" id="r_a062e62c20c843fca61de8f8a16723bca"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a062e62c20c843fca61de8f8a16723bca">End_Profile</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:aee3b7f2a8e807fc373d340521cddbe8d" id="r_aee3b7f2a8e807fc373d340521cddbe8d"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#aee3b7f2a8e807fc373d340521cddbe8d">Insert_Y_Turn</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a> y)</td></tr>
+<tr class="memitem:a1aab7fe6fb3112396c138745dc3f48a9" id="r_a1aab7fe6fb3112396c138745dc3f48a9"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1aab7fe6fb3112396c138745dc3f48a9">Finalize_Profile_Table</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:a4fb79bd7e69744d6636571d3447d8757" id="r_a4fb79bd7e69744d6636571d3447d8757"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4fb79bd7e69744d6636571d3447d8757">Split_Conic</a> (<a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a> *base)</td></tr>
+<tr class="memitem:a74e83a7d6fcb976493d7c57c53fd96bd" id="r_a74e83a7d6fcb976493d7c57c53fd96bd"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a74e83a7d6fcb976493d7c57c53fd96bd">Split_Cubic</a> (<a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a> *base)</td></tr>
+<tr class="memitem:ab8cf4b52f22dd535140216213bc34af9" id="r_ab8cf4b52f22dd535140216213bc34af9"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab8cf4b52f22dd535140216213bc34af9">Line_Up</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x1, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y1, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x2, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y2, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> miny, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> maxy)</td></tr>
+<tr class="memitem:a19475da24a3c63e3a8b2fcb69eeec901" id="r_a19475da24a3c63e3a8b2fcb69eeec901"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a19475da24a3c63e3a8b2fcb69eeec901">Line_Down</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x1, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y1, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x2, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y2, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> miny, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> maxy)</td></tr>
+<tr class="memitem:ac549f99ba291d40e3043611b2f0a6592" id="r_ac549f99ba291d40e3043611b2f0a6592"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac549f99ba291d40e3043611b2f0a6592">Bezier_Up</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a> degree, <a class="el" href="#a19365ab7e3d4d45b87a6abb1823ea247">TSplitter</a> splitter, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> miny, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> maxy)</td></tr>
+<tr class="memitem:a70f6e5f23eebe889a0a508cc2b1d9df9" id="r_a70f6e5f23eebe889a0a508cc2b1d9df9"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a70f6e5f23eebe889a0a508cc2b1d9df9">Bezier_Down</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a> degree, <a class="el" href="#a19365ab7e3d4d45b87a6abb1823ea247">TSplitter</a> splitter, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> miny, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> maxy)</td></tr>
+<tr class="memitem:a839c5934014ab3cb235b775dea423a6f" id="r_a839c5934014ab3cb235b775dea423a6f"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a839c5934014ab3cb235b775dea423a6f">Line_To</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y)</td></tr>
+<tr class="memitem:a230bf130d52060bd02240131dc452108" id="r_a230bf130d52060bd02240131dc452108"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a230bf130d52060bd02240131dc452108">Conic_To</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> cx, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> cy, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y)</td></tr>
+<tr class="memitem:ab9495e4b12c13abdd1f877c2cc1c2bda" id="r_ab9495e4b12c13abdd1f877c2cc1c2bda"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab9495e4b12c13abdd1f877c2cc1c2bda">Cubic_To</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> cx1, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> cy1, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> cx2, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> cy2, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> x, <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a> y)</td></tr>
+<tr class="memitem:a7ff66e5b33d5ff1c61a3719299eb79a6" id="r_a7ff66e5b33d5ff1c61a3719299eb79a6"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7ff66e5b33d5ff1c61a3719299eb79a6">Decompose_Curve</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a18e281e95408f2e45895ae32957c4888">UShort</a> first, <a class="el" href="#a18e281e95408f2e45895ae32957c4888">UShort</a> last, int flipped)</td></tr>
+<tr class="memitem:a50dbcc7476df32ccdc19efce27a0a1cf" id="r_a50dbcc7476df32ccdc19efce27a0a1cf"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a50dbcc7476df32ccdc19efce27a0a1cf">Convert_Glyph</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> int flipped)</td></tr>
+<tr class="memitem:a2f59d378f746a6e5dcafe785f79ae786" id="r_a2f59d378f746a6e5dcafe785f79ae786"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2f59d378f746a6e5dcafe785f79ae786">Init_Linked</a> (<a class="el" href="#a7eb5ca62e35a2f73bac47e7b1ecd7273">TProfileList</a> *l)</td></tr>
+<tr class="memitem:a8a95db10b93637b308d3f857d8c1732c" id="r_a8a95db10b93637b308d3f857d8c1732c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8a95db10b93637b308d3f857d8c1732c">InsNew</a> (<a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a> list, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> profile)</td></tr>
+<tr class="memitem:a82eca9ec4efbdba6b4df12dae98dc3ac" id="r_a82eca9ec4efbdba6b4df12dae98dc3ac"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a82eca9ec4efbdba6b4df12dae98dc3ac">DelOld</a> (<a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a> list, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> profile)</td></tr>
+<tr class="memitem:a7163831370c9a8622cc8d7c724d3f285" id="r_a7163831370c9a8622cc8d7c724d3f285"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7163831370c9a8622cc8d7c724d3f285">Sort</a> (<a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a> list)</td></tr>
+<tr class="memitem:a533d14c713895a0295c65d2a9a615282" id="r_a533d14c713895a0295c65d2a9a615282"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a533d14c713895a0295c65d2a9a615282">Vertical_Sweep_Init</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *min, <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *max)</td></tr>
+<tr class="memitem:abb602bd7766ffe550073cf1fa937753a" id="r_abb602bd7766ffe550073cf1fa937753a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abb602bd7766ffe550073cf1fa937753a">Vertical_Sweep_Span</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> y, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x1, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x2, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> left, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> right)</td></tr>
+<tr class="memitem:ad1bb1ad7f9a4634400ef2a0c631af86c" id="r_ad1bb1ad7f9a4634400ef2a0c631af86c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ad1bb1ad7f9a4634400ef2a0c631af86c">Vertical_Sweep_Drop</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> y, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x1, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x2, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> left, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> right)</td></tr>
+<tr class="memitem:a31676dafe87e4a180c370dc3d606ba67" id="r_a31676dafe87e4a180c370dc3d606ba67"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a31676dafe87e4a180c370dc3d606ba67">Vertical_Sweep_Step</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:a1de6223b060cc68434f3da5c4225dd01" id="r_a1de6223b060cc68434f3da5c4225dd01"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1de6223b060cc68434f3da5c4225dd01">Horizontal_Sweep_Init</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *min, <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *max)</td></tr>
+<tr class="memitem:a19398644fd2af319edf6a6e1b70f40f0" id="r_a19398644fd2af319edf6a6e1b70f40f0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a19398644fd2af319edf6a6e1b70f40f0">Horizontal_Sweep_Span</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> y, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x1, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x2, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> left, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> right)</td></tr>
+<tr class="memitem:a190e9e168f82a40061879cfc34bcf2af" id="r_a190e9e168f82a40061879cfc34bcf2af"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a190e9e168f82a40061879cfc34bcf2af">Horizontal_Sweep_Drop</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> y, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x1, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x2, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> left, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> right)</td></tr>
+<tr class="memitem:ae28c30bd0fea64dfe20488563e82f1ae" id="r_ae28c30bd0fea64dfe20488563e82f1ae"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae28c30bd0fea64dfe20488563e82f1ae">Horizontal_Sweep_Step</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:aeead514ac20c919965d63840dad5ee39" id="r_aeead514ac20c919965d63840dad5ee39"><td class="memItemLeft">static <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeead514ac20c919965d63840dad5ee39">Draw_Sweep</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:ada3f92b06184f7d4abc67cb5f05534c9" id="r_ada3f92b06184f7d4abc67cb5f05534c9"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ada3f92b06184f7d4abc67cb5f05534c9">Render_Single_Pass</a> (<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> flipped)</td></tr>
+<tr class="memitem:a87604e1a2151720bb3e91d1b53430b05" id="r_a87604e1a2151720bb3e91d1b53430b05"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a87604e1a2151720bb3e91d1b53430b05">Render_Glyph</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:ad5ebbe0fc62d59f8e33a4ec9a7f14117" id="r_ad5ebbe0fc62d59f8e33a4ec9a7f14117"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad5ebbe0fc62d59f8e33a4ec9a7f14117">Render_Gray_Glyph</a> (<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td></tr>
+<tr class="memitem:ae68a91a5eff75fee190a23fdaa6a08e9" id="r_ae68a91a5eff75fee190a23fdaa6a08e9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae68a91a5eff75fee190a23fdaa6a08e9">ft_black_init</a> (<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *raster)</td></tr>
+<tr class="memitem:adacda39a9a3c0b48c243cd799d7d658b" id="r_adacda39a9a3c0b48c243cd799d7d658b"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#adacda39a9a3c0b48c243cd799d7d658b">ft_black_new</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> **araster)</td></tr>
+<tr class="memitem:acba4cf4a9f7317cdf304f44181ecb118" id="r_acba4cf4a9f7317cdf304f44181ecb118"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acba4cf4a9f7317cdf304f44181ecb118">ft_black_done</a> (<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *raster)</td></tr>
+<tr class="memitem:af5c75a70f50c198e219a645119ebcf62" id="r_af5c75a70f50c198e219a645119ebcf62"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af5c75a70f50c198e219a645119ebcf62">ft_black_reset</a> (<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *raster, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *pool_base, long pool_size)</td></tr>
+<tr class="memitem:a23bba23c30a1462bd3cbe990c9bfd0c7" id="r_a23bba23c30a1462bd3cbe990c9bfd0c7"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a23bba23c30a1462bd3cbe990c9bfd0c7">ft_black_set_mode</a> (<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *raster, unsigned long mode, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *palette)</td></tr>
+<tr class="memitem:aff5eb05ea4d8d4f3cc53b93fdb3c58b9" id="r_aff5eb05ea4d8d4f3cc53b93fdb3c58b9"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#aff5eb05ea4d8d4f3cc53b93fdb3c58b9">ft_black_render</a> (<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *raster, <a class="el" href="ftimage_8h.html#a4f41c3fb4a05eacd520be21e4db611bc">FT_Raster_Params</a> *params)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0c17ddc0dfb0475b06dddf99b281d040" id="r_a0c17ddc0dfb0475b06dddf99b281d040"><td class="memItemLeft"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0c17ddc0dfb0475b06dddf99b281d040">ft_standard_raster</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a6347fc31c8eaf37c0603d4e581a26754" name="a6347fc31c8eaf37c0603d4e581a26754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6347fc31c8eaf37c0603d4e581a26754">&#9670;&#160;</a></span>AlignProfileSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AlignProfileSize&#160;&#160;&#160;( ( sizeof ( <a class="el" href="#a96af020a25c7933a3b37f10bb7aca083">TProfile</a> ) + sizeof ( long ) - 1 ) / sizeof ( long ) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6288138452f7c77b85d2ea4ea2a168e1" name="a6288138452f7c77b85d2ea4ea2a168e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6288138452f7c77b85d2ea4ea2a168e1">&#9670;&#160;</a></span>CEILING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CEILING</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (x) + <a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.precision - 1 ) &amp; -<a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.precision )</div>
+<div class="ttc" id="aftraster_8c_html_a8e181e0a2fa64bf35d8f9e6994fb1c60"><div class="ttname"><a href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a></div><div class="ttdeci">#define ras</div><div class="ttdef"><b>Definition</b> ftraster.c:498</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d58f9ac447476b4e084d7ca383f5183" name="a6d58f9ac447476b4e084d7ca383f5183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d58f9ac447476b4e084d7ca383f5183">&#9670;&#160;</a></span>FAILURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAILURE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa93f0eb578d23995850d61f7d61c55c1" name="aa93f0eb578d23995850d61f7d61c55c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93f0eb578d23995850d61f7d61c55c1">&#9670;&#160;</a></span>FALSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f0eecb0f7856721f56faff8f27b0dc1" name="a2f0eecb0f7856721f56faff8f27b0dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f0eecb0f7856721f56faff8f27b0dc1">&#9670;&#160;</a></span>FLOOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLOOR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (x) &amp; -<a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.precision )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="accd5c76c2588927f681c1acac544b6e8" name="accd5c76c2588927f681c1acac544b6e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd5c76c2588927f681c1acac544b6e8">&#9670;&#160;</a></span>FMulDiv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FMulDiv</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (a) * (b) / (c) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a18062fa912e72dd3a06901f394c91ce0" name="a18062fa912e72dd3a06901f394c91ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18062fa912e72dd3a06901f394c91ce0">&#9670;&#160;</a></span>FRAC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FRAC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (x) &amp; ( <a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.precision - 1 ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_raster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>OTHER MACROS (do not change) </p>
+
+</div>
+</div>
+<a id="a6475871875685d4e791a1d0f3780744e" name="a6475871875685d4e791a1d0f3780744e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6475871875685d4e791a1d0f3780744e">&#9670;&#160;</a></span>FT_MEM_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_SET</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="ftstdlib_8h.html#a201df32e472007bb839e88dcf53a8240">ft_memset</a>( d, s, c )</div>
+<div class="ttc" id="aftstdlib_8h_html_a201df32e472007bb839e88dcf53a8240"><div class="ttname"><a href="ftstdlib_8h.html#a201df32e472007bb839e88dcf53a8240">ft_memset</a></div><div class="ttdeci">#define ft_memset</div><div class="ttdef"><b>Definition</b> ftstdlib.h:90</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a89f28437eb4324b5bf6087f35a542c5f" name="a89f28437eb4324b5bf6087f35a542c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f28437eb4324b5bf6087f35a542c5f">&#9670;&#160;</a></span>FT_UNUSED_RASTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_UNUSED_RASTER&#160;&#160;&#160;<a class="el" href="builds_2vms_2ftconfig_8h.html#a4db62b7638f149986cdc24d0c03e062f">FT_UNUSED</a>( raster )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34a02abdca51978cb9fc46a9c376d645" name="a34a02abdca51978cb9fc46a9c376d645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a02abdca51978cb9fc46a9c376d645">&#9670;&#160;</a></span>MaxBezier</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MaxBezier&#160;&#160;&#160;32   /* The maximum number of stacked Bezier curves. */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a070d2ce7b6bb7e5c05602aa8c308d0c4" name="a070d2ce7b6bb7e5c05602aa8c308d0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070d2ce7b6bb7e5c05602aa8c308d0c4">&#9670;&#160;</a></span>NULL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NULL&#160;&#160;&#160;(void*)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4e144632537469446509a116f7b5a5e" name="ad4e144632537469446509a116f7b5a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e144632537469446509a116f7b5a5e">&#9670;&#160;</a></span>Pixel_Bits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Pixel_Bits&#160;&#160;&#160;6   /* fractional <a class="el" href="infblock_8c.html#a5a8bfbb66d29fa73601b7d47438dec06">bits</a> of *input* coordinates */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e181e0a2fa64bf35d8f9e6994fb1c60" name="a8e181e0a2fa64bf35d8f9e6994fb1c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">&#9670;&#160;</a></span>ras</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ras&#160;&#160;&#160;(*raster)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1523f79d603e23dfea98f6f5a2dcd8b4" name="a1523f79d603e23dfea98f6f5a2dcd8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1523f79d603e23dfea98f6f5a2dcd8b4">&#9670;&#160;</a></span>RAS_ARG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAS_ARG&#160;&#160;&#160;<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a>*  raster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4515e53b675c0edc396aeb64a55f6404" name="a4515e53b675c0edc396aeb64a55f6404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4515e53b675c0edc396aeb64a55f6404">&#9670;&#160;</a></span>RAS_ARGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAS_ARGS&#160;&#160;&#160;<a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a>*  raster,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71d83a981d5845ee2392a85c2369311a" name="a71d83a981d5845ee2392a85c2369311a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71d83a981d5845ee2392a85c2369311a">&#9670;&#160;</a></span>RAS_VAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAS_VAR&#160;&#160;&#160;raster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e730202e2cfcc45b4f9ce1f8cf1065d" name="a9e730202e2cfcc45b4f9ce1f8cf1065d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e730202e2cfcc45b4f9ce1f8cf1065d">&#9670;&#160;</a></span>RAS_VARS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAS_VARS&#160;&#160;&#160;raster,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74d0915e0942db789de171fb35dcabf4" name="a74d0915e0942db789de171fb35dcabf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d0915e0942db789de171fb35dcabf4">&#9670;&#160;</a></span>Raster_Err_Invalid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Raster_Err_Invalid&#160;&#160;&#160;Raster_Err_Invalid_Outline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0184c290ceee0dd36b5f47cc9dea63a" name="ac0184c290ceee0dd36b5f47cc9dea63a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0184c290ceee0dd36b5f47cc9dea63a">&#9670;&#160;</a></span>Raster_Err_Neg_Height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Raster_Err_Neg_Height&#160;&#160;&#160;Raster_Err_Raster_Negative_Height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a360d62e6e3bb4c2ca29f6da5ad6ca76e" name="a360d62e6e3bb4c2ca29f6da5ad6ca76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360d62e6e3bb4c2ca29f6da5ad6ca76e">&#9670;&#160;</a></span>Raster_Err_None</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Raster_Err_None&#160;&#160;&#160;Raster_Err_Ok</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e187bd68a2d95cc7bc4c9452998b0d7" name="a6e187bd68a2d95cc7bc4c9452998b0d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e187bd68a2d95cc7bc4c9452998b0d7">&#9670;&#160;</a></span>Raster_Err_Not_Ini</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Raster_Err_Not_Ini&#160;&#160;&#160;Raster_Err_Raster_Uninitialized</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa1a98ddca71b12a14933715110d76c6" name="afa1a98ddca71b12a14933715110d76c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1a98ddca71b12a14933715110d76c6">&#9670;&#160;</a></span>Raster_Err_Overflow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Raster_Err_Overflow&#160;&#160;&#160;Raster_Err_Raster_Overflow</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c68ddd5a04fd4500e084d9eefd87a72" name="a7c68ddd5a04fd4500e084d9eefd87a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c68ddd5a04fd4500e084d9eefd87a72">&#9670;&#160;</a></span>Raster_Err_Unsupported</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Raster_Err_Unsupported&#160;&#160;&#160;Raster_Err_Cannot_Render_Glyph</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bb70584f6547f691710d335dd049d66" name="a5bb70584f6547f691710d335dd049d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb70584f6547f691710d335dd049d66">&#9670;&#160;</a></span>RASTER_GRAY_LINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RASTER_GRAY_LINES&#160;&#160;&#160;2048</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97976244ba85832d1edd4d4c91eed0bb" name="a97976244ba85832d1edd4d4c91eed0bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97976244ba85832d1edd4d4c91eed0bb">&#9670;&#160;</a></span>RASTER_RENDER_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RASTER_RENDER_POOL&#160;&#160;&#160;8192</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3355c3bbfb75450fa0574e56756b493" name="aa3355c3bbfb75450fa0574e56756b493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3355c3bbfb75450fa0574e56756b493">&#9670;&#160;</a></span>SCALED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCALED</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (x) &lt;&lt; <a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.scale_shift ) - <a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.precision_half )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac65bedc5e6341995936792cb3a13777b" name="ac65bedc5e6341995936792cb3a13777b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65bedc5e6341995936792cb3a13777b">&#9670;&#160;</a></span>SMulDiv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SMulDiv&#160;&#160;&#160;<a class="el" href="freetype_8h.html#ae31c0f444ce1bba445af776b86beaa60">FT_MulDiv</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa90cac659d18e8ef6294c7ae337f6b58" name="aa90cac659d18e8ef6294c7ae337f6b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90cac659d18e8ef6294c7ae337f6b58">&#9670;&#160;</a></span>SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUCCESS&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a223c037364d1a882bd3aeee45c473f5e" name="a223c037364d1a882bd3aeee45c473f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223c037364d1a882bd3aeee45c473f5e">&#9670;&#160;</a></span>SWAP_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SWAP_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                \</div>
+<div class="line">{                 \</div>
+<div class="line">  <a class="code hl_typedef" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a>  swap = x; \</div>
+<div class="line">                  \</div>
+<div class="line">                  \</div>
+<div class="line">  x = y;          \</div>
+<div class="line">  y = swap;       \</div>
+<div class="line">} <span class="keywordflow">while</span> ( 0 )</div>
+<div class="ttc" id="aftraster_8c_html_a3bb1dddc49d9e4f6f66634f964e6131c"><div class="ttname"><a href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></div><div class="ttdeci">long Long</div><div class="ttdef"><b>Definition</b> ftraster.c:248</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa8cecfc5c5c054d2875c03e77b7be15d" name="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cecfc5c5c054d2875c03e77b7be15d">&#9670;&#160;</a></span>TRUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRUE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f76c7f0d1d2b7f4abfbcbe4013be53f" name="a2f76c7f0d1d2b7f4abfbcbe4013be53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f76c7f0d1d2b7f4abfbcbe4013be53f">&#9670;&#160;</a></span>TRUNC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRUNC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (<span class="keywordtype">signed</span> long)(x) &gt;&gt; <a class="code hl_define" href="#a8e181e0a2fa64bf35d8f9e6994fb1c60">ras</a>.precision_bits )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adc81a156cdb333a744b462ff95f0498c" name="adc81a156cdb333a744b462ff95f0498c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc81a156cdb333a744b462ff95f0498c">&#9670;&#160;</a></span>xxxDEBUG_RASTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xxxDEBUG_RASTER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CONFIGURATION MACROS </p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a6ad580534158bb13523c8d50ea902f1f" name="a6ad580534158bb13523c8d50ea902f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad580534158bb13523c8d50ea902f1f">&#9670;&#160;</a></span>Bool</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dead1cc07abb35e03b7237aa9e1352f" name="a8dead1cc07abb35e03b7237aa9e1352f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dead1cc07abb35e03b7237aa9e1352f">&#9670;&#160;</a></span>Function_Sweep_Init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void Function_Sweep_Init(<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *min, <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *max)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab41f6b509bca431db5960503f1673434" name="ab41f6b509bca431db5960503f1673434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41f6b509bca431db5960503f1673434">&#9670;&#160;</a></span>Function_Sweep_Span</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void Function_Sweep_Span(<a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> y, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x1, <a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a> x2, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> left, <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> right)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a725d9914f0d8e24b2a78f13586881992" name="a725d9914f0d8e24b2a78f13586881992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725d9914f0d8e24b2a78f13586881992">&#9670;&#160;</a></span>Function_Sweep_Step</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void Function_Sweep_Step(<a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cc214a236ad3bb6ad435bdcf5262a3f" name="a7cc214a236ad3bb6ad435bdcf5262a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cc214a236ad3bb6ad435bdcf5262a3f">&#9670;&#160;</a></span>Int</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SIMPLE TYPE DECLARATIONS </p>
+
+</div>
+</div>
+<a id="a3bb1dddc49d9e4f6f66634f964e6131c" name="a3bb1dddc49d9e4f6f66634f964e6131c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bb1dddc49d9e4f6f66634f964e6131c">&#9670;&#160;</a></span>Long</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef long <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6dee9a5e5a9c9820f792e32bfb8f198" name="af6dee9a5e5a9c9820f792e32bfb8f198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dee9a5e5a9c9820f792e32bfb8f198">&#9670;&#160;</a></span>PByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char * <a class="el" href="#af6dee9a5e5a9c9820f792e32bfb8f198">PByte</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc5145436a86fa202741749795698353" name="abc5145436a86fa202741749795698353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5145436a86fa202741749795698353">&#9670;&#160;</a></span>PLong</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef long * <a class="el" href="#abc5145436a86fa202741749795698353">PLong</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7112beb232e4b281302051d0525e0c10" name="a7112beb232e4b281302051d0525e0c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7112beb232e4b281302051d0525e0c10">&#9670;&#160;</a></span>PProfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="#a96af020a25c7933a3b37f10bb7aca083">TProfile</a>* <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8ca44defcb2c08b38c9505321253bc5" name="ac8ca44defcb2c08b38c9505321253bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ca44defcb2c08b38c9505321253bc5">&#9670;&#160;</a></span>PProfileList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a>* <a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a178aad43b7bdda15fa8b7b941e04637d" name="a178aad43b7bdda15fa8b7b941e04637d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178aad43b7bdda15fa8b7b941e04637d">&#9670;&#160;</a></span>PUShort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned short * <a class="el" href="#a178aad43b7bdda15fa8b7b941e04637d">PUShort</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afda09e1b042bc53383781ffa6c879100" name="afda09e1b042bc53383781ffa6c879100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda09e1b042bc53383781ffa6c879100">&#9670;&#160;</a></span>Short</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef short <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0de30b99d302950e481108a14d828702" name="a0de30b99d302950e481108a14d828702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de30b99d302950e481108a14d828702">&#9670;&#160;</a></span>TBand</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_t_band__.html">TBand_</a> <a class="el" href="#a0de30b99d302950e481108a14d828702">TBand</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6b6a178c8ef1ce1a1821525db1da170" name="ae6b6a178c8ef1ce1a1821525db1da170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b6a178c8ef1ce1a1821525db1da170">&#9670;&#160;</a></span>TFlow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05">TFlow_</a> <a class="el" href="#ae6b6a178c8ef1ce1a1821525db1da170">TFlow</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac0bbea26bebd968ed0b29ed260b9a06" name="aac0bbea26bebd968ed0b29ed260b9a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0bbea26bebd968ed0b29ed260b9a06">&#9670;&#160;</a></span>TPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_t_point__.html">TPoint_</a> <a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96af020a25c7933a3b37f10bb7aca083" name="a96af020a25c7933a3b37f10bb7aca083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96af020a25c7933a3b37f10bb7aca083">&#9670;&#160;</a></span>TProfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_t_profile__.html">TProfile_</a> <a class="el" href="#a96af020a25c7933a3b37f10bb7aca083">TProfile</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eb5ca62e35a2f73bac47e7b1ecd7273" name="a7eb5ca62e35a2f73bac47e7b1ecd7273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb5ca62e35a2f73bac47e7b1ecd7273">&#9670;&#160;</a></span>TProfileList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a> <a class="el" href="#a7eb5ca62e35a2f73bac47e7b1ecd7273">TProfileList</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dae555bfc385a6e35b6b49489069941" name="a7dae555bfc385a6e35b6b49489069941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dae555bfc385a6e35b6b49489069941">&#9670;&#160;</a></span>TRaster_Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_t_raster___instance__.html">TRaster_Instance_</a> <a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19365ab7e3d4d45b87a6abb1823ea247" name="a19365ab7e3d4d45b87a6abb1823ea247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19365ab7e3d4d45b87a6abb1823ea247">&#9670;&#160;</a></span>TSplitter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* TSplitter) (<a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a> *base)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9711e805bcae4ead8beecb9c1aacc4fb" name="a9711e805bcae4ead8beecb9c1aacc4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9711e805bcae4ead8beecb9c1aacc4fb">&#9670;&#160;</a></span>TStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5">TStates_</a> <a class="el" href="#a9711e805bcae4ead8beecb9c1aacc4fb">TStates</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba0996d26f7be2572973245b51852757" name="aba0996d26f7be2572973245b51852757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0996d26f7be2572973245b51852757">&#9670;&#160;</a></span>UInt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="#aba0996d26f7be2572973245b51852757">UInt</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a758b09c0b13933408d1f96e0b78f0c17" name="a758b09c0b13933408d1f96e0b78f0c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758b09c0b13933408d1f96e0b78f0c17">&#9670;&#160;</a></span>ULong</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned long <a class="el" href="#a758b09c0b13933408d1f96e0b78f0c17">ULong</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18e281e95408f2e45895ae32957c4888" name="a18e281e95408f2e45895ae32957c4888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e281e95408f2e45895ae32957c4888">&#9670;&#160;</a></span>UShort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned short <a class="el" href="#a18e281e95408f2e45895ae32957c4888">UShort</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a2ea8ad150eb1876d2130f715a7f50c05" name="a2ea8ad150eb1876d2130f715a7f50c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea8ad150eb1876d2130f715a7f50c05">&#9670;&#160;</a></span>TFlow_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a2ea8ad150eb1876d2130f715a7f50c05">TFlow_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a2ea8ad150eb1876d2130f715a7f50c05aca0144d66c59284c531d8c81466044fb" name="a2ea8ad150eb1876d2130f715a7f50c05aca0144d66c59284c531d8c81466044fb"></a>Flow_None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ea8ad150eb1876d2130f715a7f50c05a63cd1a4178e5e7fbabc8eb2ff18249ed" name="a2ea8ad150eb1876d2130f715a7f50c05a63cd1a4178e5e7fbabc8eb2ff18249ed"></a>Flow_Up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ea8ad150eb1876d2130f715a7f50c05a0face1e6d139f197ccdc6da7384edeef" name="a2ea8ad150eb1876d2130f715a7f50c05a0face1e6d139f197ccdc6da7384edeef"></a>Flow_Down&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1c86d16639633f0ab114f234b91c54e5" name="a1c86d16639633f0ab114f234b91c54e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c86d16639633f0ab114f234b91c54e5">&#9670;&#160;</a></span>TStates_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a1c86d16639633f0ab114f234b91c54e5">TStates_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a1c86d16639633f0ab114f234b91c54e5a9bc0418eca54744d40ce7a54484767ec" name="a1c86d16639633f0ab114f234b91c54e5a9bc0418eca54744d40ce7a54484767ec"></a>Unknown_State&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c86d16639633f0ab114f234b91c54e5a1d8de6f63a8904bf57e59f007872acda" name="a1c86d16639633f0ab114f234b91c54e5a1d8de6f63a8904bf57e59f007872acda"></a>Ascending_State&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c86d16639633f0ab114f234b91c54e5a9decf67f642a23760c8488c2966db6d1" name="a1c86d16639633f0ab114f234b91c54e5a9decf67f642a23760c8488c2966db6d1"></a>Descending_State&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c86d16639633f0ab114f234b91c54e5addcf2d43a493f87c33d3243735666979" name="a1c86d16639633f0ab114f234b91c54e5addcf2d43a493f87c33d3243735666979"></a>Flat_State&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a70f6e5f23eebe889a0a508cc2b1d9df9" name="a70f6e5f23eebe889a0a508cc2b1d9df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f6e5f23eebe889a0a508cc2b1d9df9">&#9670;&#160;</a></span>Bezier_Down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Bezier_Down </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a></td>          <td class="paramname"><span class="paramname"><em>degree</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a19365ab7e3d4d45b87a6abb1823ea247">TSplitter</a></td>          <td class="paramname"><span class="paramname"><em>splitter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>miny</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>maxy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a70f6e5f23eebe889a0a508cc2b1d9df9_cgraph.png" border="0" usemap="#aftraster_8c_a70f6e5f23eebe889a0a508cc2b1d9df9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a70f6e5f23eebe889a0a508cc2b1d9df9_icgraph.png" border="0" usemap="#aftraster_8c_a70f6e5f23eebe889a0a508cc2b1d9df9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ac549f99ba291d40e3043611b2f0a6592" name="ac549f99ba291d40e3043611b2f0a6592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac549f99ba291d40e3043611b2f0a6592">&#9670;&#160;</a></span>Bezier_Up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Bezier_Up </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a></td>          <td class="paramname"><span class="paramname"><em>degree</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a19365ab7e3d4d45b87a6abb1823ea247">TSplitter</a></td>          <td class="paramname"><span class="paramname"><em>splitter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>miny</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>maxy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ac549f99ba291d40e3043611b2f0a6592_icgraph.png" border="0" usemap="#aftraster_8c_ac549f99ba291d40e3043611b2f0a6592_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a230bf130d52060bd02240131dc452108" name="a230bf130d52060bd02240131dc452108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230bf130d52060bd02240131dc452108">&#9670;&#160;</a></span>Conic_To()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Conic_To </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>cx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>cy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a230bf130d52060bd02240131dc452108_cgraph.png" border="0" usemap="#aftraster_8c_a230bf130d52060bd02240131dc452108_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a230bf130d52060bd02240131dc452108_icgraph.png" border="0" usemap="#aftraster_8c_a230bf130d52060bd02240131dc452108_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a50dbcc7476df32ccdc19efce27a0a1cf" name="a50dbcc7476df32ccdc19efce27a0a1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50dbcc7476df32ccdc19efce27a0a1cf">&#9670;&#160;</a></span>Convert_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Convert_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> int</td>          <td class="paramname"><span class="paramname"><em>flipped</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a50dbcc7476df32ccdc19efce27a0a1cf_cgraph.png" border="0" usemap="#aftraster_8c_a50dbcc7476df32ccdc19efce27a0a1cf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a50dbcc7476df32ccdc19efce27a0a1cf_icgraph.png" border="0" usemap="#aftraster_8c_a50dbcc7476df32ccdc19efce27a0a1cf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="ab9495e4b12c13abdd1f877c2cc1c2bda" name="ab9495e4b12c13abdd1f877c2cc1c2bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9495e4b12c13abdd1f877c2cc1c2bda">&#9670;&#160;</a></span>Cubic_To()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Cubic_To </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>cx1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>cy1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>cx2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>cy2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ab9495e4b12c13abdd1f877c2cc1c2bda_cgraph.png" border="0" usemap="#aftraster_8c_ab9495e4b12c13abdd1f877c2cc1c2bda_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ab9495e4b12c13abdd1f877c2cc1c2bda_icgraph.png" border="0" usemap="#aftraster_8c_ab9495e4b12c13abdd1f877c2cc1c2bda_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a7ff66e5b33d5ff1c61a3719299eb79a6" name="a7ff66e5b33d5ff1c61a3719299eb79a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff66e5b33d5ff1c61a3719299eb79a6">&#9670;&#160;</a></span>Decompose_Curve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Decompose_Curve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a18e281e95408f2e45895ae32957c4888">UShort</a></td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a18e281e95408f2e45895ae32957c4888">UShort</a></td>          <td class="paramname"><span class="paramname"><em>last</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flipped</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a7ff66e5b33d5ff1c61a3719299eb79a6_cgraph.png" border="0" usemap="#aftraster_8c_a7ff66e5b33d5ff1c61a3719299eb79a6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a7ff66e5b33d5ff1c61a3719299eb79a6_icgraph.png" border="0" usemap="#aftraster_8c_a7ff66e5b33d5ff1c61a3719299eb79a6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a82eca9ec4efbdba6b4df12dae98dc3ac" name="a82eca9ec4efbdba6b4df12dae98dc3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eca9ec4efbdba6b4df12dae98dc3ac">&#9670;&#160;</a></span>DelOld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DelOld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>profile</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a82eca9ec4efbdba6b4df12dae98dc3ac_icgraph.png" border="0" usemap="#aftraster_8c_a82eca9ec4efbdba6b4df12dae98dc3ac_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="aeead514ac20c919965d63840dad5ee39" name="aeead514ac20c919965d63840dad5ee39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeead514ac20c919965d63840dad5ee39">&#9670;&#160;</a></span>Draw_Sweep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Draw_Sweep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_aeead514ac20c919965d63840dad5ee39_cgraph.png" border="0" usemap="#aftraster_8c_aeead514ac20c919965d63840dad5ee39_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_aeead514ac20c919965d63840dad5ee39_icgraph.png" border="0" usemap="#aftraster_8c_aeead514ac20c919965d63840dad5ee39_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a062e62c20c843fca61de8f8a16723bca" name="a062e62c20c843fca61de8f8a16723bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062e62c20c843fca61de8f8a16723bca">&#9670;&#160;</a></span>End_Profile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> End_Profile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a062e62c20c843fca61de8f8a16723bca_icgraph.png" border="0" usemap="#aftraster_8c_a062e62c20c843fca61de8f8a16723bca_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="a1aab7fe6fb3112396c138745dc3f48a9" name="a1aab7fe6fb3112396c138745dc3f48a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aab7fe6fb3112396c138745dc3f48a9">&#9670;&#160;</a></span>Finalize_Profile_Table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Finalize_Profile_Table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a1aab7fe6fb3112396c138745dc3f48a9_cgraph.png" border="0" usemap="#aftraster_8c_a1aab7fe6fb3112396c138745dc3f48a9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a1aab7fe6fb3112396c138745dc3f48a9_icgraph.png" border="0" usemap="#aftraster_8c_a1aab7fe6fb3112396c138745dc3f48a9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="acba4cf4a9f7317cdf304f44181ecb118" name="acba4cf4a9f7317cdf304f44181ecb118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba4cf4a9f7317cdf304f44181ecb118">&#9670;&#160;</a></span>ft_black_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_black_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *</td>          <td class="paramname"><span class="paramname"><em>raster</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae68a91a5eff75fee190a23fdaa6a08e9" name="ae68a91a5eff75fee190a23fdaa6a08e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68a91a5eff75fee190a23fdaa6a08e9">&#9670;&#160;</a></span>ft_black_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_black_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *</td>          <td class="paramname"><span class="paramname"><em>raster</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ae68a91a5eff75fee190a23fdaa6a08e9_icgraph.png" border="0" usemap="#aftraster_8c_ae68a91a5eff75fee190a23fdaa6a08e9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="adacda39a9a3c0b48c243cd799d7d658b" name="adacda39a9a3c0b48c243cd799d7d658b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adacda39a9a3c0b48c243cd799d7d658b">&#9670;&#160;</a></span>ft_black_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ft_black_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> **</td>          <td class="paramname"><span class="paramname"><em>araster</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_adacda39a9a3c0b48c243cd799d7d658b_cgraph.png" border="0" usemap="#aftraster_8c_adacda39a9a3c0b48c243cd799d7d658b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="aff5eb05ea4d8d4f3cc53b93fdb3c58b9" name="aff5eb05ea4d8d4f3cc53b93fdb3c58b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5eb05ea4d8d4f3cc53b93fdb3c58b9">&#9670;&#160;</a></span>ft_black_render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ft_black_render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *</td>          <td class="paramname"><span class="paramname"><em>raster</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a4f41c3fb4a05eacd520be21e4db611bc">FT_Raster_Params</a> *</td>          <td class="paramname"><span class="paramname"><em>params</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_aff5eb05ea4d8d4f3cc53b93fdb3c58b9_cgraph.png" border="0" usemap="#aftraster_8c_aff5eb05ea4d8d4f3cc53b93fdb3c58b9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="af5c75a70f50c198e219a645119ebcf62" name="af5c75a70f50c198e219a645119ebcf62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c75a70f50c198e219a645119ebcf62">&#9670;&#160;</a></span>ft_black_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_black_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *</td>          <td class="paramname"><span class="paramname"><em>raster</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>pool_base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>pool_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23bba23c30a1462bd3cbe990c9bfd0c7" name="a23bba23c30a1462bd3cbe990c9bfd0c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23bba23c30a1462bd3cbe990c9bfd0c7">&#9670;&#160;</a></span>ft_black_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_black_set_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7dae555bfc385a6e35b6b49489069941">TRaster_Instance</a> *</td>          <td class="paramname"><span class="paramname"><em>raster</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *</td>          <td class="paramname"><span class="paramname"><em>palette</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a190e9e168f82a40061879cfc34bcf2af" name="a190e9e168f82a40061879cfc34bcf2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190e9e168f82a40061879cfc34bcf2af">&#9670;&#160;</a></span>Horizontal_Sweep_Drop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Horizontal_Sweep_Drop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a190e9e168f82a40061879cfc34bcf2af_icgraph.png" border="0" usemap="#aftraster_8c_a190e9e168f82a40061879cfc34bcf2af_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a1de6223b060cc68434f3da5c4225dd01" name="a1de6223b060cc68434f3da5c4225dd01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de6223b060cc68434f3da5c4225dd01">&#9670;&#160;</a></span>Horizontal_Sweep_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Horizontal_Sweep_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a1de6223b060cc68434f3da5c4225dd01_icgraph.png" border="0" usemap="#aftraster_8c_a1de6223b060cc68434f3da5c4225dd01_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a19398644fd2af319edf6a6e1b70f40f0" name="a19398644fd2af319edf6a6e1b70f40f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19398644fd2af319edf6a6e1b70f40f0">&#9670;&#160;</a></span>Horizontal_Sweep_Span()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Horizontal_Sweep_Span </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a19398644fd2af319edf6a6e1b70f40f0_icgraph.png" border="0" usemap="#aftraster_8c_a19398644fd2af319edf6a6e1b70f40f0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="ae28c30bd0fea64dfe20488563e82f1ae" name="ae28c30bd0fea64dfe20488563e82f1ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28c30bd0fea64dfe20488563e82f1ae">&#9670;&#160;</a></span>Horizontal_Sweep_Step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Horizontal_Sweep_Step </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ae28c30bd0fea64dfe20488563e82f1ae_icgraph.png" border="0" usemap="#aftraster_8c_ae28c30bd0fea64dfe20488563e82f1ae_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="a2f59d378f746a6e5dcafe785f79ae786" name="a2f59d378f746a6e5dcafe785f79ae786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f59d378f746a6e5dcafe785f79ae786">&#9670;&#160;</a></span>Init_Linked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init_Linked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7eb5ca62e35a2f73bac47e7b1ecd7273">TProfileList</a> *</td>          <td class="paramname"><span class="paramname"><em>l</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>SCAN-LINE SWEEPS AND DRAWING </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a2f59d378f746a6e5dcafe785f79ae786_icgraph.png" border="0" usemap="#aftraster_8c_a2f59d378f746a6e5dcafe785f79ae786_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="aee3b7f2a8e807fc373d340521cddbe8d" name="aee3b7f2a8e807fc373d340521cddbe8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3b7f2a8e807fc373d340521cddbe8d">&#9670;&#160;</a></span>Insert_Y_Turn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Insert_Y_Turn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_aee3b7f2a8e807fc373d340521cddbe8d_icgraph.png" border="0" usemap="#aftraster_8c_aee3b7f2a8e807fc373d340521cddbe8d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a8a95db10b93637b308d3f857d8c1732c" name="a8a95db10b93637b308d3f857d8c1732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a95db10b93637b308d3f857d8c1732c">&#9670;&#160;</a></span>InsNew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InsNew </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>profile</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a8a95db10b93637b308d3f857d8c1732c_icgraph.png" border="0" usemap="#aftraster_8c_a8a95db10b93637b308d3f857d8c1732c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="a19475da24a3c63e3a8b2fcb69eeec901" name="a19475da24a3c63e3a8b2fcb69eeec901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19475da24a3c63e3a8b2fcb69eeec901">&#9670;&#160;</a></span>Line_Down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Line_Down </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>miny</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>maxy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a19475da24a3c63e3a8b2fcb69eeec901_cgraph.png" border="0" usemap="#aftraster_8c_a19475da24a3c63e3a8b2fcb69eeec901_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a19475da24a3c63e3a8b2fcb69eeec901_icgraph.png" border="0" usemap="#aftraster_8c_a19475da24a3c63e3a8b2fcb69eeec901_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="a839c5934014ab3cb235b775dea423a6f" name="a839c5934014ab3cb235b775dea423a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839c5934014ab3cb235b775dea423a6f">&#9670;&#160;</a></span>Line_To()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Line_To </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a839c5934014ab3cb235b775dea423a6f_cgraph.png" border="0" usemap="#aftraster_8c_a839c5934014ab3cb235b775dea423a6f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a839c5934014ab3cb235b775dea423a6f_icgraph.png" border="0" usemap="#aftraster_8c_a839c5934014ab3cb235b775dea423a6f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+
+</div>
+</div>
+<a id="ab8cf4b52f22dd535140216213bc34af9" name="ab8cf4b52f22dd535140216213bc34af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cf4b52f22dd535140216213bc34af9">&#9670;&#160;</a></span>Line_Up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> Line_Up </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>miny</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3bb1dddc49d9e4f6f66634f964e6131c">Long</a></td>          <td class="paramname"><span class="paramname"><em>maxy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ab8cf4b52f22dd535140216213bc34af9_icgraph.png" border="0" usemap="#aftraster_8c_ab8cf4b52f22dd535140216213bc34af9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="a2ed1f9f83eafa69bf5c8704c09c2aaa8" name="a2ed1f9f83eafa69bf5c8704c09c2aaa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ed1f9f83eafa69bf5c8704c09c2aaa8">&#9670;&#160;</a></span>New_Profile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a> New_Profile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a9711e805bcae4ead8beecb9c1aacc4fb">TStates</a></td>          <td class="paramname"><span class="paramname"><em>aState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a2ed1f9f83eafa69bf5c8704c09c2aaa8_icgraph.png" border="0" usemap="#aftraster_8c_a2ed1f9f83eafa69bf5c8704c09c2aaa8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="a87604e1a2151720bb3e91d1b53430b05" name="a87604e1a2151720bb3e91d1b53430b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87604e1a2151720bb3e91d1b53430b05">&#9670;&#160;</a></span>Render_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Render_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a87604e1a2151720bb3e91d1b53430b05_cgraph.png" border="0" usemap="#aftraster_8c_a87604e1a2151720bb3e91d1b53430b05_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a87604e1a2151720bb3e91d1b53430b05_icgraph.png" border="0" usemap="#aftraster_8c_a87604e1a2151720bb3e91d1b53430b05_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="ad5ebbe0fc62d59f8e33a4ec9a7f14117" name="ad5ebbe0fc62d59f8e33a4ec9a7f14117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ebbe0fc62d59f8e33a4ec9a7f14117">&#9670;&#160;</a></span>Render_Gray_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Render_Gray_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ad5ebbe0fc62d59f8e33a4ec9a7f14117_cgraph.png" border="0" usemap="#aftraster_8c_ad5ebbe0fc62d59f8e33a4ec9a7f14117_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ad5ebbe0fc62d59f8e33a4ec9a7f14117_icgraph.png" border="0" usemap="#aftraster_8c_ad5ebbe0fc62d59f8e33a4ec9a7f14117_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+
+</div>
+</div>
+<a id="ada3f92b06184f7d4abc67cb5f05534c9" name="ada3f92b06184f7d4abc67cb5f05534c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3f92b06184f7d4abc67cb5f05534c9">&#9670;&#160;</a></span>Render_Single_Pass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Render_Single_Pass </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a6ad580534158bb13523c8d50ea902f1f">Bool</a></td>          <td class="paramname"><span class="paramname"><em>flipped</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ada3f92b06184f7d4abc67cb5f05534c9_cgraph.png" border="0" usemap="#aftraster_8c_ada3f92b06184f7d4abc67cb5f05534c9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ada3f92b06184f7d4abc67cb5f05534c9_icgraph.png" border="0" usemap="#aftraster_8c_ada3f92b06184f7d4abc67cb5f05534c9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+
+</div>
+</div>
+<a id="a131642a814658a65be5c4c34f423ec8e" name="a131642a814658a65be5c4c34f423ec8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131642a814658a65be5c4c34f423ec8e">&#9670;&#160;</a></span>Set_High_Precision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set_High_Precision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#a7cc214a236ad3bb6ad435bdcf5262a3f">Int</a></td>          <td class="paramname"><span class="paramname"><em>High</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>PROFILES COMPUTATION </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a131642a814658a65be5c4c34f423ec8e_icgraph.png" border="0" usemap="#aftraster_8c_a131642a814658a65be5c4c34f423ec8e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+
+</div>
+</div>
+<a id="a7163831370c9a8622cc8d7c724d3f285" name="a7163831370c9a8622cc8d7c724d3f285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7163831370c9a8622cc8d7c724d3f285">&#9670;&#160;</a></span>Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac8ca44defcb2c08b38c9505321253bc5">PProfileList</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a7163831370c9a8622cc8d7c724d3f285_icgraph.png" border="0" usemap="#aftraster_8c_a7163831370c9a8622cc8d7c724d3f285_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+
+</div>
+</div>
+<a id="a4fb79bd7e69744d6636571d3447d8757" name="a4fb79bd7e69744d6636571d3447d8757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb79bd7e69744d6636571d3447d8757">&#9670;&#160;</a></span>Split_Conic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Split_Conic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a4fb79bd7e69744d6636571d3447d8757_icgraph.png" border="0" usemap="#aftraster_8c_a4fb79bd7e69744d6636571d3447d8757_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+
+</div>
+</div>
+<a id="a74e83a7d6fcb976493d7c57c53fd96bd" name="a74e83a7d6fcb976493d7c57c53fd96bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e83a7d6fcb976493d7c57c53fd96bd">&#9670;&#160;</a></span>Split_Cubic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Split_Cubic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aac0bbea26bebd968ed0b29ed260b9a06">TPoint</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a74e83a7d6fcb976493d7c57c53fd96bd_icgraph.png" border="0" usemap="#aftraster_8c_a74e83a7d6fcb976493d7c57c53fd96bd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+
+</div>
+</div>
+<a id="ad1bb1ad7f9a4634400ef2a0c631af86c" name="ad1bb1ad7f9a4634400ef2a0c631af86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1bb1ad7f9a4634400ef2a0c631af86c">&#9670;&#160;</a></span>Vertical_Sweep_Drop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vertical_Sweep_Drop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_ad1bb1ad7f9a4634400ef2a0c631af86c_icgraph.png" border="0" usemap="#aftraster_8c_ad1bb1ad7f9a4634400ef2a0c631af86c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+
+</div>
+</div>
+<a id="a533d14c713895a0295c65d2a9a615282" name="a533d14c713895a0295c65d2a9a615282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533d14c713895a0295c65d2a9a615282">&#9670;&#160;</a></span>Vertical_Sweep_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vertical_Sweep_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a> *</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a533d14c713895a0295c65d2a9a615282_icgraph.png" border="0" usemap="#aftraster_8c_a533d14c713895a0295c65d2a9a615282_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+
+</div>
+</div>
+<a id="abb602bd7766ffe550073cf1fa937753a" name="abb602bd7766ffe550073cf1fa937753a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb602bd7766ffe550073cf1fa937753a">&#9670;&#160;</a></span>Vertical_Sweep_Span()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vertical_Sweep_Span </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4515e53b675c0edc396aeb64a55f6404">RAS_ARGS</a> <a class="el" href="#afda09e1b042bc53383781ffa6c879100">Short</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a382164b17e99c3184911d941b2586853">FT_F26Dot6</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7112beb232e4b281302051d0525e0c10">PProfile</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_abb602bd7766ffe550073cf1fa937753a_icgraph.png" border="0" usemap="#aftraster_8c_abb602bd7766ffe550073cf1fa937753a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="a31676dafe87e4a180c370dc3d606ba67" name="a31676dafe87e4a180c370dc3d606ba67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31676dafe87e4a180c370dc3d606ba67">&#9670;&#160;</a></span>Vertical_Sweep_Step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vertical_Sweep_Step </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1523f79d603e23dfea98f6f5a2dcd8b4">RAS_ARG</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftraster_8c_a31676dafe87e4a180c370dc3d606ba67_icgraph.png" border="0" usemap="#aftraster_8c_a31676dafe87e4a180c370dc3d606ba67_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a0c17ddc0dfb0475b06dddf99b281d040" name="a0c17ddc0dfb0475b06dddf99b281d040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c17ddc0dfb0475b06dddf99b281d040">&#9670;&#160;</a></span>ft_standard_raster</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a> ft_standard_raster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                          =</div>
+<div class="line">{</div>
+<div class="line">  FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line">  (<a class="code hl_define" href="ftimage_8h.html#ab50a467c3e9e8313c31c14f1e694af34">FT_Raster_New_Func</a>)     <a class="code hl_function" href="#adacda39a9a3c0b48c243cd799d7d658b">ft_black_new</a>,</div>
+<div class="line">  (<a class="code hl_define" href="ftimage_8h.html#a7af295aa684d0354fced2dc791a4de89">FT_Raster_Reset_Func</a>)   <a class="code hl_function" href="#af5c75a70f50c198e219a645119ebcf62">ft_black_reset</a>,</div>
+<div class="line">  (<a class="code hl_define" href="ftimage_8h.html#ad86623a6850838c7fec54f4f622c2744">FT_Raster_Set_Mode_Func</a>)<a class="code hl_function" href="#a23bba23c30a1462bd3cbe990c9bfd0c7">ft_black_set_mode</a>,</div>
+<div class="line">  (<a class="code hl_define" href="ftimage_8h.html#a469b1d3125d0032b8c66df3179832657">FT_Raster_Render_Func</a>)  <a class="code hl_function" href="#aff5eb05ea4d8d4f3cc53b93fdb3c58b9">ft_black_render</a>,</div>
+<div class="line">  (<a class="code hl_define" href="ftimage_8h.html#af3fbba4618478eb180ed0ac2ed09e8d6">FT_Raster_Done_Func</a>)    <a class="code hl_function" href="#acba4cf4a9f7317cdf304f44181ecb118">ft_black_done</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftimage_8h_html_a469b1d3125d0032b8c66df3179832657"><div class="ttname"><a href="ftimage_8h.html#a469b1d3125d0032b8c66df3179832657">FT_Raster_Render_Func</a></div><div class="ttdeci">#define FT_Raster_Render_Func</div><div class="ttdef"><b>Definition</b> ftimage.h:1200</div></div>
+<div class="ttc" id="aftimage_8h_html_a7af295aa684d0354fced2dc791a4de89"><div class="ttname"><a href="ftimage_8h.html#a7af295aa684d0354fced2dc791a4de89">FT_Raster_Reset_Func</a></div><div class="ttdeci">#define FT_Raster_Reset_Func</div><div class="ttdef"><b>Definition</b> ftimage.h:1135</div></div>
+<div class="ttc" id="aftimage_8h_html_ab50a467c3e9e8313c31c14f1e694af34"><div class="ttname"><a href="ftimage_8h.html#ab50a467c3e9e8313c31c14f1e694af34">FT_Raster_New_Func</a></div><div class="ttdeci">#define FT_Raster_New_Func</div><div class="ttdef"><b>Definition</b> ftimage.h:1085</div></div>
+<div class="ttc" id="aftimage_8h_html_ad86623a6850838c7fec54f4f622c2744"><div class="ttname"><a href="ftimage_8h.html#ad86623a6850838c7fec54f4f622c2744">FT_Raster_Set_Mode_Func</a></div><div class="ttdeci">#define FT_Raster_Set_Mode_Func</div><div class="ttdef"><b>Definition</b> ftimage.h:1160</div></div>
+<div class="ttc" id="aftimage_8h_html_af3fbba4618478eb180ed0ac2ed09e8d6"><div class="ttname"><a href="ftimage_8h.html#af3fbba4618478eb180ed0ac2ed09e8d6">FT_Raster_Done_Func</a></div><div class="ttdeci">#define FT_Raster_Done_Func</div><div class="ttdef"><b>Definition</b> ftimage.h:1101</div></div>
+<div class="ttc" id="aftraster_8c_html_a23bba23c30a1462bd3cbe990c9bfd0c7"><div class="ttname"><a href="#a23bba23c30a1462bd3cbe990c9bfd0c7">ft_black_set_mode</a></div><div class="ttdeci">static void ft_black_set_mode(TRaster_Instance *raster, unsigned long mode, const char *palette)</div><div class="ttdef"><b>Definition</b> ftraster.c:3214</div></div>
+<div class="ttc" id="aftraster_8c_html_acba4cf4a9f7317cdf304f44181ecb118"><div class="ttname"><a href="#acba4cf4a9f7317cdf304f44181ecb118">ft_black_done</a></div><div class="ttdeci">static void ft_black_done(TRaster_Instance *raster)</div><div class="ttdef"><b>Definition</b> ftraster.c:3189</div></div>
+<div class="ttc" id="aftraster_8c_html_adacda39a9a3c0b48c243cd799d7d658b"><div class="ttname"><a href="#adacda39a9a3c0b48c243cd799d7d658b">ft_black_new</a></div><div class="ttdeci">static int ft_black_new(FT_Memory memory, TRaster_Instance **araster)</div><div class="ttdef"><b>Definition</b> ftraster.c:3168</div></div>
+<div class="ttc" id="aftraster_8c_html_af5c75a70f50c198e219a645119ebcf62"><div class="ttname"><a href="#af5c75a70f50c198e219a645119ebcf62">ft_black_reset</a></div><div class="ttdeci">static void ft_black_reset(TRaster_Instance *raster, const char *pool_base, long pool_size)</div><div class="ttdef"><b>Definition</b> ftraster.c:3200</div></div>
+<div class="ttc" id="aftraster_8c_html_aff5eb05ea4d8d4f3cc53b93fdb3c58b9"><div class="ttname"><a href="#aff5eb05ea4d8d4f3cc53b93fdb3c58b9">ft_black_render</a></div><div class="ttdeci">static int ft_black_render(TRaster_Instance *raster, FT_Raster_Params *params)</div><div class="ttdef"><b>Definition</b> ftraster.c:3241</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_22d896c3bb8709076dba3dedb0f51608.html">raster</a></li><li class="navelem"><a href="ftraster_8c.html">ftraster.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

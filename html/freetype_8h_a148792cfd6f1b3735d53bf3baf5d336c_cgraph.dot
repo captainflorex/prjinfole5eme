@@ -1,0 +1,46 @@
+digraph "FT_New_Face"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FT_New_Face",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="file_spec_from_path",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ace0b09ccfa4dbb715225ad369a242a31",tooltip=" "];
+  Node1 -> Node1 [id="edge2_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_New_Face_From_LWFN",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a3cd18fa4466c9360932e04a02d4f8864",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="open_face_from_buffer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ab966e870e9df99a387b5e915c7d93693",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_Get_Module",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a9aae78d37c4eadf2cd3c702ab138d3d1",tooltip=" "];
+  Node5 -> Node5 [id="edge6_Node000005_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node6 [id="edge7_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_Open_Face",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a3bdf12232d495ca7d4d40f47b4bc157c",tooltip=" "];
+  Node6 -> Node6 [id="edge8_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node19 [id="edge9_Node000004_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="memory_stream_close",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a197f1a3bb4e2619678651c6b95d5bb0b",tooltip=" "];
+  Node4 -> Node20 [id="edge10_Node000004_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="new_memory_stream",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#ad887ba62210690cef00695ea15c39a12",tooltip=" "];
+  Node3 -> Node21 [id="edge11_Node000003_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="read_lwfn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a71a282749af0a4d1df97d8f20d86ab04",tooltip=" "];
+  Node1 -> Node22 [id="edge12_Node000001_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node22 [id="Node000022",label="FT_New_Face_From_Suitcase",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a74f46a9ba6609c2b12b31c9e31f3defe",tooltip=" "];
+  Node22 -> Node23 [id="edge13_Node000022_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="FT_New_Face_From_FOND",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a3b73f76d0a579936aca8281254f1a8e9",tooltip=" "];
+  Node23 -> Node23 [id="edge14_Node000023_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 -> Node3 [id="edge15_Node000023_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node23 -> Node24 [id="edge16_Node000023_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="FT_New_Face_From_SFNT",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#aa20cd5e3c2679dd37a145024609d33bd",tooltip=" "];
+  Node24 -> Node4 [id="edge17_Node000024_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node23 -> Node25 [id="edge18_Node000023_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="make_lwfn_spec",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#a3833069c0430016b7d9d5bbd257d97ce",tooltip=" "];
+  Node23 -> Node27 [id="edge19_Node000023_Node000027",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="parse_fond",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#a91106e1846020d59d7e97ccfe5d78efa",tooltip=" "];
+  Node1 -> Node6 [id="edge20_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node29 [id="edge21_Node000001_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="get_file_type",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a6832dcaa23dc83f342462267e178a6d4",tooltip=" "];
+  Node1 -> Node30 [id="edge22_Node000001_Node000030",color="steelblue1",style="solid",tooltip=" "];
+  Node30 [id="Node000030",label="ResourceForkSize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a744a0ddf9f5908d0fbb7bf37b505d523",tooltip=" "];
+}

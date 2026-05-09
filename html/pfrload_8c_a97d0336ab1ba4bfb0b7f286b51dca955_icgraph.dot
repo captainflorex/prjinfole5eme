@@ -1,0 +1,27 @@
+digraph "pfr_extra_items_skip"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="pfr_extra_items_skip",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [id="edge1_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="pfr_glyph_load_compound",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#afd114b1d1fb13e26ebaf86172377217f",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="pfr_glyph_load_rec",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#aa617275ff3e94a85af8ad769b1fbe593",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="pfr_glyph_load",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$pfrgload_8c.html#ab61999affa655d4b14bb1f5584f22b86",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node3 [id="edge6_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="pfr_glyph_load_simple",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrgload_8c.html#aef8220e4f930757bb5dd3a3e19785816",tooltip=" "];
+  Node6 -> Node3 [id="edge8_Node000006_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge9_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="pfr_log_font_load",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrload_8c.html#a68c192c56ee5f526ab6278c30e4ff9a3",tooltip=" "];
+  Node7 -> Node8 [id="edge10_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="pfr_face_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pfrobjs_8c.html#a1b1b01622d851f0da78d57dbcb9a7615",tooltip=" "];
+  Node8 -> Node8 [id="edge11_Node000008_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node7 [id="edge12_Node000007_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

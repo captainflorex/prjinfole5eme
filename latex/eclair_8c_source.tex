@@ -1,0 +1,81 @@
+\doxysection{eclair.\+c}
+\hypertarget{eclair_8c_source}{}\label{eclair_8c_source}\index{src/eclair.c@{src/eclair.c}}
+\doxymbox{\hyperlink{eclair_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{src_2eclair_8h}{eclair.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <allegro.h>}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00005}\doxymbox{\hyperlink{header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686}{00005}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{eclair_8c_a4dcdbb9f937d5a1b7c8fe252e7c04686}{eclairs\_init}}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00006}00006\ \ \ \ \ memset(le,\ 0,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00007}00007\ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_ad84d13aab1740c33e29adc76c5eaf116}{nb}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00010}\doxymbox{\hyperlink{header_2eclair_8h_a94d73eb8a889534102b2442ed022db13}{00010}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{eclair_8c_a94d73eb8a889534102b2442ed022db13}{eclair\_spawner}}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_ad84d13aab1740c33e29adc76c5eaf116}{nb}}\ >=\ \doxymbox{\hyperlink{header_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{MAX\_ECLAIRS}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{MAX\_ECLAIRS}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a336209abda445626b84cbd1eb727bbc6}{actif}})\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_aecfe62b0371f73512ca06b8669ecd54d}{x}}\ \ \ \ \ \ =\ x;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a92166d79dc9fbc701d50d48de44751ce}{y}}\ \ \ \ \ \ =\ y;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a336209abda445626b84cbd1eb727bbc6}{actif}}\ \ =\ 1;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a9d4f2c6ee2e37e81171da4b73286201c}{timer}}\ \ =\ \doxymbox{\hyperlink{header_2eclair_8h_ae5d566256b8f9a8c61eb7399c6f4b7f2}{ECLAIR\_DUREE\_VIE}};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_ad84d13aab1740c33e29adc76c5eaf116}{nb}})\ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_ad84d13aab1740c33e29adc76c5eaf116}{nb}}\ =\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00025}\doxymbox{\hyperlink{header_2eclair_8h_a41927b1d41e1bda12297701119910c62}{00025}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{eclair_8c_a41927b1d41e1bda12297701119910c62}{eclairs\_mettre\_a\_jour}}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{MAX\_ECLAIRS}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a336209abda445626b84cbd1eb727bbc6}{actif}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a92166d79dc9fbc701d50d48de44751ce}{y}}\ +=\ \doxymbox{\hyperlink{header_2eclair_8h_a01247b9a9dc70c90be2f88a984b59fe7}{ECLAIR\_VITESSE}};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a9d4f2c6ee2e37e81171da4b73286201c}{timer}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DÃ©sactiver\ si\ sorti\ de\ l'Ã©cran\ ou\ timer\ Ã©coulÃ©\ */}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a92166d79dc9fbc701d50d48de44751ce}{y}}\ >\ 1000\ ||\ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a9d4f2c6ee2e37e81171da4b73286201c}{timer}}\ <=\ 0)}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a336209abda445626b84cbd1eb727bbc6}{actif}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00038}\doxymbox{\hyperlink{header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b}{00038}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{eclair_8c_a015f8251e73ed40f9236a4eabc7f037b}{eclairs\_collision\_personnage}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le,}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ px,\ \textcolor{keywordtype}{float}\ py,}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ plargeur,\ \textcolor{keywordtype}{int}\ phauteur)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{MAX\_ECLAIRS}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a336209abda445626b84cbd1eb727bbc6}{actif}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ex\ =\ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_aecfe62b0371f73512ca06b8669ecd54d}{x}};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ey\ =\ le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a92166d79dc9fbc701d50d48de44751ce}{y}};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ AABB\ simple\ :\ l'Ã©clair\ est\ une\ ligne\ fine\ (ECLAIR\_LARGEUR\ px)\ */}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ex\ +\ \doxymbox{\hyperlink{header_2eclair_8h_ace9f9a718c90581dc08f42da83ba8e73}{ECLAIR\_LARGEUR}}\ >\ px\ \&\&}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ ex\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <\ px\ +\ plargeur\ \&\&}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ ey\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ >\ py\ \&\&}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ ey\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <\ py\ +\ phauteur)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00058}\doxymbox{\hyperlink{header_2eclair_8h_a693961ccc3b568ea454db1853e64393b}{00058}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{eclair_8c_a693961ccc3b568ea454db1853e64393b}{dessiner\_eclairs}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{header_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{MAX\_ECLAIRS}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a336209abda445626b84cbd1eb727bbc6}{actif}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ (int)le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_aecfe62b0371f73512ca06b8669ecd54d}{x}};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ (int)le-\/>\doxymbox{\hyperlink{struct_liste_eclairs_a39b1ed66540a93d5864ec22665f6eb99}{liste}}[i].\doxymbox{\hyperlink{struct_eclair_a92166d79dc9fbc701d50d48de44751ce}{y}};}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ vline(tampon,\ x,\ \ \ \ \ y\ -\/\ 20,\ y,\ makecol(255,\ 255,\ 100));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ vline(tampon,\ x\ +\ 1,\ y\ -\/\ 20,\ y,\ makecol(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ vline(tampon,\ x\ +\ 2,\ y\ -\/\ 20,\ y,\ makecol(255,\ 255,\ 100));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ putpixel(tampon,\ x,\ \ \ \ \ y\ +\ 1,\ makecol(200,\ 200,\ 255));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ putpixel(tampon,\ x\ +\ 1,\ y\ +\ 1,\ makecol(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ circlefill(tampon,\ x\ +\ 1,\ y\ -\/\ 20,\ 4,\ makecol(100,\ 100,\ 255));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ circlefill(tampon,\ x\ +\ 1,\ y\ -\/\ 20,\ 2,\ makecol(200,\ 200,\ 255));}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eclair_8c_source_l00075}00075\ \}}
+
+\end{DoxyCode}

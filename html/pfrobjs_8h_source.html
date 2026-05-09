@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pfr/pfrobjs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pfrobjs_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pfrobjs.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pfrobjs_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  pfrobjs.h                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    FreeType PFR object methods (specification).                         */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2002 by                                                      */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef __PFROBJS_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define __PFROBJS_H__</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="pfrtypes_8h.html">pfrtypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">   27</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_p_f_r___face_rec__.html">PFR_FaceRec_</a>*  <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="pfrobjs_8h.html#a3d0794bc379a4bcc57241a7e96d36730">   29</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_p_f_r___size_rec__.html">PFR_SizeRec_</a>*  <a class="code hl_typedef" href="pfrobjs_8h.html#a3d0794bc379a4bcc57241a7e96d36730">PFR_Size</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="pfrobjs_8h.html#a5999e5ebd8e89ad493eb4e4f7a36afba">   31</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_p_f_r___slot_rec__.html">PFR_SlotRec_</a>*  <a class="code hl_typedef" href="pfrobjs_8h.html#a5999e5ebd8e89ad493eb4e4f7a36afba">PFR_Slot</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_p_f_r___face_rec__.html">   34</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_f_r___face_rec__.html">PFR_FaceRec_</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_p_f_r___face_rec__.html#a6d0d14dcf2fe7d8e069918b41b84f162">   36</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a45c4c2194a9dfb5df09387e80cad91e1">FT_FaceRec</a>      <a class="code hl_variable" href="struct_p_f_r___face_rec__.html#a6d0d14dcf2fe7d8e069918b41b84f162">root</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_p_f_r___face_rec__.html#a9adc92717c73ac57d5cc12a931295747">   37</a></span>    <a class="code hl_typedef" href="pfrtypes_8h.html#af72e2cadf5803d9b7f02add9e5656032">PFR_HeaderRec</a>   <a class="code hl_variable" href="struct_p_f_r___face_rec__.html#a9adc92717c73ac57d5cc12a931295747">header</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_p_f_r___face_rec__.html#a4ec2bb2cdcb623894cf3e7f909031fef">   38</a></span>    <a class="code hl_typedef" href="pfrtypes_8h.html#a3df4de8bd0b8c24919111cafbcead232">PFR_LogFontRec</a>  <a class="code hl_variable" href="struct_p_f_r___face_rec__.html#a4ec2bb2cdcb623894cf3e7f909031fef">log_font</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_p_f_r___face_rec__.html#af810dc7a2e86f4cf72a59659f1bf145c">   39</a></span>    <a class="code hl_typedef" href="pfrtypes_8h.html#a1f8873d892aefe8901281e90ba086e59">PFR_PhyFontRec</a>  <a class="code hl_variable" href="struct_p_f_r___face_rec__.html#af810dc7a2e86f4cf72a59659f1bf145c">phy_font</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="pfrobjs_8h.html#a0539edfeca58f9e83963102d702e2e45">   41</a></span>  } <a class="code hl_typedef" href="pfrobjs_8h.html#a0539edfeca58f9e83963102d702e2e45">PFR_FaceRec</a>;</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_p_f_r___size_rec__.html">   44</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_f_r___size_rec__.html">PFR_SizeRec_</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_p_f_r___size_rec__.html#a625cb7bbd1515325c4114ec8f82c5ffe">   46</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a9c3de3f9524eab77bafb4d26e8ddc898">FT_SizeRec</a>  <a class="code hl_variable" href="struct_p_f_r___size_rec__.html#a625cb7bbd1515325c4114ec8f82c5ffe">root</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="pfrobjs_8h.html#ace73a056038ebca662bc671c3d67cec6">   48</a></span>  } <a class="code hl_typedef" href="pfrobjs_8h.html#ace73a056038ebca662bc671c3d67cec6">PFR_SizeRec</a>;</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_p_f_r___slot_rec__.html">   51</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_f_r___slot_rec__.html">PFR_SlotRec_</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_p_f_r___slot_rec__.html#aedb79342ff3d90d9c694f5653d717fbe">   53</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a6cad958e1b4f05269eaeb94f4dd06cf1">FT_GlyphSlotRec</a>  <a class="code hl_variable" href="struct_p_f_r___slot_rec__.html#aedb79342ff3d90d9c694f5653d717fbe">root</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_p_f_r___slot_rec__.html#a54b90014b57732fcb505c865920c7c4e">   54</a></span>    <a class="code hl_typedef" href="pfrtypes_8h.html#a10f66834ce97628cc9deefd78108809b">PFR_GlyphRec</a>     <a class="code hl_variable" href="struct_p_f_r___slot_rec__.html#a54b90014b57732fcb505c865920c7c4e">glyph</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="pfrobjs_8h.html#a60d3473bb3d7dd4382453d44ba4f1036">   56</a></span>  } <a class="code hl_typedef" href="pfrobjs_8h.html#a60d3473bb3d7dd4382453d44ba4f1036">PFR_SlotRec</a>;</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_function" href="pfrobjs_8h.html#a1b1b01622d851f0da78d57dbcb9a7615">pfr_face_init</a>( <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>      stream,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                 <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>       <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                 <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>         face_index,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                 <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>         num_params,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                 <a class="code hl_typedef" href="freetype_8h.html#a1647d861933dce4c11d35d33b264bcee">FT_Parameter</a>*  params );</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_function" href="pfrobjs_8h.html#a558c5facc5a5904281c3a4fbd349d37e">pfr_face_done</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>  <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a> );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_function" href="pfrobjs_8h.html#a24bea0a91b530a902a50cd210be30fc6">pfr_face_get_kerning</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a>   <a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    glyph1,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    glyph2,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        <a class="code hl_typedef" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a>* kerning );</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_function" href="pfrobjs_8h.html#a9d10db7c28f2e3a66caaa37f6cd8c10e">pfr_slot_init</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a5999e5ebd8e89ad493eb4e4f7a36afba">PFR_Slot</a>  slot );</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_function" href="pfrobjs_8h.html#ae00a4e5976142dae13cbe4bca06deece">pfr_slot_done</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a5999e5ebd8e89ad493eb4e4f7a36afba">PFR_Slot</a>  slot );</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_function" href="pfrobjs_8h.html#a6907f89e20733ec3e3799486b5279da0">pfr_slot_load</a>( <a class="code hl_typedef" href="pfrobjs_8h.html#a5999e5ebd8e89ad493eb4e4f7a36afba">PFR_Slot</a>  slot,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                 <a class="code hl_typedef" href="pfrobjs_8h.html#a3d0794bc379a4bcc57241a7e96d36730">PFR_Size</a>  size,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                 <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>   gindex,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                 <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a>  load_flags );</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">/* __PFROBJS_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a0d0a21a9c236f9d8cd4789ee8b4fb33f"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a></div><div class="ttdeci">signed int FT_Int32</div><div class="ttdef"><b>Definition</b> ftconfig.h:103</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a58a8b2fb387665ef9652a54a9ad80bd3"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a></div><div class="ttdeci">#define FT_LOCAL(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:154</div></div>
+<div class="ttc" id="afreetype_8h_html_a1647d861933dce4c11d35d33b264bcee"><div class="ttname"><a href="freetype_8h.html#a1647d861933dce4c11d35d33b264bcee">FT_Parameter</a></div><div class="ttdeci">struct FT_Parameter_ FT_Parameter</div></div>
+<div class="ttc" id="afreetype_8h_html_a45c4c2194a9dfb5df09387e80cad91e1"><div class="ttname"><a href="freetype_8h.html#a45c4c2194a9dfb5df09387e80cad91e1">FT_FaceRec</a></div><div class="ttdeci">struct FT_FaceRec_ FT_FaceRec</div></div>
+<div class="ttc" id="afreetype_8h_html_a6cad958e1b4f05269eaeb94f4dd06cf1"><div class="ttname"><a href="freetype_8h.html#a6cad958e1b4f05269eaeb94f4dd06cf1">FT_GlyphSlotRec</a></div><div class="ttdeci">struct FT_GlyphSlotRec_ FT_GlyphSlotRec</div></div>
+<div class="ttc" id="afreetype_8h_html_a9c3de3f9524eab77bafb4d26e8ddc898"><div class="ttname"><a href="freetype_8h.html#a9c3de3f9524eab77bafb4d26e8ddc898">FT_SizeRec</a></div><div class="ttdeci">struct FT_SizeRec_ FT_SizeRec</div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftimage_8h_html_abfcb941b4b81f3a922d4ae57c620db27"><div class="ttname"><a href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a></div><div class="ttdeci">struct FT_Vector_ FT_Vector</div></div>
+<div class="ttc" id="aftsysio_8h_html_a99e9995ed3299cabc8874b89ee1ee407"><div class="ttname"><a href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_StreamRec_ * FT_Stream</div><div class="ttdef"><b>Definition</b> ftsysio.h:55</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a77b77ff4d86f1c3a791463b762cfe60e"><div class="ttname"><a href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div><div class="ttdeci">int FT_Int</div><div class="ttdef"><b>Definition</b> fttypes.h:187</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a0539edfeca58f9e83963102d702e2e45"><div class="ttname"><a href="pfrobjs_8h.html#a0539edfeca58f9e83963102d702e2e45">PFR_FaceRec</a></div><div class="ttdeci">struct PFR_FaceRec_ PFR_FaceRec</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a1b1b01622d851f0da78d57dbcb9a7615"><div class="ttname"><a href="pfrobjs_8h.html#a1b1b01622d851f0da78d57dbcb9a7615">pfr_face_init</a></div><div class="ttdeci">pfr_face_init(FT_Stream stream, PFR_Face face, FT_Int face_index, FT_Int num_params, FT_Parameter *params)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:52</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a24bea0a91b530a902a50cd210be30fc6"><div class="ttname"><a href="pfrobjs_8h.html#a24bea0a91b530a902a50cd210be30fc6">pfr_face_get_kerning</a></div><div class="ttdeci">pfr_face_get_kerning(PFR_Face face, FT_UInt glyph1, FT_UInt glyph2, FT_Vector *kerning)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:355</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a3d0794bc379a4bcc57241a7e96d36730"><div class="ttname"><a href="pfrobjs_8h.html#a3d0794bc379a4bcc57241a7e96d36730">PFR_Size</a></div><div class="ttdeci">struct PFR_SizeRec_ * PFR_Size</div><div class="ttdef"><b>Definition</b> pfrobjs.h:29</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a558c5facc5a5904281c3a4fbd349d37e"><div class="ttname"><a href="pfrobjs_8h.html#a558c5facc5a5904281c3a4fbd349d37e">pfr_face_done</a></div><div class="ttdeci">pfr_face_done(PFR_Face face)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:42</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a5999e5ebd8e89ad493eb4e4f7a36afba"><div class="ttname"><a href="pfrobjs_8h.html#a5999e5ebd8e89ad493eb4e4f7a36afba">PFR_Slot</a></div><div class="ttdeci">struct PFR_SlotRec_ * PFR_Slot</div><div class="ttdef"><b>Definition</b> pfrobjs.h:31</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a59ef022bfa0a198447ffd8c9cde4c8af"><div class="ttname"><a href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct PFR_FaceRec_ * PFR_Face</div><div class="ttdef"><b>Definition</b> pfrobjs.h:27</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a60d3473bb3d7dd4382453d44ba4f1036"><div class="ttname"><a href="pfrobjs_8h.html#a60d3473bb3d7dd4382453d44ba4f1036">PFR_SlotRec</a></div><div class="ttdeci">struct PFR_SlotRec_ PFR_SlotRec</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a6907f89e20733ec3e3799486b5279da0"><div class="ttname"><a href="pfrobjs_8h.html#a6907f89e20733ec3e3799486b5279da0">pfr_slot_load</a></div><div class="ttdeci">pfr_slot_load(PFR_Slot slot, PFR_Size size, FT_UInt gindex, FT_Int32 load_flags)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:233</div></div>
+<div class="ttc" id="apfrobjs_8h_html_a9d10db7c28f2e3a66caaa37f6cd8c10e"><div class="ttname"><a href="pfrobjs_8h.html#a9d10db7c28f2e3a66caaa37f6cd8c10e">pfr_slot_init</a></div><div class="ttdeci">pfr_slot_init(PFR_Slot slot)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:215</div></div>
+<div class="ttc" id="apfrobjs_8h_html_ace73a056038ebca662bc671c3d67cec6"><div class="ttname"><a href="pfrobjs_8h.html#ace73a056038ebca662bc671c3d67cec6">PFR_SizeRec</a></div><div class="ttdeci">struct PFR_SizeRec_ PFR_SizeRec</div></div>
+<div class="ttc" id="apfrobjs_8h_html_ae00a4e5976142dae13cbe4bca06deece"><div class="ttname"><a href="pfrobjs_8h.html#ae00a4e5976142dae13cbe4bca06deece">pfr_slot_done</a></div><div class="ttdeci">pfr_slot_done(PFR_Slot slot)</div><div class="ttdef"><b>Definition</b> pfrobjs.c:226</div></div>
+<div class="ttc" id="apfrtypes_8h_html"><div class="ttname"><a href="pfrtypes_8h.html">pfrtypes.h</a></div></div>
+<div class="ttc" id="apfrtypes_8h_html_a10f66834ce97628cc9deefd78108809b"><div class="ttname"><a href="pfrtypes_8h.html#a10f66834ce97628cc9deefd78108809b">PFR_GlyphRec</a></div><div class="ttdeci">struct PFR_GlyphRec_ PFR_GlyphRec</div></div>
+<div class="ttc" id="apfrtypes_8h_html_a1f8873d892aefe8901281e90ba086e59"><div class="ttname"><a href="pfrtypes_8h.html#a1f8873d892aefe8901281e90ba086e59">PFR_PhyFontRec</a></div><div class="ttdeci">struct PFR_PhyFontRec_ PFR_PhyFontRec</div></div>
+<div class="ttc" id="apfrtypes_8h_html_a3df4de8bd0b8c24919111cafbcead232"><div class="ttname"><a href="pfrtypes_8h.html#a3df4de8bd0b8c24919111cafbcead232">PFR_LogFontRec</a></div><div class="ttdeci">struct PFR_LogFontRec_ PFR_LogFontRec</div></div>
+<div class="ttc" id="apfrtypes_8h_html_af72e2cadf5803d9b7f02add9e5656032"><div class="ttname"><a href="pfrtypes_8h.html#af72e2cadf5803d9b7f02add9e5656032">PFR_HeaderRec</a></div><div class="ttdeci">FT_BEGIN_HEADER struct PFR_HeaderRec_ PFR_HeaderRec</div></div>
+<div class="ttc" id="astruct_p_f_r___face_rec___html"><div class="ttname"><a href="struct_p_f_r___face_rec__.html">PFR_FaceRec_</a></div><div class="ttdef"><b>Definition</b> pfrobjs.h:35</div></div>
+<div class="ttc" id="astruct_p_f_r___face_rec___html_a4ec2bb2cdcb623894cf3e7f909031fef"><div class="ttname"><a href="struct_p_f_r___face_rec__.html#a4ec2bb2cdcb623894cf3e7f909031fef">PFR_FaceRec_::log_font</a></div><div class="ttdeci">PFR_LogFontRec log_font</div><div class="ttdef"><b>Definition</b> pfrobjs.h:38</div></div>
+<div class="ttc" id="astruct_p_f_r___face_rec___html_a6d0d14dcf2fe7d8e069918b41b84f162"><div class="ttname"><a href="struct_p_f_r___face_rec__.html#a6d0d14dcf2fe7d8e069918b41b84f162">PFR_FaceRec_::root</a></div><div class="ttdeci">FT_FaceRec root</div><div class="ttdef"><b>Definition</b> pfrobjs.h:36</div></div>
+<div class="ttc" id="astruct_p_f_r___face_rec___html_a9adc92717c73ac57d5cc12a931295747"><div class="ttname"><a href="struct_p_f_r___face_rec__.html#a9adc92717c73ac57d5cc12a931295747">PFR_FaceRec_::header</a></div><div class="ttdeci">PFR_HeaderRec header</div><div class="ttdef"><b>Definition</b> pfrobjs.h:37</div></div>
+<div class="ttc" id="astruct_p_f_r___face_rec___html_af810dc7a2e86f4cf72a59659f1bf145c"><div class="ttname"><a href="struct_p_f_r___face_rec__.html#af810dc7a2e86f4cf72a59659f1bf145c">PFR_FaceRec_::phy_font</a></div><div class="ttdeci">PFR_PhyFontRec phy_font</div><div class="ttdef"><b>Definition</b> pfrobjs.h:39</div></div>
+<div class="ttc" id="astruct_p_f_r___size_rec___html"><div class="ttname"><a href="struct_p_f_r___size_rec__.html">PFR_SizeRec_</a></div><div class="ttdef"><b>Definition</b> pfrobjs.h:45</div></div>
+<div class="ttc" id="astruct_p_f_r___size_rec___html_a625cb7bbd1515325c4114ec8f82c5ffe"><div class="ttname"><a href="struct_p_f_r___size_rec__.html#a625cb7bbd1515325c4114ec8f82c5ffe">PFR_SizeRec_::root</a></div><div class="ttdeci">FT_SizeRec root</div><div class="ttdef"><b>Definition</b> pfrobjs.h:46</div></div>
+<div class="ttc" id="astruct_p_f_r___slot_rec___html"><div class="ttname"><a href="struct_p_f_r___slot_rec__.html">PFR_SlotRec_</a></div><div class="ttdef"><b>Definition</b> pfrobjs.h:52</div></div>
+<div class="ttc" id="astruct_p_f_r___slot_rec___html_a54b90014b57732fcb505c865920c7c4e"><div class="ttname"><a href="struct_p_f_r___slot_rec__.html#a54b90014b57732fcb505c865920c7c4e">PFR_SlotRec_::glyph</a></div><div class="ttdeci">PFR_GlyphRec glyph</div><div class="ttdef"><b>Definition</b> pfrobjs.h:54</div></div>
+<div class="ttc" id="astruct_p_f_r___slot_rec___html_aedb79342ff3d90d9c694f5653d717fbe"><div class="ttname"><a href="struct_p_f_r___slot_rec__.html#aedb79342ff3d90d9c694f5653d717fbe">PFR_SlotRec_::root</a></div><div class="ttdeci">FT_GlyphSlotRec root</div><div class="ttdef"><b>Definition</b> pfrobjs.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_d4ba0b202c3d42f5530bd6926753ce2f.html">pfr</a></li><li class="navelem"><a href="pfrobjs_8h.html">pfrobjs.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+digraph "OTL_ParserRec_"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="OTL_ParserRec_",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">memory</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node2 [id="Node000002",label="OTL_MemoryRec_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_o_t_l___memory_rec__.html",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">str_in</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">str_out</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">strings</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node3 [id="Node000003",label="OTL_StringRec_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_o_t_l___string_rec__.html",tooltip=" "];
+  Node4 -> Node3 [id="edge3_Node000003_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">glyphs</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node4 [id="Node000004",label="OTL_StringGlyphRec_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_o_t_l___string_glyph_rec__.html",tooltip=" "];
+}

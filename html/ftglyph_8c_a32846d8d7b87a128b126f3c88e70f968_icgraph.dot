@@ -1,0 +1,18 @@
+digraph "ft_bitmap_copy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ft_bitmap_copy",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ft_bitmap_glyph_copy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftglyph_8c.html#a430193cee37230f9c3a8722c896fc4f4",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_bitmap_glyph_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftglyph_8c.html#a9df706108af7df3db6416a531cc3c491",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_Glyph_To_Bitmap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftglyph_8c.html#a669fa0a60332582cf26b5749b566a256",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="_alfont_cache_glyph",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$alfont_8c.html#a0666628364488a824cb42afc68e8b912",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

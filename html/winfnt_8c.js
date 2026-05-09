@@ -1,0 +1,27 @@
+var winfnt_8c =
+[
+    [ "FNT_CMapRec_", "struct_f_n_t___c_map_rec__.html", "struct_f_n_t___c_map_rec__" ],
+    [ "FT_COMPONENT", "winfnt_8c.html#a9c208ea57bc9a5fcbfc81a6106d28f3a", null ],
+    [ "FT_STRUCTURE", "winfnt_8c.html#a3bd5412680c87e8804385f30b1bbcd0f", null ],
+    [ "FT_STRUCTURE", "winfnt_8c.html#a486ece7706e0b40f03d6ab0b842586f0", null ],
+    [ "FT_STRUCTURE", "winfnt_8c.html#adb14d0edf0c80ad37476a4c6ae657d15", null ],
+    [ "FNT_CMap", "winfnt_8c.html#ad236aaa0447c14f22d1f1eeeaf82b17d", null ],
+    [ "FNT_CMapRec", "winfnt_8c.html#a44ec5f81bf2fe756f71676cc17d2c7a2", null ],
+    [ "fnt_cmap_char_index", "winfnt_8c.html#ad798a67e93881ef7f0966c79241a678e", null ],
+    [ "fnt_cmap_char_next", "winfnt_8c.html#a7a74dea39891360d9620d4492acbf54f", null ],
+    [ "fnt_cmap_init", "winfnt_8c.html#a1538846b5ad97f4c6a5d23a0d0aab68a", null ],
+    [ "FNT_Face_Done", "winfnt_8c.html#a1484184b825f01a04cdba8017a822740", null ],
+    [ "fnt_face_done_fonts", "winfnt_8c.html#a6905c9ecc7a6bc9f58271f327b035abb", null ],
+    [ "fnt_face_get_dll_fonts", "winfnt_8c.html#a2cc5cf6a662bab38d64e2ced67b38076", null ],
+    [ "FNT_Face_Init", "winfnt_8c.html#ac1b474513bb054db891a1bc9e1932cea", null ],
+    [ "fnt_font_done", "winfnt_8c.html#a0e6c4820fbe878e9e87cd07637004245", null ],
+    [ "fnt_font_load", "winfnt_8c.html#a416cb0a0476b626216fa9fa5eea479c6", null ],
+    [ "FNT_Load_Glyph", "winfnt_8c.html#a6915732eb28e123271a54f10556e2261", null ],
+    [ "FNT_Size_Set_Pixels", "winfnt_8c.html#a397c7808df3456ecf1edc9edf5968ca3", null ],
+    [ "fnt_cmap_class", "winfnt_8c.html#ae4a18b7a8f0e894dc585649c65eb9a1d", null ],
+    [ "fnt_cmap_class_rec", "winfnt_8c.html#a6d3d2927535ca7d7d5a9b6825e7200fc", null ],
+    [ "winfnt_driver_class", "winfnt_8c.html#a29f9e32ff81011d5439f47b4d02f0cf8", null ],
+    [ "winfnt_header_fields", "winfnt_8c.html#a9fc6674aa68396b96e6aeda3f7e41528", null ],
+    [ "winmz_header_fields", "winfnt_8c.html#a98129ae3e67b89b7e7ac70eb9e35a7ed", null ],
+    [ "winne_header_fields", "winfnt_8c.html#a393cb050e9ec3ca0f9e74a6409439e9f", null ]
+];

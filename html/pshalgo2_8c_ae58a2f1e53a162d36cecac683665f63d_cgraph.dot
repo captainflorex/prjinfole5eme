@@ -1,0 +1,19 @@
+digraph "psh2_glyph_find_strong_points"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="psh2_glyph_find_strong\l_points",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="psh2_hint_table_activate_mask",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#ad1f7ef20ef039053b8d16befc1d89948",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="psh2_hint_overlap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a6887169ea13c69419bfba4ae901403e4",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="psh2_hint_table_deactivate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a8afda28125ca761b14a35b902459a923",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="psh2_hint_table_find\l_strong_point",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a680864d27b4be2018b34ad3fca989114",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="psh2_point_is_extremum",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pshalgo2_8c.html#a9d50bda8be9a7f0231382c0119aaeae3",tooltip=" "];
+}

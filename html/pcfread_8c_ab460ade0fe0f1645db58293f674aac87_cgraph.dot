@@ -1,0 +1,13 @@
+digraph "pcf_get_accel"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="pcf_get_accel",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="pcf_get_metric",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfread_8c.html#a754cadcb6847e34429858e549ec75093",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="pcf_seek_to_table_type",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfread_8c.html#a00da8880688d06beb09836cb1cb2c0c8",tooltip=" "];
+}

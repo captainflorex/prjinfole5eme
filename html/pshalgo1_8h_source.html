@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pshinter/pshalgo1.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pshalgo1_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pshalgo1.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pshalgo1_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  pshalgo1.h                                                             */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    PostScript hinting algorithm 1 (specification).                      */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2001 by                                                      */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef __PSHALGO1_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define __PSHALGO1_H__</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="pshrec_8h.html">pshrec.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">   26</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_p_s_h1___hint_rec__.html">PSH1_HintRec_</a>*  <a class="code hl_typedef" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01">   28</a></span>  <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01a7d3921877c0235bb3fcadf174b034db8">   30</a></span>    <a class="code hl_enumvalue" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01a7d3921877c0235bb3fcadf174b034db8">PSH1_HINT_FLAG_GHOST</a>  = <a class="code hl_enumvalue" href="pshrec_8h.html#a9ce8ee3d71047e7533a986710337e048aff5c717261abd6d25b3c78aa782c740d">PS_HINT_FLAG_GHOST</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01a208d03871cf28c4088dcaee848a53dea">   31</a></span>    <a class="code hl_enumvalue" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01a208d03871cf28c4088dcaee848a53dea">PSH1_HINT_FLAG_BOTTOM</a> = <a class="code hl_enumvalue" href="pshrec_8h.html#a9ce8ee3d71047e7533a986710337e048a82d9a8e7ff2ca434120d78fef0abb854">PS_HINT_FLAG_BOTTOM</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01af9ce78ef4264c9f40631aea586a740af">   32</a></span>    <a class="code hl_enumvalue" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01af9ce78ef4264c9f40631aea586a740af">PSH1_HINT_FLAG_ACTIVE</a> = 4</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  } <a class="code hl_enumeration" href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01">PSH1_Hint_Flags</a>;</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="" data-end="">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a8cd2ad334e628ada05503aef3f565658">   36</a></span><span class="preprocessor">#define psh1_hint_is_active( x )                          \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">          ( ( (x)-&gt;flags &amp; PSH1_HINT_FLAG_ACTIVE ) != 0 )</span></div>
+</div>
+<div class="foldopen" id="foldopen00038" data-start="" data-end="">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#acaff16c2516aa3f7e6da21ddc11c4bf0">   38</a></span><span class="preprocessor">#define psh1_hint_is_ghost( x )                          \</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">          ( ( (x)-&gt;flags &amp; PSH1_HINT_FLAG_GHOST ) != 0 )</span></div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a12e2ff43f88bb57b9dd5ee52af31f7a8">   41</a></span><span class="preprocessor">#define psh1_hint_activate( x )    (x)-&gt;flags |= PSH1_HINT_FLAG_ACTIVE</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a297049cb9aea0f8bc6b4d262fa971834">   42</a></span><span class="preprocessor">#define psh1_hint_deactivate( x )  (x)-&gt;flags &amp;= ~PSH1_HINT_FLAG_ACTIVE</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html">   44</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_s_h1___hint_rec__.html">PSH1_HintRec_</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#abe000aecee67237a0243ec40b3743ad6">   46</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>     <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#abe000aecee67237a0243ec40b3743ad6">org_pos</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#a854768ae4e71205bc1a0c081d05a6499">   47</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>     <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#a854768ae4e71205bc1a0c081d05a6499">org_len</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#a51d6a653cfae222f3dead19eda2954a2">   48</a></span>    <a class="code hl_variable" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>     <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#a51d6a653cfae222f3dead19eda2954a2">cur_pos</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#aee5df0f5cdc7d6b838f8ee42c0dd4f66">   49</a></span>    <a class="code hl_variable" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>     <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#aee5df0f5cdc7d6b838f8ee42c0dd4f66">cur_len</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#ac08d45202400063fb8d61b18277318b2">   51</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#ac08d45202400063fb8d61b18277318b2">flags</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#a73c5fc66f3c0e3c693a89f22e797034f">   53</a></span>    <a class="code hl_typedef" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a>  <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#a73c5fc66f3c0e3c693a89f22e797034f">parent</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint_rec__.html#abfdd4c6e284965b53f206b023f940bd5">   54</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>     <a class="code hl_variable" href="struct_p_s_h1___hint_rec__.html#abfdd4c6e284965b53f206b023f940bd5">order</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#aad67e8e5ea5e834620466d3133e62523">   56</a></span>  } <a class="code hl_typedef" href="pshalgo1_8h.html#aad67e8e5ea5e834620466d3133e62523">PSH1_HintRec</a>;</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">/* this is an interpolation zone used for strong points;  */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">/* weak points are interpolated according to their strong */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="comment">/* neighbours                                             */</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_p_s_h1___zone_rec__.html">   62</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_s_h1___zone_rec__.html">PSH1_ZoneRec_</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_p_s_h1___zone_rec__.html#a9ccc55ac846244d95ace204fb19af487">   64</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>  <a class="code hl_variable" href="struct_p_s_h1___zone_rec__.html#a9ccc55ac846244d95ace204fb19af487">scale</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_p_s_h1___zone_rec__.html#a0a771c2f6642e3decfc34c9f2013bd41">   65</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a>  <a class="code hl_variable" href="struct_p_s_h1___zone_rec__.html#a0a771c2f6642e3decfc34c9f2013bd41">delta</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_p_s_h1___zone_rec__.html#a1ed91c16540ee9509d791546267630fb">   66</a></span>    <a class="code hl_variable" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>    <a class="code hl_variable" href="struct_p_s_h1___zone_rec__.html#a1ed91c16540ee9509d791546267630fb">min</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_p_s_h1___zone_rec__.html#a5e8c25a311aa26927bf7c9b25daf3799">   67</a></span>    <a class="code hl_variable" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>    <a class="code hl_variable" href="struct_p_s_h1___zone_rec__.html#a5e8c25a311aa26927bf7c9b25daf3799">max</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#a671e4feec3c18cff0fea0dfccebd6d76">   69</a></span>  } <a class="code hl_typedef" href="pshalgo1_8h.html#a3bd136f630aec0376c09a0164cc9155e">PSH1_ZoneRec</a>, *<a class="code hl_typedef" href="pshalgo1_8h.html#a671e4feec3c18cff0fea0dfccebd6d76">PSH1_Zone</a>;</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html">   72</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_s_h1___hint___table_rec__.html">PSH1_Hint_TableRec_</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#a12272e0b29a3f01ca097941232b4e4c3">   74</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>        <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#a12272e0b29a3f01ca097941232b4e4c3">max_hints</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#ae40c921dff6f9afdf64605d3c50c0104">   75</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>        <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#ae40c921dff6f9afdf64605d3c50c0104">num_hints</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#ad567230f516be38433560da7c564bf75">   76</a></span>    <a class="code hl_typedef" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a>      <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#ad567230f516be38433560da7c564bf75">hints</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#a4ac893a2a020341391da6cac448c7fd3">   77</a></span>    <a class="code hl_typedef" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a>*     <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#a4ac893a2a020341391da6cac448c7fd3">sort</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#a98bb36c757a5fb2d2f45bb57977831e0">   78</a></span>    <a class="code hl_typedef" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a>*     <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#a98bb36c757a5fb2d2f45bb57977831e0">sort_global</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#aa916d95ab29b1cd1b9e45e8c6d339a9e">   79</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>        <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#aa916d95ab29b1cd1b9e45e8c6d339a9e">num_zones</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#a6809e6b5b9a8cf369098aa693e547af1">   80</a></span>    <a class="code hl_typedef" href="pshalgo1_8h.html#a671e4feec3c18cff0fea0dfccebd6d76">PSH1_Zone</a>      <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#a6809e6b5b9a8cf369098aa693e547af1">zones</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#a9a80d783109c30c6ea36f11870ddad38">   81</a></span>    <a class="code hl_typedef" href="pshalgo1_8h.html#a671e4feec3c18cff0fea0dfccebd6d76">PSH1_Zone</a>      <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#a9a80d783109c30c6ea36f11870ddad38">zone</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#ae0816e4f2f143fbf5ac2a53a0f71526a">   82</a></span>    <a class="code hl_typedef" href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a>  <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#ae0816e4f2f143fbf5ac2a53a0f71526a">hint_masks</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="struct_p_s_h1___hint___table_rec__.html#a2bcb6a96fa49f17e4e6818abf77f8162">   83</a></span>    <a class="code hl_typedef" href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a>  <a class="code hl_variable" href="struct_p_s_h1___hint___table_rec__.html#a2bcb6a96fa49f17e4e6818abf77f8162">counter_masks</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="pshalgo1_8h.html#aa4c51a5cc151c0c726583c068b6f5099">   85</a></span>  } <a class="code hl_typedef" href="pshalgo1_8h.html#a98fbeec7465f22fcf90e60a9c095ef82">PSH1_Hint_TableRec</a>, *<a class="code hl_typedef" href="pshalgo1_8h.html#aa4c51a5cc151c0c726583c068b6f5099">PSH1_Hint_Table</a>;</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keyword">extern</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_function" href="pshalgo1_8h.html#a41e95b53e0d02b5067b987a7ec610983">ps1_hints_apply</a>( <a class="code hl_typedef" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a>        ps_hints,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                   <a class="code hl_typedef" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a>*     outline,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                   <a class="code hl_typedef" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a>     globals,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                   <a class="code hl_typedef" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a>  hint_mode );</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#ifdef DEBUG_HINTER</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">extern</span>  <a class="code hl_typedef" href="pshalgo1_8h.html#aa4c51a5cc151c0c726583c068b6f5099">PSH1_Hint_Table</a>  ps1_debug_hint_table;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keyword">typedef</span> void</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  (*PSH1_HintFunc)( <a class="code hl_typedef" href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a>  hint,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    <a class="code hl_variable" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>    vertical );</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keyword">extern</span> PSH1_HintFunc  ps1_debug_hint_func;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif </span><span class="comment">/* __PSHALGO1_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="afreetype_8h_html_a42c69ed4922d28c7d8cc9173237f966b"><div class="ttname"><a href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></div><div class="ttdeci">enum FT_Render_Mode_ FT_Render_Mode</div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftimage_8h_html_a6b64eb35252e8829024c12c98cce37d4"><div class="ttname"><a href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a></div><div class="ttdeci">struct FT_Outline_ FT_Outline</div></div>
+<div class="ttc" id="aftimage_8h_html_af5f230f4b253d4c7715fd2e595614c90"><div class="ttname"><a href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef signed long FT_Pos</div><div class="ttdef"><b>Definition</b> ftimage.h:59</div></div>
+<div class="ttc" id="afttypes_8h_html_a1a832a256bb5a7e6e884afaa1a07f3ae"><div class="ttname"><a href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef unsigned char FT_Bool</div><div class="ttdef"><b>Definition</b> fttypes.h:97</div></div>
+<div class="ttc" id="afttypes_8h_html_a5f5a679cc09f758efdd0d1c5feed3c3d"><div class="ttname"><a href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></div><div class="ttdeci">signed long FT_Fixed</div><div class="ttdef"><b>Definition</b> fttypes.h:255</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a77b77ff4d86f1c3a791463b762cfe60e"><div class="ttname"><a href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div><div class="ttdeci">int FT_Int</div><div class="ttdef"><b>Definition</b> fttypes.h:187</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a3bd136f630aec0376c09a0164cc9155e"><div class="ttname"><a href="pshalgo1_8h.html#a3bd136f630aec0376c09a0164cc9155e">PSH1_ZoneRec</a></div><div class="ttdeci">struct PSH1_ZoneRec_ PSH1_ZoneRec</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a41e95b53e0d02b5067b987a7ec610983"><div class="ttname"><a href="pshalgo1_8h.html#a41e95b53e0d02b5067b987a7ec610983">ps1_hints_apply</a></div><div class="ttdeci">FT_Error ps1_hints_apply(PS_Hints ps_hints, FT_Outline *outline, PSH_Globals globals, FT_Render_Mode hint_mode)</div><div class="ttdef"><b>Definition</b> pshalgo1.c:745</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a671e4feec3c18cff0fea0dfccebd6d76"><div class="ttname"><a href="pshalgo1_8h.html#a671e4feec3c18cff0fea0dfccebd6d76">PSH1_Zone</a></div><div class="ttdeci">struct PSH1_ZoneRec_ * PSH1_Zone</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a7fa5547f73a2d9393e717abf587896f5"><div class="ttname"><a href="pshalgo1_8h.html#a7fa5547f73a2d9393e717abf587896f5">PSH1_Hint</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct PSH1_HintRec_ * PSH1_Hint</div><div class="ttdef"><b>Definition</b> pshalgo1.h:26</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a9117755d5657e64b9d23b8090ad00e01"><div class="ttname"><a href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01">PSH1_Hint_Flags</a></div><div class="ttdeci">PSH1_Hint_Flags</div><div class="ttdef"><b>Definition</b> pshalgo1.h:29</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a9117755d5657e64b9d23b8090ad00e01a208d03871cf28c4088dcaee848a53dea"><div class="ttname"><a href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01a208d03871cf28c4088dcaee848a53dea">PSH1_HINT_FLAG_BOTTOM</a></div><div class="ttdeci">@ PSH1_HINT_FLAG_BOTTOM</div><div class="ttdef"><b>Definition</b> pshalgo1.h:31</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a9117755d5657e64b9d23b8090ad00e01a7d3921877c0235bb3fcadf174b034db8"><div class="ttname"><a href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01a7d3921877c0235bb3fcadf174b034db8">PSH1_HINT_FLAG_GHOST</a></div><div class="ttdeci">@ PSH1_HINT_FLAG_GHOST</div><div class="ttdef"><b>Definition</b> pshalgo1.h:30</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a9117755d5657e64b9d23b8090ad00e01af9ce78ef4264c9f40631aea586a740af"><div class="ttname"><a href="pshalgo1_8h.html#a9117755d5657e64b9d23b8090ad00e01af9ce78ef4264c9f40631aea586a740af">PSH1_HINT_FLAG_ACTIVE</a></div><div class="ttdeci">@ PSH1_HINT_FLAG_ACTIVE</div><div class="ttdef"><b>Definition</b> pshalgo1.h:32</div></div>
+<div class="ttc" id="apshalgo1_8h_html_a98fbeec7465f22fcf90e60a9c095ef82"><div class="ttname"><a href="pshalgo1_8h.html#a98fbeec7465f22fcf90e60a9c095ef82">PSH1_Hint_TableRec</a></div><div class="ttdeci">struct PSH1_Hint_TableRec_ PSH1_Hint_TableRec</div></div>
+<div class="ttc" id="apshalgo1_8h_html_aa4c51a5cc151c0c726583c068b6f5099"><div class="ttname"><a href="pshalgo1_8h.html#aa4c51a5cc151c0c726583c068b6f5099">PSH1_Hint_Table</a></div><div class="ttdeci">struct PSH1_Hint_TableRec_ * PSH1_Hint_Table</div></div>
+<div class="ttc" id="apshalgo1_8h_html_aad67e8e5ea5e834620466d3133e62523"><div class="ttname"><a href="pshalgo1_8h.html#aad67e8e5ea5e834620466d3133e62523">PSH1_HintRec</a></div><div class="ttdeci">struct PSH1_HintRec_ PSH1_HintRec</div></div>
+<div class="ttc" id="apshints_8h_html_aed4220b62b12a76456f9f47bafa5fe52"><div class="ttname"><a href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct PSH_GlobalsRec_ * PSH_Globals</div><div class="ttdef"><b>Definition</b> pshints.h:41</div></div>
+<div class="ttc" id="apshrec_8h_html"><div class="ttname"><a href="pshrec_8h.html">pshrec.h</a></div></div>
+<div class="ttc" id="apshrec_8h_html_a9ce8ee3d71047e7533a986710337e048a82d9a8e7ff2ca434120d78fef0abb854"><div class="ttname"><a href="pshrec_8h.html#a9ce8ee3d71047e7533a986710337e048a82d9a8e7ff2ca434120d78fef0abb854">PS_HINT_FLAG_BOTTOM</a></div><div class="ttdeci">@ PS_HINT_FLAG_BOTTOM</div><div class="ttdef"><b>Definition</b> pshrec.h:67</div></div>
+<div class="ttc" id="apshrec_8h_html_a9ce8ee3d71047e7533a986710337e048aff5c717261abd6d25b3c78aa782c740d"><div class="ttname"><a href="pshrec_8h.html#a9ce8ee3d71047e7533a986710337e048aff5c717261abd6d25b3c78aa782c740d">PS_HINT_FLAG_GHOST</a></div><div class="ttdeci">@ PS_HINT_FLAG_GHOST</div><div class="ttdef"><b>Definition</b> pshrec.h:66</div></div>
+<div class="ttc" id="apshrec_8h_html_ab422640d293b41e4f1360a15662d6043"><div class="ttname"><a href="pshrec_8h.html#ab422640d293b41e4f1360a15662d6043">PS_Mask_Table</a></div><div class="ttdeci">struct PS_Mask_TableRec_ * PS_Mask_Table</div></div>
+<div class="ttc" id="apshrec_8h_html_abf3596a6f1cd6a3395f64ed9a5e05c9b"><div class="ttname"><a href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a></div><div class="ttdeci">struct PS_HintsRec_ * PS_Hints</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html">PSH1_Hint_TableRec_</a></div><div class="ttdef"><b>Definition</b> pshalgo1.h:73</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_a12272e0b29a3f01ca097941232b4e4c3"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#a12272e0b29a3f01ca097941232b4e4c3">PSH1_Hint_TableRec_::max_hints</a></div><div class="ttdeci">FT_UInt max_hints</div><div class="ttdef"><b>Definition</b> pshalgo1.h:74</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_a2bcb6a96fa49f17e4e6818abf77f8162"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#a2bcb6a96fa49f17e4e6818abf77f8162">PSH1_Hint_TableRec_::counter_masks</a></div><div class="ttdeci">PS_Mask_Table counter_masks</div><div class="ttdef"><b>Definition</b> pshalgo1.h:83</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_a4ac893a2a020341391da6cac448c7fd3"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#a4ac893a2a020341391da6cac448c7fd3">PSH1_Hint_TableRec_::sort</a></div><div class="ttdeci">PSH1_Hint * sort</div><div class="ttdef"><b>Definition</b> pshalgo1.h:77</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_a6809e6b5b9a8cf369098aa693e547af1"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#a6809e6b5b9a8cf369098aa693e547af1">PSH1_Hint_TableRec_::zones</a></div><div class="ttdeci">PSH1_Zone zones</div><div class="ttdef"><b>Definition</b> pshalgo1.h:80</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_a98bb36c757a5fb2d2f45bb57977831e0"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#a98bb36c757a5fb2d2f45bb57977831e0">PSH1_Hint_TableRec_::sort_global</a></div><div class="ttdeci">PSH1_Hint * sort_global</div><div class="ttdef"><b>Definition</b> pshalgo1.h:78</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_a9a80d783109c30c6ea36f11870ddad38"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#a9a80d783109c30c6ea36f11870ddad38">PSH1_Hint_TableRec_::zone</a></div><div class="ttdeci">PSH1_Zone zone</div><div class="ttdef"><b>Definition</b> pshalgo1.h:81</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_aa916d95ab29b1cd1b9e45e8c6d339a9e"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#aa916d95ab29b1cd1b9e45e8c6d339a9e">PSH1_Hint_TableRec_::num_zones</a></div><div class="ttdeci">FT_UInt num_zones</div><div class="ttdef"><b>Definition</b> pshalgo1.h:79</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_ad567230f516be38433560da7c564bf75"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#ad567230f516be38433560da7c564bf75">PSH1_Hint_TableRec_::hints</a></div><div class="ttdeci">PSH1_Hint hints</div><div class="ttdef"><b>Definition</b> pshalgo1.h:76</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_ae0816e4f2f143fbf5ac2a53a0f71526a"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#ae0816e4f2f143fbf5ac2a53a0f71526a">PSH1_Hint_TableRec_::hint_masks</a></div><div class="ttdeci">PS_Mask_Table hint_masks</div><div class="ttdef"><b>Definition</b> pshalgo1.h:82</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint___table_rec___html_ae40c921dff6f9afdf64605d3c50c0104"><div class="ttname"><a href="struct_p_s_h1___hint___table_rec__.html#ae40c921dff6f9afdf64605d3c50c0104">PSH1_Hint_TableRec_::num_hints</a></div><div class="ttdeci">FT_UInt num_hints</div><div class="ttdef"><b>Definition</b> pshalgo1.h:75</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html">PSH1_HintRec_</a></div><div class="ttdef"><b>Definition</b> pshalgo1.h:45</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_a51d6a653cfae222f3dead19eda2954a2"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#a51d6a653cfae222f3dead19eda2954a2">PSH1_HintRec_::cur_pos</a></div><div class="ttdeci">FT_Pos cur_pos</div><div class="ttdef"><b>Definition</b> pshalgo1.h:48</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_a73c5fc66f3c0e3c693a89f22e797034f"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#a73c5fc66f3c0e3c693a89f22e797034f">PSH1_HintRec_::parent</a></div><div class="ttdeci">PSH1_Hint parent</div><div class="ttdef"><b>Definition</b> pshalgo1.h:53</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_a854768ae4e71205bc1a0c081d05a6499"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#a854768ae4e71205bc1a0c081d05a6499">PSH1_HintRec_::org_len</a></div><div class="ttdeci">FT_Int org_len</div><div class="ttdef"><b>Definition</b> pshalgo1.h:47</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_abe000aecee67237a0243ec40b3743ad6"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#abe000aecee67237a0243ec40b3743ad6">PSH1_HintRec_::org_pos</a></div><div class="ttdeci">FT_Int org_pos</div><div class="ttdef"><b>Definition</b> pshalgo1.h:46</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_abfdd4c6e284965b53f206b023f940bd5"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#abfdd4c6e284965b53f206b023f940bd5">PSH1_HintRec_::order</a></div><div class="ttdeci">FT_Int order</div><div class="ttdef"><b>Definition</b> pshalgo1.h:54</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_ac08d45202400063fb8d61b18277318b2"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#ac08d45202400063fb8d61b18277318b2">PSH1_HintRec_::flags</a></div><div class="ttdeci">FT_UInt flags</div><div class="ttdef"><b>Definition</b> pshalgo1.h:51</div></div>
+<div class="ttc" id="astruct_p_s_h1___hint_rec___html_aee5df0f5cdc7d6b838f8ee42c0dd4f66"><div class="ttname"><a href="struct_p_s_h1___hint_rec__.html#aee5df0f5cdc7d6b838f8ee42c0dd4f66">PSH1_HintRec_::cur_len</a></div><div class="ttdeci">FT_Pos cur_len</div><div class="ttdef"><b>Definition</b> pshalgo1.h:49</div></div>
+<div class="ttc" id="astruct_p_s_h1___zone_rec___html"><div class="ttname"><a href="struct_p_s_h1___zone_rec__.html">PSH1_ZoneRec_</a></div><div class="ttdef"><b>Definition</b> pshalgo1.h:63</div></div>
+<div class="ttc" id="astruct_p_s_h1___zone_rec___html_a0a771c2f6642e3decfc34c9f2013bd41"><div class="ttname"><a href="struct_p_s_h1___zone_rec__.html#a0a771c2f6642e3decfc34c9f2013bd41">PSH1_ZoneRec_::delta</a></div><div class="ttdeci">FT_Fixed delta</div><div class="ttdef"><b>Definition</b> pshalgo1.h:65</div></div>
+<div class="ttc" id="astruct_p_s_h1___zone_rec___html_a1ed91c16540ee9509d791546267630fb"><div class="ttname"><a href="struct_p_s_h1___zone_rec__.html#a1ed91c16540ee9509d791546267630fb">PSH1_ZoneRec_::min</a></div><div class="ttdeci">FT_Pos min</div><div class="ttdef"><b>Definition</b> pshalgo1.h:66</div></div>
+<div class="ttc" id="astruct_p_s_h1___zone_rec___html_a5e8c25a311aa26927bf7c9b25daf3799"><div class="ttname"><a href="struct_p_s_h1___zone_rec__.html#a5e8c25a311aa26927bf7c9b25daf3799">PSH1_ZoneRec_::max</a></div><div class="ttdeci">FT_Pos max</div><div class="ttdef"><b>Definition</b> pshalgo1.h:67</div></div>
+<div class="ttc" id="astruct_p_s_h1___zone_rec___html_a9ccc55ac846244d95ace204fb19af487"><div class="ttname"><a href="struct_p_s_h1___zone_rec__.html#a9ccc55ac846244d95ace204fb19af487">PSH1_ZoneRec_::scale</a></div><div class="ttdeci">FT_Fixed scale</div><div class="ttdef"><b>Definition</b> pshalgo1.h:64</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_0e00759a5aa6a0b13a1caf75240cc41e.html">pshinter</a></li><li class="navelem"><a href="pshalgo1_8h.html">pshalgo1.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+digraph "cid_parse_dict"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="cid_parse_dict",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="cid_load_keyword",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cidload_8c.html#a420bcdb5efbfb755869f1775bf9f827a",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="is_alpha",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cidload_8c.html#a4f1a070d87207d7d68cdeb854780fccf",tooltip=" "];
+}

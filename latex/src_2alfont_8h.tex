@@ -1,0 +1,452 @@
+\doxysection{Référence du fichier src/\+alfont.h}
+\hypertarget{src_2alfont_8h}{}\label{src_2alfont_8h}\index{src/alfont.h@{src/alfont.h}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include "{}alfontdll.\+h"{}}\newline
+Graphe des dépendances par inclusion de alfont.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{src_2alfont_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2alfont_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a936e02c9a7df4d516de6c82255617475}{ALFONT\+\_\+\+MAJOR\+\_\+\+VERSION}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a06d62829a4eae033d887a62f019da4d2}{ALFONT\+\_\+\+MINOR\+\_\+\+VERSION}}~9
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_adcd5e9eda0764f9ba75e7a853f803076}{ALFONT\+\_\+\+SUB\+\_\+\+VERSION}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a4a37ec1c4383e69bcaa2dea6052dfb27}{ALFONT\+\_\+\+VERSION\+\_\+\+STR}}~"{}1.\+9.\+1"{}
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a45cd379835b7e80031584c7e802281d3}{ALFONT\+\_\+\+DATE\+\_\+\+STR}}~"{}24/\+11/\+2002"{}
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a5917a29feeb40035fc5e146aeb9f45c4}{ALFONT\+\_\+\+DATE}}~20021124    /\+\texorpdfstring{$\ast$}{*} yyyymmdd \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a00f645d87dcfe41d57029165ffdc6a9e}{ALFONT\+\_\+\+OK}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{src_2alfont_8h_a3874572159d9345076cc37f76f625ebe}{ALFONT\+\_\+\+ERROR}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3}{alfont\+\_\+init}} (void)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_af2bcc3c080bd6827885dd7728d504800}{alfont\+\_\+exit}} (void)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{src_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}{alfont\+\_\+load\+\_\+font}} (const char \texorpdfstring{$\ast$}{*}filepathname)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{src_2alfont_8h_a8c241b546dc9955243cca917b2f3e723}{alfont\+\_\+load\+\_\+font\+\_\+from\+\_\+mem}} (const char \texorpdfstring{$\ast$}{*}data, int data\+\_\+len)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f}{alfont\+\_\+destroy\+\_\+font}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}{alfont\+\_\+set\+\_\+font\+\_\+size}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int h)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a5e3a753d10bc60309b69218daa81ec74}{alfont\+\_\+get\+\_\+font\+\_\+height}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a34d3668c482a502d64426265d1a62787}{alfont\+\_\+text\+\_\+mode}} (int mode)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_ac261f94be7ae3a4170d43cbe81a04427}{alfont\+\_\+textout\+\_\+aa}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a125cc2940b573b04501c79dc566f2bdb}{alfont\+\_\+textout}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a603d851978e42deb44b6a0365a5e4935}{alfont\+\_\+textout\+\_\+aa\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color, int bg)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a5930fb0950a5e54b1571e09332140376}{alfont\+\_\+textout\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color, int bg)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_aba865330bedbe361535a65cdeab0c822}{alfont\+\_\+textout\+\_\+centre\+\_\+aa}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a74eff40a8b7e70eb0a3c6e24f8487805}{alfont\+\_\+textout\+\_\+centre}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_adb9bc67114024dedb1998866922f6271}{alfont\+\_\+textout\+\_\+centre\+\_\+aa\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color, int bg)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a3ca36946f44acb3d901760951067ec06}{alfont\+\_\+textout\+\_\+centre\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color, int bg)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a9d6341001e8d64e99c5eef379deb0a11}{alfont\+\_\+textout\+\_\+right\+\_\+aa}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_aae2700dca6ef72df26ae34c2d48b5ca0}{alfont\+\_\+textout\+\_\+right}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a1a67047efa4be5a2b65d622b06d83786}{alfont\+\_\+textout\+\_\+right\+\_\+aa\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color, int bg)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_afa30892f075f5f3f8f7e8be5c8b98b66}{alfont\+\_\+textout\+\_\+right\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}s, int x, int y, int color, int bg)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a1d47e85e032c7ed77f67c203c27a74be}{alfont\+\_\+textprintf}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a7eb73d979802df95bbd741293349279e}{alfont\+\_\+textprintf\+\_\+aa}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a9ce5438bf95306edd977f5af1151b4d3}{alfont\+\_\+textprintf\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, int bg, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a2b056e6a0c6a2a6fc9ec129658ef6f5a}{alfont\+\_\+textprintf\+\_\+aa\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, int bg, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_adfd4fca585c41b6371a8017049b0ee99}{alfont\+\_\+textprintf\+\_\+centre}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_adb5391ad40788ae4cd5ad1b712a70869}{alfont\+\_\+textprintf\+\_\+centre\+\_\+aa}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a0703e7c01a304bcec6bee11c5e5a1a35}{alfont\+\_\+textprintf\+\_\+centre\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, int bg, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a7f809e3e387b13f749aa0b88ec73304f}{alfont\+\_\+textprintf\+\_\+centre\+\_\+aa\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, int bg, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a5f8d763e37247e1b86d4307d8ed02a51}{alfont\+\_\+textprintf\+\_\+right}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a5be232a8a514588ac055cb356ea270d3}{alfont\+\_\+textprintf\+\_\+right\+\_\+aa}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a6a47d2bf34a256931e4d087b190c967d}{alfont\+\_\+textprintf\+\_\+right\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, int bg, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a06b24283a4e7d06a73db22e06ec62c7c}{alfont\+\_\+textprintf\+\_\+right\+\_\+aa\+\_\+ex}} (BITMAP \texorpdfstring{$\ast$}{*}bmp, \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int x, int y, int color, int bg, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a902082295a8c073dec8b029372f78f15}{alfont\+\_\+text\+\_\+height}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a90874ba2a4713b70ce971be7f88c53a3}{alfont\+\_\+text\+\_\+length}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, const char \texorpdfstring{$\ast$}{*}str)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a76a65c2644ad0123b021c2f601331517}{alfont\+\_\+is\+\_\+fixed\+\_\+font}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a8b21d4e0f1da3cb5f47e745eda1a4973}{alfont\+\_\+is\+\_\+scalable\+\_\+font}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} const int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{src_2alfont_8h_ae4427b50ef91518dbef35cb52aa8be0f}{alfont\+\_\+get\+\_\+available\+\_\+fixed\+\_\+sizes}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_a0abf9cb6e8e37647ada569effd54cc50}{alfont\+\_\+get\+\_\+nof\+\_\+available\+\_\+fixed\+\_\+sizes}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int \doxymbox{\hyperlink{src_2alfont_8h_ae418f2529aafeeef79debc563cf6e07e}{alfont\+\_\+get\+\_\+char\+\_\+extra\+\_\+spacing}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f)
+\item 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void \doxymbox{\hyperlink{src_2alfont_8h_a1a5544be8aed414f385e70d8c798e3f5}{alfont\+\_\+set\+\_\+char\+\_\+extra\+\_\+spacing}} (\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}f, int spacing)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{src_2alfont_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{src_2alfont_8h_a5917a29feeb40035fc5e146aeb9f45c4}\index{alfont.h@{alfont.h}!ALFONT\_DATE@{ALFONT\_DATE}}
+\index{ALFONT\_DATE@{ALFONT\_DATE}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_DATE}{ALFONT\_DATE}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a5917a29feeb40035fc5e146aeb9f45c4} 
+\+\#define ALFONT\+\_\+\+DATE~20021124    /\+\texorpdfstring{$\ast$}{*} yyyymmdd \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00033}{33}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_a45cd379835b7e80031584c7e802281d3}\index{alfont.h@{alfont.h}!ALFONT\_DATE\_STR@{ALFONT\_DATE\_STR}}
+\index{ALFONT\_DATE\_STR@{ALFONT\_DATE\_STR}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_DATE\_STR}{ALFONT\_DATE\_STR}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a45cd379835b7e80031584c7e802281d3} 
+\+\#define ALFONT\+\_\+\+DATE\+\_\+\+STR~"{}24/\+11/\+2002"{}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00032}{32}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_a3874572159d9345076cc37f76f625ebe}\index{alfont.h@{alfont.h}!ALFONT\_ERROR@{ALFONT\_ERROR}}
+\index{ALFONT\_ERROR@{ALFONT\_ERROR}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_ERROR}{ALFONT\_ERROR}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a3874572159d9345076cc37f76f625ebe} 
+\+\#define ALFONT\+\_\+\+ERROR~-\/1}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00038}{38}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_a936e02c9a7df4d516de6c82255617475}\index{alfont.h@{alfont.h}!ALFONT\_MAJOR\_VERSION@{ALFONT\_MAJOR\_VERSION}}
+\index{ALFONT\_MAJOR\_VERSION@{ALFONT\_MAJOR\_VERSION}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_MAJOR\_VERSION}{ALFONT\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a936e02c9a7df4d516de6c82255617475} 
+\+\#define ALFONT\+\_\+\+MAJOR\+\_\+\+VERSION~1}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00028}{28}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_a06d62829a4eae033d887a62f019da4d2}\index{alfont.h@{alfont.h}!ALFONT\_MINOR\_VERSION@{ALFONT\_MINOR\_VERSION}}
+\index{ALFONT\_MINOR\_VERSION@{ALFONT\_MINOR\_VERSION}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_MINOR\_VERSION}{ALFONT\_MINOR\_VERSION}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a06d62829a4eae033d887a62f019da4d2} 
+\+\#define ALFONT\+\_\+\+MINOR\+\_\+\+VERSION~9}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00029}{29}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_a00f645d87dcfe41d57029165ffdc6a9e}\index{alfont.h@{alfont.h}!ALFONT\_OK@{ALFONT\_OK}}
+\index{ALFONT\_OK@{ALFONT\_OK}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_OK}{ALFONT\_OK}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a00f645d87dcfe41d57029165ffdc6a9e} 
+\+\#define ALFONT\+\_\+\+OK~0}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00037}{37}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_adcd5e9eda0764f9ba75e7a853f803076}\index{alfont.h@{alfont.h}!ALFONT\_SUB\_VERSION@{ALFONT\_SUB\_VERSION}}
+\index{ALFONT\_SUB\_VERSION@{ALFONT\_SUB\_VERSION}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_SUB\_VERSION}{ALFONT\_SUB\_VERSION}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_adcd5e9eda0764f9ba75e7a853f803076} 
+\+\#define ALFONT\+\_\+\+SUB\+\_\+\+VERSION~1}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00030}{30}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+\Hypertarget{src_2alfont_8h_a4a37ec1c4383e69bcaa2dea6052dfb27}\index{alfont.h@{alfont.h}!ALFONT\_VERSION\_STR@{ALFONT\_VERSION\_STR}}
+\index{ALFONT\_VERSION\_STR@{ALFONT\_VERSION\_STR}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{ALFONT\_VERSION\_STR}{ALFONT\_VERSION\_STR}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a4a37ec1c4383e69bcaa2dea6052dfb27} 
+\+\#define ALFONT\+\_\+\+VERSION\+\_\+\+STR~"{}1.\+9.\+1"{}}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2alfont_8h_source_l00031}{31}} du fichier \doxymbox{\hyperlink{src_2alfont_8h_source}{alfont.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{src_2alfont_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{src_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f}\index{alfont.h@{alfont.h}!alfont\_destroy\_font@{alfont\_destroy\_font}}
+\index{alfont\_destroy\_font@{alfont\_destroy\_font}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_destroy\_font()}{alfont\_destroy\_font()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_aeffe5e9c2fe0eeabde8f2b796f2eec3f} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+destroy\+\_\+font (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_af2bcc3c080bd6827885dd7728d504800}\index{alfont.h@{alfont.h}!alfont\_exit@{alfont\_exit}}
+\index{alfont\_exit@{alfont\_exit}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_exit()}{alfont\_exit()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_af2bcc3c080bd6827885dd7728d504800} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+exit (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_ae4427b50ef91518dbef35cb52aa8be0f}\index{alfont.h@{alfont.h}!alfont\_get\_available\_fixed\_sizes@{alfont\_get\_available\_fixed\_sizes}}
+\index{alfont\_get\_available\_fixed\_sizes@{alfont\_get\_available\_fixed\_sizes}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_get\_available\_fixed\_sizes()}{alfont\_get\_available\_fixed\_sizes()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_ae4427b50ef91518dbef35cb52aa8be0f} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} const int \texorpdfstring{$\ast$}{*} alfont\+\_\+get\+\_\+available\+\_\+fixed\+\_\+sizes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_ae418f2529aafeeef79debc563cf6e07e}\index{alfont.h@{alfont.h}!alfont\_get\_char\_extra\_spacing@{alfont\_get\_char\_extra\_spacing}}
+\index{alfont\_get\_char\_extra\_spacing@{alfont\_get\_char\_extra\_spacing}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_get\_char\_extra\_spacing()}{alfont\_get\_char\_extra\_spacing()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_ae418f2529aafeeef79debc563cf6e07e} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+get\+\_\+char\+\_\+extra\+\_\+spacing (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a5e3a753d10bc60309b69218daa81ec74}\index{alfont.h@{alfont.h}!alfont\_get\_font\_height@{alfont\_get\_font\_height}}
+\index{alfont\_get\_font\_height@{alfont\_get\_font\_height}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_get\_font\_height()}{alfont\_get\_font\_height()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a5e3a753d10bc60309b69218daa81ec74} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+get\+\_\+font\+\_\+height (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a0abf9cb6e8e37647ada569effd54cc50}\index{alfont.h@{alfont.h}!alfont\_get\_nof\_available\_fixed\_sizes@{alfont\_get\_nof\_available\_fixed\_sizes}}
+\index{alfont\_get\_nof\_available\_fixed\_sizes@{alfont\_get\_nof\_available\_fixed\_sizes}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_get\_nof\_available\_fixed\_sizes()}{alfont\_get\_nof\_available\_fixed\_sizes()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a0abf9cb6e8e37647ada569effd54cc50} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+get\+\_\+nof\+\_\+available\+\_\+fixed\+\_\+sizes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3}\index{alfont.h@{alfont.h}!alfont\_init@{alfont\_init}}
+\index{alfont\_init@{alfont\_init}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_init()}{alfont\_init()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a0dbdcd668869ffb13e4a2b2e12b753d3} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a76a65c2644ad0123b021c2f601331517}\index{alfont.h@{alfont.h}!alfont\_is\_fixed\_font@{alfont\_is\_fixed\_font}}
+\index{alfont\_is\_fixed\_font@{alfont\_is\_fixed\_font}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_is\_fixed\_font()}{alfont\_is\_fixed\_font()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a76a65c2644ad0123b021c2f601331517} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+is\+\_\+fixed\+\_\+font (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a8b21d4e0f1da3cb5f47e745eda1a4973}\index{alfont.h@{alfont.h}!alfont\_is\_scalable\_font@{alfont\_is\_scalable\_font}}
+\index{alfont\_is\_scalable\_font@{alfont\_is\_scalable\_font}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_is\_scalable\_font()}{alfont\_is\_scalable\_font()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a8b21d4e0f1da3cb5f47e745eda1a4973} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+is\+\_\+scalable\+\_\+font (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132}\index{alfont.h@{alfont.h}!alfont\_load\_font@{alfont\_load\_font}}
+\index{alfont\_load\_font@{alfont\_load\_font}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_load\_font()}{alfont\_load\_font()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a72fd70c18de1523fc9ee42ae915e4132} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} alfont\+\_\+load\+\_\+font (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filepathname}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a8c241b546dc9955243cca917b2f3e723}\index{alfont.h@{alfont.h}!alfont\_load\_font\_from\_mem@{alfont\_load\_font\_from\_mem}}
+\index{alfont\_load\_font\_from\_mem@{alfont\_load\_font\_from\_mem}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_load\_font\_from\_mem()}{alfont\_load\_font\_from\_mem()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a8c241b546dc9955243cca917b2f3e723} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} \doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*} alfont\+\_\+load\+\_\+font\+\_\+from\+\_\+mem (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{data\+\_\+len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a1a5544be8aed414f385e70d8c798e3f5}\index{alfont.h@{alfont.h}!alfont\_set\_char\_extra\_spacing@{alfont\_set\_char\_extra\_spacing}}
+\index{alfont\_set\_char\_extra\_spacing@{alfont\_set\_char\_extra\_spacing}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_set\_char\_extra\_spacing()}{alfont\_set\_char\_extra\_spacing()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a1a5544be8aed414f385e70d8c798e3f5} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+set\+\_\+char\+\_\+extra\+\_\+spacing (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{spacing}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86}\index{alfont.h@{alfont.h}!alfont\_set\_font\_size@{alfont\_set\_font\_size}}
+\index{alfont\_set\_font\_size@{alfont\_set\_font\_size}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_set\_font\_size()}{alfont\_set\_font\_size()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a94922d1737f3b629e8cff1ea311a1d86} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+set\+\_\+font\+\_\+size (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{h}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a902082295a8c073dec8b029372f78f15}\index{alfont.h@{alfont.h}!alfont\_text\_height@{alfont\_text\_height}}
+\index{alfont\_text\_height@{alfont\_text\_height}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_text\_height()}{alfont\_text\_height()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a902082295a8c073dec8b029372f78f15} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+text\+\_\+height (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a90874ba2a4713b70ce971be7f88c53a3}\index{alfont.h@{alfont.h}!alfont\_text\_length@{alfont\_text\_length}}
+\index{alfont\_text\_length@{alfont\_text\_length}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_text\_length()}{alfont\_text\_length()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a90874ba2a4713b70ce971be7f88c53a3} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+text\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a34d3668c482a502d64426265d1a62787}\index{alfont.h@{alfont.h}!alfont\_text\_mode@{alfont\_text\_mode}}
+\index{alfont\_text\_mode@{alfont\_text\_mode}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_text\_mode()}{alfont\_text\_mode()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a34d3668c482a502d64426265d1a62787} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} int alfont\+\_\+text\+\_\+mode (\begin{DoxyParamCaption}\item[{int}]{mode}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a125cc2940b573b04501c79dc566f2bdb}\index{alfont.h@{alfont.h}!alfont\_textout@{alfont\_textout}}
+\index{alfont\_textout@{alfont\_textout}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout()}{alfont\_textout()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a125cc2940b573b04501c79dc566f2bdb} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_ac261f94be7ae3a4170d43cbe81a04427}\index{alfont.h@{alfont.h}!alfont\_textout\_aa@{alfont\_textout\_aa}}
+\index{alfont\_textout\_aa@{alfont\_textout\_aa}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_aa()}{alfont\_textout\_aa()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_ac261f94be7ae3a4170d43cbe81a04427} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+aa (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a603d851978e42deb44b6a0365a5e4935}\index{alfont.h@{alfont.h}!alfont\_textout\_aa\_ex@{alfont\_textout\_aa\_ex}}
+\index{alfont\_textout\_aa\_ex@{alfont\_textout\_aa\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_aa\_ex()}{alfont\_textout\_aa\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a603d851978e42deb44b6a0365a5e4935} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+aa\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a74eff40a8b7e70eb0a3c6e24f8487805}\index{alfont.h@{alfont.h}!alfont\_textout\_centre@{alfont\_textout\_centre}}
+\index{alfont\_textout\_centre@{alfont\_textout\_centre}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_centre()}{alfont\_textout\_centre()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a74eff40a8b7e70eb0a3c6e24f8487805} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+centre (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_aba865330bedbe361535a65cdeab0c822}\index{alfont.h@{alfont.h}!alfont\_textout\_centre\_aa@{alfont\_textout\_centre\_aa}}
+\index{alfont\_textout\_centre\_aa@{alfont\_textout\_centre\_aa}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_centre\_aa()}{alfont\_textout\_centre\_aa()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_aba865330bedbe361535a65cdeab0c822} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+centre\+\_\+aa (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_adb9bc67114024dedb1998866922f6271}\index{alfont.h@{alfont.h}!alfont\_textout\_centre\_aa\_ex@{alfont\_textout\_centre\_aa\_ex}}
+\index{alfont\_textout\_centre\_aa\_ex@{alfont\_textout\_centre\_aa\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_centre\_aa\_ex()}{alfont\_textout\_centre\_aa\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_adb9bc67114024dedb1998866922f6271} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+centre\+\_\+aa\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a3ca36946f44acb3d901760951067ec06}\index{alfont.h@{alfont.h}!alfont\_textout\_centre\_ex@{alfont\_textout\_centre\_ex}}
+\index{alfont\_textout\_centre\_ex@{alfont\_textout\_centre\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_centre\_ex()}{alfont\_textout\_centre\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a3ca36946f44acb3d901760951067ec06} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+centre\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a5930fb0950a5e54b1571e09332140376}\index{alfont.h@{alfont.h}!alfont\_textout\_ex@{alfont\_textout\_ex}}
+\index{alfont\_textout\_ex@{alfont\_textout\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_ex()}{alfont\_textout\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a5930fb0950a5e54b1571e09332140376} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_aae2700dca6ef72df26ae34c2d48b5ca0}\index{alfont.h@{alfont.h}!alfont\_textout\_right@{alfont\_textout\_right}}
+\index{alfont\_textout\_right@{alfont\_textout\_right}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_right()}{alfont\_textout\_right()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_aae2700dca6ef72df26ae34c2d48b5ca0} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+right (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a9d6341001e8d64e99c5eef379deb0a11}\index{alfont.h@{alfont.h}!alfont\_textout\_right\_aa@{alfont\_textout\_right\_aa}}
+\index{alfont\_textout\_right\_aa@{alfont\_textout\_right\_aa}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_right\_aa()}{alfont\_textout\_right\_aa()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a9d6341001e8d64e99c5eef379deb0a11} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+right\+\_\+aa (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a1a67047efa4be5a2b65d622b06d83786}\index{alfont.h@{alfont.h}!alfont\_textout\_right\_aa\_ex@{alfont\_textout\_right\_aa\_ex}}
+\index{alfont\_textout\_right\_aa\_ex@{alfont\_textout\_right\_aa\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_right\_aa\_ex()}{alfont\_textout\_right\_aa\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a1a67047efa4be5a2b65d622b06d83786} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+right\+\_\+aa\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_afa30892f075f5f3f8f7e8be5c8b98b66}\index{alfont.h@{alfont.h}!alfont\_textout\_right\_ex@{alfont\_textout\_right\_ex}}
+\index{alfont\_textout\_right\_ex@{alfont\_textout\_right\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textout\_right\_ex()}{alfont\_textout\_right\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_afa30892f075f5f3f8f7e8be5c8b98b66} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textout\+\_\+right\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a1d47e85e032c7ed77f67c203c27a74be}\index{alfont.h@{alfont.h}!alfont\_textprintf@{alfont\_textprintf}}
+\index{alfont\_textprintf@{alfont\_textprintf}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf()}{alfont\_textprintf()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a1d47e85e032c7ed77f67c203c27a74be} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a7eb73d979802df95bbd741293349279e}\index{alfont.h@{alfont.h}!alfont\_textprintf\_aa@{alfont\_textprintf\_aa}}
+\index{alfont\_textprintf\_aa@{alfont\_textprintf\_aa}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_aa()}{alfont\_textprintf\_aa()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a7eb73d979802df95bbd741293349279e} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+aa (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a2b056e6a0c6a2a6fc9ec129658ef6f5a}\index{alfont.h@{alfont.h}!alfont\_textprintf\_aa\_ex@{alfont\_textprintf\_aa\_ex}}
+\index{alfont\_textprintf\_aa\_ex@{alfont\_textprintf\_aa\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_aa\_ex()}{alfont\_textprintf\_aa\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a2b056e6a0c6a2a6fc9ec129658ef6f5a} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+aa\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_adfd4fca585c41b6371a8017049b0ee99}\index{alfont.h@{alfont.h}!alfont\_textprintf\_centre@{alfont\_textprintf\_centre}}
+\index{alfont\_textprintf\_centre@{alfont\_textprintf\_centre}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_centre()}{alfont\_textprintf\_centre()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_adfd4fca585c41b6371a8017049b0ee99} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+centre (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_adb5391ad40788ae4cd5ad1b712a70869}\index{alfont.h@{alfont.h}!alfont\_textprintf\_centre\_aa@{alfont\_textprintf\_centre\_aa}}
+\index{alfont\_textprintf\_centre\_aa@{alfont\_textprintf\_centre\_aa}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_centre\_aa()}{alfont\_textprintf\_centre\_aa()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_adb5391ad40788ae4cd5ad1b712a70869} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+centre\+\_\+aa (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a7f809e3e387b13f749aa0b88ec73304f}\index{alfont.h@{alfont.h}!alfont\_textprintf\_centre\_aa\_ex@{alfont\_textprintf\_centre\_aa\_ex}}
+\index{alfont\_textprintf\_centre\_aa\_ex@{alfont\_textprintf\_centre\_aa\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_centre\_aa\_ex()}{alfont\_textprintf\_centre\_aa\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a7f809e3e387b13f749aa0b88ec73304f} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+centre\+\_\+aa\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a0703e7c01a304bcec6bee11c5e5a1a35}\index{alfont.h@{alfont.h}!alfont\_textprintf\_centre\_ex@{alfont\_textprintf\_centre\_ex}}
+\index{alfont\_textprintf\_centre\_ex@{alfont\_textprintf\_centre\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_centre\_ex()}{alfont\_textprintf\_centre\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a0703e7c01a304bcec6bee11c5e5a1a35} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+centre\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a9ce5438bf95306edd977f5af1151b4d3}\index{alfont.h@{alfont.h}!alfont\_textprintf\_ex@{alfont\_textprintf\_ex}}
+\index{alfont\_textprintf\_ex@{alfont\_textprintf\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_ex()}{alfont\_textprintf\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a9ce5438bf95306edd977f5af1151b4d3} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a5f8d763e37247e1b86d4307d8ed02a51}\index{alfont.h@{alfont.h}!alfont\_textprintf\_right@{alfont\_textprintf\_right}}
+\index{alfont\_textprintf\_right@{alfont\_textprintf\_right}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_right()}{alfont\_textprintf\_right()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a5f8d763e37247e1b86d4307d8ed02a51} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+right (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a5be232a8a514588ac055cb356ea270d3}\index{alfont.h@{alfont.h}!alfont\_textprintf\_right\_aa@{alfont\_textprintf\_right\_aa}}
+\index{alfont\_textprintf\_right\_aa@{alfont\_textprintf\_right\_aa}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_right\_aa()}{alfont\_textprintf\_right\_aa()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a5be232a8a514588ac055cb356ea270d3} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+right\+\_\+aa (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a06b24283a4e7d06a73db22e06ec62c7c}\index{alfont.h@{alfont.h}!alfont\_textprintf\_right\_aa\_ex@{alfont\_textprintf\_right\_aa\_ex}}
+\index{alfont\_textprintf\_right\_aa\_ex@{alfont\_textprintf\_right\_aa\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_right\_aa\_ex()}{alfont\_textprintf\_right\_aa\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a06b24283a4e7d06a73db22e06ec62c7c} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+right\+\_\+aa\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{src_2alfont_8h_a6a47d2bf34a256931e4d087b190c967d}\index{alfont.h@{alfont.h}!alfont\_textprintf\_right\_ex@{alfont\_textprintf\_right\_ex}}
+\index{alfont\_textprintf\_right\_ex@{alfont\_textprintf\_right\_ex}!alfont.h@{alfont.h}}
+\doxysubsubsection{\texorpdfstring{alfont\_textprintf\_right\_ex()}{alfont\_textprintf\_right\_ex()}}
+{\footnotesize\ttfamily \label{src_2alfont_8h_a6a47d2bf34a256931e4d087b190c967d} 
+\doxymbox{\hyperlink{header_2alfontdll_8h_afb90227ee50406f5656f452818c86df0}{ALFONT\+\_\+\+DLL\+\_\+\+DECLSPEC}} void alfont\+\_\+textprintf\+\_\+right\+\_\+ex (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{, }\item[{\doxymbox{\hyperlink{header_2alfont_8h_abad2d5b3ed8305634992a280ceb63f39}{ALFONT\+\_\+\+FONT}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{color}{, }\item[{int}]{bg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+

@@ -1,0 +1,56 @@
+digraph "load_truetype_glyph"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="load_truetype_glyph",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_GlyphLoader_Add",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a05e75ff8be73536b15ebbc02f432e246",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_GlyphLoader_Prepare",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a8b24efd8846b09cfecb3534926d95931",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_GlyphLoader_Adjust\l_Points",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#acb7c42abf11390f0a2061fbfaf9d9d6a",tooltip=" "];
+  Node3 -> Node5 [id="edge5_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="FT_GlyphLoader_Adjust\l_Subglyphs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a0662d3fe8328967b049e03113fbe9233",tooltip=" "];
+  Node3 -> Node3 [id="edge6_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_GlyphLoader_CheckPoints",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a33ec2edf52ffdde913e4ec66dcd16795",tooltip=" "];
+  Node6 -> Node4 [id="edge8_Node000006_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node6 [id="edge9_Node000006_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge10_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_MulFix",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftcalc_8c.html#aeb37c2858e2851e15465580de1d1d218",tooltip=" "];
+  Node7 -> Node7 [id="edge11_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge12_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="FT_Stream_OpenMemory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstream_8c.html#adef0df22d5202d491bd9c8a93fb4bffd",tooltip=" "];
+  Node8 -> Node8 [id="edge13_Node000008_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node9 [id="edge14_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="FT_Vector_Transform",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftoutln_8c.html#a0f3672661d6ae5398aee1f16476aa475",tooltip=" "];
+  Node9 -> Node7 [id="edge15_Node000009_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node9 [id="edge16_Node000009_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge17_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Get_HMetrics",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a9e334e95215dabfc8252b324ad640ea8",tooltip=" "];
+  Node10 -> Node11 [id="edge18_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="TT_Get_Metrics",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a937bd6fa56c589875984bf63e7dd0b7a",tooltip=" "];
+  Node11 -> Node11 [id="edge19_Node000011_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge20_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node12 [id="edge21_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="translate_array",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#ab2359baf0f88725b9e4ea761c0883847",tooltip=" "];
+  Node1 -> Node13 [id="edge22_Node000001_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="tt_prepare_zone",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a31ec8f022af0b1771e9d079e6b3e03c8",tooltip=" "];
+  Node1 -> Node14 [id="edge23_Node000001_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="TT_Process_Simple_Glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#acffb57c098bcd621f8cedd1f6e58e4dd",tooltip=" "];
+  Node14 -> Node7 [id="edge24_Node000014_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node12 [id="edge25_Node000014_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node13 [id="edge26_Node000014_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node15 [id="edge27_Node000014_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="TT_Run_Context",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttinterp_8h.html#a76ca0600b5c0548f4aa93ef79ed458b0",tooltip=" "];
+  Node15 -> Node15 [id="edge28_Node000015_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node16 [id="edge29_Node000014_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="TT_Set_CodeRange",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttinterp_8h.html#a4262244673232bd4cdab497c689c648b",tooltip=" "];
+  Node16 -> Node16 [id="edge30_Node000016_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node15 [id="edge31_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node16 [id="edge32_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
+}

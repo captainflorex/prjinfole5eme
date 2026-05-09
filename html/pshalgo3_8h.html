@@ -1,0 +1,1142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pshinter/pshalgo3.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pshalgo3_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier pshalgo3.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="pshrec_8h_source.html">pshrec.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pshglob_8h_source.html">pshglob.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de pshalgo3.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pshinter_2pshalgo3_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8h__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pshinter_2pshalgo3_8hdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="pshalgo3_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:PSH3_5FHintRec_5F" id="r_PSH3_5FHintRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_s_h3___hint_rec__.html">PSH3_HintRec_</a></td></tr>
+<tr class="memitem:PSH3_5FZoneRec_5F" id="r_PSH3_5FZoneRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_s_h3___zone_rec__.html">PSH3_ZoneRec_</a></td></tr>
+<tr class="memitem:PSH3_5FHint_5FTableRec_5F" id="r_PSH3_5FHint_5FTableRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_s_h3___hint___table_rec__.html">PSH3_Hint_TableRec_</a></td></tr>
+<tr class="memitem:PSH3_5FPointRec_5F" id="r_PSH3_5FPointRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_s_h3___point_rec__.html">PSH3_PointRec_</a></td></tr>
+<tr class="memitem:PSH3_5FContourRec_5F" id="r_PSH3_5FContourRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_s_h3___contour_rec__.html">PSH3_ContourRec_</a></td></tr>
+<tr class="memitem:PSH3_5FGlyphRec_5F" id="r_PSH3_5FGlyphRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_p_s_h3___glyph_rec__.html">PSH3_GlyphRec_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab8012668cb877b9d72f9908daf9c88d9" id="r_ab8012668cb877b9d72f9908daf9c88d9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab8012668cb877b9d72f9908daf9c88d9">psh3_hint_is_active</a>(x)</td></tr>
+<tr class="memitem:a30e6889f4b72a2e673fb518b1371a452" id="r_a30e6889f4b72a2e673fb518b1371a452"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a30e6889f4b72a2e673fb518b1371a452">psh3_hint_is_ghost</a>(x)</td></tr>
+<tr class="memitem:a9fb3d4fad40efa0f7b81336b42c56c93" id="r_a9fb3d4fad40efa0f7b81336b42c56c93"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9fb3d4fad40efa0f7b81336b42c56c93">psh3_hint_is_fitted</a>(x)</td></tr>
+<tr class="memitem:a287fe5f25bd1d855318dc5fbff3d1b54" id="r_a287fe5f25bd1d855318dc5fbff3d1b54"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a287fe5f25bd1d855318dc5fbff3d1b54">psh3_hint_activate</a>(x)</td></tr>
+<tr class="memitem:ae8d3bde31ae5f4af1d5755a9768df029" id="r_ae8d3bde31ae5f4af1d5755a9768df029"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae8d3bde31ae5f4af1d5755a9768df029">psh3_hint_deactivate</a>(x)</td></tr>
+<tr class="memitem:a61ecad400cbdb0875ecc944dfa81ac3f" id="r_a61ecad400cbdb0875ecc944dfa81ac3f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a61ecad400cbdb0875ecc944dfa81ac3f">psh3_hint_set_fitted</a>(x)</td></tr>
+<tr class="memitem:a9fdb2dc06b2ffa69db76677c5b47cef7" id="r_a9fdb2dc06b2ffa69db76677c5b47cef7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9fdb2dc06b2ffa69db76677c5b47cef7">PSH3_DIR_HORIZONTAL</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:ace37b2ba1aa698cbe783bb98f285abf9" id="r_ace37b2ba1aa698cbe783bb98f285abf9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ace37b2ba1aa698cbe783bb98f285abf9">PSH3_DIR_VERTICAL</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a19cb3a64facab1dac1527c550b4026b4" id="r_a19cb3a64facab1dac1527c550b4026b4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a19cb3a64facab1dac1527c550b4026b4">PSH3_DIR_COMPARE</a>(d1,  d2)</td></tr>
+<tr class="memitem:ae911e9e48859b469b43a7fb153725819" id="r_ae911e9e48859b469b43a7fb153725819"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae911e9e48859b469b43a7fb153725819">PSH3_DIR_IS_HORIZONTAL</a>(d)</td></tr>
+<tr class="memitem:a71f03ba3b8605dc72b2706f740d1d11c" id="r_a71f03ba3b8605dc72b2706f740d1d11c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a71f03ba3b8605dc72b2706f740d1d11c">PSH3_DIR_IS_VERTICAL</a>(d)</td></tr>
+<tr class="memitem:a27c30b222f9e443feb9fb8ebce0c9868" id="r_a27c30b222f9e443feb9fb8ebce0c9868"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a27c30b222f9e443feb9fb8ebce0c9868">psh3_point_is_smooth</a>(p)</td></tr>
+<tr class="memitem:ae510af8cc1dd6a472b069a4e5c32643d" id="r_ae510af8cc1dd6a472b069a4e5c32643d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae510af8cc1dd6a472b069a4e5c32643d">psh3_point_is_off</a>(p)</td></tr>
+<tr class="memitem:ac96b94fa3457c2098e57d27af0f68cab" id="r_ac96b94fa3457c2098e57d27af0f68cab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac96b94fa3457c2098e57d27af0f68cab">psh3_point_is_inflex</a>(p)</td></tr>
+<tr class="memitem:a0ce69f3a7d339ecb368e00de1bb6a59c" id="r_a0ce69f3a7d339ecb368e00de1bb6a59c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0ce69f3a7d339ecb368e00de1bb6a59c">psh3_point_set_smooth</a>(p)</td></tr>
+<tr class="memitem:aa6ade558f407ad4cab0a0b5ea1bf0199" id="r_aa6ade558f407ad4cab0a0b5ea1bf0199"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa6ade558f407ad4cab0a0b5ea1bf0199">psh3_point_set_off</a>(p)</td></tr>
+<tr class="memitem:aabd3d9f38cb3fa43647e7c5a461daef9" id="r_aabd3d9f38cb3fa43647e7c5a461daef9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aabd3d9f38cb3fa43647e7c5a461daef9">psh3_point_set_inflex</a>(p)</td></tr>
+<tr class="memitem:a739b1940f23701f46d09066814c5fb35" id="r_a739b1940f23701f46d09066814c5fb35"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a739b1940f23701f46d09066814c5fb35">psh3_point_is_strong</a>(p)</td></tr>
+<tr class="memitem:a5a4b248791a387bc9f59b4130fc2132f" id="r_a5a4b248791a387bc9f59b4130fc2132f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5a4b248791a387bc9f59b4130fc2132f">psh3_point_is_fitted</a>(p)</td></tr>
+<tr class="memitem:a99e100204ddfc0e9df146cb84cdb1c0b" id="r_a99e100204ddfc0e9df146cb84cdb1c0b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a99e100204ddfc0e9df146cb84cdb1c0b">psh3_point_is_extremum</a>(p)</td></tr>
+<tr class="memitem:a56d39bda0cb21e1085a80a35cee36945" id="r_a56d39bda0cb21e1085a80a35cee36945"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a56d39bda0cb21e1085a80a35cee36945">psh3_point_is_positive</a>(p)</td></tr>
+<tr class="memitem:a8c2ff294f3c3c1e0f55a863eb43bf326" id="r_a8c2ff294f3c3c1e0f55a863eb43bf326"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8c2ff294f3c3c1e0f55a863eb43bf326">psh3_point_is_negative</a>(p)</td></tr>
+<tr class="memitem:a175ed1fe8589eda9ce6f611bf4bdc8b8" id="r_a175ed1fe8589eda9ce6f611bf4bdc8b8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a175ed1fe8589eda9ce6f611bf4bdc8b8">psh3_point_is_edge_min</a>(p)</td></tr>
+<tr class="memitem:a175a907729d1c8b403ecddd89c409dfc" id="r_a175a907729d1c8b403ecddd89c409dfc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a175a907729d1c8b403ecddd89c409dfc">psh3_point_is_edge_max</a>(p)</td></tr>
+<tr class="memitem:ac54ef8c5089f8577f712378b95121520" id="r_ac54ef8c5089f8577f712378b95121520"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac54ef8c5089f8577f712378b95121520">psh3_point_set_strong</a>(p)</td></tr>
+<tr class="memitem:aea8472374bdb2acfe54abb7653a337a3" id="r_aea8472374bdb2acfe54abb7653a337a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aea8472374bdb2acfe54abb7653a337a3">psh3_point_set_fitted</a>(p)</td></tr>
+<tr class="memitem:a75c0db19641b2599147f42caecdc41b7" id="r_a75c0db19641b2599147f42caecdc41b7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a75c0db19641b2599147f42caecdc41b7">psh3_point_set_extremum</a>(p)</td></tr>
+<tr class="memitem:a9e2bb28ce61b2ae3d11e82404260b082" id="r_a9e2bb28ce61b2ae3d11e82404260b082"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9e2bb28ce61b2ae3d11e82404260b082">psh3_point_set_positive</a>(p)</td></tr>
+<tr class="memitem:a41ac474bf2ed8e2dc32093bfd58bb277" id="r_a41ac474bf2ed8e2dc32093bfd58bb277"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a41ac474bf2ed8e2dc32093bfd58bb277">psh3_point_set_negative</a>(p)</td></tr>
+<tr class="memitem:a6e9d93d45e54a60502b4f6df3712052a" id="r_a6e9d93d45e54a60502b4f6df3712052a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6e9d93d45e54a60502b4f6df3712052a">psh3_point_set_edge_min</a>(p)</td></tr>
+<tr class="memitem:a65159079c046e6d069a556e4b61830b2" id="r_a65159079c046e6d069a556e4b61830b2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a65159079c046e6d069a556e4b61830b2">psh3_point_set_edge_max</a>(p)</td></tr>
+<tr class="memitem:ac0fe7e702bbd3d7f7eb026358585034c" id="r_ac0fe7e702bbd3d7f7eb026358585034c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac0fe7e702bbd3d7f7eb026358585034c">PSH3_POINT_EQUAL_ORG</a>(a,  b)</td></tr>
+<tr class="memitem:ae746047412dadd6a0ca554fc607d9628" id="r_ae746047412dadd6a0ca554fc607d9628"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae746047412dadd6a0ca554fc607d9628">PSH3_POINT_ANGLE</a>(a,  b)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a85d95a3efc7872701ef62bd16f367808" id="r_a85d95a3efc7872701ef62bd16f367808"><td class="memItemLeft">typedef typedefFT_BEGIN_HEADER struct <a class="el" href="struct_p_s_h3___hint_rec__.html">PSH3_HintRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a></td></tr>
+<tr class="memitem:aef9af5f0fb7a6e4bce549862b39e144f" id="r_aef9af5f0fb7a6e4bce549862b39e144f"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___hint_rec__.html">PSH3_HintRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#aef9af5f0fb7a6e4bce549862b39e144f">PSH3_HintRec</a></td></tr>
+<tr class="memitem:a0f1b51019c475322d26cd20d48e65c18" id="r_a0f1b51019c475322d26cd20d48e65c18"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___zone_rec__.html">PSH3_ZoneRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0f1b51019c475322d26cd20d48e65c18">PSH3_ZoneRec</a></td></tr>
+<tr class="memitem:a338e9d616aa0955b610252e06405c321" id="r_a338e9d616aa0955b610252e06405c321"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___zone_rec__.html">PSH3_ZoneRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a338e9d616aa0955b610252e06405c321">PSH3_Zone</a></td></tr>
+<tr class="memitem:ae881ff5816928dc1c17af52a29dd2ea3" id="r_ae881ff5816928dc1c17af52a29dd2ea3"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___hint___table_rec__.html">PSH3_Hint_TableRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae881ff5816928dc1c17af52a29dd2ea3">PSH3_Hint_TableRec</a></td></tr>
+<tr class="memitem:ab073ec34939b214273e43b0894f35316" id="r_ab073ec34939b214273e43b0894f35316"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___hint___table_rec__.html">PSH3_Hint_TableRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td></tr>
+<tr class="memitem:a695f291fbb421c1025f47ca61bc9fa07" id="r_a695f291fbb421c1025f47ca61bc9fa07"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___point_rec__.html">PSH3_PointRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a695f291fbb421c1025f47ca61bc9fa07">PSH3_Point</a></td></tr>
+<tr class="memitem:a4fcecd06e07b4cbf6c1fa00d9ca5d5e6" id="r_a4fcecd06e07b4cbf6c1fa00d9ca5d5e6"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___contour_rec__.html">PSH3_ContourRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4fcecd06e07b4cbf6c1fa00d9ca5d5e6">PSH3_Contour</a></td></tr>
+<tr class="memitem:a6db4ef05c1d48a8e8b63c2814e02c3c0" id="r_a6db4ef05c1d48a8e8b63c2814e02c3c0"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___point_rec__.html">PSH3_PointRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6db4ef05c1d48a8e8b63c2814e02c3c0">PSH3_PointRec</a></td></tr>
+<tr class="memitem:a7dd441d26f6dd34c01e3aad30baa7ec7" id="r_a7dd441d26f6dd34c01e3aad30baa7ec7"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___contour_rec__.html">PSH3_ContourRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7dd441d26f6dd34c01e3aad30baa7ec7">PSH3_ContourRec</a></td></tr>
+<tr class="memitem:a75c8c01f7516937edf6bfcf391e02571" id="r_a75c8c01f7516937edf6bfcf391e02571"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___glyph_rec__.html">PSH3_GlyphRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a75c8c01f7516937edf6bfcf391e02571">PSH3_GlyphRec</a></td></tr>
+<tr class="memitem:aa05f5b0e9ad5ab388c8afb343ce650bc" id="r_aa05f5b0e9ad5ab388c8afb343ce650bc"><td class="memItemLeft">typedef struct <a class="el" href="struct_p_s_h3___glyph_rec__.html">PSH3_GlyphRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a9e7a53f716042e91d8b11f58a3560899" id="r_a9e7a53f716042e91d8b11f58a3560899"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a9e7a53f716042e91d8b11f58a3560899">PSH3_Hint_Flags</a> { <a class="el" href="#a9e7a53f716042e91d8b11f58a3560899a7ff29c51d5ba925c0f81d5d213501d9d">PSH3_HINT_GHOST</a> = PS_HINT_FLAG_GHOST
+, <a class="el" href="#a9e7a53f716042e91d8b11f58a3560899a7fdb7ed6925d9ec45506a6ca1cb5c28b">PSH3_HINT_BOTTOM</a> = PS_HINT_FLAG_BOTTOM
+, <a class="el" href="#a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03">PSH3_HINT_ACTIVE</a> = 4
+, <a class="el" href="#a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065">PSH3_HINT_FITTED</a> = 8
+ }</td></tr>
+<tr class="memitem:a796c9db6f8e5aba93d7ebe7062d8696e" id="r_a796c9db6f8e5aba93d7ebe7062d8696e"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <br />
+&#160;&#160;<a class="el" href="#a796c9db6f8e5aba93d7ebe7062d8696ea51d2cc1681a0e113173b97800927c4c6">PSH3_DIR_NONE</a> = 4
+, <a class="el" href="#a796c9db6f8e5aba93d7ebe7062d8696eaa1f17fdf9812f41f4a3e5ba733207c29">PSH3_DIR_UP</a> = -1
+, <a class="el" href="#a796c9db6f8e5aba93d7ebe7062d8696ea2f5725650bdc23fbb3c6d226edcb7295">PSH3_DIR_DOWN</a> = 1
+, <a class="el" href="#a796c9db6f8e5aba93d7ebe7062d8696ea6a6e486bbf93d2d70d485293570dc32d">PSH3_DIR_LEFT</a> = -2
+, <br />
+&#160;&#160;<a class="el" href="#a796c9db6f8e5aba93d7ebe7062d8696eabffb6d411903ec85dce7e1697ad64f85">PSH3_DIR_RIGHT</a> = 2
+<br />
+ }</td></tr>
+<tr class="memitem:a8e3e1e17229366a7a949621180c4f567" id="r_a8e3e1e17229366a7a949621180c4f567"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <a class="el" href="#a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4">PSH3_POINT_OFF</a> = 1
+, <a class="el" href="#a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d">PSH3_POINT_SMOOTH</a> = 2
+, <a class="el" href="#a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1">PSH3_POINT_INFLEX</a> = 4
+ }</td></tr>
+<tr class="memitem:ae6bfd114614efac4fe247daf53b03eb2" id="r_ae6bfd114614efac4fe247daf53b03eb2"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <br />
+&#160;&#160;<a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a">PSH3_POINT_STRONG</a> = 16
+, <a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95">PSH3_POINT_FITTED</a> = 32
+, <a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b">PSH3_POINT_EXTREMUM</a> = 64
+, <a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0">PSH3_POINT_POSITIVE</a> = 128
+, <br />
+&#160;&#160;<a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217">PSH3_POINT_NEGATIVE</a> = 256
+, <a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc">PSH3_POINT_EDGE_MIN</a> = 512
+, <a class="el" href="#ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36">PSH3_POINT_EDGE_MAX</a> = 1024
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af275dc3e5186a5322f88c768c079894a" id="r_af275dc3e5186a5322f88c768c079894a"><td class="memItemLeft"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#af275dc3e5186a5322f88c768c079894a">ps3_hints_apply</a> (<a class="el" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a> ps_hints, <a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline, <a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a> globals, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> hint_mode)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a19cb3a64facab1dac1527c550b4026b4" name="a19cb3a64facab1dac1527c550b4026b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19cb3a64facab1dac1527c550b4026b4">&#9670;&#160;</a></span>PSH3_DIR_COMPARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_DIR_COMPARE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (d1) == (d2) || (d1) == -(d2) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9fdb2dc06b2ffa69db76677c5b47cef7" name="a9fdb2dc06b2ffa69db76677c5b47cef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdb2dc06b2ffa69db76677c5b47cef7">&#9670;&#160;</a></span>PSH3_DIR_HORIZONTAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_DIR_HORIZONTAL&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae911e9e48859b469b43a7fb153725819" name="ae911e9e48859b469b43a7fb153725819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae911e9e48859b469b43a7fb153725819">&#9670;&#160;</a></span>PSH3_DIR_IS_HORIZONTAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_DIR_IS_HORIZONTAL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a19cb3a64facab1dac1527c550b4026b4">PSH3_DIR_COMPARE</a>( d, <a class="code hl_define" href="#a9fdb2dc06b2ffa69db76677c5b47cef7">PSH3_DIR_HORIZONTAL</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_a19cb3a64facab1dac1527c550b4026b4"><div class="ttname"><a href="#a19cb3a64facab1dac1527c550b4026b4">PSH3_DIR_COMPARE</a></div><div class="ttdeci">#define PSH3_DIR_COMPARE(d1, d2)</div><div class="ttdef"><b>Definition</b> pshalgo3.h:111</div></div>
+<div class="ttc" id="apshalgo3_8h_html_a9fdb2dc06b2ffa69db76677c5b47cef7"><div class="ttname"><a href="#a9fdb2dc06b2ffa69db76677c5b47cef7">PSH3_DIR_HORIZONTAL</a></div><div class="ttdeci">#define PSH3_DIR_HORIZONTAL</div><div class="ttdef"><b>Definition</b> pshalgo3.h:108</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a71f03ba3b8605dc72b2706f740d1d11c" name="a71f03ba3b8605dc72b2706f740d1d11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f03ba3b8605dc72b2706f740d1d11c">&#9670;&#160;</a></span>PSH3_DIR_IS_VERTICAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_DIR_IS_VERTICAL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a19cb3a64facab1dac1527c550b4026b4">PSH3_DIR_COMPARE</a>( d, <a class="code hl_define" href="#ace37b2ba1aa698cbe783bb98f285abf9">PSH3_DIR_VERTICAL</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ace37b2ba1aa698cbe783bb98f285abf9"><div class="ttname"><a href="#ace37b2ba1aa698cbe783bb98f285abf9">PSH3_DIR_VERTICAL</a></div><div class="ttdeci">#define PSH3_DIR_VERTICAL</div><div class="ttdef"><b>Definition</b> pshalgo3.h:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ace37b2ba1aa698cbe783bb98f285abf9" name="ace37b2ba1aa698cbe783bb98f285abf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace37b2ba1aa698cbe783bb98f285abf9">&#9670;&#160;</a></span>PSH3_DIR_VERTICAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_DIR_VERTICAL&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a287fe5f25bd1d855318dc5fbff3d1b54" name="a287fe5f25bd1d855318dc5fbff3d1b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287fe5f25bd1d855318dc5fbff3d1b54">&#9670;&#160;</a></span>psh3_hint_activate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_hint_activate</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(x)-&gt;flags |=  <a class="code hl_enumvalue" href="#a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03">PSH3_HINT_ACTIVE</a></div>
+<div class="ttc" id="apshalgo3_8h_html_a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03"><div class="ttname"><a href="#a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03">PSH3_HINT_ACTIVE</a></div><div class="ttdeci">@ PSH3_HINT_ACTIVE</div><div class="ttdef"><b>Definition</b> pshalgo3.h:39</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae8d3bde31ae5f4af1d5755a9768df029" name="ae8d3bde31ae5f4af1d5755a9768df029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d3bde31ae5f4af1d5755a9768df029">&#9670;&#160;</a></span>psh3_hint_deactivate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_hint_deactivate</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(x)-&gt;flags &amp;= ~<a class="code hl_enumvalue" href="#a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03">PSH3_HINT_ACTIVE</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab8012668cb877b9d72f9908daf9c88d9" name="ab8012668cb877b9d72f9908daf9c88d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8012668cb877b9d72f9908daf9c88d9">&#9670;&#160;</a></span>psh3_hint_is_active</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_hint_is_active</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (x)-&gt;flags &amp; <a class="code hl_enumvalue" href="#a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03">PSH3_HINT_ACTIVE</a> ) != 0 )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9fb3d4fad40efa0f7b81336b42c56c93" name="a9fb3d4fad40efa0f7b81336b42c56c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb3d4fad40efa0f7b81336b42c56c93">&#9670;&#160;</a></span>psh3_hint_is_fitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_hint_is_fitted</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (x)-&gt;flags &amp; <a class="code hl_enumvalue" href="#a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065">PSH3_HINT_FITTED</a> ) != 0 )</div>
+<div class="ttc" id="apshalgo3_8h_html_a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065"><div class="ttname"><a href="#a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065">PSH3_HINT_FITTED</a></div><div class="ttdeci">@ PSH3_HINT_FITTED</div><div class="ttdef"><b>Definition</b> pshalgo3.h:40</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a30e6889f4b72a2e673fb518b1371a452" name="a30e6889f4b72a2e673fb518b1371a452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e6889f4b72a2e673fb518b1371a452">&#9670;&#160;</a></span>psh3_hint_is_ghost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_hint_is_ghost</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( (x)-&gt;flags &amp; <a class="code hl_enumvalue" href="#a9e7a53f716042e91d8b11f58a3560899a7ff29c51d5ba925c0f81d5d213501d9d">PSH3_HINT_GHOST</a>  ) != 0 )</div>
+<div class="ttc" id="apshalgo3_8h_html_a9e7a53f716042e91d8b11f58a3560899a7ff29c51d5ba925c0f81d5d213501d9d"><div class="ttname"><a href="#a9e7a53f716042e91d8b11f58a3560899a7ff29c51d5ba925c0f81d5d213501d9d">PSH3_HINT_GHOST</a></div><div class="ttdeci">@ PSH3_HINT_GHOST</div><div class="ttdef"><b>Definition</b> pshalgo3.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a61ecad400cbdb0875ecc944dfa81ac3f" name="a61ecad400cbdb0875ecc944dfa81ac3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ecad400cbdb0875ecc944dfa81ac3f">&#9670;&#160;</a></span>psh3_hint_set_fitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_hint_set_fitted</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(x)-&gt;flags |=  <a class="code hl_enumvalue" href="#a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065">PSH3_HINT_FITTED</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae746047412dadd6a0ca554fc607d9628" name="ae746047412dadd6a0ca554fc607d9628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae746047412dadd6a0ca554fc607d9628">&#9670;&#160;</a></span>PSH3_POINT_ANGLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_POINT_ANGLE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_function" href="fttrigon_8h.html#a34980d2641946e39018a0fa42aafbe72">FT_Atan2</a>( (b)-&gt;org_u - (a)-&gt;org_u,  \</div>
+<div class="line">(b)-&gt;org_v - (a)-&gt;org_v )</div>
+<div class="ttc" id="afttrigon_8h_html_a34980d2641946e39018a0fa42aafbe72"><div class="ttname"><a href="fttrigon_8h.html#a34980d2641946e39018a0fa42aafbe72">FT_Atan2</a></div><div class="ttdeci">FT_Atan2(FT_Fixed x, FT_Fixed y)</div><div class="ttdef"><b>Definition</b> fttrigon.c:327</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0fe7e702bbd3d7f7eb026358585034c" name="ac0fe7e702bbd3d7f7eb026358585034c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fe7e702bbd3d7f7eb026358585034c">&#9670;&#160;</a></span>PSH3_POINT_EQUAL_ORG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSH3_POINT_EQUAL_ORG</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (a)-&gt;org_u == (b)-&gt;org_u &amp;&amp; \</div>
+<div class="line">(a)-&gt;org_v == (b)-&gt;org_v )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a175a907729d1c8b403ecddd89c409dfc" name="a175a907729d1c8b403ecddd89c409dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175a907729d1c8b403ecddd89c409dfc">&#9670;&#160;</a></span>psh3_point_is_edge_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_edge_max</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36">PSH3_POINT_EDGE_MAX</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36">PSH3_POINT_EDGE_MAX</a></div><div class="ttdeci">@ PSH3_POINT_EDGE_MAX</div><div class="ttdef"><b>Definition</b> pshalgo3.h:142</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a175ed1fe8589eda9ce6f611bf4bdc8b8" name="a175ed1fe8589eda9ce6f611bf4bdc8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175ed1fe8589eda9ce6f611bf4bdc8b8">&#9670;&#160;</a></span>psh3_point_is_edge_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_edge_min</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc">PSH3_POINT_EDGE_MIN</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc">PSH3_POINT_EDGE_MIN</a></div><div class="ttdeci">@ PSH3_POINT_EDGE_MIN</div><div class="ttdef"><b>Definition</b> pshalgo3.h:141</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a99e100204ddfc0e9df146cb84cdb1c0b" name="a99e100204ddfc0e9df146cb84cdb1c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e100204ddfc0e9df146cb84cdb1c0b">&#9670;&#160;</a></span>psh3_point_is_extremum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_extremum</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b">PSH3_POINT_EXTREMUM</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b">PSH3_POINT_EXTREMUM</a></div><div class="ttdeci">@ PSH3_POINT_EXTREMUM</div><div class="ttdef"><b>Definition</b> pshalgo3.h:138</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a4b248791a387bc9f59b4130fc2132f" name="a5a4b248791a387bc9f59b4130fc2132f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4b248791a387bc9f59b4130fc2132f">&#9670;&#160;</a></span>psh3_point_is_fitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_fitted</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95">PSH3_POINT_FITTED</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95">PSH3_POINT_FITTED</a></div><div class="ttdeci">@ PSH3_POINT_FITTED</div><div class="ttdef"><b>Definition</b> pshalgo3.h:137</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac96b94fa3457c2098e57d27af0f68cab" name="ac96b94fa3457c2098e57d27af0f68cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96b94fa3457c2098e57d27af0f68cab">&#9670;&#160;</a></span>psh3_point_is_inflex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_inflex</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags &amp; <a class="code hl_enumvalue" href="#a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1">PSH3_POINT_INFLEX</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1"><div class="ttname"><a href="#a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1">PSH3_POINT_INFLEX</a></div><div class="ttdeci">@ PSH3_POINT_INFLEX</div><div class="ttdef"><b>Definition</b> pshalgo3.h:122</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8c2ff294f3c3c1e0f55a863eb43bf326" name="a8c2ff294f3c3c1e0f55a863eb43bf326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2ff294f3c3c1e0f55a863eb43bf326">&#9670;&#160;</a></span>psh3_point_is_negative</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_negative</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217">PSH3_POINT_NEGATIVE</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217">PSH3_POINT_NEGATIVE</a></div><div class="ttdeci">@ PSH3_POINT_NEGATIVE</div><div class="ttdef"><b>Definition</b> pshalgo3.h:140</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae510af8cc1dd6a472b069a4e5c32643d" name="ae510af8cc1dd6a472b069a4e5c32643d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae510af8cc1dd6a472b069a4e5c32643d">&#9670;&#160;</a></span>psh3_point_is_off</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_off</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags &amp; <a class="code hl_enumvalue" href="#a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4">PSH3_POINT_OFF</a>    )</div>
+<div class="ttc" id="apshalgo3_8h_html_a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4"><div class="ttname"><a href="#a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4">PSH3_POINT_OFF</a></div><div class="ttdeci">@ PSH3_POINT_OFF</div><div class="ttdef"><b>Definition</b> pshalgo3.h:120</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a56d39bda0cb21e1085a80a35cee36945" name="a56d39bda0cb21e1085a80a35cee36945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d39bda0cb21e1085a80a35cee36945">&#9670;&#160;</a></span>psh3_point_is_positive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_positive</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0">PSH3_POINT_POSITIVE</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0">PSH3_POINT_POSITIVE</a></div><div class="ttdeci">@ PSH3_POINT_POSITIVE</div><div class="ttdef"><b>Definition</b> pshalgo3.h:139</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a27c30b222f9e443feb9fb8ebce0c9868" name="a27c30b222f9e443feb9fb8ebce0c9868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c30b222f9e443feb9fb8ebce0c9868">&#9670;&#160;</a></span>psh3_point_is_smooth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_smooth</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags &amp; <a class="code hl_enumvalue" href="#a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d">PSH3_POINT_SMOOTH</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d"><div class="ttname"><a href="#a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d">PSH3_POINT_SMOOTH</a></div><div class="ttdeci">@ PSH3_POINT_SMOOTH</div><div class="ttdef"><b>Definition</b> pshalgo3.h:121</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a739b1940f23701f46d09066814c5fb35" name="a739b1940f23701f46d09066814c5fb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739b1940f23701f46d09066814c5fb35">&#9670;&#160;</a></span>psh3_point_is_strong</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_is_strong</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (p)-&gt;flags2 &amp; <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a">PSH3_POINT_STRONG</a> )</div>
+<div class="ttc" id="apshalgo3_8h_html_ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a"><div class="ttname"><a href="#ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a">PSH3_POINT_STRONG</a></div><div class="ttdeci">@ PSH3_POINT_STRONG</div><div class="ttdef"><b>Definition</b> pshalgo3.h:136</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a65159079c046e6d069a556e4b61830b2" name="a65159079c046e6d069a556e4b61830b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65159079c046e6d069a556e4b61830b2">&#9670;&#160;</a></span>psh3_point_set_edge_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_edge_max</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36">PSH3_POINT_EDGE_MAX</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6e9d93d45e54a60502b4f6df3712052a" name="a6e9d93d45e54a60502b4f6df3712052a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9d93d45e54a60502b4f6df3712052a">&#9670;&#160;</a></span>psh3_point_set_edge_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_edge_min</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc">PSH3_POINT_EDGE_MIN</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a75c0db19641b2599147f42caecdc41b7" name="a75c0db19641b2599147f42caecdc41b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c0db19641b2599147f42caecdc41b7">&#9670;&#160;</a></span>psh3_point_set_extremum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_extremum</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b">PSH3_POINT_EXTREMUM</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aea8472374bdb2acfe54abb7653a337a3" name="aea8472374bdb2acfe54abb7653a337a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8472374bdb2acfe54abb7653a337a3">&#9670;&#160;</a></span>psh3_point_set_fitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_fitted</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95">PSH3_POINT_FITTED</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aabd3d9f38cb3fa43647e7c5a461daef9" name="aabd3d9f38cb3fa43647e7c5a461daef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd3d9f38cb3fa43647e7c5a461daef9">&#9670;&#160;</a></span>psh3_point_set_inflex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_inflex</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags |= <a class="code hl_enumvalue" href="#a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1">PSH3_POINT_INFLEX</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a41ac474bf2ed8e2dc32093bfd58bb277" name="a41ac474bf2ed8e2dc32093bfd58bb277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ac474bf2ed8e2dc32093bfd58bb277">&#9670;&#160;</a></span>psh3_point_set_negative</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_negative</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217">PSH3_POINT_NEGATIVE</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa6ade558f407ad4cab0a0b5ea1bf0199" name="aa6ade558f407ad4cab0a0b5ea1bf0199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ade558f407ad4cab0a0b5ea1bf0199">&#9670;&#160;</a></span>psh3_point_set_off</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_off</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags |= <a class="code hl_enumvalue" href="#a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4">PSH3_POINT_OFF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9e2bb28ce61b2ae3d11e82404260b082" name="a9e2bb28ce61b2ae3d11e82404260b082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2bb28ce61b2ae3d11e82404260b082">&#9670;&#160;</a></span>psh3_point_set_positive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_positive</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0">PSH3_POINT_POSITIVE</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0ce69f3a7d339ecb368e00de1bb6a59c" name="a0ce69f3a7d339ecb368e00de1bb6a59c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce69f3a7d339ecb368e00de1bb6a59c">&#9670;&#160;</a></span>psh3_point_set_smooth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_smooth</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags |= <a class="code hl_enumvalue" href="#a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d">PSH3_POINT_SMOOTH</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac54ef8c5089f8577f712378b95121520" name="ac54ef8c5089f8577f712378b95121520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54ef8c5089f8577f712378b95121520">&#9670;&#160;</a></span>psh3_point_set_strong</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define psh3_point_set_strong</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;flags2 |= <a class="code hl_enumvalue" href="#ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a">PSH3_POINT_STRONG</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a4fcecd06e07b4cbf6c1fa00d9ca5d5e6" name="a4fcecd06e07b4cbf6c1fa00d9ca5d5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcecd06e07b4cbf6c1fa00d9ca5d5e6">&#9670;&#160;</a></span>PSH3_Contour</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___contour_rec__.html">PSH3_ContourRec_</a>* <a class="el" href="#a4fcecd06e07b4cbf6c1fa00d9ca5d5e6">PSH3_Contour</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dd441d26f6dd34c01e3aad30baa7ec7" name="a7dd441d26f6dd34c01e3aad30baa7ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd441d26f6dd34c01e3aad30baa7ec7">&#9670;&#160;</a></span>PSH3_ContourRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___contour_rec__.html">PSH3_ContourRec_</a> <a class="el" href="#a7dd441d26f6dd34c01e3aad30baa7ec7">PSH3_ContourRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa05f5b0e9ad5ab388c8afb343ce650bc" name="aa05f5b0e9ad5ab388c8afb343ce650bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05f5b0e9ad5ab388c8afb343ce650bc">&#9670;&#160;</a></span>PSH3_Glyph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___glyph_rec__.html">PSH3_GlyphRec_</a> * <a class="el" href="#aa05f5b0e9ad5ab388c8afb343ce650bc">PSH3_Glyph</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75c8c01f7516937edf6bfcf391e02571" name="a75c8c01f7516937edf6bfcf391e02571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c8c01f7516937edf6bfcf391e02571">&#9670;&#160;</a></span>PSH3_GlyphRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___glyph_rec__.html">PSH3_GlyphRec_</a> <a class="el" href="#a75c8c01f7516937edf6bfcf391e02571">PSH3_GlyphRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85d95a3efc7872701ef62bd16f367808" name="a85d95a3efc7872701ef62bd16f367808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d95a3efc7872701ef62bd16f367808">&#9670;&#160;</a></span>PSH3_Hint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef typedefFT_BEGIN_HEADER struct <a class="el" href="struct_p_s_h3___hint_rec__.html">PSH3_HintRec_</a>* <a class="el" href="#a85d95a3efc7872701ef62bd16f367808">PSH3_Hint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab073ec34939b214273e43b0894f35316" name="ab073ec34939b214273e43b0894f35316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab073ec34939b214273e43b0894f35316">&#9670;&#160;</a></span>PSH3_Hint_Table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___hint___table_rec__.html">PSH3_Hint_TableRec_</a> * <a class="el" href="#ab073ec34939b214273e43b0894f35316">PSH3_Hint_Table</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae881ff5816928dc1c17af52a29dd2ea3" name="ae881ff5816928dc1c17af52a29dd2ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae881ff5816928dc1c17af52a29dd2ea3">&#9670;&#160;</a></span>PSH3_Hint_TableRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___hint___table_rec__.html">PSH3_Hint_TableRec_</a> <a class="el" href="#ae881ff5816928dc1c17af52a29dd2ea3">PSH3_Hint_TableRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef9af5f0fb7a6e4bce549862b39e144f" name="aef9af5f0fb7a6e4bce549862b39e144f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9af5f0fb7a6e4bce549862b39e144f">&#9670;&#160;</a></span>PSH3_HintRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___hint_rec__.html">PSH3_HintRec_</a> <a class="el" href="#aef9af5f0fb7a6e4bce549862b39e144f">PSH3_HintRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a695f291fbb421c1025f47ca61bc9fa07" name="a695f291fbb421c1025f47ca61bc9fa07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695f291fbb421c1025f47ca61bc9fa07">&#9670;&#160;</a></span>PSH3_Point</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___point_rec__.html">PSH3_PointRec_</a>* <a class="el" href="#a695f291fbb421c1025f47ca61bc9fa07">PSH3_Point</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6db4ef05c1d48a8e8b63c2814e02c3c0" name="a6db4ef05c1d48a8e8b63c2814e02c3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db4ef05c1d48a8e8b63c2814e02c3c0">&#9670;&#160;</a></span>PSH3_PointRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___point_rec__.html">PSH3_PointRec_</a> <a class="el" href="#a6db4ef05c1d48a8e8b63c2814e02c3c0">PSH3_PointRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a338e9d616aa0955b610252e06405c321" name="a338e9d616aa0955b610252e06405c321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338e9d616aa0955b610252e06405c321">&#9670;&#160;</a></span>PSH3_Zone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___zone_rec__.html">PSH3_ZoneRec_</a> * <a class="el" href="#a338e9d616aa0955b610252e06405c321">PSH3_Zone</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f1b51019c475322d26cd20d48e65c18" name="a0f1b51019c475322d26cd20d48e65c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1b51019c475322d26cd20d48e65c18">&#9670;&#160;</a></span>PSH3_ZoneRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_p_s_h3___zone_rec__.html">PSH3_ZoneRec_</a> <a class="el" href="#a0f1b51019c475322d26cd20d48e65c18">PSH3_ZoneRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a8e3e1e17229366a7a949621180c4f567" name="a8e3e1e17229366a7a949621180c4f567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3e1e17229366a7a949621180c4f567">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4" name="a8e3e1e17229366a7a949621180c4f567afa8c83c7c3ec9d58b280eb7086ca82a4"></a>PSH3_POINT_OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d" name="a8e3e1e17229366a7a949621180c4f567a310ee1260a91e737f90ca507c85c274d"></a>PSH3_POINT_SMOOTH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1" name="a8e3e1e17229366a7a949621180c4f567a29d20156d18cb878a09d54ab0885aef1"></a>PSH3_POINT_INFLEX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a796c9db6f8e5aba93d7ebe7062d8696e" name="a796c9db6f8e5aba93d7ebe7062d8696e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a796c9db6f8e5aba93d7ebe7062d8696e">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a796c9db6f8e5aba93d7ebe7062d8696ea51d2cc1681a0e113173b97800927c4c6" name="a796c9db6f8e5aba93d7ebe7062d8696ea51d2cc1681a0e113173b97800927c4c6"></a>PSH3_DIR_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a796c9db6f8e5aba93d7ebe7062d8696eaa1f17fdf9812f41f4a3e5ba733207c29" name="a796c9db6f8e5aba93d7ebe7062d8696eaa1f17fdf9812f41f4a3e5ba733207c29"></a>PSH3_DIR_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a796c9db6f8e5aba93d7ebe7062d8696ea2f5725650bdc23fbb3c6d226edcb7295" name="a796c9db6f8e5aba93d7ebe7062d8696ea2f5725650bdc23fbb3c6d226edcb7295"></a>PSH3_DIR_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a796c9db6f8e5aba93d7ebe7062d8696ea6a6e486bbf93d2d70d485293570dc32d" name="a796c9db6f8e5aba93d7ebe7062d8696ea6a6e486bbf93d2d70d485293570dc32d"></a>PSH3_DIR_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a796c9db6f8e5aba93d7ebe7062d8696eabffb6d411903ec85dce7e1697ad64f85" name="a796c9db6f8e5aba93d7ebe7062d8696eabffb6d411903ec85dce7e1697ad64f85"></a>PSH3_DIR_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae6bfd114614efac4fe247daf53b03eb2" name="ae6bfd114614efac4fe247daf53b03eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6bfd114614efac4fe247daf53b03eb2">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a" name="ae6bfd114614efac4fe247daf53b03eb2a2c0a00092df1b6f03b5e23a7d2b9905a"></a>PSH3_POINT_STRONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95" name="ae6bfd114614efac4fe247daf53b03eb2a75c3e35e5540dab26eb0e09635b52f95"></a>PSH3_POINT_FITTED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b" name="ae6bfd114614efac4fe247daf53b03eb2afe05564970499134440ca297b27cd37b"></a>PSH3_POINT_EXTREMUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0" name="ae6bfd114614efac4fe247daf53b03eb2acfd8b019fece00f6ceedbfc5b9734fa0"></a>PSH3_POINT_POSITIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217" name="ae6bfd114614efac4fe247daf53b03eb2a2167e697809b1f0ec2085c4469dbf217"></a>PSH3_POINT_NEGATIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc" name="ae6bfd114614efac4fe247daf53b03eb2a7bf76c2de6dc88e53f4bc103b87099bc"></a>PSH3_POINT_EDGE_MIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36" name="ae6bfd114614efac4fe247daf53b03eb2ab0d2afe66d375db559cbae2602179b36"></a>PSH3_POINT_EDGE_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9e7a53f716042e91d8b11f58a3560899" name="a9e7a53f716042e91d8b11f58a3560899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7a53f716042e91d8b11f58a3560899">&#9670;&#160;</a></span>PSH3_Hint_Flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a9e7a53f716042e91d8b11f58a3560899">PSH3_Hint_Flags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a9e7a53f716042e91d8b11f58a3560899a7ff29c51d5ba925c0f81d5d213501d9d" name="a9e7a53f716042e91d8b11f58a3560899a7ff29c51d5ba925c0f81d5d213501d9d"></a>PSH3_HINT_GHOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e7a53f716042e91d8b11f58a3560899a7fdb7ed6925d9ec45506a6ca1cb5c28b" name="a9e7a53f716042e91d8b11f58a3560899a7fdb7ed6925d9ec45506a6ca1cb5c28b"></a>PSH3_HINT_BOTTOM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03" name="a9e7a53f716042e91d8b11f58a3560899aace20fb2cb537189faff18a22f4cbf03"></a>PSH3_HINT_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065" name="a9e7a53f716042e91d8b11f58a3560899a0691fcde5d64061ec49cf6c751749065"></a>PSH3_HINT_FITTED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="af275dc3e5186a5322f88c768c079894a" name="af275dc3e5186a5322f88c768c079894a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af275dc3e5186a5322f88c768c079894a">&#9670;&#160;</a></span>ps3_hints_apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ps3_hints_apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pshrec_8h.html#abf3596a6f1cd6a3395f64ed9a5e05c9b">PS_Hints</a></td>          <td class="paramname"><span class="paramname"><em>ps_hints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pshints_8h.html#aed4220b62b12a76456f9f47bafa5fe52">PSH_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>hint_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pshalgo3_8h_af275dc3e5186a5322f88c768c079894a_cgraph.png" border="0" usemap="#apshalgo3_8h_af275dc3e5186a5322f88c768c079894a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_0e00759a5aa6a0b13a1caf75240cc41e.html">pshinter</a></li><li class="navelem"><a href="pshalgo3_8h.html">pshalgo3.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

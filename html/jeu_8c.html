@@ -1,0 +1,1117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Info S2: Référence du fichier src/jeu.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet Info S2<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Jeu de plateforme réalisé en C avec Allegro</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('jeu_8c.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Recherche',true);
+});
+</script>
+<div id="main-nav"></div>
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier jeu.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="src_2jeu_8h_source.html">jeu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2eclair_8h_source.html">eclair.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2entites_8h_source.html">entites.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de jeu.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c__incl.png" border="0" usemap="#asrc_2jeu_8c" loading="lazy" alt=""/></div>
+<map name="asrc_2jeu_8c" id="asrc_2jeu_8c">
+<area shape="rect" title=" " alt="" coords="172,5,254,38"/>
+<area shape="rect" href="src_2jeu_8h.html" title=" " alt="" coords="82,86,139,119"/>
+<area shape="poly" title=" " alt="" coords="191,40,145,78,141,74,195,36"/>
+<area shape="rect" href="src_2entites_8h.html" title=" " alt="" coords="5,167,88,199"/>
+<area shape="poly" title=" " alt="" coords="170,33,120,53,94,68,73,88,56,119,50,152,45,151,51,117,68,84,91,64,117,48,173,29"/>
+<area shape="rect" href="src_2eclair_8h.html" title=" " alt="" coords="88,247,162,280"/>
+<area shape="poly" title=" " alt="" coords="210,38,138,234,134,232,205,38"/>
+<area shape="rect" title=" " alt="" coords="214,86,287,119"/>
+<area shape="poly" title=" " alt="" coords="221,36,239,72,234,72,220,41"/>
+<area shape="rect" title=" " alt="" coords="310,86,386,119"/>
+<area shape="poly" title=" " alt="" coords="240,36,310,77,305,79,240,41"/>
+<area shape="rect" title=" " alt="" coords="410,86,486,119"/>
+<area shape="poly" title=" " alt="" coords="255,34,397,82,392,85,255,39"/>
+<area shape="poly" title=" " alt="" coords="97,121,71,156,66,153,99,117"/>
+<area shape="poly" title=" " alt="" coords="114,117,125,232,120,231,110,120"/>
+<area shape="poly" title=" " alt="" coords="63,197,102,236,97,237,61,202"/>
+</map>
+</div>
+</div>
+<p><a href="jeu_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a04fd5d00b05181b0046eec5c7a877412" id="r_a04fd5d00b05181b0046eec5c7a877412"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a04fd5d00b05181b0046eec5c7a877412">rayon_bulle</a> (<a class="el" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1d">TailleBulle</a> t)</td></tr>
+<tr class="memitem:ac3b9eb13e1446e9c5aa5ee8c7bae31f9" id="r_ac3b9eb13e1446e9c5aa5ee8c7bae31f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac3b9eb13e1446e9c5aa5ee8c7bae31f9">jeu_init_niveau</a> (<a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej, int niveau)</td></tr>
+<tr class="memitem:a6c267bac373aba16a2d30f98c5786dfd" id="r_a6c267bac373aba16a2d30f98c5786dfd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c267bac373aba16a2d30f98c5786dfd">jeu_mettre_a_jour</a> (<a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej, float dt)</td></tr>
+<tr class="memitem:a35db185c59a638dfe4f06995eaeb7e00" id="r_a35db185c59a638dfe4f06995eaeb7e00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a35db185c59a638dfe4f06995eaeb7e00">bulle_deplacer</a> (<a class="el" href="struct_bulle.html">Bulle</a> *b, float dt, float largeur_zone, float hauteur_zone)</td></tr>
+<tr class="memitem:a95bdea7c66358469b0f5587032814c83" id="r_a95bdea7c66358469b0f5587032814c83"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95bdea7c66358469b0f5587032814c83">bulle_diviser</a> (<a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej, int indice)</td></tr>
+<tr class="memitem:a0fdf5ccf00e016cdf02d6fd09ef52295" id="r_a0fdf5ccf00e016cdf02d6fd09ef52295"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0fdf5ccf00e016cdf02d6fd09ef52295">jeu_verifier_collisions</a> (<a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej)</td></tr>
+<tr class="memitem:aa567b6f3c9bd1a4df9d6b4683b5b46be" id="r_aa567b6f3c9bd1a4df9d6b4683b5b46be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa567b6f3c9bd1a4df9d6b4683b5b46be">joueur_tirer</a> (<a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej)</td></tr>
+<tr class="memitem:a0fec73e93b6dc52d71bfc31f4c20fbf5" id="r_a0fec73e93b6dc52d71bfc31f4c20fbf5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0fec73e93b6dc52d71bfc31f4c20fbf5">boss_deplacer</a> (<a class="el" href="struct_boss.html">Boss</a> *b, float dt, float largeur_zone)</td></tr>
+<tr class="memitem:accec6939a115e95b6fe0dd557161d78e" id="r_accec6939a115e95b6fe0dd557161d78e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#accec6939a115e95b6fe0dd557161d78e">jeu_niveau_gagne</a> (const <a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej)</td></tr>
+<tr class="memitem:addc45c25e35e48d44131714b8e7f7516" id="r_addc45c25e35e48d44131714b8e7f7516"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#addc45c25e35e48d44131714b8e7f7516">jeu_niveau_perdu</a> (const <a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej)</td></tr>
+<tr class="memitem:adbd875e13250e4155452816f4a51f9ac" id="r_adbd875e13250e4155452816f4a51f9ac"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adbd875e13250e4155452816f4a51f9ac">verifier_collision_cercle_rect</a> (float cx, float cy, float r, float rx, float ry, float larg, float haut)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a0fec73e93b6dc52d71bfc31f4c20fbf5" name="a0fec73e93b6dc52d71bfc31f4c20fbf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fec73e93b6dc52d71bfc31f4c20fbf5">&#9670;&#160;</a></span>boss_deplacer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boss_deplacer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_boss.html">Boss</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>largeur_zone</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00403">403</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  403</span>                                                          {</div>
+<div class="line"><span class="lineno">  404</span>    <span class="keywordflow">if</span> (!b-&gt;<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>    <span class="keywordtype">float</span> ratio   = (float)b-&gt;<a class="code hl_variable" href="struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334">points_vie</a> / (<span class="keywordtype">float</span>)b-&gt;<a class="code hl_variable" href="struct_boss.html#aa8f84435dbb2670923e1908a9d4e46b9">points_vie_max</a>;</div>
+<div class="line"><span class="lineno">  407</span>    <span class="keywordtype">float</span> vitesse = b-&gt;<a class="code hl_variable" href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">vx</a> * (1.0f + (1.0f - ratio) * 2.0f);</div>
+<div class="line"><span class="lineno">  408</span> </div>
+<div class="line"><span class="lineno">  409</span>    b-&gt;<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a> += vitesse * dt;</div>
+<div class="line"><span class="lineno">  410</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a> &lt; 40)                { b-&gt;<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a> = 40;                b-&gt;<a class="code hl_variable" href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">vx</a> =  fabsf(b-&gt;<a class="code hl_variable" href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">vx</a>); }</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a> &gt; largeur_zone - 40) { b-&gt;<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a> = largeur_zone - 40; b-&gt;<a class="code hl_variable" href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">vx</a> = -fabsf(b-&gt;<a class="code hl_variable" href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">vx</a>); }</div>
+<div class="line"><span class="lineno">  412</span>}</div>
+<div class="ttc" id="astruct_boss_html_a3f9482821d86e68131678f33a1ed65c6"><div class="ttname"><a href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">Boss::vx</a></div><div class="ttdeci">float vx</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00070">entites.h:70</a></div></div>
+<div class="ttc" id="astruct_boss_html_a885e2a3d77e66c251358a887e8db4e39"><div class="ttname"><a href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">Boss::active</a></div><div class="ttdeci">int active</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00072">entites.h:72</a></div></div>
+<div class="ttc" id="astruct_boss_html_a8edf1d9d4cccf1a2b036d2c3f65c8681"><div class="ttname"><a href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">Boss::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00069">entites.h:69</a></div></div>
+<div class="ttc" id="astruct_boss_html_a9276aeb24cc00e6bd8aada39190f0334"><div class="ttname"><a href="struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334">Boss::points_vie</a></div><div class="ttdeci">int points_vie</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00071">entites.h:71</a></div></div>
+<div class="ttc" id="astruct_boss_html_aa8f84435dbb2670923e1908a9d4e46b9"><div class="ttname"><a href="struct_boss.html#aa8f84435dbb2670923e1908a9d4e46b9">Boss::points_vie_max</a></div><div class="ttdeci">int points_vie_max</div><div class="ttdef"><b>Definition</b> <a href="src_2entites_8h_source.html#l00073">entites.h:73</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph.png" border="0" usemap="#ajeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph" id="ajeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph">
+<area shape="rect" title=" " alt="" coords="314,5,437,38"/>
+<area shape="rect" href="jeu_8c.html#a6c267bac373aba16a2d30f98c5786dfd" title=" " alt="" coords="112,5,266,38"/>
+<area shape="poly" title=" " alt="" coords="296,22,266,24,266,19,301,22"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35db185c59a638dfe4f06995eaeb7e00" name="a35db185c59a638dfe4f06995eaeb7e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35db185c59a638dfe4f06995eaeb7e00">&#9670;&#160;</a></span>bulle_deplacer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bulle_deplacer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_bulle.html">Bulle</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>largeur_zone</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>hauteur_zone</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00204">204</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>                                                                                {</div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">if</span> (!b-&gt;<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    b-&gt;<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a> += 100.0f * dt; <span class="comment">/* gravitÃ© */</span></div>
+<div class="line"><span class="lineno">  208</span>    b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>  += b-&gt;<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a> * dt;</div>
+<div class="line"><span class="lineno">  209</span>    b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>  += b-&gt;<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a> * dt;</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordtype">float</span> r = <a class="code hl_function" href="#a04fd5d00b05181b0046eec5c7a877412">rayon_bulle</a>(b-&gt;<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a>);</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a> - r &lt; 0)            { b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a> = r;               b-&gt;<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a> =  fabsf(b-&gt;<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a>); }</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a> + r &gt; largeur_zone) { b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a> = largeur_zone - r; b-&gt;<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a> = -fabsf(b-&gt;<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a>); }</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a> + r &gt; hauteur_zone) { b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a> = hauteur_zone - r; b-&gt;<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a> = -fabsf(b-&gt;<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a>) * 0.95f; }</div>
+<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a> - r &lt; 0)            { b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a> = r;                b-&gt;<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a> =  fabsf(b-&gt;<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a>); }</div>
+<div class="line"><span class="lineno">  217</span>}</div>
+<div class="ttc" id="ajeu_8c_html_a04fd5d00b05181b0046eec5c7a877412"><div class="ttname"><a href="#a04fd5d00b05181b0046eec5c7a877412">rayon_bulle</a></div><div class="ttdeci">float rayon_bulle(TailleBulle t)</div><div class="ttdef"><b>Definition</b> <a href="jeu_8c_source.html#l00008">jeu.c:8</a></div></div>
+<div class="ttc" id="astruct_bulle_html_a192fc5bfc6280d8bc7b05a1b29483fe1"><div class="ttname"><a href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">Bulle::active</a></div><div class="ttdeci">int active</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00049">entites.h:49</a></div></div>
+<div class="ttc" id="astruct_bulle_html_a2d5e45806ebee08b3844d03b305cfdec"><div class="ttname"><a href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">Bulle::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00046">entites.h:46</a></div></div>
+<div class="ttc" id="astruct_bulle_html_a3bcdab971a3d6a56c1feeadd839456d7"><div class="ttname"><a href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">Bulle::vx</a></div><div class="ttdeci">float vx</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00047">entites.h:47</a></div></div>
+<div class="ttc" id="astruct_bulle_html_a8b0cb46603242b18e489f0bf05cff2d3"><div class="ttname"><a href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">Bulle::vy</a></div><div class="ttdeci">float vy</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00047">entites.h:47</a></div></div>
+<div class="ttc" id="astruct_bulle_html_aa2fe503d7861cc39def5d652acd65e10"><div class="ttname"><a href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">Bulle::taille</a></div><div class="ttdeci">TailleBulle taille</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00048">entites.h:48</a></div></div>
+<div class="ttc" id="astruct_bulle_html_aad8ea0ff8121cd670c057a3e6198a922"><div class="ttname"><a href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">Bulle::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00046">entites.h:46</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph.png" border="0" usemap="#ajeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph" id="ajeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,133,38"/>
+<area shape="rect" href="jeu_8c.html#a04fd5d00b05181b0046eec5c7a877412" title=" " alt="" coords="181,5,288,38"/>
+<area shape="poly" title=" " alt="" coords="133,19,168,21,162,22,133,24"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph.png" border="0" usemap="#ajeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph" id="ajeu_8c_a35db185c59a638dfe4f06995eaeb7e00_icgraph">
+<area shape="rect" title=" " alt="" coords="314,5,441,38"/>
+<area shape="rect" href="jeu_8c.html#a6c267bac373aba16a2d30f98c5786dfd" title=" " alt="" coords="112,5,266,38"/>
+<area shape="poly" title=" " alt="" coords="296,22,266,24,266,19,301,22"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a95bdea7c66358469b0f5587032814c83" name="a95bdea7c66358469b0f5587032814c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bdea7c66358469b0f5587032814c83">&#9670;&#160;</a></span>bulle_diviser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bulle_diviser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indice</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00219">219</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>                                            {</div>
+<div class="line"><span class="lineno">  220</span>    <a class="code hl_struct" href="struct_bulle.html">Bulle</a> *b = &amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[indice];</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <span class="comment">/* 1 chance sur 4 de faire tomber un bonus (niveau 2+) */</span></div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a> &gt;= 2 &amp;&amp; rand() % 4 == 0) {</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a02f266f0f132735cd3c64e67251c163d">MAX_BONUS</a>; i++) {</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a4b7263158e47151b2fa1db82eb519cf0">active</a>) {</div>
+<div class="line"><span class="lineno">  226</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a4b7263158e47151b2fa1db82eb519cf0">active</a> = 1;</div>
+<div class="line"><span class="lineno">  227</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#ab35e606c33f4a3c608deffbb237f09a6">x</a>     = b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>;</div>
+<div class="line"><span class="lineno">  228</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a98456dfc3875b5a45bd599b192250a56">y</a>     = b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>;</div>
+<div class="line"><span class="lineno">  229</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#aad545942fb407a2f1ee4fc19ac36b87e">type</a>  = rand() % <a class="code hl_define" href="header_2entites_8h.html#a37fa8267bd5513503c65440e387d561c">NB_TYPES_BONUS</a>;</div>
+<div class="line"><span class="lineno">  230</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#ad6efd20802414585049c50aa509e934a">timer</a>  = 8.0f;</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  232</span>            }</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a> == <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983">BULLE_MINUSCULE</a>) { b-&gt;<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a> = 0; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>    <a class="code hl_enumeration" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1d">TailleBulle</a> prochaine = b-&gt;<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a> + 1;</div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordtype">float</span> bx = b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>, by = b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>;</div>
+<div class="line"><span class="lineno">  240</span>    b-&gt;<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a> = 0;</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordtype">int</span> crees = 0;</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a> &amp;&amp; crees &lt; 2; i++) {</div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) {</div>
+<div class="line"><span class="lineno">  245</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>        = 1;</div>
+<div class="line"><span class="lineno">  246</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a>        = prochaine;</div>
+<div class="line"><span class="lineno">  247</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>             = bx;</div>
+<div class="line"><span class="lineno">  248</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>             = by;</div>
+<div class="line"><span class="lineno">  249</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a>            = (crees == 0 ? -120.0f : 120.0f);</div>
+<div class="line"><span class="lineno">  250</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a>            = -150.0f;</div>
+<div class="line"><span class="lineno">  251</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a4a036a888c1539e425b626a6d8fbf049">contient_arme</a> = 0;</div>
+<div class="line"><span class="lineno">  252</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a9791f1ae1668cba807a70847326f2662">lance_eclairs</a> = 0;</div>
+<div class="line"><span class="lineno">  253</span>            crees++;</div>
+<div class="line"><span class="lineno">  254</span>        }</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
+<div class="line"><span class="lineno">  256</span>}</div>
+<div class="ttc" id="aheader_2entites_8h_html_a02f266f0f132735cd3c64e67251c163d"><div class="ttname"><a href="header_2entites_8h.html#a02f266f0f132735cd3c64e67251c163d">MAX_BONUS</a></div><div class="ttdeci">#define MAX_BONUS</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00013">entites.h:13</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a37fa8267bd5513503c65440e387d561c"><div class="ttname"><a href="header_2entites_8h.html#a37fa8267bd5513503c65440e387d561c">NB_TYPES_BONUS</a></div><div class="ttdeci">#define NB_TYPES_BONUS</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00016">entites.h:16</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a772c22e70237d36cf621df6a2235ff61"><div class="ttname"><a href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a></div><div class="ttdeci">#define MAX_BULLES</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00011">entites.h:11</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_af101043d6c277c6a337c9babd0c75c1d"><div class="ttname"><a href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1d">TailleBulle</a></div><div class="ttdeci">TailleBulle</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00021">entites.h:21</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983"><div class="ttname"><a href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983">BULLE_MINUSCULE</a></div><div class="ttdeci">@ BULLE_MINUSCULE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00025">entites.h:25</a></div></div>
+<div class="ttc" id="astruct_bonus_arme_html_a4b7263158e47151b2fa1db82eb519cf0"><div class="ttname"><a href="struct_bonus_arme.html#a4b7263158e47151b2fa1db82eb519cf0">BonusArme::active</a></div><div class="ttdeci">int active</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00064">entites.h:64</a></div></div>
+<div class="ttc" id="astruct_bonus_arme_html_a98456dfc3875b5a45bd599b192250a56"><div class="ttname"><a href="struct_bonus_arme.html#a98456dfc3875b5a45bd599b192250a56">BonusArme::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00062">entites.h:62</a></div></div>
+<div class="ttc" id="astruct_bonus_arme_html_aad545942fb407a2f1ee4fc19ac36b87e"><div class="ttname"><a href="struct_bonus_arme.html#aad545942fb407a2f1ee4fc19ac36b87e">BonusArme::type</a></div><div class="ttdeci">TypeArme type</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00063">entites.h:63</a></div></div>
+<div class="ttc" id="astruct_bonus_arme_html_ab35e606c33f4a3c608deffbb237f09a6"><div class="ttname"><a href="struct_bonus_arme.html#ab35e606c33f4a3c608deffbb237f09a6">BonusArme::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00062">entites.h:62</a></div></div>
+<div class="ttc" id="astruct_bonus_arme_html_ad6efd20802414585049c50aa509e934a"><div class="ttname"><a href="struct_bonus_arme.html#ad6efd20802414585049c50aa509e934a">BonusArme::timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00065">entites.h:65</a></div></div>
+<div class="ttc" id="astruct_bulle_html"><div class="ttname"><a href="struct_bulle.html">Bulle</a></div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00045">entites.h:45</a></div></div>
+<div class="ttc" id="astruct_bulle_html_a4a036a888c1539e425b626a6d8fbf049"><div class="ttname"><a href="struct_bulle.html#a4a036a888c1539e425b626a6d8fbf049">Bulle::contient_arme</a></div><div class="ttdeci">int contient_arme</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00050">entites.h:50</a></div></div>
+<div class="ttc" id="astruct_bulle_html_a9791f1ae1668cba807a70847326f2662"><div class="ttname"><a href="struct_bulle.html#a9791f1ae1668cba807a70847326f2662">Bulle::lance_eclairs</a></div><div class="ttdeci">int lance_eclairs</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00051">entites.h:51</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_aa5cf8ebe007c0ff3453d39ed4d1db449"><div class="ttname"><a href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">EtatJeu::bonus</a></div><div class="ttdeci">BonusArme bonus[MAX_BONUS]</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00080">entites.h:80</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_ad6d7ae27c8298976545ebfde15b4df4a"><div class="ttname"><a href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">EtatJeu::niveau</a></div><div class="ttdeci">int niveau</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00082">entites.h:82</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_afd64fef53bc5ad1afc2553a5b7a88f23"><div class="ttname"><a href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">EtatJeu::bulles</a></div><div class="ttdeci">Bulle bulles[MAX_BULLES]</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00077">entites.h:77</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph.png" border="0" usemap="#ajeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph" id="ajeu_8c_a95bdea7c66358469b0f5587032814c83_icgraph">
+<area shape="rect" title=" " alt="" coords="237,5,352,38"/>
+<area shape="rect" href="jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295" title=" " alt="" coords="5,5,189,38"/>
+<area shape="poly" title=" " alt="" coords="218,22,189,24,189,19,224,22"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3b9eb13e1446e9c5aa5ee8c7bae31f9" name="ac3b9eb13e1446e9c5aa5ee8c7bae31f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b9eb13e1446e9c5aa5ee8c7bae31f9">&#9670;&#160;</a></span>jeu_init_niveau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu_init_niveau </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>niveau</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00018">18</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>                                              {</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>    <span class="comment">/* Sauvegarde avant reset */</span></div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordtype">int</span> score_sauvegarde = (niveau &gt; 1) ? ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a> : 0;</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordtype">char</span> pseudo_sauvegarde[<a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>];</div>
+<div class="line"><span class="lineno">   23</span>    strncpy(pseudo_sauvegarde, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">pseudo</a>, <a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>);</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>    memset(ej, 0, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_etat_jeu.html">EtatJeu</a>));</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">/* Restauration aprÃ¨s reset */</span></div>
+<div class="line"><span class="lineno">   28</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a> = score_sauvegarde;</div>
+<div class="line"><span class="lineno">   29</span>    strncpy(ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">pseudo</a>, pseudo_sauvegarde, <a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_function" href="header_2eclair_8h.html#a4dcdbb9f937d5a1b7c8fe252e7c04686">eclairs_init</a>(&amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ac5dd2e1064d90fef8a115b4a4a9d9a7d">eclairs</a>);</div>
+<div class="line"><span class="lineno">   32</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a>        = niveau;</div>
+<div class="line"><span class="lineno">   33</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#acf0776c2730b28ae9879c3c2ec5fb205">temps_restant</a> = 60.0f;</div>
+<div class="line"><span class="lineno">   34</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a793e80e24d15aadca5708038b022944f">decompte</a>      = 3;</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a>      = <a class="code hl_define" href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a> / 2.0f;</div>
+<div class="line"><span class="lineno">   37</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a>      = <a class="code hl_define" href="header_2entites_8h.html#a4cb45b19125880d6abd29cf7d7953d38">HAUTEUR_ZONE</a> - 30.0f;</div>
+<div class="line"><span class="lineno">   38</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3">vivant</a> = 1;</div>
+<div class="line"><span class="lineno">   39</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a5c7d135fb5f360d696c4dc493e257ce9">arme</a>   = <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43">ARME_BASIQUE</a>;</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span> (niveau &lt;= 2) {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="comment">/* Niveaux 1 et 2 : bulles visibles dÃ¨s le dÃ©part */</span></div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; niveau &amp;&amp; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++) {</div>
+<div class="line"><span class="lineno">   44</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a> = 1;</div>
+<div class="line"><span class="lineno">   45</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a> = <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134">BULLE_GRANDE</a>;</div>
+<div class="line"><span class="lineno">   46</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>      = 100.0f + i * 150.0f;</div>
+<div class="line"><span class="lineno">   47</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>      = 100.0f;</div>
+<div class="line"><span class="lineno">   48</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a>     = 80.0f + niveau * 10.0f;</div>
+<div class="line"><span class="lineno">   49</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a>     = 0.0f;</div>
+<div class="line"><span class="lineno">   50</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aba9c833f5fd68d3d93e9781c282c8229">nb_bulles</a>++;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (niveau == 4) {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="comment">/* Niveau 4 : le boss apparaÃ®t aprÃ¨s le dÃ©compte */</span></div>
+<div class="line"><span class="lineno">   54</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>         = 0;   <span class="comment">/* spawne aprÃ¨s dÃ©compte */</span></div>
+<div class="line"><span class="lineno">   55</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334">points_vie</a>     = 10;</div>
+<div class="line"><span class="lineno">   56</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#aa8f84435dbb2670923e1908a9d4e46b9">points_vie_max</a> = 10;</div>
+<div class="line"><span class="lineno">   57</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a>              = <a class="code hl_define" href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a> / 2.0f;</div>
+<div class="line"><span class="lineno">   58</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a5872a3518b99314af857322c97c3b800">y</a>              = 80.0f;</div>
+<div class="line"><span class="lineno">   59</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a3f9482821d86e68131678f33a1ed65c6">vx</a>             = 100.0f;</div>
+<div class="line"><span class="lineno">   60</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a7f80cb01aede5e6c00d0b93d4156b643">timer_tir</a>      = 2.0f;</div>
+<div class="line"><span class="lineno">   61</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   62</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a3f638e5a4975230af01c40e613ad0d3d">bulles_en_attente</a> = niveau;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+<div class="ttc" id="aheader_2eclair_8h_html_a4dcdbb9f937d5a1b7c8fe252e7c04686"><div class="ttname"><a href="header_2eclair_8h.html#a4dcdbb9f937d5a1b7c8fe252e7c04686">eclairs_init</a></div><div class="ttdeci">void eclairs_init(ListeEclairs *le)</div><div class="ttdef"><b>Definition</b> <a href="eclair_8c_source.html#l00005">eclair.c:5</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a4cb45b19125880d6abd29cf7d7953d38"><div class="ttname"><a href="header_2entites_8h.html#a4cb45b19125880d6abd29cf7d7953d38">HAUTEUR_ZONE</a></div><div class="ttdeci">#define HAUTEUR_ZONE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00009">entites.h:9</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a5d2813c915f8962316bdba34165daef5"><div class="ttname"><a href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a></div><div class="ttdeci">#define PSEUDO_LEN</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00014">entites.h:14</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a6068a247ff9ece1b0a9773c58144906c"><div class="ttname"><a href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a></div><div class="ttdeci">#define LARGEUR_FENETRE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00006">entites.h:6</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43"><div class="ttname"><a href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43">ARME_BASIQUE</a></div><div class="ttdeci">@ ARME_BASIQUE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00029">entites.h:29</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134"><div class="ttname"><a href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134">BULLE_GRANDE</a></div><div class="ttdeci">@ BULLE_GRANDE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00022">entites.h:22</a></div></div>
+<div class="ttc" id="astruct_boss_html_a5872a3518b99314af857322c97c3b800"><div class="ttname"><a href="struct_boss.html#a5872a3518b99314af857322c97c3b800">Boss::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00069">entites.h:69</a></div></div>
+<div class="ttc" id="astruct_boss_html_a7f80cb01aede5e6c00d0b93d4156b643"><div class="ttname"><a href="struct_boss.html#a7f80cb01aede5e6c00d0b93d4156b643">Boss::timer_tir</a></div><div class="ttdeci">float timer_tir</div><div class="ttdef"><b>Definition</b> <a href="src_2entites_8h_source.html#l00074">entites.h:74</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html"><div class="ttname"><a href="struct_etat_jeu.html">EtatJeu</a></div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00075">entites.h:75</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a3f638e5a4975230af01c40e613ad0d3d"><div class="ttname"><a href="struct_etat_jeu.html#a3f638e5a4975230af01c40e613ad0d3d">EtatJeu::bulles_en_attente</a></div><div class="ttdeci">int bulles_en_attente</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00087">entites.h:87</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a793e80e24d15aadca5708038b022944f"><div class="ttname"><a href="struct_etat_jeu.html#a793e80e24d15aadca5708038b022944f">EtatJeu::decompte</a></div><div class="ttdeci">int decompte</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00084">entites.h:84</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a7dee0e2699f36b8a465ae681834af88f"><div class="ttname"><a href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">EtatJeu::joueur</a></div><div class="ttdeci">Joueur joueur</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00076">entites.h:76</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a80b67d3d591c0d1e4623993e7ddd5ac6"><div class="ttname"><a href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">EtatJeu::boss</a></div><div class="ttdeci">Boss boss</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00081">entites.h:81</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_aba9c833f5fd68d3d93e9781c282c8229"><div class="ttname"><a href="struct_etat_jeu.html#aba9c833f5fd68d3d93e9781c282c8229">EtatJeu::nb_bulles</a></div><div class="ttdeci">int nb_bulles</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00078">entites.h:78</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_ac5dd2e1064d90fef8a115b4a4a9d9a7d"><div class="ttname"><a href="struct_etat_jeu.html#ac5dd2e1064d90fef8a115b4a4a9d9a7d">EtatJeu::eclairs</a></div><div class="ttdeci">ListeEclairs eclairs</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00086">entites.h:86</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_acf0776c2730b28ae9879c3c2ec5fb205"><div class="ttname"><a href="struct_etat_jeu.html#acf0776c2730b28ae9879c3c2ec5fb205">EtatJeu::temps_restant</a></div><div class="ttdeci">float temps_restant</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00083">entites.h:83</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a2107af8ce47a6f97d095b22690a2c4c4"><div class="ttname"><a href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">Joueur::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00036">entites.h:36</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a2f35193f146718ce5993497d8ad0f78b"><div class="ttname"><a href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">Joueur::pseudo</a></div><div class="ttdeci">char pseudo[PSEUDO_LEN]</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00042">entites.h:42</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a5c7d135fb5f360d696c4dc493e257ce9"><div class="ttname"><a href="struct_joueur.html#a5c7d135fb5f360d696c4dc493e257ce9">Joueur::arme</a></div><div class="ttdeci">TypeArme arme</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00039">entites.h:39</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a680896b9ff71c2762ae653ef6aa7c8ce"><div class="ttname"><a href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">Joueur::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00041">entites.h:41</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a83ffd7975e660463a18b1ad04b9429f3"><div class="ttname"><a href="struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3">Joueur::vivant</a></div><div class="ttdeci">int vivant</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00038">entites.h:38</a></div></div>
+<div class="ttc" id="astruct_joueur_html_ad20c25b41ed37bbd7bbbe8746c2160a2"><div class="ttname"><a href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">Joueur::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00036">entites.h:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph.png" border="0" usemap="#ajeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph" id="ajeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,139,38"/>
+<area shape="rect" href="eclair_8c.html#a4dcdbb9f937d5a1b7c8fe252e7c04686" title=" " alt="" coords="187,5,288,38"/>
+<area shape="poly" title=" " alt="" coords="139,19,174,21,168,22,139,24"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph.png" border="0" usemap="#ajeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph" id="ajeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,245,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="94,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c267bac373aba16a2d30f98c5786dfd" name="a6c267bac373aba16a2d30f98c5786dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c267bac373aba16a2d30f98c5786dfd">&#9670;&#160;</a></span>jeu_mettre_a_jour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu_mettre_a_jour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00067">67</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                              {</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">/* DÃ©compte de dÃ©but de niveau */</span></div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a793e80e24d15aadca5708038b022944f">decompte</a> &gt; 0) {</div>
+<div class="line"><span class="lineno">   71</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a859f7580d4aedcfb5d59b67a41d228ce">decompte_timer</a> += dt;</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a859f7580d4aedcfb5d59b67a41d228ce">decompte_timer</a> &gt;= 1.0f) {</div>
+<div class="line"><span class="lineno">   73</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a859f7580d4aedcfb5d59b67a41d228ce">decompte_timer</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   74</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a793e80e24d15aadca5708038b022944f">decompte</a>--;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a793e80e24d15aadca5708038b022944f">decompte</a> == 0) {</div>
+<div class="line"><span class="lineno">   77</span>                <span class="comment">/* Spawn bulles en attente (niveaux 3) */</span></div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a3f638e5a4975230af01c40e613ad0d3d">bulles_en_attente</a> &gt; 0) {</div>
+<div class="line"><span class="lineno">   79</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a3f638e5a4975230af01c40e613ad0d3d">bulles_en_attente</a> &amp;&amp; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++) {</div>
+<div class="line"><span class="lineno">   80</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a> = 1;</div>
+<div class="line"><span class="lineno">   81</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a> = <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134">BULLE_GRANDE</a>;</div>
+<div class="line"><span class="lineno">   82</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>      = 100.0f + i * 150.0f;</div>
+<div class="line"><span class="lineno">   83</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>      = 100.0f;</div>
+<div class="line"><span class="lineno">   84</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a>     = 80.0f + ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a> * 10.0f;</div>
+<div class="line"><span class="lineno">   85</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a>     = 0.0f;</div>
+<div class="line"><span class="lineno">   86</span>                        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aba9c833f5fd68d3d93e9781c282c8229">nb_bulles</a>++;</div>
+<div class="line"><span class="lineno">   87</span>                    }</div>
+<div class="line"><span class="lineno">   88</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a3f638e5a4975230af01c40e613ad0d3d">bulles_en_attente</a> = 0;</div>
+<div class="line"><span class="lineno">   89</span>                }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>                <span class="comment">/* Spawn boss niveau 4 â condition sÃ©parÃ©e */</span></div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a> == 4 &amp;&amp; !ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a16e38ba17f90cc36897c6d7456aab789">boss_a_spawne</a>) {</div>
+<div class="line"><span class="lineno">   93</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>    = 1;</div>
+<div class="line"><span class="lineno">   94</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a16e38ba17f90cc36897c6d7456aab789">boss_a_spawne</a>  = 1;</div>
+<div class="line"><span class="lineno">   95</span>                }</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">/* Bonus qui tombent au sol */</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a> &gt;= 2) {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a02f266f0f132735cd3c64e67251c163d">MAX_BONUS</a>; i++) {</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a4b7263158e47151b2fa1db82eb519cf0">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  105</span>            <span class="comment">/* DÃ©compte timer */</span></div>
+<div class="line"><span class="lineno">  106</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#ad6efd20802414585049c50aa509e934a">timer</a> -= dt;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#ad6efd20802414585049c50aa509e934a">timer</a> &lt;= 0) {</div>
+<div class="line"><span class="lineno">  108</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a4b7263158e47151b2fa1db82eb519cf0">active</a> = 0;   <span class="comment">/* â disparaÃ®t */</span></div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            <span class="comment">/* Chute */</span></div>
+<div class="line"><span class="lineno">  112</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a98456dfc3875b5a45bd599b192250a56">y</a> += 80.0f * dt;</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a98456dfc3875b5a45bd599b192250a56">y</a> &gt; <a class="code hl_define" href="header_2entites_8h.html#a4cb45b19125880d6abd29cf7d7953d38">HAUTEUR_ZONE</a> - 10)</div>
+<div class="line"><span class="lineno">  114</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a98456dfc3875b5a45bd599b192250a56">y</a> = <a class="code hl_define" href="header_2entites_8h.html#a4cb45b19125880d6abd29cf7d7953d38">HAUTEUR_ZONE</a> - 10;</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>            <span class="comment">/* Collision joueur / bonus */</span></div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordtype">float</span> dx = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#ab35e606c33f4a3c608deffbb237f09a6">x</a>;</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordtype">float</span> dy = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a98456dfc3875b5a45bd599b192250a56">y</a>;</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (dx*dx + dy*dy &lt; 30*30) {</div>
+<div class="line"><span class="lineno">  120</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a5c7d135fb5f360d696c4dc493e257ce9">arme</a>           = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#aad545942fb407a2f1ee4fc19ac36b87e">type</a> + 1; <span class="comment">/* +1 car ARME_BASIQUE = 0 */</span></div>
+<div class="line"><span class="lineno">  121</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a433045ef9b17382e86cb062b16424a9a">timer_arme_speciale</a>   = <a class="code hl_define" href="header_2entites_8h.html#a0c5ae29b6a7357ae211b341bf2e4c9b7">DUREE_ARME_SPECIALE</a>;</div>
+<div class="line"><span class="lineno">  122</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#aa5cf8ebe007c0ff3453d39ed4d1db449">bonus</a>[i].<a class="code hl_variable" href="struct_bonus_arme.html#a4b7263158e47151b2fa1db82eb519cf0">active</a>        = 0;</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>        <span class="comment">/* DÃ©compte durÃ©e arme spÃ©ciale */</span></div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a433045ef9b17382e86cb062b16424a9a">timer_arme_speciale</a> &gt; 0) {</div>
+<div class="line"><span class="lineno">  128</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a433045ef9b17382e86cb062b16424a9a">timer_arme_speciale</a> -= dt;</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a433045ef9b17382e86cb062b16424a9a">timer_arme_speciale</a> &lt;= 0) {</div>
+<div class="line"><span class="lineno">  130</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a433045ef9b17382e86cb062b16424a9a">timer_arme_speciale</a> = 0;</div>
+<div class="line"><span class="lineno">  131</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a5c7d135fb5f360d696c4dc493e257ce9">arme</a> = <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43">ARME_BASIQUE</a>;</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    <span class="comment">/* DÃ©placement joueur */</span></div>
+<div class="line"><span class="lineno">  139</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> += ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a70d5fe053297331173073eb5d7e688bd">vx</a> * dt;</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> &lt; 12)                   ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> = 12;</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> &gt; <a class="code hl_define" href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a> - 12) ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> = <a class="code hl_define" href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a> - 12;</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    <span class="comment">/* DÃ©placement bulles */</span></div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++)</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="#a35db185c59a638dfe4f06995eaeb7e00">bulle_deplacer</a>(&amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i], dt, <a class="code hl_define" href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a>, <a class="code hl_define" href="header_2entites_8h.html#a4cb45b19125880d6abd29cf7d7953d38">HAUTEUR_ZONE</a>);</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="comment">/* DÃ©placement projectiles */</span></div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; i++) {</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  151</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a> += ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a29202389dc05d908a2b16c3b15174546">vx</a> * dt;</div>
+<div class="line"><span class="lineno">  152</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a> += ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0">vy</a> * dt;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a> &lt; 0) ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a> = 0;</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="comment">/* Boss */</span></div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>) <a class="code hl_function" href="#a0fec73e93b6dc52d71bfc31f4c20fbf5">boss_deplacer</a>(&amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>, dt, <a class="code hl_define" href="header_2entites_8h.html#a6068a247ff9ece1b0a9773c58144906c">LARGEUR_FENETRE</a>);</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    <span class="comment">/* Tir du boss */</span></div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>) {</div>
+<div class="line"><span class="lineno">  161</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a7f80cb01aede5e6c00d0b93d4156b643">timer_tir</a> -= dt;</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a7f80cb01aede5e6c00d0b93d4156b643">timer_tir</a> &lt;= 0) {</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordtype">float</span> ratio = (float)ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334">points_vie</a> / (<span class="keywordtype">float</span>)ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#aa8f84435dbb2670923e1908a9d4e46b9">points_vie_max</a>;</div>
+<div class="line"><span class="lineno">  164</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a7f80cb01aede5e6c00d0b93d4156b643">timer_tir</a> = 0.5f + ratio * 1.5f;</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++) {</div>
+<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) {</div>
+<div class="line"><span class="lineno">  167</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a> = 1;</div>
+<div class="line"><span class="lineno">  168</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a> = <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979">BULLE_PETITE</a>;</div>
+<div class="line"><span class="lineno">  169</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>      = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a>;</div>
+<div class="line"><span class="lineno">  170</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>      = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a5872a3518b99314af857322c97c3b800">y</a> + 40.0f;</div>
+<div class="line"><span class="lineno">  171</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7">vx</a>     = (rand() % 2 == 0 ? -100.0f : 100.0f);</div>
+<div class="line"><span class="lineno">  172</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3">vy</a>     = 80.0f;</div>
+<div class="line"><span class="lineno">  173</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  174</span>                }</div>
+<div class="line"><span class="lineno">  175</span>            }</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>    <span class="comment">/* Collisions */</span></div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_function" href="#a0fdf5ccf00e016cdf02d6fd09ef52295">jeu_verifier_collisions</a>(ej);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    <span class="comment">/* ===== ECLAIRS (niveau 3+) ===== */</span></div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a> &gt;= 3) {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++) {</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a> &amp;&amp; rand() % 200 == 0)</div>
+<div class="line"><span class="lineno">  186</span>                <a class="code hl_function" href="header_2eclair_8h.html#a94d73eb8a889534102b2442ed022db13">eclair_spawner</a>(&amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ac5dd2e1064d90fef8a115b4a4a9d9a7d">eclairs</a>, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>);</div>
+<div class="line"><span class="lineno">  187</span>        }</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="header_2eclair_8h.html#a41927b1d41e1bda12297701119910c62">eclairs_mettre_a_jour</a>(&amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ac5dd2e1064d90fef8a115b4a4a9d9a7d">eclairs</a>);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="header_2eclair_8h.html#a015f8251e73ed40f9236a4eabc7f037b">eclairs_collision_personnage</a>(&amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ac5dd2e1064d90fef8a115b4a4a9d9a7d">eclairs</a>,</div>
+<div class="line"><span class="lineno">  191</span>                                          ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a>, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a>,</div>
+<div class="line"><span class="lineno">  192</span>                                          24.0f, 32.0f)) {</div>
+<div class="line"><span class="lineno">  193</span>            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3">vivant</a> = 0;</div>
+<div class="line"><span class="lineno">  194</span>                                          }</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+<div class="line"><span class="lineno">  196</span>    <span class="comment">/* Timer explosion visuelle */</span></div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a804140461832d3e70d1929c933279c0d">explosion_timer</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  198</span>        ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a804140461832d3e70d1929c933279c0d">explosion_timer</a> -= dt;</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>    <span class="comment">/* Temps */</span></div>
+<div class="line"><span class="lineno">  201</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#acf0776c2730b28ae9879c3c2ec5fb205">temps_restant</a> -= dt;</div>
+<div class="line"><span class="lineno">  202</span>}</div>
+<div class="ttc" id="aheader_2eclair_8h_html_a015f8251e73ed40f9236a4eabc7f037b"><div class="ttname"><a href="header_2eclair_8h.html#a015f8251e73ed40f9236a4eabc7f037b">eclairs_collision_personnage</a></div><div class="ttdeci">int eclairs_collision_personnage(const ListeEclairs *le, float px, float py, int plargeur, int phauteur)</div><div class="ttdef"><b>Definition</b> <a href="eclair_8c_source.html#l00038">eclair.c:38</a></div></div>
+<div class="ttc" id="aheader_2eclair_8h_html_a41927b1d41e1bda12297701119910c62"><div class="ttname"><a href="header_2eclair_8h.html#a41927b1d41e1bda12297701119910c62">eclairs_mettre_a_jour</a></div><div class="ttdeci">void eclairs_mettre_a_jour(ListeEclairs *le)</div><div class="ttdef"><b>Definition</b> <a href="eclair_8c_source.html#l00025">eclair.c:25</a></div></div>
+<div class="ttc" id="aheader_2eclair_8h_html_a94d73eb8a889534102b2442ed022db13"><div class="ttname"><a href="header_2eclair_8h.html#a94d73eb8a889534102b2442ed022db13">eclair_spawner</a></div><div class="ttdeci">void eclair_spawner(ListeEclairs *le, float x, float y)</div><div class="ttdef"><b>Definition</b> <a href="eclair_8c_source.html#l00010">eclair.c:10</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a0c5ae29b6a7357ae211b341bf2e4c9b7"><div class="ttname"><a href="header_2entites_8h.html#a0c5ae29b6a7357ae211b341bf2e4c9b7">DUREE_ARME_SPECIALE</a></div><div class="ttdeci">#define DUREE_ARME_SPECIALE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00017">entites.h:17</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_adbc131e9b147b67d84003e054b355365"><div class="ttname"><a href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a></div><div class="ttdeci">#define MAX_PROJECTILES</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00012">entites.h:12</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979"><div class="ttname"><a href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979">BULLE_PETITE</a></div><div class="ttdeci">@ BULLE_PETITE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00024">entites.h:24</a></div></div>
+<div class="ttc" id="ajeu_8c_html_a0fdf5ccf00e016cdf02d6fd09ef52295"><div class="ttname"><a href="#a0fdf5ccf00e016cdf02d6fd09ef52295">jeu_verifier_collisions</a></div><div class="ttdeci">void jeu_verifier_collisions(EtatJeu *ej)</div><div class="ttdef"><b>Definition</b> <a href="jeu_8c_source.html#l00258">jeu.c:258</a></div></div>
+<div class="ttc" id="ajeu_8c_html_a0fec73e93b6dc52d71bfc31f4c20fbf5"><div class="ttname"><a href="#a0fec73e93b6dc52d71bfc31f4c20fbf5">boss_deplacer</a></div><div class="ttdeci">void boss_deplacer(Boss *b, float dt, float largeur_zone)</div><div class="ttdef"><b>Definition</b> <a href="jeu_8c_source.html#l00403">jeu.c:403</a></div></div>
+<div class="ttc" id="ajeu_8c_html_a35db185c59a638dfe4f06995eaeb7e00"><div class="ttname"><a href="#a35db185c59a638dfe4f06995eaeb7e00">bulle_deplacer</a></div><div class="ttdeci">void bulle_deplacer(Bulle *b, float dt, float largeur_zone, float hauteur_zone)</div><div class="ttdef"><b>Definition</b> <a href="jeu_8c_source.html#l00204">jeu.c:204</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a16e38ba17f90cc36897c6d7456aab789"><div class="ttname"><a href="struct_etat_jeu.html#a16e38ba17f90cc36897c6d7456aab789">EtatJeu::boss_a_spawne</a></div><div class="ttdeci">int boss_a_spawne</div><div class="ttdef"><b>Definition</b> <a href="src_2entites_8h_source.html#l00093">entites.h:93</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a433045ef9b17382e86cb062b16424a9a"><div class="ttname"><a href="struct_etat_jeu.html#a433045ef9b17382e86cb062b16424a9a">EtatJeu::timer_arme_speciale</a></div><div class="ttdeci">float timer_arme_speciale</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00088">entites.h:88</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a547aed4daa33f7965f23df60f5beae1a"><div class="ttname"><a href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">EtatJeu::projectiles</a></div><div class="ttdeci">Projectile projectiles[MAX_PROJECTILES]</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00079">entites.h:79</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a804140461832d3e70d1929c933279c0d"><div class="ttname"><a href="struct_etat_jeu.html#a804140461832d3e70d1929c933279c0d">EtatJeu::explosion_timer</a></div><div class="ttdeci">float explosion_timer</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00090">entites.h:90</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a859f7580d4aedcfb5d59b67a41d228ce"><div class="ttname"><a href="struct_etat_jeu.html#a859f7580d4aedcfb5d59b67a41d228ce">EtatJeu::decompte_timer</a></div><div class="ttdeci">float decompte_timer</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00085">entites.h:85</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a70d5fe053297331173073eb5d7e688bd"><div class="ttname"><a href="struct_joueur.html#a70d5fe053297331173073eb5d7e688bd">Joueur::vx</a></div><div class="ttdeci">float vx</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00037">entites.h:37</a></div></div>
+<div class="ttc" id="astruct_projectile_html_a04963d09e6b45aee1d5d96f8112fb075"><div class="ttname"><a href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">Projectile::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00055">entites.h:55</a></div></div>
+<div class="ttc" id="astruct_projectile_html_a0bf544bf90988687a910268b615aed08"><div class="ttname"><a href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">Projectile::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00055">entites.h:55</a></div></div>
+<div class="ttc" id="astruct_projectile_html_a2081fe99e23a4605b86c8aab4a5d78b0"><div class="ttname"><a href="struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0">Projectile::vy</a></div><div class="ttdeci">float vy</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00056">entites.h:56</a></div></div>
+<div class="ttc" id="astruct_projectile_html_a29202389dc05d908a2b16c3b15174546"><div class="ttname"><a href="struct_projectile.html#a29202389dc05d908a2b16c3b15174546">Projectile::vx</a></div><div class="ttdeci">float vx</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00056">entites.h:56</a></div></div>
+<div class="ttc" id="astruct_projectile_html_adf17efc99b04360ba3e64b97971c299b"><div class="ttname"><a href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">Projectile::active</a></div><div class="ttdeci">int active</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00057">entites.h:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph.png" border="0" usemap="#ajeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph" id="ajeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,149,160,182"/>
+<area shape="rect" href="jeu_8c.html#a0fec73e93b6dc52d71bfc31f4c20fbf5" title=" " alt="" coords="261,5,384,38"/>
+<area shape="poly" title=" " alt="" coords="95,147,141,98,172,71,206,49,249,34,244,37,209,53,175,76,145,102,99,151"/>
+<area shape="rect" href="jeu_8c.html#a35db185c59a638dfe4f06995eaeb7e00" title=" " alt="" coords="259,63,386,95"/>
+<area shape="poly" title=" " alt="" coords="115,146,207,106,246,95,242,98,209,111,118,151"/>
+<area shape="rect" href="eclair_8c.html#a94d73eb8a889534102b2442ed022db13" title=" " alt="" coords="258,120,388,153"/>
+<area shape="poly" title=" " alt="" coords="159,154,244,145,240,148,161,159"/>
+<area shape="rect" href="eclair_8c.html#a015f8251e73ed40f9236a4eabc7f037b" title=" " alt="" coords="208,177,438,210"/>
+<area shape="poly" title=" " alt="" coords="159,172,195,177,190,179,160,177"/>
+<area shape="rect" href="eclair_8c.html#a41927b1d41e1bda12297701119910c62" title=" " alt="" coords="233,235,412,267"/>
+<area shape="poly" title=" " alt="" coords="117,180,209,219,236,230,231,230,207,224,117,185"/>
+<area shape="rect" href="jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295" title=" " alt="" coords="231,292,414,325"/>
+<area shape="poly" title=" " alt="" coords="98,180,145,229,175,255,209,277,225,286,219,286,206,281,172,259,141,232,96,185"/>
+<area shape="rect" href="jeu_8c.html#a04fd5d00b05181b0046eec5c7a877412" title=" " alt="" coords="490,149,597,182"/>
+<area shape="poly" title=" " alt="" coords="387,90,439,106,506,141,501,141,437,111,387,95"/>
+<area shape="poly" title=" " alt="" coords="411,289,437,277,462,258,485,237,521,196,525,193,489,240,465,263,439,281,412,294"/>
+<area shape="rect" href="jeu_8c.html#a95bdea7c66358469b0f5587032814c83" title=" " alt="" coords="486,292,601,325"/>
+<area shape="poly" title=" " alt="" coords="415,306,473,308,468,308,415,311"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph.png" border="0" usemap="#ajeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph" id="ajeu_8c_a6c267bac373aba16a2d30f98c5786dfd_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,266,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="accec6939a115e95b6fe0dd557161d78e" name="accec6939a115e95b6fe0dd557161d78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accec6939a115e95b6fe0dd557161d78e">&#9670;&#160;</a></span>jeu_niveau_gagne()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jeu_niveau_gagne </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00414">414</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  414</span>                                        {</div>
+<div class="line"><span class="lineno">  415</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a793e80e24d15aadca5708038b022944f">decompte</a> &gt; 0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  416</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a3f638e5a4975230af01c40e613ad0d3d">bulles_en_attente</a> &gt; 0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  417</span> </div>
+<div class="line"><span class="lineno">  418</span>    <span class="comment">/* Niveau 4 : le boss doit avoir spawnÃ© ET Ãªtre mort */</span></div>
+<div class="line"><span class="lineno">  419</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a> == 4) {</div>
+<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a16e38ba17f90cc36897c6d7456aab789">boss_a_spawne</a>) <span class="keywordflow">return</span> 0;   <span class="comment">/* â pas encore apparu */</span></div>
+<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>)    <span class="keywordflow">return</span> 0;   <span class="comment">/* â encore vivant */</span></div>
+<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+<div class="line"><span class="lineno">  424</span> </div>
+<div class="line"><span class="lineno">  425</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++)</div>
+<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  427</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  429</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph.png" border="0" usemap="#ajeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph" id="ajeu_8c_accec6939a115e95b6fe0dd557161d78e_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,264,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,98,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="addc45c25e35e48d44131714b8e7f7516" name="addc45c25e35e48d44131714b8e7f7516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc45c25e35e48d44131714b8e7f7516">&#9670;&#160;</a></span>jeu_niveau_perdu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jeu_niveau_perdu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00432">432</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  432</span>                                        {</div>
+<div class="line"><span class="lineno">  433</span>    <span class="keywordflow">return</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3">vivant</a> || ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#acf0776c2730b28ae9879c3c2ec5fb205">temps_restant</a> &lt;= 0.0f);</div>
+<div class="line"><span class="lineno">  434</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph.png" border="0" usemap="#ajeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph" id="ajeu_8c_addc45c25e35e48d44131714b8e7f7516_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,262,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,98,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0fdf5ccf00e016cdf02d6fd09ef52295" name="a0fdf5ccf00e016cdf02d6fd09ef52295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fdf5ccf00e016cdf02d6fd09ef52295">&#9670;&#160;</a></span>jeu_verifier_collisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu_verifier_collisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00258">258</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  258</span>                                          {</div>
+<div class="line"><span class="lineno">  259</span>    <a class="code hl_struct" href="struct_joueur.html">Joueur</a> *j = &amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>;</div>
+<div class="line"><span class="lineno">  260</span>    <span class="keywordtype">float</span> rj = 16.0f;</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; i++) {</div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_struct" href="struct_bulle.html">Bulle</a> *b = &amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[i];</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (!b-&gt;<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">float</span> rb = <a class="code hl_function" href="#a04fd5d00b05181b0046eec5c7a877412">rayon_bulle</a>(b-&gt;<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a>);</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>        <span class="comment">/* Projectile / bulle */</span></div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; k++) {</div>
+<div class="line"><span class="lineno">  269</span>            <a class="code hl_struct" href="struct_projectile.html">Projectile</a> *p = &amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[k];</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (!p-&gt;<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordtype">float</span> dx = p-&gt;<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a> - b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>, dy = p-&gt;<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a> - b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>;</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span> (dx*dx + dy*dy &lt; (rb+4)*(rb+4)) {</div>
+<div class="line"><span class="lineno">  273</span>                p-&gt;<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a> = 0;</div>
+<div class="line"><span class="lineno">  274</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a> += 10 * (4 - b-&gt;<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a>);</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">if</span> (p-&gt;<a class="code hl_variable" href="struct_projectile.html#ab78c13348075fde0f4278c75dbbce3bf">explosion</a>) {</div>
+<div class="line"><span class="lineno">  277</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afb5e772fa2c38d9e89f9473e89b7b794">explosion_x</a>     = p-&gt;<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a>;</div>
+<div class="line"><span class="lineno">  278</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a92f49feda43c0f42a4aa2f15e8656fb7">explosion_y</a>     = p-&gt;<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a>;</div>
+<div class="line"><span class="lineno">  279</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a804140461832d3e70d1929c933279c0d">explosion_timer</a> = <a class="code hl_define" href="src_2jeu_8h.html#a242a7514f3f5838a8e0bc4ff7e4306d7">DUREE_EXPLOSION</a>;</div>
+<div class="line"><span class="lineno">  280</span>                    <span class="comment">/* Explose toutes les bulles dans un rayon de 80px */</span></div>
+<div class="line"><span class="lineno">  281</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> e = 0; e &lt; <a class="code hl_define" href="header_2entites_8h.html#a772c22e70237d36cf621df6a2235ff61">MAX_BULLES</a>; e++) {</div>
+<div class="line"><span class="lineno">  282</span>                        <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[e].<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  283</span>                        <span class="keywordtype">float</span> ex = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[e].<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a> - p-&gt;<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a>;</div>
+<div class="line"><span class="lineno">  284</span>                        <span class="keywordtype">float</span> ey = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[e].<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a> - p-&gt;<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a>;</div>
+<div class="line"><span class="lineno">  285</span>                        <span class="keywordflow">if</span> (ex*ex + ey*ey &lt; 80*80) {</div>
+<div class="line"><span class="lineno">  286</span>                            ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a> += 10 * (4 - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#afd64fef53bc5ad1afc2553a5b7a88f23">bulles</a>[e].<a class="code hl_variable" href="struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10">taille</a>);</div>
+<div class="line"><span class="lineno">  287</span>                            <a class="code hl_function" href="#a95bdea7c66358469b0f5587032814c83">bulle_diviser</a>(ej, e);</div>
+<div class="line"><span class="lineno">  288</span>                        }</div>
+<div class="line"><span class="lineno">  289</span>                    }</div>
+<div class="line"><span class="lineno">  290</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  291</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  292</span>                    <a class="code hl_function" href="#a95bdea7c66358469b0f5587032814c83">bulle_diviser</a>(ej, i);</div>
+<div class="line"><span class="lineno">  293</span>                  }</div>
+<div class="line"><span class="lineno">  294</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  295</span>            }</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span> </div>
+<div class="line"><span class="lineno">  298</span> </div>
+<div class="line"><span class="lineno">  299</span>        <span class="comment">/* Bulle / joueur */</span></div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">if</span> (!b-&gt;<a class="code hl_variable" href="struct_bulle.html#a192fc5bfc6280d8bc7b05a1b29483fe1">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordtype">float</span> dx = j-&gt;<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> - b-&gt;<a class="code hl_variable" href="struct_bulle.html#aad8ea0ff8121cd670c057a3e6198a922">x</a>, dy = j-&gt;<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - b-&gt;<a class="code hl_variable" href="struct_bulle.html#a2d5e45806ebee08b3844d03b305cfdec">y</a>;</div>
+<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">if</span> (dx*dx + dy*dy &lt; (rj+rb)*(rj+rb))</div>
+<div class="line"><span class="lineno">  303</span>            j-&gt;<a class="code hl_variable" href="struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3">vivant</a> = 0;</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>    <span class="comment">/* Boss / joueur */</span></div>
+<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a>) {</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordtype">float</span> dx = j-&gt;<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a> - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a>, dy = j-&gt;<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a5872a3518b99314af857322c97c3b800">y</a>;</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">if</span> (dx*dx + dy*dy &lt; (rj+40)*(rj+40))</div>
+<div class="line"><span class="lineno">  310</span>            j-&gt;<a class="code hl_variable" href="struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3">vivant</a> = 0;</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>        <span class="comment">/* Projectile / boss */</span></div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; k++) {</div>
+<div class="line"><span class="lineno">  314</span>            <a class="code hl_struct" href="struct_projectile.html">Projectile</a> *p = &amp;ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[k];</div>
+<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">if</span> (!p-&gt;<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordtype">float</span> bx = p-&gt;<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a> - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a8edf1d9d4cccf1a2b036d2c3f65c8681">x</a>, by = p-&gt;<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a> - ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a5872a3518b99314af857322c97c3b800">y</a>;</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">if</span> (bx*bx + by*by &lt; 40*40) {</div>
+<div class="line"><span class="lineno">  318</span>                p-&gt;<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a> = 0;</div>
+<div class="line"><span class="lineno">  319</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a> += 50;</div>
+<div class="line"><span class="lineno">  320</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334">points_vie</a>--;</div>
+<div class="line"><span class="lineno">  321</span>                <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334">points_vie</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  322</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a80b67d3d591c0d1e4623993e7ddd5ac6">boss</a>.<a class="code hl_variable" href="struct_boss.html#a885e2a3d77e66c251358a887e8db4e39">active</a> = 0;</div>
+<div class="line"><span class="lineno">  323</span>            }</div>
+<div class="line"><span class="lineno">  324</span>        }</div>
+<div class="line"><span class="lineno">  325</span>    }</div>
+<div class="line"><span class="lineno">  326</span>}</div>
+<div class="ttc" id="ajeu_8c_html_a95bdea7c66358469b0f5587032814c83"><div class="ttname"><a href="#a95bdea7c66358469b0f5587032814c83">bulle_diviser</a></div><div class="ttdeci">void bulle_diviser(EtatJeu *ej, int indice)</div><div class="ttdef"><b>Definition</b> <a href="jeu_8c_source.html#l00219">jeu.c:219</a></div></div>
+<div class="ttc" id="asrc_2jeu_8h_html_a242a7514f3f5838a8e0bc4ff7e4306d7"><div class="ttname"><a href="src_2jeu_8h.html#a242a7514f3f5838a8e0bc4ff7e4306d7">DUREE_EXPLOSION</a></div><div class="ttdeci">#define DUREE_EXPLOSION</div><div class="ttdef"><b>Definition</b> <a href="src_2jeu_8h_source.html#l00006">jeu.h:6</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a92f49feda43c0f42a4aa2f15e8656fb7"><div class="ttname"><a href="struct_etat_jeu.html#a92f49feda43c0f42a4aa2f15e8656fb7">EtatJeu::explosion_y</a></div><div class="ttdeci">float explosion_y</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00089">entites.h:89</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_afb5e772fa2c38d9e89f9473e89b7b794"><div class="ttname"><a href="struct_etat_jeu.html#afb5e772fa2c38d9e89f9473e89b7b794">EtatJeu::explosion_x</a></div><div class="ttdeci">float explosion_x</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00089">entites.h:89</a></div></div>
+<div class="ttc" id="astruct_joueur_html"><div class="ttname"><a href="struct_joueur.html">Joueur</a></div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00035">entites.h:35</a></div></div>
+<div class="ttc" id="astruct_projectile_html"><div class="ttname"><a href="struct_projectile.html">Projectile</a></div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00054">entites.h:54</a></div></div>
+<div class="ttc" id="astruct_projectile_html_ab78c13348075fde0f4278c75dbbce3bf"><div class="ttname"><a href="struct_projectile.html#ab78c13348075fde0f4278c75dbbce3bf">Projectile::explosion</a></div><div class="ttdeci">int explosion</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00058">entites.h:58</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph.png" border="0" usemap="#ajeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph" id="ajeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,189,67"/>
+<area shape="rect" href="jeu_8c.html#a95bdea7c66358469b0f5587032814c83" title=" " alt="" coords="237,5,352,38"/>
+<area shape="poly" title=" " alt="" coords="188,35,224,32,218,33,189,40"/>
+<area shape="rect" href="jeu_8c.html#a04fd5d00b05181b0046eec5c7a877412" title=" " alt="" coords="241,63,348,95"/>
+<area shape="poly" title=" " alt="" coords="189,61,228,69,223,69,189,67"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph.png" border="0" usemap="#ajeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph" id="ajeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph">
+<area shape="rect" title=" " alt="" coords="314,5,497,38"/>
+<area shape="rect" href="jeu_8c.html#a6c267bac373aba16a2d30f98c5786dfd" title=" " alt="" coords="112,5,266,38"/>
+<area shape="poly" title=" " alt="" coords="296,22,266,24,266,19,301,22"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa567b6f3c9bd1a4df9d6b4683b5b46be" name="aa567b6f3c9bd1a4df9d6b4683b5b46be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa567b6f3c9bd1a4df9d6b4683b5b46be">&#9670;&#160;</a></span>joueur_tirer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void joueur_tirer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00328">328</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  328</span>                               {</div>
+<div class="line"><span class="lineno">  329</span>    <span class="comment">/* Arme basique : 1 seul tir Ã  la fois */</span></div>
+<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a5c7d135fb5f360d696c4dc493e257ce9">arme</a> == <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43">ARME_BASIQUE</a>) {</div>
+<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; i++)</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  333</span>    }</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">switch</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a5c7d135fb5f360d696c4dc493e257ce9">arme</a>) {</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea69c29c2b56bf4e488d2a8ccf73177d43">ARME_BASIQUE</a>:</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; i++) {</div>
+<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) {</div>
+<div class="line"><span class="lineno">  341</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>    = 1;</div>
+<div class="line"><span class="lineno">  342</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a>;</div>
+<div class="line"><span class="lineno">  343</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - 20.0f;</div>
+<div class="line"><span class="lineno">  344</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0">vy</a>        = -700.0f;</div>
+<div class="line"><span class="lineno">  345</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#ab78c13348075fde0f4278c75dbbce3bf">explosion</a> = 0;</div>
+<div class="line"><span class="lineno">  346</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  347</span>                }</div>
+<div class="line"><span class="lineno">  348</span>            }</div>
+<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a">ARME_TIR_RAPIDE</a>:</div>
+<div class="line"><span class="lineno">  352</span>            <span class="comment">/* Tir rapide : pas de limite 1 balle */</span></div>
+<div class="line"><span class="lineno">  353</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; i++) {</div>
+<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) {</div>
+<div class="line"><span class="lineno">  355</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>    = 1;</div>
+<div class="line"><span class="lineno">  356</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a>;</div>
+<div class="line"><span class="lineno">  357</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - 20.0f;</div>
+<div class="line"><span class="lineno">  358</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0">vy</a>        = -900.0f;</div>
+<div class="line"><span class="lineno">  359</span>                    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#ab78c13348075fde0f4278c75dbbce3bf">explosion</a> = 0;</div>
+<div class="line"><span class="lineno">  360</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  361</span>                }</div>
+<div class="line"><span class="lineno">  362</span>            }</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  364</span> </div>
+<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400">ARME_TIR_TRIPLE</a>:</div>
+<div class="line"><span class="lineno">  366</span>            <span class="comment">/* 3 projectiles : gauche, centre, droite */</span></div>
+<div class="line"><span class="lineno">  367</span>            { <span class="keywordtype">int</span> crees = 0;</div>
+<div class="line"><span class="lineno">  368</span>              <span class="keywordtype">float</span> vx_vals[3] = { -150.0f, 0.0f, 150.0f };</div>
+<div class="line"><span class="lineno">  369</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a> &amp;&amp; crees &lt; 3; i++) {</div>
+<div class="line"><span class="lineno">  370</span>                  <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) {</div>
+<div class="line"><span class="lineno">  371</span>                      ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>    = 1;</div>
+<div class="line"><span class="lineno">  372</span>                      ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a>;</div>
+<div class="line"><span class="lineno">  373</span>                      ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - 20.0f;</div>
+<div class="line"><span class="lineno">  374</span>                      ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a29202389dc05d908a2b16c3b15174546">vx</a>        = vx_vals[crees];</div>
+<div class="line"><span class="lineno">  375</span>                      ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0">vy</a>        = -700.0f;</div>
+<div class="line"><span class="lineno">  376</span>                      ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#ab78c13348075fde0f4278c75dbbce3bf">explosion</a> = 0;</div>
+<div class="line"><span class="lineno">  377</span>                      crees++;</div>
+<div class="line"><span class="lineno">  378</span>                  }</div>
+<div class="line"><span class="lineno">  379</span>              }</div>
+<div class="line"><span class="lineno">  380</span>            }</div>
+<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453">ARME_EXPLOSION</a>:</div>
+<div class="line"><span class="lineno">  384</span>            <span class="comment">/* 1 seul tir Ã  la fois comme l&#39;arme basique */</span></div>
+<div class="line"><span class="lineno">  385</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; i++)</div>
+<div class="line"><span class="lineno">  386</span>                    <span class="keywordflow">if</span> (ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) <span class="keywordflow">return</span>;   <span class="comment">/* â AJOUTE CE BLOCAGE */</span></div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2entites_8h.html#adbc131e9b147b67d84003e054b355365">MAX_PROJECTILES</a>; i++) {</div>
+<div class="line"><span class="lineno">  389</span>            <span class="keywordflow">if</span> (!ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>) {</div>
+<div class="line"><span class="lineno">  390</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#adf17efc99b04360ba3e64b97971c299b">active</a>    = 1;</div>
+<div class="line"><span class="lineno">  391</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a0bf544bf90988687a910268b615aed08">x</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2107af8ce47a6f97d095b22690a2c4c4">x</a>;</div>
+<div class="line"><span class="lineno">  392</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a04963d09e6b45aee1d5d96f8112fb075">y</a>         = ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#ad20c25b41ed37bbd7bbbe8746c2160a2">y</a> - 20.0f;</div>
+<div class="line"><span class="lineno">  393</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a29202389dc05d908a2b16c3b15174546">vx</a>        = 0.0f;</div>
+<div class="line"><span class="lineno">  394</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0">vy</a>        = -700.0f;</div>
+<div class="line"><span class="lineno">  395</span>                ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a547aed4daa33f7965f23df60f5beae1a">projectiles</a>[i].<a class="code hl_variable" href="struct_projectile.html#ab78c13348075fde0f4278c75dbbce3bf">explosion</a> = 1;</div>
+<div class="line"><span class="lineno">  396</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  397</span>            }</div>
+<div class="line"><span class="lineno">  398</span>        }</div>
+<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  400</span>    }</div>
+<div class="line"><span class="lineno">  401</span>}</div>
+<div class="ttc" id="aheader_2entites_8h_html_aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400"><div class="ttname"><a href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea525ee7667848bc2e0312ed01d359a400">ARME_TIR_TRIPLE</a></div><div class="ttdeci">@ ARME_TIR_TRIPLE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00031">entites.h:31</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453"><div class="ttname"><a href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea66720100a49aee6a03318bd653be0453">ARME_EXPLOSION</a></div><div class="ttdeci">@ ARME_EXPLOSION</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00032">entites.h:32</a></div></div>
+<div class="ttc" id="aheader_2entites_8h_html_aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a"><div class="ttname"><a href="header_2entites_8h.html#aeea858c806fecc146afba5319180d9aea9688391a363bc230118b18ae81dc5a8a">ARME_TIR_RAPIDE</a></div><div class="ttdeci">@ ARME_TIR_RAPIDE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00030">entites.h:30</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph.png" border="0" usemap="#ajeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph" id="ajeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,218,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a04fd5d00b05181b0046eec5c7a877412" name="a04fd5d00b05181b0046eec5c7a877412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fd5d00b05181b0046eec5c7a877412">&#9670;&#160;</a></span>rayon_bulle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rayon_bulle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1d">TailleBulle</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00008">8</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>                                 {</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">switch</span>(t) {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da69251996426bd097d2bf83805fc8d134">BULLE_GRANDE</a>:    <span class="keywordflow">return</span> 40.0f;</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc">BULLE_MOYENNE</a>:   <span class="keywordflow">return</span> 25.0f;</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da97c7ab81f07aeb43e2ef46218403f979">BULLE_PETITE</a>:    <span class="keywordflow">return</span> 15.0f;</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1da6670513ee7f457e798e95147f20af983">BULLE_MINUSCULE</a>: <span class="keywordflow">return</span>  8.0f;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">return</span> 8.0f;</div>
+<div class="line"><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aheader_2entites_8h_html_af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc"><div class="ttname"><a href="header_2entites_8h.html#af101043d6c277c6a337c9babd0c75c1dad9193de5780d3da84567d2a7ead3f5bc">BULLE_MOYENNE</a></div><div class="ttdeci">@ BULLE_MOYENNE</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00023">entites.h:23</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="jeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph.png" border="0" usemap="#ajeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph" loading="lazy" alt=""/></div>
+<map name="ajeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph" id="ajeu_8c_a04fd5d00b05181b0046eec5c7a877412_icgraph">
+<area shape="rect" title=" " alt="" coords="237,63,344,95"/>
+<area shape="rect" href="affichage_8c.html#ade696254e724634f854cee7ce6ee56cb" title=" " alt="" coords="36,5,158,38"/>
+<area shape="poly" title=" " alt="" coords="220,60,155,41,155,36,225,58"/>
+<area shape="rect" href="jeu_8c.html#a35db185c59a638dfe4f06995eaeb7e00" title=" " alt="" coords="33,63,161,95"/>
+<area shape="poly" title=" " alt="" coords="219,80,162,82,161,76,224,78"/>
+<area shape="rect" href="jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295" title=" " alt="" coords="5,120,189,153"/>
+<area shape="poly" title=" " alt="" coords="225,98,155,122,154,117,220,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbd875e13250e4155452816f4a51f9ac" name="adbd875e13250e4155452816f4a51f9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd875e13250e4155452816f4a51f9ac">&#9670;&#160;</a></span>verifier_collision_cercle_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verifier_collision_cercle_rect </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>cx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>cy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>larg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>haut</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="jeu_8c_source.html#l00435">435</a> du fichier <a class="el" href="jeu_8c_source.html">jeu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  436</span>                                                                               {</div>
+<div class="line"><span class="lineno">  437</span>    <span class="keywordtype">float</span> px = cx &lt; rx ? rx : (cx &gt; rx+larg ? rx+larg : cx);</div>
+<div class="line"><span class="lineno">  438</span>    <span class="keywordtype">float</span> py = cy &lt; ry ? ry : (cy &gt; ry+haut ? ry+haut : cy);</div>
+<div class="line"><span class="lineno">  439</span>    <span class="keywordtype">float</span> dx = cx - px, dy = cy - py;</div>
+<div class="line"><span class="lineno">  440</span>    <span class="keywordflow">return</span> (dx*dx + dy*dy) &lt; (r*r);</div>
+<div class="line"><span class="lineno">  441</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="jeu_8c.html">jeu.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+digraph "tohtml.HtmlFormatter.make_html_word"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="tohtml.HtmlFormatter.make\l_html_word",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="tohtml.HtmlFormatter.make\l_html_para",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtohtml_1_1_html_formatter.html#a26658204bd9ea923fc3102a41566a61e",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="tohtml.HtmlFormatter.make\l_html_items",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtohtml_1_1_html_formatter.html#a11388d19a5efb72c69cb0a235a1ce2e9",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="tohtml.HtmlFormatter.print\l_html_field",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtohtml_1_1_html_formatter.html#a468347ad3a16e0ac6e7ab486722012a0",tooltip=" "];
+  Node3 -> Node5 [id="edge4_Node000003_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="tohtml.HtmlFormatter.print\l_html_items",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$classtohtml_1_1_html_formatter.html#acfdd91f976867c451bd2b7300ad8da05",tooltip=" "];
+  Node3 -> Node9 [id="edge5_Node000003_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="tohtml.HtmlFormatter.section\l_enter",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtohtml_1_1_html_formatter.html#a3457cd9e4ed1946bd8cfae372e8f1433",tooltip=" "];
+  Node2 -> Node10 [id="edge6_Node000002_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="tohtml.HtmlFormatter.toc\l_section_enter",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtohtml_1_1_html_formatter.html#a1ca080198c43f616bfdb838e27fe0f35",tooltip=" "];
+}

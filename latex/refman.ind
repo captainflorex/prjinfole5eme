@@ -1,0 +1,1017 @@
+\begin{theindex}
+
+  \item {\_\_has\_include}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+
+  \indexspace
+
+  \item {actif}
+    \subitem {Eclair}, \hyperpage{20}
+  \item {active}
+    \subitem {BonusArme}, \hyperpage{15}
+    \subitem {Boss}, \hyperpage{17}
+    \subitem {Bulle}, \hyperpage{18}
+    \subitem {Projectile}, \hyperpage{30}
+  \item {affichage.c}
+    \subitem {affichage\_charger\_ressources}, \hyperpage{157}
+    \subitem {affichage\_init}, \hyperpage{158}
+    \subitem {affichage\_liberer\_ressources}, \hyperpage{159}
+    \subitem {afficher\_boss}, \hyperpage{159}
+    \subitem {afficher\_bulle}, \hyperpage{160}
+    \subitem {afficher\_decompte}, \hyperpage{161}
+    \subitem {afficher\_defaite}, \hyperpage{163}
+    \subitem {afficher\_ecran\_sauvegarde}, \hyperpage{163}
+    \subitem {afficher\_hud}, \hyperpage{164}
+    \subitem {afficher\_jeu}, \hyperpage{165}
+    \subitem {afficher\_joueur}, \hyperpage{167}
+    \subitem {afficher\_liste\_sauvegardes}, \hyperpage{168}
+    \subitem {afficher\_pause}, \hyperpage{169}
+    \subitem {afficher\_projectile}, \hyperpage{170}
+    \subitem {afficher\_saisie\_pseudo}, \hyperpage{170}
+    \subitem {afficher\_victoire}, \hyperpage{171}
+    \subitem {anim\_boss}, \hyperpage{172}
+    \subitem {appliquer\_masque}, \hyperpage{171}
+    \subitem {compteur\_anim}, \hyperpage{172}
+    \subitem {duree\_tir}, \hyperpage{173}
+    \subitem {fond\_jeu}, \hyperpage{173}
+    \subitem {fond\_menu}, \hyperpage{173}
+    \subitem {joueur\_signaler\_tir}, \hyperpage{172}
+    \subitem {sprite\_bonus\_explosion}, \hyperpage{173}
+    \subitem {sprite\_bonus\_rapide}, \hyperpage{173}
+    \subitem {sprite\_bonus\_triple}, \hyperpage{173}
+    \subitem {sprite\_boss}, \hyperpage{173}
+    \subitem {sprite\_bulle\_grande}, \hyperpage{173}
+    \subitem {sprite\_bulle\_minuscule}, \hyperpage{174}
+    \subitem {sprite\_bulle\_moyenne}, \hyperpage{174}
+    \subitem {sprite\_bulle\_petite}, \hyperpage{174}
+    \subitem {sprite\_idle}, \hyperpage{174}
+    \subitem {sprite\_marche\_d1}, \hyperpage{174}
+    \subitem {sprite\_marche\_d2}, \hyperpage{174}
+    \subitem {sprite\_marche\_g1}, \hyperpage{174}
+    \subitem {sprite\_marche\_g2}, \hyperpage{174}
+    \subitem {sprite\_tir}, \hyperpage{175}
+    \subitem {timer\_anim\_boss}, \hyperpage{175}
+  \item {affichage.h}
+    \subitem {affichage\_charger\_ressources}, \hyperpage{32}, 
+		\hyperpage{48}
+    \subitem {affichage\_init}, \hyperpage{34}, \hyperpage{49}
+    \subitem {affichage\_liberer\_ressources}, \hyperpage{34}, 
+		\hyperpage{49}
+    \subitem {afficher\_boss}, \hyperpage{35}, \hyperpage{50}
+    \subitem {afficher\_bulle}, \hyperpage{35}, \hyperpage{51}
+    \subitem {afficher\_decompte}, \hyperpage{36}, \hyperpage{51}
+    \subitem {afficher\_defaite}, \hyperpage{38}, \hyperpage{52}
+    \subitem {afficher\_ecran\_sauvegarde}, \hyperpage{53}
+    \subitem {afficher\_hud}, \hyperpage{39}, \hyperpage{53}
+    \subitem {afficher\_jeu}, \hyperpage{40}, \hyperpage{55}
+    \subitem {afficher\_joueur}, \hyperpage{41}, \hyperpage{56}
+    \subitem {afficher\_liste\_sauvegardes}, \hyperpage{57}
+    \subitem {afficher\_pause}, \hyperpage{42}, \hyperpage{57}
+    \subitem {afficher\_projectile}, \hyperpage{43}, \hyperpage{58}
+    \subitem {afficher\_saisie\_pseudo}, \hyperpage{43}, \hyperpage{58}
+    \subitem {afficher\_victoire}, \hyperpage{44}, \hyperpage{59}
+    \subitem {fond\_jeu}, \hyperpage{45}, \hyperpage{59}
+    \subitem {fond\_menu}, \hyperpage{45}, \hyperpage{59}
+    \subitem {joueur\_signaler\_tir}, \hyperpage{44}, \hyperpage{59}
+    \subitem {sprite\_bulle\_grande}, \hyperpage{45}, \hyperpage{60}
+    \subitem {sprite\_bulle\_minuscule}, \hyperpage{45}, \hyperpage{60}
+    \subitem {sprite\_bulle\_moyenne}, \hyperpage{45}, \hyperpage{60}
+    \subitem {sprite\_bulle\_petite}, \hyperpage{46}, \hyperpage{60}
+  \item {affichage\_charger\_ressources}
+    \subitem {affichage.c}, \hyperpage{157}
+    \subitem {affichage.h}, \hyperpage{32}, \hyperpage{48}
+  \item {affichage\_init}
+    \subitem {affichage.c}, \hyperpage{158}
+    \subitem {affichage.h}, \hyperpage{34}, \hyperpage{49}
+  \item {affichage\_liberer\_ressources}
+    \subitem {affichage.c}, \hyperpage{159}
+    \subitem {affichage.h}, \hyperpage{34}, \hyperpage{49}
+  \item {afficher\_boss}
+    \subitem {affichage.c}, \hyperpage{159}
+    \subitem {affichage.h}, \hyperpage{35}, \hyperpage{50}
+  \item {afficher\_bulle}
+    \subitem {affichage.c}, \hyperpage{160}
+    \subitem {affichage.h}, \hyperpage{35}, \hyperpage{51}
+  \item {afficher\_decompte}
+    \subitem {affichage.c}, \hyperpage{161}
+    \subitem {affichage.h}, \hyperpage{36}, \hyperpage{51}
+  \item {afficher\_defaite}
+    \subitem {affichage.c}, \hyperpage{163}
+    \subitem {affichage.h}, \hyperpage{38}, \hyperpage{52}
+  \item {afficher\_ecran\_sauvegarde}
+    \subitem {affichage.c}, \hyperpage{163}
+    \subitem {affichage.h}, \hyperpage{53}
+  \item {afficher\_hud}
+    \subitem {affichage.c}, \hyperpage{164}
+    \subitem {affichage.h}, \hyperpage{39}, \hyperpage{53}
+  \item {afficher\_jeu}
+    \subitem {affichage.c}, \hyperpage{165}
+    \subitem {affichage.h}, \hyperpage{40}, \hyperpage{55}
+  \item {afficher\_joueur}
+    \subitem {affichage.c}, \hyperpage{167}
+    \subitem {affichage.h}, \hyperpage{41}, \hyperpage{56}
+  \item {afficher\_liste\_sauvegardes}
+    \subitem {affichage.c}, \hyperpage{168}
+    \subitem {affichage.h}, \hyperpage{57}
+  \item {afficher\_menu}
+    \subitem {menu.c}, \hyperpage{233}
+    \subitem {menu.h}, \hyperpage{135}, \hyperpage{144}
+  \item {afficher\_pause}
+    \subitem {affichage.c}, \hyperpage{169}
+    \subitem {affichage.h}, \hyperpage{42}, \hyperpage{57}
+  \item {afficher\_projectile}
+    \subitem {affichage.c}, \hyperpage{170}
+    \subitem {affichage.h}, \hyperpage{43}, \hyperpage{58}
+  \item {afficher\_regles}
+    \subitem {EtatMenu}, \hyperpage{26}
+    \subitem {menu.c}, \hyperpage{235}
+    \subitem {menu.h}, \hyperpage{137}, \hyperpage{146}
+  \item {afficher\_saisie\_pseudo}
+    \subitem {affichage.c}, \hyperpage{170}
+    \subitem {affichage.h}, \hyperpage{43}, \hyperpage{58}
+  \item {afficher\_victoire}
+    \subitem {affichage.c}, \hyperpage{171}
+    \subitem {affichage.h}, \hyperpage{44}, \hyperpage{59}
+  \item {alfont.h}
+    \subitem {ALFONT\_DATE}, \hyperpage{63}, \hyperpage{78}
+    \subitem {ALFONT\_DATE\_STR}, \hyperpage{63}, \hyperpage{78}
+    \subitem {alfont\_destroy\_font}, \hyperpage{65}, \hyperpage{79}
+    \subitem {ALFONT\_ERROR}, \hyperpage{63}, \hyperpage{78}
+    \subitem {alfont\_exit}, \hyperpage{65}, \hyperpage{79}
+    \subitem {ALFONT\_FONT}, \hyperpage{64}
+    \subitem {alfont\_get\_available\_fixed\_sizes}, \hyperpage{65}, 
+		\hyperpage{80}
+    \subitem {alfont\_get\_char\_extra\_spacing}, \hyperpage{65}, 
+		\hyperpage{80}
+    \subitem {alfont\_get\_font\_height}, \hyperpage{65}, 
+		\hyperpage{80}
+    \subitem {alfont\_get\_nof\_available\_fixed\_sizes}, 
+		\hyperpage{65}, \hyperpage{80}
+    \subitem {alfont\_init}, \hyperpage{66}, \hyperpage{80}
+    \subitem {alfont\_is\_fixed\_font}, \hyperpage{66}, \hyperpage{80}
+    \subitem {alfont\_is\_scalable\_font}, \hyperpage{66}, 
+		\hyperpage{80}
+    \subitem {alfont\_load\_font}, \hyperpage{66}, \hyperpage{80}
+    \subitem {alfont\_load\_font\_from\_mem}, \hyperpage{66}, 
+		\hyperpage{80}
+    \subitem {ALFONT\_MAJOR\_VERSION}, \hyperpage{64}, \hyperpage{79}
+    \subitem {ALFONT\_MINOR\_VERSION}, \hyperpage{64}, \hyperpage{79}
+    \subitem {ALFONT\_OK}, \hyperpage{64}, \hyperpage{79}
+    \subitem {alfont\_set\_char\_extra\_spacing}, \hyperpage{67}, 
+		\hyperpage{81}
+    \subitem {alfont\_set\_font\_size}, \hyperpage{67}, \hyperpage{81}
+    \subitem {ALFONT\_SUB\_VERSION}, \hyperpage{64}, \hyperpage{79}
+    \subitem {alfont\_text\_height}, \hyperpage{67}, \hyperpage{81}
+    \subitem {alfont\_text\_length}, \hyperpage{67}, \hyperpage{81}
+    \subitem {alfont\_text\_mode}, \hyperpage{67}, \hyperpage{81}
+    \subitem {alfont\_textout}, \hyperpage{68}, \hyperpage{81}
+    \subitem {alfont\_textout\_aa}, \hyperpage{68}, \hyperpage{81}
+    \subitem {alfont\_textout\_aa\_ex}, \hyperpage{68}, \hyperpage{82}
+    \subitem {alfont\_textout\_centre}, \hyperpage{68}, \hyperpage{82}
+    \subitem {alfont\_textout\_centre\_aa}, \hyperpage{69}, 
+		\hyperpage{82}
+    \subitem {alfont\_textout\_centre\_aa\_ex}, \hyperpage{69}, 
+		\hyperpage{82}
+    \subitem {alfont\_textout\_centre\_ex}, \hyperpage{69}, 
+		\hyperpage{82}
+    \subitem {alfont\_textout\_ex}, \hyperpage{70}, \hyperpage{83}
+    \subitem {alfont\_textout\_right}, \hyperpage{70}, \hyperpage{83}
+    \subitem {alfont\_textout\_right\_aa}, \hyperpage{70}, 
+		\hyperpage{83}
+    \subitem {alfont\_textout\_right\_aa\_ex}, \hyperpage{70}, 
+		\hyperpage{83}
+    \subitem {alfont\_textout\_right\_ex}, \hyperpage{70}, 
+		\hyperpage{83}
+    \subitem {alfont\_textprintf}, \hyperpage{71}, \hyperpage{84}
+    \subitem {alfont\_textprintf\_aa}, \hyperpage{71}, \hyperpage{84}
+    \subitem {alfont\_textprintf\_aa\_ex}, \hyperpage{71}, 
+		\hyperpage{84}
+    \subitem {alfont\_textprintf\_centre}, \hyperpage{71}, 
+		\hyperpage{84}
+    \subitem {alfont\_textprintf\_centre\_aa}, \hyperpage{71}, 
+		\hyperpage{84}
+    \subitem {alfont\_textprintf\_centre\_aa\_ex}, \hyperpage{72}, 
+		\hyperpage{85}
+    \subitem {alfont\_textprintf\_centre\_ex}, \hyperpage{72}, 
+		\hyperpage{85}
+    \subitem {alfont\_textprintf\_ex}, \hyperpage{72}, \hyperpage{85}
+    \subitem {alfont\_textprintf\_right}, \hyperpage{72}, 
+		\hyperpage{85}
+    \subitem {alfont\_textprintf\_right\_aa}, \hyperpage{73}, 
+		\hyperpage{86}
+    \subitem {alfont\_textprintf\_right\_aa\_ex}, \hyperpage{73}, 
+		\hyperpage{86}
+    \subitem {alfont\_textprintf\_right\_ex}, \hyperpage{73}, 
+		\hyperpage{86}
+    \subitem {ALFONT\_VERSION\_STR}, \hyperpage{64}, \hyperpage{79}
+  \item {ALFONT\_DATE}
+    \subitem {alfont.h}, \hyperpage{63}, \hyperpage{78}
+  \item {ALFONT\_DATE\_STR}
+    \subitem {alfont.h}, \hyperpage{63}, \hyperpage{78}
+  \item {alfont\_destroy\_font}
+    \subitem {alfont.h}, \hyperpage{65}, \hyperpage{79}
+  \item {ALFONT\_DLL\_DECLSPEC}
+    \subitem {alfontdll.h}, \hyperpage{89, 90}
+  \item {ALFONT\_ERROR}
+    \subitem {alfont.h}, \hyperpage{63}, \hyperpage{78}
+  \item {alfont\_exit}
+    \subitem {alfont.h}, \hyperpage{65}, \hyperpage{79}
+  \item {ALFONT\_FONT}
+    \subitem {alfont.h}, \hyperpage{64}
+  \item {alfont\_get\_available\_fixed\_sizes}
+    \subitem {alfont.h}, \hyperpage{65}, \hyperpage{80}
+  \item {alfont\_get\_char\_extra\_spacing}
+    \subitem {alfont.h}, \hyperpage{65}, \hyperpage{80}
+  \item {alfont\_get\_font\_height}
+    \subitem {alfont.h}, \hyperpage{65}, \hyperpage{80}
+  \item {alfont\_get\_nof\_available\_fixed\_sizes}
+    \subitem {alfont.h}, \hyperpage{65}, \hyperpage{80}
+  \item {alfont\_init}
+    \subitem {alfont.h}, \hyperpage{66}, \hyperpage{80}
+  \item {alfont\_is\_fixed\_font}
+    \subitem {alfont.h}, \hyperpage{66}, \hyperpage{80}
+  \item {alfont\_is\_scalable\_font}
+    \subitem {alfont.h}, \hyperpage{66}, \hyperpage{80}
+  \item {alfont\_load\_font}
+    \subitem {alfont.h}, \hyperpage{66}, \hyperpage{80}
+  \item {alfont\_load\_font\_from\_mem}
+    \subitem {alfont.h}, \hyperpage{66}, \hyperpage{80}
+  \item {ALFONT\_MAJOR\_VERSION}
+    \subitem {alfont.h}, \hyperpage{64}, \hyperpage{79}
+  \item {ALFONT\_MINOR\_VERSION}
+    \subitem {alfont.h}, \hyperpage{64}, \hyperpage{79}
+  \item {ALFONT\_OK}
+    \subitem {alfont.h}, \hyperpage{64}, \hyperpage{79}
+  \item {alfont\_set\_char\_extra\_spacing}
+    \subitem {alfont.h}, \hyperpage{67}, \hyperpage{81}
+  \item {alfont\_set\_font\_size}
+    \subitem {alfont.h}, \hyperpage{67}, \hyperpage{81}
+  \item {ALFONT\_SUB\_VERSION}
+    \subitem {alfont.h}, \hyperpage{64}, \hyperpage{79}
+  \item {alfont\_text\_height}
+    \subitem {alfont.h}, \hyperpage{67}, \hyperpage{81}
+  \item {alfont\_text\_length}
+    \subitem {alfont.h}, \hyperpage{67}, \hyperpage{81}
+  \item {alfont\_text\_mode}
+    \subitem {alfont.h}, \hyperpage{67}, \hyperpage{81}
+  \item {alfont\_textout}
+    \subitem {alfont.h}, \hyperpage{68}, \hyperpage{81}
+  \item {alfont\_textout\_aa}
+    \subitem {alfont.h}, \hyperpage{68}, \hyperpage{81}
+  \item {alfont\_textout\_aa\_ex}
+    \subitem {alfont.h}, \hyperpage{68}, \hyperpage{82}
+  \item {alfont\_textout\_centre}
+    \subitem {alfont.h}, \hyperpage{68}, \hyperpage{82}
+  \item {alfont\_textout\_centre\_aa}
+    \subitem {alfont.h}, \hyperpage{69}, \hyperpage{82}
+  \item {alfont\_textout\_centre\_aa\_ex}
+    \subitem {alfont.h}, \hyperpage{69}, \hyperpage{82}
+  \item {alfont\_textout\_centre\_ex}
+    \subitem {alfont.h}, \hyperpage{69}, \hyperpage{82}
+  \item {alfont\_textout\_ex}
+    \subitem {alfont.h}, \hyperpage{70}, \hyperpage{83}
+  \item {alfont\_textout\_right}
+    \subitem {alfont.h}, \hyperpage{70}, \hyperpage{83}
+  \item {alfont\_textout\_right\_aa}
+    \subitem {alfont.h}, \hyperpage{70}, \hyperpage{83}
+  \item {alfont\_textout\_right\_aa\_ex}
+    \subitem {alfont.h}, \hyperpage{70}, \hyperpage{83}
+  \item {alfont\_textout\_right\_ex}
+    \subitem {alfont.h}, \hyperpage{70}, \hyperpage{83}
+  \item {alfont\_textprintf}
+    \subitem {alfont.h}, \hyperpage{71}, \hyperpage{84}
+  \item {alfont\_textprintf\_aa}
+    \subitem {alfont.h}, \hyperpage{71}, \hyperpage{84}
+  \item {alfont\_textprintf\_aa\_ex}
+    \subitem {alfont.h}, \hyperpage{71}, \hyperpage{84}
+  \item {alfont\_textprintf\_centre}
+    \subitem {alfont.h}, \hyperpage{71}, \hyperpage{84}
+  \item {alfont\_textprintf\_centre\_aa}
+    \subitem {alfont.h}, \hyperpage{71}, \hyperpage{84}
+  \item {alfont\_textprintf\_centre\_aa\_ex}
+    \subitem {alfont.h}, \hyperpage{72}, \hyperpage{85}
+  \item {alfont\_textprintf\_centre\_ex}
+    \subitem {alfont.h}, \hyperpage{72}, \hyperpage{85}
+  \item {alfont\_textprintf\_ex}
+    \subitem {alfont.h}, \hyperpage{72}, \hyperpage{85}
+  \item {alfont\_textprintf\_right}
+    \subitem {alfont.h}, \hyperpage{72}, \hyperpage{85}
+  \item {alfont\_textprintf\_right\_aa}
+    \subitem {alfont.h}, \hyperpage{73}, \hyperpage{86}
+  \item {alfont\_textprintf\_right\_aa\_ex}
+    \subitem {alfont.h}, \hyperpage{73}, \hyperpage{86}
+  \item {alfont\_textprintf\_right\_ex}
+    \subitem {alfont.h}, \hyperpage{73}, \hyperpage{86}
+  \item {ALFONT\_VERSION\_STR}
+    \subitem {alfont.h}, \hyperpage{64}, \hyperpage{79}
+  \item {alfontdll.h}
+    \subitem {ALFONT\_DLL\_DECLSPEC}, \hyperpage{89, 90}
+  \item {aller\_droite}
+    \subitem {EtatEntrees}, \hyperpage{21}
+  \item {aller\_gauche}
+    \subitem {EtatEntrees}, \hyperpage{21}
+  \item {anim\_boss}
+    \subitem {affichage.c}, \hyperpage{172}
+  \item {appliquer\_masque}
+    \subitem {affichage.c}, \hyperpage{171}
+  \item {ARCHITECTURE\_ID}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {arme}
+    \subitem {Joueur}, \hyperpage{27}
+  \item {ARME\_BASIQUE}
+    \subitem {entites.h}, \hyperpage{103}, \hyperpage{108}
+  \item {ARME\_EXPLOSION}
+    \subitem {entites.h}, \hyperpage{103}, \hyperpage{108}
+  \item {ARME\_TIR\_RAPIDE}
+    \subitem {entites.h}, \hyperpage{103}, \hyperpage{108}
+  \item {ARME\_TIR\_TRIPLE}
+    \subitem {entites.h}, \hyperpage{103}, \hyperpage{108}
+
+  \indexspace
+
+  \item {bonus}
+    \subitem {EtatJeu}, \hyperpage{23}
+  \item {BonusArme}, \hyperpage{15}
+    \subitem {active}, \hyperpage{15}
+    \subitem {timer}, \hyperpage{15}
+    \subitem {type}, \hyperpage{15}
+    \subitem {x}, \hyperpage{16}
+    \subitem {y}, \hyperpage{16}
+  \item {Boss}, \hyperpage{16}
+    \subitem {active}, \hyperpage{17}
+    \subitem {points\_vie}, \hyperpage{17}
+    \subitem {points\_vie\_max}, \hyperpage{17}
+    \subitem {timer\_tir}, \hyperpage{17}
+    \subitem {vx}, \hyperpage{17}
+    \subitem {vy}, \hyperpage{17}
+    \subitem {x}, \hyperpage{17}
+    \subitem {y}, \hyperpage{17}
+  \item {boss}
+    \subitem {EtatJeu}, \hyperpage{23}
+  \item {boss\_a\_spawne}
+    \subitem {EtatJeu}, \hyperpage{23}
+  \item {boss\_deplacer}
+    \subitem {jeu.c}, \hyperpage{205}
+    \subitem {jeu.h}, \hyperpage{114}, \hyperpage{125}
+  \item {Bulle}, \hyperpage{18}
+    \subitem {active}, \hyperpage{18}
+    \subitem {contient\_arme}, \hyperpage{18}
+    \subitem {lance\_eclairs}, \hyperpage{18}
+    \subitem {taille}, \hyperpage{19}
+    \subitem {vx}, \hyperpage{19}
+    \subitem {vy}, \hyperpage{19}
+    \subitem {x}, \hyperpage{19}
+    \subitem {y}, \hyperpage{19}
+  \item {bulle\_deplacer}
+    \subitem {jeu.c}, \hyperpage{206}
+    \subitem {jeu.h}, \hyperpage{114}, \hyperpage{125}
+  \item {bulle\_diviser}
+    \subitem {jeu.c}, \hyperpage{207}
+    \subitem {jeu.h}, \hyperpage{115}, \hyperpage{126}
+  \item {BULLE\_GRANDE}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{108}
+  \item {BULLE\_MINUSCULE}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{108}
+  \item {BULLE\_MOYENNE}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{108}
+  \item {BULLE\_PETITE}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{108}
+  \item {bulles}
+    \subitem {EtatJeu}, \hyperpage{23}
+  \item {bulles\_en\_attente}
+    \subitem {EtatJeu}, \hyperpage{23}
+
+  \indexspace
+
+  \item {C\_STD\_11}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {C\_STD\_17}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {C\_STD\_23}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {C\_STD\_99}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {C\_VERSION}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {charger\_partie}
+    \subitem {sauvegarde.h}, \hyperpage{150}
+  \item {CMakeCCompilerId.c}
+    \subitem {\_\_has\_include}, \hyperpage{184}
+    \subitem {ARCHITECTURE\_ID}, \hyperpage{184}
+    \subitem {C\_STD\_11}, \hyperpage{184}
+    \subitem {C\_STD\_17}, \hyperpage{184}
+    \subitem {C\_STD\_23}, \hyperpage{184}
+    \subitem {C\_STD\_99}, \hyperpage{184}
+    \subitem {C\_VERSION}, \hyperpage{184}
+    \subitem {COMPILER\_ID}, \hyperpage{184}
+    \subitem {DEC}, \hyperpage{185}
+    \subitem {HEX}, \hyperpage{185}
+    \subitem {info\_arch}, \hyperpage{186}
+    \subitem {info\_compiler}, \hyperpage{186}
+    \subitem {info\_language\_extensions\_default}, \hyperpage{187}
+    \subitem {info\_language\_standard\_default}, \hyperpage{187}
+    \subitem {info\_platform}, \hyperpage{187}
+    \subitem {main}, \hyperpage{186}
+    \subitem {PLATFORM\_ID}, \hyperpage{185}
+    \subitem {STRINGIFY}, \hyperpage{185}
+    \subitem {STRINGIFY\_HELPER}, \hyperpage{186}
+  \item {COMPILER\_ID}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{184}
+  \item {compteur}
+    \subitem {main.c}, \hyperpage{224}
+  \item {compteur\_anim}
+    \subitem {affichage.c}, \hyperpage{172}
+    \subitem {menu.c}, \hyperpage{239}
+  \item {contient\_arme}
+    \subitem {Bulle}, \hyperpage{18}
+
+  \indexspace
+
+  \item {DEC}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{185}
+  \item {decompte}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {decompte\_timer}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {dessiner\_eclairs}
+    \subitem {eclair.c}, \hyperpage{199}
+    \subitem {eclair.h}, \hyperpage{92}, \hyperpage{97}
+  \item {duree\_arme}
+    \subitem {Joueur}, \hyperpage{27}
+  \item {DUREE\_ARME\_SPECIALE}
+    \subitem {entites.h}, \hyperpage{101}, \hyperpage{106}
+  \item {DUREE\_EXPLOSION}
+    \subitem {jeu.h}, \hyperpage{125}
+  \item {duree\_tir}
+    \subitem {affichage.c}, \hyperpage{173}
+
+  \indexspace
+
+  \item {Eclair}, \hyperpage{19}
+    \subitem {actif}, \hyperpage{20}
+    \subitem {timer}, \hyperpage{20}
+    \subitem {x}, \hyperpage{20}
+    \subitem {y}, \hyperpage{20}
+  \item {eclair.c}
+    \subitem {dessiner\_eclairs}, \hyperpage{199}
+    \subitem {eclair\_spawner}, \hyperpage{200}
+    \subitem {eclairs\_collision\_personnage}, \hyperpage{200}
+    \subitem {eclairs\_init}, \hyperpage{201}
+    \subitem {eclairs\_mettre\_a\_jour}, \hyperpage{201}
+  \item {eclair.h}
+    \subitem {dessiner\_eclairs}, \hyperpage{92}, \hyperpage{97}
+    \subitem {ECLAIR\_DUREE\_VIE}, \hyperpage{92}, \hyperpage{96}
+    \subitem {ECLAIR\_LARGEUR}, \hyperpage{92}, \hyperpage{96}
+    \subitem {eclair\_spawner}, \hyperpage{92}, \hyperpage{97}
+    \subitem {ECLAIR\_VITESSE}, \hyperpage{92}, \hyperpage{97}
+    \subitem {eclairs\_collision\_personnage}, \hyperpage{93}, 
+		\hyperpage{97}
+    \subitem {eclairs\_init}, \hyperpage{94}, \hyperpage{98}
+    \subitem {eclairs\_mettre\_a\_jour}, \hyperpage{94}, \hyperpage{98}
+    \subitem {MAX\_ECLAIRS}, \hyperpage{92}, \hyperpage{97}
+  \item {ECLAIR\_DUREE\_VIE}
+    \subitem {eclair.h}, \hyperpage{92}, \hyperpage{96}
+  \item {ECLAIR\_LARGEUR}
+    \subitem {eclair.h}, \hyperpage{92}, \hyperpage{96}
+  \item {eclair\_spawner}
+    \subitem {eclair.c}, \hyperpage{200}
+    \subitem {eclair.h}, \hyperpage{92}, \hyperpage{97}
+  \item {ECLAIR\_VITESSE}
+    \subitem {eclair.h}, \hyperpage{92}, \hyperpage{97}
+  \item {eclairs}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {eclairs\_collision\_personnage}
+    \subitem {eclair.c}, \hyperpage{200}
+    \subitem {eclair.h}, \hyperpage{93}, \hyperpage{97}
+  \item {eclairs\_init}
+    \subitem {eclair.c}, \hyperpage{201}
+    \subitem {eclair.h}, \hyperpage{94}, \hyperpage{98}
+  \item {eclairs\_mettre\_a\_jour}
+    \subitem {eclair.c}, \hyperpage{201}
+    \subitem {eclair.h}, \hyperpage{94}, \hyperpage{98}
+  \item {element\_selectionne}
+    \subitem {EtatMenu}, \hyperpage{26}
+  \item {ElementMenu}
+    \subitem {menu.h}, \hyperpage{135}, \hyperpage{144}
+  \item {entites.h}
+    \subitem {ARME\_BASIQUE}, \hyperpage{103}, \hyperpage{108}
+    \subitem {ARME\_EXPLOSION}, \hyperpage{103}, \hyperpage{108}
+    \subitem {ARME\_TIR\_RAPIDE}, \hyperpage{103}, \hyperpage{108}
+    \subitem {ARME\_TIR\_TRIPLE}, \hyperpage{103}, \hyperpage{108}
+    \subitem {BULLE\_GRANDE}, \hyperpage{102}, \hyperpage{108}
+    \subitem {BULLE\_MINUSCULE}, \hyperpage{102}, \hyperpage{108}
+    \subitem {BULLE\_MOYENNE}, \hyperpage{102}, \hyperpage{108}
+    \subitem {BULLE\_PETITE}, \hyperpage{102}, \hyperpage{108}
+    \subitem {DUREE\_ARME\_SPECIALE}, \hyperpage{101}, \hyperpage{106}
+    \subitem {HAUTEUR\_FENETRE}, \hyperpage{101}, \hyperpage{106}
+    \subitem {HAUTEUR\_INFO}, \hyperpage{101}, \hyperpage{107}
+    \subitem {HAUTEUR\_ZONE}, \hyperpage{101}, \hyperpage{107}
+    \subitem {LARGEUR\_FENETRE}, \hyperpage{101}, \hyperpage{107}
+    \subitem {MAX\_BONUS}, \hyperpage{101}, \hyperpage{107}
+    \subitem {MAX\_BULLES}, \hyperpage{102}, \hyperpage{107}
+    \subitem {MAX\_PROJECTILES}, \hyperpage{102}, \hyperpage{107}
+    \subitem {NB\_TYPES\_BONUS}, \hyperpage{102}, \hyperpage{107}
+    \subitem {PSEUDO\_LEN}, \hyperpage{102}, \hyperpage{107}
+    \subitem {rayon\_bulle}, \hyperpage{103}, \hyperpage{109}
+    \subitem {TailleBulle}, \hyperpage{102}, \hyperpage{108}
+    \subitem {TypeArme}, \hyperpage{102}, \hyperpage{108}
+  \item {entrees.c}
+    \subitem {entrees\_lire}, \hyperpage{204}
+  \item {entrees.h}
+    \subitem {entrees\_lire}, \hyperpage{111, 112}
+  \item {entrees\_lire}
+    \subitem {entrees.c}, \hyperpage{204}
+    \subitem {entrees.h}, \hyperpage{111, 112}
+  \item {ETAT\_DEFAITE}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_EN\_JEU}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_MENU}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_PAUSE}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_QUITTER}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_SAISIE\_PSEUDO}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_SAISIE\_PSEUDO\_REPRISE}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_SAUVEGARDE}
+    \subitem {main.c}, \hyperpage{223}
+  \item {ETAT\_VICTOIRE}
+    \subitem {main.c}, \hyperpage{223}
+  \item {EtatApplication}
+    \subitem {main.c}, \hyperpage{223}
+  \item {EtatEntrees}, \hyperpage{21}
+    \subitem {aller\_droite}, \hyperpage{21}
+    \subitem {aller\_gauche}, \hyperpage{21}
+    \subitem {pause}, \hyperpage{21}
+    \subitem {pause\_appuye}, \hyperpage{21}
+    \subitem {quitter}, \hyperpage{21}
+    \subitem {tirer}, \hyperpage{22}
+  \item {EtatJeu}, \hyperpage{22}
+    \subitem {bonus}, \hyperpage{23}
+    \subitem {boss}, \hyperpage{23}
+    \subitem {boss\_a\_spawne}, \hyperpage{23}
+    \subitem {bulles}, \hyperpage{23}
+    \subitem {bulles\_en\_attente}, \hyperpage{23}
+    \subitem {decompte}, \hyperpage{24}
+    \subitem {decompte\_timer}, \hyperpage{24}
+    \subitem {eclairs}, \hyperpage{24}
+    \subitem {explosion\_timer}, \hyperpage{24}
+    \subitem {explosion\_x}, \hyperpage{24}
+    \subitem {explosion\_y}, \hyperpage{24}
+    \subitem {joueur}, \hyperpage{24}
+    \subitem {nb\_bulles}, \hyperpage{24}
+    \subitem {niveau}, \hyperpage{25}
+    \subitem {projectiles}, \hyperpage{25}
+    \subitem {temps\_restant}, \hyperpage{25}
+    \subitem {timer\_arme\_speciale}, \hyperpage{25}
+  \item {EtatMenu}, \hyperpage{25}
+    \subitem {afficher\_regles}, \hyperpage{26}
+    \subitem {element\_selectionne}, \hyperpage{26}
+    \subitem {pseudo\_saisi}, \hyperpage{26}
+    \subitem {saisie\_en\_cours}, \hyperpage{26}
+  \item {explosion}
+    \subitem {Projectile}, \hyperpage{30}
+  \item {explosion\_timer}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {explosion\_x}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {explosion\_y}
+    \subitem {EtatJeu}, \hyperpage{24}
+
+  \indexspace
+
+  \item {FICHIER\_SAUVEGARDE}
+    \subitem {sauvegarde.h}, \hyperpage{150}, \hyperpage{152}
+  \item {fond\_jeu}
+    \subitem {affichage.c}, \hyperpage{173}
+    \subitem {affichage.h}, \hyperpage{45}, \hyperpage{59}
+  \item {fond\_menu}
+    \subitem {affichage.c}, \hyperpage{173}
+    \subitem {affichage.h}, \hyperpage{45}, \hyperpage{59}
+
+  \indexspace
+
+  \item {HAUTEUR\_FENETRE}
+    \subitem {entites.h}, \hyperpage{101}, \hyperpage{106}
+  \item {HAUTEUR\_INFO}
+    \subitem {entites.h}, \hyperpage{101}, \hyperpage{107}
+  \item {HAUTEUR\_ZONE}
+    \subitem {entites.h}, \hyperpage{101}, \hyperpage{107}
+  \item {header/affichage.h}, \hyperpage{31}, \hyperpage{46}
+  \item {header/alfont.h}, \hyperpage{61}, \hyperpage{74}
+  \item {header/alfontdll.h}, \hyperpage{88, 89}
+  \item {header/eclair.h}, \hyperpage{90}, \hyperpage{95}
+  \item {header/entites.h}, \hyperpage{99}, \hyperpage{103}
+  \item {header/entrees.h}, \hyperpage{110, 111}
+  \item {header/jeu.h}, \hyperpage{113}, \hyperpage{123}
+  \item {header/menu.h}, \hyperpage{133}, \hyperpage{141}
+  \item {header/sauvegarde.h}, \hyperpage{149, 150}
+  \item {HEX}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{185}
+
+  \indexspace
+
+  \item {info\_arch}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{186}
+  \item {info\_compiler}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{186}
+  \item {info\_language\_extensions\_default}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{187}
+  \item {info\_language\_standard\_default}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{187}
+  \item {info\_platform}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{187}
+
+  \indexspace
+
+  \item {jeu.c}
+    \subitem {boss\_deplacer}, \hyperpage{205}
+    \subitem {bulle\_deplacer}, \hyperpage{206}
+    \subitem {bulle\_diviser}, \hyperpage{207}
+    \subitem {jeu\_init\_niveau}, \hyperpage{207}
+    \subitem {jeu\_mettre\_a\_jour}, \hyperpage{209}
+    \subitem {jeu\_niveau\_gagne}, \hyperpage{211}
+    \subitem {jeu\_niveau\_perdu}, \hyperpage{212}
+    \subitem {jeu\_verifier\_collisions}, \hyperpage{212}
+    \subitem {joueur\_tirer}, \hyperpage{214}
+    \subitem {rayon\_bulle}, \hyperpage{215}
+    \subitem {verifier\_collision\_cercle\_rect}, \hyperpage{215}
+  \item {jeu.h}
+    \subitem {boss\_deplacer}, \hyperpage{114}, \hyperpage{125}
+    \subitem {bulle\_deplacer}, \hyperpage{114}, \hyperpage{125}
+    \subitem {bulle\_diviser}, \hyperpage{115}, \hyperpage{126}
+    \subitem {DUREE\_EXPLOSION}, \hyperpage{125}
+    \subitem {jeu\_init\_niveau}, \hyperpage{115}, \hyperpage{127}
+    \subitem {jeu\_mettre\_a\_jour}, \hyperpage{116}, \hyperpage{128}
+    \subitem {jeu\_niveau\_gagne}, \hyperpage{119}, \hyperpage{129}
+    \subitem {jeu\_niveau\_perdu}, \hyperpage{120}, \hyperpage{130}
+    \subitem {jeu\_verifier\_collisions}, \hyperpage{120}, 
+		\hyperpage{130}
+    \subitem {joueur\_tirer}, \hyperpage{121}, \hyperpage{131}
+    \subitem {verifier\_collision\_cercle\_rect}, \hyperpage{123}, 
+		\hyperpage{132}
+  \item {jeu\_init\_niveau}
+    \subitem {jeu.c}, \hyperpage{207}
+    \subitem {jeu.h}, \hyperpage{115}, \hyperpage{127}
+  \item {jeu\_mettre\_a\_jour}
+    \subitem {jeu.c}, \hyperpage{209}
+    \subitem {jeu.h}, \hyperpage{116}, \hyperpage{128}
+  \item {jeu\_niveau\_gagne}
+    \subitem {jeu.c}, \hyperpage{211}
+    \subitem {jeu.h}, \hyperpage{119}, \hyperpage{129}
+  \item {jeu\_niveau\_perdu}
+    \subitem {jeu.c}, \hyperpage{212}
+    \subitem {jeu.h}, \hyperpage{120}, \hyperpage{130}
+  \item {jeu\_verifier\_collisions}
+    \subitem {jeu.c}, \hyperpage{212}
+    \subitem {jeu.h}, \hyperpage{120}, \hyperpage{130}
+  \item {Joueur}, \hyperpage{26}
+    \subitem {arme}, \hyperpage{27}
+    \subitem {duree\_arme}, \hyperpage{27}
+    \subitem {pseudo}, \hyperpage{27}
+    \subitem {score}, \hyperpage{27}
+    \subitem {vivant}, \hyperpage{27}
+    \subitem {vx}, \hyperpage{28}
+    \subitem {x}, \hyperpage{28}
+    \subitem {y}, \hyperpage{28}
+  \item {joueur}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {joueur\_signaler\_tir}
+    \subitem {affichage.c}, \hyperpage{172}
+    \subitem {affichage.h}, \hyperpage{44}, \hyperpage{59}
+  \item {joueur\_tirer}
+    \subitem {jeu.c}, \hyperpage{214}
+    \subitem {jeu.h}, \hyperpage{121}, \hyperpage{131}
+
+  \indexspace
+
+  \item {lance\_eclairs}
+    \subitem {Bulle}, \hyperpage{18}
+  \item {LARGEUR\_FENETRE}
+    \subitem {entites.h}, \hyperpage{101}, \hyperpage{107}
+  \item {LIBELLES\_MENU}
+    \subitem {menu.c}, \hyperpage{239}
+  \item {liste}
+    \subitem {ListeEclairs}, \hyperpage{29}
+  \item {ListeEclairs}, \hyperpage{28}
+    \subitem {liste}, \hyperpage{29}
+    \subitem {nb}, \hyperpage{29}
+  \item {lister\_sauvegardes}
+    \subitem {main.c}, \hyperpage{224}
+    \subitem {sauvegarde.h}, \hyperpage{150}
+
+  \indexspace
+
+  \item {main}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{186}
+    \subitem {main.c}, \hyperpage{224}
+  \item {main.c}
+    \subitem {compteur}, \hyperpage{224}
+    \subitem {ETAT\_DEFAITE}, \hyperpage{223}
+    \subitem {ETAT\_EN\_JEU}, \hyperpage{223}
+    \subitem {ETAT\_MENU}, \hyperpage{223}
+    \subitem {ETAT\_PAUSE}, \hyperpage{223}
+    \subitem {ETAT\_QUITTER}, \hyperpage{223}
+    \subitem {ETAT\_SAISIE\_PSEUDO}, \hyperpage{223}
+    \subitem {ETAT\_SAISIE\_PSEUDO\_REPRISE}, \hyperpage{223}
+    \subitem {ETAT\_SAUVEGARDE}, \hyperpage{223}
+    \subitem {ETAT\_VICTOIRE}, \hyperpage{223}
+    \subitem {EtatApplication}, \hyperpage{223}
+    \subitem {lister\_sauvegardes}, \hyperpage{224}
+    \subitem {main}, \hyperpage{224}
+    \subitem {NOGDI}, \hyperpage{223}
+    \subitem {tics}, \hyperpage{228}
+    \subitem {WIN32\_LEAN\_AND\_MEAN}, \hyperpage{223}
+  \item {MAX\_BONUS}
+    \subitem {entites.h}, \hyperpage{101}, \hyperpage{107}
+  \item {MAX\_BULLES}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{107}
+  \item {MAX\_ECLAIRS}
+    \subitem {eclair.h}, \hyperpage{92}, \hyperpage{97}
+  \item {MAX\_PROJECTILES}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{107}
+  \item {menu.c}
+    \subitem {afficher\_menu}, \hyperpage{233}
+    \subitem {afficher\_regles}, \hyperpage{235}
+    \subitem {compteur\_anim}, \hyperpage{239}
+    \subitem {LIBELLES\_MENU}, \hyperpage{239}
+    \subitem {menu\_init}, \hyperpage{237}
+    \subitem {menu\_mettre\_a\_jour}, \hyperpage{238}
+    \subitem {menu\_saisir\_pseudo}, \hyperpage{239}
+    \subitem {police\_menu}, \hyperpage{240}
+    \subitem {police\_petite}, \hyperpage{240}
+    \subitem {police\_regles}, \hyperpage{240}
+    \subitem {police\_titre}, \hyperpage{240}
+  \item {menu.h}
+    \subitem {afficher\_menu}, \hyperpage{135}, \hyperpage{144}
+    \subitem {afficher\_regles}, \hyperpage{137}, \hyperpage{146}
+    \subitem {ElementMenu}, \hyperpage{135}, \hyperpage{144}
+    \subitem {menu\_init}, \hyperpage{139}, \hyperpage{147}
+    \subitem {menu\_mettre\_a\_jour}, \hyperpage{140}, \hyperpage{147}
+    \subitem {MENU\_NOUVELLE\_PARTIE}, \hyperpage{135}, \hyperpage{144}
+    \subitem {MENU\_QUITTER}, \hyperpage{135}, \hyperpage{144}
+    \subitem {MENU\_REGLES}, \hyperpage{135}, \hyperpage{144}
+    \subitem {MENU\_REPRENDRE\_PARTIE}, \hyperpage{135}, 
+		\hyperpage{144}
+    \subitem {menu\_saisir\_pseudo}, \hyperpage{141}, \hyperpage{148}
+    \subitem {NB\_ELEMENTS\_MENU}, \hyperpage{134}, \hyperpage{144}
+  \item {menu\_init}
+    \subitem {menu.c}, \hyperpage{237}
+    \subitem {menu.h}, \hyperpage{139}, \hyperpage{147}
+  \item {menu\_mettre\_a\_jour}
+    \subitem {menu.c}, \hyperpage{238}
+    \subitem {menu.h}, \hyperpage{140}, \hyperpage{147}
+  \item {MENU\_NOUVELLE\_PARTIE}
+    \subitem {menu.h}, \hyperpage{135}, \hyperpage{144}
+  \item {MENU\_QUITTER}
+    \subitem {menu.h}, \hyperpage{135}, \hyperpage{144}
+  \item {MENU\_REGLES}
+    \subitem {menu.h}, \hyperpage{135}, \hyperpage{144}
+  \item {MENU\_REPRENDRE\_PARTIE}
+    \subitem {menu.h}, \hyperpage{135}, \hyperpage{144}
+  \item {menu\_saisir\_pseudo}
+    \subitem {menu.c}, \hyperpage{239}
+    \subitem {menu.h}, \hyperpage{141}, \hyperpage{148}
+
+  \indexspace
+
+  \item {nb}
+    \subitem {ListeEclairs}, \hyperpage{29}
+  \item {nb\_bulles}
+    \subitem {EtatJeu}, \hyperpage{24}
+  \item {NB\_ELEMENTS\_MENU}
+    \subitem {menu.h}, \hyperpage{134}, \hyperpage{144}
+  \item {NB\_TYPES\_BONUS}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{107}
+  \item {niveau}
+    \subitem {EtatJeu}, \hyperpage{25}
+  \item {NOGDI}
+    \subitem {main.c}, \hyperpage{223}
+    \subitem {sauvegarde.c}, \hyperpage{245}
+  \item {nom\_fichier}
+    \subitem {sauvegarde.c}, \hyperpage{246}
+
+  \indexspace
+
+  \item {pause}
+    \subitem {EtatEntrees}, \hyperpage{21}
+  \item {pause\_appuye}
+    \subitem {EtatEntrees}, \hyperpage{21}
+  \item {PLATFORM\_ID}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{185}
+  \item {points\_vie}
+    \subitem {Boss}, \hyperpage{17}
+  \item {points\_vie\_max}
+    \subitem {Boss}, \hyperpage{17}
+  \item {police\_menu}
+    \subitem {menu.c}, \hyperpage{240}
+  \item {police\_petite}
+    \subitem {menu.c}, \hyperpage{240}
+  \item {police\_regles}
+    \subitem {menu.c}, \hyperpage{240}
+  \item {police\_titre}
+    \subitem {menu.c}, \hyperpage{240}
+  \item {Projectile}, \hyperpage{29}
+    \subitem {active}, \hyperpage{30}
+    \subitem {explosion}, \hyperpage{30}
+    \subitem {vx}, \hyperpage{30}
+    \subitem {vy}, \hyperpage{30}
+    \subitem {x}, \hyperpage{30}
+    \subitem {y}, \hyperpage{30}
+  \item {projectiles}
+    \subitem {EtatJeu}, \hyperpage{25}
+  \item {pseudo}
+    \subitem {Joueur}, \hyperpage{27}
+  \item {PSEUDO\_LEN}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{107}
+  \item {pseudo\_saisi}
+    \subitem {EtatMenu}, \hyperpage{26}
+
+  \indexspace
+
+  \item {quitter}
+    \subitem {EtatEntrees}, \hyperpage{21}
+
+  \indexspace
+
+  \item {rayon\_bulle}
+    \subitem {entites.h}, \hyperpage{103}, \hyperpage{109}
+    \subitem {jeu.c}, \hyperpage{215}
+  \item {README.md}, \hyperpage{155}
+  \item {Répertoire de référence de header}, \hyperpage{13}
+  \item {Répertoire de référence de src}, \hyperpage{13}
+  \item {Répertoire de référence de src/cmake-\/build-\/debug}, 
+		\hyperpage{12}
+  \item {Répertoire de référence de src/cmake-\/build-\/debug/CMakeFiles}, 
+		\hyperpage{12}
+  \item {Répertoire de référence de src/cmake-\/build-\/debug/CMakeFiles/4.2.2}, 
+		\hyperpage{11}
+  \item {Répertoire de référence de src/cmake-\/build-\/debug/CMakeFiles/4.2.2/CompilerIdC}, 
+		\hyperpage{13}
+
+  \indexspace
+
+  \item {saisie\_en\_cours}
+    \subitem {EtatMenu}, \hyperpage{26}
+  \item {sauvegarde.c}
+    \subitem {NOGDI}, \hyperpage{245}
+    \subitem {nom\_fichier}, \hyperpage{246}
+    \subitem {sauvegarde\_ecrire}, \hyperpage{246}
+    \subitem {sauvegarde\_existe}, \hyperpage{247}
+    \subitem {sauvegarde\_lire}, \hyperpage{247}
+    \subitem {sauvegarde\_lister}, \hyperpage{248}
+    \subitem {WIN32\_LEAN\_AND\_MEAN}, \hyperpage{245}
+  \item {sauvegarde.h}
+    \subitem {charger\_partie}, \hyperpage{150}
+    \subitem {FICHIER\_SAUVEGARDE}, \hyperpage{150}, \hyperpage{152}
+    \subitem {lister\_sauvegardes}, \hyperpage{150}
+    \subitem {sauvegarde\_ecrire}, \hyperpage{152}
+    \subitem {sauvegarde\_existe}, \hyperpage{152}
+    \subitem {sauvegarde\_lire}, \hyperpage{153}
+    \subitem {sauvegarde\_lister}, \hyperpage{154}
+    \subitem {sauvegarder\_partie}, \hyperpage{150}
+  \item {sauvegarde\_ecrire}
+    \subitem {sauvegarde.c}, \hyperpage{246}
+    \subitem {sauvegarde.h}, \hyperpage{152}
+  \item {sauvegarde\_existe}
+    \subitem {sauvegarde.c}, \hyperpage{247}
+    \subitem {sauvegarde.h}, \hyperpage{152}
+  \item {sauvegarde\_lire}
+    \subitem {sauvegarde.c}, \hyperpage{247}
+    \subitem {sauvegarde.h}, \hyperpage{153}
+  \item {sauvegarde\_lister}
+    \subitem {sauvegarde.c}, \hyperpage{248}
+    \subitem {sauvegarde.h}, \hyperpage{154}
+  \item {sauvegarder\_partie}
+    \subitem {sauvegarde.h}, \hyperpage{150}
+  \item {score}
+    \subitem {Joueur}, \hyperpage{27}
+  \item {sprite\_bonus\_explosion}
+    \subitem {affichage.c}, \hyperpage{173}
+  \item {sprite\_bonus\_rapide}
+    \subitem {affichage.c}, \hyperpage{173}
+  \item {sprite\_bonus\_triple}
+    \subitem {affichage.c}, \hyperpage{173}
+  \item {sprite\_boss}
+    \subitem {affichage.c}, \hyperpage{173}
+  \item {sprite\_bulle\_grande}
+    \subitem {affichage.c}, \hyperpage{173}
+    \subitem {affichage.h}, \hyperpage{45}, \hyperpage{60}
+  \item {sprite\_bulle\_minuscule}
+    \subitem {affichage.c}, \hyperpage{174}
+    \subitem {affichage.h}, \hyperpage{45}, \hyperpage{60}
+  \item {sprite\_bulle\_moyenne}
+    \subitem {affichage.c}, \hyperpage{174}
+    \subitem {affichage.h}, \hyperpage{45}, \hyperpage{60}
+  \item {sprite\_bulle\_petite}
+    \subitem {affichage.c}, \hyperpage{174}
+    \subitem {affichage.h}, \hyperpage{46}, \hyperpage{60}
+  \item {sprite\_idle}
+    \subitem {affichage.c}, \hyperpage{174}
+  \item {sprite\_marche\_d1}
+    \subitem {affichage.c}, \hyperpage{174}
+  \item {sprite\_marche\_d2}
+    \subitem {affichage.c}, \hyperpage{174}
+  \item {sprite\_marche\_g1}
+    \subitem {affichage.c}, \hyperpage{174}
+  \item {sprite\_marche\_g2}
+    \subitem {affichage.c}, \hyperpage{174}
+  \item {sprite\_tir}
+    \subitem {affichage.c}, \hyperpage{175}
+  \item {src/affichage.c}, \hyperpage{155}, \hyperpage{175}
+  \item {src/affichage.h}, \hyperpage{46}, \hyperpage{60}
+  \item {src/alfont.h}, \hyperpage{75}, \hyperpage{87}
+  \item {src/alfontdll.h}, \hyperpage{89, 90}
+  \item {src/cmake-\/build-\/debug/CMakeFiles/4.2.2/CompilerIdC/CMakeCCompilerId.c}, 
+		\hyperpage{183}, \hyperpage{187}
+  \item {src/eclair.c}, \hyperpage{198}, \hyperpage{202}
+  \item {src/eclair.h}, \hyperpage{95}, \hyperpage{99}
+  \item {src/entites.h}, \hyperpage{105}, \hyperpage{109}
+  \item {src/entrees.c}, \hyperpage{203, 204}
+  \item {src/entrees.h}, \hyperpage{112, 113}
+  \item {src/jeu.c}, \hyperpage{204}, \hyperpage{216}
+  \item {src/jeu.h}, \hyperpage{124}, \hyperpage{132}
+  \item {src/main.c}, \hyperpage{221}, \hyperpage{229}
+  \item {src/menu.c}, \hyperpage{232}, \hyperpage{241}
+  \item {src/menu.h}, \hyperpage{142}, \hyperpage{148}
+  \item {src/sauvegarde.c}, \hyperpage{244}, \hyperpage{249}
+  \item {src/sauvegarde.h}, \hyperpage{151}, \hyperpage{155}
+  \item {STRINGIFY}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{185}
+  \item {STRINGIFY\_HELPER}
+    \subitem {CMakeCCompilerId.c}, \hyperpage{186}
+  \item {Super Bulles -\/ Projet INFO S2}, \hyperpage{1}
+
+  \indexspace
+
+  \item {taille}
+    \subitem {Bulle}, \hyperpage{19}
+  \item {TailleBulle}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{108}
+  \item {temps\_restant}
+    \subitem {EtatJeu}, \hyperpage{25}
+  \item {tics}
+    \subitem {main.c}, \hyperpage{228}
+  \item {timer}
+    \subitem {BonusArme}, \hyperpage{15}
+    \subitem {Eclair}, \hyperpage{20}
+  \item {timer\_anim\_boss}
+    \subitem {affichage.c}, \hyperpage{175}
+  \item {timer\_arme\_speciale}
+    \subitem {EtatJeu}, \hyperpage{25}
+  \item {timer\_tir}
+    \subitem {Boss}, \hyperpage{17}
+  \item {tirer}
+    \subitem {EtatEntrees}, \hyperpage{22}
+  \item {type}
+    \subitem {BonusArme}, \hyperpage{15}
+  \item {TypeArme}
+    \subitem {entites.h}, \hyperpage{102}, \hyperpage{108}
+
+  \indexspace
+
+  \item {verifier\_collision\_cercle\_rect}
+    \subitem {jeu.c}, \hyperpage{215}
+    \subitem {jeu.h}, \hyperpage{123}, \hyperpage{132}
+  \item {vivant}
+    \subitem {Joueur}, \hyperpage{27}
+  \item {vx}
+    \subitem {Boss}, \hyperpage{17}
+    \subitem {Bulle}, \hyperpage{19}
+    \subitem {Joueur}, \hyperpage{28}
+    \subitem {Projectile}, \hyperpage{30}
+  \item {vy}
+    \subitem {Boss}, \hyperpage{17}
+    \subitem {Bulle}, \hyperpage{19}
+    \subitem {Projectile}, \hyperpage{30}
+
+  \indexspace
+
+  \item {WIN32\_LEAN\_AND\_MEAN}
+    \subitem {main.c}, \hyperpage{223}
+    \subitem {sauvegarde.c}, \hyperpage{245}
+
+  \indexspace
+
+  \item {x}
+    \subitem {BonusArme}, \hyperpage{16}
+    \subitem {Boss}, \hyperpage{17}
+    \subitem {Bulle}, \hyperpage{19}
+    \subitem {Eclair}, \hyperpage{20}
+    \subitem {Joueur}, \hyperpage{28}
+    \subitem {Projectile}, \hyperpage{30}
+
+  \indexspace
+
+  \item {y}
+    \subitem {BonusArme}, \hyperpage{16}
+    \subitem {Boss}, \hyperpage{17}
+    \subitem {Bulle}, \hyperpage{19}
+    \subitem {Eclair}, \hyperpage{20}
+    \subitem {Joueur}, \hyperpage{28}
+    \subitem {Projectile}, \hyperpage{30}
+
+\end{theindex}

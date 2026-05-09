@@ -1,0 +1,36 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pcf/pcf.c"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="src/alfont-code-r12\l-trunk/alfont-code-r12\l-trunk/freetype/src/pcf/pcf.c",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ft2build.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ft2build_8h.html",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="freetype/config/ftheader.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftheader_8h.html",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="pcfutil.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfutil_8c.html",tooltip=" "];
+  Node4 -> Node2 [id="edge4_Node000004_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="pcfutil.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfutil_8h.html",tooltip=" "];
+  Node5 -> Node2 [id="edge6_Node000005_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="pcfread.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfread_8c.html",tooltip=" "];
+  Node6 -> Node2 [id="edge8_Node000006_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge9_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="pcf.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcf_8h.html",tooltip=" "];
+  Node7 -> Node2 [id="edge10_Node000007_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node8 [id="edge11_Node000006_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="pcfdriver.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfdriver_8h.html",tooltip=" "];
+  Node8 -> Node2 [id="edge12_Node000008_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node9 [id="edge13_Node000006_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="pcferror.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcferror_8h.html",tooltip=" "];
+  Node1 -> Node10 [id="edge14_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="pcfdriver.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$pcfdriver_8c.html",tooltip=" "];
+  Node10 -> Node2 [id="edge15_Node000010_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node7 [id="edge16_Node000010_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node8 [id="edge17_Node000010_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node5 [id="edge18_Node000010_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node9 [id="edge19_Node000010_Node000009",color="steelblue1",style="solid",tooltip=" "];
+}

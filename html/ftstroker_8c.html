@@ -1,0 +1,1658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/base/ftstroker.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftstroker_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftstroker.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftstroker.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2ftstroker_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:FT_5FStrokeBorderRec_5F" id="r_FT_5FStrokeBorderRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___stroke_border_rec__.html">FT_StrokeBorderRec_</a></td></tr>
+<tr class="memitem:FT_5FStrokerRec_5F" id="r_FT_5FStrokerRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t___stroker_rec__.html">FT_StrokerRec_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab87e4e15f7a1fea9dcabe6026586ab7a" id="r_ab87e4e15f7a1fea9dcabe6026586ab7a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab87e4e15f7a1fea9dcabe6026586ab7a">FT_SMALL_CONIC_THRESHOLD</a>&#160;&#160;&#160;(<a class="el" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>/6)</td></tr>
+<tr class="memitem:ae3106bae146039c9c72adad131e6cc4e" id="r_ae3106bae146039c9c72adad131e6cc4e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae3106bae146039c9c72adad131e6cc4e">FT_SMALL_CUBIC_THRESHOLD</a>&#160;&#160;&#160;(<a class="el" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>/6)</td></tr>
+<tr class="memitem:a6112bbed977e25d50f4dffee18bfc76e" id="r_a6112bbed977e25d50f4dffee18bfc76e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6112bbed977e25d50f4dffee18bfc76e">FT_EPSILON</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:aad524bdadad82f91c78d2208a4959063" id="r_aad524bdadad82f91c78d2208a4959063"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aad524bdadad82f91c78d2208a4959063">FT_IS_SMALL</a>(x)</td></tr>
+<tr class="memitem:ae8ff0c1c47b295d8f7944fe317d42b0a" id="r_ae8ff0c1c47b295d8f7944fe317d42b0a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae8ff0c1c47b295d8f7944fe317d42b0a">FT_ARC_CUBIC_ANGLE</a>&#160;&#160;&#160;(<a class="el" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>/2)</td></tr>
+<tr class="memitem:a24cde935a2ba6e4e2ea2c804c8adb2f3" id="r_a24cde935a2ba6e4e2ea2c804c8adb2f3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a24cde935a2ba6e4e2ea2c804c8adb2f3">FT_SIDE_TO_ROTATE</a>(s)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a3710b43731398cdbad8a57e3dd39246e" id="r_a3710b43731398cdbad8a57e3dd39246e"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___stroke_border_rec__.html">FT_StrokeBorderRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3710b43731398cdbad8a57e3dd39246e">FT_StrokeBorderRec</a></td></tr>
+<tr class="memitem:abc63e4437de2d237e88472d6e8275f5a" id="r_abc63e4437de2d237e88472d6e8275f5a"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___stroke_border_rec__.html">FT_StrokeBorderRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td></tr>
+<tr class="memitem:ad3eb4c1ce9a20ec9bf5e84a6458f892d" id="r_ad3eb4c1ce9a20ec9bf5e84a6458f892d"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t___stroker_rec__.html">FT_StrokerRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad3eb4c1ce9a20ec9bf5e84a6458f892d">FT_StrokerRec</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:ac33614780f3b9e28ef3afac1488532ed" id="r_ac33614780f3b9e28ef3afac1488532ed"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ac33614780f3b9e28ef3afac1488532ed">FT_StrokeTags</a> { <a class="el" href="#ac33614780f3b9e28ef3afac1488532edae4401743b679a4d981e67dd44f513a87">FT_STROKE_TAG_ON</a> = 1
+, <a class="el" href="#ac33614780f3b9e28ef3afac1488532edae75ee1d5a3bad111dcb857921ef73ded">FT_STROKE_TAG_CUBIC</a> = 2
+, <a class="el" href="#ac33614780f3b9e28ef3afac1488532edaf58e03a8849da69f2c21139c07721a66">FT_STROKE_TAG_BEGIN</a> = 4
+, <a class="el" href="#ac33614780f3b9e28ef3afac1488532eda1bc2b12196bced6be5339baeb5368b43">FT_STROKE_TAG_END</a> = 8
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af193c50d37e7049952d4be7cf1812555" id="r_af193c50d37e7049952d4be7cf1812555"><td class="memItemLeft">static <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>&#160;</td><td class="memItemRight"><a class="el" href="#af193c50d37e7049952d4be7cf1812555">ft_pos_abs</a> (<a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x)</td></tr>
+<tr class="memitem:a0a2d14561747fd8e872ae483310ef4ba" id="r_a0a2d14561747fd8e872ae483310ef4ba"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0a2d14561747fd8e872ae483310ef4ba">ft_conic_split</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *base)</td></tr>
+<tr class="memitem:a33edd93658c127695ad8021e33acc104" id="r_a33edd93658c127695ad8021e33acc104"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a33edd93658c127695ad8021e33acc104">ft_conic_is_small_enough</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *base, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *angle_in, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *angle_out)</td></tr>
+<tr class="memitem:a5424f922f03acee7a1c144a89a94f0a3" id="r_a5424f922f03acee7a1c144a89a94f0a3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5424f922f03acee7a1c144a89a94f0a3">ft_cubic_split</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *base)</td></tr>
+<tr class="memitem:a48847ad6f03123c8d40cfd387a3da2bb" id="r_a48847ad6f03123c8d40cfd387a3da2bb"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a48847ad6f03123c8d40cfd387a3da2bb">ft_cubic_is_small_enough</a> (<a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *base, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *angle_in, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *angle_mid, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *angle_out)</td></tr>
+<tr class="memitem:a56bd2fb9d0e75d1e5802fa96f585966b" id="r_a56bd2fb9d0e75d1e5802fa96f585966b"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a56bd2fb9d0e75d1e5802fa96f585966b">ft_stroke_border_grow</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> new_points)</td></tr>
+<tr class="memitem:ac9464e35dee19ce76331efcdd2cd46de" id="r_ac9464e35dee19ce76331efcdd2cd46de"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac9464e35dee19ce76331efcdd2cd46de">ft_stroke_border_close</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>)</td></tr>
+<tr class="memitem:ac1e0905d69438efd78808fabf7f1142d" id="r_ac1e0905d69438efd78808fabf7f1142d"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac1e0905d69438efd78808fabf7f1142d">ft_stroke_border_lineto</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> movable)</td></tr>
+<tr class="memitem:a4bee0aa35b341d6f5544a38183fa658c" id="r_a4bee0aa35b341d6f5544a38183fa658c"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4bee0aa35b341d6f5544a38183fa658c">ft_stroke_border_conicto</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *control, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to)</td></tr>
+<tr class="memitem:a1dd9ae1ac31990b55015df174665cd32" id="r_a1dd9ae1ac31990b55015df174665cd32"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1dd9ae1ac31990b55015df174665cd32">ft_stroke_border_cubicto</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *control1, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *control2, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to)</td></tr>
+<tr class="memitem:aaf2c9a959b12a24b768a7266ac9363ee" id="r_aaf2c9a959b12a24b768a7266ac9363ee"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaf2c9a959b12a24b768a7266ac9363ee">ft_stroke_border_arcto</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *center, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> radius, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle_start, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle_diff)</td></tr>
+<tr class="memitem:a51b59a31cbd89df47be0c9c61df947c4" id="r_a51b59a31cbd89df47be0c9c61df947c4"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a51b59a31cbd89df47be0c9c61df947c4">ft_stroke_border_moveto</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to)</td></tr>
+<tr class="memitem:ae99fb7e61a2c1fae5852e724688e905a" id="r_ae99fb7e61a2c1fae5852e724688e905a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae99fb7e61a2c1fae5852e724688e905a">ft_stroke_border_init</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:a0c4a3b27f8bc7a1ffba849408bd2f89c" id="r_a0c4a3b27f8bc7a1ffba849408bd2f89c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0c4a3b27f8bc7a1ffba849408bd2f89c">ft_stroke_border_reset</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>)</td></tr>
+<tr class="memitem:adf8fd30cd0417ecd3c6e2de2bef92bf3" id="r_adf8fd30cd0417ecd3c6e2de2bef92bf3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#adf8fd30cd0417ecd3c6e2de2bef92bf3">ft_stroke_border_done</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>)</td></tr>
+<tr class="memitem:a3d0a87fa50f2066daba86bed54fe5430" id="r_a3d0a87fa50f2066daba86bed54fe5430"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3d0a87fa50f2066daba86bed54fe5430">ft_stroke_border_get_counts</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *anum_points, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *anum_contours)</td></tr>
+<tr class="memitem:a19fb01a258733c4a7a48f370e1d8d8e9" id="r_a19fb01a258733c4a7a48f370e1d8d8e9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a19fb01a258733c4a7a48f370e1d8d8e9">ft_stroke_border_export</a> (<a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a> <a class="el" href="infblock_8c.html#a97854b9c671ea1e40fcaef99356b246f">border</a>, <a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline)</td></tr>
+<tr class="memitem:a15b15fbad8ee8d0bfc52ae1e7266f0e7" id="r_a15b15fbad8ee8d0bfc52ae1e7266f0e7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a15b15fbad8ee8d0bfc52ae1e7266f0e7">FT_Stroker_New</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> *astroker)</td></tr>
+<tr class="memitem:af0be981947c3636d7bb1ddcf432c613f" id="r_af0be981947c3636d7bb1ddcf432c613f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af0be981947c3636d7bb1ddcf432c613f">FT_Stroker_Set</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> radius, <a class="el" href="ftstroker_8h.html#aca60b1834ea4c019f4e037c262ea427c">FT_Stroker_LineCap</a> line_cap, <a class="el" href="ftstroker_8h.html#af6945ad6b507cf9d7d61311085a912a9">FT_Stroker_LineJoin</a> line_join, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> miter_limit)</td></tr>
+<tr class="memitem:a42e650e0dd4bbccfc1c32118c6ee524b" id="r_a42e650e0dd4bbccfc1c32118c6ee524b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a42e650e0dd4bbccfc1c32118c6ee524b">FT_Stroker_Done</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker)</td></tr>
+<tr class="memitem:a3efedaf5ec18cfd5b36c3604e7025245" id="r_a3efedaf5ec18cfd5b36c3604e7025245"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3efedaf5ec18cfd5b36c3604e7025245">ft_stroker_arcto</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> side)</td></tr>
+<tr class="memitem:a967292dc4127e00f10a5570af6461a74" id="r_a967292dc4127e00f10a5570af6461a74"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a967292dc4127e00f10a5570af6461a74">ft_stroker_cap</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> angle, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> side)</td></tr>
+<tr class="memitem:a939fe58c7ef98c07b2443fbd6d075cb4" id="r_a939fe58c7ef98c07b2443fbd6d075cb4"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a939fe58c7ef98c07b2443fbd6d075cb4">ft_stroker_inside</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> side)</td></tr>
+<tr class="memitem:ab632a04f4093768ac9d8fb335214c959" id="r_ab632a04f4093768ac9d8fb335214c959"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab632a04f4093768ac9d8fb335214c959">ft_stroker_outside</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> side)</td></tr>
+<tr class="memitem:a3ea11d2c2088d5a2da601561f6db3dba" id="r_a3ea11d2c2088d5a2da601561f6db3dba"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3ea11d2c2088d5a2da601561f6db3dba">ft_stroker_process_corner</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker)</td></tr>
+<tr class="memitem:a0d4b1da911847e88b7bc02867b661ea0" id="r_a0d4b1da911847e88b7bc02867b661ea0"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d4b1da911847e88b7bc02867b661ea0">ft_stroker_subpath_start</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> start_angle)</td></tr>
+<tr class="memitem:a09c014bb4f39ab1d8aa04d3f652b5ab2" id="r_a09c014bb4f39ab1d8aa04d3f652b5ab2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a09c014bb4f39ab1d8aa04d3f652b5ab2">FT_Stroker_LineTo</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to)</td></tr>
+<tr class="memitem:a907808cc2cee0c659100dbc10560e8db" id="r_a907808cc2cee0c659100dbc10560e8db"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a907808cc2cee0c659100dbc10560e8db">FT_Stroker_ConicTo</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *control, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to)</td></tr>
+<tr class="memitem:a6463e08d4f40c63cb109dfcd04afb60f" id="r_a6463e08d4f40c63cb109dfcd04afb60f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6463e08d4f40c63cb109dfcd04afb60f">FT_Stroker_CubicTo</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *control1, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *control2, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to)</td></tr>
+<tr class="memitem:a843508f735e0f169b6d00d91510ac000" id="r_a843508f735e0f169b6d00d91510ac000"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a843508f735e0f169b6d00d91510ac000">FT_Stroker_BeginSubPath</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *to, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> open)</td></tr>
+<tr class="memitem:aede159138119af13e43d86b830a3be4e" id="r_aede159138119af13e43d86b830a3be4e"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aede159138119af13e43d86b830a3be4e">ft_stroker_add_reverse_left</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> open)</td></tr>
+<tr class="memitem:a954981a224366dcb418122e9ac1ef314" id="r_a954981a224366dcb418122e9ac1ef314"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a954981a224366dcb418122e9ac1ef314">FT_Stroker_EndSubPath</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker)</td></tr>
+<tr class="memitem:a2ec913491a0b5226367d3a6dbaaf1c18" id="r_a2ec913491a0b5226367d3a6dbaaf1c18"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2ec913491a0b5226367d3a6dbaaf1c18">FT_Stroker_GetCounts</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *anum_points, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *anum_contours)</td></tr>
+<tr class="memitem:a025959ebc066c402fbfa8450a66e6aa8" id="r_a025959ebc066c402fbfa8450a66e6aa8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a025959ebc066c402fbfa8450a66e6aa8">FT_Stroker_Export</a> (<a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> stroker, <a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ae8ff0c1c47b295d8f7944fe317d42b0a" name="ae8ff0c1c47b295d8f7944fe317d42b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ff0c1c47b295d8f7944fe317d42b0a">&#9670;&#160;</a></span>FT_ARC_CUBIC_ANGLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_ARC_CUBIC_ANGLE&#160;&#160;&#160;(<a class="el" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>/2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6112bbed977e25d50f4dffee18bfc76e" name="a6112bbed977e25d50f4dffee18bfc76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6112bbed977e25d50f4dffee18bfc76e">&#9670;&#160;</a></span>FT_EPSILON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_EPSILON&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad524bdadad82f91c78d2208a4959063" name="aad524bdadad82f91c78d2208a4959063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad524bdadad82f91c78d2208a4959063">&#9670;&#160;</a></span>FT_IS_SMALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_IS_SMALL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((x) &gt; -<a class="code hl_define" href="#a6112bbed977e25d50f4dffee18bfc76e">FT_EPSILON</a> &amp;&amp; (x) &lt; <a class="code hl_define" href="#a6112bbed977e25d50f4dffee18bfc76e">FT_EPSILON</a>)</div>
+<div class="ttc" id="aftstroker_8c_html_a6112bbed977e25d50f4dffee18bfc76e"><div class="ttname"><a href="#a6112bbed977e25d50f4dffee18bfc76e">FT_EPSILON</a></div><div class="ttdeci">#define FT_EPSILON</div><div class="ttdef"><b>Definition</b> ftstroker.c:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24cde935a2ba6e4e2ea2c804c8adb2f3" name="a24cde935a2ba6e4e2ea2c804c8adb2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24cde935a2ba6e4e2ea2c804c8adb2f3">&#9670;&#160;</a></span>FT_SIDE_TO_ROTATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_SIDE_TO_ROTATE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(<a class="code hl_define" href="fttrigon_8h.html#a6d1ae3deee671aed6006230a089d6eb3">FT_ANGLE_PI2</a> - (s)*<a class="code hl_define" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>)</div>
+<div class="ttc" id="afttrigon_8h_html_a23bd682b6d10f9a40511e5dc9576f580"><div class="ttname"><a href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a></div><div class="ttdeci">#define FT_ANGLE_PI</div><div class="ttdef"><b>Definition</b> fttrigon.h:56</div></div>
+<div class="ttc" id="afttrigon_8h_html_a6d1ae3deee671aed6006230a089d6eb3"><div class="ttname"><a href="fttrigon_8h.html#a6d1ae3deee671aed6006230a089d6eb3">FT_ANGLE_PI2</a></div><div class="ttdeci">#define FT_ANGLE_PI2</div><div class="ttdef"><b>Definition</b> fttrigon.h:78</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab87e4e15f7a1fea9dcabe6026586ab7a" name="ab87e4e15f7a1fea9dcabe6026586ab7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab87e4e15f7a1fea9dcabe6026586ab7a">&#9670;&#160;</a></span>FT_SMALL_CONIC_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_SMALL_CONIC_THRESHOLD&#160;&#160;&#160;(<a class="el" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>/6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3106bae146039c9c72adad131e6cc4e" name="ae3106bae146039c9c72adad131e6cc4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3106bae146039c9c72adad131e6cc4e">&#9670;&#160;</a></span>FT_SMALL_CUBIC_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_SMALL_CUBIC_THRESHOLD&#160;&#160;&#160;(<a class="el" href="fttrigon_8h.html#a23bd682b6d10f9a40511e5dc9576f580">FT_ANGLE_PI</a>/6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="abc63e4437de2d237e88472d6e8275f5a" name="abc63e4437de2d237e88472d6e8275f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc63e4437de2d237e88472d6e8275f5a">&#9670;&#160;</a></span>FT_StrokeBorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___stroke_border_rec__.html">FT_StrokeBorderRec_</a> * <a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3710b43731398cdbad8a57e3dd39246e" name="a3710b43731398cdbad8a57e3dd39246e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3710b43731398cdbad8a57e3dd39246e">&#9670;&#160;</a></span>FT_StrokeBorderRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___stroke_border_rec__.html">FT_StrokeBorderRec_</a> <a class="el" href="#a3710b43731398cdbad8a57e3dd39246e">FT_StrokeBorderRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3eb4c1ce9a20ec9bf5e84a6458f892d" name="ad3eb4c1ce9a20ec9bf5e84a6458f892d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3eb4c1ce9a20ec9bf5e84a6458f892d">&#9670;&#160;</a></span>FT_StrokerRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t___stroker_rec__.html">FT_StrokerRec_</a> <a class="el" href="#ad3eb4c1ce9a20ec9bf5e84a6458f892d">FT_StrokerRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="ac33614780f3b9e28ef3afac1488532ed" name="ac33614780f3b9e28ef3afac1488532ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33614780f3b9e28ef3afac1488532ed">&#9670;&#160;</a></span>FT_StrokeTags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ac33614780f3b9e28ef3afac1488532ed">FT_StrokeTags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ac33614780f3b9e28ef3afac1488532edae4401743b679a4d981e67dd44f513a87" name="ac33614780f3b9e28ef3afac1488532edae4401743b679a4d981e67dd44f513a87"></a>FT_STROKE_TAG_ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac33614780f3b9e28ef3afac1488532edae75ee1d5a3bad111dcb857921ef73ded" name="ac33614780f3b9e28ef3afac1488532edae75ee1d5a3bad111dcb857921ef73ded"></a>FT_STROKE_TAG_CUBIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac33614780f3b9e28ef3afac1488532edaf58e03a8849da69f2c21139c07721a66" name="ac33614780f3b9e28ef3afac1488532edaf58e03a8849da69f2c21139c07721a66"></a>FT_STROKE_TAG_BEGIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac33614780f3b9e28ef3afac1488532eda1bc2b12196bced6be5339baeb5368b43" name="ac33614780f3b9e28ef3afac1488532eda1bc2b12196bced6be5339baeb5368b43"></a>FT_STROKE_TAG_END&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a33edd93658c127695ad8021e33acc104" name="a33edd93658c127695ad8021e33acc104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33edd93658c127695ad8021e33acc104">&#9670;&#160;</a></span>ft_conic_is_small_enough()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> ft_conic_is_small_enough </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *</td>          <td class="paramname"><span class="paramname"><em>angle_in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *</td>          <td class="paramname"><span class="paramname"><em>angle_out</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a33edd93658c127695ad8021e33acc104_cgraph.png" border="0" usemap="#aftstroker_8c_a33edd93658c127695ad8021e33acc104_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a33edd93658c127695ad8021e33acc104_icgraph.png" border="0" usemap="#aftstroker_8c_a33edd93658c127695ad8021e33acc104_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a0a2d14561747fd8e872ae483310ef4ba" name="a0a2d14561747fd8e872ae483310ef4ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2d14561747fd8e872ae483310ef4ba">&#9670;&#160;</a></span>ft_conic_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_conic_split </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a0a2d14561747fd8e872ae483310ef4ba_icgraph.png" border="0" usemap="#aftstroker_8c_a0a2d14561747fd8e872ae483310ef4ba_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a48847ad6f03123c8d40cfd387a3da2bb" name="a48847ad6f03123c8d40cfd387a3da2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48847ad6f03123c8d40cfd387a3da2bb">&#9670;&#160;</a></span>ft_cubic_is_small_enough()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> ft_cubic_is_small_enough </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *</td>          <td class="paramname"><span class="paramname"><em>angle_in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *</td>          <td class="paramname"><span class="paramname"><em>angle_mid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a> *</td>          <td class="paramname"><span class="paramname"><em>angle_out</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a48847ad6f03123c8d40cfd387a3da2bb_cgraph.png" border="0" usemap="#aftstroker_8c_a48847ad6f03123c8d40cfd387a3da2bb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a48847ad6f03123c8d40cfd387a3da2bb_icgraph.png" border="0" usemap="#aftstroker_8c_a48847ad6f03123c8d40cfd387a3da2bb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a5424f922f03acee7a1c144a89a94f0a3" name="a5424f922f03acee7a1c144a89a94f0a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5424f922f03acee7a1c144a89a94f0a3">&#9670;&#160;</a></span>ft_cubic_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_cubic_split </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a5424f922f03acee7a1c144a89a94f0a3_icgraph.png" border="0" usemap="#aftstroker_8c_a5424f922f03acee7a1c144a89a94f0a3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="af193c50d37e7049952d4be7cf1812555" name="af193c50d37e7049952d4be7cf1812555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af193c50d37e7049952d4be7cf1812555">&#9670;&#160;</a></span>ft_pos_abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> ft_pos_abs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_af193c50d37e7049952d4be7cf1812555_icgraph.png" border="0" usemap="#aftstroker_8c_af193c50d37e7049952d4be7cf1812555_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="aaf2c9a959b12a24b768a7266ac9363ee" name="aaf2c9a959b12a24b768a7266ac9363ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2c9a959b12a24b768a7266ac9363ee">&#9670;&#160;</a></span>ft_stroke_border_arcto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_arcto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle_start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle_diff</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_aaf2c9a959b12a24b768a7266ac9363ee_cgraph.png" border="0" usemap="#aftstroker_8c_aaf2c9a959b12a24b768a7266ac9363ee_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_aaf2c9a959b12a24b768a7266ac9363ee_icgraph.png" border="0" usemap="#aftstroker_8c_aaf2c9a959b12a24b768a7266ac9363ee_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="ac9464e35dee19ce76331efcdd2cd46de" name="ac9464e35dee19ce76331efcdd2cd46de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9464e35dee19ce76331efcdd2cd46de">&#9670;&#160;</a></span>ft_stroke_border_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_stroke_border_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_ac9464e35dee19ce76331efcdd2cd46de_icgraph.png" border="0" usemap="#aftstroker_8c_ac9464e35dee19ce76331efcdd2cd46de_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a4bee0aa35b341d6f5544a38183fa658c" name="a4bee0aa35b341d6f5544a38183fa658c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bee0aa35b341d6f5544a38183fa658c">&#9670;&#160;</a></span>ft_stroke_border_conicto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_conicto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>control</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a4bee0aa35b341d6f5544a38183fa658c_cgraph.png" border="0" usemap="#aftstroker_8c_a4bee0aa35b341d6f5544a38183fa658c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a4bee0aa35b341d6f5544a38183fa658c_icgraph.png" border="0" usemap="#aftstroker_8c_a4bee0aa35b341d6f5544a38183fa658c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a1dd9ae1ac31990b55015df174665cd32" name="a1dd9ae1ac31990b55015df174665cd32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd9ae1ac31990b55015df174665cd32">&#9670;&#160;</a></span>ft_stroke_border_cubicto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_cubicto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>control1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>control2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a1dd9ae1ac31990b55015df174665cd32_cgraph.png" border="0" usemap="#aftstroker_8c_a1dd9ae1ac31990b55015df174665cd32_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a1dd9ae1ac31990b55015df174665cd32_icgraph.png" border="0" usemap="#aftstroker_8c_a1dd9ae1ac31990b55015df174665cd32_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="adf8fd30cd0417ecd3c6e2de2bef92bf3" name="adf8fd30cd0417ecd3c6e2de2bef92bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8fd30cd0417ecd3c6e2de2bef92bf3">&#9670;&#160;</a></span>ft_stroke_border_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_stroke_border_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_adf8fd30cd0417ecd3c6e2de2bef92bf3_icgraph.png" border="0" usemap="#aftstroker_8c_adf8fd30cd0417ecd3c6e2de2bef92bf3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a19fb01a258733c4a7a48f370e1d8d8e9" name="a19fb01a258733c4a7a48f370e1d8d8e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fb01a258733c4a7a48f370e1d8d8e9">&#9670;&#160;</a></span>ft_stroke_border_export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_stroke_border_export </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a19fb01a258733c4a7a48f370e1d8d8e9_cgraph.png" border="0" usemap="#aftstroker_8c_a19fb01a258733c4a7a48f370e1d8d8e9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="a3d0a87fa50f2066daba86bed54fe5430" name="a3d0a87fa50f2066daba86bed54fe5430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0a87fa50f2066daba86bed54fe5430">&#9670;&#160;</a></span>ft_stroke_border_get_counts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_get_counts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>anum_points</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>anum_contours</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a3d0a87fa50f2066daba86bed54fe5430_icgraph.png" border="0" usemap="#aftstroker_8c_a3d0a87fa50f2066daba86bed54fe5430_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="a56bd2fb9d0e75d1e5802fa96f585966b" name="a56bd2fb9d0e75d1e5802fa96f585966b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56bd2fb9d0e75d1e5802fa96f585966b">&#9670;&#160;</a></span>ft_stroke_border_grow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_grow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>new_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a56bd2fb9d0e75d1e5802fa96f585966b_icgraph.png" border="0" usemap="#aftstroker_8c_a56bd2fb9d0e75d1e5802fa96f585966b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="ae99fb7e61a2c1fae5852e724688e905a" name="ae99fb7e61a2c1fae5852e724688e905a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99fb7e61a2c1fae5852e724688e905a">&#9670;&#160;</a></span>ft_stroke_border_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_stroke_border_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_ae99fb7e61a2c1fae5852e724688e905a_icgraph.png" border="0" usemap="#aftstroker_8c_ae99fb7e61a2c1fae5852e724688e905a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="ac1e0905d69438efd78808fabf7f1142d" name="ac1e0905d69438efd78808fabf7f1142d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e0905d69438efd78808fabf7f1142d">&#9670;&#160;</a></span>ft_stroke_border_lineto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_lineto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>movable</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_ac1e0905d69438efd78808fabf7f1142d_cgraph.png" border="0" usemap="#aftstroker_8c_ac1e0905d69438efd78808fabf7f1142d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_ac1e0905d69438efd78808fabf7f1142d_icgraph.png" border="0" usemap="#aftstroker_8c_ac1e0905d69438efd78808fabf7f1142d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="a51b59a31cbd89df47be0c9c61df947c4" name="a51b59a31cbd89df47be0c9c61df947c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b59a31cbd89df47be0c9c61df947c4">&#9670;&#160;</a></span>ft_stroke_border_moveto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroke_border_moveto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a51b59a31cbd89df47be0c9c61df947c4_cgraph.png" border="0" usemap="#aftstroker_8c_a51b59a31cbd89df47be0c9c61df947c4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a51b59a31cbd89df47be0c9c61df947c4_icgraph.png" border="0" usemap="#aftstroker_8c_a51b59a31cbd89df47be0c9c61df947c4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a0c4a3b27f8bc7a1ffba849408bd2f89c" name="a0c4a3b27f8bc7a1ffba849408bd2f89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4a3b27f8bc7a1ffba849408bd2f89c">&#9670;&#160;</a></span>ft_stroke_border_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_stroke_border_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abc63e4437de2d237e88472d6e8275f5a">FT_StrokeBorder</a></td>          <td class="paramname"><span class="paramname"><em>border</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a0c4a3b27f8bc7a1ffba849408bd2f89c_icgraph.png" border="0" usemap="#aftstroker_8c_a0c4a3b27f8bc7a1ffba849408bd2f89c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="aede159138119af13e43d86b830a3be4e" name="aede159138119af13e43d86b830a3be4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede159138119af13e43d86b830a3be4e">&#9670;&#160;</a></span>ft_stroker_add_reverse_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_add_reverse_left </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>open</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_aede159138119af13e43d86b830a3be4e_cgraph.png" border="0" usemap="#aftstroker_8c_aede159138119af13e43d86b830a3be4e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_aede159138119af13e43d86b830a3be4e_icgraph.png" border="0" usemap="#aftstroker_8c_aede159138119af13e43d86b830a3be4e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a id="a3efedaf5ec18cfd5b36c3604e7025245" name="a3efedaf5ec18cfd5b36c3604e7025245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efedaf5ec18cfd5b36c3604e7025245">&#9670;&#160;</a></span>ft_stroker_arcto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_arcto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>side</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a3efedaf5ec18cfd5b36c3604e7025245_cgraph.png" border="0" usemap="#aftstroker_8c_a3efedaf5ec18cfd5b36c3604e7025245_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a3efedaf5ec18cfd5b36c3604e7025245_icgraph.png" border="0" usemap="#aftstroker_8c_a3efedaf5ec18cfd5b36c3604e7025245_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="a843508f735e0f169b6d00d91510ac000" name="a843508f735e0f169b6d00d91510ac000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843508f735e0f169b6d00d91510ac000">&#9670;&#160;</a></span>FT_Stroker_BeginSubPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_BeginSubPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>open</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a843508f735e0f169b6d00d91510ac000_cgraph.png" border="0" usemap="#aftstroker_8c_a843508f735e0f169b6d00d91510ac000_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a843508f735e0f169b6d00d91510ac000_icgraph.png" border="0" usemap="#aftstroker_8c_a843508f735e0f169b6d00d91510ac000_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a id="a967292dc4127e00f10a5570af6461a74" name="a967292dc4127e00f10a5570af6461a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967292dc4127e00f10a5570af6461a74">&#9670;&#160;</a></span>ft_stroker_cap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_cap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>side</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a967292dc4127e00f10a5570af6461a74_cgraph.png" border="0" usemap="#aftstroker_8c_a967292dc4127e00f10a5570af6461a74_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a907808cc2cee0c659100dbc10560e8db" name="a907808cc2cee0c659100dbc10560e8db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a907808cc2cee0c659100dbc10560e8db">&#9670;&#160;</a></span>FT_Stroker_ConicTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_ConicTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>control</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a907808cc2cee0c659100dbc10560e8db_cgraph.png" border="0" usemap="#aftstroker_8c_a907808cc2cee0c659100dbc10560e8db_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a907808cc2cee0c659100dbc10560e8db_icgraph.png" border="0" usemap="#aftstroker_8c_a907808cc2cee0c659100dbc10560e8db_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="a6463e08d4f40c63cb109dfcd04afb60f" name="a6463e08d4f40c63cb109dfcd04afb60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6463e08d4f40c63cb109dfcd04afb60f">&#9670;&#160;</a></span>FT_Stroker_CubicTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_CubicTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>control1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>control2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a6463e08d4f40c63cb109dfcd04afb60f_cgraph.png" border="0" usemap="#aftstroker_8c_a6463e08d4f40c63cb109dfcd04afb60f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a6463e08d4f40c63cb109dfcd04afb60f_icgraph.png" border="0" usemap="#aftstroker_8c_a6463e08d4f40c63cb109dfcd04afb60f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a42e650e0dd4bbccfc1c32118c6ee524b" name="a42e650e0dd4bbccfc1c32118c6ee524b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e650e0dd4bbccfc1c32118c6ee524b">&#9670;&#160;</a></span>FT_Stroker_Done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_Done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a42e650e0dd4bbccfc1c32118c6ee524b_cgraph.png" border="0" usemap="#aftstroker_8c_a42e650e0dd4bbccfc1c32118c6ee524b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a42e650e0dd4bbccfc1c32118c6ee524b_icgraph.png" border="0" usemap="#aftstroker_8c_a42e650e0dd4bbccfc1c32118c6ee524b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a id="a954981a224366dcb418122e9ac1ef314" name="a954981a224366dcb418122e9ac1ef314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954981a224366dcb418122e9ac1ef314">&#9670;&#160;</a></span>FT_Stroker_EndSubPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_EndSubPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a954981a224366dcb418122e9ac1ef314_cgraph.png" border="0" usemap="#aftstroker_8c_a954981a224366dcb418122e9ac1ef314_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a954981a224366dcb418122e9ac1ef314_icgraph.png" border="0" usemap="#aftstroker_8c_a954981a224366dcb418122e9ac1ef314_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+
+</div>
+</div>
+<a id="a025959ebc066c402fbfa8450a66e6aa8" name="a025959ebc066c402fbfa8450a66e6aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025959ebc066c402fbfa8450a66e6aa8">&#9670;&#160;</a></span>FT_Stroker_Export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_Export </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a025959ebc066c402fbfa8450a66e6aa8_cgraph.png" border="0" usemap="#aftstroker_8c_a025959ebc066c402fbfa8450a66e6aa8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a025959ebc066c402fbfa8450a66e6aa8_icgraph.png" border="0" usemap="#aftstroker_8c_a025959ebc066c402fbfa8450a66e6aa8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+
+</div>
+</div>
+<a id="a2ec913491a0b5226367d3a6dbaaf1c18" name="a2ec913491a0b5226367d3a6dbaaf1c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec913491a0b5226367d3a6dbaaf1c18">&#9670;&#160;</a></span>FT_Stroker_GetCounts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_GetCounts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>anum_points</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>anum_contours</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a2ec913491a0b5226367d3a6dbaaf1c18_cgraph.png" border="0" usemap="#aftstroker_8c_a2ec913491a0b5226367d3a6dbaaf1c18_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a2ec913491a0b5226367d3a6dbaaf1c18_icgraph.png" border="0" usemap="#aftstroker_8c_a2ec913491a0b5226367d3a6dbaaf1c18_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+
+</div>
+</div>
+<a id="a939fe58c7ef98c07b2443fbd6d075cb4" name="a939fe58c7ef98c07b2443fbd6d075cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939fe58c7ef98c07b2443fbd6d075cb4">&#9670;&#160;</a></span>ft_stroker_inside()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_inside </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>side</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a939fe58c7ef98c07b2443fbd6d075cb4_cgraph.png" border="0" usemap="#aftstroker_8c_a939fe58c7ef98c07b2443fbd6d075cb4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a939fe58c7ef98c07b2443fbd6d075cb4_icgraph.png" border="0" usemap="#aftstroker_8c_a939fe58c7ef98c07b2443fbd6d075cb4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+
+</div>
+</div>
+<a id="a09c014bb4f39ab1d8aa04d3f652b5ab2" name="a09c014bb4f39ab1d8aa04d3f652b5ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c014bb4f39ab1d8aa04d3f652b5ab2">&#9670;&#160;</a></span>FT_Stroker_LineTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_LineTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a09c014bb4f39ab1d8aa04d3f652b5ab2_cgraph.png" border="0" usemap="#aftstroker_8c_a09c014bb4f39ab1d8aa04d3f652b5ab2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a09c014bb4f39ab1d8aa04d3f652b5ab2_icgraph.png" border="0" usemap="#aftstroker_8c_a09c014bb4f39ab1d8aa04d3f652b5ab2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="a15b15fbad8ee8d0bfc52ae1e7266f0e7" name="a15b15fbad8ee8d0bfc52ae1e7266f0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b15fbad8ee8d0bfc52ae1e7266f0e7">&#9670;&#160;</a></span>FT_Stroker_New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_New </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a> *</td>          <td class="paramname"><span class="paramname"><em>astroker</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a15b15fbad8ee8d0bfc52ae1e7266f0e7_cgraph.png" border="0" usemap="#aftstroker_8c_a15b15fbad8ee8d0bfc52ae1e7266f0e7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a15b15fbad8ee8d0bfc52ae1e7266f0e7_icgraph.png" border="0" usemap="#aftstroker_8c_a15b15fbad8ee8d0bfc52ae1e7266f0e7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+
+</div>
+</div>
+<a id="ab632a04f4093768ac9d8fb335214c959" name="ab632a04f4093768ac9d8fb335214c959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab632a04f4093768ac9d8fb335214c959">&#9670;&#160;</a></span>ft_stroker_outside()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_outside </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>side</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_ab632a04f4093768ac9d8fb335214c959_cgraph.png" border="0" usemap="#aftstroker_8c_ab632a04f4093768ac9d8fb335214c959_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 50 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_ab632a04f4093768ac9d8fb335214c959_icgraph.png" border="0" usemap="#aftstroker_8c_ab632a04f4093768ac9d8fb335214c959_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 51 -->
+</div>
+
+</div>
+</div>
+<a id="a3ea11d2c2088d5a2da601561f6db3dba" name="a3ea11d2c2088d5a2da601561f6db3dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea11d2c2088d5a2da601561f6db3dba">&#9670;&#160;</a></span>ft_stroker_process_corner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_process_corner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a3ea11d2c2088d5a2da601561f6db3dba_cgraph.png" border="0" usemap="#aftstroker_8c_a3ea11d2c2088d5a2da601561f6db3dba_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 52 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a3ea11d2c2088d5a2da601561f6db3dba_icgraph.png" border="0" usemap="#aftstroker_8c_a3ea11d2c2088d5a2da601561f6db3dba_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 53 -->
+</div>
+
+</div>
+</div>
+<a id="af0be981947c3636d7bb1ddcf432c613f" name="af0be981947c3636d7bb1ddcf432c613f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0be981947c3636d7bb1ddcf432c613f">&#9670;&#160;</a></span>FT_Stroker_Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stroker_Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#aca60b1834ea4c019f4e037c262ea427c">FT_Stroker_LineCap</a></td>          <td class="paramname"><span class="paramname"><em>line_cap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#af6945ad6b507cf9d7d61311085a912a9">FT_Stroker_LineJoin</a></td>          <td class="paramname"><span class="paramname"><em>line_join</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>miter_limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_af0be981947c3636d7bb1ddcf432c613f_cgraph.png" border="0" usemap="#aftstroker_8c_af0be981947c3636d7bb1ddcf432c613f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 54 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_af0be981947c3636d7bb1ddcf432c613f_icgraph.png" border="0" usemap="#aftstroker_8c_af0be981947c3636d7bb1ddcf432c613f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 55 -->
+</div>
+
+</div>
+</div>
+<a id="a0d4b1da911847e88b7bc02867b661ea0" name="a0d4b1da911847e88b7bc02867b661ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4b1da911847e88b7bc02867b661ea0">&#9670;&#160;</a></span>ft_stroker_subpath_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_stroker_subpath_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftstroker_8h.html#ac10d5f2301e83538779af9f59d630827">FT_Stroker</a></td>          <td class="paramname"><span class="paramname"><em>stroker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttrigon_8h.html#a1bdd59adf6f0fabd6bc375da66690f35">FT_Angle</a></td>          <td class="paramname"><span class="paramname"><em>start_angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a0d4b1da911847e88b7bc02867b661ea0_cgraph.png" border="0" usemap="#aftstroker_8c_a0d4b1da911847e88b7bc02867b661ea0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 56 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstroker_8c_a0d4b1da911847e88b7bc02867b661ea0_icgraph.png" border="0" usemap="#aftstroker_8c_a0d4b1da911847e88b7bc02867b661ea0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 57 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_acb6b619e019ac5df49dc8811bc81be5.html">base</a></li><li class="navelem"><a href="ftstroker_8c.html">ftstroker.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

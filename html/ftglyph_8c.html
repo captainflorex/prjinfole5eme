@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/base/ftglyph.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftglyph_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftglyph.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftglyph.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2ftglyph_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_glyph</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab80e973c978b2d9e1af26f0d04b67420" id="r_ab80e973c978b2d9e1af26f0d04b67420"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab80e973c978b2d9e1af26f0d04b67420">FT_Matrix_Multiply</a> (<a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *a, <a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *b)</td></tr>
+<tr class="memitem:a830d14e28757debaec45f11acd06411b" id="r_a830d14e28757debaec45f11acd06411b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a830d14e28757debaec45f11acd06411b">FT_Matrix_Invert</a> (<a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *matrix)</td></tr>
+<tr class="memitem:a32846d8d7b87a128b126f3c88e70f968" id="r_a32846d8d7b87a128b126f3c88e70f968"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a32846d8d7b87a128b126f3c88e70f968">ft_bitmap_copy</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a> *source, <a class="el" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a> *<a class="el" href="gview_8c.html#adb0bf43710827b0babf82aa7080457bd">target</a>)</td></tr>
+<tr class="memitem:a9df706108af7df3db6416a531cc3c491" id="r_a9df706108af7df3db6416a531cc3c491"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9df706108af7df3db6416a531cc3c491">ft_bitmap_glyph_init</a> (<a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a> glyph, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a430193cee37230f9c3a8722c896fc4f4" id="r_a430193cee37230f9c3a8722c896fc4f4"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a430193cee37230f9c3a8722c896fc4f4">ft_bitmap_glyph_copy</a> (<a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a> source, <a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a> <a class="el" href="gview_8c.html#adb0bf43710827b0babf82aa7080457bd">target</a>)</td></tr>
+<tr class="memitem:aec2f2aae485b764a8ef2b1bef3c33778" id="r_aec2f2aae485b764a8ef2b1bef3c33778"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aec2f2aae485b764a8ef2b1bef3c33778">ft_bitmap_glyph_done</a> (<a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a> glyph)</td></tr>
+<tr class="memitem:a74f5a732df4319f0327a3d0503f6de2d" id="r_a74f5a732df4319f0327a3d0503f6de2d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a74f5a732df4319f0327a3d0503f6de2d">ft_bitmap_glyph_bbox</a> (<a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a> glyph, <a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *cbox)</td></tr>
+<tr class="memitem:aeaad2ee397e3caa6477a51c42dda1525" id="r_aeaad2ee397e3caa6477a51c42dda1525"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeaad2ee397e3caa6477a51c42dda1525">ft_outline_glyph_init</a> (<a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> glyph, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:a00f6117aec6e4e52d21c3ca5a3720d15" id="r_a00f6117aec6e4e52d21c3ca5a3720d15"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a00f6117aec6e4e52d21c3ca5a3720d15">ft_outline_glyph_done</a> (<a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> glyph)</td></tr>
+<tr class="memitem:a539440df39f79ca910c4de039214d0f1" id="r_a539440df39f79ca910c4de039214d0f1"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a539440df39f79ca910c4de039214d0f1">ft_outline_glyph_copy</a> (<a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> source, <a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> <a class="el" href="gview_8c.html#adb0bf43710827b0babf82aa7080457bd">target</a>)</td></tr>
+<tr class="memitem:ac7544158d1a4d44d22ffa4874f82f95e" id="r_ac7544158d1a4d44d22ffa4874f82f95e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac7544158d1a4d44d22ffa4874f82f95e">ft_outline_glyph_transform</a> (<a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> glyph, <a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *matrix, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *delta)</td></tr>
+<tr class="memitem:ae10800b403ab8e2966758590c7c475c9" id="r_ae10800b403ab8e2966758590c7c475c9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae10800b403ab8e2966758590c7c475c9">ft_outline_glyph_bbox</a> (<a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> glyph, <a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *bbox)</td></tr>
+<tr class="memitem:a7913b4d36b14ea5a1c2a7084e46358c8" id="r_a7913b4d36b14ea5a1c2a7084e46358c8"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7913b4d36b14ea5a1c2a7084e46358c8">ft_outline_glyph_prepare</a> (<a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a> glyph, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot)</td></tr>
+<tr class="memitem:ac578bc6fe6f4f1cd1b9e44750eb62cdf" id="r_ac578bc6fe6f4f1cd1b9e44750eb62cdf"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac578bc6fe6f4f1cd1b9e44750eb62cdf">ft_new_glyph</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftglyph_8h.html#ad05b3999d93247f41f1c4ac20ea0104b">FT_Glyph_Class</a> *clazz, <a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *aglyph)</td></tr>
+<tr class="memitem:a8e0e732ae2b7cb43965f32821306e393" id="r_a8e0e732ae2b7cb43965f32821306e393"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8e0e732ae2b7cb43965f32821306e393">FT_Glyph_Copy</a> (<a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> source, <a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *<a class="el" href="gview_8c.html#adb0bf43710827b0babf82aa7080457bd">target</a>)</td></tr>
+<tr class="memitem:a87ba3f101920f5c3c736395dc66060c3" id="r_a87ba3f101920f5c3c736395dc66060c3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a87ba3f101920f5c3c736395dc66060c3">FT_Get_Glyph</a> (<a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *aglyph)</td></tr>
+<tr class="memitem:adaa9caf44f6fbe0e51bbefcffc3caf0c" id="r_adaa9caf44f6fbe0e51bbefcffc3caf0c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adaa9caf44f6fbe0e51bbefcffc3caf0c">FT_Glyph_Transform</a> (<a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *matrix, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *delta)</td></tr>
+<tr class="memitem:aa0f41cf13ddb1522da52e67f80f3da2a" id="r_aa0f41cf13ddb1522da52e67f80f3da2a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa0f41cf13ddb1522da52e67f80f3da2a">FT_Glyph_Get_CBox</a> (<a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> glyph, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> bbox_mode, <a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *acbox)</td></tr>
+<tr class="memitem:a669fa0a60332582cf26b5749b566a256" id="r_a669fa0a60332582cf26b5749b566a256"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a669fa0a60332582cf26b5749b566a256">FT_Glyph_To_Bitmap</a> (<a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *the_glyph, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> render_mode, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *origin, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> destroy)</td></tr>
+<tr class="memitem:a5a00b3e4b1714db7e21d054481176e94" id="r_a5a00b3e4b1714db7e21d054481176e94"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a00b3e4b1714db7e21d054481176e94">FT_Done_Glyph</a> (<a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> glyph)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a563db3e394c8600e10297488d7709f9e" id="r_a563db3e394c8600e10297488d7709f9e"><td class="memItemLeft"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftglyph_8h.html#ad05b3999d93247f41f1c4ac20ea0104b">FT_Glyph_Class</a>&#160;</td><td class="memItemRight"><a class="el" href="#a563db3e394c8600e10297488d7709f9e">ft_bitmap_glyph_class</a></td></tr>
+<tr class="memitem:aa2a6f125560ac4cc152d6c72f7c0f765" id="r_aa2a6f125560ac4cc152d6c72f7c0f765"><td class="memItemLeft"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftglyph_8h.html#ad05b3999d93247f41f1c4ac20ea0104b">FT_Glyph_Class</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa2a6f125560ac4cc152d6c72f7c0f765">ft_outline_glyph_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_glyph</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a32846d8d7b87a128b126f3c88e70f968" name="a32846d8d7b87a128b126f3c88e70f968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32846d8d7b87a128b126f3c88e70f968">&#9670;&#160;</a></span>ft_bitmap_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_bitmap_copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a32846d8d7b87a128b126f3c88e70f968_icgraph.png" border="0" usemap="#aftglyph_8c_a32846d8d7b87a128b126f3c88e70f968_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="a74f5a732df4319f0327a3d0503f6de2d" name="a74f5a732df4319f0327a3d0503f6de2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f5a732df4319f0327a3d0503f6de2d">&#9670;&#160;</a></span>ft_bitmap_glyph_bbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_bitmap_glyph_bbox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *</td>          <td class="paramname"><span class="paramname"><em>cbox</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a430193cee37230f9c3a8722c896fc4f4" name="a430193cee37230f9c3a8722c896fc4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430193cee37230f9c3a8722c896fc4f4">&#9670;&#160;</a></span>ft_bitmap_glyph_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_bitmap_glyph_copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a430193cee37230f9c3a8722c896fc4f4_cgraph.png" border="0" usemap="#aftglyph_8c_a430193cee37230f9c3a8722c896fc4f4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="aec2f2aae485b764a8ef2b1bef3c33778" name="aec2f2aae485b764a8ef2b1bef3c33778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2f2aae485b764a8ef2b1bef3c33778">&#9670;&#160;</a></span>ft_bitmap_glyph_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_bitmap_glyph_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9df706108af7df3db6416a531cc3c491" name="a9df706108af7df3db6416a531cc3c491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df706108af7df3db6416a531cc3c491">&#9670;&#160;</a></span>ft_bitmap_glyph_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_bitmap_glyph_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aa6ef094e0e1b9b21ef15c47d07f6acef">FT_BitmapGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a9df706108af7df3db6416a531cc3c491_cgraph.png" border="0" usemap="#aftglyph_8c_a9df706108af7df3db6416a531cc3c491_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a9df706108af7df3db6416a531cc3c491_icgraph.png" border="0" usemap="#aftglyph_8c_a9df706108af7df3db6416a531cc3c491_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a5a00b3e4b1714db7e21d054481176e94" name="a5a00b3e4b1714db7e21d054481176e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a00b3e4b1714db7e21d054481176e94">&#9670;&#160;</a></span>FT_Done_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Done_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a5a00b3e4b1714db7e21d054481176e94_cgraph.png" border="0" usemap="#aftglyph_8c_a5a00b3e4b1714db7e21d054481176e94_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a5a00b3e4b1714db7e21d054481176e94_icgraph.png" border="0" usemap="#aftglyph_8c_a5a00b3e4b1714db7e21d054481176e94_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a87ba3f101920f5c3c736395dc66060c3" name="a87ba3f101920f5c3c736395dc66060c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ba3f101920f5c3c736395dc66060c3">&#9670;&#160;</a></span>FT_Get_Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Get_Glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *</td>          <td class="paramname"><span class="paramname"><em>aglyph</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a87ba3f101920f5c3c736395dc66060c3_cgraph.png" border="0" usemap="#aftglyph_8c_a87ba3f101920f5c3c736395dc66060c3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a87ba3f101920f5c3c736395dc66060c3_icgraph.png" border="0" usemap="#aftglyph_8c_a87ba3f101920f5c3c736395dc66060c3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a8e0e732ae2b7cb43965f32821306e393" name="a8e0e732ae2b7cb43965f32821306e393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0e732ae2b7cb43965f32821306e393">&#9670;&#160;</a></span>FT_Glyph_Copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Glyph_Copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a8e0e732ae2b7cb43965f32821306e393_cgraph.png" border="0" usemap="#aftglyph_8c_a8e0e732ae2b7cb43965f32821306e393_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a8e0e732ae2b7cb43965f32821306e393_icgraph.png" border="0" usemap="#aftglyph_8c_a8e0e732ae2b7cb43965f32821306e393_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="aa0f41cf13ddb1522da52e67f80f3da2a" name="aa0f41cf13ddb1522da52e67f80f3da2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0f41cf13ddb1522da52e67f80f3da2a">&#9670;&#160;</a></span>FT_Glyph_Get_CBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Glyph_Get_CBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>bbox_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *</td>          <td class="paramname"><span class="paramname"><em>acbox</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_aa0f41cf13ddb1522da52e67f80f3da2a_cgraph.png" border="0" usemap="#aftglyph_8c_aa0f41cf13ddb1522da52e67f80f3da2a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_aa0f41cf13ddb1522da52e67f80f3da2a_icgraph.png" border="0" usemap="#aftglyph_8c_aa0f41cf13ddb1522da52e67f80f3da2a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a669fa0a60332582cf26b5749b566a256" name="a669fa0a60332582cf26b5749b566a256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669fa0a60332582cf26b5749b566a256">&#9670;&#160;</a></span>FT_Glyph_To_Bitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Glyph_To_Bitmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *</td>          <td class="paramname"><span class="paramname"><em>the_glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>render_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>destroy</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a669fa0a60332582cf26b5749b566a256_cgraph.png" border="0" usemap="#aftglyph_8c_a669fa0a60332582cf26b5749b566a256_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a669fa0a60332582cf26b5749b566a256_icgraph.png" border="0" usemap="#aftglyph_8c_a669fa0a60332582cf26b5749b566a256_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="adaa9caf44f6fbe0e51bbefcffc3caf0c" name="adaa9caf44f6fbe0e51bbefcffc3caf0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa9caf44f6fbe0e51bbefcffc3caf0c">&#9670;&#160;</a></span>FT_Glyph_Transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Glyph_Transform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>delta</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_adaa9caf44f6fbe0e51bbefcffc3caf0c_cgraph.png" border="0" usemap="#aftglyph_8c_adaa9caf44f6fbe0e51bbefcffc3caf0c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_adaa9caf44f6fbe0e51bbefcffc3caf0c_icgraph.png" border="0" usemap="#aftglyph_8c_adaa9caf44f6fbe0e51bbefcffc3caf0c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="a830d14e28757debaec45f11acd06411b" name="a830d14e28757debaec45f11acd06411b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830d14e28757debaec45f11acd06411b">&#9670;&#160;</a></span>FT_Matrix_Invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Matrix_Invert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a830d14e28757debaec45f11acd06411b_cgraph.png" border="0" usemap="#aftglyph_8c_a830d14e28757debaec45f11acd06411b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a830d14e28757debaec45f11acd06411b_icgraph.png" border="0" usemap="#aftglyph_8c_a830d14e28757debaec45f11acd06411b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="ab80e973c978b2d9e1af26f0d04b67420" name="ab80e973c978b2d9e1af26f0d04b67420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80e973c978b2d9e1af26f0d04b67420">&#9670;&#160;</a></span>FT_Matrix_Multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Matrix_Multiply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_ab80e973c978b2d9e1af26f0d04b67420_cgraph.png" border="0" usemap="#aftglyph_8c_ab80e973c978b2d9e1af26f0d04b67420_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_ab80e973c978b2d9e1af26f0d04b67420_icgraph.png" border="0" usemap="#aftglyph_8c_ab80e973c978b2d9e1af26f0d04b67420_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="ac578bc6fe6f4f1cd1b9e44750eb62cdf" name="ac578bc6fe6f4f1cd1b9e44750eb62cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac578bc6fe6f4f1cd1b9e44750eb62cdf">&#9670;&#160;</a></span>ft_new_glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_new_glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftglyph_8h.html#ad05b3999d93247f41f1c4ac20ea0104b">FT_Glyph_Class</a> *</td>          <td class="paramname"><span class="paramname"><em>clazz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#aeb217021e2817832b003c325b185e003">FT_Glyph</a> *</td>          <td class="paramname"><span class="paramname"><em>aglyph</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_ac578bc6fe6f4f1cd1b9e44750eb62cdf_icgraph.png" border="0" usemap="#aftglyph_8c_ac578bc6fe6f4f1cd1b9e44750eb62cdf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="ae10800b403ab8e2966758590c7c475c9" name="ae10800b403ab8e2966758590c7c475c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10800b403ab8e2966758590c7c475c9">&#9670;&#160;</a></span>ft_outline_glyph_bbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_outline_glyph_bbox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *</td>          <td class="paramname"><span class="paramname"><em>bbox</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_ae10800b403ab8e2966758590c7c475c9_cgraph.png" border="0" usemap="#aftglyph_8c_ae10800b403ab8e2966758590c7c475c9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a539440df39f79ca910c4de039214d0f1" name="a539440df39f79ca910c4de039214d0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539440df39f79ca910c4de039214d0f1">&#9670;&#160;</a></span>ft_outline_glyph_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_outline_glyph_copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a539440df39f79ca910c4de039214d0f1_cgraph.png" border="0" usemap="#aftglyph_8c_a539440df39f79ca910c4de039214d0f1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a00f6117aec6e4e52d21c3ca5a3720d15" name="a00f6117aec6e4e52d21c3ca5a3720d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f6117aec6e4e52d21c3ca5a3720d15">&#9670;&#160;</a></span>ft_outline_glyph_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_outline_glyph_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_a00f6117aec6e4e52d21c3ca5a3720d15_cgraph.png" border="0" usemap="#aftglyph_8c_a00f6117aec6e4e52d21c3ca5a3720d15_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="aeaad2ee397e3caa6477a51c42dda1525" name="aeaad2ee397e3caa6477a51c42dda1525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaad2ee397e3caa6477a51c42dda1525">&#9670;&#160;</a></span>ft_outline_glyph_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_outline_glyph_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_aeaad2ee397e3caa6477a51c42dda1525_cgraph.png" border="0" usemap="#aftglyph_8c_aeaad2ee397e3caa6477a51c42dda1525_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="a7913b4d36b14ea5a1c2a7084e46358c8" name="a7913b4d36b14ea5a1c2a7084e46358c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7913b4d36b14ea5a1c2a7084e46358c8">&#9670;&#160;</a></span>ft_outline_glyph_prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_outline_glyph_prepare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7544158d1a4d44d22ffa4874f82f95e" name="ac7544158d1a4d44d22ffa4874f82f95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7544158d1a4d44d22ffa4874f82f95e">&#9670;&#160;</a></span>ft_outline_glyph_transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_outline_glyph_transform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftglyph_8h.html#ac111c31b2896807d6831f1460c939c8a">FT_OutlineGlyph</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>delta</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftglyph_8c_ac7544158d1a4d44d22ffa4874f82f95e_cgraph.png" border="0" usemap="#aftglyph_8c_ac7544158d1a4d44d22ffa4874f82f95e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a563db3e394c8600e10297488d7709f9e" name="a563db3e394c8600e10297488d7709f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563db3e394c8600e10297488d7709f9e">&#9670;&#160;</a></span>ft_bitmap_glyph_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftglyph_8h.html#ad05b3999d93247f41f1c4ac20ea0104b">FT_Glyph_Class</a> ft_bitmap_glyph_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                            =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftglyph_8h.html#aa43b99a9c4edb2bf09ebfa526852ea8f">FT_BitmapGlyphRec</a> ),</div>
+<div class="line">  FT_GLYPH_FORMAT_BITMAP,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_variable" href="ftrender_8h.html#a55b3628735bbb8ac0d485aec0f6ff737">FT_Glyph_InitFunc</a>)     <a class="code hl_function" href="#a9df706108af7df3db6416a531cc3c491">ft_bitmap_glyph_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a1e2936ce7a25061111dc3bfbeef20026">FT_Glyph_DoneFunc</a>)     <a class="code hl_function" href="#aec2f2aae485b764a8ef2b1bef3c33778">ft_bitmap_glyph_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a6d431bb14581040ff97ab1f695ac5f6b">FT_Glyph_CopyFunc</a>)     <a class="code hl_function" href="#a430193cee37230f9c3a8722c896fc4f4">ft_bitmap_glyph_copy</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a51e591ac2982305310a7944764334cbc">FT_Glyph_TransformFunc</a>)0,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#aba35e5441765cabf71e6ccdc248dac5c">FT_Glyph_GetBBoxFunc</a>)  <a class="code hl_function" href="#a74f5a732df4319f0327a3d0503f6de2d">ft_bitmap_glyph_bbox</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#ad8be01ff60862457d78927ebf1b90199">FT_Glyph_PrepareFunc</a>)  0</div>
+<div class="line">}</div>
+<div class="ttc" id="aftglyph_8c_html_a430193cee37230f9c3a8722c896fc4f4"><div class="ttname"><a href="#a430193cee37230f9c3a8722c896fc4f4">ft_bitmap_glyph_copy</a></div><div class="ttdeci">static FT_Error ft_bitmap_glyph_copy(FT_BitmapGlyph source, FT_BitmapGlyph target)</div><div class="ttdef"><b>Definition</b> ftglyph.c:175</div></div>
+<div class="ttc" id="aftglyph_8c_html_a74f5a732df4319f0327a3d0503f6de2d"><div class="ttname"><a href="#a74f5a732df4319f0327a3d0503f6de2d">ft_bitmap_glyph_bbox</a></div><div class="ttdeci">static void ft_bitmap_glyph_bbox(FT_BitmapGlyph glyph, FT_BBox *cbox)</div><div class="ttdef"><b>Definition</b> ftglyph.c:199</div></div>
+<div class="ttc" id="aftglyph_8c_html_a9df706108af7df3db6416a531cc3c491"><div class="ttname"><a href="#a9df706108af7df3db6416a531cc3c491">ft_bitmap_glyph_init</a></div><div class="ttdeci">static FT_Error ft_bitmap_glyph_init(FT_BitmapGlyph glyph, FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftglyph.c:142</div></div>
+<div class="ttc" id="aftglyph_8c_html_aec2f2aae485b764a8ef2b1bef3c33778"><div class="ttname"><a href="#aec2f2aae485b764a8ef2b1bef3c33778">ft_bitmap_glyph_done</a></div><div class="ttdeci">static void ft_bitmap_glyph_done(FT_BitmapGlyph glyph)</div><div class="ttdef"><b>Definition</b> ftglyph.c:189</div></div>
+<div class="ttc" id="aftglyph_8h_html_aa43b99a9c4edb2bf09ebfa526852ea8f"><div class="ttname"><a href="ftglyph_8h.html#aa43b99a9c4edb2bf09ebfa526852ea8f">FT_BitmapGlyphRec</a></div><div class="ttdeci">struct FT_BitmapGlyphRec_ FT_BitmapGlyphRec</div></div>
+<div class="ttc" id="aftrender_8h_html_a1e2936ce7a25061111dc3bfbeef20026"><div class="ttname"><a href="ftrender_8h.html#a1e2936ce7a25061111dc3bfbeef20026">FT_Glyph_DoneFunc</a></div><div class="ttdeci">void(* FT_Glyph_DoneFunc)(FT_Glyph glyph)</div><div class="ttdef"><b>Definition</b> ftrender.h:46</div></div>
+<div class="ttc" id="aftrender_8h_html_a51e591ac2982305310a7944764334cbc"><div class="ttname"><a href="ftrender_8h.html#a51e591ac2982305310a7944764334cbc">FT_Glyph_TransformFunc</a></div><div class="ttdeci">void(* FT_Glyph_TransformFunc)(FT_Glyph glyph, FT_Matrix *matrix, FT_Vector *delta)</div><div class="ttdef"><b>Definition</b> ftrender.h:49</div></div>
+<div class="ttc" id="aftrender_8h_html_a55b3628735bbb8ac0d485aec0f6ff737"><div class="ttname"><a href="ftrender_8h.html#a55b3628735bbb8ac0d485aec0f6ff737">FT_Glyph_InitFunc</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef FT_Error(* FT_Glyph_InitFunc)(FT_Glyph glyph, FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftrender.h:41</div></div>
+<div class="ttc" id="aftrender_8h_html_a6d431bb14581040ff97ab1f695ac5f6b"><div class="ttname"><a href="ftrender_8h.html#a6d431bb14581040ff97ab1f695ac5f6b">FT_Glyph_CopyFunc</a></div><div class="ttdeci">FT_Error(* FT_Glyph_CopyFunc)(FT_Glyph source, FT_Glyph target)</div><div class="ttdef"><b>Definition</b> ftrender.h:58</div></div>
+<div class="ttc" id="aftrender_8h_html_aba35e5441765cabf71e6ccdc248dac5c"><div class="ttname"><a href="ftrender_8h.html#aba35e5441765cabf71e6ccdc248dac5c">FT_Glyph_GetBBoxFunc</a></div><div class="ttdeci">void(* FT_Glyph_GetBBoxFunc)(FT_Glyph glyph, FT_BBox *abbox)</div><div class="ttdef"><b>Definition</b> ftrender.h:54</div></div>
+<div class="ttc" id="aftrender_8h_html_ad8be01ff60862457d78927ebf1b90199"><div class="ttname"><a href="ftrender_8h.html#ad8be01ff60862457d78927ebf1b90199">FT_Glyph_PrepareFunc</a></div><div class="ttdeci">FT_Error(* FT_Glyph_PrepareFunc)(FT_Glyph glyph, FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftrender.h:62</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa2a6f125560ac4cc152d6c72f7c0f765" name="aa2a6f125560ac4cc152d6c72f7c0f765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a6f125560ac4cc152d6c72f7c0f765">&#9670;&#160;</a></span>ft_outline_glyph_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftglyph_8h.html#ad05b3999d93247f41f1c4ac20ea0104b">FT_Glyph_Class</a> ft_outline_glyph_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                             =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftglyph_8h.html#a1baaa916d5f168bb3c706ba46d4c6195">FT_OutlineGlyphRec</a> ),</div>
+<div class="line">  FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_variable" href="ftrender_8h.html#a55b3628735bbb8ac0d485aec0f6ff737">FT_Glyph_InitFunc</a>)     <a class="code hl_function" href="#aeaad2ee397e3caa6477a51c42dda1525">ft_outline_glyph_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a1e2936ce7a25061111dc3bfbeef20026">FT_Glyph_DoneFunc</a>)     <a class="code hl_function" href="#a00f6117aec6e4e52d21c3ca5a3720d15">ft_outline_glyph_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a6d431bb14581040ff97ab1f695ac5f6b">FT_Glyph_CopyFunc</a>)     <a class="code hl_function" href="#a539440df39f79ca910c4de039214d0f1">ft_outline_glyph_copy</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a51e591ac2982305310a7944764334cbc">FT_Glyph_TransformFunc</a>)<a class="code hl_function" href="#ac7544158d1a4d44d22ffa4874f82f95e">ft_outline_glyph_transform</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#aba35e5441765cabf71e6ccdc248dac5c">FT_Glyph_GetBBoxFunc</a>)  <a class="code hl_function" href="#ae10800b403ab8e2966758590c7c475c9">ft_outline_glyph_bbox</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#ad8be01ff60862457d78927ebf1b90199">FT_Glyph_PrepareFunc</a>)  <a class="code hl_function" href="#a7913b4d36b14ea5a1c2a7084e46358c8">ft_outline_glyph_prepare</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftglyph_8c_html_a00f6117aec6e4e52d21c3ca5a3720d15"><div class="ttname"><a href="#a00f6117aec6e4e52d21c3ca5a3720d15">ft_outline_glyph_done</a></div><div class="ttdeci">static void ft_outline_glyph_done(FT_OutlineGlyph glyph)</div><div class="ttdef"><b>Definition</b> ftglyph.c:274</div></div>
+<div class="ttc" id="aftglyph_8c_html_a539440df39f79ca910c4de039214d0f1"><div class="ttname"><a href="#a539440df39f79ca910c4de039214d0f1">ft_outline_glyph_copy</a></div><div class="ttdeci">static FT_Error ft_outline_glyph_copy(FT_OutlineGlyph source, FT_OutlineGlyph target)</div><div class="ttdef"><b>Definition</b> ftglyph.c:281</div></div>
+<div class="ttc" id="aftglyph_8c_html_a7913b4d36b14ea5a1c2a7084e46358c8"><div class="ttname"><a href="#a7913b4d36b14ea5a1c2a7084e46358c8">ft_outline_glyph_prepare</a></div><div class="ttdeci">static FT_Error ft_outline_glyph_prepare(FT_OutlineGlyph glyph, FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftglyph.c:319</div></div>
+<div class="ttc" id="aftglyph_8c_html_ac7544158d1a4d44d22ffa4874f82f95e"><div class="ttname"><a href="#ac7544158d1a4d44d22ffa4874f82f95e">ft_outline_glyph_transform</a></div><div class="ttdeci">static void ft_outline_glyph_transform(FT_OutlineGlyph glyph, FT_Matrix *matrix, FT_Vector *delta)</div><div class="ttdef"><b>Definition</b> ftglyph.c:298</div></div>
+<div class="ttc" id="aftglyph_8c_html_ae10800b403ab8e2966758590c7c475c9"><div class="ttname"><a href="#ae10800b403ab8e2966758590c7c475c9">ft_outline_glyph_bbox</a></div><div class="ttdeci">static void ft_outline_glyph_bbox(FT_OutlineGlyph glyph, FT_BBox *bbox)</div><div class="ttdef"><b>Definition</b> ftglyph.c:311</div></div>
+<div class="ttc" id="aftglyph_8c_html_aeaad2ee397e3caa6477a51c42dda1525"><div class="ttname"><a href="#aeaad2ee397e3caa6477a51c42dda1525">ft_outline_glyph_init</a></div><div class="ttdeci">static FT_Error ft_outline_glyph_init(FT_OutlineGlyph glyph, FT_GlyphSlot slot)</div><div class="ttdef"><b>Definition</b> ftglyph.c:233</div></div>
+<div class="ttc" id="aftglyph_8h_html_a1baaa916d5f168bb3c706ba46d4c6195"><div class="ttname"><a href="ftglyph_8h.html#a1baaa916d5f168bb3c706ba46d4c6195">FT_OutlineGlyphRec</a></div><div class="ttdeci">struct FT_OutlineGlyphRec_ FT_OutlineGlyphRec</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_acb6b619e019ac5df49dc8811bc81be5.html">base</a></li><li class="navelem"><a href="ftglyph_8c.html">ftglyph.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

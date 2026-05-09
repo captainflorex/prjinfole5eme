@@ -1,0 +1,17 @@
+digraph "TT_Get_Metrics"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="TT_Get_Metrics",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="compute_glyph_metrics",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#ab61c2532535d8358083882c596b67b82",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Get_HMetrics",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a9e334e95215dabfc8252b324ad640ea8",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="load_truetype_glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ttgload_8c.html#a1ae7c7265a777e72c82c93e666ebbb41",tooltip=" "];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge5_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

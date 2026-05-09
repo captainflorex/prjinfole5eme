@@ -1,0 +1,19 @@
+digraph "AH_Optimizer_Init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="AH_Optimizer_Init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="AH_Optimizer_Done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#ae4fb113f591ebc39870c7f32216664eb",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="optim_compute_springs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#a8adb1530483c9c46bf8d3270aad50072",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="stem_spring_area",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#a7a2b30fbbfbd886f5c78e83d40956825",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="optim_compute_stems",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#a9ae2d0adc35624390b29b9c5f0790d0c",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="valid_stem_segments",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ahoptim_8c.html#a05eeabc8d245b03de6f16e1164dbac02",tooltip=" "];
+}

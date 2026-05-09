@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/base/ftstream.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftstream_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftstream.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftstream.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2ftstream_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2base_2ftstream_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ftstream_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_stream</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:adef0df22d5202d491bd9c8a93fb4bffd" id="r_adef0df22d5202d491bd9c8a93fb4bffd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adef0df22d5202d491bd9c8a93fb4bffd">FT_Stream_OpenMemory</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *base, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> size)</td></tr>
+<tr class="memitem:a593fa53a196798f63d80b7bfc25a1e7a" id="r_a593fa53a196798f63d80b7bfc25a1e7a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a593fa53a196798f63d80b7bfc25a1e7a">FT_Stream_Close</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:adaaeed4eea8beadd5ae9a5493b340890" id="r_adaaeed4eea8beadd5ae9a5493b340890"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adaaeed4eea8beadd5ae9a5493b340890">FT_Stream_Seek</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> pos)</td></tr>
+<tr class="memitem:af8c7f7371554f4eb30c7aa56ded8078a" id="r_af8c7f7371554f4eb30c7aa56ded8078a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af8c7f7371554f4eb30c7aa56ded8078a">FT_Stream_Skip</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> distance)</td></tr>
+<tr class="memitem:aa779880df754b097a9f92f45d648ab42" id="r_aa779880df754b097a9f92f45d648ab42"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa779880df754b097a9f92f45d648ab42">FT_Stream_Pos</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:ab3efa470f29a814a6e99d51f62fa005a" id="r_ab3efa470f29a814a6e99d51f62fa005a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab3efa470f29a814a6e99d51f62fa005a">FT_Stream_Read</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *buffer, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> count)</td></tr>
+<tr class="memitem:a61262facd40a26a70e2bee8b7a22f05b" id="r_a61262facd40a26a70e2bee8b7a22f05b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a61262facd40a26a70e2bee8b7a22f05b">FT_Stream_ReadAt</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> pos, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *buffer, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> count)</td></tr>
+<tr class="memitem:a7171603d2cc206ce768a5b1a2ebea20d" id="r_a7171603d2cc206ce768a5b1a2ebea20d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7171603d2cc206ce768a5b1a2ebea20d">FT_Stream_ExtractFrame</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> count, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **pbytes)</td></tr>
+<tr class="memitem:ac4a5eb8e87737cec90b9c2a2fade0cda" id="r_ac4a5eb8e87737cec90b9c2a2fade0cda"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac4a5eb8e87737cec90b9c2a2fade0cda">FT_Stream_ReleaseFrame</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **pbytes)</td></tr>
+<tr class="memitem:a66977ac21c86fa564b923fec7572e54c" id="r_a66977ac21c86fa564b923fec7572e54c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a66977ac21c86fa564b923fec7572e54c">FT_Stream_EnterFrame</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> count)</td></tr>
+<tr class="memitem:a73170a3614df067fddb5821e2b8a0a19" id="r_a73170a3614df067fddb5821e2b8a0a19"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a73170a3614df067fddb5821e2b8a0a19">FT_Stream_ExitFrame</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a782c38deb5dc7ac0bd520f37199ae240" id="r_a782c38deb5dc7ac0bd520f37199ae240"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a782c38deb5dc7ac0bd520f37199ae240">FT_Stream_GetChar</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:ada5069cdbca30aa734f3b299c1c806b6" id="r_ada5069cdbca30aa734f3b299c1c806b6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ada5069cdbca30aa734f3b299c1c806b6">FT_Stream_GetShort</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a34dc864008352f32e73271f528ff7831" id="r_a34dc864008352f32e73271f528ff7831"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a34dc864008352f32e73271f528ff7831">FT_Stream_GetShortLE</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a5aa6ad75732fac44909dc0ea914bcc52" id="r_a5aa6ad75732fac44909dc0ea914bcc52"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5aa6ad75732fac44909dc0ea914bcc52">FT_Stream_GetOffset</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:ab22fa6721a3519799dc6ee85eda2b6d8" id="r_ab22fa6721a3519799dc6ee85eda2b6d8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab22fa6721a3519799dc6ee85eda2b6d8">FT_Stream_GetLong</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a2ab517cd676aedb030cbe86eda02043f" id="r_a2ab517cd676aedb030cbe86eda02043f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2ab517cd676aedb030cbe86eda02043f">FT_Stream_GetLongLE</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream)</td></tr>
+<tr class="memitem:a5eb02c5f6c9744323c4d0dcbc986d4a7" id="r_a5eb02c5f6c9744323c4d0dcbc986d4a7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5eb02c5f6c9744323c4d0dcbc986d4a7">FT_Stream_ReadChar</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *<a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:acbbd84a970e226303cc97025ea426a52" id="r_acbbd84a970e226303cc97025ea426a52"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acbbd84a970e226303cc97025ea426a52">FT_Stream_ReadShort</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *<a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:a52ef50b3eacab8f3b21943e9c0ca7208" id="r_a52ef50b3eacab8f3b21943e9c0ca7208"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a52ef50b3eacab8f3b21943e9c0ca7208">FT_Stream_ReadShortLE</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *<a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:a319e9746b7169413050371c2678f8110" id="r_a319e9746b7169413050371c2678f8110"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a319e9746b7169413050371c2678f8110">FT_Stream_ReadOffset</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *<a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:a3d718a4884617a767bb3117af01a4738" id="r_a3d718a4884617a767bb3117af01a4738"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3d718a4884617a767bb3117af01a4738">FT_Stream_ReadLong</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *<a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:ab59a4cd63e7489179b138fae21a45a3b" id="r_ab59a4cd63e7489179b138fae21a45a3b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab59a4cd63e7489179b138fae21a45a3b">FT_Stream_ReadLongLE</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *<a class="el" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>)</td></tr>
+<tr class="memitem:a0447bc18a9d0964196bc85aa585a758b" id="r_a0447bc18a9d0964196bc85aa585a758b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0447bc18a9d0964196bc85aa585a758b">FT_Stream_ReadFields</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> *fields, void *structure)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_stream</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a593fa53a196798f63d80b7bfc25a1e7a" name="a593fa53a196798f63d80b7bfc25a1e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593fa53a196798f63d80b7bfc25a1e7a">&#9670;&#160;</a></span>FT_Stream_Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_Close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a593fa53a196798f63d80b7bfc25a1e7a_cgraph.png" border="0" usemap="#aftstream_8c_a593fa53a196798f63d80b7bfc25a1e7a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a593fa53a196798f63d80b7bfc25a1e7a_icgraph.png" border="0" usemap="#aftstream_8c_a593fa53a196798f63d80b7bfc25a1e7a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a66977ac21c86fa564b923fec7572e54c" name="a66977ac21c86fa564b923fec7572e54c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66977ac21c86fa564b923fec7572e54c">&#9670;&#160;</a></span>FT_Stream_EnterFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_EnterFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a66977ac21c86fa564b923fec7572e54c_cgraph.png" border="0" usemap="#aftstream_8c_a66977ac21c86fa564b923fec7572e54c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a66977ac21c86fa564b923fec7572e54c_icgraph.png" border="0" usemap="#aftstream_8c_a66977ac21c86fa564b923fec7572e54c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a73170a3614df067fddb5821e2b8a0a19" name="a73170a3614df067fddb5821e2b8a0a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73170a3614df067fddb5821e2b8a0a19">&#9670;&#160;</a></span>FT_Stream_ExitFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ExitFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a73170a3614df067fddb5821e2b8a0a19_cgraph.png" border="0" usemap="#aftstream_8c_a73170a3614df067fddb5821e2b8a0a19_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a73170a3614df067fddb5821e2b8a0a19_icgraph.png" border="0" usemap="#aftstream_8c_a73170a3614df067fddb5821e2b8a0a19_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a7171603d2cc206ce768a5b1a2ebea20d" name="a7171603d2cc206ce768a5b1a2ebea20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7171603d2cc206ce768a5b1a2ebea20d">&#9670;&#160;</a></span>FT_Stream_ExtractFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ExtractFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>pbytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a7171603d2cc206ce768a5b1a2ebea20d_cgraph.png" border="0" usemap="#aftstream_8c_a7171603d2cc206ce768a5b1a2ebea20d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a7171603d2cc206ce768a5b1a2ebea20d_icgraph.png" border="0" usemap="#aftstream_8c_a7171603d2cc206ce768a5b1a2ebea20d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a782c38deb5dc7ac0bd520f37199ae240" name="a782c38deb5dc7ac0bd520f37199ae240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782c38deb5dc7ac0bd520f37199ae240">&#9670;&#160;</a></span>FT_Stream_GetChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_GetChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a782c38deb5dc7ac0bd520f37199ae240_cgraph.png" border="0" usemap="#aftstream_8c_a782c38deb5dc7ac0bd520f37199ae240_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a782c38deb5dc7ac0bd520f37199ae240_icgraph.png" border="0" usemap="#aftstream_8c_a782c38deb5dc7ac0bd520f37199ae240_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="ab22fa6721a3519799dc6ee85eda2b6d8" name="ab22fa6721a3519799dc6ee85eda2b6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22fa6721a3519799dc6ee85eda2b6d8">&#9670;&#160;</a></span>FT_Stream_GetLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_GetLong </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ab22fa6721a3519799dc6ee85eda2b6d8_cgraph.png" border="0" usemap="#aftstream_8c_ab22fa6721a3519799dc6ee85eda2b6d8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ab22fa6721a3519799dc6ee85eda2b6d8_icgraph.png" border="0" usemap="#aftstream_8c_ab22fa6721a3519799dc6ee85eda2b6d8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a2ab517cd676aedb030cbe86eda02043f" name="a2ab517cd676aedb030cbe86eda02043f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab517cd676aedb030cbe86eda02043f">&#9670;&#160;</a></span>FT_Stream_GetLongLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_GetLongLE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a2ab517cd676aedb030cbe86eda02043f_cgraph.png" border="0" usemap="#aftstream_8c_a2ab517cd676aedb030cbe86eda02043f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a2ab517cd676aedb030cbe86eda02043f_icgraph.png" border="0" usemap="#aftstream_8c_a2ab517cd676aedb030cbe86eda02043f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a5aa6ad75732fac44909dc0ea914bcc52" name="a5aa6ad75732fac44909dc0ea914bcc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa6ad75732fac44909dc0ea914bcc52">&#9670;&#160;</a></span>FT_Stream_GetOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_GetOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a5aa6ad75732fac44909dc0ea914bcc52_cgraph.png" border="0" usemap="#aftstream_8c_a5aa6ad75732fac44909dc0ea914bcc52_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a5aa6ad75732fac44909dc0ea914bcc52_icgraph.png" border="0" usemap="#aftstream_8c_a5aa6ad75732fac44909dc0ea914bcc52_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="ada5069cdbca30aa734f3b299c1c806b6" name="ada5069cdbca30aa734f3b299c1c806b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5069cdbca30aa734f3b299c1c806b6">&#9670;&#160;</a></span>FT_Stream_GetShort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_GetShort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ada5069cdbca30aa734f3b299c1c806b6_cgraph.png" border="0" usemap="#aftstream_8c_ada5069cdbca30aa734f3b299c1c806b6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ada5069cdbca30aa734f3b299c1c806b6_icgraph.png" border="0" usemap="#aftstream_8c_ada5069cdbca30aa734f3b299c1c806b6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a34dc864008352f32e73271f528ff7831" name="a34dc864008352f32e73271f528ff7831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34dc864008352f32e73271f528ff7831">&#9670;&#160;</a></span>FT_Stream_GetShortLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_GetShortLE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a34dc864008352f32e73271f528ff7831_cgraph.png" border="0" usemap="#aftstream_8c_a34dc864008352f32e73271f528ff7831_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a34dc864008352f32e73271f528ff7831_icgraph.png" border="0" usemap="#aftstream_8c_a34dc864008352f32e73271f528ff7831_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="adef0df22d5202d491bd9c8a93fb4bffd" name="adef0df22d5202d491bd9c8a93fb4bffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef0df22d5202d491bd9c8a93fb4bffd">&#9670;&#160;</a></span>FT_Stream_OpenMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_OpenMemory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_adef0df22d5202d491bd9c8a93fb4bffd_cgraph.png" border="0" usemap="#aftstream_8c_adef0df22d5202d491bd9c8a93fb4bffd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_adef0df22d5202d491bd9c8a93fb4bffd_icgraph.png" border="0" usemap="#aftstream_8c_adef0df22d5202d491bd9c8a93fb4bffd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="aa779880df754b097a9f92f45d648ab42" name="aa779880df754b097a9f92f45d648ab42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa779880df754b097a9f92f45d648ab42">&#9670;&#160;</a></span>FT_Stream_Pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_Pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_aa779880df754b097a9f92f45d648ab42_cgraph.png" border="0" usemap="#aftstream_8c_aa779880df754b097a9f92f45d648ab42_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_aa779880df754b097a9f92f45d648ab42_icgraph.png" border="0" usemap="#aftstream_8c_aa779880df754b097a9f92f45d648ab42_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="ab3efa470f29a814a6e99d51f62fa005a" name="ab3efa470f29a814a6e99d51f62fa005a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3efa470f29a814a6e99d51f62fa005a">&#9670;&#160;</a></span>FT_Stream_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_Read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ab3efa470f29a814a6e99d51f62fa005a_cgraph.png" border="0" usemap="#aftstream_8c_ab3efa470f29a814a6e99d51f62fa005a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ab3efa470f29a814a6e99d51f62fa005a_icgraph.png" border="0" usemap="#aftstream_8c_ab3efa470f29a814a6e99d51f62fa005a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a61262facd40a26a70e2bee8b7a22f05b" name="a61262facd40a26a70e2bee8b7a22f05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61262facd40a26a70e2bee8b7a22f05b">&#9670;&#160;</a></span>FT_Stream_ReadAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a61262facd40a26a70e2bee8b7a22f05b_cgraph.png" border="0" usemap="#aftstream_8c_a61262facd40a26a70e2bee8b7a22f05b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a61262facd40a26a70e2bee8b7a22f05b_icgraph.png" border="0" usemap="#aftstream_8c_a61262facd40a26a70e2bee8b7a22f05b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a5eb02c5f6c9744323c4d0dcbc986d4a7" name="a5eb02c5f6c9744323c4d0dcbc986d4a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb02c5f6c9744323c4d0dcbc986d4a7">&#9670;&#160;</a></span>FT_Stream_ReadChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a5eb02c5f6c9744323c4d0dcbc986d4a7_cgraph.png" border="0" usemap="#aftstream_8c_a5eb02c5f6c9744323c4d0dcbc986d4a7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a5eb02c5f6c9744323c4d0dcbc986d4a7_icgraph.png" border="0" usemap="#aftstream_8c_a5eb02c5f6c9744323c4d0dcbc986d4a7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a0447bc18a9d0964196bc85aa585a758b" name="a0447bc18a9d0964196bc85aa585a758b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0447bc18a9d0964196bc85aa585a758b">&#9670;&#160;</a></span>FT_Stream_ReadFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadFields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> *</td>          <td class="paramname"><span class="paramname"><em>fields</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>structure</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a0447bc18a9d0964196bc85aa585a758b_cgraph.png" border="0" usemap="#aftstream_8c_a0447bc18a9d0964196bc85aa585a758b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a0447bc18a9d0964196bc85aa585a758b_icgraph.png" border="0" usemap="#aftstream_8c_a0447bc18a9d0964196bc85aa585a758b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="a3d718a4884617a767bb3117af01a4738" name="a3d718a4884617a767bb3117af01a4738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d718a4884617a767bb3117af01a4738">&#9670;&#160;</a></span>FT_Stream_ReadLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadLong </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a3d718a4884617a767bb3117af01a4738_cgraph.png" border="0" usemap="#aftstream_8c_a3d718a4884617a767bb3117af01a4738_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a3d718a4884617a767bb3117af01a4738_icgraph.png" border="0" usemap="#aftstream_8c_a3d718a4884617a767bb3117af01a4738_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="ab59a4cd63e7489179b138fae21a45a3b" name="ab59a4cd63e7489179b138fae21a45a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59a4cd63e7489179b138fae21a45a3b">&#9670;&#160;</a></span>FT_Stream_ReadLongLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadLongLE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ab59a4cd63e7489179b138fae21a45a3b_cgraph.png" border="0" usemap="#aftstream_8c_ab59a4cd63e7489179b138fae21a45a3b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ab59a4cd63e7489179b138fae21a45a3b_icgraph.png" border="0" usemap="#aftstream_8c_ab59a4cd63e7489179b138fae21a45a3b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a id="a319e9746b7169413050371c2678f8110" name="a319e9746b7169413050371c2678f8110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319e9746b7169413050371c2678f8110">&#9670;&#160;</a></span>FT_Stream_ReadOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a319e9746b7169413050371c2678f8110_cgraph.png" border="0" usemap="#aftstream_8c_a319e9746b7169413050371c2678f8110_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a319e9746b7169413050371c2678f8110_icgraph.png" border="0" usemap="#aftstream_8c_a319e9746b7169413050371c2678f8110_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+
+</div>
+</div>
+<a id="acbbd84a970e226303cc97025ea426a52" name="acbbd84a970e226303cc97025ea426a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbbd84a970e226303cc97025ea426a52">&#9670;&#160;</a></span>FT_Stream_ReadShort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadShort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_acbbd84a970e226303cc97025ea426a52_cgraph.png" border="0" usemap="#aftstream_8c_acbbd84a970e226303cc97025ea426a52_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_acbbd84a970e226303cc97025ea426a52_icgraph.png" border="0" usemap="#aftstream_8c_acbbd84a970e226303cc97025ea426a52_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+
+</div>
+</div>
+<a id="a52ef50b3eacab8f3b21943e9c0ca7208" name="a52ef50b3eacab8f3b21943e9c0ca7208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ef50b3eacab8f3b21943e9c0ca7208">&#9670;&#160;</a></span>FT_Stream_ReadShortLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReadShortLE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a52ef50b3eacab8f3b21943e9c0ca7208_cgraph.png" border="0" usemap="#aftstream_8c_a52ef50b3eacab8f3b21943e9c0ca7208_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_a52ef50b3eacab8f3b21943e9c0ca7208_icgraph.png" border="0" usemap="#aftstream_8c_a52ef50b3eacab8f3b21943e9c0ca7208_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+
+</div>
+</div>
+<a id="ac4a5eb8e87737cec90b9c2a2fade0cda" name="ac4a5eb8e87737cec90b9c2a2fade0cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a5eb8e87737cec90b9c2a2fade0cda">&#9670;&#160;</a></span>FT_Stream_ReleaseFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_ReleaseFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>pbytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ac4a5eb8e87737cec90b9c2a2fade0cda_cgraph.png" border="0" usemap="#aftstream_8c_ac4a5eb8e87737cec90b9c2a2fade0cda_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_ac4a5eb8e87737cec90b9c2a2fade0cda_icgraph.png" border="0" usemap="#aftstream_8c_ac4a5eb8e87737cec90b9c2a2fade0cda_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+
+</div>
+</div>
+<a id="adaaeed4eea8beadd5ae9a5493b340890" name="adaaeed4eea8beadd5ae9a5493b340890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaeed4eea8beadd5ae9a5493b340890">&#9670;&#160;</a></span>FT_Stream_Seek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_Seek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_adaaeed4eea8beadd5ae9a5493b340890_cgraph.png" border="0" usemap="#aftstream_8c_adaaeed4eea8beadd5ae9a5493b340890_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_adaaeed4eea8beadd5ae9a5493b340890_icgraph.png" border="0" usemap="#aftstream_8c_adaaeed4eea8beadd5ae9a5493b340890_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="af8c7f7371554f4eb30c7aa56ded8078a" name="af8c7f7371554f4eb30c7aa56ded8078a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c7f7371554f4eb30c7aa56ded8078a">&#9670;&#160;</a></span>FT_Stream_Skip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Stream_Skip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>distance</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_af8c7f7371554f4eb30c7aa56ded8078a_cgraph.png" border="0" usemap="#aftstream_8c_af8c7f7371554f4eb30c7aa56ded8078a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstream_8c_af8c7f7371554f4eb30c7aa56ded8078a_icgraph.png" border="0" usemap="#aftstream_8c_af8c7f7371554f4eb30c7aa56ded8078a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_acb6b619e019ac5df49dc8811bc81be5.html">base</a></li><li class="navelem"><a href="ftstream_8c.html">ftstream.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

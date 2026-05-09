@@ -1,0 +1,44 @@
+\doxysection{eclair.\+h}
+\hypertarget{src_2eclair_8h_source}{}\label{src_2eclair_8h_source}\index{src/eclair.h@{src/eclair.h}}
+\doxymbox{\hyperlink{src_2eclair_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <allegro.h>}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00003}00003\ \textcolor{preprocessor}{\#ifndef\ ECLAIR\_H}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00004}00004\ \textcolor{preprocessor}{\#define\ ECLAIR\_H}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00006}\doxymbox{\hyperlink{src_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{00006}}\ \textcolor{preprocessor}{\#define\ MAX\_ECLAIRS\ 10}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00007}\doxymbox{\hyperlink{src_2eclair_8h_ace9f9a718c90581dc08f42da83ba8e73}{00007}}\ \textcolor{preprocessor}{\#define\ ECLAIR\_LARGEUR\ 6}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00008}\doxymbox{\hyperlink{src_2eclair_8h_a01247b9a9dc70c90be2f88a984b59fe7}{00008}}\ \textcolor{preprocessor}{\#define\ ECLAIR\_VITESSE\ 5}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00009}\doxymbox{\hyperlink{src_2eclair_8h_ae5d566256b8f9a8c61eb7399c6f4b7f2}{00009}}\ \textcolor{preprocessor}{\#define\ ECLAIR\_DUREE\_VIE\ 120\ \ }\textcolor{comment}{/*\ frames\ avant\ disparition\ si\ pas\ de\ collision\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00011}00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{int}\ actif;}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{int}\ timer;\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ compteur\ de\ vie\ */}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00015}00015\ \}\ \doxymbox{\hyperlink{struct_eclair}{Eclair}};}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00017}00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00018}00018\ \ \ \ \ \doxymbox{\hyperlink{struct_eclair}{Eclair}}\ liste[\doxymbox{\hyperlink{header_2eclair_8h_a0c657b7e41b983852557d4961f16214b}{MAX\_ECLAIRS}}];}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{int}\ nb;}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00020}00020\ \}\ \doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}};}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00022}00022\ \textcolor{comment}{/*\ Initialise\ la\ liste\ */}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00023}00023\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{header_2eclair_8h_a4dcdbb9f937d5a1b7c8fe252e7c04686}{eclairs\_init}}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le);}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00025}00025\ \textcolor{comment}{/*\ Fait\ tomber\ un\ Ã©clair\ depuis\ la\ position\ x,y\ d'une\ bulle\ */}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00026}00026\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{header_2eclair_8h_a94d73eb8a889534102b2442ed022db13}{eclair\_spawner}}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00028}00028\ \textcolor{comment}{/*\ Met\ Ã \ jour\ tous\ les\ Ã©clairs\ (dÃ©placement\ +\ timer)\ */}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00029}00029\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{header_2eclair_8h_a41927b1d41e1bda12297701119910c62}{eclairs\_mettre\_a\_jour}}(\doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le);}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00031}00031\ \textcolor{comment}{/*\ Retourne\ 1\ si\ un\ Ã©clair\ touche\ le\ personnage\ */}}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00032}00032\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{header_2eclair_8h_a015f8251e73ed40f9236a4eabc7f037b}{eclairs\_collision\_personnage}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le,}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ px,\ \textcolor{keywordtype}{float}\ py,}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ plargeur,\ \textcolor{keywordtype}{int}\ phauteur);}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00036}00036\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{header_2eclair_8h_a693961ccc3b568ea454db1853e64393b}{dessiner\_eclairs}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_liste_eclairs}{ListeEclairs}}\ *le);}
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{src_2eclair_8h_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,1030 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cache/ftcmanag.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftcmanag_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftcmanag.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ftcerror_8h_source.html">ftcerror.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftcmanag.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cache_2ftcmanag_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cache_2ftcmanag_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ftcmanag_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:FTC_5FFaceNodeRec_5F" id="r_FTC_5FFaceNodeRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t_c___face_node_rec__.html">FTC_FaceNodeRec_</a></td></tr>
+<tr class="memitem:FTC_5FSizeNodeRec_5F" id="r_FTC_5FSizeNodeRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t_c___size_node_rec__.html">FTC_SizeNodeRec_</a></td></tr>
+<tr class="memitem:FTC_5FSizeQueryRec_5F" id="r_FTC_5FSizeQueryRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t_c___size_query_rec__.html">FTC_SizeQueryRec_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_cache</td></tr>
+<tr class="memitem:a074e3289b75623f325d589c53d98188f" id="r_a074e3289b75623f325d589c53d98188f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a074e3289b75623f325d589c53d98188f">FTC_LRU_GET_MANAGER</a>(lru)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a2c32c424cd47caadc5dea3f1c126564f" id="r_a2c32c424cd47caadc5dea3f1c126564f"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___face_node_rec__.html">FTC_FaceNodeRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2c32c424cd47caadc5dea3f1c126564f">FTC_FaceNode</a></td></tr>
+<tr class="memitem:a5b7f60cef2e872193514811237be95b4" id="r_a5b7f60cef2e872193514811237be95b4"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___size_node_rec__.html">FTC_SizeNodeRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td></tr>
+<tr class="memitem:a302aa00b3ed6a712aa42d3b8b9069963" id="r_a302aa00b3ed6a712aa42d3b8b9069963"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___face_node_rec__.html">FTC_FaceNodeRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a302aa00b3ed6a712aa42d3b8b9069963">FTC_FaceNodeRec</a></td></tr>
+<tr class="memitem:a5c63aeb3b250d199e8ddf3592f3aa60e" id="r_a5c63aeb3b250d199e8ddf3592f3aa60e"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___size_node_rec__.html">FTC_SizeNodeRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5c63aeb3b250d199e8ddf3592f3aa60e">FTC_SizeNodeRec</a></td></tr>
+<tr class="memitem:ad44364d14f9b247e7221561e5c53ea43" id="r_ad44364d14f9b247e7221561e5c53ea43"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___size_query_rec__.html">FTC_SizeQueryRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad44364d14f9b247e7221561e5c53ea43">FTC_SizeQueryRec</a></td></tr>
+<tr class="memitem:ab5b85fade7f6177eda597ebbe9b0104c" id="r_ab5b85fade7f6177eda597ebbe9b0104c"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___size_query_rec__.html">FTC_SizeQueryRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aa1c6cbfc7d0ab2de912dc4599914991a" id="r_aa1c6cbfc7d0ab2de912dc4599914991a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa1c6cbfc7d0ab2de912dc4599914991a">ftc_face_node_init</a> (<a class="el" href="#a2c32c424cd47caadc5dea3f1c126564f">FTC_FaceNode</a> node, <a class="el" href="ftcache_8h.html#a5da66c12c497bf5888638100876c7197">FTC_FaceID</a> face_id, <a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager)</td></tr>
+<tr class="memitem:a418ca4ca64d41c8f9364853b7c3164ae" id="r_a418ca4ca64d41c8f9364853b7c3164ae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a418ca4ca64d41c8f9364853b7c3164ae">ftc_size_node_select</a> (<a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a> node, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a38ede3217ca7c396f7568440e8fd158b" id="r_a38ede3217ca7c396f7568440e8fd158b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a38ede3217ca7c396f7568440e8fd158b">ftc_face_node_done</a> (<a class="el" href="#a2c32c424cd47caadc5dea3f1c126564f">FTC_FaceNode</a> node, <a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager)</td></tr>
+<tr class="memitem:a4e3e4336009353906dece81c0c9cf98e" id="r_a4e3e4336009353906dece81c0c9cf98e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4e3e4336009353906dece81c0c9cf98e">FTC_Manager_Lookup_Face</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager, <a class="el" href="ftcache_8h.html#a5da66c12c497bf5888638100876c7197">FTC_FaceID</a> face_id, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *aface)</td></tr>
+<tr class="memitem:abf77908b200816def96543556251ada2" id="r_abf77908b200816def96543556251ada2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abf77908b200816def96543556251ada2">ftc_size_node_init</a> (<a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a> node, <a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a> query)</td></tr>
+<tr class="memitem:afc1c758d01934d1592d1b8761b78e24b" id="r_afc1c758d01934d1592d1b8761b78e24b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afc1c758d01934d1592d1b8761b78e24b">ftc_size_node_done</a> (<a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a> node)</td></tr>
+<tr class="memitem:a1c333f4cdc0c3f6ed1a1d54ddccf9d91" id="r_a1c333f4cdc0c3f6ed1a1d54ddccf9d91"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1c333f4cdc0c3f6ed1a1d54ddccf9d91">ftc_size_node_flush</a> (<a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a> node, <a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a> query)</td></tr>
+<tr class="memitem:a66e7ee6939f64d1a10e61eae36c9ed95" id="r_a66e7ee6939f64d1a10e61eae36c9ed95"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a66e7ee6939f64d1a10e61eae36c9ed95">ftc_size_node_compare</a> (<a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a> node, <a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a> query)</td></tr>
+<tr class="memitem:a94de5a508e8599cd87698f65d2bd27f8" id="r_a94de5a508e8599cd87698f65d2bd27f8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a94de5a508e8599cd87698f65d2bd27f8">FTC_Manager_Lookup_Size</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager, <a class="el" href="ftcache_8h.html#a6076d8ba23ca721b50361260a0ffe34c">FTC_Font</a> font, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *aface, <a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> *asize)</td></tr>
+<tr class="memitem:a4ce9e9ffd6e473bfc88e0c8638889860" id="r_a4ce9e9ffd6e473bfc88e0c8638889860"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4ce9e9ffd6e473bfc88e0c8638889860">ftc_family_table_init</a> (<a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a> table)</td></tr>
+<tr class="memitem:a050bedd466ba6474d6bc93226d55677a" id="r_a050bedd466ba6474d6bc93226d55677a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a050bedd466ba6474d6bc93226d55677a">ftc_family_table_done</a> (<a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a> table, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:abe552dc82528113044db8ac4583b7125" id="r_abe552dc82528113044db8ac4583b7125"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abe552dc82528113044db8ac4583b7125">ftc_family_table_alloc</a> (<a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a> table, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="ftcmanag_8h.html#a117beb072939ca19cb7acb4449fb9872">FTC_FamilyEntry</a> *aentry)</td></tr>
+<tr class="memitem:a55cca754ea04e2348cefa1900dc6d414" id="r_a55cca754ea04e2348cefa1900dc6d414"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a55cca754ea04e2348cefa1900dc6d414">ftc_family_table_free</a> (<a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a> table, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> idx)</td></tr>
+<tr class="memitem:afb6574ad21881284df40d68d142c88a3" id="r_afb6574ad21881284df40d68d142c88a3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb6574ad21881284df40d68d142c88a3">FTC_Manager_New</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> max_faces, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> max_sizes, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> max_bytes, <a class="el" href="ftcache_8h.html#ae65dc29eaee138d8de6a4fccaa4dd28e">FTC_Face_Requester</a> requester, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> req_data, <a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> *amanager)</td></tr>
+<tr class="memitem:a1c782ec086c698655c74624a38e6630f" id="r_a1c782ec086c698655c74624a38e6630f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1c782ec086c698655c74624a38e6630f">FTC_Manager_Done</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager)</td></tr>
+<tr class="memitem:a9700d2a3d9234dbc713b52d9bf8d87b4" id="r_a9700d2a3d9234dbc713b52d9bf8d87b4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9700d2a3d9234dbc713b52d9bf8d87b4">FTC_Manager_Reset</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager)</td></tr>
+<tr class="memitem:a90684927df26237d4a45ee0c579cd520" id="r_a90684927df26237d4a45ee0c579cd520"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a90684927df26237d4a45ee0c579cd520">FTC_Manager_Compress</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager)</td></tr>
+<tr class="memitem:a8ed3e862c3edd26789b4f34475af6ffd" id="r_a8ed3e862c3edd26789b4f34475af6ffd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8ed3e862c3edd26789b4f34475af6ffd">FTC_Manager_Register_Cache</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager, <a class="el" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a> clazz, <a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a> *acache)</td></tr>
+<tr class="memitem:a9653029aaf7994ec492ab46e93b65214" id="r_a9653029aaf7994ec492ab46e93b65214"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9653029aaf7994ec492ab46e93b65214">FTC_Node_Unref</a> (<a class="el" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a> node, <a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a142e6cd54cc40fb7cc3249368c43a356" id="r_a142e6cd54cc40fb7cc3249368c43a356"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftlru_8h.html#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a142e6cd54cc40fb7cc3249368c43a356">ftc_face_list_class</a></td></tr>
+<tr class="memitem:a0996da1bb057d450e0c36e27a3923094" id="r_a0996da1bb057d450e0c36e27a3923094"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftlru_8h.html#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0996da1bb057d450e0c36e27a3923094">ftc_size_list_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a074e3289b75623f325d589c53d98188f" name="a074e3289b75623f325d589c53d98188f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074e3289b75623f325d589c53d98188f">&#9670;&#160;</a></span>FTC_LRU_GET_MANAGER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FTC_LRU_GET_MANAGER</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>lru</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (<a class="code hl_typedef" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a>)(lru)-&gt;user_data )</div>
+<div class="ttc" id="aftcache_8h_html_afa42daf62f0c6ee9d6d93e44236e47ac"><div class="ttname"><a href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></div><div class="ttdeci">struct FTC_ManagerRec_ * FTC_Manager</div><div class="ttdef"><b>Definition</b> ftcache.h:229</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a2c32c424cd47caadc5dea3f1c126564f" name="a2c32c424cd47caadc5dea3f1c126564f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c32c424cd47caadc5dea3f1c126564f">&#9670;&#160;</a></span>FTC_FaceNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___face_node_rec__.html">FTC_FaceNodeRec_</a>* <a class="el" href="#a2c32c424cd47caadc5dea3f1c126564f">FTC_FaceNode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a302aa00b3ed6a712aa42d3b8b9069963" name="a302aa00b3ed6a712aa42d3b8b9069963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302aa00b3ed6a712aa42d3b8b9069963">&#9670;&#160;</a></span>FTC_FaceNodeRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___face_node_rec__.html">FTC_FaceNodeRec_</a> <a class="el" href="#a302aa00b3ed6a712aa42d3b8b9069963">FTC_FaceNodeRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b7f60cef2e872193514811237be95b4" name="a5b7f60cef2e872193514811237be95b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7f60cef2e872193514811237be95b4">&#9670;&#160;</a></span>FTC_SizeNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___size_node_rec__.html">FTC_SizeNodeRec_</a>* <a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c63aeb3b250d199e8ddf3592f3aa60e" name="a5c63aeb3b250d199e8ddf3592f3aa60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c63aeb3b250d199e8ddf3592f3aa60e">&#9670;&#160;</a></span>FTC_SizeNodeRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___size_node_rec__.html">FTC_SizeNodeRec_</a> <a class="el" href="#a5c63aeb3b250d199e8ddf3592f3aa60e">FTC_SizeNodeRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5b85fade7f6177eda597ebbe9b0104c" name="ab5b85fade7f6177eda597ebbe9b0104c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b85fade7f6177eda597ebbe9b0104c">&#9670;&#160;</a></span>FTC_SizeQuery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___size_query_rec__.html">FTC_SizeQueryRec_</a> * <a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad44364d14f9b247e7221561e5c53ea43" name="ad44364d14f9b247e7221561e5c53ea43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44364d14f9b247e7221561e5c53ea43">&#9670;&#160;</a></span>FTC_SizeQueryRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___size_query_rec__.html">FTC_SizeQueryRec_</a> <a class="el" href="#ad44364d14f9b247e7221561e5c53ea43">FTC_SizeQueryRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a38ede3217ca7c396f7568440e8fd158b" name="a38ede3217ca7c396f7568440e8fd158b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ede3217ca7c396f7568440e8fd158b">&#9670;&#160;</a></span>ftc_face_node_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_face_node_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2c32c424cd47caadc5dea3f1c126564f">FTC_FaceNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a38ede3217ca7c396f7568440e8fd158b_cgraph.png" border="0" usemap="#aftcmanag_8c_a38ede3217ca7c396f7568440e8fd158b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a38ede3217ca7c396f7568440e8fd158b_icgraph.png" border="0" usemap="#aftcmanag_8c_a38ede3217ca7c396f7568440e8fd158b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="aa1c6cbfc7d0ab2de912dc4599914991a" name="aa1c6cbfc7d0ab2de912dc4599914991a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c6cbfc7d0ab2de912dc4599914991a">&#9670;&#160;</a></span>ftc_face_node_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_face_node_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2c32c424cd47caadc5dea3f1c126564f">FTC_FaceNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#a5da66c12c497bf5888638100876c7197">FTC_FaceID</a></td>          <td class="paramname"><span class="paramname"><em>face_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_aa1c6cbfc7d0ab2de912dc4599914991a_cgraph.png" border="0" usemap="#aftcmanag_8c_aa1c6cbfc7d0ab2de912dc4599914991a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_aa1c6cbfc7d0ab2de912dc4599914991a_icgraph.png" border="0" usemap="#aftcmanag_8c_aa1c6cbfc7d0ab2de912dc4599914991a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="abe552dc82528113044db8ac4583b7125" name="abe552dc82528113044db8ac4583b7125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe552dc82528113044db8ac4583b7125">&#9670;&#160;</a></span>ftc_family_table_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_family_table_alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcmanag_8h.html#a117beb072939ca19cb7acb4449fb9872">FTC_FamilyEntry</a> *</td>          <td class="paramname"><span class="paramname"><em>aentry</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_abe552dc82528113044db8ac4583b7125_cgraph.png" border="0" usemap="#aftcmanag_8c_abe552dc82528113044db8ac4583b7125_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_abe552dc82528113044db8ac4583b7125_icgraph.png" border="0" usemap="#aftcmanag_8c_abe552dc82528113044db8ac4583b7125_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a050bedd466ba6474d6bc93226d55677a" name="a050bedd466ba6474d6bc93226d55677a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050bedd466ba6474d6bc93226d55677a">&#9670;&#160;</a></span>ftc_family_table_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ftc_family_table_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a050bedd466ba6474d6bc93226d55677a_icgraph.png" border="0" usemap="#aftcmanag_8c_a050bedd466ba6474d6bc93226d55677a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a55cca754ea04e2348cefa1900dc6d414" name="a55cca754ea04e2348cefa1900dc6d414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55cca754ea04e2348cefa1900dc6d414">&#9670;&#160;</a></span>ftc_family_table_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_family_table_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a55cca754ea04e2348cefa1900dc6d414_cgraph.png" border="0" usemap="#aftcmanag_8c_a55cca754ea04e2348cefa1900dc6d414_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a55cca754ea04e2348cefa1900dc6d414_icgraph.png" border="0" usemap="#aftcmanag_8c_a55cca754ea04e2348cefa1900dc6d414_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a4ce9e9ffd6e473bfc88e0c8638889860" name="a4ce9e9ffd6e473bfc88e0c8638889860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ce9e9ffd6e473bfc88e0c8638889860">&#9670;&#160;</a></span>ftc_family_table_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ftc_family_table_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcmanag_8h.html#a7189c2db90cd2761aca3c4d48f90740f">FTC_FamilyTable</a></td>          <td class="paramname"><span class="paramname"><em>table</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a4ce9e9ffd6e473bfc88e0c8638889860_icgraph.png" border="0" usemap="#aftcmanag_8c_a4ce9e9ffd6e473bfc88e0c8638889860_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a90684927df26237d4a45ee0c579cd520" name="a90684927df26237d4a45ee0c579cd520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90684927df26237d4a45ee0c579cd520">&#9670;&#160;</a></span>FTC_Manager_Compress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_Compress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a90684927df26237d4a45ee0c579cd520_cgraph.png" border="0" usemap="#aftcmanag_8c_a90684927df26237d4a45ee0c579cd520_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a90684927df26237d4a45ee0c579cd520_icgraph.png" border="0" usemap="#aftcmanag_8c_a90684927df26237d4a45ee0c579cd520_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a1c782ec086c698655c74624a38e6630f" name="a1c782ec086c698655c74624a38e6630f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c782ec086c698655c74624a38e6630f">&#9670;&#160;</a></span>FTC_Manager_Done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_Done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a1c782ec086c698655c74624a38e6630f_cgraph.png" border="0" usemap="#aftcmanag_8c_a1c782ec086c698655c74624a38e6630f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a1c782ec086c698655c74624a38e6630f_icgraph.png" border="0" usemap="#aftcmanag_8c_a1c782ec086c698655c74624a38e6630f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a4e3e4336009353906dece81c0c9cf98e" name="a4e3e4336009353906dece81c0c9cf98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3e4336009353906dece81c0c9cf98e">&#9670;&#160;</a></span>FTC_Manager_Lookup_Face()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_Lookup_Face </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#a5da66c12c497bf5888638100876c7197">FTC_FaceID</a></td>          <td class="paramname"><span class="paramname"><em>face_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *</td>          <td class="paramname"><span class="paramname"><em>aface</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a4e3e4336009353906dece81c0c9cf98e_cgraph.png" border="0" usemap="#aftcmanag_8c_a4e3e4336009353906dece81c0c9cf98e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a4e3e4336009353906dece81c0c9cf98e_icgraph.png" border="0" usemap="#aftcmanag_8c_a4e3e4336009353906dece81c0c9cf98e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="a94de5a508e8599cd87698f65d2bd27f8" name="a94de5a508e8599cd87698f65d2bd27f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94de5a508e8599cd87698f65d2bd27f8">&#9670;&#160;</a></span>FTC_Manager_Lookup_Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_Lookup_Size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#a6076d8ba23ca721b50361260a0ffe34c">FTC_Font</a></td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> *</td>          <td class="paramname"><span class="paramname"><em>aface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> *</td>          <td class="paramname"><span class="paramname"><em>asize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a94de5a508e8599cd87698f65d2bd27f8_cgraph.png" border="0" usemap="#aftcmanag_8c_a94de5a508e8599cd87698f65d2bd27f8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a94de5a508e8599cd87698f65d2bd27f8_icgraph.png" border="0" usemap="#aftcmanag_8c_a94de5a508e8599cd87698f65d2bd27f8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="afb6574ad21881284df40d68d142c88a3" name="afb6574ad21881284df40d68d142c88a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6574ad21881284df40d68d142c88a3">&#9670;&#160;</a></span>FTC_Manager_New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_New </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>max_faces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>max_sizes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>max_bytes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#ae65dc29eaee138d8de6a4fccaa4dd28e">FTC_Face_Requester</a></td>          <td class="paramname"><span class="paramname"><em>requester</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>req_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> *</td>          <td class="paramname"><span class="paramname"><em>amanager</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_afb6574ad21881284df40d68d142c88a3_cgraph.png" border="0" usemap="#aftcmanag_8c_afb6574ad21881284df40d68d142c88a3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_afb6574ad21881284df40d68d142c88a3_icgraph.png" border="0" usemap="#aftcmanag_8c_afb6574ad21881284df40d68d142c88a3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="a8ed3e862c3edd26789b4f34475af6ffd" name="a8ed3e862c3edd26789b4f34475af6ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed3e862c3edd26789b4f34475af6ffd">&#9670;&#160;</a></span>FTC_Manager_Register_Cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_Register_Cache </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftccache_8h.html#a9b89a008acd33229209ea4ca60f919de">FTC_Cache_Class</a></td>          <td class="paramname"><span class="paramname"><em>clazz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a> *</td>          <td class="paramname"><span class="paramname"><em>acache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a8ed3e862c3edd26789b4f34475af6ffd_cgraph.png" border="0" usemap="#aftcmanag_8c_a8ed3e862c3edd26789b4f34475af6ffd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a8ed3e862c3edd26789b4f34475af6ffd_icgraph.png" border="0" usemap="#aftcmanag_8c_a8ed3e862c3edd26789b4f34475af6ffd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a9700d2a3d9234dbc713b52d9bf8d87b4" name="a9700d2a3d9234dbc713b52d9bf8d87b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9700d2a3d9234dbc713b52d9bf8d87b4">&#9670;&#160;</a></span>FTC_Manager_Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Manager_Reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a9700d2a3d9234dbc713b52d9bf8d87b4_cgraph.png" border="0" usemap="#aftcmanag_8c_a9700d2a3d9234dbc713b52d9bf8d87b4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a9700d2a3d9234dbc713b52d9bf8d87b4_icgraph.png" border="0" usemap="#aftcmanag_8c_a9700d2a3d9234dbc713b52d9bf8d87b4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="a9653029aaf7994ec492ab46e93b65214" name="a9653029aaf7994ec492ab46e93b65214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9653029aaf7994ec492ab46e93b65214">&#9670;&#160;</a></span>FTC_Node_Unref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_Node_Unref </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a9653029aaf7994ec492ab46e93b65214_cgraph.png" border="0" usemap="#aftcmanag_8c_a9653029aaf7994ec492ab46e93b65214_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a9653029aaf7994ec492ab46e93b65214_icgraph.png" border="0" usemap="#aftcmanag_8c_a9653029aaf7994ec492ab46e93b65214_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a66e7ee6939f64d1a10e61eae36c9ed95" name="a66e7ee6939f64d1a10e61eae36c9ed95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e7ee6939f64d1a10e61eae36c9ed95">&#9670;&#160;</a></span>ftc_size_node_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_size_node_compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a></td>          <td class="paramname"><span class="paramname"><em>query</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a66e7ee6939f64d1a10e61eae36c9ed95_cgraph.png" border="0" usemap="#aftcmanag_8c_a66e7ee6939f64d1a10e61eae36c9ed95_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a66e7ee6939f64d1a10e61eae36c9ed95_icgraph.png" border="0" usemap="#aftcmanag_8c_a66e7ee6939f64d1a10e61eae36c9ed95_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="afc1c758d01934d1592d1b8761b78e24b" name="afc1c758d01934d1592d1b8761b78e24b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1c758d01934d1592d1b8761b78e24b">&#9670;&#160;</a></span>ftc_size_node_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_size_node_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_afc1c758d01934d1592d1b8761b78e24b_cgraph.png" border="0" usemap="#aftcmanag_8c_afc1c758d01934d1592d1b8761b78e24b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_afc1c758d01934d1592d1b8761b78e24b_icgraph.png" border="0" usemap="#aftcmanag_8c_afc1c758d01934d1592d1b8761b78e24b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a1c333f4cdc0c3f6ed1a1d54ddccf9d91" name="a1c333f4cdc0c3f6ed1a1d54ddccf9d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c333f4cdc0c3f6ed1a1d54ddccf9d91">&#9670;&#160;</a></span>ftc_size_node_flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_size_node_flush </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a></td>          <td class="paramname"><span class="paramname"><em>query</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a1c333f4cdc0c3f6ed1a1d54ddccf9d91_cgraph.png" border="0" usemap="#aftcmanag_8c_a1c333f4cdc0c3f6ed1a1d54ddccf9d91_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a1c333f4cdc0c3f6ed1a1d54ddccf9d91_icgraph.png" border="0" usemap="#aftcmanag_8c_a1c333f4cdc0c3f6ed1a1d54ddccf9d91_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="abf77908b200816def96543556251ada2" name="abf77908b200816def96543556251ada2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf77908b200816def96543556251ada2">&#9670;&#160;</a></span>ftc_size_node_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_size_node_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ab5b85fade7f6177eda597ebbe9b0104c">FTC_SizeQuery</a></td>          <td class="paramname"><span class="paramname"><em>query</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_abf77908b200816def96543556251ada2_cgraph.png" border="0" usemap="#aftcmanag_8c_abf77908b200816def96543556251ada2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_abf77908b200816def96543556251ada2_icgraph.png" border="0" usemap="#aftcmanag_8c_abf77908b200816def96543556251ada2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a418ca4ca64d41c8f9364853b7c3164ae" name="a418ca4ca64d41c8f9364853b7c3164ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a418ca4ca64d41c8f9364853b7c3164ae">&#9670;&#160;</a></span>ftc_size_node_select()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_size_node_select </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5b7f60cef2e872193514811237be95b4">FTC_SizeNode</a></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a418ca4ca64d41c8f9364853b7c3164ae_cgraph.png" border="0" usemap="#aftcmanag_8c_a418ca4ca64d41c8f9364853b7c3164ae_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcmanag_8c_a418ca4ca64d41c8f9364853b7c3164ae_icgraph.png" border="0" usemap="#aftcmanag_8c_a418ca4ca64d41c8f9364853b7c3164ae_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a142e6cd54cc40fb7cc3249368c43a356" name="a142e6cd54cc40fb7cc3249368c43a356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142e6cd54cc40fb7cc3249368c43a356">&#9670;&#160;</a></span>ftc_face_list_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftlru_8h.html#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a> ftc_face_list_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                               =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftlru_8h.html#a848bd47914797472c173321756dc4ae1">FT_LruListRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#aa484f1380e53bf3cc5e7bf8adce98fa6">FT_LruList_InitFunc</a>)0,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#abcc66adf1e0d0fc3b3e77b2bae93f77b">FT_LruList_DoneFunc</a>)0,</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="#a302aa00b3ed6a712aa42d3b8b9069963">FTC_FaceNodeRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#a67a24f9349e8b27d43d75ad31a8cb2c5">FT_LruNode_InitFunc</a>)   <a class="code hl_function" href="#aa1c6cbfc7d0ab2de912dc4599914991a">ftc_face_node_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#acff7d88a151a368b71b0bbe73ab07026">FT_LruNode_DoneFunc</a>)   <a class="code hl_function" href="#a38ede3217ca7c396f7568440e8fd158b">ftc_face_node_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#af751df92362ef7a3e2dfec2e771ef01c">FT_LruNode_FlushFunc</a>)  0,  </div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#a273a636608985633cb9ba89964cf328a">FT_LruNode_CompareFunc</a>)0,  </div>
+<div class="line">}</div>
+<div class="ttc" id="aftcmanag_8c_html_a302aa00b3ed6a712aa42d3b8b9069963"><div class="ttname"><a href="#a302aa00b3ed6a712aa42d3b8b9069963">FTC_FaceNodeRec</a></div><div class="ttdeci">struct FTC_FaceNodeRec_ FTC_FaceNodeRec</div></div>
+<div class="ttc" id="aftcmanag_8c_html_a38ede3217ca7c396f7568440e8fd158b"><div class="ttname"><a href="#a38ede3217ca7c396f7568440e8fd158b">ftc_face_node_done</a></div><div class="ttdeci">ftc_face_node_done(FTC_FaceNode node, FTC_Manager manager)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:97</div></div>
+<div class="ttc" id="aftcmanag_8c_html_aa1c6cbfc7d0ab2de912dc4599914991a"><div class="ttname"><a href="#aa1c6cbfc7d0ab2de912dc4599914991a">ftc_face_node_init</a></div><div class="ttdeci">ftc_face_node_init(FTC_FaceNode node, FTC_FaceID face_id, FTC_Manager manager)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:65</div></div>
+<div class="ttc" id="aftlru_8h_html_a273a636608985633cb9ba89964cf328a"><div class="ttname"><a href="ftlru_8h.html#a273a636608985633cb9ba89964cf328a">FT_LruNode_CompareFunc</a></div><div class="ttdeci">FT_Bool(* FT_LruNode_CompareFunc)(FT_LruNode node, FT_LruKey key, FT_Pointer data)</div><div class="ttdef"><b>Definition</b> ftlru.h:135</div></div>
+<div class="ttc" id="aftlru_8h_html_a67a24f9349e8b27d43d75ad31a8cb2c5"><div class="ttname"><a href="ftlru_8h.html#a67a24f9349e8b27d43d75ad31a8cb2c5">FT_LruNode_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_LruNode_InitFunc)(FT_LruNode node, FT_LruKey key, FT_Pointer data)</div><div class="ttdef"><b>Definition</b> ftlru.h:113</div></div>
+<div class="ttc" id="aftlru_8h_html_a848bd47914797472c173321756dc4ae1"><div class="ttname"><a href="ftlru_8h.html#a848bd47914797472c173321756dc4ae1">FT_LruListRec</a></div><div class="ttdeci">struct FT_LruListRec_ FT_LruListRec</div></div>
+<div class="ttc" id="aftlru_8h_html_aa484f1380e53bf3cc5e7bf8adce98fa6"><div class="ttname"><a href="ftlru_8h.html#aa484f1380e53bf3cc5e7bf8adce98fa6">FT_LruList_InitFunc</a></div><div class="ttdeci">FT_Error(* FT_LruList_InitFunc)(FT_LruList list)</div><div class="ttdef"><b>Definition</b> ftlru.h:105</div></div>
+<div class="ttc" id="aftlru_8h_html_abcc66adf1e0d0fc3b3e77b2bae93f77b"><div class="ttname"><a href="ftlru_8h.html#abcc66adf1e0d0fc3b3e77b2bae93f77b">FT_LruList_DoneFunc</a></div><div class="ttdeci">void(* FT_LruList_DoneFunc)(FT_LruList list)</div><div class="ttdef"><b>Definition</b> ftlru.h:109</div></div>
+<div class="ttc" id="aftlru_8h_html_acff7d88a151a368b71b0bbe73ab07026"><div class="ttname"><a href="ftlru_8h.html#acff7d88a151a368b71b0bbe73ab07026">FT_LruNode_DoneFunc</a></div><div class="ttdeci">void(* FT_LruNode_DoneFunc)(FT_LruNode node, FT_Pointer data)</div><div class="ttdef"><b>Definition</b> ftlru.h:119</div></div>
+<div class="ttc" id="aftlru_8h_html_af751df92362ef7a3e2dfec2e771ef01c"><div class="ttname"><a href="ftlru_8h.html#af751df92362ef7a3e2dfec2e771ef01c">FT_LruNode_FlushFunc</a></div><div class="ttdeci">FT_Error(* FT_LruNode_FlushFunc)(FT_LruNode node, FT_LruKey new_key, FT_Pointer data)</div><div class="ttdef"><b>Definition</b> ftlru.h:127</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0996da1bb057d450e0c36e27a3923094" name="a0996da1bb057d450e0c36e27a3923094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0996da1bb057d450e0c36e27a3923094">&#9670;&#160;</a></span>ftc_size_list_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftlru_8h.html#acb767a535e58997f5b97466144b0b66b">FT_LruList_ClassRec</a> ftc_size_list_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                               =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftlru_8h.html#a848bd47914797472c173321756dc4ae1">FT_LruListRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#aa484f1380e53bf3cc5e7bf8adce98fa6">FT_LruList_InitFunc</a>)0,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#abcc66adf1e0d0fc3b3e77b2bae93f77b">FT_LruList_DoneFunc</a>)0,</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="#a5c63aeb3b250d199e8ddf3592f3aa60e">FTC_SizeNodeRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#a67a24f9349e8b27d43d75ad31a8cb2c5">FT_LruNode_InitFunc</a>)   <a class="code hl_function" href="#abf77908b200816def96543556251ada2">ftc_size_node_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#acff7d88a151a368b71b0bbe73ab07026">FT_LruNode_DoneFunc</a>)   <a class="code hl_function" href="#afc1c758d01934d1592d1b8761b78e24b">ftc_size_node_done</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#af751df92362ef7a3e2dfec2e771ef01c">FT_LruNode_FlushFunc</a>)  <a class="code hl_function" href="#a1c333f4cdc0c3f6ed1a1d54ddccf9d91">ftc_size_node_flush</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftlru_8h.html#a273a636608985633cb9ba89964cf328a">FT_LruNode_CompareFunc</a>)<a class="code hl_function" href="#a66e7ee6939f64d1a10e61eae36c9ed95">ftc_size_node_compare</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftcmanag_8c_html_a1c333f4cdc0c3f6ed1a1d54ddccf9d91"><div class="ttname"><a href="#a1c333f4cdc0c3f6ed1a1d54ddccf9d91">ftc_size_node_flush</a></div><div class="ttdeci">ftc_size_node_flush(FTC_SizeNode node, FTC_SizeQuery query)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:215</div></div>
+<div class="ttc" id="aftcmanag_8c_html_a5c63aeb3b250d199e8ddf3592f3aa60e"><div class="ttname"><a href="#a5c63aeb3b250d199e8ddf3592f3aa60e">FTC_SizeNodeRec</a></div><div class="ttdeci">struct FTC_SizeNodeRec_ FTC_SizeNodeRec</div></div>
+<div class="ttc" id="aftcmanag_8c_html_a66e7ee6939f64d1a10e61eae36c9ed95"><div class="ttname"><a href="#a66e7ee6939f64d1a10e61eae36c9ed95">ftc_size_node_compare</a></div><div class="ttdeci">ftc_size_node_compare(FTC_SizeNode node, FTC_SizeQuery query)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:244</div></div>
+<div class="ttc" id="aftcmanag_8c_html_abf77908b200816def96543556251ada2"><div class="ttname"><a href="#abf77908b200816def96543556251ada2">ftc_size_node_init</a></div><div class="ttdeci">ftc_size_node_init(FTC_SizeNode node, FTC_SizeQuery query)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:178</div></div>
+<div class="ttc" id="aftcmanag_8c_html_afc1c758d01934d1592d1b8761b78e24b"><div class="ttname"><a href="#afc1c758d01934d1592d1b8761b78e24b">ftc_size_node_done</a></div><div class="ttdeci">ftc_size_node_done(FTC_SizeNode node)</div><div class="ttdef"><b>Definition</b> ftcmanag.c:204</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_1ecb25ace48afe747597ea1a7845e1b7.html">cache</a></li><li class="navelem"><a href="ftcmanag_8c.html">ftcmanag.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

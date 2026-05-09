@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/internal/t42types.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t42types_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">t42types.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="t42types_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  t42types.h                                                             */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    Type 42 font data types (specification only).                        */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2002 by Roberto Alameda.                                     */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef __T42TYPES_H__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define __T42TYPES_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include FT_FREETYPE_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include FT_TYPE1_TABLES_H</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include FT_INTERNAL_TYPE1_TYPES_H</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include FT_INTERNAL_POSTSCRIPT_NAMES_H</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include FT_INTERNAL_POSTSCRIPT_HINTS_H</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html">   33</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_t42___face_rec__.html">T42_FaceRec_</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#abe06101c9b69119dc575312e204964dc">   35</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a45c4c2194a9dfb5df09387e80cad91e1">FT_FaceRec</a>     <a class="code hl_variable" href="struct_t42___face_rec__.html#abe06101c9b69119dc575312e204964dc">root</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#ac526c9f37d9bc12e254cbab6c52baf50">   36</a></span>    <a class="code hl_typedef" href="t1types_8h.html#a1361f22406b468b78d92a943aa77d5f2">T1_FontRec</a>     <a class="code hl_variable" href="struct_t42___face_rec__.html#ac526c9f37d9bc12e254cbab6c52baf50">type1</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#a3615cff933bce5beed22b6eaae45832c">   37</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>*    <a class="code hl_variable" href="struct_t42___face_rec__.html#a3615cff933bce5beed22b6eaae45832c">psnames</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#af50a7ef274e510d37d937481008c91bb">   38</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>*    <a class="code hl_variable" href="struct_t42___face_rec__.html#af50a7ef274e510d37d937481008c91bb">psaux</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#a5189b2d24e39a5fe87e9fd58ee45f7b8">   39</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>*    <a class="code hl_variable" href="struct_t42___face_rec__.html#a5189b2d24e39a5fe87e9fd58ee45f7b8">afm_data</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#aed1e79e76d1a7880647a9fb692c770fe">   40</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*       <a class="code hl_variable" href="struct_t42___face_rec__.html#aed1e79e76d1a7880647a9fb692c770fe">ttf_data</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#af5b8b69f790962c5003e813a5b8efb0c">   41</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>       <a class="code hl_variable" href="struct_t42___face_rec__.html#af5b8b69f790962c5003e813a5b8efb0c">ttf_size</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#a61182a51e9a4c2fd3902a33fa56963d3">   42</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a>        <a class="code hl_variable" href="struct_t42___face_rec__.html#a61182a51e9a4c2fd3902a33fa56963d3">ttf_face</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#aa842baec39075f9a4fc0cfb0024dbf46">   43</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a073bdf7c4e684960bb330ff1bc64c9b5">FT_CharMapRec</a>  <a class="code hl_variable" href="struct_t42___face_rec__.html#aa842baec39075f9a4fc0cfb0024dbf46">charmaprecs</a>[2];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#a607785291a0275374a35bf8b25f7b79f">   44</a></span>    <a class="code hl_typedef" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a>     <a class="code hl_variable" href="struct_t42___face_rec__.html#a607785291a0275374a35bf8b25f7b79f">charmaps</a>[2];</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_t42___face_rec__.html#ad80960f1250b73fbc4e8d4f0cd66c5f3">   45</a></span>    <a class="code hl_typedef" href="psnames_8h.html#af2a973c53006a6cf46b5767918e988f9">PS_Unicodes</a>    <a class="code hl_variable" href="struct_t42___face_rec__.html#ad80960f1250b73fbc4e8d4f0cd66c5f3">unicode_map</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">   47</a></span>  } <a class="code hl_typedef" href="t42types_8h.html#af968caa61020faad2b2b9d6f2136f529">T42_FaceRec</a>, *<a class="code hl_typedef" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a>;</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">/* __T1TYPES_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="afreetype_8h_html_a073bdf7c4e684960bb330ff1bc64c9b5"><div class="ttname"><a href="freetype_8h.html#a073bdf7c4e684960bb330ff1bc64c9b5">FT_CharMapRec</a></div><div class="ttdeci">struct FT_CharMapRec_ FT_CharMapRec</div></div>
+<div class="ttc" id="afreetype_8h_html_a45c4c2194a9dfb5df09387e80cad91e1"><div class="ttname"><a href="freetype_8h.html#a45c4c2194a9dfb5df09387e80cad91e1">FT_FaceRec</a></div><div class="ttdeci">struct FT_FaceRec_ FT_FaceRec</div></div>
+<div class="ttc" id="afreetype_8h_html_a7eba045ee20968354fa1bff0f69740fa"><div class="ttname"><a href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></div><div class="ttdeci">struct FT_FaceRec_ * FT_Face</div><div class="ttdef"><b>Definition</b> freetype.h:315</div></div>
+<div class="ttc" id="afreetype_8h_html_afc4717ddfd456a38ee15ec9c88fc7dac"><div class="ttname"><a href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a></div><div class="ttdeci">struct FT_CharMapRec_ * FT_CharMap</div><div class="ttdef"><b>Definition</b> freetype.h:389</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a51f26183ca0c9f4af958939648caeccd"><div class="ttname"><a href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></div><div class="ttdeci">unsigned char FT_Byte</div><div class="ttdef"><b>Definition</b> fttypes.h:143</div></div>
+<div class="ttc" id="apsnames_8h_html_af2a973c53006a6cf46b5767918e988f9"><div class="ttname"><a href="psnames_8h.html#af2a973c53006a6cf46b5767918e988f9">PS_Unicodes</a></div><div class="ttdeci">struct PS_Unicodes_ PS_Unicodes</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html"><div class="ttname"><a href="struct_t42___face_rec__.html">T42_FaceRec_</a></div><div class="ttdef"><b>Definition</b> t42types.h:34</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_a3615cff933bce5beed22b6eaae45832c"><div class="ttname"><a href="struct_t42___face_rec__.html#a3615cff933bce5beed22b6eaae45832c">T42_FaceRec_::psnames</a></div><div class="ttdeci">const void * psnames</div><div class="ttdef"><b>Definition</b> t42types.h:37</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_a5189b2d24e39a5fe87e9fd58ee45f7b8"><div class="ttname"><a href="struct_t42___face_rec__.html#a5189b2d24e39a5fe87e9fd58ee45f7b8">T42_FaceRec_::afm_data</a></div><div class="ttdeci">const void * afm_data</div><div class="ttdef"><b>Definition</b> t42types.h:39</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_a607785291a0275374a35bf8b25f7b79f"><div class="ttname"><a href="struct_t42___face_rec__.html#a607785291a0275374a35bf8b25f7b79f">T42_FaceRec_::charmaps</a></div><div class="ttdeci">FT_CharMap charmaps[2]</div><div class="ttdef"><b>Definition</b> t42types.h:44</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_a61182a51e9a4c2fd3902a33fa56963d3"><div class="ttname"><a href="struct_t42___face_rec__.html#a61182a51e9a4c2fd3902a33fa56963d3">T42_FaceRec_::ttf_face</a></div><div class="ttdeci">FT_Face ttf_face</div><div class="ttdef"><b>Definition</b> t42types.h:42</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_aa842baec39075f9a4fc0cfb0024dbf46"><div class="ttname"><a href="struct_t42___face_rec__.html#aa842baec39075f9a4fc0cfb0024dbf46">T42_FaceRec_::charmaprecs</a></div><div class="ttdeci">FT_CharMapRec charmaprecs[2]</div><div class="ttdef"><b>Definition</b> t42types.h:43</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_abe06101c9b69119dc575312e204964dc"><div class="ttname"><a href="struct_t42___face_rec__.html#abe06101c9b69119dc575312e204964dc">T42_FaceRec_::root</a></div><div class="ttdeci">FT_FaceRec root</div><div class="ttdef"><b>Definition</b> t42types.h:35</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_ac526c9f37d9bc12e254cbab6c52baf50"><div class="ttname"><a href="struct_t42___face_rec__.html#ac526c9f37d9bc12e254cbab6c52baf50">T42_FaceRec_::type1</a></div><div class="ttdeci">T1_FontRec type1</div><div class="ttdef"><b>Definition</b> t42types.h:36</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_ad80960f1250b73fbc4e8d4f0cd66c5f3"><div class="ttname"><a href="struct_t42___face_rec__.html#ad80960f1250b73fbc4e8d4f0cd66c5f3">T42_FaceRec_::unicode_map</a></div><div class="ttdeci">PS_Unicodes unicode_map</div><div class="ttdef"><b>Definition</b> t42types.h:45</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_aed1e79e76d1a7880647a9fb692c770fe"><div class="ttname"><a href="struct_t42___face_rec__.html#aed1e79e76d1a7880647a9fb692c770fe">T42_FaceRec_::ttf_data</a></div><div class="ttdeci">FT_Byte * ttf_data</div><div class="ttdef"><b>Definition</b> t42types.h:40</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_af50a7ef274e510d37d937481008c91bb"><div class="ttname"><a href="struct_t42___face_rec__.html#af50a7ef274e510d37d937481008c91bb">T42_FaceRec_::psaux</a></div><div class="ttdeci">const void * psaux</div><div class="ttdef"><b>Definition</b> t42types.h:38</div></div>
+<div class="ttc" id="astruct_t42___face_rec___html_af5b8b69f790962c5003e813a5b8efb0c"><div class="ttname"><a href="struct_t42___face_rec__.html#af5b8b69f790962c5003e813a5b8efb0c">T42_FaceRec_::ttf_size</a></div><div class="ttdeci">FT_ULong ttf_size</div><div class="ttdef"><b>Definition</b> t42types.h:41</div></div>
+<div class="ttc" id="at1types_8h_html_a1361f22406b468b78d92a943aa77d5f2"><div class="ttname"><a href="t1types_8h.html#a1361f22406b468b78d92a943aa77d5f2">T1_FontRec</a></div><div class="ttdeci">struct T1_FontRec_ T1_FontRec</div></div>
+<div class="ttc" id="at42types_8h_html_aa101ad840b4d7a3b47063e3ef23c5566"><div class="ttname"><a href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></div><div class="ttdeci">FT_BEGIN_HEADER struct T42_FaceRec_ * T42_Face</div></div>
+<div class="ttc" id="at42types_8h_html_af968caa61020faad2b2b9d6f2136f529"><div class="ttname"><a href="t42types_8h.html#af968caa61020faad2b2b9d6f2136f529">T42_FaceRec</a></div><div class="ttdeci">FT_BEGIN_HEADER struct T42_FaceRec_ T42_FaceRec</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_5a7d374fb846e4a5bfa73ed3019144e9.html">internal</a></li><li class="navelem"><a href="t42types_8h.html">t42types.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

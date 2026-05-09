@@ -1,0 +1,18 @@
+digraph "gray_render_conic"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="gray_render_conic",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gray_render_line",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgrays_8c.html#a30ef8d8ab223cf1715b8c715b7208749",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="gray_render_scanline",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgrays_8c.html#ae1a4a9f64b96208f3b478477d6d846b3",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="gray_set_cell",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftgrays_8c.html#aa6cb542d0a7928200b075c4be5098dd1",tooltip=" "];
+  Node2 -> Node4 [id="edge4_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="gray_split_conic",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgrays_8c.html#ae9c28ab65b1973e18eb6301ed4a2c4fb",tooltip=" "];
+}

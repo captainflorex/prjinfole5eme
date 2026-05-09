@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/type1/t1parse.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t1parse_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">t1parse.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="t1parse_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  t1parse.h                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    Type 1 parser (specification).                                       */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 1996-2001, 2002 by                                           */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef __T1PARSE_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define __T1PARSE_H__</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include FT_INTERNAL_TYPE1_TYPES_H</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include FT_INTERNAL_STREAM_H</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="comment">/* &lt;Struct&gt;                                                              */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">/*    T1_ParserRec                                                       */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="comment">/* &lt;Description&gt;                                                         */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="comment">/*    A PS_ParserRec is an object used to parse a Type 1 fonts very      */</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">/*    quickly.                                                           */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">/* &lt;Fields&gt;                                                              */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">/*    root         :: The root parser.                                   */</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">/*    stream       :: The current input stream.                          */</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">/*    base_dict    :: A pointer to the top-level dictionary.             */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">/*    base_len     :: The length in bytes of the top dictionary.         */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">/*    private_dict :: A pointer to the private dictionary.               */</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">/*    private_len  :: The length in bytes of the private dictionary.     */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">/*    in_pfb       :: A boolean.  Indicates that we are handling a PFB   */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="comment">/*                    file.                                              */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="comment">/*    in_memory    :: A boolean.  Indicates a memory-based stream.       */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">/*    single_block :: A boolean.  Indicates that the private dictionary  */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">/*                    is stored in lieu of the base dictionary.          */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">/*                                                                       */</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html">   61</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_t1___parser_rec__.html">T1_ParserRec_</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#af260980fecd0f110bf1131c4b0e4f00c">   63</a></span>    <a class="code hl_typedef" href="psaux_8h.html#acc12279494c0a43d2a4715f1e8c30502">PS_ParserRec</a>  <a class="code hl_variable" href="struct_t1___parser_rec__.html#af260980fecd0f110bf1131c4b0e4f00c">root</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#a0ae89ba7e9d61d51dbf8db87cd01ab2e">   64</a></span>    <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>     <a class="code hl_variable" href="struct_t1___parser_rec__.html#a0ae89ba7e9d61d51dbf8db87cd01ab2e">stream</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#ae62c48cfc0aeb66efaeed7454d677beb">   66</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*      <a class="code hl_variable" href="struct_t1___parser_rec__.html#ae62c48cfc0aeb66efaeed7454d677beb">base_dict</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#a16f5041a77cfa484a9431df8e747aff5">   67</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>       <a class="code hl_variable" href="struct_t1___parser_rec__.html#a16f5041a77cfa484a9431df8e747aff5">base_len</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#aa48177c354c605407fff399d50767e8e">   69</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>*      <a class="code hl_variable" href="struct_t1___parser_rec__.html#aa48177c354c605407fff399d50767e8e">private_dict</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#a18071f535e3115cccb4639e4eac6d111">   70</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>       <a class="code hl_variable" href="struct_t1___parser_rec__.html#a18071f535e3115cccb4639e4eac6d111">private_len</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#afe43819e3ab1a662658616e2eb10be16">   72</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>       <a class="code hl_variable" href="struct_t1___parser_rec__.html#afe43819e3ab1a662658616e2eb10be16">in_pfb</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#ade06c2b9576474a8392744c2474772b7">   73</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>       <a class="code hl_variable" href="struct_t1___parser_rec__.html#ade06c2b9576474a8392744c2474772b7">in_memory</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_t1___parser_rec__.html#ae720db11513fa8c5cbf2df57586d2c0e">   74</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>       <a class="code hl_variable" href="struct_t1___parser_rec__.html#ae720db11513fa8c5cbf2df57586d2c0e">single_block</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">   76</a></span>  } <a class="code hl_typedef" href="t1parse_8h.html#aafd59a9a44aabe82d51d5422ee636545">T1_ParserRec</a>, *<a class="code hl_typedef" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a>;</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a4587cc322042ed26db057bc082e190fd">   79</a></span><span class="preprocessor">#define T1_Add_Table( p, i, o, l )  (p)-&gt;funcs.add( (p), i, o, l )</span></div>
+<div class="foldopen" id="foldopen00080" data-start="" data-end="">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="t1parse_8h.html#ab4108e2e73879e4306d478bdc1af1068">   80</a></span><span class="preprocessor">#define T1_Done_Table( p )          \</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">          do                        \</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">          {                         \</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">            if ( (p)-&gt;funcs.done )  \</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">              (p)-&gt;funcs.done( p ); \</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">          } while ( 0 )</span></div>
+</div>
+<div class="foldopen" id="foldopen00086" data-start="" data-end="">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a46bfcd2eb2336c0d9020606bdb310fbb">   86</a></span><span class="preprocessor">#define T1_Release_Table( p )          \</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">          do                           \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">          {                            \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">            if ( (p)-&gt;funcs.release )  \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">              (p)-&gt;funcs.release( p ); \</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">          } while ( 0 )</span></div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a4a8e90ed89199336b0358f2186afb837">   94</a></span><span class="preprocessor">#define T1_Skip_Spaces( p )  (p)-&gt;root.funcs.skip_spaces( &amp;(p)-&gt;root )</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a2d281963fa9b2f5fee3076127e721f3c">   95</a></span><span class="preprocessor">#define T1_Skip_Alpha( p )   (p)-&gt;root.funcs.skip_alpha ( &amp;(p)-&gt;root )</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a7b274cb3d757bd0c8932331385fd3f15">   97</a></span><span class="preprocessor">#define T1_ToInt( p )       (p)-&gt;root.funcs.to_int( &amp;(p)-&gt;root )</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a0f804df0419d1a32855721d7383a1571">   98</a></span><span class="preprocessor">#define T1_ToFixed( p, t )  (p)-&gt;root.funcs.to_fixed( &amp;(p)-&gt;root, t )</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="" data-end="">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a0092666fe7c0022dfe337dbe42e38246">  100</a></span><span class="preprocessor">#define T1_ToCoordArray( p, m, c )                           \</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">          (p)-&gt;root.funcs.to_coord_array( &amp;(p)-&gt;root, m, c )</span></div>
+</div>
+<div class="foldopen" id="foldopen00102" data-start="" data-end="">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a38518bc9a98a9e4beb448a73c955c4da">  102</a></span><span class="preprocessor">#define T1_ToFixedArray( p, m, f, t )                           \</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">          (p)-&gt;root.funcs.to_fixed_array( &amp;(p)-&gt;root, m, f, t )</span></div>
+</div>
+<div class="foldopen" id="foldopen00104" data-start="" data-end="">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="t1parse_8h.html#a053a68ccae503c6802c5d3b0bb39888f">  104</a></span><span class="preprocessor">#define T1_ToToken( p, t )                          \</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">          (p)-&gt;root.funcs.to_token( &amp;(p)-&gt;root, t )</span></div>
+</div>
+<div class="foldopen" id="foldopen00106" data-start="" data-end="">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="t1parse_8h.html#aa7087295875eb31bd7d9b57363549fb7">  106</a></span><span class="preprocessor">#define T1_ToTokenArray( p, t, m, c )                           \</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">          (p)-&gt;root.funcs.to_token_array( &amp;(p)-&gt;root, t, m, c )</span></div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="" data-end="">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="t1parse_8h.html#ad2bafe5a5ab0c58c6c8db76ea9606064">  109</a></span><span class="preprocessor">#define T1_Load_Field( p, f, o, m, pf )                         \</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">          (p)-&gt;root.funcs.load_field( &amp;(p)-&gt;root, f, o, m, pf )</span></div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="" data-end="">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="t1parse_8h.html#afd63d95256e2e53f93a8c13c79bd9c83">  112</a></span><span class="preprocessor">#define T1_Load_Field_Table( p, f, o, m, pf )                         \</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">          (p)-&gt;root.funcs.load_field_table( &amp;(p)-&gt;root, f, o, m, pf )</span></div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_function" href="t1parse_8h.html#a2a4928055043ebf7d39c609a05ddf371">T1_New_Parser</a>( <a class="code hl_typedef" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a>      parser,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                 <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>      stream,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                 <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>      <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                 <a class="code hl_typedef" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a>  psaux );</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <a class="code hl_function" href="t1parse_8h.html#abc9d83fd1fd9fc5862c14e1a6f01fbd4">T1_Get_Private_Dict</a>( <a class="code hl_typedef" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a>      parser,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                       <a class="code hl_typedef" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a>  psaux );</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_function" href="t1parse_8h.html#a0e8d682e4e2e85b3f609db59836d5e62">T1_Finalize_Parser</a>( <a class="code hl_typedef" href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a>  parser );</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">/* __T1PARSE_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a58a8b2fb387665ef9652a54a9ad80bd3"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a></div><div class="ttdeci">#define FT_LOCAL(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:154</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+<div class="ttc" id="aftsysio_8h_html_a99e9995ed3299cabc8874b89ee1ee407"><div class="ttname"><a href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_StreamRec_ * FT_Stream</div><div class="ttdef"><b>Definition</b> ftsysio.h:55</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="afttypes_8h_html_a51f26183ca0c9f4af958939648caeccd"><div class="ttname"><a href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></div><div class="ttdeci">unsigned char FT_Byte</div><div class="ttdef"><b>Definition</b> fttypes.h:143</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a7fa72a1f0e79fb1860c5965789024d6f"><div class="ttname"><a href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></div><div class="ttdeci">signed long FT_Long</div><div class="ttdef"><b>Definition</b> fttypes.h:209</div></div>
+<div class="ttc" id="apsaux_8h_html_a9f18cae2940f734d57781d4b4f3e5233"><div class="ttname"><a href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a></div><div class="ttdeci">struct PSAux_ServiceRec_ * PSAux_Service</div></div>
+<div class="ttc" id="apsaux_8h_html_acc12279494c0a43d2a4715f1e8c30502"><div class="ttname"><a href="psaux_8h.html#acc12279494c0a43d2a4715f1e8c30502">PS_ParserRec</a></div><div class="ttdeci">struct PS_ParserRec_ PS_ParserRec</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html"><div class="ttname"><a href="struct_t1___parser_rec__.html">T1_ParserRec_</a></div><div class="ttdef"><b>Definition</b> t1parse.h:62</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_a0ae89ba7e9d61d51dbf8db87cd01ab2e"><div class="ttname"><a href="struct_t1___parser_rec__.html#a0ae89ba7e9d61d51dbf8db87cd01ab2e">T1_ParserRec_::stream</a></div><div class="ttdeci">FT_Stream stream</div><div class="ttdef"><b>Definition</b> t1parse.h:64</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_a16f5041a77cfa484a9431df8e747aff5"><div class="ttname"><a href="struct_t1___parser_rec__.html#a16f5041a77cfa484a9431df8e747aff5">T1_ParserRec_::base_len</a></div><div class="ttdeci">FT_Long base_len</div><div class="ttdef"><b>Definition</b> t1parse.h:67</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_a18071f535e3115cccb4639e4eac6d111"><div class="ttname"><a href="struct_t1___parser_rec__.html#a18071f535e3115cccb4639e4eac6d111">T1_ParserRec_::private_len</a></div><div class="ttdeci">FT_Long private_len</div><div class="ttdef"><b>Definition</b> t1parse.h:70</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_aa48177c354c605407fff399d50767e8e"><div class="ttname"><a href="struct_t1___parser_rec__.html#aa48177c354c605407fff399d50767e8e">T1_ParserRec_::private_dict</a></div><div class="ttdeci">FT_Byte * private_dict</div><div class="ttdef"><b>Definition</b> t1parse.h:69</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_ade06c2b9576474a8392744c2474772b7"><div class="ttname"><a href="struct_t1___parser_rec__.html#ade06c2b9576474a8392744c2474772b7">T1_ParserRec_::in_memory</a></div><div class="ttdeci">FT_Byte in_memory</div><div class="ttdef"><b>Definition</b> t1parse.h:73</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_ae62c48cfc0aeb66efaeed7454d677beb"><div class="ttname"><a href="struct_t1___parser_rec__.html#ae62c48cfc0aeb66efaeed7454d677beb">T1_ParserRec_::base_dict</a></div><div class="ttdeci">FT_Byte * base_dict</div><div class="ttdef"><b>Definition</b> t1parse.h:66</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_ae720db11513fa8c5cbf2df57586d2c0e"><div class="ttname"><a href="struct_t1___parser_rec__.html#ae720db11513fa8c5cbf2df57586d2c0e">T1_ParserRec_::single_block</a></div><div class="ttdeci">FT_Byte single_block</div><div class="ttdef"><b>Definition</b> t1parse.h:74</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_af260980fecd0f110bf1131c4b0e4f00c"><div class="ttname"><a href="struct_t1___parser_rec__.html#af260980fecd0f110bf1131c4b0e4f00c">T1_ParserRec_::root</a></div><div class="ttdeci">PS_ParserRec root</div><div class="ttdef"><b>Definition</b> t1parse.h:63</div></div>
+<div class="ttc" id="astruct_t1___parser_rec___html_afe43819e3ab1a662658616e2eb10be16"><div class="ttname"><a href="struct_t1___parser_rec__.html#afe43819e3ab1a662658616e2eb10be16">T1_ParserRec_::in_pfb</a></div><div class="ttdeci">FT_Byte in_pfb</div><div class="ttdef"><b>Definition</b> t1parse.h:72</div></div>
+<div class="ttc" id="at1parse_8h_html_a0e8d682e4e2e85b3f609db59836d5e62"><div class="ttname"><a href="t1parse_8h.html#a0e8d682e4e2e85b3f609db59836d5e62">T1_Finalize_Parser</a></div><div class="ttdeci">T1_Finalize_Parser(T1_Parser parser)</div><div class="ttdef"><b>Definition</b> t1parse.c:229</div></div>
+<div class="ttc" id="at1parse_8h_html_a2a4928055043ebf7d39c609a05ddf371"><div class="ttname"><a href="t1parse_8h.html#a2a4928055043ebf7d39c609a05ddf371">T1_New_Parser</a></div><div class="ttdeci">T1_New_Parser(T1_Parser parser, FT_Stream stream, FT_Memory memory, PSAux_Service psaux)</div><div class="ttdef"><b>Definition</b> t1parse.c:120</div></div>
+<div class="ttc" id="at1parse_8h_html_a452297769f4652d1d65fd4f9a983eaf2"><div class="ttname"><a href="t1parse_8h.html#a452297769f4652d1d65fd4f9a983eaf2">T1_Parser</a></div><div class="ttdeci">FT_BEGIN_HEADER struct T1_ParserRec_ * T1_Parser</div></div>
+<div class="ttc" id="at1parse_8h_html_aafd59a9a44aabe82d51d5422ee636545"><div class="ttname"><a href="t1parse_8h.html#aafd59a9a44aabe82d51d5422ee636545">T1_ParserRec</a></div><div class="ttdeci">FT_BEGIN_HEADER struct T1_ParserRec_ T1_ParserRec</div></div>
+<div class="ttc" id="at1parse_8h_html_abc9d83fd1fd9fc5862c14e1a6f01fbd4"><div class="ttname"><a href="t1parse_8h.html#abc9d83fd1fd9fc5862c14e1a6f01fbd4">T1_Get_Private_Dict</a></div><div class="ttdeci">T1_Get_Private_Dict(T1_Parser parser, PSAux_Service psaux)</div><div class="ttdef"><b>Definition</b> t1parse.c:269</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_0dd962a48e96800d6adc8e0bba6ee8c4.html">type1</a></li><li class="navelem"><a href="t1parse_8h.html">t1parse.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

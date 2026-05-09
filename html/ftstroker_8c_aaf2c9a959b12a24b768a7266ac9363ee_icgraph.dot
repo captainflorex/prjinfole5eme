@@ -1,0 +1,17 @@
+digraph "ft_stroke_border_arcto"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ft_stroke_border_arcto",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ft_stroker_arcto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#a3efedaf5ec18cfd5b36c3604e7025245",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_stroker_cap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#a967292dc4127e00f10a5570af6461a74",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="ft_stroker_outside",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftstroker_8c.html#ab632a04f4093768ac9d8fb335214c959",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ft_stroker_process\l_corner",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftstroker_8c.html#a3ea11d2c2088d5a2da601561f6db3dba",tooltip=" "];
+}

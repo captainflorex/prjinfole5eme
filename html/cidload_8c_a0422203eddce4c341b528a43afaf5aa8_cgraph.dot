@@ -1,0 +1,15 @@
+digraph "cid_read_subrs"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="cid_read_subrs",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="cid_decrypt",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cidload_8c.html#a0aa4422f48ef5d500a80a0ba64c1b4d6",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="cid_get_offset",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cidload_8c.html#a29c965cd62ec4110610b750f3f9e83c0",tooltip=" "];
+  Node3 -> Node3 [id="edge4_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+}

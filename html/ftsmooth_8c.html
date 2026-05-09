@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/smooth/ftsmooth.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftsmooth_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftsmooth.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ftsmooth_8h_source.html">ftsmooth.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ftgrays_8h_source.html">ftgrays.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ftsmerrs_8h_source.html">ftsmerrs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftsmooth.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2smooth_2ftsmooth_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2smooth_2ftsmooth_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ftsmooth_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a62fd62a581db0354a8d7649ac880fcff" id="r_a62fd62a581db0354a8d7649ac880fcff"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a62fd62a581db0354a8d7649ac880fcff">ft_smooth_init</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render)</td></tr>
+<tr class="memitem:a6bd5b74cb82c94ec9e30e798a4576a7a" id="r_a6bd5b74cb82c94ec9e30e798a4576a7a"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6bd5b74cb82c94ec9e30e798a4576a7a">ft_smooth_set_mode</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> mode_tag, <a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a> data)</td></tr>
+<tr class="memitem:a3b32bbd4426b5d655d52067fb974c2a6" id="r_a3b32bbd4426b5d655d52067fb974c2a6"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3b32bbd4426b5d655d52067fb974c2a6">ft_smooth_transform</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *matrix, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *delta)</td></tr>
+<tr class="memitem:aaf77630abd0ee64b527821f4a4e56d75" id="r_aaf77630abd0ee64b527821f4a4e56d75"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aaf77630abd0ee64b527821f4a4e56d75">ft_smooth_get_cbox</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *cbox)</td></tr>
+<tr class="memitem:ae7365e303202fe44414737dc3de1c8b0" id="r_ae7365e303202fe44414737dc3de1c8b0"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae7365e303202fe44414737dc3de1c8b0">ft_smooth_render_generic</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> mode, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *origin, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> required_mode, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> hmul, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> vmul)</td></tr>
+<tr class="memitem:a35ee5f4c100a85f3942c082e10100159" id="r_a35ee5f4c100a85f3942c082e10100159"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a35ee5f4c100a85f3942c082e10100159">ft_smooth_render</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> mode, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *origin)</td></tr>
+<tr class="memitem:a8839f30e78172f430b4c85e05fc0cc7a" id="r_a8839f30e78172f430b4c85e05fc0cc7a"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8839f30e78172f430b4c85e05fc0cc7a">ft_smooth_render_lcd</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> mode, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *origin)</td></tr>
+<tr class="memitem:afcb9f9dd869306c7a762af78b7ba614b" id="r_afcb9f9dd869306c7a762af78b7ba614b"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#afcb9f9dd869306c7a762af78b7ba614b">ft_smooth_render_lcd_v</a> (<a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a> render, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> mode, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *origin)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab3dea3b712f8c9d79cf607209ea88f12" id="r_ab3dea3b712f8c9d79cf607209ea88f12"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab3dea3b712f8c9d79cf607209ea88f12">ft_smooth_renderer_class</a></td></tr>
+<tr class="memitem:adf7645be9660c8b2ad20afe4468fd343" id="r_adf7645be9660c8b2ad20afe4468fd343"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a>&#160;</td><td class="memItemRight"><a class="el" href="#adf7645be9660c8b2ad20afe4468fd343">ft_smooth_lcd_renderer_class</a></td></tr>
+<tr class="memitem:a7517bac30f83ed9a811149cddcef2fc7" id="r_a7517bac30f83ed9a811149cddcef2fc7"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7517bac30f83ed9a811149cddcef2fc7">ft_smooth_lcdv_renderer_class</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="aaf77630abd0ee64b527821f4a4e56d75" name="aaf77630abd0ee64b527821f4a4e56d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf77630abd0ee64b527821f4a4e56d75">&#9670;&#160;</a></span>ft_smooth_get_cbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_smooth_get_cbox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a> *</td>          <td class="paramname"><span class="paramname"><em>cbox</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_aaf77630abd0ee64b527821f4a4e56d75_cgraph.png" border="0" usemap="#aftsmooth_8c_aaf77630abd0ee64b527821f4a4e56d75_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a62fd62a581db0354a8d7649ac880fcff" name="a62fd62a581db0354a8d7649ac880fcff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fd62a581db0354a8d7649ac880fcff">&#9670;&#160;</a></span>ft_smooth_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35ee5f4c100a85f3942c082e10100159" name="a35ee5f4c100a85f3942c082e10100159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ee5f4c100a85f3942c082e10100159">&#9670;&#160;</a></span>ft_smooth_render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_a35ee5f4c100a85f3942c082e10100159_cgraph.png" border="0" usemap="#aftsmooth_8c_a35ee5f4c100a85f3942c082e10100159_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ae7365e303202fe44414737dc3de1c8b0" name="ae7365e303202fe44414737dc3de1c8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7365e303202fe44414737dc3de1c8b0">&#9670;&#160;</a></span>ft_smooth_render_generic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_render_generic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>required_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>hmul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>vmul</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_ae7365e303202fe44414737dc3de1c8b0_cgraph.png" border="0" usemap="#aftsmooth_8c_ae7365e303202fe44414737dc3de1c8b0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_ae7365e303202fe44414737dc3de1c8b0_icgraph.png" border="0" usemap="#aftsmooth_8c_ae7365e303202fe44414737dc3de1c8b0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a8839f30e78172f430b4c85e05fc0cc7a" name="a8839f30e78172f430b4c85e05fc0cc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8839f30e78172f430b4c85e05fc0cc7a">&#9670;&#160;</a></span>ft_smooth_render_lcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_render_lcd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_a8839f30e78172f430b4c85e05fc0cc7a_cgraph.png" border="0" usemap="#aftsmooth_8c_a8839f30e78172f430b4c85e05fc0cc7a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="afcb9f9dd869306c7a762af78b7ba614b" name="afcb9f9dd869306c7a762af78b7ba614b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb9f9dd869306c7a762af78b7ba614b">&#9670;&#160;</a></span>ft_smooth_render_lcd_v()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_render_lcd_v </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_afcb9f9dd869306c7a762af78b7ba614b_cgraph.png" border="0" usemap="#aftsmooth_8c_afcb9f9dd869306c7a762af78b7ba614b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a6bd5b74cb82c94ec9e30e798a4576a7a" name="a6bd5b74cb82c94ec9e30e798a4576a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd5b74cb82c94ec9e30e798a4576a7a">&#9670;&#160;</a></span>ft_smooth_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_set_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>mode_tag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b32bbd4426b5d655d52067fb974c2a6" name="a3b32bbd4426b5d655d52067fb974c2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b32bbd4426b5d655d52067fb974c2a6">&#9670;&#160;</a></span>ft_smooth_transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ft_smooth_transform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></td>          <td class="paramname"><span class="paramname"><em>render</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>delta</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftsmooth_8c_a3b32bbd4426b5d655d52067fb974c2a6_cgraph.png" border="0" usemap="#aftsmooth_8c_a3b32bbd4426b5d655d52067fb974c2a6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="adf7645be9660c8b2ad20afe4468fd343" name="adf7645be9660c8b2ad20afe4468fd343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7645be9660c8b2ad20afe4468fd343">&#9670;&#160;</a></span>ft_smooth_lcd_renderer_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a> ft_smooth_lcd_renderer_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                      =</div>
+<div class="line">{</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a>,</div>
+<div class="line">    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">    <span class="stringliteral">&quot;smooth-lcd&quot;</span>,</div>
+<div class="line">    0x10000L,</div>
+<div class="line">    0x20000L,</div>
+<div class="line"> </div>
+<div class="line">    0,    </div>
+<div class="line"> </div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_function" href="#a62fd62a581db0354a8d7649ac880fcff">ft_smooth_init</a>,</div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) 0,</div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  0</div>
+<div class="line">  },</div>
+<div class="line"> </div>
+<div class="line">  FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a>)   <a class="code hl_function" href="#a8839f30e78172f430b4c85e05fc0cc7a">ft_smooth_render_lcd</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a>)<a class="code hl_function" href="#a3b32bbd4426b5d655d52067fb974c2a6">ft_smooth_transform</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a>)  <a class="code hl_function" href="#aaf77630abd0ee64b527821f4a4e56d75">ft_smooth_get_cbox</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a>)  <a class="code hl_function" href="#a6bd5b74cb82c94ec9e30e798a4576a7a">ft_smooth_set_mode</a>,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a>*)    &amp;<a class="code hl_variable" href="ftgrays_8c.html#a1451c08ce98bcb05478c22c21215a7e7">ft_grays_raster</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftgrays_8c_html_a1451c08ce98bcb05478c22c21215a7e7"><div class="ttname"><a href="ftgrays_8c.html#a1451c08ce98bcb05478c22c21215a7e7">ft_grays_raster</a></div><div class="ttdeci">const FT_Raster_Funcs ft_grays_raster</div><div class="ttdef"><b>Definition</b> ftgrays.c:2147</div></div>
+<div class="ttc" id="aftimage_8h_html_a738d501723224dee6667ada1e1b6eb1c"><div class="ttname"><a href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a></div><div class="ttdeci">struct FT_Raster_Funcs_ FT_Raster_Funcs</div></div>
+<div class="ttc" id="aftobjs_8h_html_ad93f38fdbe185582f5d4deae9d86f830"><div class="ttname"><a href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a></div><div class="ttdeci">struct FT_RendererRec_ FT_RendererRec</div></div>
+<div class="ttc" id="aftrender_8h_html_a44bd5724a3d348fffdcabaa893144575"><div class="ttname"><a href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a></div><div class="ttdeci">FT_Error(* FT_Renderer_TransformFunc)(FT_Renderer renderer, FT_GlyphSlot slot, FT_Matrix *matrix, FT_Vector *delta)</div><div class="ttdef"><b>Definition</b> ftrender.h:94</div></div>
+<div class="ttc" id="aftrender_8h_html_a7ed568cf54b436823fea2f8a8864854b"><div class="ttname"><a href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a></div><div class="ttdeci">FT_Error(* FT_Renderer_SetModeFunc)(FT_Renderer renderer, FT_ULong mode_tag, FT_Pointer mode_ptr)</div><div class="ttdef"><b>Definition</b> ftrender.h:107</div></div>
+<div class="ttc" id="aftrender_8h_html_adba414b141b3605331209b8961c3ae2a"><div class="ttname"><a href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a></div><div class="ttdeci">void(* FT_Renderer_GetCBoxFunc)(FT_Renderer renderer, FT_GlyphSlot slot, FT_BBox *cbox)</div><div class="ttdef"><b>Definition</b> ftrender.h:101</div></div>
+<div class="ttc" id="aftrender_8h_html_af02fef21aa5228df77966d9492c33e16"><div class="ttname"><a href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a></div><div class="ttdeci">FT_Error(* FT_Renderer_RenderFunc)(FT_Renderer renderer, FT_GlyphSlot slot, FT_UInt mode, FT_Vector *origin)</div><div class="ttdef"><b>Definition</b> ftrender.h:88</div></div>
+<div class="ttc" id="aftsmooth_8c_html_a3b32bbd4426b5d655d52067fb974c2a6"><div class="ttname"><a href="#a3b32bbd4426b5d655d52067fb974c2a6">ft_smooth_transform</a></div><div class="ttdeci">static FT_Error ft_smooth_transform(FT_Renderer render, FT_GlyphSlot slot, FT_Matrix *matrix, FT_Vector *delta)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:57</div></div>
+<div class="ttc" id="aftsmooth_8c_html_a62fd62a581db0354a8d7649ac880fcff"><div class="ttname"><a href="#a62fd62a581db0354a8d7649ac880fcff">ft_smooth_init</a></div><div class="ttdeci">static FT_Error ft_smooth_init(FT_Renderer render)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:30</div></div>
+<div class="ttc" id="aftsmooth_8c_html_a6bd5b74cb82c94ec9e30e798a4576a7a"><div class="ttname"><a href="#a6bd5b74cb82c94ec9e30e798a4576a7a">ft_smooth_set_mode</a></div><div class="ttdeci">static FT_Error ft_smooth_set_mode(FT_Renderer render, FT_ULong mode_tag, FT_Pointer data)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:45</div></div>
+<div class="ttc" id="aftsmooth_8c_html_a8839f30e78172f430b4c85e05fc0cc7a"><div class="ttname"><a href="#a8839f30e78172f430b4c85e05fc0cc7a">ft_smooth_render_lcd</a></div><div class="ttdeci">static FT_Error ft_smooth_render_lcd(FT_Renderer render, FT_GlyphSlot slot, FT_Render_Mode mode, FT_Vector *origin)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:247</div></div>
+<div class="ttc" id="aftsmooth_8c_html_aaf77630abd0ee64b527821f4a4e56d75"><div class="ttname"><a href="#aaf77630abd0ee64b527821f4a4e56d75">ft_smooth_get_cbox</a></div><div class="ttdeci">static void ft_smooth_get_cbox(FT_Renderer render, FT_GlyphSlot slot, FT_BBox *cbox)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:84</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_a7881ad6a13b0fe28b8473fa7ee6f28c2"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a></div><div class="ttdeci">void(* FT_Module_Destructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:73</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a></div><div class="ttdeci">@ ft_module_renderer</div><div class="ttdef"><b>Definition</b> ftmodule.h:52</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ae0a0ec80683e4845d953fcbb7e6af093"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a></div><div class="ttdeci">FT_Error(* FT_Module_Constructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:70</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_af078ba2b906d2553add818593ab784ed"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a></div><div class="ttdeci">FT_Module_Interface(* FT_Module_Requester)(FT_Module module, const char *name)</div><div class="ttdef"><b>Definition</b> ftmodule.h:76</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7517bac30f83ed9a811149cddcef2fc7" name="a7517bac30f83ed9a811149cddcef2fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7517bac30f83ed9a811149cddcef2fc7">&#9670;&#160;</a></span>ft_smooth_lcdv_renderer_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a> ft_smooth_lcdv_renderer_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                       =</div>
+<div class="line">{</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a>,</div>
+<div class="line">    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">    <span class="stringliteral">&quot;smooth-lcdv&quot;</span>,</div>
+<div class="line">    0x10000L,</div>
+<div class="line">    0x20000L,</div>
+<div class="line"> </div>
+<div class="line">    0,    </div>
+<div class="line"> </div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_function" href="#a62fd62a581db0354a8d7649ac880fcff">ft_smooth_init</a>,</div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) 0,</div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  0</div>
+<div class="line">  },</div>
+<div class="line"> </div>
+<div class="line">  FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a>)   <a class="code hl_function" href="#afcb9f9dd869306c7a762af78b7ba614b">ft_smooth_render_lcd_v</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a>)<a class="code hl_function" href="#a3b32bbd4426b5d655d52067fb974c2a6">ft_smooth_transform</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a>)  <a class="code hl_function" href="#aaf77630abd0ee64b527821f4a4e56d75">ft_smooth_get_cbox</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a>)  <a class="code hl_function" href="#a6bd5b74cb82c94ec9e30e798a4576a7a">ft_smooth_set_mode</a>,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a>*)    &amp;<a class="code hl_variable" href="ftgrays_8c.html#a1451c08ce98bcb05478c22c21215a7e7">ft_grays_raster</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftsmooth_8c_html_afcb9f9dd869306c7a762af78b7ba614b"><div class="ttname"><a href="#afcb9f9dd869306c7a762af78b7ba614b">ft_smooth_render_lcd_v</a></div><div class="ttdeci">static FT_Error ft_smooth_render_lcd_v(FT_Renderer render, FT_GlyphSlot slot, FT_Render_Mode mode, FT_Vector *origin)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:266</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab3dea3b712f8c9d79cf607209ea88f12" name="ab3dea3b712f8c9d79cf607209ea88f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dea3b712f8c9d79cf607209ea88f12">&#9670;&#160;</a></span>ft_smooth_renderer_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a> ft_smooth_renderer_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                  =</div>
+<div class="line">{</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a>,</div>
+<div class="line">    <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a> ),</div>
+<div class="line"> </div>
+<div class="line">    <span class="stringliteral">&quot;smooth&quot;</span>,</div>
+<div class="line">    0x10000L,</div>
+<div class="line">    0x20000L,</div>
+<div class="line"> </div>
+<div class="line">    0,    </div>
+<div class="line"> </div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_function" href="#a62fd62a581db0354a8d7649ac880fcff">ft_smooth_init</a>,</div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) 0,</div>
+<div class="line">    (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  0</div>
+<div class="line">  },</div>
+<div class="line"> </div>
+<div class="line">  FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a>)   <a class="code hl_function" href="#a35ee5f4c100a85f3942c082e10100159">ft_smooth_render</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a>)<a class="code hl_function" href="#a3b32bbd4426b5d655d52067fb974c2a6">ft_smooth_transform</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a>)  <a class="code hl_function" href="#aaf77630abd0ee64b527821f4a4e56d75">ft_smooth_get_cbox</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a>)  <a class="code hl_function" href="#a6bd5b74cb82c94ec9e30e798a4576a7a">ft_smooth_set_mode</a>,</div>
+<div class="line"> </div>
+<div class="line">  (<a class="code hl_typedef" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a>*)    &amp;<a class="code hl_variable" href="ftgrays_8c.html#a1451c08ce98bcb05478c22c21215a7e7">ft_grays_raster</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftsmooth_8c_html_a35ee5f4c100a85f3942c082e10100159"><div class="ttname"><a href="#a35ee5f4c100a85f3942c082e10100159">ft_smooth_render</a></div><div class="ttdeci">static FT_Error ft_smooth_render(FT_Renderer render, FT_GlyphSlot slot, FT_Render_Mode mode, FT_Vector *origin)</div><div class="ttdef"><b>Definition</b> ftsmooth.c:234</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_355a428e76e8c4dd21375bba61dbe80b.html">smooth</a></li><li class="navelem"><a href="ftsmooth_8c.html">ftsmooth.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

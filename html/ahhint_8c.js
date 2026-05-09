@@ -1,0 +1,28 @@
+var ahhint_8c =
+[
+    [ "AH_USE_IUP", "ahhint_8c.html#a6bfe9ec4bf70e8ff98ab1ad2d96b89a4", null ],
+    [ "FACE_GLOBALS", "ahhint_8c.html#abd4a53becf395865256548f9fe5b6142", null ],
+    [ "OPTIM_STEM_SNAP", "ahhint_8c.html#a6382e55f60b5544430a3d94c13bb77b4", null ],
+    [ "ah_align_linked_edge", "ahhint_8c.html#ab4e4b651f3a05a02db4b185d139392de", null ],
+    [ "ah_align_serif_edge", "ahhint_8c.html#a82c9a45b560a7a22a2f004bf38925a44", null ],
+    [ "ah_compute_stem_width", "ahhint_8c.html#a330c125aa30996285eca3557e3911172", null ],
+    [ "ah_hint_edges_3", "ahhint_8c.html#a5f9e7c08c370fc49c26abdd2a4ec638d", null ],
+    [ "ah_hinter_align", "ahhint_8c.html#adb242de5b45eb1c82b323d389c729f60", null ],
+    [ "ah_hinter_align_edge_points", "ahhint_8c.html#a577fa89b731851b7a866cdd011b75a48", null ],
+    [ "ah_hinter_align_points", "ahhint_8c.html#ab3bb5a3a64cea14fd42415c430c2ff7e", null ],
+    [ "ah_hinter_align_strong_points", "ahhint_8c.html#af135fe0c4bd7b53490c08e289efbd083", null ],
+    [ "ah_hinter_align_weak_points", "ahhint_8c.html#ab99e6d44198f4787def269a54539feb6", null ],
+    [ "ah_hinter_done", "ahhint_8c.html#a11f073f0007863aef1eb9254a46393bd", null ],
+    [ "ah_hinter_done_face_globals", "ahhint_8c.html#ad184ecefa38f3b28e1571cee5a1ceb53", null ],
+    [ "ah_hinter_done_global_hints", "ahhint_8c.html#adaa216996d8169083929d46080cde9aa", null ],
+    [ "ah_hinter_get_global_hints", "ahhint_8c.html#a23d7c1d38d4473a68471ffbec6331a52", null ],
+    [ "ah_hinter_hint_edges", "ahhint_8c.html#ac09d0cd0c4e5ef00086498f1edeba677", null ],
+    [ "ah_hinter_load", "ahhint_8c.html#ad5f7274fb7019501ec29695ad4956b73", null ],
+    [ "ah_hinter_load_glyph", "ahhint_8c.html#a5a86c39bc12dae33a50994fd2714f6b0", null ],
+    [ "ah_hinter_new", "ahhint_8c.html#a98f08d801a4efb41d4d28a6d2e21b2da", null ],
+    [ "ah_hinter_new_face_globals", "ahhint_8c.html#a7df1a488c9a77b4d88297dd664535285", null ],
+    [ "ah_hinter_scale_globals", "ahhint_8c.html#a66d966fbfbf6cf9f6e7f178866c29c6c", null ],
+    [ "ah_iup_interp", "ahhint_8c.html#a7be274ceffca99183f701ff45a4eea8b", null ],
+    [ "ah_iup_shift", "ahhint_8c.html#a8dba5de1ec298ea4997d17c0ffe5c5c4", null ],
+    [ "ah_snap_width", "ahhint_8c.html#acd3794812cbcd9d636ff482e6d31fed4", null ]
+];

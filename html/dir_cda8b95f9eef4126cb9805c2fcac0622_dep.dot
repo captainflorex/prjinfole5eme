@@ -1,0 +1,18 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/builds/amiga/src"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_aea4eb7ff13cb25efd810f56fab7995c {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="amiga", rankdir=LR style="filled,dashed", URL="dir_aea4eb7ff13cb25efd810f56fab7995c.html",tooltip=""]
+  subgraph clusterdir_cda8b95f9eef4126cb9805c2fcac0622 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", rankdir=LR style="filled,bold", URL="dir_cda8b95f9eef4126cb9805c2fcac0622.html",tooltip=""]
+    dir_cda8b95f9eef4126cb9805c2fcac0622 [shape=plaintext, label="src"];
+  dir_1769cc85c21570e83e20cc7b33be7e7f [label="base", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_1769cc85c21570e83e20cc7b33be7e7f.html",tooltip=""];
+  }
+  }
+  dir_3603bed0816a62e1b0e4984ead63386d [label="include", fillcolor="#edf0f7", color="red", style="filled,dashed", URL="dir_3603bed0816a62e1b0e4984ead63386d.html",tooltip=""];
+  dir_1769cc85c21570e83e20cc7b33be7e7f->dir_3603bed0816a62e1b0e4984ead63386d [headlabel="2", labeldistance=1.5 headhref="dir_000006_000030.html" href="dir_000006_000030.html" color="steelblue1" fontcolor="steelblue1"];
+}

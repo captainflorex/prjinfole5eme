@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/autohint/ahglyph.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ahglyph_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ahglyph.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ahglyph_8h_source.html">ahglyph.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ahangles_8h_source.html">ahangles.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ahglobal_8h_source.html">ahglobal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aherrors_8h_source.html">aherrors.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ahglyph.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2autohint_2ahglyph_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2autohint_2ahglyph_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ahglyph_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ad1b5923932ba6cacfecdff36f3cefef7" id="r_ad1b5923932ba6cacfecdff36f3cefef7"><td class="memItemLeft">static <a class="el" href="ahtypes_8h.html#ae7ffd2c63774be6cfbdc0f8fe8540e14">AH_Direction</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad1b5923932ba6cacfecdff36f3cefef7">ah_compute_direction</a> (<a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> dx, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> dy)</td></tr>
+<tr class="memitem:ae0c6e366c159be28ba2736f37f5dea17" id="r_ae0c6e366c159be28ba2736f37f5dea17"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae0c6e366c159be28ba2736f37f5dea17">ah_test_extrema</a> (<a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> n)</td></tr>
+<tr class="memitem:a52a229c8cf5e2749afb90a7162a35146" id="r_a52a229c8cf5e2749afb90a7162a35146"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>&#160;</td><td class="memItemRight"><a class="el" href="#a52a229c8cf5e2749afb90a7162a35146">ah_get_orientation</a> (<a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *outline)</td></tr>
+<tr class="memitem:a98d20e90697394c91597e51d63537edf" id="r_a98d20e90697394c91597e51d63537edf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a98d20e90697394c91597e51d63537edf">ah_outline_new</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> *aoutline)</td></tr>
+<tr class="memitem:a498a1cdd21bd4b8375edae088874530f" id="r_a498a1cdd21bd4b8375edae088874530f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a498a1cdd21bd4b8375edae088874530f">ah_outline_done</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline)</td></tr>
+<tr class="memitem:ae134bf3a9713261b1774371e6cc12490" id="r_ae134bf3a9713261b1774371e6cc12490"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae134bf3a9713261b1774371e6cc12490">ah_outline_save</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline, <a class="el" href="ahloader_8h.html#a01e7f2090bbeb566431dbe3a9a26be5d">AH_Loader</a> gloader)</td></tr>
+<tr class="memitem:aa771b6cdc56b393251dfff48cb9ac56f" id="r_aa771b6cdc56b393251dfff48cb9ac56f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa771b6cdc56b393251dfff48cb9ac56f">ah_outline_load</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a3ac527785f3083544fa8f4edc774b89d" id="r_a3ac527785f3083544fa8f4edc774b89d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3ac527785f3083544fa8f4edc774b89d">ah_setup_uv</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline, <a class="el" href="ahglyph_8h.html#ae26c60ed70f5d46cbc48c8f044c96aef">AH_UV</a> source)</td></tr>
+<tr class="memitem:a956ec9197a84240c4218c3561eccc9db" id="r_a956ec9197a84240c4218c3561eccc9db"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a956ec9197a84240c4218c3561eccc9db">ah_outline_compute_inflections</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline)</td></tr>
+<tr class="memitem:a11d664ccc9787855e7251023a8987b26" id="r_a11d664ccc9787855e7251023a8987b26"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a11d664ccc9787855e7251023a8987b26">ah_outline_compute_segments</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline)</td></tr>
+<tr class="memitem:a6f799d1b8c61f19c2e538cb8b48d69b1" id="r_a6f799d1b8c61f19c2e538cb8b48d69b1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6f799d1b8c61f19c2e538cb8b48d69b1">ah_outline_link_segments</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline)</td></tr>
+<tr class="memitem:a8138e4dce676630d16d7574e38af78b7" id="r_a8138e4dce676630d16d7574e38af78b7"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8138e4dce676630d16d7574e38af78b7">ah_outline_compute_edges</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline)</td></tr>
+<tr class="memitem:ade6802882259d7d09368d9ed8cb5637e" id="r_ade6802882259d7d09368d9ed8cb5637e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ade6802882259d7d09368d9ed8cb5637e">ah_outline_detect_features</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline)</td></tr>
+<tr class="memitem:a0dcc6bae60adfac4ccc01c500752f2bb" id="r_a0dcc6bae60adfac4ccc01c500752f2bb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0dcc6bae60adfac4ccc01c500752f2bb">ah_outline_compute_blue_edges</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline, <a class="el" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a> face_globals)</td></tr>
+<tr class="memitem:a1426e78b0ef174f32a1b305d10f131bd" id="r_a1426e78b0ef174f32a1b305d10f131bd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1426e78b0ef174f32a1b305d10f131bd">ah_outline_scale_blue_edges</a> (<a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> outline, <a class="el" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a> globals)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ad1b5923932ba6cacfecdff36f3cefef7" name="ad1b5923932ba6cacfecdff36f3cefef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b5923932ba6cacfecdff36f3cefef7">&#9670;&#160;</a></span>ah_compute_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ahtypes_8h.html#ae7ffd2c63774be6cfbdc0f8fe8540e14">AH_Direction</a> ah_compute_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>dy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52a229c8cf5e2749afb90a7162a35146" name="a52a229c8cf5e2749afb90a7162a35146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a229c8cf5e2749afb90a7162a35146">&#9670;&#160;</a></span>ah_get_orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> ah_get_orientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a52a229c8cf5e2749afb90a7162a35146_cgraph.png" border="0" usemap="#aahglyph_8c_a52a229c8cf5e2749afb90a7162a35146_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a52a229c8cf5e2749afb90a7162a35146_icgraph.png" border="0" usemap="#aahglyph_8c_a52a229c8cf5e2749afb90a7162a35146_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a0dcc6bae60adfac4ccc01c500752f2bb" name="a0dcc6bae60adfac4ccc01c500752f2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dcc6bae60adfac4ccc01c500752f2bb">&#9670;&#160;</a></span>ah_outline_compute_blue_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_compute_blue_edges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a></td>          <td class="paramname"><span class="paramname"><em>face_globals</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a0dcc6bae60adfac4ccc01c500752f2bb_cgraph.png" border="0" usemap="#aahglyph_8c_a0dcc6bae60adfac4ccc01c500752f2bb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a0dcc6bae60adfac4ccc01c500752f2bb_icgraph.png" border="0" usemap="#aahglyph_8c_a0dcc6bae60adfac4ccc01c500752f2bb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a8138e4dce676630d16d7574e38af78b7" name="a8138e4dce676630d16d7574e38af78b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8138e4dce676630d16d7574e38af78b7">&#9670;&#160;</a></span>ah_outline_compute_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_outline_compute_edges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a8138e4dce676630d16d7574e38af78b7_cgraph.png" border="0" usemap="#aahglyph_8c_a8138e4dce676630d16d7574e38af78b7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a8138e4dce676630d16d7574e38af78b7_icgraph.png" border="0" usemap="#aahglyph_8c_a8138e4dce676630d16d7574e38af78b7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a956ec9197a84240c4218c3561eccc9db" name="a956ec9197a84240c4218c3561eccc9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956ec9197a84240c4218c3561eccc9db">&#9670;&#160;</a></span>ah_outline_compute_inflections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_outline_compute_inflections </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a956ec9197a84240c4218c3561eccc9db_cgraph.png" border="0" usemap="#aahglyph_8c_a956ec9197a84240c4218c3561eccc9db_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a956ec9197a84240c4218c3561eccc9db_icgraph.png" border="0" usemap="#aahglyph_8c_a956ec9197a84240c4218c3561eccc9db_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a11d664ccc9787855e7251023a8987b26" name="a11d664ccc9787855e7251023a8987b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d664ccc9787855e7251023a8987b26">&#9670;&#160;</a></span>ah_outline_compute_segments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_compute_segments </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a11d664ccc9787855e7251023a8987b26_cgraph.png" border="0" usemap="#aahglyph_8c_a11d664ccc9787855e7251023a8987b26_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a11d664ccc9787855e7251023a8987b26_icgraph.png" border="0" usemap="#aahglyph_8c_a11d664ccc9787855e7251023a8987b26_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="ade6802882259d7d09368d9ed8cb5637e" name="ade6802882259d7d09368d9ed8cb5637e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6802882259d7d09368d9ed8cb5637e">&#9670;&#160;</a></span>ah_outline_detect_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_detect_features </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_ade6802882259d7d09368d9ed8cb5637e_cgraph.png" border="0" usemap="#aahglyph_8c_ade6802882259d7d09368d9ed8cb5637e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_ade6802882259d7d09368d9ed8cb5637e_icgraph.png" border="0" usemap="#aahglyph_8c_ade6802882259d7d09368d9ed8cb5637e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a498a1cdd21bd4b8375edae088874530f" name="a498a1cdd21bd4b8375edae088874530f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498a1cdd21bd4b8375edae088874530f">&#9670;&#160;</a></span>ah_outline_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a498a1cdd21bd4b8375edae088874530f_cgraph.png" border="0" usemap="#aahglyph_8c_a498a1cdd21bd4b8375edae088874530f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a498a1cdd21bd4b8375edae088874530f_icgraph.png" border="0" usemap="#aahglyph_8c_a498a1cdd21bd4b8375edae088874530f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a6f799d1b8c61f19c2e538cb8b48d69b1" name="a6f799d1b8c61f19c2e538cb8b48d69b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f799d1b8c61f19c2e538cb8b48d69b1">&#9670;&#160;</a></span>ah_outline_link_segments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_link_segments </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a6f799d1b8c61f19c2e538cb8b48d69b1_cgraph.png" border="0" usemap="#aahglyph_8c_a6f799d1b8c61f19c2e538cb8b48d69b1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a6f799d1b8c61f19c2e538cb8b48d69b1_icgraph.png" border="0" usemap="#aahglyph_8c_a6f799d1b8c61f19c2e538cb8b48d69b1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="aa771b6cdc56b393251dfff48cb9ac56f" name="aa771b6cdc56b393251dfff48cb9ac56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa771b6cdc56b393251dfff48cb9ac56f">&#9670;&#160;</a></span>ah_outline_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_aa771b6cdc56b393251dfff48cb9ac56f_cgraph.png" border="0" usemap="#aahglyph_8c_aa771b6cdc56b393251dfff48cb9ac56f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_aa771b6cdc56b393251dfff48cb9ac56f_icgraph.png" border="0" usemap="#aahglyph_8c_aa771b6cdc56b393251dfff48cb9ac56f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a98d20e90697394c91597e51d63537edf" name="a98d20e90697394c91597e51d63537edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d20e90697394c91597e51d63537edf">&#9670;&#160;</a></span>ah_outline_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>aoutline</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a98d20e90697394c91597e51d63537edf_cgraph.png" border="0" usemap="#aahglyph_8c_a98d20e90697394c91597e51d63537edf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a98d20e90697394c91597e51d63537edf_icgraph.png" border="0" usemap="#aahglyph_8c_a98d20e90697394c91597e51d63537edf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="ae134bf3a9713261b1774371e6cc12490" name="ae134bf3a9713261b1774371e6cc12490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae134bf3a9713261b1774371e6cc12490">&#9670;&#160;</a></span>ah_outline_save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahloader_8h.html#a01e7f2090bbeb566431dbe3a9a26be5d">AH_Loader</a></td>          <td class="paramname"><span class="paramname"><em>gloader</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_ae134bf3a9713261b1774371e6cc12490_cgraph.png" border="0" usemap="#aahglyph_8c_ae134bf3a9713261b1774371e6cc12490_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_ae134bf3a9713261b1774371e6cc12490_icgraph.png" border="0" usemap="#aahglyph_8c_ae134bf3a9713261b1774371e6cc12490_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a1426e78b0ef174f32a1b305d10f131bd" name="a1426e78b0ef174f32a1b305d10f131bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1426e78b0ef174f32a1b305d10f131bd">&#9670;&#160;</a></span>ah_outline_scale_blue_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_outline_scale_blue_edges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a1426e78b0ef174f32a1b305d10f131bd_cgraph.png" border="0" usemap="#aahglyph_8c_a1426e78b0ef174f32a1b305d10f131bd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a1426e78b0ef174f32a1b305d10f131bd_icgraph.png" border="0" usemap="#aahglyph_8c_a1426e78b0ef174f32a1b305d10f131bd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="a3ac527785f3083544fa8f4edc774b89d" name="a3ac527785f3083544fa8f4edc774b89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac527785f3083544fa8f4edc774b89d">&#9670;&#160;</a></span>ah_setup_uv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_setup_uv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a38ad2bc6ea282d84224752dff11a2c06">AH_Outline</a></td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahglyph_8h.html#ae26c60ed70f5d46cbc48c8f044c96aef">AH_UV</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a3ac527785f3083544fa8f4edc774b89d_cgraph.png" border="0" usemap="#aahglyph_8c_a3ac527785f3083544fa8f4edc774b89d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_a3ac527785f3083544fa8f4edc774b89d_icgraph.png" border="0" usemap="#aahglyph_8c_a3ac527785f3083544fa8f4edc774b89d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="ae0c6e366c159be28ba2736f37f5dea17" name="ae0c6e366c159be28ba2736f37f5dea17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c6e366c159be28ba2736f37f5dea17">&#9670;&#160;</a></span>ah_test_extrema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> ah_test_extrema </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a> *</td>          <td class="paramname"><span class="paramname"><em>outline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_ae0c6e366c159be28ba2736f37f5dea17_cgraph.png" border="0" usemap="#aahglyph_8c_ae0c6e366c159be28ba2736f37f5dea17_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahglyph_8c_ae0c6e366c159be28ba2736f37f5dea17_icgraph.png" border="0" usemap="#aahglyph_8c_ae0c6e366c159be28ba2736f37f5dea17_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_808c9a22bb2c2440b2d86bdaad927006.html">autohint</a></li><li class="navelem"><a href="ahglyph_8c.html">ahglyph.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

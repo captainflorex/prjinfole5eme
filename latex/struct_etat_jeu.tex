@@ -1,0 +1,241 @@
+\doxysection{Référence de la structure Etat\+Jeu}
+\hypertarget{struct_etat_jeu}{}\label{struct_etat_jeu}\index{EtatJeu@{EtatJeu}}
+
+
+{\ttfamily \+\#include $<$entites.\+h$>$}
+
+
+
+Graphe de collaboration de Etat\+Jeu:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_etat_jeu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_joueur}{Joueur}} \doxymbox{\hyperlink{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}{joueur}}
+\item 
+\doxymbox{\hyperlink{struct_bulle}{Bulle}} \doxymbox{\hyperlink{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}{bulles}} \+[\doxymbox{\hyperlink{src_2entites_8h_a772c22e70237d36cf621df6a2235ff61}{MAX\+\_\+\+BULLES}}]\+
+\item 
+int \doxymbox{\hyperlink{struct_etat_jeu_aba9c833f5fd68d3d93e9781c282c8229}{nb\+\_\+bulles}}
+\item 
+\doxymbox{\hyperlink{struct_projectile}{Projectile}} \doxymbox{\hyperlink{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}{projectiles}} \+[\doxymbox{\hyperlink{src_2entites_8h_adbc131e9b147b67d84003e054b355365}{MAX\+\_\+\+PROJECTILES}}]\+
+\item 
+\doxymbox{\hyperlink{struct_bonus_arme}{Bonus\+Arme}} \doxymbox{\hyperlink{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}{bonus}} \+[\doxymbox{\hyperlink{src_2entites_8h_a02f266f0f132735cd3c64e67251c163d}{MAX\+\_\+\+BONUS}}]\+
+\item 
+\doxymbox{\hyperlink{struct_boss}{Boss}} \doxymbox{\hyperlink{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}{boss}}
+\item 
+int \doxymbox{\hyperlink{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}{niveau}}
+\item 
+float \doxymbox{\hyperlink{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}{temps\+\_\+restant}}
+\item 
+int \doxymbox{\hyperlink{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}{decompte}}
+\item 
+float \doxymbox{\hyperlink{struct_etat_jeu_a859f7580d4aedcfb5d59b67a41d228ce}{decompte\+\_\+timer}}
+\item 
+\doxymbox{\hyperlink{struct_liste_eclairs}{Liste\+Eclairs}} \doxymbox{\hyperlink{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}{eclairs}}
+\item 
+int \doxymbox{\hyperlink{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}{bulles\+\_\+en\+\_\+attente}}
+\item 
+float \doxymbox{\hyperlink{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}{timer\+\_\+arme\+\_\+speciale}}
+\item 
+float \doxymbox{\hyperlink{struct_etat_jeu_afb5e772fa2c38d9e89f9473e89b7b794}{explosion\+\_\+x}}
+\item 
+float \doxymbox{\hyperlink{struct_etat_jeu_a92f49feda43c0f42a4aa2f15e8656fb7}{explosion\+\_\+y}}
+\item 
+float \doxymbox{\hyperlink{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}{explosion\+\_\+timer}}
+\item 
+int \doxymbox{\hyperlink{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}{boss\+\_\+a\+\_\+spawne}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00075}{75}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_etat_jeu_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449}\index{EtatJeu@{EtatJeu}!bonus@{bonus}}
+\index{bonus@{bonus}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{bonus}{bonus}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_aa5cf8ebe007c0ff3453d39ed4d1db449} 
+\doxymbox{\hyperlink{struct_bonus_arme}{Bonus\+Arme}} Etat\+Jeu::\+bonus}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00080}{80}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6}\index{EtatJeu@{EtatJeu}!boss@{boss}}
+\index{boss@{boss}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{boss}{boss}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a80b67d3d591c0d1e4623993e7ddd5ac6} 
+\doxymbox{\hyperlink{struct_boss}{Boss}} Etat\+Jeu::\+boss}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00081}{81}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789}\index{EtatJeu@{EtatJeu}!boss\_a\_spawne@{boss\_a\_spawne}}
+\index{boss\_a\_spawne@{boss\_a\_spawne}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{boss\_a\_spawne}{boss\_a\_spawne}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a16e38ba17f90cc36897c6d7456aab789} 
+int Etat\+Jeu::\+boss\+\_\+a\+\_\+spawne}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{src_2entites_8h_source_l00093}{93}} du fichier \doxymbox{\hyperlink{src_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23}\index{EtatJeu@{EtatJeu}!bulles@{bulles}}
+\index{bulles@{bulles}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{bulles}{bulles}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_afd64fef53bc5ad1afc2553a5b7a88f23} 
+\doxymbox{\hyperlink{struct_bulle}{Bulle}} Etat\+Jeu::\+bulles}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00077}{77}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d}\index{EtatJeu@{EtatJeu}!bulles\_en\_attente@{bulles\_en\_attente}}
+\index{bulles\_en\_attente@{bulles\_en\_attente}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{bulles\_en\_attente}{bulles\_en\_attente}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a3f638e5a4975230af01c40e613ad0d3d} 
+int Etat\+Jeu::\+bulles\+\_\+en\+\_\+attente}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00087}{87}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a793e80e24d15aadca5708038b022944f}\index{EtatJeu@{EtatJeu}!decompte@{decompte}}
+\index{decompte@{decompte}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{decompte}{decompte}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a793e80e24d15aadca5708038b022944f} 
+int Etat\+Jeu::\+decompte}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00084}{84}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a859f7580d4aedcfb5d59b67a41d228ce}\index{EtatJeu@{EtatJeu}!decompte\_timer@{decompte\_timer}}
+\index{decompte\_timer@{decompte\_timer}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{decompte\_timer}{decompte\_timer}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a859f7580d4aedcfb5d59b67a41d228ce} 
+float Etat\+Jeu::\+decompte\+\_\+timer}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00085}{85}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d}\index{EtatJeu@{EtatJeu}!eclairs@{eclairs}}
+\index{eclairs@{eclairs}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{eclairs}{eclairs}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_ac5dd2e1064d90fef8a115b4a4a9d9a7d} 
+\doxymbox{\hyperlink{struct_liste_eclairs}{Liste\+Eclairs}} Etat\+Jeu::\+eclairs}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00086}{86}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a804140461832d3e70d1929c933279c0d}\index{EtatJeu@{EtatJeu}!explosion\_timer@{explosion\_timer}}
+\index{explosion\_timer@{explosion\_timer}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{explosion\_timer}{explosion\_timer}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a804140461832d3e70d1929c933279c0d} 
+float Etat\+Jeu::\+explosion\+\_\+timer}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00090}{90}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_afb5e772fa2c38d9e89f9473e89b7b794}\index{EtatJeu@{EtatJeu}!explosion\_x@{explosion\_x}}
+\index{explosion\_x@{explosion\_x}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{explosion\_x}{explosion\_x}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_afb5e772fa2c38d9e89f9473e89b7b794} 
+float Etat\+Jeu::\+explosion\+\_\+x}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00089}{89}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a92f49feda43c0f42a4aa2f15e8656fb7}\index{EtatJeu@{EtatJeu}!explosion\_y@{explosion\_y}}
+\index{explosion\_y@{explosion\_y}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{explosion\_y}{explosion\_y}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a92f49feda43c0f42a4aa2f15e8656fb7} 
+float Etat\+Jeu::\+explosion\+\_\+y}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00089}{89}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f}\index{EtatJeu@{EtatJeu}!joueur@{joueur}}
+\index{joueur@{joueur}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{joueur}{joueur}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a7dee0e2699f36b8a465ae681834af88f} 
+\doxymbox{\hyperlink{struct_joueur}{Joueur}} Etat\+Jeu::\+joueur}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00076}{76}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_aba9c833f5fd68d3d93e9781c282c8229}\index{EtatJeu@{EtatJeu}!nb\_bulles@{nb\_bulles}}
+\index{nb\_bulles@{nb\_bulles}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{nb\_bulles}{nb\_bulles}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_aba9c833f5fd68d3d93e9781c282c8229} 
+int Etat\+Jeu::\+nb\+\_\+bulles}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00078}{78}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a}\index{EtatJeu@{EtatJeu}!niveau@{niveau}}
+\index{niveau@{niveau}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{niveau}{niveau}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_ad6d7ae27c8298976545ebfde15b4df4a} 
+int Etat\+Jeu::\+niveau}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00082}{82}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a}\index{EtatJeu@{EtatJeu}!projectiles@{projectiles}}
+\index{projectiles@{projectiles}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{projectiles}{projectiles}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a547aed4daa33f7965f23df60f5beae1a} 
+\doxymbox{\hyperlink{struct_projectile}{Projectile}} Etat\+Jeu::\+projectiles}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00079}{79}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205}\index{EtatJeu@{EtatJeu}!temps\_restant@{temps\_restant}}
+\index{temps\_restant@{temps\_restant}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{temps\_restant}{temps\_restant}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_acf0776c2730b28ae9879c3c2ec5fb205} 
+float Etat\+Jeu::\+temps\+\_\+restant}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00083}{83}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+\Hypertarget{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a}\index{EtatJeu@{EtatJeu}!timer\_arme\_speciale@{timer\_arme\_speciale}}
+\index{timer\_arme\_speciale@{timer\_arme\_speciale}!EtatJeu@{EtatJeu}}
+\doxysubsubsection{\texorpdfstring{timer\_arme\_speciale}{timer\_arme\_speciale}}
+{\footnotesize\ttfamily \label{struct_etat_jeu_a433045ef9b17382e86cb062b16424a9a} 
+float Etat\+Jeu::\+timer\+\_\+arme\+\_\+speciale}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{header_2entites_8h_source_l00088}{88}} du fichier \doxymbox{\hyperlink{header_2entites_8h_source}{entites.\+h}}.
+
+
+
+La documentation de cette structure a été générée à partir des fichiers suivants :\+\begin{DoxyCompactItemize}
+\item 
+header/\+\doxymbox{\hyperlink{header_2entites_8h}{entites.\+h}}\item 
+src/\+\doxymbox{\hyperlink{src_2entites_8h}{entites.\+h}}\end{DoxyCompactItemize}

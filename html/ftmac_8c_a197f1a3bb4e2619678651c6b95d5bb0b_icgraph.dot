@@ -1,0 +1,23 @@
+digraph "memory_stream_close"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="memory_stream_close",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="open_face_from_buffer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#ab966e870e9df99a387b5e915c7d93693",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="FT_New_Face_From_LWFN",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#a3cd18fa4466c9360932e04a02d4f8864",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_New_Face",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a549a19bbea568f3a6d60207f1b787070",tooltip=" "];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node11 [id="edge6_Node000003_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="FT_New_Face_From_FOND",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftmac_8c.html#a3b73f76d0a579936aca8281254f1a8e9",tooltip=" "];
+  Node11 -> Node11 [id="edge7_Node000011_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node13 [id="edge8_Node000002_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="FT_New_Face_From_SFNT",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftmac_8c.html#aa20cd5e3c2679dd37a145024609d33bd",tooltip=" "];
+  Node13 -> Node11 [id="edge9_Node000013_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

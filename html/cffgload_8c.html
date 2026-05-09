@@ -1,0 +1,1124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cff/cffgload.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('cffgload_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier cffgload.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="cffobjs_8h_source.html">cffobjs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cffload_8h_source.html">cffload.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cffgload_8h_source.html">cffgload.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cfferrs_8h_source.html">cfferrs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de cffgload.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cff_2cffgload_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cff_2cffgload_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="cffgload_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_cffgload</td></tr>
+<tr class="memitem:aaea2eb2399ab43c559d5f11586afb00b" id="r_aaea2eb2399ab43c559d5f11586afb00b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaea2eb2399ab43c559d5f11586afb00b">CFF_COUNT_CHECK_WIDTH</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="memitem:a200aa687b5bec5e8f82212d6046a7de1" id="r_a200aa687b5bec5e8f82212d6046a7de1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a200aa687b5bec5e8f82212d6046a7de1">CFF_COUNT_EXACT</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="memitem:ae4b1860a6cc535b3aedf87be8414e8ad" id="r_ae4b1860a6cc535b3aedf87be8414e8ad"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae4b1860a6cc535b3aedf87be8414e8ad">CFF_COUNT_CLEAR_STACK</a>&#160;&#160;&#160;0x20</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a2b94dc40a30ad1358e42890041aa01f2" id="r_a2b94dc40a30ad1358e42890041aa01f2"><td class="memItemLeft">typedef enum <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8">CFF_Operator_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2b94dc40a30ad1358e42890041aa01f2">CFF_Operator</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a067cb784f09b7b8fbeea25bed36cd0b8" id="r_a067cb784f09b7b8fbeea25bed36cd0b8"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8">CFF_Operator_</a> { <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8af32c40b75ea268aaae1c240542eb738c">cff_op_unknown</a> = 0
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8af371af458c3decd4e1bf20dd6039ca2a">cff_op_rmoveto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a01d4fc07f5d25d67b85546307aa4ff91">cff_op_hmoveto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a713506a98409ebfdf759152baff23722">cff_op_vmoveto</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ab1193e6aec53b22a0189defd98d99c37">cff_op_rlineto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ac6ccfab49de5ae2b4d9c41d7c33d2bb0">cff_op_hlineto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a290b968a40248b5cb4070b89ccb85005">cff_op_vlineto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8add4fe42409b24680e84c6f0b541448aa">cff_op_rrcurveto</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a2c6f4e1ef6fe5919bc6b5f72673ddef7">cff_op_hhcurveto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ad84d1e27d388ead6edfcf1347f7f04f5">cff_op_hvcurveto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a8d08fbf34700b975d4f791d2ab0347af">cff_op_rcurveline</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a24c60e306d86c0b7c62b76f2c7d6d1d2">cff_op_rlinecurve</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ae42179f56a27deef7c102db53fef00d3">cff_op_vhcurveto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ae4c9ad7156108a8ec957167a3c9601b1">cff_op_vvcurveto</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a1de43caa6ef27d55061e0dffe752e9b6">cff_op_flex</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a258fdb0f1769f994880a168ea516123f">cff_op_hflex</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ac98a098a167c1f8de65f0599aeb46813">cff_op_hflex1</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8aa23494894eec5922ad45ffcdb1eb4e52">cff_op_flex1</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a02654a503c7056ffe73f7e89f870e409">cff_op_endchar</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a28d40d72404136482286c1660a5ade06">cff_op_hstem</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a1f0969967e245931fec7d6f369cb0e6d">cff_op_vstem</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a0246b57f0ee935c12d6dfd5faacc1dec">cff_op_hstemhm</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a58236915cbd4069c5d81971690487d10">cff_op_vstemhm</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8afeee820728e5a9e914db82085fc7f390">cff_op_hintmask</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a4a91ebecfe9b7fa4b216af356c1a4fb3">cff_op_cntrmask</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a8cfe096ad9274b8435468f9eb4a5f5e1">cff_op_dotsection</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a9ff7938b9c372953d0823bf22338871b">cff_op_abs</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8aea908e6d598e2d84a5d346241f85ea4a">cff_op_add</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a0d3347ca88c65693e926c70458ba4f6a">cff_op_sub</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8acfd26a81d025112fb953a199aaefbc9b">cff_op_div</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a8b889aa9c9278033059c11c101d71790">cff_op_neg</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ab9fe134cd34c62675ad21aa27165871f">cff_op_random</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8afadcf7b43479a14dfdd417327d392fe2">cff_op_mul</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ae59f88acc3553d5190e69a9576c47efd">cff_op_sqrt</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a2592dd93e88c38cc0bf897b37ec02488">cff_op_blend</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a6f5422326afe716744562b30721c254f">cff_op_drop</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a1cab1f5bf47858793709680d3cac44e7">cff_op_exch</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a01ebd6f23e1cba4d32c1449731f797d8">cff_op_index</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8adfefa3ebc44df5105f18d96c026709f0">cff_op_roll</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a434827ffa8cca1ace703ec938cdcf6d6">cff_op_dup</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8aa7bced71bc9799b0bbabe7bc9d2f1159">cff_op_put</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a19906f49eeaaed1c61733f87c0d87d5b">cff_op_get</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a1e70d07a4d1fd319ed5241e05a0d1172">cff_op_store</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a7630954efe67155c39447c63dc776bc9">cff_op_load</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a198c30b3f96e38397a4f96e35287dfca">cff_op_and</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ab5e02727b9ceab6a991509dde7a68c51">cff_op_or</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8aa15f4155a179b07b63371a698fdfb71f">cff_op_not</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a1f4894f49b12e28c9ee89542194ce287">cff_op_eq</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a3dd3b124503056cb7f2dbf6c34e5303a">cff_op_ifelse</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a96b69ad3ec477d065eb9aea0289ca594">cff_op_callsubr</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8a57546c33757242ac87da1e294caca2cd">cff_op_callgsubr</a>
+, <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8aef3f2f049d5593f2fd6db5c34a3d3937">cff_op_return</a>
+, <br />
+&#160;&#160;<a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8ad9b0dde728d4434b2d71802060bcae19">cff_op_max</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a22ff251e5d5145812b6947f57f88f164" id="r_a22ff251e5d5145812b6947f57f88f164"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a22ff251e5d5145812b6947f57f88f164">cff_builder_init</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder, <a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579">CFF_Size</a> size, <a class="el" href="cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd">CFF_GlyphSlot</a> glyph, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> hinting)</td></tr>
+<tr class="memitem:a331926927f9297364b4c80fa564d3a24" id="r_a331926927f9297364b4c80fa564d3a24"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a331926927f9297364b4c80fa564d3a24">cff_builder_done</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder)</td></tr>
+<tr class="memitem:a3db8f5931368795c93e002b253e02dde" id="r_a3db8f5931368795c93e002b253e02dde"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3db8f5931368795c93e002b253e02dde">cff_compute_bias</a> (<a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> num_subrs)</td></tr>
+<tr class="memitem:a8bbc0e91ca59bd98aa5f749ac2dc1f9e" id="r_a8bbc0e91ca59bd98aa5f749ac2dc1f9e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8bbc0e91ca59bd98aa5f749ac2dc1f9e">cff_decoder_init</a> (<a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *decoder, <a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579">CFF_Size</a> size, <a class="el" href="cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd">CFF_GlyphSlot</a> slot, <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> hinting, <a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a> hint_mode)</td></tr>
+<tr class="memitem:aba9010577c38bee5b2f97411d3ba01e1" id="r_aba9010577c38bee5b2f97411d3ba01e1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aba9010577c38bee5b2f97411d3ba01e1">cff_decoder_prepare</a> (<a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *decoder, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>)</td></tr>
+<tr class="memitem:a0ef1a40bab4619b9460a434e3e6a9426" id="r_a0ef1a40bab4619b9460a434e3e6a9426"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0ef1a40bab4619b9460a434e3e6a9426">check_points</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> count)</td></tr>
+<tr class="memitem:a4030ce5ff5a6c0481669ef2c85467d48" id="r_a4030ce5ff5a6c0481669ef2c85467d48"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4030ce5ff5a6c0481669ef2c85467d48">cff_builder_add_point</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> y, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> flag)</td></tr>
+<tr class="memitem:a7f9c5899c41eeaed4d1591817226c3bd" id="r_a7f9c5899c41eeaed4d1591817226c3bd"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7f9c5899c41eeaed4d1591817226c3bd">cff_builder_add_point1</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> y)</td></tr>
+<tr class="memitem:a66a4ce27c4cc8ba934723e2901b10009" id="r_a66a4ce27c4cc8ba934723e2901b10009"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a66a4ce27c4cc8ba934723e2901b10009">cff_builder_add_contour</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder)</td></tr>
+<tr class="memitem:a124921350d4bb8dc0a5ce0fa23c825b4" id="r_a124921350d4bb8dc0a5ce0fa23c825b4"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a124921350d4bb8dc0a5ce0fa23c825b4">cff_builder_start_point</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> x, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> y)</td></tr>
+<tr class="memitem:a49c112b628c9d26f1f941fb5003b02a1" id="r_a49c112b628c9d26f1f941fb5003b02a1"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a49c112b628c9d26f1f941fb5003b02a1">cff_builder_close_contour</a> (<a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *builder)</td></tr>
+<tr class="memitem:aeecb96a848a30832f21f511aa430642f" id="r_aeecb96a848a30832f21f511aa430642f"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeecb96a848a30832f21f511aa430642f">cff_lookup_glyph_by_stdcharcode</a> (<a class="el" href="cfftypes_8h.html#a5e0f673b92ece4958ef2cc9b54ca4f44">CFF_Font</a> cff, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> charcode)</td></tr>
+<tr class="memitem:ac698637f0794f418dcaa31b1dab1d4de" id="r_ac698637f0794f418dcaa31b1dab1d4de"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac698637f0794f418dcaa31b1dab1d4de">cff_get_glyph_data</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **pointer, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *length)</td></tr>
+<tr class="memitem:a684aca1fb6a6c8d8301115c626324ebd" id="r_a684aca1fb6a6c8d8301115c626324ebd"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a684aca1fb6a6c8d8301115c626324ebd">cff_free_glyph_data</a> (<a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **pointer, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> length)</td></tr>
+<tr class="memitem:a0d24ed0d19a3bda95bdeaaa880bc511e" id="r_a0d24ed0d19a3bda95bdeaaa880bc511e"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d24ed0d19a3bda95bdeaaa880bc511e">cff_operator_seac</a> (<a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *decoder, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> adx, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> ady, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> bchar, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> achar)</td></tr>
+<tr class="memitem:a04ab294b7e8ed9309f8ac19a1485148b" id="r_a04ab294b7e8ed9309f8ac19a1485148b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a04ab294b7e8ed9309f8ac19a1485148b">cff_decoder_parse_charstrings</a> (<a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *decoder, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *charstring_base, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> charstring_len)</td></tr>
+<tr class="memitem:ac1456af57953dbbbfae7a91558ef9ea2" id="r_ac1456af57953dbbbfae7a91558ef9ea2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac1456af57953dbbbfae7a91558ef9ea2">cff_slot_load</a> (<a class="el" href="cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd">CFF_GlyphSlot</a> glyph, <a class="el" href="cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579">CFF_Size</a> size, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>, <a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a> load_flags)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a41d5ed5cfcef57e07ffad2f15b9ec3d6" id="r_a41d5ed5cfcef57e07ffad2f15b9ec3d6"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>&#160;</td><td class="memItemRight"><a class="el" href="#a41d5ed5cfcef57e07ffad2f15b9ec3d6">cff_argument_counts</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="aaea2eb2399ab43c559d5f11586afb00b" name="aaea2eb2399ab43c559d5f11586afb00b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea2eb2399ab43c559d5f11586afb00b">&#9670;&#160;</a></span>CFF_COUNT_CHECK_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_COUNT_CHECK_WIDTH&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4b1860a6cc535b3aedf87be8414e8ad" name="ae4b1860a6cc535b3aedf87be8414e8ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b1860a6cc535b3aedf87be8414e8ad">&#9670;&#160;</a></span>CFF_COUNT_CLEAR_STACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_COUNT_CLEAR_STACK&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a200aa687b5bec5e8f82212d6046a7de1" name="a200aa687b5bec5e8f82212d6046a7de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200aa687b5bec5e8f82212d6046a7de1">&#9670;&#160;</a></span>CFF_COUNT_EXACT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CFF_COUNT_EXACT&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_cffgload</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="a2b94dc40a30ad1358e42890041aa01f2" name="a2b94dc40a30ad1358e42890041aa01f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b94dc40a30ad1358e42890041aa01f2">&#9670;&#160;</a></span>CFF_Operator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8">CFF_Operator_</a> <a class="el" href="#a2b94dc40a30ad1358e42890041aa01f2">CFF_Operator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a067cb784f09b7b8fbeea25bed36cd0b8" name="a067cb784f09b7b8fbeea25bed36cd0b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a067cb784f09b7b8fbeea25bed36cd0b8">&#9670;&#160;</a></span>CFF_Operator_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a067cb784f09b7b8fbeea25bed36cd0b8">CFF_Operator_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8af32c40b75ea268aaae1c240542eb738c" name="a067cb784f09b7b8fbeea25bed36cd0b8af32c40b75ea268aaae1c240542eb738c"></a>cff_op_unknown&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8af371af458c3decd4e1bf20dd6039ca2a" name="a067cb784f09b7b8fbeea25bed36cd0b8af371af458c3decd4e1bf20dd6039ca2a"></a>cff_op_rmoveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a01d4fc07f5d25d67b85546307aa4ff91" name="a067cb784f09b7b8fbeea25bed36cd0b8a01d4fc07f5d25d67b85546307aa4ff91"></a>cff_op_hmoveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a713506a98409ebfdf759152baff23722" name="a067cb784f09b7b8fbeea25bed36cd0b8a713506a98409ebfdf759152baff23722"></a>cff_op_vmoveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ab1193e6aec53b22a0189defd98d99c37" name="a067cb784f09b7b8fbeea25bed36cd0b8ab1193e6aec53b22a0189defd98d99c37"></a>cff_op_rlineto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ac6ccfab49de5ae2b4d9c41d7c33d2bb0" name="a067cb784f09b7b8fbeea25bed36cd0b8ac6ccfab49de5ae2b4d9c41d7c33d2bb0"></a>cff_op_hlineto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a290b968a40248b5cb4070b89ccb85005" name="a067cb784f09b7b8fbeea25bed36cd0b8a290b968a40248b5cb4070b89ccb85005"></a>cff_op_vlineto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8add4fe42409b24680e84c6f0b541448aa" name="a067cb784f09b7b8fbeea25bed36cd0b8add4fe42409b24680e84c6f0b541448aa"></a>cff_op_rrcurveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a2c6f4e1ef6fe5919bc6b5f72673ddef7" name="a067cb784f09b7b8fbeea25bed36cd0b8a2c6f4e1ef6fe5919bc6b5f72673ddef7"></a>cff_op_hhcurveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ad84d1e27d388ead6edfcf1347f7f04f5" name="a067cb784f09b7b8fbeea25bed36cd0b8ad84d1e27d388ead6edfcf1347f7f04f5"></a>cff_op_hvcurveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a8d08fbf34700b975d4f791d2ab0347af" name="a067cb784f09b7b8fbeea25bed36cd0b8a8d08fbf34700b975d4f791d2ab0347af"></a>cff_op_rcurveline&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a24c60e306d86c0b7c62b76f2c7d6d1d2" name="a067cb784f09b7b8fbeea25bed36cd0b8a24c60e306d86c0b7c62b76f2c7d6d1d2"></a>cff_op_rlinecurve&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ae42179f56a27deef7c102db53fef00d3" name="a067cb784f09b7b8fbeea25bed36cd0b8ae42179f56a27deef7c102db53fef00d3"></a>cff_op_vhcurveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ae4c9ad7156108a8ec957167a3c9601b1" name="a067cb784f09b7b8fbeea25bed36cd0b8ae4c9ad7156108a8ec957167a3c9601b1"></a>cff_op_vvcurveto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a1de43caa6ef27d55061e0dffe752e9b6" name="a067cb784f09b7b8fbeea25bed36cd0b8a1de43caa6ef27d55061e0dffe752e9b6"></a>cff_op_flex&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a258fdb0f1769f994880a168ea516123f" name="a067cb784f09b7b8fbeea25bed36cd0b8a258fdb0f1769f994880a168ea516123f"></a>cff_op_hflex&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ac98a098a167c1f8de65f0599aeb46813" name="a067cb784f09b7b8fbeea25bed36cd0b8ac98a098a167c1f8de65f0599aeb46813"></a>cff_op_hflex1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8aa23494894eec5922ad45ffcdb1eb4e52" name="a067cb784f09b7b8fbeea25bed36cd0b8aa23494894eec5922ad45ffcdb1eb4e52"></a>cff_op_flex1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a02654a503c7056ffe73f7e89f870e409" name="a067cb784f09b7b8fbeea25bed36cd0b8a02654a503c7056ffe73f7e89f870e409"></a>cff_op_endchar&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a28d40d72404136482286c1660a5ade06" name="a067cb784f09b7b8fbeea25bed36cd0b8a28d40d72404136482286c1660a5ade06"></a>cff_op_hstem&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a1f0969967e245931fec7d6f369cb0e6d" name="a067cb784f09b7b8fbeea25bed36cd0b8a1f0969967e245931fec7d6f369cb0e6d"></a>cff_op_vstem&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a0246b57f0ee935c12d6dfd5faacc1dec" name="a067cb784f09b7b8fbeea25bed36cd0b8a0246b57f0ee935c12d6dfd5faacc1dec"></a>cff_op_hstemhm&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a58236915cbd4069c5d81971690487d10" name="a067cb784f09b7b8fbeea25bed36cd0b8a58236915cbd4069c5d81971690487d10"></a>cff_op_vstemhm&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8afeee820728e5a9e914db82085fc7f390" name="a067cb784f09b7b8fbeea25bed36cd0b8afeee820728e5a9e914db82085fc7f390"></a>cff_op_hintmask&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a4a91ebecfe9b7fa4b216af356c1a4fb3" name="a067cb784f09b7b8fbeea25bed36cd0b8a4a91ebecfe9b7fa4b216af356c1a4fb3"></a>cff_op_cntrmask&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a8cfe096ad9274b8435468f9eb4a5f5e1" name="a067cb784f09b7b8fbeea25bed36cd0b8a8cfe096ad9274b8435468f9eb4a5f5e1"></a>cff_op_dotsection&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a9ff7938b9c372953d0823bf22338871b" name="a067cb784f09b7b8fbeea25bed36cd0b8a9ff7938b9c372953d0823bf22338871b"></a>cff_op_abs&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8aea908e6d598e2d84a5d346241f85ea4a" name="a067cb784f09b7b8fbeea25bed36cd0b8aea908e6d598e2d84a5d346241f85ea4a"></a>cff_op_add&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a0d3347ca88c65693e926c70458ba4f6a" name="a067cb784f09b7b8fbeea25bed36cd0b8a0d3347ca88c65693e926c70458ba4f6a"></a>cff_op_sub&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8acfd26a81d025112fb953a199aaefbc9b" name="a067cb784f09b7b8fbeea25bed36cd0b8acfd26a81d025112fb953a199aaefbc9b"></a>cff_op_div&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a8b889aa9c9278033059c11c101d71790" name="a067cb784f09b7b8fbeea25bed36cd0b8a8b889aa9c9278033059c11c101d71790"></a>cff_op_neg&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ab9fe134cd34c62675ad21aa27165871f" name="a067cb784f09b7b8fbeea25bed36cd0b8ab9fe134cd34c62675ad21aa27165871f"></a>cff_op_random&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8afadcf7b43479a14dfdd417327d392fe2" name="a067cb784f09b7b8fbeea25bed36cd0b8afadcf7b43479a14dfdd417327d392fe2"></a>cff_op_mul&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ae59f88acc3553d5190e69a9576c47efd" name="a067cb784f09b7b8fbeea25bed36cd0b8ae59f88acc3553d5190e69a9576c47efd"></a>cff_op_sqrt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a2592dd93e88c38cc0bf897b37ec02488" name="a067cb784f09b7b8fbeea25bed36cd0b8a2592dd93e88c38cc0bf897b37ec02488"></a>cff_op_blend&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a6f5422326afe716744562b30721c254f" name="a067cb784f09b7b8fbeea25bed36cd0b8a6f5422326afe716744562b30721c254f"></a>cff_op_drop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a1cab1f5bf47858793709680d3cac44e7" name="a067cb784f09b7b8fbeea25bed36cd0b8a1cab1f5bf47858793709680d3cac44e7"></a>cff_op_exch&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a01ebd6f23e1cba4d32c1449731f797d8" name="a067cb784f09b7b8fbeea25bed36cd0b8a01ebd6f23e1cba4d32c1449731f797d8"></a>cff_op_index&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8adfefa3ebc44df5105f18d96c026709f0" name="a067cb784f09b7b8fbeea25bed36cd0b8adfefa3ebc44df5105f18d96c026709f0"></a>cff_op_roll&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a434827ffa8cca1ace703ec938cdcf6d6" name="a067cb784f09b7b8fbeea25bed36cd0b8a434827ffa8cca1ace703ec938cdcf6d6"></a>cff_op_dup&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8aa7bced71bc9799b0bbabe7bc9d2f1159" name="a067cb784f09b7b8fbeea25bed36cd0b8aa7bced71bc9799b0bbabe7bc9d2f1159"></a>cff_op_put&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a19906f49eeaaed1c61733f87c0d87d5b" name="a067cb784f09b7b8fbeea25bed36cd0b8a19906f49eeaaed1c61733f87c0d87d5b"></a>cff_op_get&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a1e70d07a4d1fd319ed5241e05a0d1172" name="a067cb784f09b7b8fbeea25bed36cd0b8a1e70d07a4d1fd319ed5241e05a0d1172"></a>cff_op_store&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a7630954efe67155c39447c63dc776bc9" name="a067cb784f09b7b8fbeea25bed36cd0b8a7630954efe67155c39447c63dc776bc9"></a>cff_op_load&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a198c30b3f96e38397a4f96e35287dfca" name="a067cb784f09b7b8fbeea25bed36cd0b8a198c30b3f96e38397a4f96e35287dfca"></a>cff_op_and&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ab5e02727b9ceab6a991509dde7a68c51" name="a067cb784f09b7b8fbeea25bed36cd0b8ab5e02727b9ceab6a991509dde7a68c51"></a>cff_op_or&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8aa15f4155a179b07b63371a698fdfb71f" name="a067cb784f09b7b8fbeea25bed36cd0b8aa15f4155a179b07b63371a698fdfb71f"></a>cff_op_not&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a1f4894f49b12e28c9ee89542194ce287" name="a067cb784f09b7b8fbeea25bed36cd0b8a1f4894f49b12e28c9ee89542194ce287"></a>cff_op_eq&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a3dd3b124503056cb7f2dbf6c34e5303a" name="a067cb784f09b7b8fbeea25bed36cd0b8a3dd3b124503056cb7f2dbf6c34e5303a"></a>cff_op_ifelse&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a96b69ad3ec477d065eb9aea0289ca594" name="a067cb784f09b7b8fbeea25bed36cd0b8a96b69ad3ec477d065eb9aea0289ca594"></a>cff_op_callsubr&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8a57546c33757242ac87da1e294caca2cd" name="a067cb784f09b7b8fbeea25bed36cd0b8a57546c33757242ac87da1e294caca2cd"></a>cff_op_callgsubr&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8aef3f2f049d5593f2fd6db5c34a3d3937" name="a067cb784f09b7b8fbeea25bed36cd0b8aef3f2f049d5593f2fd6db5c34a3d3937"></a>cff_op_return&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a067cb784f09b7b8fbeea25bed36cd0b8ad9b0dde728d4434b2d71802060bcae19" name="a067cb784f09b7b8fbeea25bed36cd0b8ad9b0dde728d4434b2d71802060bcae19"></a>cff_op_max&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a66a4ce27c4cc8ba934723e2901b10009" name="a66a4ce27c4cc8ba934723e2901b10009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a4ce27c4cc8ba934723e2901b10009">&#9670;&#160;</a></span>cff_builder_add_contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_builder_add_contour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a66a4ce27c4cc8ba934723e2901b10009_cgraph.png" border="0" usemap="#acffgload_8c_a66a4ce27c4cc8ba934723e2901b10009_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a66a4ce27c4cc8ba934723e2901b10009_icgraph.png" border="0" usemap="#acffgload_8c_a66a4ce27c4cc8ba934723e2901b10009_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a4030ce5ff5a6c0481669ef2c85467d48" name="a4030ce5ff5a6c0481669ef2c85467d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4030ce5ff5a6c0481669ef2c85467d48">&#9670;&#160;</a></span>cff_builder_add_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_builder_add_point </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a4030ce5ff5a6c0481669ef2c85467d48_icgraph.png" border="0" usemap="#acffgload_8c_a4030ce5ff5a6c0481669ef2c85467d48_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a7f9c5899c41eeaed4d1591817226c3bd" name="a7f9c5899c41eeaed4d1591817226c3bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f9c5899c41eeaed4d1591817226c3bd">&#9670;&#160;</a></span>cff_builder_add_point1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_builder_add_point1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a7f9c5899c41eeaed4d1591817226c3bd_cgraph.png" border="0" usemap="#acffgload_8c_a7f9c5899c41eeaed4d1591817226c3bd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a7f9c5899c41eeaed4d1591817226c3bd_icgraph.png" border="0" usemap="#acffgload_8c_a7f9c5899c41eeaed4d1591817226c3bd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a49c112b628c9d26f1f941fb5003b02a1" name="a49c112b628c9d26f1f941fb5003b02a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c112b628c9d26f1f941fb5003b02a1">&#9670;&#160;</a></span>cff_builder_close_contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_builder_close_contour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a49c112b628c9d26f1f941fb5003b02a1_icgraph.png" border="0" usemap="#acffgload_8c_a49c112b628c9d26f1f941fb5003b02a1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a331926927f9297364b4c80fa564d3a24" name="a331926927f9297364b4c80fa564d3a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331926927f9297364b4c80fa564d3a24">&#9670;&#160;</a></span>cff_builder_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_builder_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a331926927f9297364b4c80fa564d3a24_icgraph.png" border="0" usemap="#acffgload_8c_a331926927f9297364b4c80fa564d3a24_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a22ff251e5d5145812b6947f57f88f164" name="a22ff251e5d5145812b6947f57f88f164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ff251e5d5145812b6947f57f88f164">&#9670;&#160;</a></span>cff_builder_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_builder_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579">CFF_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd">CFF_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>hinting</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a22ff251e5d5145812b6947f57f88f164_cgraph.png" border="0" usemap="#acffgload_8c_a22ff251e5d5145812b6947f57f88f164_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a22ff251e5d5145812b6947f57f88f164_icgraph.png" border="0" usemap="#acffgload_8c_a22ff251e5d5145812b6947f57f88f164_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a124921350d4bb8dc0a5ce0fa23c825b4" name="a124921350d4bb8dc0a5ce0fa23c825b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124921350d4bb8dc0a5ce0fa23c825b4">&#9670;&#160;</a></span>cff_builder_start_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_builder_start_point </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a124921350d4bb8dc0a5ce0fa23c825b4_cgraph.png" border="0" usemap="#acffgload_8c_a124921350d4bb8dc0a5ce0fa23c825b4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a124921350d4bb8dc0a5ce0fa23c825b4_icgraph.png" border="0" usemap="#acffgload_8c_a124921350d4bb8dc0a5ce0fa23c825b4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a3db8f5931368795c93e002b253e02dde" name="a3db8f5931368795c93e002b253e02dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db8f5931368795c93e002b253e02dde">&#9670;&#160;</a></span>cff_compute_bias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> cff_compute_bias </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>num_subrs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a3db8f5931368795c93e002b253e02dde_icgraph.png" border="0" usemap="#acffgload_8c_a3db8f5931368795c93e002b253e02dde_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a8bbc0e91ca59bd98aa5f749ac2dc1f9e" name="a8bbc0e91ca59bd98aa5f749ac2dc1f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbc0e91ca59bd98aa5f749ac2dc1f9e">&#9670;&#160;</a></span>cff_decoder_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cff_decoder_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579">CFF_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd">CFF_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a></td>          <td class="paramname"><span class="paramname"><em>hinting</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></td>          <td class="paramname"><span class="paramname"><em>hint_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a8bbc0e91ca59bd98aa5f749ac2dc1f9e_cgraph.png" border="0" usemap="#acffgload_8c_a8bbc0e91ca59bd98aa5f749ac2dc1f9e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a8bbc0e91ca59bd98aa5f749ac2dc1f9e_icgraph.png" border="0" usemap="#acffgload_8c_a8bbc0e91ca59bd98aa5f749ac2dc1f9e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a04ab294b7e8ed9309f8ac19a1485148b" name="a04ab294b7e8ed9309f8ac19a1485148b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ab294b7e8ed9309f8ac19a1485148b">&#9670;&#160;</a></span>cff_decoder_parse_charstrings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cff_decoder_parse_charstrings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>charstring_base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>charstring_len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a04ab294b7e8ed9309f8ac19a1485148b_cgraph.png" border="0" usemap="#acffgload_8c_a04ab294b7e8ed9309f8ac19a1485148b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a04ab294b7e8ed9309f8ac19a1485148b_icgraph.png" border="0" usemap="#acffgload_8c_a04ab294b7e8ed9309f8ac19a1485148b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="aba9010577c38bee5b2f97411d3ba01e1" name="aba9010577c38bee5b2f97411d3ba01e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9010577c38bee5b2f97411d3ba01e1">&#9670;&#160;</a></span>cff_decoder_prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cff_decoder_prepare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_aba9010577c38bee5b2f97411d3ba01e1_cgraph.png" border="0" usemap="#acffgload_8c_aba9010577c38bee5b2f97411d3ba01e1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_aba9010577c38bee5b2f97411d3ba01e1_icgraph.png" border="0" usemap="#acffgload_8c_aba9010577c38bee5b2f97411d3ba01e1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a684aca1fb6a6c8d8301115c626324ebd" name="a684aca1fb6a6c8d8301115c626324ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684aca1fb6a6c8d8301115c626324ebd">&#9670;&#160;</a></span>cff_free_glyph_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_free_glyph_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>pointer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a684aca1fb6a6c8d8301115c626324ebd_cgraph.png" border="0" usemap="#acffgload_8c_a684aca1fb6a6c8d8301115c626324ebd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a684aca1fb6a6c8d8301115c626324ebd_icgraph.png" border="0" usemap="#acffgload_8c_a684aca1fb6a6c8d8301115c626324ebd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="ac698637f0794f418dcaa31b1dab1d4de" name="ac698637f0794f418dcaa31b1dab1d4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac698637f0794f418dcaa31b1dab1d4de">&#9670;&#160;</a></span>cff_get_glyph_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_get_glyph_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tttypes_8h.html#a4579aa38b4b171acee676ce82638952c">TT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> **</td>          <td class="paramname"><span class="paramname"><em>pointer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_ac698637f0794f418dcaa31b1dab1d4de_cgraph.png" border="0" usemap="#acffgload_8c_ac698637f0794f418dcaa31b1dab1d4de_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_ac698637f0794f418dcaa31b1dab1d4de_icgraph.png" border="0" usemap="#acffgload_8c_ac698637f0794f418dcaa31b1dab1d4de_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="aeecb96a848a30832f21f511aa430642f" name="aeecb96a848a30832f21f511aa430642f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeecb96a848a30832f21f511aa430642f">&#9670;&#160;</a></span>cff_lookup_glyph_by_stdcharcode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> cff_lookup_glyph_by_stdcharcode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cfftypes_8h.html#a5e0f673b92ece4958ef2cc9b54ca4f44">CFF_Font</a></td>          <td class="paramname"><span class="paramname"><em>cff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>charcode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_aeecb96a848a30832f21f511aa430642f_cgraph.png" border="0" usemap="#acffgload_8c_aeecb96a848a30832f21f511aa430642f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_aeecb96a848a30832f21f511aa430642f_icgraph.png" border="0" usemap="#acffgload_8c_aeecb96a848a30832f21f511aa430642f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="a0d24ed0d19a3bda95bdeaaa880bc511e" name="a0d24ed0d19a3bda95bdeaaa880bc511e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d24ed0d19a3bda95bdeaaa880bc511e">&#9670;&#160;</a></span>cff_operator_seac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> cff_operator_seac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#acb3ac047f4b618a7b5d12c4b0204161c">CFF_Decoder</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>adx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>ady</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>bchar</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>achar</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a0d24ed0d19a3bda95bdeaaa880bc511e_cgraph.png" border="0" usemap="#acffgload_8c_a0d24ed0d19a3bda95bdeaaa880bc511e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a0d24ed0d19a3bda95bdeaaa880bc511e_icgraph.png" border="0" usemap="#acffgload_8c_a0d24ed0d19a3bda95bdeaaa880bc511e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="ac1456af57953dbbbfae7a91558ef9ea2" name="ac1456af57953dbbbfae7a91558ef9ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1456af57953dbbbfae7a91558ef9ea2">&#9670;&#160;</a></span>cff_slot_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cff_slot_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd">CFF_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>glyph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579">CFF_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a></td>          <td class="paramname"><span class="paramname"><em>load_flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_ac1456af57953dbbbfae7a91558ef9ea2_cgraph.png" border="0" usemap="#acffgload_8c_ac1456af57953dbbbfae7a91558ef9ea2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_ac1456af57953dbbbfae7a91558ef9ea2_icgraph.png" border="0" usemap="#acffgload_8c_ac1456af57953dbbbfae7a91558ef9ea2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a0ef1a40bab4619b9460a434e3e6a9426" name="a0ef1a40bab4619b9460a434e3e6a9426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef1a40bab4619b9460a434e3e6a9426">&#9670;&#160;</a></span>check_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> check_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cffgload_8h.html#a4aac82b1ba984b968ac0ab2370a3c86e">CFF_Builder</a> *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="cffgload_8c_a0ef1a40bab4619b9460a434e3e6a9426_cgraph.png" border="0" usemap="#acffgload_8c_a0ef1a40bab4619b9460a434e3e6a9426_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a41d5ed5cfcef57e07ffad2f15b9ec3d6" name="a41d5ed5cfcef57e07ffad2f15b9ec3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d5ed5cfcef57e07ffad2f15b9ec3d6">&#9670;&#160;</a></span>cff_argument_counts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> cff_argument_counts[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_ef10f7e7d7430b88d4d2aea26a8f2c3a.html">cff</a></li><li class="navelem"><a href="cffgload_8c.html">cffgload.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

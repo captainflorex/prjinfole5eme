@@ -1,0 +1,921 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cache/ftcsbits.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftcsbits_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftcsbits.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ftcerror_8h_source.html">ftcerror.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftcsbits.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cache_2ftcsbits_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2cache_2ftcsbits_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ftcsbits_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:FTC_5FSBitNodeRec_5F" id="r_FTC_5FSBitNodeRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t_c___s_bit_node_rec__.html">FTC_SBitNodeRec_</a></td></tr>
+<tr class="memitem:FTC_5FSBitQueryRec_5F" id="r_FTC_5FSBitQueryRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t_c___s_bit_query_rec__.html">FTC_SBitQueryRec_</a></td></tr>
+<tr class="memitem:FTC_5FSBitFamilyRec_5F" id="r_FTC_5FSBitFamilyRec_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_t_c___s_bit_family_rec__.html">FTC_SBitFamilyRec_</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af8ac2a06d497b49978e0ebfeea6b4b3a" id="r_af8ac2a06d497b49978e0ebfeea6b4b3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af8ac2a06d497b49978e0ebfeea6b4b3a">FTC_SBIT_ITEMS_PER_NODE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memitem:a4cc8913b4e5b954fc4c04663b57f1341" id="r_a4cc8913b4e5b954fc4c04663b57f1341"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4cc8913b4e5b954fc4c04663b57f1341">FTC_SBIT_NODE</a>(x)</td></tr>
+<tr class="memitem:acbf463f069ef26f1e3e18f07a5862a6d" id="r_acbf463f069ef26f1e3e18f07a5862a6d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acbf463f069ef26f1e3e18f07a5862a6d">FTC_SBIT_QUERY</a>(x)</td></tr>
+<tr class="memitem:aaf061e40f0dd717ed48a6efdb17518f6" id="r_aaf061e40f0dd717ed48a6efdb17518f6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaf061e40f0dd717ed48a6efdb17518f6">FTC_SBIT_FAMILY</a>(x)</td></tr>
+<tr class="memitem:a98dbc4a1f933506704792bd2a9bf18e4" id="r_a98dbc4a1f933506704792bd2a9bf18e4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a98dbc4a1f933506704792bd2a9bf18e4">FTC_SBIT_FAMILY_MEMORY</a>(x)</td></tr>
+<tr class="memitem:af233315bf70255d04d42250f17ff762f" id="r_af233315bf70255d04d42250f17ff762f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af233315bf70255d04d42250f17ff762f">CHECK_CHAR</a>(d)</td></tr>
+<tr class="memitem:a929cf350ca7c4d3139b16de0066c93bb" id="r_a929cf350ca7c4d3139b16de0066c93bb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a929cf350ca7c4d3139b16de0066c93bb">CHECK_BYTE</a>(d)</td></tr>
+<tr class="memitem:a0695a17330d8f7db54dce714b0ae5b3c" id="r_a0695a17330d8f7db54dce714b0ae5b3c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0695a17330d8f7db54dce714b0ae5b3c">ftc_sbit_cache_lookup</a>&#160;&#160;&#160;<a class="el" href="ftccache_8h.html#a450f88f6f1437c4289dcecc8c30040e3">ftc_cache_lookup</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ae7e984c019df6da8df41532fb9b5968e" id="r_ae7e984c019df6da8df41532fb9b5968e"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___s_bit_node_rec__.html">FTC_SBitNodeRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td></tr>
+<tr class="memitem:afb08beca0053b024c8ff994d6c91aad9" id="r_afb08beca0053b024c8ff994d6c91aad9"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___s_bit_node_rec__.html">FTC_SBitNodeRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#afb08beca0053b024c8ff994d6c91aad9">FTC_SBitNodeRec</a></td></tr>
+<tr class="memitem:aeb6a6e344c73e3d6e9803dec382b9359" id="r_aeb6a6e344c73e3d6e9803dec382b9359"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___s_bit_query_rec__.html">FTC_SBitQueryRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeb6a6e344c73e3d6e9803dec382b9359">FTC_SBitQueryRec</a></td></tr>
+<tr class="memitem:a9439e97e762e13b26d1f4c2fa9466a9c" id="r_a9439e97e762e13b26d1f4c2fa9466a9c"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___s_bit_query_rec__.html">FTC_SBitQueryRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a></td></tr>
+<tr class="memitem:aa4de704434ce26ecfeb52fc8ad8dd90d" id="r_aa4de704434ce26ecfeb52fc8ad8dd90d"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___s_bit_family_rec__.html">FTC_SBitFamilyRec_</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a></td></tr>
+<tr class="memitem:ab812e8d6e36fcf764cab34df6eecf9f0" id="r_ab812e8d6e36fcf764cab34df6eecf9f0"><td class="memItemLeft">typedef struct <a class="el" href="struct_f_t_c___s_bit_family_rec__.html">FTC_SBitFamilyRec_</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab812e8d6e36fcf764cab34df6eecf9f0">FTC_SBitFamilyRec</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab44c1a1e41bfe9fe5a1a3ead0f12aab9" id="r_ab44c1a1e41bfe9fe5a1a3ead0f12aab9"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab44c1a1e41bfe9fe5a1a3ead0f12aab9">ftc_sbit_copy_bitmap</a> (<a class="el" href="ftcsbits_8h.html#ababe56f12cd6931779cd1ef8e38ed4f1">FTC_SBit</a> sbit, <a class="el" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a> *bitmap, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>)</td></tr>
+<tr class="memitem:a8e8e6cd6c39427f9fa9bba7595e36f49" id="r_a8e8e6cd6c39427f9fa9bba7595e36f49"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8e8e6cd6c39427f9fa9bba7595e36f49">ftc_sbit_node_done</a> (<a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a> snode, <a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a> cache)</td></tr>
+<tr class="memitem:ab01bcbe8fabb0ab23da22f97c23e02ca" id="r_ab01bcbe8fabb0ab23da22f97c23e02ca"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab01bcbe8fabb0ab23da22f97c23e02ca">ftc_sbit_node_load</a> (<a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a> snode, <a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager, <a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a> sfam, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> gindex, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *asize)</td></tr>
+<tr class="memitem:a7f900d42702e4dfa52428a22b1f2ae70" id="r_a7f900d42702e4dfa52428a22b1f2ae70"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7f900d42702e4dfa52428a22b1f2ae70">ftc_sbit_node_init</a> (<a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a> snode, <a class="el" href="ftcglyph_8h.html#a49d6185ec27e1b82e31cc6c67ce2013d">FTC_GlyphQuery</a> gquery, <a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a> cache)</td></tr>
+<tr class="memitem:aef7cd995ded64dcd5bfca4a15e11f3e7" id="r_aef7cd995ded64dcd5bfca4a15e11f3e7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aef7cd995ded64dcd5bfca4a15e11f3e7">ftc_sbit_node_weight</a> (<a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a> snode)</td></tr>
+<tr class="memitem:ab1f5b501b5ad9c01c6bead9bbc016e80" id="r_ab1f5b501b5ad9c01c6bead9bbc016e80"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab1f5b501b5ad9c01c6bead9bbc016e80">ftc_sbit_node_compare</a> (<a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a> snode, <a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a> squery, <a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a> cache)</td></tr>
+<tr class="memitem:a061a8708ae03c54920fbca11bf485e31" id="r_a061a8708ae03c54920fbca11bf485e31"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a061a8708ae03c54920fbca11bf485e31">ftc_sbit_family_init</a> (<a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a> sfam, <a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a> squery, <a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a> cache)</td></tr>
+<tr class="memitem:aea1661e4168c36a4c225fca39e80bb37" id="r_aea1661e4168c36a4c225fca39e80bb37"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aea1661e4168c36a4c225fca39e80bb37">ftc_sbit_family_compare</a> (<a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a> sfam, <a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a> squery)</td></tr>
+<tr class="memitem:a92c53945322d2b3840bc877853f9ae66" id="r_a92c53945322d2b3840bc877853f9ae66"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a92c53945322d2b3840bc877853f9ae66">FTC_SBitCache_New</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager, <a class="el" href="ftcsbits_8h.html#a3c771d6070fd95b10012d053782f75de">FTC_SBitCache</a> *acache)</td></tr>
+<tr class="memitem:a26faad0890fa32f60a65c0d40a6b0d0b" id="r_a26faad0890fa32f60a65c0d40a6b0d0b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a26faad0890fa32f60a65c0d40a6b0d0b">FTC_SBitCache_Lookup</a> (<a class="el" href="ftcsbits_8h.html#a3c771d6070fd95b10012d053782f75de">FTC_SBitCache</a> cache, <a class="el" href="ftcimage_8h.html#a25aba38e94e78467730ce4fbd7237101">FTC_ImageType</a> type, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> gindex, <a class="el" href="ftcsbits_8h.html#ababe56f12cd6931779cd1ef8e38ed4f1">FTC_SBit</a> *ansbit, <a class="el" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a> *anode)</td></tr>
+<tr class="memitem:ac6df414c25e8214d6927a4ca8aa91b02" id="r_ac6df414c25e8214d6927a4ca8aa91b02"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac6df414c25e8214d6927a4ca8aa91b02">FTC_SBit_Cache_New</a> (<a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a> manager, <a class="el" href="ftcsbits_8h.html#ab63831912190c0d8a8efc2afe615519a">FTC_SBit_Cache</a> *acache)</td></tr>
+<tr class="memitem:a2436bc4be232a828fd21832367819857" id="r_a2436bc4be232a828fd21832367819857"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2436bc4be232a828fd21832367819857">FTC_SBit_Cache_Lookup</a> (<a class="el" href="ftcsbits_8h.html#ab63831912190c0d8a8efc2afe615519a">FTC_SBit_Cache</a> cache, <a class="el" href="ftcimage_8h.html#af78e4e9b3504301d3fc5a865766f6e76">FTC_Image_Desc</a> *desc, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> gindex, <a class="el" href="ftcsbits_8h.html#ababe56f12cd6931779cd1ef8e38ed4f1">FTC_SBit</a> *ansbit)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a354cddddd01724d70dd5a1204e377ffc" id="r_a354cddddd01724d70dd5a1204e377ffc"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a354cddddd01724d70dd5a1204e377ffc">ftc_sbit_cache_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a929cf350ca7c4d3139b16de0066c93bb" name="a929cf350ca7c4d3139b16de0066c93bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929cf350ca7c4d3139b16de0066c93bb">&#9670;&#160;</a></span>CHECK_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHECK_BYTE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( temp = (<a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>)d, temp == d )</div>
+<div class="ttc" id="afttypes_8h_html_a51f26183ca0c9f4af958939648caeccd"><div class="ttname"><a href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></div><div class="ttdeci">unsigned char FT_Byte</div><div class="ttdef"><b>Definition</b> fttypes.h:143</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af233315bf70255d04d42250f17ff762f" name="af233315bf70255d04d42250f17ff762f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af233315bf70255d04d42250f17ff762f">&#9670;&#160;</a></span>CHECK_CHAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHECK_CHAR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( temp = (<a class="code hl_typedef" href="fttypes_8h.html#a0f851552b050883885f0a0855771f39d">FT_Char</a>)d, temp == d )</div>
+<div class="ttc" id="afttypes_8h_html_a0f851552b050883885f0a0855771f39d"><div class="ttname"><a href="fttypes_8h.html#a0f851552b050883885f0a0855771f39d">FT_Char</a></div><div class="ttdeci">signed char FT_Char</div><div class="ttdef"><b>Definition</b> fttypes.h:132</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0695a17330d8f7db54dce714b0ae5b3c" name="a0695a17330d8f7db54dce714b0ae5b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0695a17330d8f7db54dce714b0ae5b3c">&#9670;&#160;</a></span>ftc_sbit_cache_lookup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ftc_sbit_cache_lookup&#160;&#160;&#160;<a class="el" href="ftccache_8h.html#a450f88f6f1437c4289dcecc8c30040e3">ftc_cache_lookup</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf061e40f0dd717ed48a6efdb17518f6" name="aaf061e40f0dd717ed48a6efdb17518f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf061e40f0dd717ed48a6efdb17518f6">&#9670;&#160;</a></span>FTC_SBIT_FAMILY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FTC_SBIT_FAMILY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (<a class="code hl_typedef" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a>)( x ) )</div>
+<div class="ttc" id="aftcsbits_8c_html_aa4de704434ce26ecfeb52fc8ad8dd90d"><div class="ttname"><a href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a></div><div class="ttdeci">struct FTC_SBitFamilyRec_ * FTC_SBitFamily</div><div class="ttdef"><b>Definition</b> ftcsbits.c:57</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a98dbc4a1f933506704792bd2a9bf18e4" name="a98dbc4a1f933506704792bd2a9bf18e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98dbc4a1f933506704792bd2a9bf18e4">&#9670;&#160;</a></span>FTC_SBIT_FAMILY_MEMORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FTC_SBIT_FAMILY_MEMORY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="ftcglyph_8h.html#a428cc92ef83f237a116c405996fa12fd">FTC_GLYPH_FAMILY_MEMORY</a>( &amp;( x )-&gt;cset )</div>
+<div class="ttc" id="aftcglyph_8h_html_a428cc92ef83f237a116c405996fa12fd"><div class="ttname"><a href="ftcglyph_8h.html#a428cc92ef83f237a116c405996fa12fd">FTC_GLYPH_FAMILY_MEMORY</a></div><div class="ttdeci">#define FTC_GLYPH_FAMILY_MEMORY(x)</div><div class="ttdef"><b>Definition</b> ftcglyph.h:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af8ac2a06d497b49978e0ebfeea6b4b3a" name="af8ac2a06d497b49978e0ebfeea6b4b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ac2a06d497b49978e0ebfeea6b4b3a">&#9670;&#160;</a></span>FTC_SBIT_ITEMS_PER_NODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FTC_SBIT_ITEMS_PER_NODE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cc8913b4e5b954fc4c04663b57f1341" name="a4cc8913b4e5b954fc4c04663b57f1341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc8913b4e5b954fc4c04663b57f1341">&#9670;&#160;</a></span>FTC_SBIT_NODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FTC_SBIT_NODE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (<a class="code hl_typedef" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a>)( x ) )</div>
+<div class="ttc" id="aftcsbits_8c_html_ae7e984c019df6da8df41532fb9b5968e"><div class="ttname"><a href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></div><div class="ttdeci">struct FTC_SBitNodeRec_ * FTC_SBitNode</div><div class="ttdef"><b>Definition</b> ftcsbits.c:33</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acbf463f069ef26f1e3e18f07a5862a6d" name="acbf463f069ef26f1e3e18f07a5862a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf463f069ef26f1e3e18f07a5862a6d">&#9670;&#160;</a></span>FTC_SBIT_QUERY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FTC_SBIT_QUERY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( (<a class="code hl_typedef" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a>)( x ) )</div>
+<div class="ttc" id="aftcsbits_8c_html_a9439e97e762e13b26d1f4c2fa9466a9c"><div class="ttname"><a href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a></div><div class="ttdeci">struct FTC_SBitQueryRec_ * FTC_SBitQuery</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="aa4de704434ce26ecfeb52fc8ad8dd90d" name="aa4de704434ce26ecfeb52fc8ad8dd90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4de704434ce26ecfeb52fc8ad8dd90d">&#9670;&#160;</a></span>FTC_SBitFamily</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___s_bit_family_rec__.html">FTC_SBitFamilyRec_</a>* <a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab812e8d6e36fcf764cab34df6eecf9f0" name="ab812e8d6e36fcf764cab34df6eecf9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab812e8d6e36fcf764cab34df6eecf9f0">&#9670;&#160;</a></span>FTC_SBitFamilyRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___s_bit_family_rec__.html">FTC_SBitFamilyRec_</a> <a class="el" href="#ab812e8d6e36fcf764cab34df6eecf9f0">FTC_SBitFamilyRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7e984c019df6da8df41532fb9b5968e" name="ae7e984c019df6da8df41532fb9b5968e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e984c019df6da8df41532fb9b5968e">&#9670;&#160;</a></span>FTC_SBitNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___s_bit_node_rec__.html">FTC_SBitNodeRec_</a>* <a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb08beca0053b024c8ff994d6c91aad9" name="afb08beca0053b024c8ff994d6c91aad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb08beca0053b024c8ff994d6c91aad9">&#9670;&#160;</a></span>FTC_SBitNodeRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___s_bit_node_rec__.html">FTC_SBitNodeRec_</a> <a class="el" href="#afb08beca0053b024c8ff994d6c91aad9">FTC_SBitNodeRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9439e97e762e13b26d1f4c2fa9466a9c" name="a9439e97e762e13b26d1f4c2fa9466a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9439e97e762e13b26d1f4c2fa9466a9c">&#9670;&#160;</a></span>FTC_SBitQuery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___s_bit_query_rec__.html">FTC_SBitQueryRec_</a> * <a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb6a6e344c73e3d6e9803dec382b9359" name="aeb6a6e344c73e3d6e9803dec382b9359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6a6e344c73e3d6e9803dec382b9359">&#9670;&#160;</a></span>FTC_SBitQueryRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_f_t_c___s_bit_query_rec__.html">FTC_SBitQueryRec_</a> <a class="el" href="#aeb6a6e344c73e3d6e9803dec382b9359">FTC_SBitQueryRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a2436bc4be232a828fd21832367819857" name="a2436bc4be232a828fd21832367819857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2436bc4be232a828fd21832367819857">&#9670;&#160;</a></span>FTC_SBit_Cache_Lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_SBit_Cache_Lookup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#ab63831912190c0d8a8efc2afe615519a">FTC_SBit_Cache</a></td>          <td class="paramname"><span class="paramname"><em>cache</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcimage_8h.html#af78e4e9b3504301d3fc5a865766f6e76">FTC_Image_Desc</a> *</td>          <td class="paramname"><span class="paramname"><em>desc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>gindex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#ababe56f12cd6931779cd1ef8e38ed4f1">FTC_SBit</a> *</td>          <td class="paramname"><span class="paramname"><em>ansbit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a2436bc4be232a828fd21832367819857_cgraph.png" border="0" usemap="#aftcsbits_8c_a2436bc4be232a828fd21832367819857_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a2436bc4be232a828fd21832367819857_icgraph.png" border="0" usemap="#aftcsbits_8c_a2436bc4be232a828fd21832367819857_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ac6df414c25e8214d6927a4ca8aa91b02" name="ac6df414c25e8214d6927a4ca8aa91b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6df414c25e8214d6927a4ca8aa91b02">&#9670;&#160;</a></span>FTC_SBit_Cache_New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_SBit_Cache_New </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#ab63831912190c0d8a8efc2afe615519a">FTC_SBit_Cache</a> *</td>          <td class="paramname"><span class="paramname"><em>acache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ac6df414c25e8214d6927a4ca8aa91b02_cgraph.png" border="0" usemap="#aftcsbits_8c_ac6df414c25e8214d6927a4ca8aa91b02_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ac6df414c25e8214d6927a4ca8aa91b02_icgraph.png" border="0" usemap="#aftcsbits_8c_ac6df414c25e8214d6927a4ca8aa91b02_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ab44c1a1e41bfe9fe5a1a3ead0f12aab9" name="ab44c1a1e41bfe9fe5a1a3ead0f12aab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab44c1a1e41bfe9fe5a1a3ead0f12aab9">&#9670;&#160;</a></span>ftc_sbit_copy_bitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ftc_sbit_copy_bitmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#ababe56f12cd6931779cd1ef8e38ed4f1">FTC_SBit</a></td>          <td class="paramname"><span class="paramname"><em>sbit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a> *</td>          <td class="paramname"><span class="paramname"><em>bitmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ab44c1a1e41bfe9fe5a1a3ead0f12aab9_icgraph.png" border="0" usemap="#aftcsbits_8c_ab44c1a1e41bfe9fe5a1a3ead0f12aab9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="aea1661e4168c36a4c225fca39e80bb37" name="aea1661e4168c36a4c225fca39e80bb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1661e4168c36a4c225fca39e80bb37">&#9670;&#160;</a></span>ftc_sbit_family_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_sbit_family_compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a></td>          <td class="paramname"><span class="paramname"><em>sfam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a></td>          <td class="paramname"><span class="paramname"><em>squery</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_aea1661e4168c36a4c225fca39e80bb37_cgraph.png" border="0" usemap="#aftcsbits_8c_aea1661e4168c36a4c225fca39e80bb37_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_aea1661e4168c36a4c225fca39e80bb37_icgraph.png" border="0" usemap="#aftcsbits_8c_aea1661e4168c36a4c225fca39e80bb37_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a061a8708ae03c54920fbca11bf485e31" name="a061a8708ae03c54920fbca11bf485e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061a8708ae03c54920fbca11bf485e31">&#9670;&#160;</a></span>ftc_sbit_family_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_sbit_family_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a></td>          <td class="paramname"><span class="paramname"><em>sfam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a></td>          <td class="paramname"><span class="paramname"><em>squery</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></td>          <td class="paramname"><span class="paramname"><em>cache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a061a8708ae03c54920fbca11bf485e31_cgraph.png" border="0" usemap="#aftcsbits_8c_a061a8708ae03c54920fbca11bf485e31_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a061a8708ae03c54920fbca11bf485e31_icgraph.png" border="0" usemap="#aftcsbits_8c_a061a8708ae03c54920fbca11bf485e31_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="ab1f5b501b5ad9c01c6bead9bbc016e80" name="ab1f5b501b5ad9c01c6bead9bbc016e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f5b501b5ad9c01c6bead9bbc016e80">&#9670;&#160;</a></span>ftc_sbit_node_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_sbit_node_compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td>          <td class="paramname"><span class="paramname"><em>snode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9439e97e762e13b26d1f4c2fa9466a9c">FTC_SBitQuery</a></td>          <td class="paramname"><span class="paramname"><em>squery</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></td>          <td class="paramname"><span class="paramname"><em>cache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ab1f5b501b5ad9c01c6bead9bbc016e80_cgraph.png" border="0" usemap="#aftcsbits_8c_ab1f5b501b5ad9c01c6bead9bbc016e80_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ab1f5b501b5ad9c01c6bead9bbc016e80_icgraph.png" border="0" usemap="#aftcsbits_8c_ab1f5b501b5ad9c01c6bead9bbc016e80_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a8e8e6cd6c39427f9fa9bba7595e36f49" name="a8e8e6cd6c39427f9fa9bba7595e36f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8e6cd6c39427f9fa9bba7595e36f49">&#9670;&#160;</a></span>ftc_sbit_node_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_sbit_node_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td>          <td class="paramname"><span class="paramname"><em>snode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></td>          <td class="paramname"><span class="paramname"><em>cache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a8e8e6cd6c39427f9fa9bba7595e36f49_cgraph.png" border="0" usemap="#aftcsbits_8c_a8e8e6cd6c39427f9fa9bba7595e36f49_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a8e8e6cd6c39427f9fa9bba7595e36f49_icgraph.png" border="0" usemap="#aftcsbits_8c_a8e8e6cd6c39427f9fa9bba7595e36f49_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="a7f900d42702e4dfa52428a22b1f2ae70" name="a7f900d42702e4dfa52428a22b1f2ae70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f900d42702e4dfa52428a22b1f2ae70">&#9670;&#160;</a></span>ftc_sbit_node_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_sbit_node_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td>          <td class="paramname"><span class="paramname"><em>snode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcglyph_8h.html#a49d6185ec27e1b82e31cc6c67ce2013d">FTC_GlyphQuery</a></td>          <td class="paramname"><span class="paramname"><em>gquery</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftccache_8h.html#a095a59c6052424bec9f75ad5e052aa73">FTC_Cache</a></td>          <td class="paramname"><span class="paramname"><em>cache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a7f900d42702e4dfa52428a22b1f2ae70_cgraph.png" border="0" usemap="#aftcsbits_8c_a7f900d42702e4dfa52428a22b1f2ae70_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a7f900d42702e4dfa52428a22b1f2ae70_icgraph.png" border="0" usemap="#aftcsbits_8c_a7f900d42702e4dfa52428a22b1f2ae70_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="ab01bcbe8fabb0ab23da22f97c23e02ca" name="ab01bcbe8fabb0ab23da22f97c23e02ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01bcbe8fabb0ab23da22f97c23e02ca">&#9670;&#160;</a></span>ftc_sbit_node_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ftc_sbit_node_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td>          <td class="paramname"><span class="paramname"><em>snode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aa4de704434ce26ecfeb52fc8ad8dd90d">FTC_SBitFamily</a></td>          <td class="paramname"><span class="paramname"><em>sfam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>gindex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>asize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ab01bcbe8fabb0ab23da22f97c23e02ca_cgraph.png" border="0" usemap="#aftcsbits_8c_ab01bcbe8fabb0ab23da22f97c23e02ca_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_ab01bcbe8fabb0ab23da22f97c23e02ca_icgraph.png" border="0" usemap="#aftcsbits_8c_ab01bcbe8fabb0ab23da22f97c23e02ca_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="aef7cd995ded64dcd5bfca4a15e11f3e7" name="aef7cd995ded64dcd5bfca4a15e11f3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7cd995ded64dcd5bfca4a15e11f3e7">&#9670;&#160;</a></span>ftc_sbit_node_weight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ftc_sbit_node_weight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae7e984c019df6da8df41532fb9b5968e">FTC_SBitNode</a></td>          <td class="paramname"><span class="paramname"><em>snode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_aef7cd995ded64dcd5bfca4a15e11f3e7_cgraph.png" border="0" usemap="#aftcsbits_8c_aef7cd995ded64dcd5bfca4a15e11f3e7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_aef7cd995ded64dcd5bfca4a15e11f3e7_icgraph.png" border="0" usemap="#aftcsbits_8c_aef7cd995ded64dcd5bfca4a15e11f3e7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a id="a26faad0890fa32f60a65c0d40a6b0d0b" name="a26faad0890fa32f60a65c0d40a6b0d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26faad0890fa32f60a65c0d40a6b0d0b">&#9670;&#160;</a></span>FTC_SBitCache_Lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_SBitCache_Lookup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#a3c771d6070fd95b10012d053782f75de">FTC_SBitCache</a></td>          <td class="paramname"><span class="paramname"><em>cache</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcimage_8h.html#a25aba38e94e78467730ce4fbd7237101">FTC_ImageType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>gindex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#ababe56f12cd6931779cd1ef8e38ed4f1">FTC_SBit</a> *</td>          <td class="paramname"><span class="paramname"><em>ansbit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#a69e20e3229cfa1fe4677c6626890a2e4">FTC_Node</a> *</td>          <td class="paramname"><span class="paramname"><em>anode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a26faad0890fa32f60a65c0d40a6b0d0b_cgraph.png" border="0" usemap="#aftcsbits_8c_a26faad0890fa32f60a65c0d40a6b0d0b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a26faad0890fa32f60a65c0d40a6b0d0b_icgraph.png" border="0" usemap="#aftcsbits_8c_a26faad0890fa32f60a65c0d40a6b0d0b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="a92c53945322d2b3840bc877853f9ae66" name="a92c53945322d2b3840bc877853f9ae66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c53945322d2b3840bc877853f9ae66">&#9670;&#160;</a></span>FTC_SBitCache_New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTC_SBitCache_New </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftcache_8h.html#afa42daf62f0c6ee9d6d93e44236e47ac">FTC_Manager</a></td>          <td class="paramname"><span class="paramname"><em>manager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftcsbits_8h.html#a3c771d6070fd95b10012d053782f75de">FTC_SBitCache</a> *</td>          <td class="paramname"><span class="paramname"><em>acache</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a92c53945322d2b3840bc877853f9ae66_cgraph.png" border="0" usemap="#aftcsbits_8c_a92c53945322d2b3840bc877853f9ae66_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftcsbits_8c_a92c53945322d2b3840bc877853f9ae66_icgraph.png" border="0" usemap="#aftcsbits_8c_a92c53945322d2b3840bc877853f9ae66_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a354cddddd01724d70dd5a1204e377ffc" name="a354cddddd01724d70dd5a1204e377ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354cddddd01724d70dd5a1204e377ffc">&#9670;&#160;</a></span>ftc_sbit_cache_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftccache_8h.html#a359d2dfeee5abb19bbfe0afd0775556a">FTC_Cache_ClassRec</a> ftc_sbit_cache_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                               =</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a>) <a class="code hl_function" href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a>)<a class="code hl_function" href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a>) <a class="code hl_function" href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a>,</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="#ab812e8d6e36fcf764cab34df6eecf9f0">FTC_SBitFamilyRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a>)   <a class="code hl_function" href="#a061a8708ae03c54920fbca11bf485e31">ftc_sbit_family_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a>)<a class="code hl_function" href="#aea1661e4168c36a4c225fca39e80bb37">ftc_sbit_family_compare</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a>)   <a class="code hl_function" href="ftcglyph_8h.html#a13cd7e8ec106d3711e38d43ec457fe57">ftc_glyph_family_done</a>,</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">sizeof</span> ( <a class="code hl_typedef" href="#afb08beca0053b024c8ff994d6c91aad9">FTC_SBitNodeRec</a> ),</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a>)   <a class="code hl_function" href="#a7f900d42702e4dfa52428a22b1f2ae70">ftc_sbit_node_init</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a>) <a class="code hl_function" href="#aef7cd995ded64dcd5bfca4a15e11f3e7">ftc_sbit_node_weight</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a>)<a class="code hl_function" href="#ab1f5b501b5ad9c01c6bead9bbc016e80">ftc_sbit_node_compare</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a>)   <a class="code hl_function" href="#a8e8e6cd6c39427f9fa9bba7595e36f49">ftc_sbit_node_done</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aftccache_8h_html_a29958ad81fd027a85c17974a9876045e"><div class="ttname"><a href="ftccache_8h.html#a29958ad81fd027a85c17974a9876045e">ftc_cache_clear</a></div><div class="ttdeci">ftc_cache_clear(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:471</div></div>
+<div class="ttc" id="aftccache_8h_html_a2fbddca535665bf0429a3e6a7567a349"><div class="ttname"><a href="ftccache_8h.html#a2fbddca535665bf0429a3e6a7567a349">FTC_CacheRec</a></div><div class="ttdeci">struct FTC_CacheRec_ FTC_CacheRec</div></div>
+<div class="ttc" id="aftccache_8h_html_a446cb5758705c8d93fed4834c1f7ba01"><div class="ttname"><a href="ftccache_8h.html#a446cb5758705c8d93fed4834c1f7ba01">ftc_cache_init</a></div><div class="ttdeci">ftc_cache_init(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:426</div></div>
+<div class="ttc" id="aftccache_8h_html_a4e044ea7a9cfe2cbc7b2046879fa66e7"><div class="ttname"><a href="ftccache_8h.html#a4e044ea7a9cfe2cbc7b2046879fa66e7">FTC_Node_DoneFunc</a></div><div class="ttdeci">void(* FTC_Node_DoneFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:241</div></div>
+<div class="ttc" id="aftccache_8h_html_a7fda8305fba9da3ac004f69d62222c1f"><div class="ttname"><a href="ftccache_8h.html#a7fda8305fba9da3ac004f69d62222c1f">FTC_Cache_ClearFunc</a></div><div class="ttdeci">void(* FTC_Cache_ClearFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:202</div></div>
+<div class="ttc" id="aftccache_8h_html_a8d40751b20ddb9a153ea1c474b1924ff"><div class="ttname"><a href="ftccache_8h.html#a8d40751b20ddb9a153ea1c474b1924ff">FTC_Node_CompareFunc</a></div><div class="ttdeci">FT_Bool(* FTC_Node_CompareFunc)(FTC_Node node, FT_Pointer key, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:235</div></div>
+<div class="ttc" id="aftccache_8h_html_a9569a13469bd526ef597ba839844b0b2"><div class="ttname"><a href="ftccache_8h.html#a9569a13469bd526ef597ba839844b0b2">FTC_Cache_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Cache_InitFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:198</div></div>
+<div class="ttc" id="aftccache_8h_html_acb5e48b47a8df5f85ca45be7a024dcae"><div class="ttname"><a href="ftccache_8h.html#acb5e48b47a8df5f85ca45be7a024dcae">FTC_Family_DoneFunc</a></div><div class="ttdeci">void(* FTC_Family_DoneFunc)(FTC_Family family, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:219</div></div>
+<div class="ttc" id="aftccache_8h_html_ad9a62f6e005e94390b5871fead4c046f"><div class="ttname"><a href="ftccache_8h.html#ad9a62f6e005e94390b5871fead4c046f">FTC_Node_WeightFunc</a></div><div class="ttdeci">FT_ULong(* FTC_Node_WeightFunc)(FTC_Node node, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:230</div></div>
+<div class="ttc" id="aftccache_8h_html_add258d52f2e5270ca6aa757658198266"><div class="ttname"><a href="ftccache_8h.html#add258d52f2e5270ca6aa757658198266">FTC_Family_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Family_InitFunc)(FTC_Family family, FTC_Query query, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:210</div></div>
+<div class="ttc" id="aftccache_8h_html_aea9f60ed64c82997a8d6b6ae2c808561"><div class="ttname"><a href="ftccache_8h.html#aea9f60ed64c82997a8d6b6ae2c808561">FTC_Cache_DoneFunc</a></div><div class="ttdeci">void(* FTC_Cache_DoneFunc)(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:206</div></div>
+<div class="ttc" id="aftccache_8h_html_aeedbacc3ae67fcafc7806e83cb2d9772"><div class="ttname"><a href="ftccache_8h.html#aeedbacc3ae67fcafc7806e83cb2d9772">FTC_Family_CompareFunc</a></div><div class="ttdeci">FT_Int(* FTC_Family_CompareFunc)(FTC_Family family, FTC_Query query)</div><div class="ttdef"><b>Definition</b> ftccache.h:215</div></div>
+<div class="ttc" id="aftccache_8h_html_afb110aa890319e5aaa0c751804afb427"><div class="ttname"><a href="ftccache_8h.html#afb110aa890319e5aaa0c751804afb427">FTC_Node_InitFunc</a></div><div class="ttdeci">FT_Error(* FTC_Node_InitFunc)(FTC_Node node, FT_Pointer type, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.h:224</div></div>
+<div class="ttc" id="aftccache_8h_html_aff0fde319e7b724184209a0ebb5ea0e9"><div class="ttname"><a href="ftccache_8h.html#aff0fde319e7b724184209a0ebb5ea0e9">ftc_cache_done</a></div><div class="ttdeci">ftc_cache_done(FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftccache.c:518</div></div>
+<div class="ttc" id="aftcglyph_8h_html_a13cd7e8ec106d3711e38d43ec457fe57"><div class="ttname"><a href="ftcglyph_8h.html#a13cd7e8ec106d3711e38d43ec457fe57">ftc_glyph_family_done</a></div><div class="ttdeci">ftc_glyph_family_done(FTC_GlyphFamily gfam)</div><div class="ttdef"><b>Definition</b> ftcglyph.c:109</div></div>
+<div class="ttc" id="aftcsbits_8c_html_a061a8708ae03c54920fbca11bf485e31"><div class="ttname"><a href="#a061a8708ae03c54920fbca11bf485e31">ftc_sbit_family_init</a></div><div class="ttdeci">ftc_sbit_family_init(FTC_SBitFamily sfam, FTC_SBitQuery squery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcsbits.c:336</div></div>
+<div class="ttc" id="aftcsbits_8c_html_a7f900d42702e4dfa52428a22b1f2ae70"><div class="ttname"><a href="#a7f900d42702e4dfa52428a22b1f2ae70">ftc_sbit_node_init</a></div><div class="ttdeci">ftc_sbit_node_init(FTC_SBitNode snode, FTC_GlyphQuery gquery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcsbits.c:232</div></div>
+<div class="ttc" id="aftcsbits_8c_html_a8e8e6cd6c39427f9fa9bba7595e36f49"><div class="ttname"><a href="#a8e8e6cd6c39427f9fa9bba7595e36f49">ftc_sbit_node_done</a></div><div class="ttdeci">ftc_sbit_node_done(FTC_SBitNode snode, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcsbits.c:104</div></div>
+<div class="ttc" id="aftcsbits_8c_html_ab1f5b501b5ad9c01c6bead9bbc016e80"><div class="ttname"><a href="#ab1f5b501b5ad9c01c6bead9bbc016e80">ftc_sbit_node_compare</a></div><div class="ttdeci">ftc_sbit_node_compare(FTC_SBitNode snode, FTC_SBitQuery squery, FTC_Cache cache)</div><div class="ttdef"><b>Definition</b> ftcsbits.c:289</div></div>
+<div class="ttc" id="aftcsbits_8c_html_ab812e8d6e36fcf764cab34df6eecf9f0"><div class="ttname"><a href="#ab812e8d6e36fcf764cab34df6eecf9f0">FTC_SBitFamilyRec</a></div><div class="ttdeci">struct FTC_SBitFamilyRec_ FTC_SBitFamilyRec</div></div>
+<div class="ttc" id="aftcsbits_8c_html_aea1661e4168c36a4c225fca39e80bb37"><div class="ttname"><a href="#aea1661e4168c36a4c225fca39e80bb37">ftc_sbit_family_compare</a></div><div class="ttdeci">ftc_sbit_family_compare(FTC_SBitFamily sfam, FTC_SBitQuery squery)</div><div class="ttdef"><b>Definition</b> ftcsbits.c:366</div></div>
+<div class="ttc" id="aftcsbits_8c_html_aef7cd995ded64dcd5bfca4a15e11f3e7"><div class="ttname"><a href="#aef7cd995ded64dcd5bfca4a15e11f3e7">ftc_sbit_node_weight</a></div><div class="ttdeci">ftc_sbit_node_weight(FTC_SBitNode snode)</div><div class="ttdef"><b>Definition</b> ftcsbits.c:256</div></div>
+<div class="ttc" id="aftcsbits_8c_html_afb08beca0053b024c8ff994d6c91aad9"><div class="ttname"><a href="#afb08beca0053b024c8ff994d6c91aad9">FTC_SBitNodeRec</a></div><div class="ttdeci">struct FTC_SBitNodeRec_ FTC_SBitNodeRec</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_1ecb25ace48afe747597ea1a7845e1b7.html">cache</a></li><li class="navelem"><a href="ftcsbits_8c.html">ftcsbits.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

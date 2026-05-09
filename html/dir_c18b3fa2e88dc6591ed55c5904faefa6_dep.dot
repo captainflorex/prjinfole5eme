@@ -1,0 +1,16 @@
+digraph "src/alfont-code-r12-trunk"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="src", rankdir=LR style="filled,dashed", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html",tooltip=""]
+  subgraph clusterdir_c18b3fa2e88dc6591ed55c5904faefa6 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", rankdir=LR style="filled,bold", URL="dir_c18b3fa2e88dc6591ed55c5904faefa6.html",tooltip=""]
+    dir_c18b3fa2e88dc6591ed55c5904faefa6 [shape=plaintext, label="alfont-code-r12-trunk"];
+  dir_9ce061168feabb3f8d0e630e44f27401 [label="alfont-code-r12-trunk", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_9ce061168feabb3f8d0e630e44f27401.html",tooltip=""];
+  }
+  }
+}

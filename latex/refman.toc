@@ -1,0 +1,565 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Super Bulles -\/ Projet INFO S2 }{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Presentation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Fonctionnalites}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Controles}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Arborescence utile}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Prerequis}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Compilation rapide (GCC)}{2}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Compilation avec CMake}{3}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Sauvegardes}{3}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Ressources et remarques}{3}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Documentation}{3}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Auteurs}{3}{section.1.11}%
+\contentsline {chapter}{\numberline {2}Hiérarchie de répertoires}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Répertoires}{5}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Index des structures de données}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Structures de données}{7}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Index des fichiers}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Liste des fichiers}{9}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Documentation des répertoires}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Répertoire de référence de src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmake-\/build-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.2.2}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Répertoire de référence de src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmake-\/build-\/debug}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Répertoire de référence de src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmake-\/build-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files}{12}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Répertoire de référence de src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmake-\/build-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.2.2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Compiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IdC}{13}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Répertoire de référence de header}{13}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Répertoire de référence de src}{13}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Documentation des structures de données}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Référence de la structure Bonus\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arme}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Description détaillée}{15}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Documentation des champs}{15}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}active}{15}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}timer}{15}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}type}{16}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}x}{16}{subsubsection.6.1.2.4}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}y}{16}{subsubsection.6.1.2.5}%
+\contentsline {section}{\numberline {6.2}Référence de la structure Boss}{16}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Description détaillée}{16}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Documentation des champs}{17}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}active}{17}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}points\_vie}{17}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}points\_vie\_max}{17}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}timer\_tir}{17}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}vx}{17}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}vy}{17}{subsubsection.6.2.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.2.7}x}{17}{subsubsection.6.2.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.2.8}y}{18}{subsubsection.6.2.2.8}%
+\contentsline {section}{\numberline {6.3}Référence de la structure Bulle}{18}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Description détaillée}{18}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Documentation des champs}{18}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}active}{18}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}contient\_arme}{18}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}lance\_eclairs}{19}{subsubsection.6.3.2.3}%
+\contentsline {subsubsection}{\numberline {6.3.2.4}taille}{19}{subsubsection.6.3.2.4}%
+\contentsline {subsubsection}{\numberline {6.3.2.5}vx}{19}{subsubsection.6.3.2.5}%
+\contentsline {subsubsection}{\numberline {6.3.2.6}vy}{19}{subsubsection.6.3.2.6}%
+\contentsline {subsubsection}{\numberline {6.3.2.7}x}{19}{subsubsection.6.3.2.7}%
+\contentsline {subsubsection}{\numberline {6.3.2.8}y}{19}{subsubsection.6.3.2.8}%
+\contentsline {section}{\numberline {6.4}Référence de la structure Eclair}{19}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Description détaillée}{20}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Documentation des champs}{20}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}actif}{20}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}timer}{20}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}x}{20}{subsubsection.6.4.2.3}%
+\contentsline {subsubsection}{\numberline {6.4.2.4}y}{20}{subsubsection.6.4.2.4}%
+\contentsline {section}{\numberline {6.5}Référence de la structure Etat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entrees}{21}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Description détaillée}{21}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Documentation des champs}{21}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}aller\_droite}{21}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}aller\_gauche}{21}{subsubsection.6.5.2.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.3}pause}{21}{subsubsection.6.5.2.3}%
+\contentsline {subsubsection}{\numberline {6.5.2.4}pause\_appuye}{21}{subsubsection.6.5.2.4}%
+\contentsline {subsubsection}{\numberline {6.5.2.5}quitter}{22}{subsubsection.6.5.2.5}%
+\contentsline {subsubsection}{\numberline {6.5.2.6}tirer}{22}{subsubsection.6.5.2.6}%
+\contentsline {section}{\numberline {6.6}Référence de la structure Etat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Jeu}{22}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Description détaillée}{23}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Documentation des champs}{23}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}bonus}{23}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}boss}{23}{subsubsection.6.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.3}boss\_a\_spawne}{23}{subsubsection.6.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.6.2.4}bulles}{23}{subsubsection.6.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.6.2.5}bulles\_en\_attente}{24}{subsubsection.6.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.6.2.6}decompte}{24}{subsubsection.6.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.6.2.7}decompte\_timer}{24}{subsubsection.6.6.2.7}%
+\contentsline {subsubsection}{\numberline {6.6.2.8}eclairs}{24}{subsubsection.6.6.2.8}%
+\contentsline {subsubsection}{\numberline {6.6.2.9}explosion\_timer}{24}{subsubsection.6.6.2.9}%
+\contentsline {subsubsection}{\numberline {6.6.2.10}explosion\_x}{24}{subsubsection.6.6.2.10}%
+\contentsline {subsubsection}{\numberline {6.6.2.11}explosion\_y}{24}{subsubsection.6.6.2.11}%
+\contentsline {subsubsection}{\numberline {6.6.2.12}joueur}{24}{subsubsection.6.6.2.12}%
+\contentsline {subsubsection}{\numberline {6.6.2.13}nb\_bulles}{25}{subsubsection.6.6.2.13}%
+\contentsline {subsubsection}{\numberline {6.6.2.14}niveau}{25}{subsubsection.6.6.2.14}%
+\contentsline {subsubsection}{\numberline {6.6.2.15}projectiles}{25}{subsubsection.6.6.2.15}%
+\contentsline {subsubsection}{\numberline {6.6.2.16}temps\_restant}{25}{subsubsection.6.6.2.16}%
+\contentsline {subsubsection}{\numberline {6.6.2.17}timer\_arme\_speciale}{25}{subsubsection.6.6.2.17}%
+\contentsline {section}{\numberline {6.7}Référence de la structure Etat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{25}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Description détaillée}{26}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Documentation des champs}{26}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}afficher\_regles}{26}{subsubsection.6.7.2.1}%
+\contentsline {subsubsection}{\numberline {6.7.2.2}element\_selectionne}{26}{subsubsection.6.7.2.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.3}pseudo\_saisi}{26}{subsubsection.6.7.2.3}%
+\contentsline {subsubsection}{\numberline {6.7.2.4}saisie\_en\_cours}{26}{subsubsection.6.7.2.4}%
+\contentsline {section}{\numberline {6.8}Référence de la structure Joueur}{26}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Description détaillée}{27}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Documentation des champs}{27}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}arme}{27}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}duree\_arme}{27}{subsubsection.6.8.2.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.3}pseudo}{27}{subsubsection.6.8.2.3}%
+\contentsline {subsubsection}{\numberline {6.8.2.4}score}{27}{subsubsection.6.8.2.4}%
+\contentsline {subsubsection}{\numberline {6.8.2.5}vivant}{28}{subsubsection.6.8.2.5}%
+\contentsline {subsubsection}{\numberline {6.8.2.6}vx}{28}{subsubsection.6.8.2.6}%
+\contentsline {subsubsection}{\numberline {6.8.2.7}x}{28}{subsubsection.6.8.2.7}%
+\contentsline {subsubsection}{\numberline {6.8.2.8}y}{28}{subsubsection.6.8.2.8}%
+\contentsline {section}{\numberline {6.9}Référence de la structure Liste\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Eclairs}{28}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Description détaillée}{29}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Documentation des champs}{29}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}liste}{29}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}nb}{29}{subsubsection.6.9.2.2}%
+\contentsline {section}{\numberline {6.10}Référence de la structure Projectile}{29}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Description détaillée}{30}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}Documentation des champs}{30}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}active}{30}{subsubsection.6.10.2.1}%
+\contentsline {subsubsection}{\numberline {6.10.2.2}explosion}{30}{subsubsection.6.10.2.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.3}vx}{30}{subsubsection.6.10.2.3}%
+\contentsline {subsubsection}{\numberline {6.10.2.4}vy}{30}{subsubsection.6.10.2.4}%
+\contentsline {subsubsection}{\numberline {6.10.2.5}x}{30}{subsubsection.6.10.2.5}%
+\contentsline {subsubsection}{\numberline {6.10.2.6}y}{30}{subsubsection.6.10.2.6}%
+\contentsline {chapter}{\numberline {7}Documentation des fichiers}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}affichage.h}{31}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Documentation des fonctions}{32}{subsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}affichage\_charger\_ressources()}{32}{subsubsection.7.1.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.2}affichage\_init()}{34}{subsubsection.7.1.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.1.3}affichage\_liberer\_ressources()}{34}{subsubsection.7.1.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.1.4}afficher\_boss()}{35}{subsubsection.7.1.1.4}%
+\contentsline {subsubsection}{\numberline {7.1.1.5}afficher\_bulle()}{36}{subsubsection.7.1.1.5}%
+\contentsline {subsubsection}{\numberline {7.1.1.6}afficher\_decompte()}{36}{subsubsection.7.1.1.6}%
+\contentsline {subsubsection}{\numberline {7.1.1.7}afficher\_defaite()}{38}{subsubsection.7.1.1.7}%
+\contentsline {subsubsection}{\numberline {7.1.1.8}afficher\_hud()}{39}{subsubsection.7.1.1.8}%
+\contentsline {subsubsection}{\numberline {7.1.1.9}afficher\_jeu()}{40}{subsubsection.7.1.1.9}%
+\contentsline {subsubsection}{\numberline {7.1.1.10}afficher\_joueur()}{41}{subsubsection.7.1.1.10}%
+\contentsline {subsubsection}{\numberline {7.1.1.11}afficher\_pause()}{42}{subsubsection.7.1.1.11}%
+\contentsline {subsubsection}{\numberline {7.1.1.12}afficher\_projectile()}{43}{subsubsection.7.1.1.12}%
+\contentsline {subsubsection}{\numberline {7.1.1.13}afficher\_saisie\_pseudo()}{43}{subsubsection.7.1.1.13}%
+\contentsline {subsubsection}{\numberline {7.1.1.14}afficher\_victoire()}{44}{subsubsection.7.1.1.14}%
+\contentsline {subsubsection}{\numberline {7.1.1.15}joueur\_signaler\_tir()}{45}{subsubsection.7.1.1.15}%
+\contentsline {subsection}{\numberline {7.1.2}Documentation des variables}{45}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}fond\_jeu}{45}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}fond\_menu}{45}{subsubsection.7.1.2.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.3}sprite\_bulle\_grande}{45}{subsubsection.7.1.2.3}%
+\contentsline {subsubsection}{\numberline {7.1.2.4}sprite\_bulle\_minuscule}{45}{subsubsection.7.1.2.4}%
+\contentsline {subsubsection}{\numberline {7.1.2.5}sprite\_bulle\_moyenne}{46}{subsubsection.7.1.2.5}%
+\contentsline {subsubsection}{\numberline {7.1.2.6}sprite\_bulle\_petite}{46}{subsubsection.7.1.2.6}%
+\contentsline {section}{\numberline {7.2}affichage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}affichage.h}{46}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Documentation des fonctions}{48}{subsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.1.1}affichage\_charger\_ressources()}{48}{subsubsection.7.3.1.1}%
+\contentsline {subsubsection}{\numberline {7.3.1.2}affichage\_init()}{49}{subsubsection.7.3.1.2}%
+\contentsline {subsubsection}{\numberline {7.3.1.3}affichage\_liberer\_ressources()}{50}{subsubsection.7.3.1.3}%
+\contentsline {subsubsection}{\numberline {7.3.1.4}afficher\_boss()}{50}{subsubsection.7.3.1.4}%
+\contentsline {subsubsection}{\numberline {7.3.1.5}afficher\_bulle()}{51}{subsubsection.7.3.1.5}%
+\contentsline {subsubsection}{\numberline {7.3.1.6}afficher\_decompte()}{52}{subsubsection.7.3.1.6}%
+\contentsline {subsubsection}{\numberline {7.3.1.7}afficher\_defaite()}{52}{subsubsection.7.3.1.7}%
+\contentsline {subsubsection}{\numberline {7.3.1.8}afficher\_ecran\_sauvegarde()}{53}{subsubsection.7.3.1.8}%
+\contentsline {subsubsection}{\numberline {7.3.1.9}afficher\_hud()}{54}{subsubsection.7.3.1.9}%
+\contentsline {subsubsection}{\numberline {7.3.1.10}afficher\_jeu()}{55}{subsubsection.7.3.1.10}%
+\contentsline {subsubsection}{\numberline {7.3.1.11}afficher\_joueur()}{56}{subsubsection.7.3.1.11}%
+\contentsline {subsubsection}{\numberline {7.3.1.12}afficher\_liste\_sauvegardes()}{57}{subsubsection.7.3.1.12}%
+\contentsline {subsubsection}{\numberline {7.3.1.13}afficher\_pause()}{57}{subsubsection.7.3.1.13}%
+\contentsline {subsubsection}{\numberline {7.3.1.14}afficher\_projectile()}{58}{subsubsection.7.3.1.14}%
+\contentsline {subsubsection}{\numberline {7.3.1.15}afficher\_saisie\_pseudo()}{58}{subsubsection.7.3.1.15}%
+\contentsline {subsubsection}{\numberline {7.3.1.16}afficher\_victoire()}{59}{subsubsection.7.3.1.16}%
+\contentsline {subsubsection}{\numberline {7.3.1.17}joueur\_signaler\_tir()}{59}{subsubsection.7.3.1.17}%
+\contentsline {subsection}{\numberline {7.3.2}Documentation des variables}{59}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}fond\_jeu}{59}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}fond\_menu}{60}{subsubsection.7.3.2.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.3}sprite\_bulle\_grande}{60}{subsubsection.7.3.2.3}%
+\contentsline {subsubsection}{\numberline {7.3.2.4}sprite\_bulle\_minuscule}{60}{subsubsection.7.3.2.4}%
+\contentsline {subsubsection}{\numberline {7.3.2.5}sprite\_bulle\_moyenne}{60}{subsubsection.7.3.2.5}%
+\contentsline {subsubsection}{\numberline {7.3.2.6}sprite\_bulle\_petite}{60}{subsubsection.7.3.2.6}%
+\contentsline {section}{\numberline {7.4}affichage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{60}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}alfont.h}{61}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Documentation des macros}{63}{subsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.1.1}ALFONT\_DATE}{63}{subsubsection.7.5.1.1}%
+\contentsline {subsubsection}{\numberline {7.5.1.2}ALFONT\_DATE\_STR}{63}{subsubsection.7.5.1.2}%
+\contentsline {subsubsection}{\numberline {7.5.1.3}ALFONT\_ERROR}{64}{subsubsection.7.5.1.3}%
+\contentsline {subsubsection}{\numberline {7.5.1.4}ALFONT\_MAJOR\_VERSION}{64}{subsubsection.7.5.1.4}%
+\contentsline {subsubsection}{\numberline {7.5.1.5}ALFONT\_MINOR\_VERSION}{64}{subsubsection.7.5.1.5}%
+\contentsline {subsubsection}{\numberline {7.5.1.6}ALFONT\_OK}{64}{subsubsection.7.5.1.6}%
+\contentsline {subsubsection}{\numberline {7.5.1.7}ALFONT\_SUB\_VERSION}{64}{subsubsection.7.5.1.7}%
+\contentsline {subsubsection}{\numberline {7.5.1.8}ALFONT\_VERSION\_STR}{64}{subsubsection.7.5.1.8}%
+\contentsline {subsection}{\numberline {7.5.2}Documentation des définitions de type}{64}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}ALFONT\_FONT}{64}{subsubsection.7.5.2.1}%
+\contentsline {subsection}{\numberline {7.5.3}Documentation des fonctions}{65}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}alfont\_destroy\_font()}{65}{subsubsection.7.5.3.1}%
+\contentsline {subsubsection}{\numberline {7.5.3.2}alfont\_exit()}{65}{subsubsection.7.5.3.2}%
+\contentsline {subsubsection}{\numberline {7.5.3.3}alfont\_get\_available\_fixed\_sizes()}{65}{subsubsection.7.5.3.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.4}alfont\_get\_char\_extra\_spacing()}{65}{subsubsection.7.5.3.4}%
+\contentsline {subsubsection}{\numberline {7.5.3.5}alfont\_get\_font\_height()}{65}{subsubsection.7.5.3.5}%
+\contentsline {subsubsection}{\numberline {7.5.3.6}alfont\_get\_nof\_available\_fixed\_sizes()}{66}{subsubsection.7.5.3.6}%
+\contentsline {subsubsection}{\numberline {7.5.3.7}alfont\_init()}{66}{subsubsection.7.5.3.7}%
+\contentsline {subsubsection}{\numberline {7.5.3.8}alfont\_is\_fixed\_font()}{66}{subsubsection.7.5.3.8}%
+\contentsline {subsubsection}{\numberline {7.5.3.9}alfont\_is\_scalable\_font()}{66}{subsubsection.7.5.3.9}%
+\contentsline {subsubsection}{\numberline {7.5.3.10}alfont\_load\_font()}{66}{subsubsection.7.5.3.10}%
+\contentsline {subsubsection}{\numberline {7.5.3.11}alfont\_load\_font\_from\_mem()}{67}{subsubsection.7.5.3.11}%
+\contentsline {subsubsection}{\numberline {7.5.3.12}alfont\_set\_char\_extra\_spacing()}{67}{subsubsection.7.5.3.12}%
+\contentsline {subsubsection}{\numberline {7.5.3.13}alfont\_set\_font\_size()}{67}{subsubsection.7.5.3.13}%
+\contentsline {subsubsection}{\numberline {7.5.3.14}alfont\_text\_height()}{67}{subsubsection.7.5.3.14}%
+\contentsline {subsubsection}{\numberline {7.5.3.15}alfont\_text\_length()}{67}{subsubsection.7.5.3.15}%
+\contentsline {subsubsection}{\numberline {7.5.3.16}alfont\_text\_mode()}{68}{subsubsection.7.5.3.16}%
+\contentsline {subsubsection}{\numberline {7.5.3.17}alfont\_textout()}{68}{subsubsection.7.5.3.17}%
+\contentsline {subsubsection}{\numberline {7.5.3.18}alfont\_textout\_aa()}{68}{subsubsection.7.5.3.18}%
+\contentsline {subsubsection}{\numberline {7.5.3.19}alfont\_textout\_aa\_ex()}{68}{subsubsection.7.5.3.19}%
+\contentsline {subsubsection}{\numberline {7.5.3.20}alfont\_textout\_centre()}{69}{subsubsection.7.5.3.20}%
+\contentsline {subsubsection}{\numberline {7.5.3.21}alfont\_textout\_centre\_aa()}{69}{subsubsection.7.5.3.21}%
+\contentsline {subsubsection}{\numberline {7.5.3.22}alfont\_textout\_centre\_aa\_ex()}{69}{subsubsection.7.5.3.22}%
+\contentsline {subsubsection}{\numberline {7.5.3.23}alfont\_textout\_centre\_ex()}{70}{subsubsection.7.5.3.23}%
+\contentsline {subsubsection}{\numberline {7.5.3.24}alfont\_textout\_ex()}{70}{subsubsection.7.5.3.24}%
+\contentsline {subsubsection}{\numberline {7.5.3.25}alfont\_textout\_right()}{70}{subsubsection.7.5.3.25}%
+\contentsline {subsubsection}{\numberline {7.5.3.26}alfont\_textout\_right\_aa()}{70}{subsubsection.7.5.3.26}%
+\contentsline {subsubsection}{\numberline {7.5.3.27}alfont\_textout\_right\_aa\_ex()}{70}{subsubsection.7.5.3.27}%
+\contentsline {subsubsection}{\numberline {7.5.3.28}alfont\_textout\_right\_ex()}{71}{subsubsection.7.5.3.28}%
+\contentsline {subsubsection}{\numberline {7.5.3.29}alfont\_textprintf()}{71}{subsubsection.7.5.3.29}%
+\contentsline {subsubsection}{\numberline {7.5.3.30}alfont\_textprintf\_aa()}{71}{subsubsection.7.5.3.30}%
+\contentsline {subsubsection}{\numberline {7.5.3.31}alfont\_textprintf\_aa\_ex()}{71}{subsubsection.7.5.3.31}%
+\contentsline {subsubsection}{\numberline {7.5.3.32}alfont\_textprintf\_centre()}{71}{subsubsection.7.5.3.32}%
+\contentsline {subsubsection}{\numberline {7.5.3.33}alfont\_textprintf\_centre\_aa()}{72}{subsubsection.7.5.3.33}%
+\contentsline {subsubsection}{\numberline {7.5.3.34}alfont\_textprintf\_centre\_aa\_ex()}{72}{subsubsection.7.5.3.34}%
+\contentsline {subsubsection}{\numberline {7.5.3.35}alfont\_textprintf\_centre\_ex()}{72}{subsubsection.7.5.3.35}%
+\contentsline {subsubsection}{\numberline {7.5.3.36}alfont\_textprintf\_ex()}{72}{subsubsection.7.5.3.36}%
+\contentsline {subsubsection}{\numberline {7.5.3.37}alfont\_textprintf\_right()}{73}{subsubsection.7.5.3.37}%
+\contentsline {subsubsection}{\numberline {7.5.3.38}alfont\_textprintf\_right\_aa()}{73}{subsubsection.7.5.3.38}%
+\contentsline {subsubsection}{\numberline {7.5.3.39}alfont\_textprintf\_right\_aa\_ex()}{73}{subsubsection.7.5.3.39}%
+\contentsline {subsubsection}{\numberline {7.5.3.40}alfont\_textprintf\_right\_ex()}{73}{subsubsection.7.5.3.40}%
+\contentsline {section}{\numberline {7.6}alfont.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{74}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}alfont.h}{75}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Documentation des macros}{78}{subsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.1.1}ALFONT\_DATE}{78}{subsubsection.7.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.7.1.2}ALFONT\_DATE\_STR}{78}{subsubsection.7.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.7.1.3}ALFONT\_ERROR}{79}{subsubsection.7.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.7.1.4}ALFONT\_MAJOR\_VERSION}{79}{subsubsection.7.7.1.4}%
+\contentsline {subsubsection}{\numberline {7.7.1.5}ALFONT\_MINOR\_VERSION}{79}{subsubsection.7.7.1.5}%
+\contentsline {subsubsection}{\numberline {7.7.1.6}ALFONT\_OK}{79}{subsubsection.7.7.1.6}%
+\contentsline {subsubsection}{\numberline {7.7.1.7}ALFONT\_SUB\_VERSION}{79}{subsubsection.7.7.1.7}%
+\contentsline {subsubsection}{\numberline {7.7.1.8}ALFONT\_VERSION\_STR}{79}{subsubsection.7.7.1.8}%
+\contentsline {subsection}{\numberline {7.7.2}Documentation des fonctions}{79}{subsection.7.7.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.1}alfont\_destroy\_font()}{79}{subsubsection.7.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.7.2.2}alfont\_exit()}{80}{subsubsection.7.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.3}alfont\_get\_available\_fixed\_sizes()}{80}{subsubsection.7.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.7.2.4}alfont\_get\_char\_extra\_spacing()}{80}{subsubsection.7.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.7.2.5}alfont\_get\_font\_height()}{80}{subsubsection.7.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.7.2.6}alfont\_get\_nof\_available\_fixed\_sizes()}{80}{subsubsection.7.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.7.2.7}alfont\_init()}{80}{subsubsection.7.7.2.7}%
+\contentsline {subsubsection}{\numberline {7.7.2.8}alfont\_is\_fixed\_font()}{80}{subsubsection.7.7.2.8}%
+\contentsline {subsubsection}{\numberline {7.7.2.9}alfont\_is\_scalable\_font()}{80}{subsubsection.7.7.2.9}%
+\contentsline {subsubsection}{\numberline {7.7.2.10}alfont\_load\_font()}{80}{subsubsection.7.7.2.10}%
+\contentsline {subsubsection}{\numberline {7.7.2.11}alfont\_load\_font\_from\_mem()}{81}{subsubsection.7.7.2.11}%
+\contentsline {subsubsection}{\numberline {7.7.2.12}alfont\_set\_char\_extra\_spacing()}{81}{subsubsection.7.7.2.12}%
+\contentsline {subsubsection}{\numberline {7.7.2.13}alfont\_set\_font\_size()}{81}{subsubsection.7.7.2.13}%
+\contentsline {subsubsection}{\numberline {7.7.2.14}alfont\_text\_height()}{81}{subsubsection.7.7.2.14}%
+\contentsline {subsubsection}{\numberline {7.7.2.15}alfont\_text\_length()}{81}{subsubsection.7.7.2.15}%
+\contentsline {subsubsection}{\numberline {7.7.2.16}alfont\_text\_mode()}{81}{subsubsection.7.7.2.16}%
+\contentsline {subsubsection}{\numberline {7.7.2.17}alfont\_textout()}{81}{subsubsection.7.7.2.17}%
+\contentsline {subsubsection}{\numberline {7.7.2.18}alfont\_textout\_aa()}{82}{subsubsection.7.7.2.18}%
+\contentsline {subsubsection}{\numberline {7.7.2.19}alfont\_textout\_aa\_ex()}{82}{subsubsection.7.7.2.19}%
+\contentsline {subsubsection}{\numberline {7.7.2.20}alfont\_textout\_centre()}{82}{subsubsection.7.7.2.20}%
+\contentsline {subsubsection}{\numberline {7.7.2.21}alfont\_textout\_centre\_aa()}{82}{subsubsection.7.7.2.21}%
+\contentsline {subsubsection}{\numberline {7.7.2.22}alfont\_textout\_centre\_aa\_ex()}{82}{subsubsection.7.7.2.22}%
+\contentsline {subsubsection}{\numberline {7.7.2.23}alfont\_textout\_centre\_ex()}{83}{subsubsection.7.7.2.23}%
+\contentsline {subsubsection}{\numberline {7.7.2.24}alfont\_textout\_ex()}{83}{subsubsection.7.7.2.24}%
+\contentsline {subsubsection}{\numberline {7.7.2.25}alfont\_textout\_right()}{83}{subsubsection.7.7.2.25}%
+\contentsline {subsubsection}{\numberline {7.7.2.26}alfont\_textout\_right\_aa()}{83}{subsubsection.7.7.2.26}%
+\contentsline {subsubsection}{\numberline {7.7.2.27}alfont\_textout\_right\_aa\_ex()}{83}{subsubsection.7.7.2.27}%
+\contentsline {subsubsection}{\numberline {7.7.2.28}alfont\_textout\_right\_ex()}{84}{subsubsection.7.7.2.28}%
+\contentsline {subsubsection}{\numberline {7.7.2.29}alfont\_textprintf()}{84}{subsubsection.7.7.2.29}%
+\contentsline {subsubsection}{\numberline {7.7.2.30}alfont\_textprintf\_aa()}{84}{subsubsection.7.7.2.30}%
+\contentsline {subsubsection}{\numberline {7.7.2.31}alfont\_textprintf\_aa\_ex()}{84}{subsubsection.7.7.2.31}%
+\contentsline {subsubsection}{\numberline {7.7.2.32}alfont\_textprintf\_centre()}{84}{subsubsection.7.7.2.32}%
+\contentsline {subsubsection}{\numberline {7.7.2.33}alfont\_textprintf\_centre\_aa()}{85}{subsubsection.7.7.2.33}%
+\contentsline {subsubsection}{\numberline {7.7.2.34}alfont\_textprintf\_centre\_aa\_ex()}{85}{subsubsection.7.7.2.34}%
+\contentsline {subsubsection}{\numberline {7.7.2.35}alfont\_textprintf\_centre\_ex()}{85}{subsubsection.7.7.2.35}%
+\contentsline {subsubsection}{\numberline {7.7.2.36}alfont\_textprintf\_ex()}{85}{subsubsection.7.7.2.36}%
+\contentsline {subsubsection}{\numberline {7.7.2.37}alfont\_textprintf\_right()}{86}{subsubsection.7.7.2.37}%
+\contentsline {subsubsection}{\numberline {7.7.2.38}alfont\_textprintf\_right\_aa()}{86}{subsubsection.7.7.2.38}%
+\contentsline {subsubsection}{\numberline {7.7.2.39}alfont\_textprintf\_right\_aa\_ex()}{86}{subsubsection.7.7.2.39}%
+\contentsline {subsubsection}{\numberline {7.7.2.40}alfont\_textprintf\_right\_ex()}{86}{subsubsection.7.7.2.40}%
+\contentsline {section}{\numberline {7.8}alfont.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{87}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}alfontdll.h}{88}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Documentation des macros}{89}{subsection.7.9.1}%
+\contentsline {subsubsection}{\numberline {7.9.1.1}ALFONT\_DLL\_DECLSPEC}{89}{subsubsection.7.9.1.1}%
+\contentsline {section}{\numberline {7.10}alfontdll.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{89}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}alfontdll.h}{89}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Documentation des macros}{90}{subsection.7.11.1}%
+\contentsline {subsubsection}{\numberline {7.11.1.1}ALFONT\_DLL\_DECLSPEC}{90}{subsubsection.7.11.1.1}%
+\contentsline {section}{\numberline {7.12}alfontdll.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{90}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}eclair.h}{90}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Documentation des macros}{92}{subsection.7.13.1}%
+\contentsline {subsubsection}{\numberline {7.13.1.1}ECLAIR\_DUREE\_VIE}{92}{subsubsection.7.13.1.1}%
+\contentsline {subsubsection}{\numberline {7.13.1.2}ECLAIR\_LARGEUR}{92}{subsubsection.7.13.1.2}%
+\contentsline {subsubsection}{\numberline {7.13.1.3}ECLAIR\_VITESSE}{92}{subsubsection.7.13.1.3}%
+\contentsline {subsubsection}{\numberline {7.13.1.4}MAX\_ECLAIRS}{92}{subsubsection.7.13.1.4}%
+\contentsline {subsection}{\numberline {7.13.2}Documentation des fonctions}{92}{subsection.7.13.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.1}dessiner\_eclairs()}{92}{subsubsection.7.13.2.1}%
+\contentsline {subsubsection}{\numberline {7.13.2.2}eclair\_spawner()}{93}{subsubsection.7.13.2.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.3}eclairs\_collision\_personnage()}{93}{subsubsection.7.13.2.3}%
+\contentsline {subsubsection}{\numberline {7.13.2.4}eclairs\_init()}{94}{subsubsection.7.13.2.4}%
+\contentsline {subsubsection}{\numberline {7.13.2.5}eclairs\_mettre\_a\_jour()}{94}{subsubsection.7.13.2.5}%
+\contentsline {section}{\numberline {7.14}eclair.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{95}{section.7.14}%
+\contentsline {section}{\numberline {7.15}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}eclair.h}{95}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Documentation des macros}{96}{subsection.7.15.1}%
+\contentsline {subsubsection}{\numberline {7.15.1.1}ECLAIR\_DUREE\_VIE}{96}{subsubsection.7.15.1.1}%
+\contentsline {subsubsection}{\numberline {7.15.1.2}ECLAIR\_LARGEUR}{97}{subsubsection.7.15.1.2}%
+\contentsline {subsubsection}{\numberline {7.15.1.3}ECLAIR\_VITESSE}{97}{subsubsection.7.15.1.3}%
+\contentsline {subsubsection}{\numberline {7.15.1.4}MAX\_ECLAIRS}{97}{subsubsection.7.15.1.4}%
+\contentsline {subsection}{\numberline {7.15.2}Documentation des fonctions}{97}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}dessiner\_eclairs()}{97}{subsubsection.7.15.2.1}%
+\contentsline {subsubsection}{\numberline {7.15.2.2}eclair\_spawner()}{97}{subsubsection.7.15.2.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.3}eclairs\_collision\_personnage()}{98}{subsubsection.7.15.2.3}%
+\contentsline {subsubsection}{\numberline {7.15.2.4}eclairs\_init()}{98}{subsubsection.7.15.2.4}%
+\contentsline {subsubsection}{\numberline {7.15.2.5}eclairs\_mettre\_a\_jour()}{98}{subsubsection.7.15.2.5}%
+\contentsline {section}{\numberline {7.16}eclair.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{99}{section.7.16}%
+\contentsline {section}{\numberline {7.17}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entites.h}{99}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Documentation des macros}{101}{subsection.7.17.1}%
+\contentsline {subsubsection}{\numberline {7.17.1.1}DUREE\_ARME\_SPECIALE}{101}{subsubsection.7.17.1.1}%
+\contentsline {subsubsection}{\numberline {7.17.1.2}HAUTEUR\_FENETRE}{101}{subsubsection.7.17.1.2}%
+\contentsline {subsubsection}{\numberline {7.17.1.3}HAUTEUR\_INFO}{101}{subsubsection.7.17.1.3}%
+\contentsline {subsubsection}{\numberline {7.17.1.4}HAUTEUR\_ZONE}{101}{subsubsection.7.17.1.4}%
+\contentsline {subsubsection}{\numberline {7.17.1.5}LARGEUR\_FENETRE}{101}{subsubsection.7.17.1.5}%
+\contentsline {subsubsection}{\numberline {7.17.1.6}MAX\_BONUS}{102}{subsubsection.7.17.1.6}%
+\contentsline {subsubsection}{\numberline {7.17.1.7}MAX\_BULLES}{102}{subsubsection.7.17.1.7}%
+\contentsline {subsubsection}{\numberline {7.17.1.8}MAX\_PROJECTILES}{102}{subsubsection.7.17.1.8}%
+\contentsline {subsubsection}{\numberline {7.17.1.9}NB\_TYPES\_BONUS}{102}{subsubsection.7.17.1.9}%
+\contentsline {subsubsection}{\numberline {7.17.1.10}PSEUDO\_LEN}{102}{subsubsection.7.17.1.10}%
+\contentsline {subsection}{\numberline {7.17.2}Documentation du type de l\textquotesingle {}énumération}{102}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}TailleBulle}{102}{subsubsection.7.17.2.1}%
+\contentsline {subsubsection}{\numberline {7.17.2.2}TypeArme}{103}{subsubsection.7.17.2.2}%
+\contentsline {subsection}{\numberline {7.17.3}Documentation des fonctions}{103}{subsection.7.17.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.1}rayon\_bulle()}{103}{subsubsection.7.17.3.1}%
+\contentsline {section}{\numberline {7.18}entites.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{103}{section.7.18}%
+\contentsline {section}{\numberline {7.19}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entites.h}{105}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Documentation des macros}{106}{subsection.7.19.1}%
+\contentsline {subsubsection}{\numberline {7.19.1.1}DUREE\_ARME\_SPECIALE}{106}{subsubsection.7.19.1.1}%
+\contentsline {subsubsection}{\numberline {7.19.1.2}HAUTEUR\_FENETRE}{107}{subsubsection.7.19.1.2}%
+\contentsline {subsubsection}{\numberline {7.19.1.3}HAUTEUR\_INFO}{107}{subsubsection.7.19.1.3}%
+\contentsline {subsubsection}{\numberline {7.19.1.4}HAUTEUR\_ZONE}{107}{subsubsection.7.19.1.4}%
+\contentsline {subsubsection}{\numberline {7.19.1.5}LARGEUR\_FENETRE}{107}{subsubsection.7.19.1.5}%
+\contentsline {subsubsection}{\numberline {7.19.1.6}MAX\_BONUS}{107}{subsubsection.7.19.1.6}%
+\contentsline {subsubsection}{\numberline {7.19.1.7}MAX\_BULLES}{107}{subsubsection.7.19.1.7}%
+\contentsline {subsubsection}{\numberline {7.19.1.8}MAX\_PROJECTILES}{107}{subsubsection.7.19.1.8}%
+\contentsline {subsubsection}{\numberline {7.19.1.9}NB\_TYPES\_BONUS}{107}{subsubsection.7.19.1.9}%
+\contentsline {subsubsection}{\numberline {7.19.1.10}PSEUDO\_LEN}{108}{subsubsection.7.19.1.10}%
+\contentsline {subsection}{\numberline {7.19.2}Documentation du type de l\textquotesingle {}énumération}{108}{subsection.7.19.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.1}TailleBulle}{108}{subsubsection.7.19.2.1}%
+\contentsline {subsubsection}{\numberline {7.19.2.2}TypeArme}{108}{subsubsection.7.19.2.2}%
+\contentsline {subsection}{\numberline {7.19.3}Documentation des fonctions}{109}{subsection.7.19.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.1}rayon\_bulle()}{109}{subsubsection.7.19.3.1}%
+\contentsline {section}{\numberline {7.20}entites.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{109}{section.7.20}%
+\contentsline {section}{\numberline {7.21}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entrees.h}{110}{section.7.21}%
+\contentsline {subsection}{\numberline {7.21.1}Documentation des fonctions}{111}{subsection.7.21.1}%
+\contentsline {subsubsection}{\numberline {7.21.1.1}entrees\_lire()}{111}{subsubsection.7.21.1.1}%
+\contentsline {section}{\numberline {7.22}entrees.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{111}{section.7.22}%
+\contentsline {section}{\numberline {7.23}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entrees.h}{112}{section.7.23}%
+\contentsline {subsection}{\numberline {7.23.1}Documentation des fonctions}{112}{subsection.7.23.1}%
+\contentsline {subsubsection}{\numberline {7.23.1.1}entrees\_lire()}{112}{subsubsection.7.23.1.1}%
+\contentsline {section}{\numberline {7.24}entrees.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{113}{section.7.24}%
+\contentsline {section}{\numberline {7.25}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}jeu.h}{113}{section.7.25}%
+\contentsline {subsection}{\numberline {7.25.1}Documentation des fonctions}{114}{subsection.7.25.1}%
+\contentsline {subsubsection}{\numberline {7.25.1.1}boss\_deplacer()}{114}{subsubsection.7.25.1.1}%
+\contentsline {subsubsection}{\numberline {7.25.1.2}bulle\_deplacer()}{114}{subsubsection.7.25.1.2}%
+\contentsline {subsubsection}{\numberline {7.25.1.3}bulle\_diviser()}{115}{subsubsection.7.25.1.3}%
+\contentsline {subsubsection}{\numberline {7.25.1.4}jeu\_init\_niveau()}{115}{subsubsection.7.25.1.4}%
+\contentsline {subsubsection}{\numberline {7.25.1.5}jeu\_mettre\_a\_jour()}{117}{subsubsection.7.25.1.5}%
+\contentsline {subsubsection}{\numberline {7.25.1.6}jeu\_niveau\_gagne()}{119}{subsubsection.7.25.1.6}%
+\contentsline {subsubsection}{\numberline {7.25.1.7}jeu\_niveau\_perdu()}{120}{subsubsection.7.25.1.7}%
+\contentsline {subsubsection}{\numberline {7.25.1.8}jeu\_verifier\_collisions()}{120}{subsubsection.7.25.1.8}%
+\contentsline {subsubsection}{\numberline {7.25.1.9}joueur\_tirer()}{121}{subsubsection.7.25.1.9}%
+\contentsline {subsubsection}{\numberline {7.25.1.10}verifier\_collision\_cercle\_rect()}{123}{subsubsection.7.25.1.10}%
+\contentsline {section}{\numberline {7.26}jeu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{123}{section.7.26}%
+\contentsline {section}{\numberline {7.27}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}jeu.h}{124}{section.7.27}%
+\contentsline {subsection}{\numberline {7.27.1}Documentation des macros}{125}{subsection.7.27.1}%
+\contentsline {subsubsection}{\numberline {7.27.1.1}DUREE\_EXPLOSION}{125}{subsubsection.7.27.1.1}%
+\contentsline {subsection}{\numberline {7.27.2}Documentation des fonctions}{125}{subsection.7.27.2}%
+\contentsline {subsubsection}{\numberline {7.27.2.1}boss\_deplacer()}{125}{subsubsection.7.27.2.1}%
+\contentsline {subsubsection}{\numberline {7.27.2.2}bulle\_deplacer()}{126}{subsubsection.7.27.2.2}%
+\contentsline {subsubsection}{\numberline {7.27.2.3}bulle\_diviser()}{126}{subsubsection.7.27.2.3}%
+\contentsline {subsubsection}{\numberline {7.27.2.4}jeu\_init\_niveau()}{127}{subsubsection.7.27.2.4}%
+\contentsline {subsubsection}{\numberline {7.27.2.5}jeu\_mettre\_a\_jour()}{128}{subsubsection.7.27.2.5}%
+\contentsline {subsubsection}{\numberline {7.27.2.6}jeu\_niveau\_gagne()}{129}{subsubsection.7.27.2.6}%
+\contentsline {subsubsection}{\numberline {7.27.2.7}jeu\_niveau\_perdu()}{130}{subsubsection.7.27.2.7}%
+\contentsline {subsubsection}{\numberline {7.27.2.8}jeu\_verifier\_collisions()}{130}{subsubsection.7.27.2.8}%
+\contentsline {subsubsection}{\numberline {7.27.2.9}joueur\_tirer()}{131}{subsubsection.7.27.2.9}%
+\contentsline {subsubsection}{\numberline {7.27.2.10}verifier\_collision\_cercle\_rect()}{132}{subsubsection.7.27.2.10}%
+\contentsline {section}{\numberline {7.28}jeu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{132}{section.7.28}%
+\contentsline {section}{\numberline {7.29}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.h}{133}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Documentation des macros}{134}{subsection.7.29.1}%
+\contentsline {subsubsection}{\numberline {7.29.1.1}NB\_ELEMENTS\_MENU}{134}{subsubsection.7.29.1.1}%
+\contentsline {subsection}{\numberline {7.29.2}Documentation du type de l\textquotesingle {}énumération}{135}{subsection.7.29.2}%
+\contentsline {subsubsection}{\numberline {7.29.2.1}ElementMenu}{135}{subsubsection.7.29.2.1}%
+\contentsline {subsection}{\numberline {7.29.3}Documentation des fonctions}{135}{subsection.7.29.3}%
+\contentsline {subsubsection}{\numberline {7.29.3.1}afficher\_menu()}{135}{subsubsection.7.29.3.1}%
+\contentsline {subsubsection}{\numberline {7.29.3.2}afficher\_regles()}{137}{subsubsection.7.29.3.2}%
+\contentsline {subsubsection}{\numberline {7.29.3.3}menu\_init()}{139}{subsubsection.7.29.3.3}%
+\contentsline {subsubsection}{\numberline {7.29.3.4}menu\_mettre\_a\_jour()}{140}{subsubsection.7.29.3.4}%
+\contentsline {subsubsection}{\numberline {7.29.3.5}menu\_saisir\_pseudo()}{141}{subsubsection.7.29.3.5}%
+\contentsline {section}{\numberline {7.30}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{141}{section.7.30}%
+\contentsline {section}{\numberline {7.31}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.h}{142}{section.7.31}%
+\contentsline {subsection}{\numberline {7.31.1}Documentation des macros}{144}{subsection.7.31.1}%
+\contentsline {subsubsection}{\numberline {7.31.1.1}NB\_ELEMENTS\_MENU}{144}{subsubsection.7.31.1.1}%
+\contentsline {subsection}{\numberline {7.31.2}Documentation du type de l\textquotesingle {}énumération}{144}{subsection.7.31.2}%
+\contentsline {subsubsection}{\numberline {7.31.2.1}ElementMenu}{144}{subsubsection.7.31.2.1}%
+\contentsline {subsection}{\numberline {7.31.3}Documentation des fonctions}{144}{subsection.7.31.3}%
+\contentsline {subsubsection}{\numberline {7.31.3.1}afficher\_menu()}{144}{subsubsection.7.31.3.1}%
+\contentsline {subsubsection}{\numberline {7.31.3.2}afficher\_regles()}{146}{subsubsection.7.31.3.2}%
+\contentsline {subsubsection}{\numberline {7.31.3.3}menu\_init()}{147}{subsubsection.7.31.3.3}%
+\contentsline {subsubsection}{\numberline {7.31.3.4}menu\_mettre\_a\_jour()}{147}{subsubsection.7.31.3.4}%
+\contentsline {subsubsection}{\numberline {7.31.3.5}menu\_saisir\_pseudo()}{148}{subsubsection.7.31.3.5}%
+\contentsline {section}{\numberline {7.32}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{148}{section.7.32}%
+\contentsline {section}{\numberline {7.33}Référence du fichier header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sauvegarde.h}{149}{section.7.33}%
+\contentsline {subsection}{\numberline {7.33.1}Documentation des macros}{150}{subsection.7.33.1}%
+\contentsline {subsubsection}{\numberline {7.33.1.1}FICHIER\_SAUVEGARDE}{150}{subsubsection.7.33.1.1}%
+\contentsline {subsection}{\numberline {7.33.2}Documentation des fonctions}{150}{subsection.7.33.2}%
+\contentsline {subsubsection}{\numberline {7.33.2.1}charger\_partie()}{150}{subsubsection.7.33.2.1}%
+\contentsline {subsubsection}{\numberline {7.33.2.2}lister\_sauvegardes()}{150}{subsubsection.7.33.2.2}%
+\contentsline {subsubsection}{\numberline {7.33.2.3}sauvegarder\_partie()}{150}{subsubsection.7.33.2.3}%
+\contentsline {section}{\numberline {7.34}sauvegarde.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{150}{section.7.34}%
+\contentsline {section}{\numberline {7.35}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sauvegarde.h}{151}{section.7.35}%
+\contentsline {subsection}{\numberline {7.35.1}Documentation des macros}{152}{subsection.7.35.1}%
+\contentsline {subsubsection}{\numberline {7.35.1.1}FICHIER\_SAUVEGARDE}{152}{subsubsection.7.35.1.1}%
+\contentsline {subsection}{\numberline {7.35.2}Documentation des fonctions}{152}{subsection.7.35.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.1}sauvegarde\_ecrire()}{152}{subsubsection.7.35.2.1}%
+\contentsline {subsubsection}{\numberline {7.35.2.2}sauvegarde\_existe()}{153}{subsubsection.7.35.2.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.3}sauvegarde\_lire()}{153}{subsubsection.7.35.2.3}%
+\contentsline {subsubsection}{\numberline {7.35.2.4}sauvegarde\_lister()}{154}{subsubsection.7.35.2.4}%
+\contentsline {section}{\numberline {7.36}sauvegarde.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{155}{section.7.36}%
+\contentsline {section}{\numberline {7.37}Référence du fichier README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{155}{section.7.37}%
+\contentsline {section}{\numberline {7.38}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}affichage.c}{155}{section.7.38}%
+\contentsline {subsection}{\numberline {7.38.1}Documentation des fonctions}{157}{subsection.7.38.1}%
+\contentsline {subsubsection}{\numberline {7.38.1.1}affichage\_charger\_ressources()}{157}{subsubsection.7.38.1.1}%
+\contentsline {subsubsection}{\numberline {7.38.1.2}affichage\_init()}{158}{subsubsection.7.38.1.2}%
+\contentsline {subsubsection}{\numberline {7.38.1.3}affichage\_liberer\_ressources()}{159}{subsubsection.7.38.1.3}%
+\contentsline {subsubsection}{\numberline {7.38.1.4}afficher\_boss()}{159}{subsubsection.7.38.1.4}%
+\contentsline {subsubsection}{\numberline {7.38.1.5}afficher\_bulle()}{160}{subsubsection.7.38.1.5}%
+\contentsline {subsubsection}{\numberline {7.38.1.6}afficher\_decompte()}{161}{subsubsection.7.38.1.6}%
+\contentsline {subsubsection}{\numberline {7.38.1.7}afficher\_defaite()}{163}{subsubsection.7.38.1.7}%
+\contentsline {subsubsection}{\numberline {7.38.1.8}afficher\_ecran\_sauvegarde()}{163}{subsubsection.7.38.1.8}%
+\contentsline {subsubsection}{\numberline {7.38.1.9}afficher\_hud()}{164}{subsubsection.7.38.1.9}%
+\contentsline {subsubsection}{\numberline {7.38.1.10}afficher\_jeu()}{166}{subsubsection.7.38.1.10}%
+\contentsline {subsubsection}{\numberline {7.38.1.11}afficher\_joueur()}{167}{subsubsection.7.38.1.11}%
+\contentsline {subsubsection}{\numberline {7.38.1.12}afficher\_liste\_sauvegardes()}{168}{subsubsection.7.38.1.12}%
+\contentsline {subsubsection}{\numberline {7.38.1.13}afficher\_pause()}{169}{subsubsection.7.38.1.13}%
+\contentsline {subsubsection}{\numberline {7.38.1.14}afficher\_projectile()}{170}{subsubsection.7.38.1.14}%
+\contentsline {subsubsection}{\numberline {7.38.1.15}afficher\_saisie\_pseudo()}{170}{subsubsection.7.38.1.15}%
+\contentsline {subsubsection}{\numberline {7.38.1.16}afficher\_victoire()}{171}{subsubsection.7.38.1.16}%
+\contentsline {subsubsection}{\numberline {7.38.1.17}appliquer\_masque()}{172}{subsubsection.7.38.1.17}%
+\contentsline {subsubsection}{\numberline {7.38.1.18}joueur\_signaler\_tir()}{172}{subsubsection.7.38.1.18}%
+\contentsline {subsection}{\numberline {7.38.2}Documentation des variables}{172}{subsection.7.38.2}%
+\contentsline {subsubsection}{\numberline {7.38.2.1}anim\_boss}{172}{subsubsection.7.38.2.1}%
+\contentsline {subsubsection}{\numberline {7.38.2.2}compteur\_anim}{173}{subsubsection.7.38.2.2}%
+\contentsline {subsubsection}{\numberline {7.38.2.3}duree\_tir}{173}{subsubsection.7.38.2.3}%
+\contentsline {subsubsection}{\numberline {7.38.2.4}fond\_jeu}{173}{subsubsection.7.38.2.4}%
+\contentsline {subsubsection}{\numberline {7.38.2.5}fond\_menu}{173}{subsubsection.7.38.2.5}%
+\contentsline {subsubsection}{\numberline {7.38.2.6}sprite\_bonus\_explosion}{173}{subsubsection.7.38.2.6}%
+\contentsline {subsubsection}{\numberline {7.38.2.7}sprite\_bonus\_rapide}{173}{subsubsection.7.38.2.7}%
+\contentsline {subsubsection}{\numberline {7.38.2.8}sprite\_bonus\_triple}{173}{subsubsection.7.38.2.8}%
+\contentsline {subsubsection}{\numberline {7.38.2.9}sprite\_boss}{173}{subsubsection.7.38.2.9}%
+\contentsline {subsubsection}{\numberline {7.38.2.10}sprite\_bulle\_grande}{174}{subsubsection.7.38.2.10}%
+\contentsline {subsubsection}{\numberline {7.38.2.11}sprite\_bulle\_minuscule}{174}{subsubsection.7.38.2.11}%
+\contentsline {subsubsection}{\numberline {7.38.2.12}sprite\_bulle\_moyenne}{174}{subsubsection.7.38.2.12}%
+\contentsline {subsubsection}{\numberline {7.38.2.13}sprite\_bulle\_petite}{174}{subsubsection.7.38.2.13}%
+\contentsline {subsubsection}{\numberline {7.38.2.14}sprite\_idle}{174}{subsubsection.7.38.2.14}%
+\contentsline {subsubsection}{\numberline {7.38.2.15}sprite\_marche\_d1}{174}{subsubsection.7.38.2.15}%
+\contentsline {subsubsection}{\numberline {7.38.2.16}sprite\_marche\_d2}{174}{subsubsection.7.38.2.16}%
+\contentsline {subsubsection}{\numberline {7.38.2.17}sprite\_marche\_g1}{174}{subsubsection.7.38.2.17}%
+\contentsline {subsubsection}{\numberline {7.38.2.18}sprite\_marche\_g2}{175}{subsubsection.7.38.2.18}%
+\contentsline {subsubsection}{\numberline {7.38.2.19}sprite\_tir}{175}{subsubsection.7.38.2.19}%
+\contentsline {subsubsection}{\numberline {7.38.2.20}timer\_anim\_boss}{175}{subsubsection.7.38.2.20}%
+\contentsline {section}{\numberline {7.39}affichage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{175}{section.7.39}%
+\contentsline {section}{\numberline {7.40}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmake-\/build-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.2.2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Compiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CCompiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id.c}{183}{section.7.40}%
+\contentsline {subsection}{\numberline {7.40.1}Documentation des macros}{184}{subsection.7.40.1}%
+\contentsline {subsubsection}{\numberline {7.40.1.1}\_\_has\_include}{184}{subsubsection.7.40.1.1}%
+\contentsline {subsubsection}{\numberline {7.40.1.2}ARCHITECTURE\_ID}{184}{subsubsection.7.40.1.2}%
+\contentsline {subsubsection}{\numberline {7.40.1.3}C\_STD\_11}{184}{subsubsection.7.40.1.3}%
+\contentsline {subsubsection}{\numberline {7.40.1.4}C\_STD\_17}{184}{subsubsection.7.40.1.4}%
+\contentsline {subsubsection}{\numberline {7.40.1.5}C\_STD\_23}{184}{subsubsection.7.40.1.5}%
+\contentsline {subsubsection}{\numberline {7.40.1.6}C\_STD\_99}{184}{subsubsection.7.40.1.6}%
+\contentsline {subsubsection}{\numberline {7.40.1.7}C\_VERSION}{184}{subsubsection.7.40.1.7}%
+\contentsline {subsubsection}{\numberline {7.40.1.8}COMPILER\_ID}{185}{subsubsection.7.40.1.8}%
+\contentsline {subsubsection}{\numberline {7.40.1.9}DEC}{185}{subsubsection.7.40.1.9}%
+\contentsline {subsubsection}{\numberline {7.40.1.10}HEX}{185}{subsubsection.7.40.1.10}%
+\contentsline {subsubsection}{\numberline {7.40.1.11}PLATFORM\_ID}{185}{subsubsection.7.40.1.11}%
+\contentsline {subsubsection}{\numberline {7.40.1.12}STRINGIFY}{186}{subsubsection.7.40.1.12}%
+\contentsline {subsubsection}{\numberline {7.40.1.13}STRINGIFY\_HELPER}{186}{subsubsection.7.40.1.13}%
+\contentsline {subsection}{\numberline {7.40.2}Documentation des fonctions}{186}{subsection.7.40.2}%
+\contentsline {subsubsection}{\numberline {7.40.2.1}main()}{186}{subsubsection.7.40.2.1}%
+\contentsline {subsection}{\numberline {7.40.3}Documentation des variables}{186}{subsection.7.40.3}%
+\contentsline {subsubsection}{\numberline {7.40.3.1}info\_arch}{186}{subsubsection.7.40.3.1}%
+\contentsline {subsubsection}{\numberline {7.40.3.2}info\_compiler}{187}{subsubsection.7.40.3.2}%
+\contentsline {subsubsection}{\numberline {7.40.3.3}info\_language\_extensions\_default}{187}{subsubsection.7.40.3.3}%
+\contentsline {subsubsection}{\numberline {7.40.3.4}info\_language\_standard\_default}{187}{subsubsection.7.40.3.4}%
+\contentsline {subsubsection}{\numberline {7.40.3.5}info\_platform}{187}{subsubsection.7.40.3.5}%
+\contentsline {section}{\numberline {7.41}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CCompiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{187}{section.7.41}%
+\contentsline {section}{\numberline {7.42}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}eclair.c}{198}{section.7.42}%
+\contentsline {subsection}{\numberline {7.42.1}Documentation des fonctions}{199}{subsection.7.42.1}%
+\contentsline {subsubsection}{\numberline {7.42.1.1}dessiner\_eclairs()}{199}{subsubsection.7.42.1.1}%
+\contentsline {subsubsection}{\numberline {7.42.1.2}eclair\_spawner()}{200}{subsubsection.7.42.1.2}%
+\contentsline {subsubsection}{\numberline {7.42.1.3}eclairs\_collision\_personnage()}{200}{subsubsection.7.42.1.3}%
+\contentsline {subsubsection}{\numberline {7.42.1.4}eclairs\_init()}{201}{subsubsection.7.42.1.4}%
+\contentsline {subsubsection}{\numberline {7.42.1.5}eclairs\_mettre\_a\_jour()}{202}{subsubsection.7.42.1.5}%
+\contentsline {section}{\numberline {7.43}eclair.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{202}{section.7.43}%
+\contentsline {section}{\numberline {7.44}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entrees.c}{203}{section.7.44}%
+\contentsline {subsection}{\numberline {7.44.1}Documentation des fonctions}{204}{subsection.7.44.1}%
+\contentsline {subsubsection}{\numberline {7.44.1.1}entrees\_lire()}{204}{subsubsection.7.44.1.1}%
+\contentsline {section}{\numberline {7.45}entrees.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{204}{section.7.45}%
+\contentsline {section}{\numberline {7.46}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}jeu.c}{204}{section.7.46}%
+\contentsline {subsection}{\numberline {7.46.1}Documentation des fonctions}{205}{subsection.7.46.1}%
+\contentsline {subsubsection}{\numberline {7.46.1.1}boss\_deplacer()}{205}{subsubsection.7.46.1.1}%
+\contentsline {subsubsection}{\numberline {7.46.1.2}bulle\_deplacer()}{206}{subsubsection.7.46.1.2}%
+\contentsline {subsubsection}{\numberline {7.46.1.3}bulle\_diviser()}{207}{subsubsection.7.46.1.3}%
+\contentsline {subsubsection}{\numberline {7.46.1.4}jeu\_init\_niveau()}{208}{subsubsection.7.46.1.4}%
+\contentsline {subsubsection}{\numberline {7.46.1.5}jeu\_mettre\_a\_jour()}{209}{subsubsection.7.46.1.5}%
+\contentsline {subsubsection}{\numberline {7.46.1.6}jeu\_niveau\_gagne()}{211}{subsubsection.7.46.1.6}%
+\contentsline {subsubsection}{\numberline {7.46.1.7}jeu\_niveau\_perdu()}{212}{subsubsection.7.46.1.7}%
+\contentsline {subsubsection}{\numberline {7.46.1.8}jeu\_verifier\_collisions()}{212}{subsubsection.7.46.1.8}%
+\contentsline {subsubsection}{\numberline {7.46.1.9}joueur\_tirer()}{214}{subsubsection.7.46.1.9}%
+\contentsline {subsubsection}{\numberline {7.46.1.10}rayon\_bulle()}{215}{subsubsection.7.46.1.10}%
+\contentsline {subsubsection}{\numberline {7.46.1.11}verifier\_collision\_cercle\_rect()}{216}{subsubsection.7.46.1.11}%
+\contentsline {section}{\numberline {7.47}jeu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{216}{section.7.47}%
+\contentsline {section}{\numberline {7.48}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.c}{221}{section.7.48}%
+\contentsline {subsection}{\numberline {7.48.1}Documentation des macros}{223}{subsection.7.48.1}%
+\contentsline {subsubsection}{\numberline {7.48.1.1}NOGDI}{223}{subsubsection.7.48.1.1}%
+\contentsline {subsubsection}{\numberline {7.48.1.2}WIN32\_LEAN\_AND\_MEAN}{223}{subsubsection.7.48.1.2}%
+\contentsline {subsection}{\numberline {7.48.2}Documentation du type de l\textquotesingle {}énumération}{223}{subsection.7.48.2}%
+\contentsline {subsubsection}{\numberline {7.48.2.1}EtatApplication}{223}{subsubsection.7.48.2.1}%
+\contentsline {subsection}{\numberline {7.48.3}Documentation des fonctions}{224}{subsection.7.48.3}%
+\contentsline {subsubsection}{\numberline {7.48.3.1}compteur()}{224}{subsubsection.7.48.3.1}%
+\contentsline {subsubsection}{\numberline {7.48.3.2}lister\_sauvegardes()}{224}{subsubsection.7.48.3.2}%
+\contentsline {subsubsection}{\numberline {7.48.3.3}main()}{224}{subsubsection.7.48.3.3}%
+\contentsline {subsection}{\numberline {7.48.4}Documentation des variables}{228}{subsection.7.48.4}%
+\contentsline {subsubsection}{\numberline {7.48.4.1}tics}{228}{subsubsection.7.48.4.1}%
+\contentsline {section}{\numberline {7.49}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{229}{section.7.49}%
+\contentsline {section}{\numberline {7.50}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.c}{232}{section.7.50}%
+\contentsline {subsection}{\numberline {7.50.1}Documentation des fonctions}{233}{subsection.7.50.1}%
+\contentsline {subsubsection}{\numberline {7.50.1.1}afficher\_menu()}{233}{subsubsection.7.50.1.1}%
+\contentsline {subsubsection}{\numberline {7.50.1.2}afficher\_regles()}{235}{subsubsection.7.50.1.2}%
+\contentsline {subsubsection}{\numberline {7.50.1.3}menu\_init()}{237}{subsubsection.7.50.1.3}%
+\contentsline {subsubsection}{\numberline {7.50.1.4}menu\_mettre\_a\_jour()}{238}{subsubsection.7.50.1.4}%
+\contentsline {subsubsection}{\numberline {7.50.1.5}menu\_saisir\_pseudo()}{239}{subsubsection.7.50.1.5}%
+\contentsline {subsection}{\numberline {7.50.2}Documentation des variables}{239}{subsection.7.50.2}%
+\contentsline {subsubsection}{\numberline {7.50.2.1}compteur\_anim}{239}{subsubsection.7.50.2.1}%
+\contentsline {subsubsection}{\numberline {7.50.2.2}LIBELLES\_MENU}{240}{subsubsection.7.50.2.2}%
+\contentsline {subsubsection}{\numberline {7.50.2.3}police\_menu}{240}{subsubsection.7.50.2.3}%
+\contentsline {subsubsection}{\numberline {7.50.2.4}police\_petite}{240}{subsubsection.7.50.2.4}%
+\contentsline {subsubsection}{\numberline {7.50.2.5}police\_regles}{240}{subsubsection.7.50.2.5}%
+\contentsline {subsubsection}{\numberline {7.50.2.6}police\_titre}{240}{subsubsection.7.50.2.6}%
+\contentsline {section}{\numberline {7.51}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{241}{section.7.51}%
+\contentsline {section}{\numberline {7.52}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sauvegarde.c}{244}{section.7.52}%
+\contentsline {subsection}{\numberline {7.52.1}Documentation des macros}{245}{subsection.7.52.1}%
+\contentsline {subsubsection}{\numberline {7.52.1.1}NOGDI}{245}{subsubsection.7.52.1.1}%
+\contentsline {subsubsection}{\numberline {7.52.1.2}WIN32\_LEAN\_AND\_MEAN}{246}{subsubsection.7.52.1.2}%
+\contentsline {subsection}{\numberline {7.52.2}Documentation des fonctions}{246}{subsection.7.52.2}%
+\contentsline {subsubsection}{\numberline {7.52.2.1}nom\_fichier()}{246}{subsubsection.7.52.2.1}%
+\contentsline {subsubsection}{\numberline {7.52.2.2}sauvegarde\_ecrire()}{246}{subsubsection.7.52.2.2}%
+\contentsline {subsubsection}{\numberline {7.52.2.3}sauvegarde\_existe()}{247}{subsubsection.7.52.2.3}%
+\contentsline {subsubsection}{\numberline {7.52.2.4}sauvegarde\_lire()}{248}{subsubsection.7.52.2.4}%
+\contentsline {subsubsection}{\numberline {7.52.2.5}sauvegarde\_lister()}{248}{subsubsection.7.52.2.5}%
+\contentsline {section}{\numberline {7.53}sauvegarde.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{249}{section.7.53}%
+\contentsline {chapter}{Index}{251}{section*.238}%

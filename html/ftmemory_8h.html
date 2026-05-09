@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/internal/ftmemory.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftmemory_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftmemory.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftmemory.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2include_2freetype_2internal_2ftmemory_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="ftmemory_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4872f33dd47079d78f0d7dcd8094b49d" id="r_a4872f33dd47079d78f0d7dcd8094b49d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>(expression)</td></tr>
+<tr class="memitem:ab20a309fed86cfe8d572652a6cf374bb" id="r_ab20a309fed86cfe8d572652a6cf374bb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab20a309fed86cfe8d572652a6cf374bb">FT_MEM_SET</a>(dest,  byte,  count)</td></tr>
+<tr class="memitem:ac9a76b31de04884a7c30d4d7eaa87ea4" id="r_ac9a76b31de04884a7c30d4d7eaa87ea4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac9a76b31de04884a7c30d4d7eaa87ea4">FT_MEM_COPY</a>(dest,  source,  count)</td></tr>
+<tr class="memitem:adf76b150472edbb56f6ebe429ad47424" id="r_adf76b150472edbb56f6ebe429ad47424"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adf76b150472edbb56f6ebe429ad47424">FT_MEM_MOVE</a>(dest,  source,  count)</td></tr>
+<tr class="memitem:ad04dbb2871d7219281966386fffaf909" id="r_ad04dbb2871d7219281966386fffaf909"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad04dbb2871d7219281966386fffaf909">FT_MEM_ZERO</a>(dest,  count)</td></tr>
+<tr class="memitem:a88db9f3d12c144b9f450c80ec62dc4fc" id="r_a88db9f3d12c144b9f450c80ec62dc4fc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a88db9f3d12c144b9f450c80ec62dc4fc">FT_ZERO</a>(p)</td></tr>
+<tr class="memitem:a8480838bdbda854b11620e191148cd80" id="r_a8480838bdbda854b11620e191148cd80"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a>(_pointer_,  _size_)</td></tr>
+<tr class="memitem:a2473e756b7623852cdcb5ebe8d4a3f78" id="r_a2473e756b7623852cdcb5ebe8d4a3f78"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2473e756b7623852cdcb5ebe8d4a3f78">FT_MEM_FREE</a>(_pointer_)</td></tr>
+<tr class="memitem:a2a153731a82722c4576cd06431b84c66" id="r_a2a153731a82722c4576cd06431b84c66"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2a153731a82722c4576cd06431b84c66">FT_MEM_REALLOC</a>(_pointer_,  _current_,  _size_)</td></tr>
+<tr class="memitem:a40603d65c270f02317b7427c92955b8c" id="r_a40603d65c270f02317b7427c92955b8c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a40603d65c270f02317b7427c92955b8c">FT_MEM_NEW</a>(_pointer_)</td></tr>
+<tr class="memitem:a44400f29fc48ca3be836922b2066e57f" id="r_a44400f29fc48ca3be836922b2066e57f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a44400f29fc48ca3be836922b2066e57f">FT_MEM_NEW_ARRAY</a>(_pointer_,  _count_)</td></tr>
+<tr class="memitem:a7973916b02633ff996f8cbc6adf13cf9" id="r_a7973916b02633ff996f8cbc6adf13cf9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7973916b02633ff996f8cbc6adf13cf9">FT_MEM_RENEW_ARRAY</a>(_pointer_,  _old_,  _new_)</td></tr>
+<tr class="memitem:a3146628846eecb9266f12df411a951a9" id="r_a3146628846eecb9266f12df411a951a9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3146628846eecb9266f12df411a951a9">FT_MEM_ALLOC_ARRAY</a>(_pointer_,  _count_,  _type_)</td></tr>
+<tr class="memitem:a2e1b4862665e37c1b26d76771b97aa75" id="r_a2e1b4862665e37c1b26d76771b97aa75"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2e1b4862665e37c1b26d76771b97aa75">FT_MEM_REALLOC_ARRAY</a>(_pointer_,  _old_,  _new_,  _type_)</td></tr>
+<tr class="memitem:af391c9ae97fb861eaf83113fa1247726" id="r_af391c9ae97fb861eaf83113fa1247726"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af391c9ae97fb861eaf83113fa1247726">FT_ALLOC</a>(_pointer_,  _size_)</td></tr>
+<tr class="memitem:a686a936e1de7091d69b17008ed5a4816" id="r_a686a936e1de7091d69b17008ed5a4816"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a686a936e1de7091d69b17008ed5a4816">FT_REALLOC</a>(_pointer_,  _current_,  _size_)</td></tr>
+<tr class="memitem:a9e0db36daec394986dd9a92840c6363c" id="r_a9e0db36daec394986dd9a92840c6363c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9e0db36daec394986dd9a92840c6363c">FT_FREE</a>(_pointer_)</td></tr>
+<tr class="memitem:a81412b82bce20495f0dec874d9c263c4" id="r_a81412b82bce20495f0dec874d9c263c4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a81412b82bce20495f0dec874d9c263c4">FT_NEW</a>(_pointer_)</td></tr>
+<tr class="memitem:aeea909e37efd7b21e8c7cbb5b847c5f3" id="r_aeea909e37efd7b21e8c7cbb5b847c5f3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aeea909e37efd7b21e8c7cbb5b847c5f3">FT_NEW_ARRAY</a>(_pointer_,  _count_)</td></tr>
+<tr class="memitem:a97892ff5fb123ad59de0f3a61a742600" id="r_a97892ff5fb123ad59de0f3a61a742600"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a97892ff5fb123ad59de0f3a61a742600">FT_RENEW_ARRAY</a>(_pointer_,  _old_,  _new_)</td></tr>
+<tr class="memitem:a24f01f0b17fc4b059125edc43a4faa22" id="r_a24f01f0b17fc4b059125edc43a4faa22"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a24f01f0b17fc4b059125edc43a4faa22">FT_ALLOC_ARRAY</a>(_pointer_,  _count_,  _type_)</td></tr>
+<tr class="memitem:abdd5e0b70b74607791bd5f98e0eafb8b" id="r_abdd5e0b70b74607791bd5f98e0eafb8b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abdd5e0b70b74607791bd5f98e0eafb8b">FT_REALLOC_ARRAY</a>(_pointer_,  _old_,  _new_,  _type_)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab098d263e8c43a5539054819a6d7ffd1" id="r_ab098d263e8c43a5539054819a6d7ffd1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab098d263e8c43a5539054819a6d7ffd1">FT_Alloc</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> size, void **P)</td></tr>
+<tr class="memitem:a2e7926d090a4afe9a3361d5c1b09d3cf" id="r_a2e7926d090a4afe9a3361d5c1b09d3cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2e7926d090a4afe9a3361d5c1b09d3cf">FT_Realloc</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> current, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> size, void **P)</td></tr>
+<tr class="memitem:a2a2f3313169e2ed9cb51d2290df20b4a" id="r_a2a2f3313169e2ed9cb51d2290df20b4a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2a2f3313169e2ed9cb51d2290df20b4a">FT_Free</a> (<a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, void **P)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="af391c9ae97fb861eaf83113fa1247726" name="af391c9ae97fb861eaf83113fa1247726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af391c9ae97fb861eaf83113fa1247726">&#9670;&#160;</a></span>FT_ALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_ALLOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_size_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a>( _pointer_, _size_ ) )</div>
+<div class="ttc" id="aftmemory_8h_html_a4872f33dd47079d78f0d7dcd8094b49d"><div class="ttname"><a href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a></div><div class="ttdeci">#define FT_SET_ERROR(expression)</div><div class="ttdef"><b>Definition</b> ftmemory.h:42</div></div>
+<div class="ttc" id="aftmemory_8h_html_a8480838bdbda854b11620e191148cd80"><div class="ttname"><a href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a></div><div class="ttdeci">#define FT_MEM_ALLOC(_pointer_, _size_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:211</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24f01f0b17fc4b059125edc43a4faa22" name="a24f01f0b17fc4b059125edc43a4faa22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f01f0b17fc4b059125edc43a4faa22">&#9670;&#160;</a></span>FT_ALLOC_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_ALLOC_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_count_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_type_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a>( _pointer_,                        \</div>
+<div class="line">                            (_count_) * <span class="keyword">sizeof</span> ( _type_ ) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9e0db36daec394986dd9a92840c6363c" name="a9e0db36daec394986dd9a92840c6363c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0db36daec394986dd9a92840c6363c">&#9670;&#160;</a></span>FT_FREE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_FREE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a2473e756b7623852cdcb5ebe8d4a3f78">FT_MEM_FREE</a>( _pointer_ )</div>
+<div class="ttc" id="aftmemory_8h_html_a2473e756b7623852cdcb5ebe8d4a3f78"><div class="ttname"><a href="#a2473e756b7623852cdcb5ebe8d4a3f78">FT_MEM_FREE</a></div><div class="ttdeci">#define FT_MEM_FREE(_pointer_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:214</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8480838bdbda854b11620e191148cd80" name="a8480838bdbda854b11620e191148cd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8480838bdbda854b11620e191148cd80">&#9670;&#160;</a></span>FT_MEM_ALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_ALLOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_size_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_function" href="#ab098d263e8c43a5539054819a6d7ffd1">FT_Alloc</a>( <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, _size_, (<span class="keywordtype">void</span>**)&amp;(_pointer_) )</div>
+<div class="ttc" id="aftmemory_8h_html_ab098d263e8c43a5539054819a6d7ffd1"><div class="ttname"><a href="#ab098d263e8c43a5539054819a6d7ffd1">FT_Alloc</a></div><div class="ttdeci">FT_Alloc(FT_Memory memory, FT_Long size, void **P)</div><div class="ttdef"><b>Definition</b> ftutil.c:50</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3146628846eecb9266f12df411a951a9" name="a3146628846eecb9266f12df411a951a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3146628846eecb9266f12df411a951a9">&#9670;&#160;</a></span>FT_MEM_ALLOC_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_ALLOC_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_count_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_type_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a>( _pointer_, (_count_) * <span class="keyword">sizeof</span> ( _type_ ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac9a76b31de04884a7c30d4d7eaa87ea4" name="ac9a76b31de04884a7c30d4d7eaa87ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a76b31de04884a7c30d4d7eaa87ea4">&#9670;&#160;</a></span>FT_MEM_COPY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_COPY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="ftstdlib_8h.html#a0b36ea64fb3c93ebf51e44bfac5f53cc">ft_memcpy</a>( dest, source, count )</div>
+<div class="ttc" id="aftstdlib_8h_html_a0b36ea64fb3c93ebf51e44bfac5f53cc"><div class="ttname"><a href="ftstdlib_8h.html#a0b36ea64fb3c93ebf51e44bfac5f53cc">ft_memcpy</a></div><div class="ttdeci">#define ft_memcpy</div><div class="ttdef"><b>Definition</b> ftstdlib.h:87</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2473e756b7623852cdcb5ebe8d4a3f78" name="a2473e756b7623852cdcb5ebe8d4a3f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2473e756b7623852cdcb5ebe8d4a3f78">&#9670;&#160;</a></span>FT_MEM_FREE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_FREE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_function" href="#a2a2f3313169e2ed9cb51d2290df20b4a">FT_Free</a>( <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, (<span class="keywordtype">void</span>**)&amp;(_pointer_) )</div>
+<div class="ttc" id="aftmemory_8h_html_a2a2f3313169e2ed9cb51d2290df20b4a"><div class="ttname"><a href="#a2a2f3313169e2ed9cb51d2290df20b4a">FT_Free</a></div><div class="ttdeci">FT_Free(FT_Memory memory, void **P)</div><div class="ttdef"><b>Definition</b> ftutil.c:125</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf76b150472edbb56f6ebe429ad47424" name="adf76b150472edbb56f6ebe429ad47424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf76b150472edbb56f6ebe429ad47424">&#9670;&#160;</a></span>FT_MEM_MOVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_MOVE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="ftstdlib_8h.html#a7fdd658afbbffabe132ff10f9d40bb6c">ft_memmove</a>( dest, source, count )</div>
+<div class="ttc" id="aftstdlib_8h_html_a7fdd658afbbffabe132ff10f9d40bb6c"><div class="ttname"><a href="ftstdlib_8h.html#a7fdd658afbbffabe132ff10f9d40bb6c">ft_memmove</a></div><div class="ttdeci">#define ft_memmove</div><div class="ttdef"><b>Definition</b> ftstdlib.h:91</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a40603d65c270f02317b7427c92955b8c" name="a40603d65c270f02317b7427c92955b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40603d65c270f02317b7427c92955b8c">&#9670;&#160;</a></span>FT_MEM_NEW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_NEW</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a>( _pointer_, <span class="keyword">sizeof</span> ( *(_pointer_) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a44400f29fc48ca3be836922b2066e57f" name="a44400f29fc48ca3be836922b2066e57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44400f29fc48ca3be836922b2066e57f">&#9670;&#160;</a></span>FT_MEM_NEW_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_NEW_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_count_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a8480838bdbda854b11620e191148cd80">FT_MEM_ALLOC</a>( _pointer_, (_count_) * <span class="keyword">sizeof</span> ( *(_pointer_) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a153731a82722c4576cd06431b84c66" name="a2a153731a82722c4576cd06431b84c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a153731a82722c4576cd06431b84c66">&#9670;&#160;</a></span>FT_MEM_REALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_REALLOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_current_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_size_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_function" href="#a2e7926d090a4afe9a3361d5c1b09d3cf">FT_Realloc</a>( <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, _current_, _size_, (<span class="keywordtype">void</span>**)&amp;(_pointer_) )</div>
+<div class="ttc" id="aftmemory_8h_html_a2e7926d090a4afe9a3361d5c1b09d3cf"><div class="ttname"><a href="#a2e7926d090a4afe9a3361d5c1b09d3cf">FT_Realloc</a></div><div class="ttdeci">FT_Realloc(FT_Memory memory, FT_Long current, FT_Long size, void **P)</div><div class="ttdef"><b>Definition</b> ftutil.c:83</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2e1b4862665e37c1b26d76771b97aa75" name="a2e1b4862665e37c1b26d76771b97aa75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1b4862665e37c1b26d76771b97aa75">&#9670;&#160;</a></span>FT_MEM_REALLOC_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_REALLOC_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_old_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_new_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_type_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a2a153731a82722c4576cd06431b84c66">FT_MEM_REALLOC</a>( _pointer_, (_old_) * <span class="keyword">sizeof</span> ( _type ),   \</div>
+<div class="line">                           (_new_) * <span class="keyword">sizeof</span> ( _type_ ) )</div>
+<div class="ttc" id="aftmemory_8h_html_a2a153731a82722c4576cd06431b84c66"><div class="ttname"><a href="#a2a153731a82722c4576cd06431b84c66">FT_MEM_REALLOC</a></div><div class="ttdeci">#define FT_MEM_REALLOC(_pointer_, _current_, _size_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:217</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7973916b02633ff996f8cbc6adf13cf9" name="a7973916b02633ff996f8cbc6adf13cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7973916b02633ff996f8cbc6adf13cf9">&#9670;&#160;</a></span>FT_MEM_RENEW_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_RENEW_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_old_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_new_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a2a153731a82722c4576cd06431b84c66">FT_MEM_REALLOC</a>( _pointer_, (_old_) * <span class="keyword">sizeof</span> ( *(_pointer_) ),  \</div>
+<div class="line">                           (_new_) * <span class="keyword">sizeof</span> ( *(_pointer_) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab20a309fed86cfe8d572652a6cf374bb" name="ab20a309fed86cfe8d572652a6cf374bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20a309fed86cfe8d572652a6cf374bb">&#9670;&#160;</a></span>FT_MEM_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_SET</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>byte</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="ftstdlib_8h.html#a201df32e472007bb839e88dcf53a8240">ft_memset</a>( dest, <span class="keywordtype">byte</span>, count )</div>
+<div class="ttc" id="aftstdlib_8h_html_a201df32e472007bb839e88dcf53a8240"><div class="ttname"><a href="ftstdlib_8h.html#a201df32e472007bb839e88dcf53a8240">ft_memset</a></div><div class="ttdeci">#define ft_memset</div><div class="ttdef"><b>Definition</b> ftstdlib.h:90</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad04dbb2871d7219281966386fffaf909" name="ad04dbb2871d7219281966386fffaf909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04dbb2871d7219281966386fffaf909">&#9670;&#160;</a></span>FT_MEM_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_MEM_ZERO</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ab20a309fed86cfe8d572652a6cf374bb">FT_MEM_SET</a>( dest, 0, count )</div>
+<div class="ttc" id="aftmemory_8h_html_ab20a309fed86cfe8d572652a6cf374bb"><div class="ttname"><a href="#ab20a309fed86cfe8d572652a6cf374bb">FT_MEM_SET</a></div><div class="ttdeci">#define FT_MEM_SET(dest, byte, count)</div><div class="ttdef"><b>Definition</b> ftmemory.h:175</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a81412b82bce20495f0dec874d9c263c4" name="a81412b82bce20495f0dec874d9c263c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81412b82bce20495f0dec874d9c263c4">&#9670;&#160;</a></span>FT_NEW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_NEW</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a40603d65c270f02317b7427c92955b8c">FT_MEM_NEW</a>( _pointer_ ) )</div>
+<div class="ttc" id="aftmemory_8h_html_a40603d65c270f02317b7427c92955b8c"><div class="ttname"><a href="#a40603d65c270f02317b7427c92955b8c">FT_MEM_NEW</a></div><div class="ttdeci">#define FT_MEM_NEW(_pointer_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:230</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeea909e37efd7b21e8c7cbb5b847c5f3" name="aeea909e37efd7b21e8c7cbb5b847c5f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea909e37efd7b21e8c7cbb5b847c5f3">&#9670;&#160;</a></span>FT_NEW_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_NEW_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_count_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a44400f29fc48ca3be836922b2066e57f">FT_MEM_NEW_ARRAY</a>( _pointer_, _count_ ) )</div>
+<div class="ttc" id="aftmemory_8h_html_a44400f29fc48ca3be836922b2066e57f"><div class="ttname"><a href="#a44400f29fc48ca3be836922b2066e57f">FT_MEM_NEW_ARRAY</a></div><div class="ttdeci">#define FT_MEM_NEW_ARRAY(_pointer_, _count_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:233</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a686a936e1de7091d69b17008ed5a4816" name="a686a936e1de7091d69b17008ed5a4816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686a936e1de7091d69b17008ed5a4816">&#9670;&#160;</a></span>FT_REALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_REALLOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_current_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_size_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a2a153731a82722c4576cd06431b84c66">FT_MEM_REALLOC</a>( _pointer_, _current_, _size_ ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abdd5e0b70b74607791bd5f98e0eafb8b" name="abdd5e0b70b74607791bd5f98e0eafb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd5e0b70b74607791bd5f98e0eafb8b">&#9670;&#160;</a></span>FT_REALLOC_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_REALLOC_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_old_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_new_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_type_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a2a153731a82722c4576cd06431b84c66">FT_MEM_REALLOC</a>( _pointer_,                      \</div>
+<div class="line">                              (_old_) * <span class="keyword">sizeof</span> ( _type_ ),    \</div>
+<div class="line">                              (_new_) * <span class="keyword">sizeof</span> ( _type_ ) ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a97892ff5fb123ad59de0f3a61a742600" name="a97892ff5fb123ad59de0f3a61a742600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97892ff5fb123ad59de0f3a61a742600">&#9670;&#160;</a></span>FT_RENEW_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_RENEW_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_pointer_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_old_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_new_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4872f33dd47079d78f0d7dcd8094b49d">FT_SET_ERROR</a>( <a class="code hl_define" href="#a7973916b02633ff996f8cbc6adf13cf9">FT_MEM_RENEW_ARRAY</a>( _pointer_, _old_, _new_ ) )</div>
+<div class="ttc" id="aftmemory_8h_html_a7973916b02633ff996f8cbc6adf13cf9"><div class="ttname"><a href="#a7973916b02633ff996f8cbc6adf13cf9">FT_MEM_RENEW_ARRAY</a></div><div class="ttdeci">#define FT_MEM_RENEW_ARRAY(_pointer_, _old_, _new_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:236</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4872f33dd47079d78f0d7dcd8094b49d" name="a4872f33dd47079d78f0d7dcd8094b49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4872f33dd47079d78f0d7dcd8094b49d">&#9670;&#160;</a></span>FT_SET_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_SET_ERROR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expression</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( ( <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = (expression) ) != 0 )</div>
+<div class="ttc" id="atest__trig_8c_html_af10dacfa214e2575bb2e0ee407c242e0"><div class="ttname"><a href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a></div><div class="ttdeci">static error</div><div class="ttdef"><b>Definition</b> test_trig.c:16</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a88db9f3d12c144b9f450c80ec62dc4fc" name="a88db9f3d12c144b9f450c80ec62dc4fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88db9f3d12c144b9f450c80ec62dc4fc">&#9670;&#160;</a></span>FT_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_ZERO</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad04dbb2871d7219281966386fffaf909">FT_MEM_ZERO</a>( p, <span class="keyword">sizeof</span> ( *(p) ) )</div>
+<div class="ttc" id="aftmemory_8h_html_ad04dbb2871d7219281966386fffaf909"><div class="ttname"><a href="#ad04dbb2871d7219281966386fffaf909">FT_MEM_ZERO</a></div><div class="ttdeci">#define FT_MEM_ZERO(dest, count)</div><div class="ttdef"><b>Definition</b> ftmemory.h:182</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ab098d263e8c43a5539054819a6d7ffd1" name="ab098d263e8c43a5539054819a6d7ffd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab098d263e8c43a5539054819a6d7ffd1">&#9670;&#160;</a></span>FT_Alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>P</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h_ab098d263e8c43a5539054819a6d7ffd1_cgraph.png" border="0" usemap="#aftmemory_8h_ab098d263e8c43a5539054819a6d7ffd1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h_ab098d263e8c43a5539054819a6d7ffd1_icgraph.png" border="0" usemap="#aftmemory_8h_ab098d263e8c43a5539054819a6d7ffd1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a2a2f3313169e2ed9cb51d2290df20b4a" name="a2a2f3313169e2ed9cb51d2290df20b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2f3313169e2ed9cb51d2290df20b4a">&#9670;&#160;</a></span>FT_Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>P</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h_a2a2f3313169e2ed9cb51d2290df20b4a_cgraph.png" border="0" usemap="#aftmemory_8h_a2a2f3313169e2ed9cb51d2290df20b4a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h_a2a2f3313169e2ed9cb51d2290df20b4a_icgraph.png" border="0" usemap="#aftmemory_8h_a2a2f3313169e2ed9cb51d2290df20b4a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a2e7926d090a4afe9a3361d5c1b09d3cf" name="a2e7926d090a4afe9a3361d5c1b09d3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7926d090a4afe9a3361d5c1b09d3cf">&#9670;&#160;</a></span>FT_Realloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FT_Realloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>P</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h_a2e7926d090a4afe9a3361d5c1b09d3cf_cgraph.png" border="0" usemap="#aftmemory_8h_a2e7926d090a4afe9a3361d5c1b09d3cf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ftmemory_8h_a2e7926d090a4afe9a3361d5c1b09d3cf_icgraph.png" border="0" usemap="#aftmemory_8h_a2e7926d090a4afe9a3361d5c1b09d3cf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_5a7d374fb846e4a5bfa73ed3019144e9.html">internal</a></li><li class="navelem"><a href="ftmemory_8h.html">ftmemory.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

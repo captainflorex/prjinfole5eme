@@ -1,0 +1,1092 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pcf/pcfread.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pcfread_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier pcfread.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="pcf_8h_source.html">pcf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pcfdriver_8h_source.html">pcfdriver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pcferror_8h_source.html">pcferror.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de pcfread.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pcf_2pcfread_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pcf_2pcfread_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="pcfread_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_pcfread</td></tr>
+<tr class="memitem:adb14d0edf0c80ad37476a4c6ae657d15" id="r_adb14d0edf0c80ad37476a4c6ae657d15"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb14d0edf0c80ad37476a4c6ae657d15">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#aed3d9f5cc31ca6b90a2a73f5a8c70963">PCF_TocRec</a></td></tr>
+<tr class="memitem:a486ece7706e0b40f03d6ab0b842586f0" id="r_a486ece7706e0b40f03d6ab0b842586f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a486ece7706e0b40f03d6ab0b842586f0">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a16783ecdca734d3952a6d2dbed552977">PCF_TableRec</a></td></tr>
+<tr class="memitem:a3bd5412680c87e8804385f30b1bbcd0f" id="r_a3bd5412680c87e8804385f30b1bbcd0f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3bd5412680c87e8804385f30b1bbcd0f">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a></td></tr>
+<tr class="memitem:a79b310767d539d921d82c0c9bafb45e8" id="r_a79b310767d539d921d82c0c9bafb45e8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a79b310767d539d921d82c0c9bafb45e8">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a></td></tr>
+<tr class="memitem:a5170eb2aea8f866f4ee8dd5679ff4055" id="r_a5170eb2aea8f866f4ee8dd5679ff4055"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5170eb2aea8f866f4ee8dd5679ff4055">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#aed5191e224c5d584cd40d98ca2dd962d">PCF_Compressed_MetricRec</a></td></tr>
+<tr class="memitem:ad8132d5099d36cda6a532e51d4514706" id="r_ad8132d5099d36cda6a532e51d4514706"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad8132d5099d36cda6a532e51d4514706">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a229d0995e07fa4290bb45f0e4130f9cb">PCF_ParsePropertyRec</a></td></tr>
+<tr class="memitem:ae72f0c372a82b7212d4f2074d45324e5" id="r_ae72f0c372a82b7212d4f2074d45324e5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae72f0c372a82b7212d4f2074d45324e5">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a229d0995e07fa4290bb45f0e4130f9cb">PCF_ParsePropertyRec</a></td></tr>
+<tr class="memitem:a0efce263ad6346b61de12a9ab6ecd1cb" id="r_a0efce263ad6346b61de12a9ab6ecd1cb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0efce263ad6346b61de12a9ab6ecd1cb">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a></td></tr>
+<tr class="memitem:ae8535ad43288963eb1950e49a6793a87" id="r_ae8535ad43288963eb1950e49a6793a87"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae8535ad43288963eb1950e49a6793a87">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ac05dc3dec1cd5dce9ffa4cec5d83ce66" id="r_ac05dc3dec1cd5dce9ffa4cec5d83ce66"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac05dc3dec1cd5dce9ffa4cec5d83ce66">pcf_read_TOC</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a754cadcb6847e34429858e549ec75093" id="r_a754cadcb6847e34429858e549ec75093"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a754cadcb6847e34429858e549ec75093">pcf_get_metric</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> format, <a class="el" href="pcf_8h.html#a499b8fa15b0498c0549e0e8b8df09ef6">PCF_Metric</a> metric)</td></tr>
+<tr class="memitem:a00da8880688d06beb09836cb1cb2c0c8" id="r_a00da8880688d06beb09836cb1cb2c0c8"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a00da8880688d06beb09836cb1cb2c0c8">pcf_seek_to_table_type</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a> tables, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> ntables, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> type, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *aformat, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *asize)</td></tr>
+<tr class="memitem:a9c1039483a6e4be03c8bc8b7d39d866b" id="r_a9c1039483a6e4be03c8bc8b7d39d866b"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9c1039483a6e4be03c8bc8b7d39d866b">pcf_has_table_type</a> (<a class="el" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a> tables, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> ntables, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> type)</td></tr>
+<tr class="memitem:a1782269b2e410dcc9f050baaeed88a8a" id="r_a1782269b2e410dcc9f050baaeed88a8a"><td class="memItemLeft">static <a class="el" href="pcf_8h.html#a7280c8dd8cee7665de3d64862170a1cd">PCF_Property</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1782269b2e410dcc9f050baaeed88a8a">pcf_find_property</a> (<a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a> *prop)</td></tr>
+<tr class="memitem:a13f9dee0b348b0e55f44958b3a2ec0a2" id="r_a13f9dee0b348b0e55f44958b3a2ec0a2"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a13f9dee0b348b0e55f44958b3a2ec0a2">pcf_get_properties</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:ae7d1487997e9b390c45c2a2abdd328ca" id="r_ae7d1487997e9b390c45c2a2abdd328ca"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae7d1487997e9b390c45c2a2abdd328ca">pcf_get_metrics</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a6904d1bf5357df670eb643863e9764b2" id="r_a6904d1bf5357df670eb643863e9764b2"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6904d1bf5357df670eb643863e9764b2">pcf_get_bitmaps</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a1c33279d1cc62acdc2160d2d2c80816a" id="r_a1c33279d1cc62acdc2160d2d2c80816a"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1c33279d1cc62acdc2160d2d2c80816a">pcf_get_encodings</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:ab460ade0fe0f1645db58293f674aac87" id="r_ab460ade0fe0f1645db58293f674aac87"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab460ade0fe0f1645db58293f674aac87">pcf_get_accel</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> type)</td></tr>
+<tr class="memitem:a7653024a8bc6d876730634a099da0948" id="r_a7653024a8bc6d876730634a099da0948"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7653024a8bc6d876730634a099da0948">pcf_load_font</a> (<a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a84ee038c2989aa1a63c579996d1019e0" id="r_a84ee038c2989aa1a63c579996d1019e0"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#a84ee038c2989aa1a63c579996d1019e0">pcf_toc_header</a> []</td></tr>
+<tr class="memitem:a3ef11ecd5cebae5cd7aa62d1bf2e02db" id="r_a3ef11ecd5cebae5cd7aa62d1bf2e02db"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3ef11ecd5cebae5cd7aa62d1bf2e02db">pcf_table_header</a> []</td></tr>
+<tr class="memitem:ae3025c15f1b04c001cb30e6dc63fee91" id="r_ae3025c15f1b04c001cb30e6dc63fee91"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae3025c15f1b04c001cb30e6dc63fee91">pcf_metric_header</a> []</td></tr>
+<tr class="memitem:acab6d4500c9c9bb7c9436c02b8b9f99f" id="r_acab6d4500c9c9bb7c9436c02b8b9f99f"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#acab6d4500c9c9bb7c9436c02b8b9f99f">pcf_metric_msb_header</a> []</td></tr>
+<tr class="memitem:ae5a871eac01d190f99bfc933def496d6" id="r_ae5a871eac01d190f99bfc933def496d6"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae5a871eac01d190f99bfc933def496d6">pcf_compressed_metric_header</a> []</td></tr>
+<tr class="memitem:a1b9ea12fec1099f41ee53f15c68fb2f1" id="r_a1b9ea12fec1099f41ee53f15c68fb2f1"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1b9ea12fec1099f41ee53f15c68fb2f1">pcf_property_header</a> []</td></tr>
+<tr class="memitem:a589bb35e43544bae26e4af8c9730470e" id="r_a589bb35e43544bae26e4af8c9730470e"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#a589bb35e43544bae26e4af8c9730470e">pcf_property_msb_header</a> []</td></tr>
+<tr class="memitem:ad241acce1c0dac5edf286986c5db2344" id="r_ad241acce1c0dac5edf286986c5db2344"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad241acce1c0dac5edf286986c5db2344">pcf_accel_header</a> []</td></tr>
+<tr class="memitem:a36d0abbd236948975d5954a1eb632c79" id="r_a36d0abbd236948975d5954a1eb632c79"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a>&#160;</td><td class="memItemRight"><a class="el" href="#a36d0abbd236948975d5954a1eb632c79">pcf_accel_msb_header</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_pcfread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8535ad43288963eb1950e49a6793a87" name="ae8535ad43288963eb1950e49a6793a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8535ad43288963eb1950e49a6793a87">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[1/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0efce263ad6346b61de12a9ab6ecd1cb" name="a0efce263ad6346b61de12a9ab6ecd1cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0efce263ad6346b61de12a9ab6ecd1cb">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[2/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae72f0c372a82b7212d4f2074d45324e5" name="ae72f0c372a82b7212d4f2074d45324e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72f0c372a82b7212d4f2074d45324e5">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[3/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a229d0995e07fa4290bb45f0e4130f9cb">PCF_ParsePropertyRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8132d5099d36cda6a532e51d4514706" name="ad8132d5099d36cda6a532e51d4514706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8132d5099d36cda6a532e51d4514706">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[4/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a229d0995e07fa4290bb45f0e4130f9cb">PCF_ParsePropertyRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5170eb2aea8f866f4ee8dd5679ff4055" name="a5170eb2aea8f866f4ee8dd5679ff4055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5170eb2aea8f866f4ee8dd5679ff4055">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[5/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#aed5191e224c5d584cd40d98ca2dd962d">PCF_Compressed_MetricRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79b310767d539d921d82c0c9bafb45e8" name="a79b310767d539d921d82c0c9bafb45e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b310767d539d921d82c0c9bafb45e8">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[6/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bd5412680c87e8804385f30b1bbcd0f" name="a3bd5412680c87e8804385f30b1bbcd0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd5412680c87e8804385f30b1bbcd0f">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[7/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a486ece7706e0b40f03d6ab0b842586f0" name="a486ece7706e0b40f03d6ab0b842586f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486ece7706e0b40f03d6ab0b842586f0">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#a16783ecdca734d3952a6d2dbed552977">PCF_TableRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb14d0edf0c80ad37476a4c6ae657d15" name="adb14d0edf0c80ad37476a4c6ae657d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb14d0edf0c80ad37476a4c6ae657d15">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[9/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="pcf_8h.html#aed3d9f5cc31ca6b90a2a73f5a8c70963">PCF_TocRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a1782269b2e410dcc9f050baaeed88a8a" name="a1782269b2e410dcc9f050baaeed88a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1782269b2e410dcc9f050baaeed88a8a">&#9670;&#160;</a></span>pcf_find_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pcf_8h.html#a7280c8dd8cee7665de3d64862170a1cd">PCF_Property</a> pcf_find_property </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a> *</td>          <td class="paramname"><span class="paramname"><em>prop</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a1782269b2e410dcc9f050baaeed88a8a_icgraph.png" border="0" usemap="#apcfread_8c_a1782269b2e410dcc9f050baaeed88a8a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ab460ade0fe0f1645db58293f674aac87" name="ab460ade0fe0f1645db58293f674aac87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab460ade0fe0f1645db58293f674aac87">&#9670;&#160;</a></span>pcf_get_accel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_get_accel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_ab460ade0fe0f1645db58293f674aac87_cgraph.png" border="0" usemap="#apcfread_8c_ab460ade0fe0f1645db58293f674aac87_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_ab460ade0fe0f1645db58293f674aac87_icgraph.png" border="0" usemap="#apcfread_8c_ab460ade0fe0f1645db58293f674aac87_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a6904d1bf5357df670eb643863e9764b2" name="a6904d1bf5357df670eb643863e9764b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6904d1bf5357df670eb643863e9764b2">&#9670;&#160;</a></span>pcf_get_bitmaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_get_bitmaps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a6904d1bf5357df670eb643863e9764b2_cgraph.png" border="0" usemap="#apcfread_8c_a6904d1bf5357df670eb643863e9764b2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a6904d1bf5357df670eb643863e9764b2_icgraph.png" border="0" usemap="#apcfread_8c_a6904d1bf5357df670eb643863e9764b2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a1c33279d1cc62acdc2160d2d2c80816a" name="a1c33279d1cc62acdc2160d2d2c80816a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c33279d1cc62acdc2160d2d2c80816a">&#9670;&#160;</a></span>pcf_get_encodings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_get_encodings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a1c33279d1cc62acdc2160d2d2c80816a_cgraph.png" border="0" usemap="#apcfread_8c_a1c33279d1cc62acdc2160d2d2c80816a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a1c33279d1cc62acdc2160d2d2c80816a_icgraph.png" border="0" usemap="#apcfread_8c_a1c33279d1cc62acdc2160d2d2c80816a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a754cadcb6847e34429858e549ec75093" name="a754cadcb6847e34429858e549ec75093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a754cadcb6847e34429858e549ec75093">&#9670;&#160;</a></span>pcf_get_metric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_get_metric </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a499b8fa15b0498c0549e0e8b8df09ef6">PCF_Metric</a></td>          <td class="paramname"><span class="paramname"><em>metric</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a754cadcb6847e34429858e549ec75093_icgraph.png" border="0" usemap="#apcfread_8c_a754cadcb6847e34429858e549ec75093_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="ae7d1487997e9b390c45c2a2abdd328ca" name="ae7d1487997e9b390c45c2a2abdd328ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d1487997e9b390c45c2a2abdd328ca">&#9670;&#160;</a></span>pcf_get_metrics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_get_metrics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_ae7d1487997e9b390c45c2a2abdd328ca_cgraph.png" border="0" usemap="#apcfread_8c_ae7d1487997e9b390c45c2a2abdd328ca_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_ae7d1487997e9b390c45c2a2abdd328ca_icgraph.png" border="0" usemap="#apcfread_8c_ae7d1487997e9b390c45c2a2abdd328ca_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a13f9dee0b348b0e55f44958b3a2ec0a2" name="a13f9dee0b348b0e55f44958b3a2ec0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f9dee0b348b0e55f44958b3a2ec0a2">&#9670;&#160;</a></span>pcf_get_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_get_properties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a13f9dee0b348b0e55f44958b3a2ec0a2_cgraph.png" border="0" usemap="#apcfread_8c_a13f9dee0b348b0e55f44958b3a2ec0a2_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a13f9dee0b348b0e55f44958b3a2ec0a2_icgraph.png" border="0" usemap="#apcfread_8c_a13f9dee0b348b0e55f44958b3a2ec0a2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a9c1039483a6e4be03c8bc8b7d39d866b" name="a9c1039483a6e4be03c8bc8b7d39d866b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1039483a6e4be03c8bc8b7d39d866b">&#9670;&#160;</a></span>pcf_has_table_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a1a832a256bb5a7e6e884afaa1a07f3ae">FT_Bool</a> pcf_has_table_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a></td>          <td class="paramname"><span class="paramname"><em>tables</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>ntables</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a9c1039483a6e4be03c8bc8b7d39d866b_icgraph.png" border="0" usemap="#apcfread_8c_a9c1039483a6e4be03c8bc8b7d39d866b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="a7653024a8bc6d876730634a099da0948" name="a7653024a8bc6d876730634a099da0948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7653024a8bc6d876730634a099da0948">&#9670;&#160;</a></span>pcf_load_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcf_load_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a7653024a8bc6d876730634a099da0948_cgraph.png" border="0" usemap="#apcfread_8c_a7653024a8bc6d876730634a099da0948_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a7653024a8bc6d876730634a099da0948_icgraph.png" border="0" usemap="#apcfread_8c_a7653024a8bc6d876730634a099da0948_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="ac05dc3dec1cd5dce9ffa4cec5d83ce66" name="ac05dc3dec1cd5dce9ffa4cec5d83ce66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05dc3dec1cd5dce9ffa4cec5d83ce66">&#9670;&#160;</a></span>pcf_read_TOC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_read_TOC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_ac05dc3dec1cd5dce9ffa4cec5d83ce66_icgraph.png" border="0" usemap="#apcfread_8c_ac05dc3dec1cd5dce9ffa4cec5d83ce66_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="a00da8880688d06beb09836cb1cb2c0c8" name="a00da8880688d06beb09836cb1cb2c0c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00da8880688d06beb09836cb1cb2c0c8">&#9670;&#160;</a></span>pcf_seek_to_table_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pcf_seek_to_table_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a></td>          <td class="paramname"><span class="paramname"><em>tables</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>ntables</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>aformat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a> *</td>          <td class="paramname"><span class="paramname"><em>asize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pcfread_8c_a00da8880688d06beb09836cb1cb2c0c8_icgraph.png" border="0" usemap="#apcfread_8c_a00da8880688d06beb09836cb1cb2c0c8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ad241acce1c0dac5edf286986c5db2344" name="ad241acce1c0dac5edf286986c5db2344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad241acce1c0dac5edf286986c5db2344">&#9670;&#160;</a></span>pcf_accel_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_accel_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                         =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE              </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 20 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( noOverlap ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( constantMetrics ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( terminalFont ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( constantWidth ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( inkInside ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( inkMetrics ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( drawDirection ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aa13dc4d8b6f99f2263f264a58baf5847">FT_FRAME_SKIP_BYTES</a>( 1 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a>   ( fontAscent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a>   ( fontDescent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a>   ( maxOverlap ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+<div class="ttc" id="aftstream_8h_html_a158291ad00a2056f43fee105a3e0c794"><div class="ttname"><a href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div><div class="ttdeci">#define FT_FRAME_END</div><div class="ttdef"><b>Definition</b> ftstream.h:118</div></div>
+<div class="ttc" id="aftstream_8h_html_a5ef8640f671132d7a96573f0c46f62f9"><div class="ttname"><a href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a></div><div class="ttdeci">#define FT_FRAME_BYTE(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:126</div></div>
+<div class="ttc" id="aftstream_8h_html_aa13dc4d8b6f99f2263f264a58baf5847"><div class="ttname"><a href="ftstream_8h.html#aa13dc4d8b6f99f2263f264a58baf5847">FT_FRAME_SKIP_BYTES</a></div><div class="ttdeci">#define FT_FRAME_SKIP_BYTES(count)</div><div class="ttdef"><b>Definition</b> ftstream.h:147</div></div>
+<div class="ttc" id="aftstream_8h_html_ab486a7dc25c6a11a2444b93cbd318193"><div class="ttname"><a href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a></div><div class="ttdeci">#define FT_FRAME_LONG_LE(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:129</div></div>
+<div class="ttc" id="aftstream_8h_html_ad21c17eec6966e8275f8bc2269fe98a9"><div class="ttname"><a href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a></div><div class="ttdeci">#define FT_FRAME_START(size)</div><div class="ttdef"><b>Definition</b> ftstream.h:117</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a36d0abbd236948975d5954a1eb632c79" name="a36d0abbd236948975d5954a1eb632c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d0abbd236948975d5954a1eb632c79">&#9670;&#160;</a></span>pcf_accel_msb_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_accel_msb_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                             =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE              </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 20 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( noOverlap ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( constantMetrics ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( terminalFont ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( constantWidth ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( inkInside ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( inkMetrics ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>      ( drawDirection ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aa13dc4d8b6f99f2263f264a58baf5847">FT_FRAME_SKIP_BYTES</a>( 1 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#af3f32d9574aaf8ab1d00caf900d2ebb2">FT_FRAME_LONG</a>      ( fontAscent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#af3f32d9574aaf8ab1d00caf900d2ebb2">FT_FRAME_LONG</a>      ( fontDescent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#af3f32d9574aaf8ab1d00caf900d2ebb2">FT_FRAME_LONG</a>      ( maxOverlap ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+<div class="ttc" id="aftstream_8h_html_af3f32d9574aaf8ab1d00caf900d2ebb2"><div class="ttname"><a href="ftstream_8h.html#af3f32d9574aaf8ab1d00caf900d2ebb2">FT_FRAME_LONG</a></div><div class="ttdeci">#define FT_FRAME_LONG(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:120</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae5a871eac01d190f99bfc933def496d6" name="ae5a871eac01d190f99bfc933def496d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a871eac01d190f99bfc933def496d6">&#9670;&#160;</a></span>pcf_compressed_metric_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_compressed_metric_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                     =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE                          </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 5 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>( leftSideBearing ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>( rightSideBearing ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>( characterWidth ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>( ascent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>( descent ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae3025c15f1b04c001cb30e6dc63fee91" name="ae3025c15f1b04c001cb30e6dc63fee91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3025c15f1b04c001cb30e6dc63fee91">&#9670;&#160;</a></span>pcf_metric_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_metric_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                          =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE               </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 12 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a>( leftSideBearing ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a>( rightSideBearing ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a>( characterWidth ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a>( ascent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a>( descent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a>( attributes ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+<div class="ttc" id="aftstream_8h_html_a741924c511aa2aee590e3d3fd7c2ba5a"><div class="ttname"><a href="ftstream_8h.html#a741924c511aa2aee590e3d3fd7c2ba5a">FT_FRAME_SHORT_LE</a></div><div class="ttdeci">#define FT_FRAME_SHORT_LE(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:131</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acab6d4500c9c9bb7c9436c02b8b9f99f" name="acab6d4500c9c9bb7c9436c02b8b9f99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acab6d4500c9c9bb7c9436c02b8b9f99f">&#9670;&#160;</a></span>pcf_metric_msb_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_metric_msb_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                              =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE               </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 12 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a>( leftSideBearing ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a>( rightSideBearing ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a>( characterWidth ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a>( ascent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a>( descent ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a>( attributes ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+<div class="ttc" id="aftstream_8h_html_a4676c9f8eae51a3e82c0f6b98200e036"><div class="ttname"><a href="ftstream_8h.html#a4676c9f8eae51a3e82c0f6b98200e036">FT_FRAME_SHORT</a></div><div class="ttdeci">#define FT_FRAME_SHORT(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:122</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1b9ea12fec1099f41ee53f15c68fb2f1" name="a1b9ea12fec1099f41ee53f15c68fb2f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b9ea12fec1099f41ee53f15c68fb2f1">&#9670;&#160;</a></span>pcf_property_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_property_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                            =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE                      </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 9 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a>( name ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>   ( isString ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#ab486a7dc25c6a11a2444b93cbd318193">FT_FRAME_LONG_LE</a>( value ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a589bb35e43544bae26e4af8c9730470e" name="a589bb35e43544bae26e4af8c9730470e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589bb35e43544bae26e4af8c9730470e">&#9670;&#160;</a></span>pcf_property_msb_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_property_msb_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE                      </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 9 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#af3f32d9574aaf8ab1d00caf900d2ebb2">FT_FRAME_LONG</a>( name ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#a5ef8640f671132d7a96573f0c46f62f9">FT_FRAME_BYTE</a>( isString ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#af3f32d9574aaf8ab1d00caf900d2ebb2">FT_FRAME_LONG</a>( value ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3ef11ecd5cebae5cd7aa62d1bf2e02db" name="a3ef11ecd5cebae5cd7aa62d1bf2e02db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ef11ecd5cebae5cd7aa62d1bf2e02db">&#9670;&#160;</a></span>pcf_table_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_table_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                         =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE              </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 16  ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a>( type ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a>( format ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a>( size ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a>( offset ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+<div class="ttc" id="aftstream_8h_html_aaca41819d7f46d0693daeff11e43bf00"><div class="ttname"><a href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a></div><div class="ttdeci">#define FT_FRAME_ULONG_LE(f)</div><div class="ttdef"><b>Definition</b> ftstream.h:130</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a84ee038c2989aa1a63c579996d1019e0" name="a84ee038c2989aa1a63c579996d1019e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ee038c2989aa1a63c579996d1019e0">&#9670;&#160;</a></span>pcf_toc_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftstream_8h.html#ad1e1d3849d28fe3394bf8ffbef420dcd">FT_Frame_Field</a> pcf_toc_header[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                       =</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define FT_STRUCTURE            </span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#ad21c17eec6966e8275f8bc2269fe98a9">FT_FRAME_START</a>( 8 ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a>( <a class="code" href="module__version.html">version</a> ),</div>
+<div class="line">      <a class="code hl_define" href="ftstream_8h.html#aaca41819d7f46d0693daeff11e43bf00">FT_FRAME_ULONG_LE</a>( count ),</div>
+<div class="line">    <a class="code hl_define" href="ftstream_8h.html#a158291ad00a2056f43fee105a3e0c794">FT_FRAME_END</a></div>
+<div class="line">  }</div>
+<div class="ttc" id="amodule__version_html"><div class="ttname"><a href="module__version.html">version</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_eea6f76f8982a5b727b58b30e92f04d5.html">pcf</a></li><li class="navelem"><a href="pcfread_8c.html">pcfread.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

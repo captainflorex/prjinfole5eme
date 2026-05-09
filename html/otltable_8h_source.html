@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/otlayout/otltable.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('otltable_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">otltable.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="otltable_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __OTL_TABLE_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __OTL_TABLE_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="otlayout_8h.html">otlayout.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><a class="code hl_define" href="otlconf_8h.html#aea5ed5de16b6076f3ebc0135e9bd1131">OTL_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="otltable_8h.html#ab3823b6ff04db0a32fa59d887ed3703d">    8</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_o_t_l___table_rec__.html">OTL_TableRec_</a>*    <a class="code hl_typedef" href="otltable_8h.html#ab3823b6ff04db0a32fa59d887ed3703d">OTL_Table</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218">   10</a></span>  <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218aabeb483d53e4e9bcfc0a0a542a04a72f">   12</a></span>    <a class="code hl_enumvalue" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218aabeb483d53e4e9bcfc0a0a542a04a72f">OTL_TABLE_TYPE_GDEF</a> = 1,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218afa9b22b7604bdaf4b75c1052d42451ce">   13</a></span>    <a class="code hl_enumvalue" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218afa9b22b7604bdaf4b75c1052d42451ce">OTL_TABLE_TYPE_GSUB</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218a72626150865bdc132b4c010b01f66fbe">   14</a></span>    <a class="code hl_enumvalue" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218a72626150865bdc132b4c010b01f66fbe">OTL_TABLE_TYPE_GPOS</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218af7132a846f5977264e0802f8e2cefebf">   15</a></span>    <a class="code hl_enumvalue" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218af7132a846f5977264e0802f8e2cefebf">OTL_TABLE_TYPE_BASE</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218a4a31c670753b1f29bf08310160230677">   16</a></span>    <a class="code hl_enumvalue" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218a4a31c670753b1f29bf08310160230677">OTL_TABLE_TYPE_JSTF</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  } <a class="code hl_enumeration" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218">OTL_TableType</a>;</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> <span class="comment">/* this may become a private structure later */</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html">   22</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_o_t_l___table_rec__.html">OTL_TableRec_</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#a87e8f8227fb1af29a39002e30043d938">   24</a></span>    <a class="code hl_enumeration" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218">OTL_TableType</a>  <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#a87e8f8227fb1af29a39002e30043d938">type</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#a667f447a697c4983c38345cd831639d6">   25</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a>      <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#a667f447a697c4983c38345cd831639d6">base</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#a6446bba3aca1ddf958bf4f59e9f0e971">   26</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a>      <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#a6446bba3aca1ddf958bf4f59e9f0e971">limit</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#aaaa74660b4bbf5d50233c67e641c0136">   28</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a0f1a97ee2c41dc703b3d0d1162d5e037">OTL_Tag</a>        <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#aaaa74660b4bbf5d50233c67e641c0136">script_tag</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#aac9726f3ade27cd4b4304e35d9914632">   29</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a0f1a97ee2c41dc703b3d0d1162d5e037">OTL_Tag</a>        <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#aac9726f3ade27cd4b4304e35d9914632">lang_tag</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#a14c88d78140dd1fab506d481d01a3932">   31</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a>       <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#a14c88d78140dd1fab506d481d01a3932">lookup_count</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#aabbbe50cd4e556b154abb7b2189904ce">   32</a></span>    <a class="code hl_variable" href="otlayout_8h.html#a719473ae453de9da88a1772755b8a2a8">OTL_Byte</a>*      <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#aabbbe50cd4e556b154abb7b2189904ce">lookup_flags</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#ac08574efc8b0a522d6871d0d3dc94851">   34</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a>       <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#ac08574efc8b0a522d6871d0d3dc94851">feature_count</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#a9a4c87ea83a9fa6d3e3898693e92e112">   35</a></span>    <a class="code hl_typedef" href="otlayout_8h.html#a0f1a97ee2c41dc703b3d0d1162d5e037">OTL_Tag</a>        <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#a9a4c87ea83a9fa6d3e3898693e92e112">feature_tags</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_o_t_l___table_rec__.html#a4f061a257c10f78b3d3fc2f21ca327ec">   36</a></span>    <a class="code hl_variable" href="otlayout_8h.html#a719473ae453de9da88a1772755b8a2a8">OTL_Byte</a>*      <a class="code hl_variable" href="struct_o_t_l___table_rec__.html#a4f061a257c10f78b3d3fc2f21ca327ec">feature_flags</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="otltable_8h.html#aaf8e8313da94731fdec53276bfb8f9d6">   38</a></span>  } <a class="code hl_typedef" href="otltable_8h.html#aaf8e8313da94731fdec53276bfb8f9d6">OTL_TableRec</a>;</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="otlconf_8h.html#a99bf84ab31cb6fd9b664028e796be33c">OTL_API</a>( <a class="code hl_enumeration" href="otlayout_8h.html#a54572643e4572e7b239791d23b56bfe1">OTL_Error</a> )</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="otltable_8h.html#adb5aa2d431795c0bf553a7820a6d1a56">   42</a></span>  <a class="code hl_function" href="otltable_8h.html#adb5aa2d431795c0bf553a7820a6d1a56">otl_table_validate</a>( <a class="code hl_typedef" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a>      table,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                      OTL_Size       size,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                      <a class="code hl_enumeration" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218">OTL_TableType</a>  type,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                      OTL_Size      *abyte_size );</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="otlconf_8h.html#a99bf84ab31cb6fd9b664028e796be33c">OTL_API</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="otltable_8h.html#a1a6a48d45e4e1f308c70d5ae881b210b">   48</a></span>  <a class="code hl_function" href="otltable_8h.html#a1a6a48d45e4e1f308c70d5ae881b210b">otl_table_init</a>( <a class="code hl_typedef" href="otltable_8h.html#ab3823b6ff04db0a32fa59d887ed3703d">OTL_Table</a>      table,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                  <a class="code hl_enumeration" href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218">OTL_TableType</a>  type,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                  <a class="code hl_typedef" href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a>      base,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                  OTL_Size       size );</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_define" href="otlconf_8h.html#a99bf84ab31cb6fd9b664028e796be33c">OTL_API</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="otltable_8h.html#aa3cd0cb132be4edda847e270e5706179">   54</a></span>  <a class="code hl_function" href="otltable_8h.html#aa3cd0cb132be4edda847e270e5706179">otl_table_set_script</a>( <a class="code hl_typedef" href="otltable_8h.html#ab3823b6ff04db0a32fa59d887ed3703d">OTL_Table</a>      table,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                        <a class="code hl_typedef" href="otlayout_8h.html#a1e45e4875a427765efa278cb5ed72cd9">OTL_ScriptTag</a>  script,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                        <a class="code hl_typedef" href="otlayout_8h.html#a15025f4cbe0c72e9a25678d30f86da58">OTL_LangTag</a>    language );</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><a class="code hl_define" href="otlconf_8h.html#a1830346ff60ad5bcba8c43444dd68614">OTL_END_HEADER</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">/* __OTL_TABLE_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aotlayout_8h_html"><div class="ttname"><a href="otlayout_8h.html">otlayout.h</a></div></div>
+<div class="ttc" id="aotlayout_8h_html_a0f1a97ee2c41dc703b3d0d1162d5e037"><div class="ttname"><a href="otlayout_8h.html#a0f1a97ee2c41dc703b3d0d1162d5e037">OTL_Tag</a></div><div class="ttdeci">OTL_UInt32 OTL_Tag</div><div class="ttdef"><b>Definition</b> otlayout.h:48</div></div>
+<div class="ttc" id="aotlayout_8h_html_a15025f4cbe0c72e9a25678d30f86da58"><div class="ttname"><a href="otlayout_8h.html#a15025f4cbe0c72e9a25678d30f86da58">OTL_LangTag</a></div><div class="ttdeci">enum OTL_LangTag_ OTL_LangTag</div></div>
+<div class="ttc" id="aotlayout_8h_html_a1750e03a97f9711075717b87e715a18f"><div class="ttname"><a href="otlayout_8h.html#a1750e03a97f9711075717b87e715a18f">OTL_UInt</a></div><div class="ttdeci">unsigned int OTL_UInt</div><div class="ttdef"><b>Definition</b> otlayout.h:25</div></div>
+<div class="ttc" id="aotlayout_8h_html_a1e45e4875a427765efa278cb5ed72cd9"><div class="ttname"><a href="otlayout_8h.html#a1e45e4875a427765efa278cb5ed72cd9">OTL_ScriptTag</a></div><div class="ttdeci">enum OTL_ScriptTag_ OTL_ScriptTag</div></div>
+<div class="ttc" id="aotlayout_8h_html_a2f8086986348bc43463dc59ea74a8ce2"><div class="ttname"><a href="otlayout_8h.html#a2f8086986348bc43463dc59ea74a8ce2">OTL_Bytes</a></div><div class="ttdeci">const OTL_Byte * OTL_Bytes</div><div class="ttdef"><b>Definition</b> otlayout.h:18</div></div>
+<div class="ttc" id="aotlayout_8h_html_a54572643e4572e7b239791d23b56bfe1"><div class="ttname"><a href="otlayout_8h.html#a54572643e4572e7b239791d23b56bfe1">OTL_Error</a></div><div class="ttdeci">OTL_Error</div><div class="ttdef"><b>Definition</b> otlayout.h:59</div></div>
+<div class="ttc" id="aotlayout_8h_html_a719473ae453de9da88a1772755b8a2a8"><div class="ttname"><a href="otlayout_8h.html#a719473ae453de9da88a1772755b8a2a8">OTL_Byte</a></div><div class="ttdeci">OTL_BEGIN_HEADER typedef unsigned char OTL_Byte</div><div class="ttdef"><b>Definition</b> otlayout.h:17</div></div>
+<div class="ttc" id="aotlconf_8h_html_a1830346ff60ad5bcba8c43444dd68614"><div class="ttname"><a href="otlconf_8h.html#a1830346ff60ad5bcba8c43444dd68614">OTL_END_HEADER</a></div><div class="ttdeci">#define OTL_END_HEADER</div><div class="ttdef"><b>Definition</b> otlconf.h:21</div></div>
+<div class="ttc" id="aotlconf_8h_html_a99bf84ab31cb6fd9b664028e796be33c"><div class="ttname"><a href="otlconf_8h.html#a99bf84ab31cb6fd9b664028e796be33c">OTL_API</a></div><div class="ttdeci">#define OTL_API(x)</div><div class="ttdef"><b>Definition</b> otlconf.h:28</div></div>
+<div class="ttc" id="aotlconf_8h_html_aea5ed5de16b6076f3ebc0135e9bd1131"><div class="ttname"><a href="otlconf_8h.html#aea5ed5de16b6076f3ebc0135e9bd1131">OTL_BEGIN_HEADER</a></div><div class="ttdeci">#define OTL_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> otlconf.h:15</div></div>
+<div class="ttc" id="aotltable_8h_html_a0d278f993e57596f0a5aa5eaeca9c218"><div class="ttname"><a href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218">OTL_TableType</a></div><div class="ttdeci">OTL_TableType</div><div class="ttdef"><b>Definition</b> otltable.h:11</div></div>
+<div class="ttc" id="aotltable_8h_html_a0d278f993e57596f0a5aa5eaeca9c218a4a31c670753b1f29bf08310160230677"><div class="ttname"><a href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218a4a31c670753b1f29bf08310160230677">OTL_TABLE_TYPE_JSTF</a></div><div class="ttdeci">@ OTL_TABLE_TYPE_JSTF</div><div class="ttdef"><b>Definition</b> otltable.h:16</div></div>
+<div class="ttc" id="aotltable_8h_html_a0d278f993e57596f0a5aa5eaeca9c218a72626150865bdc132b4c010b01f66fbe"><div class="ttname"><a href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218a72626150865bdc132b4c010b01f66fbe">OTL_TABLE_TYPE_GPOS</a></div><div class="ttdeci">@ OTL_TABLE_TYPE_GPOS</div><div class="ttdef"><b>Definition</b> otltable.h:14</div></div>
+<div class="ttc" id="aotltable_8h_html_a0d278f993e57596f0a5aa5eaeca9c218aabeb483d53e4e9bcfc0a0a542a04a72f"><div class="ttname"><a href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218aabeb483d53e4e9bcfc0a0a542a04a72f">OTL_TABLE_TYPE_GDEF</a></div><div class="ttdeci">@ OTL_TABLE_TYPE_GDEF</div><div class="ttdef"><b>Definition</b> otltable.h:12</div></div>
+<div class="ttc" id="aotltable_8h_html_a0d278f993e57596f0a5aa5eaeca9c218af7132a846f5977264e0802f8e2cefebf"><div class="ttname"><a href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218af7132a846f5977264e0802f8e2cefebf">OTL_TABLE_TYPE_BASE</a></div><div class="ttdeci">@ OTL_TABLE_TYPE_BASE</div><div class="ttdef"><b>Definition</b> otltable.h:15</div></div>
+<div class="ttc" id="aotltable_8h_html_a0d278f993e57596f0a5aa5eaeca9c218afa9b22b7604bdaf4b75c1052d42451ce"><div class="ttname"><a href="otltable_8h.html#a0d278f993e57596f0a5aa5eaeca9c218afa9b22b7604bdaf4b75c1052d42451ce">OTL_TABLE_TYPE_GSUB</a></div><div class="ttdeci">@ OTL_TABLE_TYPE_GSUB</div><div class="ttdef"><b>Definition</b> otltable.h:13</div></div>
+<div class="ttc" id="aotltable_8h_html_a1a6a48d45e4e1f308c70d5ae881b210b"><div class="ttname"><a href="otltable_8h.html#a1a6a48d45e4e1f308c70d5ae881b210b">otl_table_init</a></div><div class="ttdeci">otl_table_init(OTL_Table table, OTL_TableType type, OTL_Bytes base, OTL_Size size)</div></div>
+<div class="ttc" id="aotltable_8h_html_aa3cd0cb132be4edda847e270e5706179"><div class="ttname"><a href="otltable_8h.html#aa3cd0cb132be4edda847e270e5706179">otl_table_set_script</a></div><div class="ttdeci">otl_table_set_script(OTL_Table table, OTL_ScriptTag script, OTL_LangTag language)</div></div>
+<div class="ttc" id="aotltable_8h_html_aaf8e8313da94731fdec53276bfb8f9d6"><div class="ttname"><a href="otltable_8h.html#aaf8e8313da94731fdec53276bfb8f9d6">OTL_TableRec</a></div><div class="ttdeci">struct OTL_TableRec_ OTL_TableRec</div></div>
+<div class="ttc" id="aotltable_8h_html_ab3823b6ff04db0a32fa59d887ed3703d"><div class="ttname"><a href="otltable_8h.html#ab3823b6ff04db0a32fa59d887ed3703d">OTL_Table</a></div><div class="ttdeci">typedefOTL_BEGIN_HEADER struct OTL_TableRec_ * OTL_Table</div><div class="ttdef"><b>Definition</b> otltable.h:8</div></div>
+<div class="ttc" id="aotltable_8h_html_adb5aa2d431795c0bf553a7820a6d1a56"><div class="ttname"><a href="otltable_8h.html#adb5aa2d431795c0bf553a7820a6d1a56">otl_table_validate</a></div><div class="ttdeci">otl_table_validate(OTL_Bytes table, OTL_Size size, OTL_TableType type, OTL_Size *abyte_size)</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html"><div class="ttname"><a href="struct_o_t_l___table_rec__.html">OTL_TableRec_</a></div><div class="ttdef"><b>Definition</b> otltable.h:23</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_a14c88d78140dd1fab506d481d01a3932"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#a14c88d78140dd1fab506d481d01a3932">OTL_TableRec_::lookup_count</a></div><div class="ttdeci">OTL_UInt lookup_count</div><div class="ttdef"><b>Definition</b> otltable.h:31</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_a4f061a257c10f78b3d3fc2f21ca327ec"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#a4f061a257c10f78b3d3fc2f21ca327ec">OTL_TableRec_::feature_flags</a></div><div class="ttdeci">OTL_Byte * feature_flags</div><div class="ttdef"><b>Definition</b> otltable.h:36</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_a6446bba3aca1ddf958bf4f59e9f0e971"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#a6446bba3aca1ddf958bf4f59e9f0e971">OTL_TableRec_::limit</a></div><div class="ttdeci">OTL_Bytes limit</div><div class="ttdef"><b>Definition</b> otltable.h:26</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_a667f447a697c4983c38345cd831639d6"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#a667f447a697c4983c38345cd831639d6">OTL_TableRec_::base</a></div><div class="ttdeci">OTL_Bytes base</div><div class="ttdef"><b>Definition</b> otltable.h:25</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_a87e8f8227fb1af29a39002e30043d938"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#a87e8f8227fb1af29a39002e30043d938">OTL_TableRec_::type</a></div><div class="ttdeci">OTL_TableType type</div><div class="ttdef"><b>Definition</b> otltable.h:24</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_a9a4c87ea83a9fa6d3e3898693e92e112"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#a9a4c87ea83a9fa6d3e3898693e92e112">OTL_TableRec_::feature_tags</a></div><div class="ttdeci">OTL_Tag feature_tags</div><div class="ttdef"><b>Definition</b> otltable.h:35</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_aaaa74660b4bbf5d50233c67e641c0136"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#aaaa74660b4bbf5d50233c67e641c0136">OTL_TableRec_::script_tag</a></div><div class="ttdeci">OTL_Tag script_tag</div><div class="ttdef"><b>Definition</b> otltable.h:28</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_aabbbe50cd4e556b154abb7b2189904ce"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#aabbbe50cd4e556b154abb7b2189904ce">OTL_TableRec_::lookup_flags</a></div><div class="ttdeci">OTL_Byte * lookup_flags</div><div class="ttdef"><b>Definition</b> otltable.h:32</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_aac9726f3ade27cd4b4304e35d9914632"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#aac9726f3ade27cd4b4304e35d9914632">OTL_TableRec_::lang_tag</a></div><div class="ttdeci">OTL_Tag lang_tag</div><div class="ttdef"><b>Definition</b> otltable.h:29</div></div>
+<div class="ttc" id="astruct_o_t_l___table_rec___html_ac08574efc8b0a522d6871d0d3dc94851"><div class="ttname"><a href="struct_o_t_l___table_rec__.html#ac08574efc8b0a522d6871d0d3dc94851">OTL_TableRec_::feature_count</a></div><div class="ttdeci">OTL_UInt feature_count</div><div class="ttdef"><b>Definition</b> otltable.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_2abfe5e91ed096a20308029c05db5e9c.html">otlayout</a></li><li class="navelem"><a href="otltable_8h.html">otltable.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

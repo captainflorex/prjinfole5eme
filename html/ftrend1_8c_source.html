@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/raster/ftrend1.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftrend1_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftrend1.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftrend1_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  ftrend1.c                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    The FreeType glyph rasterizer interface (body).                      */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 1996-2001, 2002 by                                           */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include FT_INTERNAL_OBJECTS_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include FT_OUTLINE_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="ftrend1_8h.html">ftrend1.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="ftraster_8h.html">ftraster.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="rasterrs_8h.html">rasterrs.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">/* initialize renderer -- init its raster */</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#ad8c08adefac6fc16cda12a505e1c5d00">   30</a></span>  <a class="code hl_function" href="ftrend1_8c.html#ad8c08adefac6fc16cda12a505e1c5d00">ft_raster1_init</a>( <a class="code hl_typedef" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a>  render )</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_typedef" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a>  library = <a class="code hl_define" href="ftobjs_8h.html#a89730274afe3d8a9b076ffff16ceeccd">FT_MODULE_LIBRARY</a>( render );</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a2b13c0a776ea7f589f41f576f9c4e8ad">clazz</a>-&gt;<a class="code hl_variable" href="struct_f_t___renderer___class__.html#a5af75b9f582f98f9f74dbcbc530c7e88">raster_class</a>-&gt;<a class="code hl_variable" href="struct_f_t___raster___funcs__.html#a91e9decd6066090a5f306f33f9815d39">raster_reset</a>( render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a9c54a2da84f5892e0563d032ebd1ee09">raster</a>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                               library-&gt;<a class="code hl_variable" href="struct_f_t___library_rec__.html#aa8dd799d2efb7817b05c4a02a6828275">raster_pool</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                               library-&gt;<a class="code hl_variable" href="struct_f_t___library_rec__.html#a798afdcaf0cda349eb454b769abfa251">raster_pool_size</a> );</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> Raster_Err_Ok;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">/* set render-specific mode */</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#a2a153a050c6c50f66e6f71107275c575">   45</a></span>  <a class="code hl_function" href="ftrend1_8c.html#a2a153a050c6c50f66e6f71107275c575">ft_raster1_set_mode</a>( <a class="code hl_typedef" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a>  render,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                       <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>     mode_tag,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                       <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>   data )</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/* we simply pass it to the raster */</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a2b13c0a776ea7f589f41f576f9c4e8ad">clazz</a>-&gt;<a class="code hl_variable" href="struct_f_t___renderer___class__.html#a5af75b9f582f98f9f74dbcbc530c7e88">raster_class</a>-&gt;<a class="code hl_variable" href="struct_f_t___raster___funcs__.html#a3b37c781e54cf933cb60f57f2d45b32c">raster_set_mode</a>( render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a9c54a2da84f5892e0563d032ebd1ee09">raster</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                                         mode_tag,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                                         data );</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="comment">/* transform a given glyph image */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#aebbfe536b49a989d079862d4f87cb6ad">   58</a></span>  <a class="code hl_function" href="ftrend1_8c.html#aebbfe536b49a989d079862d4f87cb6ad">ft_raster1_transform</a>( <a class="code hl_typedef" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a>   render,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                        <a class="code hl_typedef" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a>  slot,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        <a class="code hl_typedef" href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a>*    matrix,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        <a class="code hl_typedef" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a>*    delta )</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = Raster_Err_Ok;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span> ( slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#afcd35188ff4c3d5cbb518602d05b2807">format</a> != render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a478b14f577b633cea7043fb17d404721">glyph_format</a> )</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = Raster_Err_Invalid_Argument;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> ( matrix )</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_function" href="ftoutln_8h.html#a56bb9239fcc2d5354ed794e4a7459396">FT_Outline_Transform</a>( &amp;slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a8e46dd5d808079bdcba68056d6476d8d">outline</a>, matrix );</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> ( delta )</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_function" href="ftoutln_8h.html#a49b44c000fe73a2f18b05b95ff710471">FT_Outline_Translate</a>( &amp;slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a8e46dd5d808079bdcba68056d6476d8d">outline</a>, delta-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">x</a>, delta-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#ac3246ed214e880047ec74eeb15f8b973">y</a> );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  Exit:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="comment">/* return the glyph&#39;s control box */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#a42e0e8411d96a916cd90ea918793abc3">   85</a></span>  <a class="code hl_function" href="ftrend1_8c.html#a42e0e8411d96a916cd90ea918793abc3">ft_raster1_get_cbox</a>( <a class="code hl_typedef" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a>   render,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                       <a class="code hl_typedef" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a>  slot,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                       <a class="code hl_typedef" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a>*      cbox )</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_define" href="ftmemory_8h.html#ad04dbb2871d7219281966386fffaf909">FT_MEM_ZERO</a>( cbox, <span class="keyword">sizeof</span> ( *cbox ) );</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> ( slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#afcd35188ff4c3d5cbb518602d05b2807">format</a> == render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a478b14f577b633cea7043fb17d404721">glyph_format</a> )</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <a class="code hl_function" href="ftoutln_8h.html#a07e9fb42cdb19448416dc68ca94af4e7">FT_Outline_Get_CBox</a>( &amp;slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a8e46dd5d808079bdcba68056d6476d8d">outline</a>, cbox );</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="comment">/* convert a slot&#39;s glyph image into a bitmap */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#afeb11ddb2eb9cf9fb99297ac2bcbbe72">   98</a></span>  <a class="code hl_function" href="ftrend1_8c.html#afeb11ddb2eb9cf9fb99297ac2bcbbe72">ft_raster1_render</a>( <a class="code hl_typedef" href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a>     render,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                     <a class="code hl_typedef" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a>    slot,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                     <a class="code hl_typedef" href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a>  mode,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                     <a class="code hl_typedef" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a>*      origin )</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>     <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_typedef" href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a>*  outline;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_typedef" href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a>      cbox;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>      width, height, pitch;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_typedef" href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a>*   bitmap;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>    <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_typedef" href="ftimage_8h.html#a4f41c3fb4a05eacd520be21e4db611bc">FT_Raster_Params</a>  params;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">/* check glyph image format */</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span> ( slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#afcd35188ff4c3d5cbb518602d05b2807">format</a> != render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a478b14f577b633cea7043fb17d404721">glyph_format</a> )</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = Raster_Err_Invalid_Argument;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">/* check rendering mode */</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> ( mode != <a class="code hl_enumvalue" href="freetype_8h.html#ac338334d31cff69250d1e916b9f77ebba2fad77b660130c90b38b873901f55b08">FT_RENDER_MODE_MONO</a> )</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="comment">/* raster1 is only capable of producing monochrome bitmaps */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="keywordflow">if</span> ( render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a2b13c0a776ea7f589f41f576f9c4e8ad">clazz</a> == &amp;<a class="code hl_variable" href="ftrend1_8c.html#a3c2577b1523b1561474a50d657048f4a">ft_raster1_renderer_class</a> )</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> Raster_Err_Cannot_Render_Glyph;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="comment">/* raster5 is only capable of producing 5-gray-levels bitmaps */</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keywordflow">if</span> ( render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a2b13c0a776ea7f589f41f576f9c4e8ad">clazz</a> == &amp;<a class="code hl_variable" href="ftrend1_8c.html#aaa913c37ee969ebf37ab2da93540fb93">ft_raster5_renderer_class</a> )</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> Raster_Err_Cannot_Render_Glyph;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    outline = &amp;slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a8e46dd5d808079bdcba68056d6476d8d">outline</a>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">/* translate the outline to the new origin if needed */</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span> ( origin )</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <a class="code hl_function" href="ftoutln_8h.html#a49b44c000fe73a2f18b05b95ff710471">FT_Outline_Translate</a>( outline, origin-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">x</a>, origin-&gt;<a class="code hl_variable" href="struct_f_t___vector__.html#ac3246ed214e880047ec74eeb15f8b973">y</a> );</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="comment">/* compute the control box, and grid fit it */</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_function" href="ftoutln_8h.html#a07e9fb42cdb19448416dc68ca94af4e7">FT_Outline_Get_CBox</a>( outline, &amp;cbox );</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a1f2a5d0565d496c1d41e43d018f45add">xMin</a> &amp;= -64;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a959ca1d5bc1c5338da0d85c8e7135f4e">yMin</a> &amp;= -64;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#ac6da5c44f4cb7b97eef1f438eb69c0ec">xMax</a>  = ( cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#ac6da5c44f4cb7b97eef1f438eb69c0ec">xMax</a> + 63 ) &amp; -64;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a77084921589f386a8a593ae1f25b1569">yMax</a>  = ( cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a77084921589f386a8a593ae1f25b1569">yMax</a> + 63 ) &amp; -64;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    width  = (<a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>)( ( cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#ac6da5c44f4cb7b97eef1f438eb69c0ec">xMax</a> - cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a1f2a5d0565d496c1d41e43d018f45add">xMin</a> ) &gt;&gt; 6 );</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    height = (<a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>)( ( cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a77084921589f386a8a593ae1f25b1569">yMax</a> - cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a959ca1d5bc1c5338da0d85c8e7135f4e">yMin</a> ) &gt;&gt; 6 );</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    bitmap = &amp;slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a8c50199e30b763b8e2a645af04a1f293">bitmap</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a> = render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a7c93326898f03a9eb224f57104fa2433">root</a>.<a class="code hl_variable" href="struct_f_t___module_rec__.html#a33113e9eb2d6cd8ee6666da75ff8e108">memory</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">/* release old bitmap buffer */</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">if</span> ( slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#acc83081448a1fe46e6c4184090df8bc6">flags</a> &amp; <a class="code hl_enumvalue" href="ftgloadr_8h.html#aadb88990ac844893e663c0661ca07b31ae2adc1d08982df8d8325397118dd5d8f">FT_GLYPH_OWN_BITMAP</a> )</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <a class="code hl_define" href="ftmemory_8h.html#a9e0db36daec394986dd9a92840c6363c">FT_FREE</a>( bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a76439b1d3c13b81ca506108cd1623284">buffer</a> );</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#acc83081448a1fe46e6c4184090df8bc6">flags</a> &amp;= <a class="code hl_enumvalue" href="ftgloadr_8h.html#aadb88990ac844893e663c0661ca07b31ae2adc1d08982df8d8325397118dd5d8f">~FT_GLYPH_OWN_BITMAP</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="comment">/* allocate new one, depends on pixel format */</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> ( !( mode &amp; <a class="code hl_enumvalue" href="freetype_8h.html#ac338334d31cff69250d1e916b9f77ebba2fad77b660130c90b38b873901f55b08">FT_RENDER_MODE_MONO</a> ) )</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="comment">/* we pad to 32 bits, only for backwards compatibility with FT 1.x */</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      pitch = ( width + 3 ) &amp; -4;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a5cc5e0fe42a93a86e16706ad52e087a2">pixel_mode</a> = <a class="code hl_enumvalue" href="ftimage_8h.html#a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c">FT_PIXEL_MODE_GRAY</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a415d78060f8012d312703c9792ec005a">num_grays</a>  = 256;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      pitch = ( ( width + 15 ) &gt;&gt; 4 ) &lt;&lt; 1;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a5cc5e0fe42a93a86e16706ad52e087a2">pixel_mode</a> = <a class="code hl_enumvalue" href="ftimage_8h.html#a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4">FT_PIXEL_MODE_MONO</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a7b5e6252dd91a3809fe80ebbeb6720eb">width</a> = width;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a1b6bb20b30fe087e3fc87a0eb37730c0">rows</a>  = height;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#afdee595846e1188c7a76d0cec9d85cf2">pitch</a> = pitch;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">if</span> ( <a class="code hl_define" href="ftmemory_8h.html#af391c9ae97fb861eaf83113fa1247726">FT_ALLOC</a>( bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a76439b1d3c13b81ca506108cd1623284">buffer</a>, (<a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>)pitch * height ) )</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#acc83081448a1fe46e6c4184090df8bc6">flags</a> |= <a class="code hl_enumvalue" href="ftgloadr_8h.html#aadb88990ac844893e663c0661ca07b31ae2adc1d08982df8d8325397118dd5d8f">FT_GLYPH_OWN_BITMAP</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="comment">/* translate outline to render it into the bitmap */</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_function" href="ftoutln_8h.html#a49b44c000fe73a2f18b05b95ff710471">FT_Outline_Translate</a>( outline, -cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a1f2a5d0565d496c1d41e43d018f45add">xMin</a>, -cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a959ca1d5bc1c5338da0d85c8e7135f4e">yMin</a> );</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="comment">/* set up parameters */</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    params.<a class="code hl_variable" href="struct_f_t___raster___params__.html#a68ad9773cdf95894d1a1fd883cbc6a5d">target</a> = bitmap;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    params.<a class="code hl_variable" href="struct_f_t___raster___params__.html#a7664d717dc94aa78aeb61cc1bb28f0c3">source</a> = outline;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    params.<a class="code hl_variable" href="struct_f_t___raster___params__.html#a1a28ab69b8296b4378886d1a2b57d333">flags</a>  = 0;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">if</span> ( bitmap-&gt;<a class="code hl_variable" href="struct_f_t___bitmap__.html#a5cc5e0fe42a93a86e16706ad52e087a2">pixel_mode</a> == <a class="code hl_enumvalue" href="ftimage_8h.html#a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c">FT_PIXEL_MODE_GRAY</a> )</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      params.<a class="code hl_variable" href="struct_f_t___raster___params__.html#a1a28ab69b8296b4378886d1a2b57d333">flags</a> |= <a class="code hl_enumvalue" href="ftimage_8h.html#ade8285abb397f396b357d1cce72defdda800a77c2d61af026464b05bd4a77d954">FT_RASTER_FLAG_AA</a>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">/* render outline into the bitmap */</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> = render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a6dc07268fc39d9dde130a5708607d19d">raster_render</a>( render-&gt;<a class="code hl_variable" href="struct_f_t___renderer_rec__.html#a9c54a2da84f5892e0563d032ebd1ee09">raster</a>, &amp;params );</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <a class="code hl_function" href="ftoutln_8h.html#a49b44c000fe73a2f18b05b95ff710471">FT_Outline_Translate</a>( outline, cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a1f2a5d0565d496c1d41e43d018f45add">xMin</a>, cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a959ca1d5bc1c5338da0d85c8e7135f4e">yMin</a> );</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordflow">if</span> ( <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> )</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <span class="keywordflow">goto</span> Exit;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#afcd35188ff4c3d5cbb518602d05b2807">format</a>      = FT_GLYPH_FORMAT_BITMAP;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a7e47f0471336ac68e3c72312a3349dc4">bitmap_left</a> = (<a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>)( cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a1f2a5d0565d496c1d41e43d018f45add">xMin</a> &gt;&gt; 6 );</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    slot-&gt;<a class="code hl_variable" href="struct_f_t___glyph_slot_rec__.html#a0c150c0fb007e49fe4b9db6a69df53b7">bitmap_top</a>  = (<a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>)( cbox.<a class="code hl_variable" href="struct_f_t___b_box__.html#a77084921589f386a8a593ae1f25b1569">yMax</a> &gt;&gt; 6 );</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  Exit:</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  }</div>
+</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00212" data-start="{" data-end="};">
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#a3c2577b1523b1561474a50d657048f4a">  212</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a>  <a class="code hl_variable" href="ftrend1_8c.html#a3c2577b1523b1561474a50d657048f4a">ft_raster1_renderer_class</a> =</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a>,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a> ),</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      <span class="stringliteral">&quot;raster1&quot;</span>,</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      0x10000L,</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      0x20000L,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      0,    <span class="comment">/* module specific interface */</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_function" href="ftrend1_8c.html#ad8c08adefac6fc16cda12a505e1c5d00">ft_raster1_init</a>,</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) 0,</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  0</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    },</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    (<a class="code hl_typedef" href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a>)   <a class="code hl_function" href="ftrend1_8c.html#afeb11ddb2eb9cf9fb99297ac2bcbbe72">ft_raster1_render</a>,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    (<a class="code hl_typedef" href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a>)<a class="code hl_function" href="ftrend1_8c.html#aebbfe536b49a989d079862d4f87cb6ad">ft_raster1_transform</a>,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    (<a class="code hl_typedef" href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a>)  <a class="code hl_function" href="ftrend1_8c.html#a42e0e8411d96a916cd90ea918793abc3">ft_raster1_get_cbox</a>,</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    (<a class="code hl_typedef" href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a>)  <a class="code hl_function" href="ftrend1_8c.html#a2a153a050c6c50f66e6f71107275c575">ft_raster1_set_mode</a>,</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    (<a class="code hl_typedef" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a>*)    &amp;<a class="code hl_variable" href="ftraster_8c.html#a0c17ddc0dfb0475b06dddf99b281d040">ft_standard_raster</a></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  };</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="comment">/* This renderer is _NOT_ part of the default modules; you will need */</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="comment">/* to register it by hand in your application.  It should only be    */</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="comment">/* used for backwards-compatibility with FT 1.x anyway.              */</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="comment">/*                                                                   */</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div>
+<div class="foldopen" id="foldopen00245" data-start="{" data-end="};">
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="ftrend1_8c.html#aaa913c37ee969ebf37ab2da93540fb93">  245</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a>  <a class="code hl_variable" href="ftrend1_8c.html#aaa913c37ee969ebf37ab2da93540fb93">ft_raster5_renderer_class</a> =</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <a class="code hl_enumvalue" href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a>,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <span class="keyword">sizeof</span>( <a class="code hl_typedef" href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a> ),</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <span class="stringliteral">&quot;raster5&quot;</span>,</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      0x10000L,</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      0x20000L,</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      0,    <span class="comment">/* module specific interface */</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a>)<a class="code hl_function" href="ftrend1_8c.html#ad8c08adefac6fc16cda12a505e1c5d00">ft_raster1_init</a>,</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a>) 0,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      (<a class="code hl_typedef" href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a>)  0</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    },</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    FT_GLYPH_FORMAT_OUTLINE,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    (<a class="code hl_typedef" href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a>)   <a class="code hl_function" href="ftrend1_8c.html#afeb11ddb2eb9cf9fb99297ac2bcbbe72">ft_raster1_render</a>,</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    (<a class="code hl_typedef" href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a>)<a class="code hl_function" href="ftrend1_8c.html#aebbfe536b49a989d079862d4f87cb6ad">ft_raster1_transform</a>,</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    (<a class="code hl_typedef" href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a>)  <a class="code hl_function" href="ftrend1_8c.html#a42e0e8411d96a916cd90ea918793abc3">ft_raster1_get_cbox</a>,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    (<a class="code hl_typedef" href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a>)  <a class="code hl_function" href="ftrend1_8c.html#a2a153a050c6c50f66e6f71107275c575">ft_raster1_set_mode</a>,</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    (<a class="code hl_typedef" href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a>*)    &amp;<a class="code hl_variable" href="ftraster_8c.html#a0c17ddc0dfb0475b06dddf99b281d040">ft_standard_raster</a></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  };</div>
+</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3e7304105563eb715cae1b9c213858ed"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE_DEF</div><div class="ttdef"><b>Definition</b> ftconfig.h:229</div></div>
+<div class="ttc" id="afreetype_8h_html_a0c70692baaab06a7dad20faee7a86439"><div class="ttname"><a href="freetype_8h.html#a0c70692baaab06a7dad20faee7a86439">FT_Renderer</a></div><div class="ttdeci">struct FT_RendererRec_ * FT_Renderer</div><div class="ttdef"><b>Definition</b> freetype.h:290</div></div>
+<div class="ttc" id="afreetype_8h_html_a42c69ed4922d28c7d8cc9173237f966b"><div class="ttname"><a href="freetype_8h.html#a42c69ed4922d28c7d8cc9173237f966b">FT_Render_Mode</a></div><div class="ttdeci">enum FT_Render_Mode_ FT_Render_Mode</div></div>
+<div class="ttc" id="afreetype_8h_html_a768daa0d9c3fa499e6c37034ee9f2ca3"><div class="ttname"><a href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></div><div class="ttdeci">struct FT_GlyphSlotRec_ * FT_GlyphSlot</div><div class="ttdef"><b>Definition</b> freetype.h:361</div></div>
+<div class="ttc" id="afreetype_8h_html_a92857f8bf079b7b9ef5d3ce74cf89ef5"><div class="ttname"><a href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></div><div class="ttdeci">struct FT_LibraryRec_ * FT_Library</div><div class="ttdef"><b>Definition</b> freetype.h:251</div></div>
+<div class="ttc" id="afreetype_8h_html_ac338334d31cff69250d1e916b9f77ebba2fad77b660130c90b38b873901f55b08"><div class="ttname"><a href="freetype_8h.html#ac338334d31cff69250d1e916b9f77ebba2fad77b660130c90b38b873901f55b08">FT_RENDER_MODE_MONO</a></div><div class="ttdeci">@ FT_RENDER_MODE_MONO</div><div class="ttdef"><b>Definition</b> freetype.h:2239</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftgloadr_8h_html_aadb88990ac844893e663c0661ca07b31ae2adc1d08982df8d8325397118dd5d8f"><div class="ttname"><a href="ftgloadr_8h.html#aadb88990ac844893e663c0661ca07b31ae2adc1d08982df8d8325397118dd5d8f">FT_GLYPH_OWN_BITMAP</a></div><div class="ttdeci">@ FT_GLYPH_OWN_BITMAP</div><div class="ttdef"><b>Definition</b> ftgloadr.h:57</div></div>
+<div class="ttc" id="aftimage_8h_html_a1901381e05d5dd7ad6567c85ee2076c3"><div class="ttname"><a href="ftimage_8h.html#a1901381e05d5dd7ad6567c85ee2076c3">FT_Bitmap</a></div><div class="ttdeci">struct FT_Bitmap_ FT_Bitmap</div></div>
+<div class="ttc" id="aftimage_8h_html_a1e1422cfbeb7c3992d5d7b8f85732efd"><div class="ttname"><a href="ftimage_8h.html#a1e1422cfbeb7c3992d5d7b8f85732efd">FT_BBox</a></div><div class="ttdeci">struct FT_BBox_ FT_BBox</div></div>
+<div class="ttc" id="aftimage_8h_html_a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4"><div class="ttname"><a href="ftimage_8h.html#a4953570a0afb7abb672a6583035865a4a3c16f8be14915a529161ff1514204fb4">FT_PIXEL_MODE_MONO</a></div><div class="ttdeci">@ FT_PIXEL_MODE_MONO</div><div class="ttdef"><b>Definition</b> ftimage.h:160</div></div>
+<div class="ttc" id="aftimage_8h_html_a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c"><div class="ttname"><a href="ftimage_8h.html#a4953570a0afb7abb672a6583035865a4a58a764f37700cb5258d02987a9209e2c">FT_PIXEL_MODE_GRAY</a></div><div class="ttdeci">@ FT_PIXEL_MODE_GRAY</div><div class="ttdef"><b>Definition</b> ftimage.h:161</div></div>
+<div class="ttc" id="aftimage_8h_html_a4f41c3fb4a05eacd520be21e4db611bc"><div class="ttname"><a href="ftimage_8h.html#a4f41c3fb4a05eacd520be21e4db611bc">FT_Raster_Params</a></div><div class="ttdeci">struct FT_Raster_Params_ FT_Raster_Params</div></div>
+<div class="ttc" id="aftimage_8h_html_a6b64eb35252e8829024c12c98cce37d4"><div class="ttname"><a href="ftimage_8h.html#a6b64eb35252e8829024c12c98cce37d4">FT_Outline</a></div><div class="ttdeci">struct FT_Outline_ FT_Outline</div></div>
+<div class="ttc" id="aftimage_8h_html_a738d501723224dee6667ada1e1b6eb1c"><div class="ttname"><a href="ftimage_8h.html#a738d501723224dee6667ada1e1b6eb1c">FT_Raster_Funcs</a></div><div class="ttdeci">struct FT_Raster_Funcs_ FT_Raster_Funcs</div></div>
+<div class="ttc" id="aftimage_8h_html_abfcb941b4b81f3a922d4ae57c620db27"><div class="ttname"><a href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a></div><div class="ttdeci">struct FT_Vector_ FT_Vector</div></div>
+<div class="ttc" id="aftimage_8h_html_ade8285abb397f396b357d1cce72defdda800a77c2d61af026464b05bd4a77d954"><div class="ttname"><a href="ftimage_8h.html#ade8285abb397f396b357d1cce72defdda800a77c2d61af026464b05bd4a77d954">FT_RASTER_FLAG_AA</a></div><div class="ttdeci">@ FT_RASTER_FLAG_AA</div><div class="ttdef"><b>Definition</b> ftimage.h:980</div></div>
+<div class="ttc" id="aftmemory_8h_html_a9e0db36daec394986dd9a92840c6363c"><div class="ttname"><a href="ftmemory_8h.html#a9e0db36daec394986dd9a92840c6363c">FT_FREE</a></div><div class="ttdeci">#define FT_FREE(_pointer_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:267</div></div>
+<div class="ttc" id="aftmemory_8h_html_ad04dbb2871d7219281966386fffaf909"><div class="ttname"><a href="ftmemory_8h.html#ad04dbb2871d7219281966386fffaf909">FT_MEM_ZERO</a></div><div class="ttdeci">#define FT_MEM_ZERO(dest, count)</div><div class="ttdef"><b>Definition</b> ftmemory.h:182</div></div>
+<div class="ttc" id="aftmemory_8h_html_af391c9ae97fb861eaf83113fa1247726"><div class="ttname"><a href="ftmemory_8h.html#af391c9ae97fb861eaf83113fa1247726">FT_ALLOC</a></div><div class="ttdeci">#define FT_ALLOC(_pointer_, _size_)</div><div class="ttdef"><b>Definition</b> ftmemory.h:261</div></div>
+<div class="ttc" id="aftobjs_8h_html_a89730274afe3d8a9b076ffff16ceeccd"><div class="ttname"><a href="ftobjs_8h.html#a89730274afe3d8a9b076ffff16ceeccd">FT_MODULE_LIBRARY</a></div><div class="ttdeci">#define FT_MODULE_LIBRARY(x)</div><div class="ttdef"><b>Definition</b> ftobjs.h:414</div></div>
+<div class="ttc" id="aftobjs_8h_html_ad93f38fdbe185582f5d4deae9d86f830"><div class="ttname"><a href="ftobjs_8h.html#ad93f38fdbe185582f5d4deae9d86f830">FT_RendererRec</a></div><div class="ttdeci">struct FT_RendererRec_ FT_RendererRec</div></div>
+<div class="ttc" id="aftoutln_8h_html_a07e9fb42cdb19448416dc68ca94af4e7"><div class="ttname"><a href="ftoutln_8h.html#a07e9fb42cdb19448416dc68ca94af4e7">FT_Outline_Get_CBox</a></div><div class="ttdeci">FT_Outline_Get_CBox(FT_Outline *outline, FT_BBox *acbox)</div><div class="ttdef"><b>Definition</b> ftoutln.c:419</div></div>
+<div class="ttc" id="aftoutln_8h_html_a49b44c000fe73a2f18b05b95ff710471"><div class="ttname"><a href="ftoutln_8h.html#a49b44c000fe73a2f18b05b95ff710471">FT_Outline_Translate</a></div><div class="ttdeci">FT_Outline_Translate(FT_Outline *outline, FT_Pos xOffset, FT_Pos yOffset)</div><div class="ttdef"><b>Definition</b> ftoutln.c:469</div></div>
+<div class="ttc" id="aftoutln_8h_html_a56bb9239fcc2d5354ed794e4a7459396"><div class="ttname"><a href="ftoutln_8h.html#a56bb9239fcc2d5354ed794e4a7459396">FT_Outline_Transform</a></div><div class="ttdeci">FT_Outline_Transform(FT_Outline *outline, FT_Matrix *matrix)</div><div class="ttdef"><b>Definition</b> ftoutln.c:646</div></div>
+<div class="ttc" id="aftraster_8c_html_a0c17ddc0dfb0475b06dddf99b281d040"><div class="ttname"><a href="ftraster_8c.html#a0c17ddc0dfb0475b06dddf99b281d040">ft_standard_raster</a></div><div class="ttdeci">const FT_Raster_Funcs ft_standard_raster</div><div class="ttdef"><b>Definition</b> ftraster.c:3277</div></div>
+<div class="ttc" id="aftraster_8h_html"><div class="ttname"><a href="ftraster_8h.html">ftraster.h</a></div></div>
+<div class="ttc" id="aftrend1_8c_html_a2a153a050c6c50f66e6f71107275c575"><div class="ttname"><a href="ftrend1_8c.html#a2a153a050c6c50f66e6f71107275c575">ft_raster1_set_mode</a></div><div class="ttdeci">static FT_Error ft_raster1_set_mode(FT_Renderer render, FT_ULong mode_tag, FT_Pointer data)</div><div class="ttdef"><b>Definition</b> ftrend1.c:45</div></div>
+<div class="ttc" id="aftrend1_8c_html_a3c2577b1523b1561474a50d657048f4a"><div class="ttname"><a href="ftrend1_8c.html#a3c2577b1523b1561474a50d657048f4a">ft_raster1_renderer_class</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_Renderer_Class ft_raster1_renderer_class</div><div class="ttdef"><b>Definition</b> ftrend1.c:212</div></div>
+<div class="ttc" id="aftrend1_8c_html_a42e0e8411d96a916cd90ea918793abc3"><div class="ttname"><a href="ftrend1_8c.html#a42e0e8411d96a916cd90ea918793abc3">ft_raster1_get_cbox</a></div><div class="ttdeci">static void ft_raster1_get_cbox(FT_Renderer render, FT_GlyphSlot slot, FT_BBox *cbox)</div><div class="ttdef"><b>Definition</b> ftrend1.c:85</div></div>
+<div class="ttc" id="aftrend1_8c_html_aaa913c37ee969ebf37ab2da93540fb93"><div class="ttname"><a href="ftrend1_8c.html#aaa913c37ee969ebf37ab2da93540fb93">ft_raster5_renderer_class</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_Renderer_Class ft_raster5_renderer_class</div><div class="ttdef"><b>Definition</b> ftrend1.c:245</div></div>
+<div class="ttc" id="aftrend1_8c_html_ad8c08adefac6fc16cda12a505e1c5d00"><div class="ttname"><a href="ftrend1_8c.html#ad8c08adefac6fc16cda12a505e1c5d00">ft_raster1_init</a></div><div class="ttdeci">static FT_Error ft_raster1_init(FT_Renderer render)</div><div class="ttdef"><b>Definition</b> ftrend1.c:30</div></div>
+<div class="ttc" id="aftrend1_8c_html_aebbfe536b49a989d079862d4f87cb6ad"><div class="ttname"><a href="ftrend1_8c.html#aebbfe536b49a989d079862d4f87cb6ad">ft_raster1_transform</a></div><div class="ttdeci">static FT_Error ft_raster1_transform(FT_Renderer render, FT_GlyphSlot slot, FT_Matrix *matrix, FT_Vector *delta)</div><div class="ttdef"><b>Definition</b> ftrend1.c:58</div></div>
+<div class="ttc" id="aftrend1_8c_html_afeb11ddb2eb9cf9fb99297ac2bcbbe72"><div class="ttname"><a href="ftrend1_8c.html#afeb11ddb2eb9cf9fb99297ac2bcbbe72">ft_raster1_render</a></div><div class="ttdeci">static FT_Error ft_raster1_render(FT_Renderer render, FT_GlyphSlot slot, FT_Render_Mode mode, FT_Vector *origin)</div><div class="ttdef"><b>Definition</b> ftrend1.c:98</div></div>
+<div class="ttc" id="aftrend1_8h_html"><div class="ttname"><a href="ftrend1_8h.html">ftrend1.h</a></div></div>
+<div class="ttc" id="aftrender_8h_html_a44bd5724a3d348fffdcabaa893144575"><div class="ttname"><a href="ftrender_8h.html#a44bd5724a3d348fffdcabaa893144575">FT_Renderer_TransformFunc</a></div><div class="ttdeci">FT_Error(* FT_Renderer_TransformFunc)(FT_Renderer renderer, FT_GlyphSlot slot, FT_Matrix *matrix, FT_Vector *delta)</div><div class="ttdef"><b>Definition</b> ftrender.h:94</div></div>
+<div class="ttc" id="aftrender_8h_html_a7ed568cf54b436823fea2f8a8864854b"><div class="ttname"><a href="ftrender_8h.html#a7ed568cf54b436823fea2f8a8864854b">FT_Renderer_SetModeFunc</a></div><div class="ttdeci">FT_Error(* FT_Renderer_SetModeFunc)(FT_Renderer renderer, FT_ULong mode_tag, FT_Pointer mode_ptr)</div><div class="ttdef"><b>Definition</b> ftrender.h:107</div></div>
+<div class="ttc" id="aftrender_8h_html_adba414b141b3605331209b8961c3ae2a"><div class="ttname"><a href="ftrender_8h.html#adba414b141b3605331209b8961c3ae2a">FT_Renderer_GetCBoxFunc</a></div><div class="ttdeci">void(* FT_Renderer_GetCBoxFunc)(FT_Renderer renderer, FT_GlyphSlot slot, FT_BBox *cbox)</div><div class="ttdef"><b>Definition</b> ftrender.h:101</div></div>
+<div class="ttc" id="aftrender_8h_html_adc8ebea2acb67a2b67941fecdc918862"><div class="ttname"><a href="ftrender_8h.html#adc8ebea2acb67a2b67941fecdc918862">FT_Renderer_Class</a></div><div class="ttdeci">struct FT_Renderer_Class_ FT_Renderer_Class</div></div>
+<div class="ttc" id="aftrender_8h_html_af02fef21aa5228df77966d9492c33e16"><div class="ttname"><a href="ftrender_8h.html#af02fef21aa5228df77966d9492c33e16">FT_Renderer_RenderFunc</a></div><div class="ttdeci">FT_Error(* FT_Renderer_RenderFunc)(FT_Renderer renderer, FT_GlyphSlot slot, FT_UInt mode, FT_Vector *origin)</div><div class="ttdef"><b>Definition</b> ftrender.h:88</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="afttypes_8h_html_a00f9e6a0ddd7bc55f79b2f4b5b867266"><div class="ttname"><a href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></div><div class="ttdeci">void * FT_Pointer</div><div class="ttdef"><b>Definition</b> fttypes.h:278</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a77b77ff4d86f1c3a791463b762cfe60e"><div class="ttname"><a href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div><div class="ttdeci">int FT_Int</div><div class="ttdef"><b>Definition</b> fttypes.h:187</div></div>
+<div class="ttc" id="afttypes_8h_html_aa6f56f1da1b9036f07db19fbc39c8aea"><div class="ttname"><a href="fttypes_8h.html#aa6f56f1da1b9036f07db19fbc39c8aea">FT_Matrix</a></div><div class="ttdeci">struct FT_Matrix_ FT_Matrix</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_a7881ad6a13b0fe28b8473fa7ee6f28c2"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#a7881ad6a13b0fe28b8473fa7ee6f28c2">FT_Module_Destructor</a></div><div class="ttdeci">void(* FT_Module_Destructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:73</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ac4b84675e9663d3c1d686a57e99fe400a165f45bb058e054226de3bdd013a4b8f">ft_module_renderer</a></div><div class="ttdeci">@ ft_module_renderer</div><div class="ttdef"><b>Definition</b> ftmodule.h:52</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_ae0a0ec80683e4845d953fcbb7e6af093"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#ae0a0ec80683e4845d953fcbb7e6af093">FT_Module_Constructor</a></div><div class="ttdeci">FT_Error(* FT_Module_Constructor)(FT_Module module)</div><div class="ttdef"><b>Definition</b> ftmodule.h:70</div></div>
+<div class="ttc" id="ainclude_2freetype_2ftmodule_8h_html_af078ba2b906d2553add818593ab784ed"><div class="ttname"><a href="include_2freetype_2ftmodule_8h.html#af078ba2b906d2553add818593ab784ed">FT_Module_Requester</a></div><div class="ttdeci">FT_Module_Interface(* FT_Module_Requester)(FT_Module module, const char *name)</div><div class="ttdef"><b>Definition</b> ftmodule.h:76</div></div>
+<div class="ttc" id="arasterrs_8h_html"><div class="ttname"><a href="rasterrs_8h.html">rasterrs.h</a></div></div>
+<div class="ttc" id="astruct_f_t___b_box___html_a1f2a5d0565d496c1d41e43d018f45add"><div class="ttname"><a href="struct_f_t___b_box__.html#a1f2a5d0565d496c1d41e43d018f45add">FT_BBox_::xMin</a></div><div class="ttdeci">FT_Pos xMin</div><div class="ttdef"><b>Definition</b> ftimage.h:104</div></div>
+<div class="ttc" id="astruct_f_t___b_box___html_a77084921589f386a8a593ae1f25b1569"><div class="ttname"><a href="struct_f_t___b_box__.html#a77084921589f386a8a593ae1f25b1569">FT_BBox_::yMax</a></div><div class="ttdeci">FT_Pos yMax</div><div class="ttdef"><b>Definition</b> ftimage.h:105</div></div>
+<div class="ttc" id="astruct_f_t___b_box___html_a959ca1d5bc1c5338da0d85c8e7135f4e"><div class="ttname"><a href="struct_f_t___b_box__.html#a959ca1d5bc1c5338da0d85c8e7135f4e">FT_BBox_::yMin</a></div><div class="ttdeci">FT_Pos yMin</div><div class="ttdef"><b>Definition</b> ftimage.h:104</div></div>
+<div class="ttc" id="astruct_f_t___b_box___html_ac6da5c44f4cb7b97eef1f438eb69c0ec"><div class="ttname"><a href="struct_f_t___b_box__.html#ac6da5c44f4cb7b97eef1f438eb69c0ec">FT_BBox_::xMax</a></div><div class="ttdeci">FT_Pos xMax</div><div class="ttdef"><b>Definition</b> ftimage.h:105</div></div>
+<div class="ttc" id="astruct_f_t___bitmap___html_a1b6bb20b30fe087e3fc87a0eb37730c0"><div class="ttname"><a href="struct_f_t___bitmap__.html#a1b6bb20b30fe087e3fc87a0eb37730c0">FT_Bitmap_::rows</a></div><div class="ttdeci">int rows</div><div class="ttdef"><b>Definition</b> ftimage.h:287</div></div>
+<div class="ttc" id="astruct_f_t___bitmap___html_a415d78060f8012d312703c9792ec005a"><div class="ttname"><a href="struct_f_t___bitmap__.html#a415d78060f8012d312703c9792ec005a">FT_Bitmap_::num_grays</a></div><div class="ttdeci">short num_grays</div><div class="ttdef"><b>Definition</b> ftimage.h:291</div></div>
+<div class="ttc" id="astruct_f_t___bitmap___html_a5cc5e0fe42a93a86e16706ad52e087a2"><div class="ttname"><a href="struct_f_t___bitmap__.html#a5cc5e0fe42a93a86e16706ad52e087a2">FT_Bitmap_::pixel_mode</a></div><div class="ttdeci">char pixel_mode</div><div class="ttdef"><b>Definition</b> ftimage.h:292</div></div>
+<div class="ttc" id="astruct_f_t___bitmap___html_a76439b1d3c13b81ca506108cd1623284"><div class="ttname"><a href="struct_f_t___bitmap__.html#a76439b1d3c13b81ca506108cd1623284">FT_Bitmap_::buffer</a></div><div class="ttdeci">unsigned char * buffer</div><div class="ttdef"><b>Definition</b> ftimage.h:290</div></div>
+<div class="ttc" id="astruct_f_t___bitmap___html_a7b5e6252dd91a3809fe80ebbeb6720eb"><div class="ttname"><a href="struct_f_t___bitmap__.html#a7b5e6252dd91a3809fe80ebbeb6720eb">FT_Bitmap_::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> ftimage.h:288</div></div>
+<div class="ttc" id="astruct_f_t___bitmap___html_afdee595846e1188c7a76d0cec9d85cf2"><div class="ttname"><a href="struct_f_t___bitmap__.html#afdee595846e1188c7a76d0cec9d85cf2">FT_Bitmap_::pitch</a></div><div class="ttdeci">int pitch</div><div class="ttdef"><b>Definition</b> ftimage.h:289</div></div>
+<div class="ttc" id="astruct_f_t___glyph_slot_rec___html_a0c150c0fb007e49fe4b9db6a69df53b7"><div class="ttname"><a href="struct_f_t___glyph_slot_rec__.html#a0c150c0fb007e49fe4b9db6a69df53b7">FT_GlyphSlotRec_::bitmap_top</a></div><div class="ttdeci">FT_Int bitmap_top</div><div class="ttdef"><b>Definition</b> freetype.h:1376</div></div>
+<div class="ttc" id="astruct_f_t___glyph_slot_rec___html_a7e47f0471336ac68e3c72312a3349dc4"><div class="ttname"><a href="struct_f_t___glyph_slot_rec__.html#a7e47f0471336ac68e3c72312a3349dc4">FT_GlyphSlotRec_::bitmap_left</a></div><div class="ttdeci">FT_Int bitmap_left</div><div class="ttdef"><b>Definition</b> freetype.h:1375</div></div>
+<div class="ttc" id="astruct_f_t___glyph_slot_rec___html_a8c50199e30b763b8e2a645af04a1f293"><div class="ttname"><a href="struct_f_t___glyph_slot_rec__.html#a8c50199e30b763b8e2a645af04a1f293">FT_GlyphSlotRec_::bitmap</a></div><div class="ttdeci">FT_Bitmap bitmap</div><div class="ttdef"><b>Definition</b> freetype.h:1374</div></div>
+<div class="ttc" id="astruct_f_t___glyph_slot_rec___html_a8e46dd5d808079bdcba68056d6476d8d"><div class="ttname"><a href="struct_f_t___glyph_slot_rec__.html#a8e46dd5d808079bdcba68056d6476d8d">FT_GlyphSlotRec_::outline</a></div><div class="ttdeci">FT_Outline outline</div><div class="ttdef"><b>Definition</b> freetype.h:1378</div></div>
+<div class="ttc" id="astruct_f_t___glyph_slot_rec___html_acc83081448a1fe46e6c4184090df8bc6"><div class="ttname"><a href="struct_f_t___glyph_slot_rec__.html#acc83081448a1fe46e6c4184090df8bc6">FT_GlyphSlotRec_::flags</a></div><div class="ttdeci">FT_UInt flags</div><div class="ttdef"><b>Definition</b> freetype.h:1364</div></div>
+<div class="ttc" id="astruct_f_t___glyph_slot_rec___html_afcd35188ff4c3d5cbb518602d05b2807"><div class="ttname"><a href="struct_f_t___glyph_slot_rec__.html#afcd35188ff4c3d5cbb518602d05b2807">FT_GlyphSlotRec_::format</a></div><div class="ttdeci">FT_Glyph_Format format</div><div class="ttdef"><b>Definition</b> freetype.h:1372</div></div>
+<div class="ttc" id="astruct_f_t___library_rec___html_a798afdcaf0cda349eb454b769abfa251"><div class="ttname"><a href="struct_f_t___library_rec__.html#a798afdcaf0cda349eb454b769abfa251">FT_LibraryRec_::raster_pool_size</a></div><div class="ttdeci">FT_ULong raster_pool_size</div><div class="ttdef"><b>Definition</b> ftobjs.h:711</div></div>
+<div class="ttc" id="astruct_f_t___library_rec___html_aa8dd799d2efb7817b05c4a02a6828275"><div class="ttname"><a href="struct_f_t___library_rec__.html#aa8dd799d2efb7817b05c4a02a6828275">FT_LibraryRec_::raster_pool</a></div><div class="ttdeci">FT_Byte * raster_pool</div><div class="ttdef"><b>Definition</b> ftobjs.h:709</div></div>
+<div class="ttc" id="astruct_f_t___module_rec___html_a33113e9eb2d6cd8ee6666da75ff8e108"><div class="ttname"><a href="struct_f_t___module_rec__.html#a33113e9eb2d6cd8ee6666da75ff8e108">FT_ModuleRec_::memory</a></div><div class="ttdeci">FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftobjs.h:405</div></div>
+<div class="ttc" id="astruct_f_t___raster___funcs___html_a3b37c781e54cf933cb60f57f2d45b32c"><div class="ttname"><a href="struct_f_t___raster___funcs__.html#a3b37c781e54cf933cb60f57f2d45b32c">FT_Raster_Funcs_::raster_set_mode</a></div><div class="ttdeci">FT_Raster_SetModeFunc raster_set_mode</div><div class="ttdef"><b>Definition</b> ftimage.h:1226</div></div>
+<div class="ttc" id="astruct_f_t___raster___funcs___html_a91e9decd6066090a5f306f33f9815d39"><div class="ttname"><a href="struct_f_t___raster___funcs__.html#a91e9decd6066090a5f306f33f9815d39">FT_Raster_Funcs_::raster_reset</a></div><div class="ttdeci">FT_Raster_ResetFunc raster_reset</div><div class="ttdef"><b>Definition</b> ftimage.h:1225</div></div>
+<div class="ttc" id="astruct_f_t___raster___params___html_a1a28ab69b8296b4378886d1a2b57d333"><div class="ttname"><a href="struct_f_t___raster___params__.html#a1a28ab69b8296b4378886d1a2b57d333">FT_Raster_Params_::flags</a></div><div class="ttdeci">int flags</div><div class="ttdef"><b>Definition</b> ftimage.h:1046</div></div>
+<div class="ttc" id="astruct_f_t___raster___params___html_a68ad9773cdf95894d1a1fd883cbc6a5d"><div class="ttname"><a href="struct_f_t___raster___params__.html#a68ad9773cdf95894d1a1fd883cbc6a5d">FT_Raster_Params_::target</a></div><div class="ttdeci">FT_Bitmap * target</div><div class="ttdef"><b>Definition</b> ftimage.h:1044</div></div>
+<div class="ttc" id="astruct_f_t___raster___params___html_a7664d717dc94aa78aeb61cc1bb28f0c3"><div class="ttname"><a href="struct_f_t___raster___params__.html#a7664d717dc94aa78aeb61cc1bb28f0c3">FT_Raster_Params_::source</a></div><div class="ttdeci">void * source</div><div class="ttdef"><b>Definition</b> ftimage.h:1045</div></div>
+<div class="ttc" id="astruct_f_t___renderer___class___html_a5af75b9f582f98f9f74dbcbc530c7e88"><div class="ttname"><a href="struct_f_t___renderer___class__.html#a5af75b9f582f98f9f74dbcbc530c7e88">FT_Renderer_Class_::raster_class</a></div><div class="ttdeci">FT_Raster_Funcs * raster_class</div><div class="ttdef"><b>Definition</b> ftrender.h:154</div></div>
+<div class="ttc" id="astruct_f_t___renderer_rec___html_a2b13c0a776ea7f589f41f576f9c4e8ad"><div class="ttname"><a href="struct_f_t___renderer_rec__.html#a2b13c0a776ea7f589f41f576f9c4e8ad">FT_RendererRec_::clazz</a></div><div class="ttdeci">FT_Renderer_Class * clazz</div><div class="ttdef"><b>Definition</b> ftobjs.h:560</div></div>
+<div class="ttc" id="astruct_f_t___renderer_rec___html_a478b14f577b633cea7043fb17d404721"><div class="ttname"><a href="struct_f_t___renderer_rec__.html#a478b14f577b633cea7043fb17d404721">FT_RendererRec_::glyph_format</a></div><div class="ttdeci">FT_Glyph_Format glyph_format</div><div class="ttdef"><b>Definition</b> ftobjs.h:561</div></div>
+<div class="ttc" id="astruct_f_t___renderer_rec___html_a6dc07268fc39d9dde130a5708607d19d"><div class="ttname"><a href="struct_f_t___renderer_rec__.html#a6dc07268fc39d9dde130a5708607d19d">FT_RendererRec_::raster_render</a></div><div class="ttdeci">FT_Raster_Render_Func raster_render</div><div class="ttdef"><b>Definition</b> ftobjs.h:565</div></div>
+<div class="ttc" id="astruct_f_t___renderer_rec___html_a7c93326898f03a9eb224f57104fa2433"><div class="ttname"><a href="struct_f_t___renderer_rec__.html#a7c93326898f03a9eb224f57104fa2433">FT_RendererRec_::root</a></div><div class="ttdeci">FT_ModuleRec root</div><div class="ttdef"><b>Definition</b> ftobjs.h:559</div></div>
+<div class="ttc" id="astruct_f_t___renderer_rec___html_a9c54a2da84f5892e0563d032ebd1ee09"><div class="ttname"><a href="struct_f_t___renderer_rec__.html#a9c54a2da84f5892e0563d032ebd1ee09">FT_RendererRec_::raster</a></div><div class="ttdeci">FT_Raster raster</div><div class="ttdef"><b>Definition</b> ftobjs.h:564</div></div>
+<div class="ttc" id="astruct_f_t___vector___html_a941e818e6dfca06409cddff4f325f74c"><div class="ttname"><a href="struct_f_t___vector__.html#a941e818e6dfca06409cddff4f325f74c">FT_Vector_::x</a></div><div class="ttdeci">FT_Pos x</div><div class="ttdef"><b>Definition</b> ftimage.h:77</div></div>
+<div class="ttc" id="astruct_f_t___vector___html_ac3246ed214e880047ec74eeb15f8b973"><div class="ttname"><a href="struct_f_t___vector__.html#ac3246ed214e880047ec74eeb15f8b973">FT_Vector_::y</a></div><div class="ttdeci">FT_Pos y</div><div class="ttdef"><b>Definition</b> ftimage.h:78</div></div>
+<div class="ttc" id="atest__trig_8c_html_af10dacfa214e2575bb2e0ee407c242e0"><div class="ttname"><a href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a></div><div class="ttdeci">static error</div><div class="ttdef"><b>Definition</b> test_trig.c:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_22d896c3bb8709076dba3dedb0f51608.html">raster</a></li><li class="navelem"><a href="ftrend1_8c.html">ftrend1.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

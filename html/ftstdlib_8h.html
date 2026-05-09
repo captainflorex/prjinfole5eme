@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/config/ftstdlib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftstdlib_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ftstdlib.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;setjmp.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ftstdlib.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ftstdlib_8h__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2include_2freetype_2config_2ftstdlib_8h" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="ftstdlib_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad8befffe03e650f82840ac5b5941af16" id="r_ad8befffe03e650f82840ac5b5941af16"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad8befffe03e650f82840ac5b5941af16">FT_UINT_MAX</a>&#160;&#160;&#160;UINT_MAX</td></tr>
+<tr class="memitem:ad00221e79d65c837db57262e97458eee" id="r_ad00221e79d65c837db57262e97458eee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad00221e79d65c837db57262e97458eee">FT_ULONG_MAX</a>&#160;&#160;&#160;ULONG_MAX</td></tr>
+<tr class="memitem:ac124c6ed7204f2719850ff7ce249b90d" id="r_ac124c6ed7204f2719850ff7ce249b90d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac124c6ed7204f2719850ff7ce249b90d">ft_isalnum</a>&#160;&#160;&#160;isalnum</td></tr>
+<tr class="memitem:afde36b651923adb720d150a36dd9707b" id="r_afde36b651923adb720d150a36dd9707b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afde36b651923adb720d150a36dd9707b">ft_isupper</a>&#160;&#160;&#160;isupper</td></tr>
+<tr class="memitem:a3102506d2e8943d65c33dfeb6fb2a9d7" id="r_a3102506d2e8943d65c33dfeb6fb2a9d7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3102506d2e8943d65c33dfeb6fb2a9d7">ft_islower</a>&#160;&#160;&#160;islower</td></tr>
+<tr class="memitem:a710cb52f1d5bc42289ad867f0692125d" id="r_a710cb52f1d5bc42289ad867f0692125d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a710cb52f1d5bc42289ad867f0692125d">ft_xdigit</a>&#160;&#160;&#160;isxdigit</td></tr>
+<tr class="memitem:abaff3a8b4e899bcb97943b8cfea8e409" id="r_abaff3a8b4e899bcb97943b8cfea8e409"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abaff3a8b4e899bcb97943b8cfea8e409">ft_strlen</a>&#160;&#160;&#160;strlen</td></tr>
+<tr class="memitem:a6b4c8a4f84eee3fe618812761ae78adb" id="r_a6b4c8a4f84eee3fe618812761ae78adb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6b4c8a4f84eee3fe618812761ae78adb">ft_strcmp</a>&#160;&#160;&#160;strcmp</td></tr>
+<tr class="memitem:a844765472a827c9185f0fd5ebfbf5903" id="r_a844765472a827c9185f0fd5ebfbf5903"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a844765472a827c9185f0fd5ebfbf5903">ft_strncmp</a>&#160;&#160;&#160;strncmp</td></tr>
+<tr class="memitem:a0b36ea64fb3c93ebf51e44bfac5f53cc" id="r_a0b36ea64fb3c93ebf51e44bfac5f53cc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0b36ea64fb3c93ebf51e44bfac5f53cc">ft_memcpy</a>&#160;&#160;&#160;memcpy</td></tr>
+<tr class="memitem:ae2a1654d1d0b2d97e0f0e79fbc96401d" id="r_ae2a1654d1d0b2d97e0f0e79fbc96401d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae2a1654d1d0b2d97e0f0e79fbc96401d">ft_strcpy</a>&#160;&#160;&#160;strcpy</td></tr>
+<tr class="memitem:a8a7f6553d4747d96dc34db4a8287d3ff" id="r_a8a7f6553d4747d96dc34db4a8287d3ff"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8a7f6553d4747d96dc34db4a8287d3ff">ft_strncpy</a>&#160;&#160;&#160;strncpy</td></tr>
+<tr class="memitem:a201df32e472007bb839e88dcf53a8240" id="r_a201df32e472007bb839e88dcf53a8240"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a201df32e472007bb839e88dcf53a8240">ft_memset</a>&#160;&#160;&#160;memset</td></tr>
+<tr class="memitem:a7fdd658afbbffabe132ff10f9d40bb6c" id="r_a7fdd658afbbffabe132ff10f9d40bb6c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7fdd658afbbffabe132ff10f9d40bb6c">ft_memmove</a>&#160;&#160;&#160;memmove</td></tr>
+<tr class="memitem:a472a9d41583c5334151534ba3d33ad21" id="r_a472a9d41583c5334151534ba3d33ad21"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a472a9d41583c5334151534ba3d33ad21">ft_memcmp</a>&#160;&#160;&#160;memcmp</td></tr>
+<tr class="memitem:a518accba99e70c7dfdb1c322053d8155" id="r_a518accba99e70c7dfdb1c322053d8155"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a518accba99e70c7dfdb1c322053d8155">ft_sprintf</a>&#160;&#160;&#160;sprintf</td></tr>
+<tr class="memitem:ae4644fd6563350e49d30fa19a216e665" id="r_ae4644fd6563350e49d30fa19a216e665"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae4644fd6563350e49d30fa19a216e665">ft_qsort</a>&#160;&#160;&#160;qsort</td></tr>
+<tr class="memitem:af9ab4b7891574a684d1d1c1d77625e12" id="r_af9ab4b7891574a684d1d1c1d77625e12"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af9ab4b7891574a684d1d1c1d77625e12">ft_exit</a>&#160;&#160;&#160;exit    /* only used to exit from unhandled exceptions */</td></tr>
+<tr class="memitem:acec018207ada3f522f90398939b28e34" id="r_acec018207ada3f522f90398939b28e34"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acec018207ada3f522f90398939b28e34">ft_atoi</a>&#160;&#160;&#160;atoi</td></tr>
+<tr class="memitem:a4c13ff957e7b63737a04c178c5b0fd86" id="r_a4c13ff957e7b63737a04c178c5b0fd86"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4c13ff957e7b63737a04c178c5b0fd86">ft_jmp_buf</a>&#160;&#160;&#160;jmp_buf   /* note: this cannot be a typedef since */</td></tr>
+<tr class="memitem:a9f78aefa3ee3705664c1734501bd763e" id="r_a9f78aefa3ee3705664c1734501bd763e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f78aefa3ee3705664c1734501bd763e">ft_setjmp</a>&#160;&#160;&#160;setjmp    /* same thing here */</td></tr>
+<tr class="memitem:a5a5bcdc06f1f7716f5a7d11360962f3b" id="r_a5a5bcdc06f1f7716f5a7d11360962f3b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5a5bcdc06f1f7716f5a7d11360962f3b">ft_longjmp</a>&#160;&#160;&#160;longjmp   /* &quot;               */</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="acec018207ada3f522f90398939b28e34" name="acec018207ada3f522f90398939b28e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec018207ada3f522f90398939b28e34">&#9670;&#160;</a></span>ft_atoi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_atoi&#160;&#160;&#160;atoi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9ab4b7891574a684d1d1c1d77625e12" name="af9ab4b7891574a684d1d1c1d77625e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ab4b7891574a684d1d1c1d77625e12">&#9670;&#160;</a></span>ft_exit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_exit&#160;&#160;&#160;exit    /* only used to exit from unhandled exceptions */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac124c6ed7204f2719850ff7ce249b90d" name="ac124c6ed7204f2719850ff7ce249b90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac124c6ed7204f2719850ff7ce249b90d">&#9670;&#160;</a></span>ft_isalnum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_isalnum&#160;&#160;&#160;isalnum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3102506d2e8943d65c33dfeb6fb2a9d7" name="a3102506d2e8943d65c33dfeb6fb2a9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3102506d2e8943d65c33dfeb6fb2a9d7">&#9670;&#160;</a></span>ft_islower</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_islower&#160;&#160;&#160;islower</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afde36b651923adb720d150a36dd9707b" name="afde36b651923adb720d150a36dd9707b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde36b651923adb720d150a36dd9707b">&#9670;&#160;</a></span>ft_isupper</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_isupper&#160;&#160;&#160;isupper</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c13ff957e7b63737a04c178c5b0fd86" name="a4c13ff957e7b63737a04c178c5b0fd86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c13ff957e7b63737a04c178c5b0fd86">&#9670;&#160;</a></span>ft_jmp_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_jmp_buf&#160;&#160;&#160;jmp_buf   /* note: this cannot be a typedef since */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a5bcdc06f1f7716f5a7d11360962f3b" name="a5a5bcdc06f1f7716f5a7d11360962f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5bcdc06f1f7716f5a7d11360962f3b">&#9670;&#160;</a></span>ft_longjmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_longjmp&#160;&#160;&#160;longjmp   /* &quot;               */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a472a9d41583c5334151534ba3d33ad21" name="a472a9d41583c5334151534ba3d33ad21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472a9d41583c5334151534ba3d33ad21">&#9670;&#160;</a></span>ft_memcmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_memcmp&#160;&#160;&#160;memcmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b36ea64fb3c93ebf51e44bfac5f53cc" name="a0b36ea64fb3c93ebf51e44bfac5f53cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b36ea64fb3c93ebf51e44bfac5f53cc">&#9670;&#160;</a></span>ft_memcpy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_memcpy&#160;&#160;&#160;memcpy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fdd658afbbffabe132ff10f9d40bb6c" name="a7fdd658afbbffabe132ff10f9d40bb6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fdd658afbbffabe132ff10f9d40bb6c">&#9670;&#160;</a></span>ft_memmove</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_memmove&#160;&#160;&#160;memmove</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a201df32e472007bb839e88dcf53a8240" name="a201df32e472007bb839e88dcf53a8240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201df32e472007bb839e88dcf53a8240">&#9670;&#160;</a></span>ft_memset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_memset&#160;&#160;&#160;memset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4644fd6563350e49d30fa19a216e665" name="ae4644fd6563350e49d30fa19a216e665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4644fd6563350e49d30fa19a216e665">&#9670;&#160;</a></span>ft_qsort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_qsort&#160;&#160;&#160;qsort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f78aefa3ee3705664c1734501bd763e" name="a9f78aefa3ee3705664c1734501bd763e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f78aefa3ee3705664c1734501bd763e">&#9670;&#160;</a></span>ft_setjmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_setjmp&#160;&#160;&#160;setjmp    /* same thing here */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a518accba99e70c7dfdb1c322053d8155" name="a518accba99e70c7dfdb1c322053d8155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a518accba99e70c7dfdb1c322053d8155">&#9670;&#160;</a></span>ft_sprintf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_sprintf&#160;&#160;&#160;sprintf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b4c8a4f84eee3fe618812761ae78adb" name="a6b4c8a4f84eee3fe618812761ae78adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4c8a4f84eee3fe618812761ae78adb">&#9670;&#160;</a></span>ft_strcmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_strcmp&#160;&#160;&#160;strcmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2a1654d1d0b2d97e0f0e79fbc96401d" name="ae2a1654d1d0b2d97e0f0e79fbc96401d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a1654d1d0b2d97e0f0e79fbc96401d">&#9670;&#160;</a></span>ft_strcpy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_strcpy&#160;&#160;&#160;strcpy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaff3a8b4e899bcb97943b8cfea8e409" name="abaff3a8b4e899bcb97943b8cfea8e409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaff3a8b4e899bcb97943b8cfea8e409">&#9670;&#160;</a></span>ft_strlen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_strlen&#160;&#160;&#160;strlen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a844765472a827c9185f0fd5ebfbf5903" name="a844765472a827c9185f0fd5ebfbf5903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844765472a827c9185f0fd5ebfbf5903">&#9670;&#160;</a></span>ft_strncmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_strncmp&#160;&#160;&#160;strncmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a7f6553d4747d96dc34db4a8287d3ff" name="a8a7f6553d4747d96dc34db4a8287d3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7f6553d4747d96dc34db4a8287d3ff">&#9670;&#160;</a></span>ft_strncpy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_strncpy&#160;&#160;&#160;strncpy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8befffe03e650f82840ac5b5941af16" name="ad8befffe03e650f82840ac5b5941af16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8befffe03e650f82840ac5b5941af16">&#9670;&#160;</a></span>FT_UINT_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_UINT_MAX&#160;&#160;&#160;UINT_MAX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad00221e79d65c837db57262e97458eee" name="ad00221e79d65c837db57262e97458eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00221e79d65c837db57262e97458eee">&#9670;&#160;</a></span>FT_ULONG_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_ULONG_MAX&#160;&#160;&#160;ULONG_MAX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a710cb52f1d5bc42289ad867f0692125d" name="a710cb52f1d5bc42289ad867f0692125d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710cb52f1d5bc42289ad867f0692125d">&#9670;&#160;</a></span>ft_xdigit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ft_xdigit&#160;&#160;&#160;isxdigit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_98b60b0b7df77073d5ec96fb1f13f4ae.html">config</a></li><li class="navelem"><a href="ftstdlib_8h.html">ftstdlib.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

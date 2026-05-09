@@ -1,0 +1,25 @@
+digraph "FT_GlyphLoader_Reset"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="FT_GlyphLoader_Reset",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_GlyphLoader_Done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a920c9ede2b8f63e3dd25f51daee360ab",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Destroy_Driver",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a59a7661c2e189f019982eb38d8b7136d",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Destroy_Module",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a3e1ed8be3b28f02ad5fb8ea1f90bde53",tooltip=" "];
+  Node2 -> Node6 [id="edge4_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="FT_Add_Module",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a537c6119249420ea935f0e61cbee5079",tooltip=" "];
+  Node6 -> Node6 [id="edge5_Node000006_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node2 [id="edge6_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node16 [id="edge7_Node000002_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="ft_glyphslot_done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a62027096d1d8097fac96d4899125ece2",tooltip=" "];
+  Node16 -> Node17 [id="edge8_Node000016_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="FT_Done_GlyphSlot",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#ad0c3fbaead98eb3dc1e8dec850691b8e",tooltip=" "];
+  Node17 -> Node17 [id="edge9_Node000017_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge10_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

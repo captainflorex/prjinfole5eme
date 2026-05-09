@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Info S2: Référence du fichier src/menu.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet Info S2<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Jeu de plateforme réalisé en C avec Allegro</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('menu_8c.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Recherche',true);
+});
+</script>
+<div id="main-nav"></div>
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier menu.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;allegro.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="src_2alfont_8h_source.html">alfont.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="src_2menu_8h_source.html">menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2affichage_8h_source.html">affichage.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de menu.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c__incl.png" border="0" usemap="#asrc_2menu_8c" loading="lazy" alt=""/></div>
+<map name="asrc_2menu_8c" id="asrc_2menu_8c">
+<area shape="rect" title=" " alt="" coords="265,5,367,38"/>
+<area shape="rect" title=" " alt="" coords="155,409,240,441"/>
+<area shape="poly" title=" " alt="" coords="263,28,187,41,145,51,103,67,66,86,35,112,15,143,10,162,8,182,8,265,11,290,21,312,35,332,53,350,96,380,143,403,137,405,94,385,50,354,31,336,16,315,6,291,3,265,3,182,5,161,10,141,31,108,63,82,101,62,143,46,186,35,267,24"/>
+<area shape="rect" href="src_2alfont_8h.html" title=" " alt="" coords="103,86,180,119"/>
+<area shape="poly" title=" " alt="" coords="279,41,192,81,189,77,283,37"/>
+<area shape="rect" href="src_2menu_8h.html" title=" " alt="" coords="214,167,290,199"/>
+<area shape="poly" title=" " alt="" coords="292,40,273,61,256,87,249,119,249,152,244,151,243,119,251,85,269,57,295,36"/>
+<area shape="rect" href="src_2affichage_8h.html" title=" " alt="" coords="265,86,367,119"/>
+<area shape="poly" title=" " alt="" coords="317,36,319,71,313,70,315,41"/>
+<area shape="rect" title=" " alt="" coords="391,86,468,119"/>
+<area shape="poly" title=" " alt="" coords="338,36,397,76,391,77,338,41"/>
+<area shape="rect" title=" " alt="" coords="492,86,562,119"/>
+<area shape="poly" title=" " alt="" coords="358,36,479,82,474,83,358,41"/>
+<area shape="rect" title=" " alt="" coords="586,86,659,119"/>
+<area shape="poly" title=" " alt="" coords="367,32,574,84,569,87,367,37"/>
+<area shape="poly" title=" " alt="" coords="118,121,100,142,84,168,81,183,84,199,103,256,128,310,180,396,175,396,124,312,98,258,79,200,75,183,79,166,96,138,121,117"/>
+<area shape="rect" href="src_2alfontdll_8h.html" title=" " alt="" coords="93,167,190,199"/>
+<area shape="poly" title=" " alt="" coords="142,116,144,152,139,151,141,122"/>
+<area shape="poly" title=" " alt="" coords="245,198,225,248,209,326,201,395,197,392,204,325,220,247,242,202"/>
+<area shape="rect" href="src_2entites_8h.html" title=" " alt="" coords="235,247,317,280"/>
+<area shape="poly" title=" " alt="" coords="258,197,269,233,264,232,256,202"/>
+<area shape="rect" href="src_2eclair_8h.html" title=" " alt="" coords="238,328,312,361"/>
+<area shape="poly" title=" " alt="" coords="277,278,278,314,273,311,274,283"/>
+<area shape="poly" title=" " alt="" coords="262,360,225,400,222,395,257,362"/>
+<area shape="poly" title=" " alt="" coords="323,117,339,163,351,227,353,262,350,297,342,331,326,362,312,379,294,393,256,412,254,407,292,388,308,375,322,359,337,329,345,296,348,262,346,227,334,165,321,122"/>
+<area shape="poly" title=" " alt="" coords="305,117,276,156,272,153,302,121"/>
+<area shape="poly" title=" " alt="" coords="316,117,314,156,305,200,293,234,288,231,300,199,309,156,314,122"/>
+</map>
+</div>
+</div>
+<p><a href="menu_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a9f7f93c6f1e2b624e8cf71df3f37517a" id="r_a9f7f93c6f1e2b624e8cf71df3f37517a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9f7f93c6f1e2b624e8cf71df3f37517a">menu_init</a> (<a class="el" href="struct_etat_menu.html">EtatMenu</a> *em)</td></tr>
+<tr class="memitem:a3913bce4e975a52d19ed8450f553b4f2" id="r_a3913bce4e975a52d19ed8450f553b4f2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3913bce4e975a52d19ed8450f553b4f2">menu_mettre_a_jour</a> (<a class="el" href="struct_etat_menu.html">EtatMenu</a> *em)</td></tr>
+<tr class="memitem:a015a16da2577c972ef258e595f5634b0" id="r_a015a16da2577c972ef258e595f5634b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a015a16da2577c972ef258e595f5634b0">menu_saisir_pseudo</a> (<a class="el" href="struct_etat_menu.html">EtatMenu</a> *em)</td></tr>
+<tr class="memitem:a5ea310a2d8bd7c9b2e2c6050629dd7b0" id="r_a5ea310a2d8bd7c9b2e2c6050629dd7b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ea310a2d8bd7c9b2e2c6050629dd7b0">afficher_menu</a> (BITMAP *tampon, const <a class="el" href="struct_etat_menu.html">EtatMenu</a> *em)</td></tr>
+<tr class="memitem:aa21de65fbde7933c3234a51ff1cf192f" id="r_aa21de65fbde7933c3234a51ff1cf192f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa21de65fbde7933c3234a51ff1cf192f">afficher_regles</a> (BITMAP *tampon)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2442016244e99e75b9b427b88a19fd47" id="r_a2442016244e99e75b9b427b88a19fd47"><td class="memItemLeft">static <a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a> = NULL</td></tr>
+<tr class="memitem:aca94600d4de5f09d04105fd4ba4251ac" id="r_aca94600d4de5f09d04105fd4ba4251ac"><td class="memItemLeft">static <a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a> = NULL</td></tr>
+<tr class="memitem:afc29a26fce12980fc0ea07dfb9af6cb1" id="r_afc29a26fce12980fc0ea07dfb9af6cb1"><td class="memItemLeft">static <a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a> = NULL</td></tr>
+<tr class="memitem:ad344e1e8f39d4f7029b79158d973604f" id="r_ad344e1e8f39d4f7029b79158d973604f"><td class="memItemLeft">static <a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a> = NULL</td></tr>
+<tr class="memitem:af2b9eff02ed27d3a363f2661f736e29e" id="r_af2b9eff02ed27d3a363f2661f736e29e"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#af2b9eff02ed27d3a363f2661f736e29e">compteur_anim</a> = 0</td></tr>
+<tr class="memitem:a499a5e286fc4181187726055786536c0" id="r_a499a5e286fc4181187726055786536c0"><td class="memItemLeft">static const char *&#160;</td><td class="memItemRight"><a class="el" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a> [<a class="el" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a>]</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a5ea310a2d8bd7c9b2e2c6050629dd7b0" name="a5ea310a2d8bd7c9b2e2c6050629dd7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea310a2d8bd7c9b2e2c6050629dd7b0">&#9670;&#160;</a></span>afficher_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_menu </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>tampon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_etat_menu.html">EtatMenu</a> *</td>          <td class="paramname"><span class="paramname"><em>em</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00093">93</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                       {</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a>)</div>
+<div class="line"><span class="lineno">   96</span>        stretch_blit(<a class="code hl_variable" href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a>, tampon, 0, 0, <a class="code hl_variable" href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a>-&gt;w, <a class="code hl_variable" href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a>-&gt;h, 0, 0, SCREEN_W, SCREEN_H);</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   98</span>        clear_to_color(tampon, makecol(10, 10, 30));</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">/* Scanlines */</span></div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; SCREEN_H; y += 4) {</div>
+<div class="line"><span class="lineno">  102</span>        drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  103</span>        set_trans_blender(0, 0, 0, 50);</div>
+<div class="line"><span class="lineno">  104</span>        hline(tampon, 0, y, SCREEN_W, makecol(0, 0, 0));</div>
+<div class="line"><span class="lineno">  105</span>        drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordtype">int</span> cx = SCREEN_W / 2;</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="comment">/* === CADRE DU TITRE === */</span></div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordtype">int</span> tx = cx - 260, ty = 45;</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordtype">int</span> tw = 520,      th = 110;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>    <span class="comment">/* Halo */</span></div>
+<div class="line"><span class="lineno">  115</span>    drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  116</span>    set_trans_blender(0, 180, 255, 30);</div>
+<div class="line"><span class="lineno">  117</span>    rectfill(tampon, tx - 10, ty - 10, tx + tw + 10, ty + th + 10, makecol(0, 180, 255));</div>
+<div class="line"><span class="lineno">  118</span>    drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    <span class="comment">/* Bordures dorÃ©es */</span></div>
+<div class="line"><span class="lineno">  121</span>    rect(tampon, tx - 5, ty - 5, tx + tw + 5, ty + th + 5, makecol(255, 180, 0));</div>
+<div class="line"><span class="lineno">  122</span>    rect(tampon, tx - 4, ty - 4, tx + tw + 4, ty + th + 4, makecol(255, 220, 80));</div>
+<div class="line"><span class="lineno">  123</span>    rect(tampon, tx - 3, ty - 3, tx + tw + 3, ty + th + 3, makecol(255, 180, 0));</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <span class="comment">/* Fond dÃ©gradÃ© */</span></div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; th; i++) {</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">int</span> r = 5  + (i * 10 / th);</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">int</span> g = 5  + (i * 5  / th);</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">int</span> b = 20 + (i * 30 / th);</div>
+<div class="line"><span class="lineno">  130</span>        hline(tampon, tx, ty + i, tx + tw, makecol(r, g, b));</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="comment">/* Bordure interne cyan */</span></div>
+<div class="line"><span class="lineno">  134</span>    rect(tampon, tx + 5, ty + 5, tx + tw - 5, ty + th - 5, makecol(0, 220, 255));</div>
+<div class="line"><span class="lineno">  135</span>    rect(tampon, tx + 6, ty + 6, tx + tw - 6, ty + th - 6, makecol(0, 150, 200));</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>    <span class="comment">/* === TITRE avec pulse === */</span></div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>) {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordtype">int</span> pulse = (int)(sin(<a class="code hl_variable" href="affichage_8c.html#af2b9eff02ed27d3a363f2661f736e29e">compteur_anim</a> * 0.05) * 3);</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>, 32 + pulse);</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>, <span class="stringliteral">&quot;SUPER BULLES&quot;</span>,</div>
+<div class="line"><span class="lineno">  142</span>                                    cx + 3, ty + 38, makecol(0, 40, 60), -1);</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>, <span class="stringliteral">&quot;SUPER BULLES&quot;</span>,</div>
+<div class="line"><span class="lineno">  144</span>                                    cx + 1, ty + 36, makecol(0, 80, 120), -1);</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>, <span class="stringliteral">&quot;SUPER BULLES&quot;</span>,</div>
+<div class="line"><span class="lineno">  146</span>                                    cx, ty + 35, makecol(0, 230, 255), -1);</div>
+<div class="line"><span class="lineno">  147</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  148</span>        textout_centre_ex(tampon, font, <span class="stringliteral">&quot;SUPER BULLES&quot;</span>, cx, ty + 35, makecol(0, 220, 255), -1);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    <span class="comment">/* Ligne dÃ©co */</span></div>
+<div class="line"><span class="lineno">  152</span>    hline(tampon, tx + 15, ty + th - 14, tx + tw - 15, makecol(255, 210, 0));</div>
+<div class="line"><span class="lineno">  153</span>    hline(tampon, tx + 25, ty + th - 12, tx + tw - 25, makecol(255, 160, 0));</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>    <span class="comment">/* === INSERT COIN clignotant === */</span></div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="affichage_8c.html#af2b9eff02ed27d3a363f2661f736e29e">compteur_anim</a> / 30) % 2 == 0) {</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>)</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>, <span class="stringliteral">&quot;&gt;&gt; INSERT COIN &lt;&lt;&quot;</span>,</div>
+<div class="line"><span class="lineno">  159</span>                                        cx, ty + th + 18, makecol(255, 255, 0), -1);</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  161</span>            textout_centre_ex(tampon, font, <span class="stringliteral">&quot;&gt;&gt; INSERT COIN &lt;&lt;&quot;</span>,</div>
+<div class="line"><span class="lineno">  162</span>                              cx, ty + th + 18, makecol(255, 255, 0), -1);</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>    <span class="comment">/* === ELEMENTS DU MENU === */</span></div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordtype">int</span> depart_y = SCREEN_H / 2 - (<a class="code hl_define" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a> * 40) / 2 + 30;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a>; i++) {</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordtype">int</span> y_elem = depart_y + i * 40;</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (i == em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a>) {</div>
+<div class="line"><span class="lineno">  172</span>            <span class="comment">/* Halo sÃ©lection */</span></div>
+<div class="line"><span class="lineno">  173</span>            drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  174</span>            set_trans_blender(255, 220, 0, 25);</div>
+<div class="line"><span class="lineno">  175</span>            rectfill(tampon, cx - 225, y_elem - 10, cx + 225, y_elem + 26, makecol(255, 220, 0));</div>
+<div class="line"><span class="lineno">  176</span>            drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>            <span class="comment">/* Cadre */</span></div>
+<div class="line"><span class="lineno">  179</span>            rectfill(tampon, cx - 220, y_elem - 8, cx + 220, y_elem + 24, makecol(15, 15, 50));</div>
+<div class="line"><span class="lineno">  180</span>            rect(tampon,     cx - 220, y_elem - 8, cx + 220, y_elem + 24, makecol(255, 220, 0));</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>            <span class="comment">/* FlÃ¨ches */</span></div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordtype">int</span> dx = (<a class="code hl_variable" href="affichage_8c.html#af2b9eff02ed27d3a363f2661f736e29e">compteur_anim</a> / 10) % 2;</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>) {</div>
+<div class="line"><span class="lineno">  185</span>                <a class="code hl_function" href="header_2alfont_8h.html#a603d851978e42deb44b6a0365a5e4935">alfont_textout_aa_ex</a>(tampon, <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>, <span class="stringliteral">&quot;&gt;&quot;</span>, cx - 210 + dx, y_elem, makecol(255, 255, 0), -1);</div>
+<div class="line"><span class="lineno">  186</span>                <a class="code hl_function" href="header_2alfont_8h.html#a603d851978e42deb44b6a0365a5e4935">alfont_textout_aa_ex</a>(tampon, <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>, <span class="stringliteral">&quot;&lt;&quot;</span>, cx + 195 - dx, y_elem, makecol(255, 255, 0), -1);</div>
+<div class="line"><span class="lineno">  187</span>            }</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>            <span class="comment">/* Texte sÃ©lectionnÃ© */</span></div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>) {</div>
+<div class="line"><span class="lineno">  191</span>                <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>, <a class="code hl_variable" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a>[i],</div>
+<div class="line"><span class="lineno">  192</span>                                            cx + 1, y_elem + 1, makecol(100, 80, 0), -1);</div>
+<div class="line"><span class="lineno">  193</span>                <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>, <a class="code hl_variable" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a>[i],</div>
+<div class="line"><span class="lineno">  194</span>                                            cx, y_elem, makecol(255, 240, 50), -1);</div>
+<div class="line"><span class="lineno">  195</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  196</span>                textout_centre_ex(tampon, font, <a class="code hl_variable" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a>[i], cx, y_elem, makecol(255, 240, 50), -1);</div>
+<div class="line"><span class="lineno">  197</span>            }</div>
+<div class="line"><span class="lineno">  198</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>) {</div>
+<div class="line"><span class="lineno">  200</span>                <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>, <a class="code hl_variable" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a>[i],</div>
+<div class="line"><span class="lineno">  201</span>                                            cx + 1, y_elem + 1, makecol(20, 20, 50), -1);</div>
+<div class="line"><span class="lineno">  202</span>                <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>, <a class="code hl_variable" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a>[i],</div>
+<div class="line"><span class="lineno">  203</span>                                            cx, y_elem, makecol(160, 170, 210), -1);</div>
+<div class="line"><span class="lineno">  204</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  205</span>                textout_centre_ex(tampon, font, <a class="code hl_variable" href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a>[i], cx, y_elem, makecol(160, 170, 210), -1);</div>
+<div class="line"><span class="lineno">  206</span>            }</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>    <span class="comment">/* === BAS === */</span></div>
+<div class="line"><span class="lineno">  211</span>    hline(tampon, 40, SCREEN_H - 70, SCREEN_W - 40, makecol(50, 50, 100));</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>) {</div>
+<div class="line"><span class="lineno">  214</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>, <span class="stringliteral">&quot;HI-SCORE : 999999&quot;</span>,</div>
+<div class="line"><span class="lineno">  215</span>                                    cx, SCREEN_H - 58, makecol(255, 80, 80), -1);</div>
+<div class="line"><span class="lineno">  216</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>, <span class="stringliteral">&quot;- 2025 SUPER BULLES -&quot;</span>,</div>
+<div class="line"><span class="lineno">  217</span>                                    cx, SCREEN_H - 38, makecol(100, 100, 180), -1);</div>
+<div class="line"><span class="lineno">  218</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>, <span class="stringliteral">&quot;FLECHES + ENTREE&quot;</span>,</div>
+<div class="line"><span class="lineno">  219</span>                                    cx, SCREEN_H - 18, makecol(80, 80, 100), -1);</div>
+<div class="line"><span class="lineno">  220</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  221</span>        textout_centre_ex(tampon, font, <span class="stringliteral">&quot;HI-SCORE : 999999&quot;</span>,     cx, SCREEN_H - 58, makecol(255, 80, 80), -1);</div>
+<div class="line"><span class="lineno">  222</span>        textout_centre_ex(tampon, font, <span class="stringliteral">&quot;- 2025 SUPER BULLES -&quot;</span>, cx, SCREEN_H - 38, makecol(100, 100, 180), -1);</div>
+<div class="line"><span class="lineno">  223</span>        textout_centre_ex(tampon, font, <span class="stringliteral">&quot;FLECHES + ENTREE&quot;</span>,      cx, SCREEN_H - 18, makecol(80, 80, 100), -1);</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="line"><span class="lineno">  225</span>}</div>
+<div class="ttc" id="aaffichage_8c_html_af2b9eff02ed27d3a363f2661f736e29e"><div class="ttname"><a href="affichage_8c.html#af2b9eff02ed27d3a363f2661f736e29e">compteur_anim</a></div><div class="ttdeci">static int compteur_anim</div><div class="ttdef"><b>Definition</b> <a href="affichage_8c_source.html#l00036">affichage.c:36</a></div></div>
+<div class="ttc" id="aheader_2affichage_8h_html_a95978b3edc79a3de210ad1d11fe78207"><div class="ttname"><a href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a></div><div class="ttdeci">BITMAP * fond_menu</div><div class="ttdef"><b>Definition</b> <a href="affichage_8c_source.html#l00011">affichage.c:11</a></div></div>
+<div class="ttc" id="aheader_2alfont_8h_html_a603d851978e42deb44b6a0365a5e4935"><div class="ttname"><a href="header_2alfont_8h.html#a603d851978e42deb44b6a0365a5e4935">alfont_textout_aa_ex</a></div><div class="ttdeci">ALFONT_DLL_DECLSPEC void alfont_textout_aa_ex(BITMAP *bmp, ALFONT_FONT *f, const char *s, int x, int y, int color, int bg)</div></div>
+<div class="ttc" id="aheader_2alfont_8h_html_a94922d1737f3b629e8cff1ea311a1d86"><div class="ttname"><a href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a></div><div class="ttdeci">ALFONT_DLL_DECLSPEC int alfont_set_font_size(ALFONT_FONT *f, int h)</div></div>
+<div class="ttc" id="aheader_2alfont_8h_html_adb9bc67114024dedb1998866922f6271"><div class="ttname"><a href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a></div><div class="ttdeci">ALFONT_DLL_DECLSPEC void alfont_textout_centre_aa_ex(BITMAP *bmp, ALFONT_FONT *f, const char *s, int x, int y, int color, int bg)</div></div>
+<div class="ttc" id="aheader_2menu_8h_html_a08500339c9e3ef0a4e5f54fb67fce728"><div class="ttname"><a href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a></div><div class="ttdeci">#define NB_ELEMENTS_MENU</div><div class="ttdef"><b>Definition</b> <a href="header_2menu_8h_source.html#l00007">menu.h:7</a></div></div>
+<div class="ttc" id="amenu_8c_html_a2442016244e99e75b9b427b88a19fd47"><div class="ttname"><a href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a></div><div class="ttdeci">static ALFONT_FONT * police_titre</div><div class="ttdef"><b>Definition</b> <a href="menu_8c_source.html#l00009">menu.c:9</a></div></div>
+<div class="ttc" id="amenu_8c_html_a499a5e286fc4181187726055786536c0"><div class="ttname"><a href="#a499a5e286fc4181187726055786536c0">LIBELLES_MENU</a></div><div class="ttdeci">static const char * LIBELLES_MENU[NB_ELEMENTS_MENU]</div><div class="ttdef"><b>Definition</b> <a href="menu_8c_source.html#l00015">menu.c:15</a></div></div>
+<div class="ttc" id="amenu_8c_html_aca94600d4de5f09d04105fd4ba4251ac"><div class="ttname"><a href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a></div><div class="ttdeci">static ALFONT_FONT * police_menu</div><div class="ttdef"><b>Definition</b> <a href="menu_8c_source.html#l00010">menu.c:10</a></div></div>
+<div class="ttc" id="amenu_8c_html_afc29a26fce12980fc0ea07dfb9af6cb1"><div class="ttname"><a href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a></div><div class="ttdeci">static ALFONT_FONT * police_petite</div><div class="ttdef"><b>Definition</b> <a href="menu_8c_source.html#l00011">menu.c:11</a></div></div>
+<div class="ttc" id="astruct_etat_menu_html_ab3544f0488f630de2d9dce4cb43a18b8"><div class="ttname"><a href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">EtatMenu::element_selectionne</a></div><div class="ttdeci">int element_selectionne</div><div class="ttdef"><b>Definition</b> <a href="header_2menu_8h_source.html#l00017">menu.h:17</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph.png" border="0" usemap="#amenu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph" id="amenu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,133,95"/>
+<area shape="rect" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86" title=" " alt="" coords="185,5,352,38"/>
+<area shape="poly" title=" " alt="" coords="127,60,196,41,192,45,129,65"/>
+<area shape="rect" href="header_2alfont_8h.html#a603d851978e42deb44b6a0365a5e4935" title=" " alt="" coords="182,63,355,95"/>
+<area shape="poly" title=" " alt="" coords="132,76,168,78,163,80,134,82"/>
+<area shape="rect" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271" title=" " alt="" coords="181,120,356,174"/>
+<area shape="poly" title=" " alt="" coords="120,93,174,113,169,115,119,99"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph.png" border="0" usemap="#amenu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph" id="amenu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,239,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="94,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa21de65fbde7933c3234a51ff1cf192f" name="aa21de65fbde7933c3234a51ff1cf192f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21de65fbde7933c3234a51ff1cf192f">&#9670;&#160;</a></span>afficher_regles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_regles </td>
+          <td>(</td>
+          <td class="paramtype">BITMAP *</td>          <td class="paramname"><span class="paramname"><em>tampon</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00227">227</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                                     {</div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a>)</div>
+<div class="line"><span class="lineno">  229</span>        blit(<a class="code hl_variable" href="header_2affichage_8h.html#a95978b3edc79a3de210ad1d11fe78207">fond_menu</a>, tampon, 0, 0, 0, 0, SCREEN_W, SCREEN_H);</div>
+<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  231</span>        clear_to_color(tampon, makecol(10, 10, 50));</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  234</span>    set_trans_blender(0, 0, 0, 190);</div>
+<div class="line"><span class="lineno">  235</span>    rectfill(tampon, 40, 30, SCREEN_W - 40, SCREEN_H - 30, makecol(0, 0, 0));</div>
+<div class="line"><span class="lineno">  236</span>    drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>    rect(tampon, 40, 30, SCREEN_W - 40, SCREEN_H - 30, makecol(255, 200, 0));</div>
+<div class="line"><span class="lineno">  239</span>    rect(tampon, 42, 32, SCREEN_W - 42, SCREEN_H - 32, makecol(100, 100, 200));</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>    <span class="comment">/* Titre des rÃ¨gles avec police_regles (taille 15) */</span></div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>) {</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>, 15);</div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>, <span class="stringliteral">&quot;REGLES DU JEU&quot;</span>,</div>
+<div class="line"><span class="lineno">  245</span>                                    SCREEN_W / 2 + 2, 47, makecol(80, 60, 0), -1);</div>
+<div class="line"><span class="lineno">  246</span>        <a class="code hl_function" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271">alfont_textout_centre_aa_ex</a>(tampon, <a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>, <span class="stringliteral">&quot;REGLES DU JEU&quot;</span>,</div>
+<div class="line"><span class="lineno">  247</span>                                    SCREEN_W / 2, 45, makecol(255, 220, 0), -1);</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>, 11);</div>
+<div class="line"><span class="lineno">  249</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  250</span>        textout_centre_ex(tampon, font, <span class="stringliteral">&quot;=== REGLES DU JEU ===&quot;</span>, SCREEN_W / 2, 50, makecol(255, 220, 0), -1);</div>
+<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *regles[] = {</div>
+<div class="line"><span class="lineno">  254</span>        <span class="stringliteral">&quot;OBJECTIF&quot;</span>,</div>
+<div class="line"><span class="lineno">  255</span>        <span class="stringliteral">&quot;  Eliminez toutes les bulles de chaque niveau sans vous faire &quot;</span>,</div>
+<div class="line"><span class="lineno">  256</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  257</span>        <span class="stringliteral">&quot;  toucher.&quot;</span>,</div>
+<div class="line"><span class="lineno">  258</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  259</span>        <span class="stringliteral">&quot;  Une partie comporte 4 niveaux de difficulte croissante &quot;</span>,</div>
+<div class="line"><span class="lineno">  260</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  261</span>        <span class="stringliteral">&quot;  + un Boss final.&quot;</span></div>
+<div class="line"><span class="lineno">  262</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  263</span>        <span class="stringliteral">&quot;DEPLACEMENT&quot;</span>,</div>
+<div class="line"><span class="lineno">  264</span>        <span class="stringliteral">&quot;  Fleche GAUCHE/DROITE : deplacer le personnage horizontalement.&quot;</span>,</div>
+<div class="line"><span class="lineno">  265</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  266</span>        <span class="stringliteral">&quot;  Le personnage est bloque sur les bords de la zone de jeu.&quot;</span>,</div>
+<div class="line"><span class="lineno">  267</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  268</span>        <span class="stringliteral">&quot;TIRS&quot;</span>,</div>
+<div class="line"><span class="lineno">  269</span>        <span class="stringliteral">&quot;  ESPACE : tirer un projectile vers le haut.&quot;</span>,</div>
+<div class="line"><span class="lineno">  270</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  271</span>        <span class="stringliteral">&quot;  Arme de base : un seul tir a la fois, vitesse constante.&quot;</span>,</div>
+<div class="line"><span class="lineno">  272</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  273</span>        <span class="stringliteral">&quot;  Des armes speciales apparaissent en detruisant des bulles :&quot;</span>,</div>
+<div class="line"><span class="lineno">  274</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  275</span>        <span class="stringliteral">&quot;  tir rapide, tirs multiples, explosions (disponibles niv. 2+).&quot;</span>,</div>
+<div class="line"><span class="lineno">  276</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  277</span>        <span class="stringliteral">&quot;BULLES&quot;</span>,</div>
+<div class="line"><span class="lineno">  278</span>        <span class="stringliteral">&quot;  Une bulle touchee se divise en 2 bulles plus petites.&quot;</span>,</div>
+<div class="line"><span class="lineno">  279</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  280</span>        <span class="stringliteral">&quot;  La plus petite taille est detruite directement.&quot;</span>,</div>
+<div class="line"><span class="lineno">  281</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  282</span>        <span class="stringliteral">&quot;  A partir du niveau 3, certaines bulles lancent des eclairs !&quot;</span>,</div>
+<div class="line"><span class="lineno">  283</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  284</span>        <span class="stringliteral">&quot;FIN DE NIVEAU&quot;</span>,</div>
+<div class="line"><span class="lineno">  285</span>        <span class="stringliteral">&quot;  Victoire : toutes les bulles eliminees dans le temps imparti.&quot;</span>,</div>
+<div class="line"><span class="lineno">  286</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  287</span>        <span class="stringliteral">&quot;  Echec    : touche par une bulle, un eclair, ou temps ecoule.&quot;</span>,</div>
+<div class="line"><span class="lineno">  288</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  289</span>        <span class="stringliteral">&quot;  Appuyez sur ECHAP pour revenir au menu.&quot;</span></div>
+<div class="line"><span class="lineno">  290</span>    };</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>    <span class="keywordtype">int</span> nb_lignes = <span class="keyword">sizeof</span>(regles) / <span class="keyword">sizeof</span>(regles[0]);</div>
+<div class="line"><span class="lineno">  293</span>    <span class="keywordtype">int</span> y = 75;</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nb_lignes; i++) {</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span> (regles[i][0] == <span class="charliteral">&#39;\0&#39;</span>) { y += 6; <span class="keywordflow">continue</span>; }</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordtype">int</span> est_titre = (regles[i][0] != <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordtype">int</span> couleur   = est_titre ? makecol(255, 220, 0) : makecol(200, 210, 230);</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>)</div>
+<div class="line"><span class="lineno">  300</span>            <a class="code hl_function" href="header_2alfont_8h.html#a603d851978e42deb44b6a0365a5e4935">alfont_textout_aa_ex</a>(tampon, <a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>, regles[i], 60, y, couleur, -1);</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  302</span>            textout_ex(tampon, font, regles[i], 60, y, couleur, -1);</div>
+<div class="line"><span class="lineno">  303</span>        y += est_titre ? 16 : 13;</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
+<div class="line"><span class="lineno">  305</span>}</div>
+<div class="ttc" id="amenu_8c_html_ad344e1e8f39d4f7029b79158d973604f"><div class="ttname"><a href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a></div><div class="ttdeci">static ALFONT_FONT * police_regles</div><div class="ttdef"><b>Definition</b> <a href="menu_8c_source.html#l00012">menu.c:12</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph.png" border="0" usemap="#amenu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph" id="amenu_8c_aa21de65fbde7933c3234a51ff1cf192f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,135,95"/>
+<area shape="rect" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86" title=" " alt="" coords="187,5,354,38"/>
+<area shape="poly" title=" " alt="" coords="129,60,198,41,194,44,131,65"/>
+<area shape="rect" href="header_2alfont_8h.html#a603d851978e42deb44b6a0365a5e4935" title=" " alt="" coords="184,63,357,95"/>
+<area shape="poly" title=" " alt="" coords="134,76,170,78,165,80,136,82"/>
+<area shape="rect" href="header_2alfont_8h.html#adb9bc67114024dedb1998866922f6271" title=" " alt="" coords="183,120,358,174"/>
+<area shape="poly" title=" " alt="" coords="121,93,176,113,171,115,121,99"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph.png" border="0" usemap="#amenu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph" id="amenu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,241,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="94,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9f7f93c6f1e2b624e8cf71df3f37517a" name="a9f7f93c6f1e2b624e8cf71df3f37517a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7f93c6f1e2b624e8cf71df3f37517a">&#9670;&#160;</a></span>menu_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menu_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_menu.html">EtatMenu</a> *</td>          <td class="paramname"><span class="paramname"><em>em</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00022">22</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                             {</div>
+<div class="line"><span class="lineno">   23</span>    em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a> = 0;</div>
+<div class="line"><span class="lineno">   24</span>    em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a5f915e5f8f3f8f065f3e75c1df8b6eac">saisie_en_cours</a>     = 0;</div>
+<div class="line"><span class="lineno">   25</span>    em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a51485ba2fa7fd3305c3db5275f018d73">afficher_regles</a>     = 0;</div>
+<div class="line"><span class="lineno">   26</span>    memset(em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a755e5e5d0bb2c1da07e6964478c4653a">pseudo_saisi</a>, 0, <a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>);</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>  = <a class="code hl_function" href="header_2alfont_8h.html#a72fd70c18de1523fc9ee42ae915e4132">alfont_load_font</a>(<span class="stringliteral">&quot;ressources/police.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>   = <a class="code hl_function" href="header_2alfont_8h.html#a72fd70c18de1523fc9ee42ae915e4132">alfont_load_font</a>(<span class="stringliteral">&quot;ressources/police.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>    <a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a> = <a class="code hl_function" href="header_2alfont_8h.html#a72fd70c18de1523fc9ee42ae915e4132">alfont_load_font</a>(<span class="stringliteral">&quot;ressources/police.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a> = <a class="code hl_function" href="header_2alfont_8h.html#a72fd70c18de1523fc9ee42ae915e4132">alfont_load_font</a>(<span class="stringliteral">&quot;ressources/police.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>)  <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#a2442016244e99e75b9b427b88a19fd47">police_titre</a>,  42);</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>)   <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#aca94600d4de5f09d04105fd4ba4251ac">police_menu</a>,   14);</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>) <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#afc29a26fce12980fc0ea07dfb9af6cb1">police_petite</a>, 12);</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>) <a class="code hl_function" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86">alfont_set_font_size</a>(<a class="code hl_variable" href="#ad344e1e8f39d4f7029b79158d973604f">police_regles</a>, 11);</div>
+<div class="line"><span class="lineno">   37</span>}</div>
+<div class="ttc" id="aheader_2alfont_8h_html_a72fd70c18de1523fc9ee42ae915e4132"><div class="ttname"><a href="header_2alfont_8h.html#a72fd70c18de1523fc9ee42ae915e4132">alfont_load_font</a></div><div class="ttdeci">ALFONT_DLL_DECLSPEC ALFONT_FONT * alfont_load_font(const char *filepathname)</div></div>
+<div class="ttc" id="aheader_2entites_8h_html_a5d2813c915f8962316bdba34165daef5"><div class="ttname"><a href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a></div><div class="ttdeci">#define PSEUDO_LEN</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00014">entites.h:14</a></div></div>
+<div class="ttc" id="astruct_etat_menu_html_a51485ba2fa7fd3305c3db5275f018d73"><div class="ttname"><a href="struct_etat_menu.html#a51485ba2fa7fd3305c3db5275f018d73">EtatMenu::afficher_regles</a></div><div class="ttdeci">int afficher_regles</div><div class="ttdef"><b>Definition</b> <a href="header_2menu_8h_source.html#l00020">menu.h:20</a></div></div>
+<div class="ttc" id="astruct_etat_menu_html_a5f915e5f8f3f8f065f3e75c1df8b6eac"><div class="ttname"><a href="struct_etat_menu.html#a5f915e5f8f3f8f065f3e75c1df8b6eac">EtatMenu::saisie_en_cours</a></div><div class="ttdeci">int saisie_en_cours</div><div class="ttdef"><b>Definition</b> <a href="header_2menu_8h_source.html#l00019">menu.h:19</a></div></div>
+<div class="ttc" id="astruct_etat_menu_html_a755e5e5d0bb2c1da07e6964478c4653a"><div class="ttname"><a href="struct_etat_menu.html#a755e5e5d0bb2c1da07e6964478c4653a">EtatMenu::pseudo_saisi</a></div><div class="ttdeci">char pseudo_saisi[PSEUDO_LEN]</div><div class="ttdef"><b>Definition</b> <a href="header_2menu_8h_source.html#l00018">menu.h:18</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph.png" border="0" usemap="#amenu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph" id="amenu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,101,67"/>
+<area shape="rect" href="header_2alfont_8h.html#a72fd70c18de1523fc9ee42ae915e4132" title=" " alt="" coords="162,5,303,38"/>
+<area shape="poly" title=" " alt="" coords="101,41,149,35,144,37,102,46"/>
+<area shape="rect" href="header_2alfont_8h.html#a94922d1737f3b629e8cff1ea311a1d86" title=" " alt="" coords="149,63,316,95"/>
+<area shape="poly" title=" " alt="" coords="101,56,136,63,130,64,101,61"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph.png" border="0" usemap="#amenu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph" id="amenu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,207,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3913bce4e975a52d19ed8450f553b4f2" name="a3913bce4e975a52d19ed8450f553b4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3913bce4e975a52d19ed8450f553b4f2">&#9670;&#160;</a></span>menu_mettre_a_jour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int menu_mettre_a_jour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_menu.html">EtatMenu</a> *</td>          <td class="paramname"><span class="paramname"><em>em</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00039">39</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                                     {</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_variable" href="affichage_8c.html#af2b9eff02ed27d3a363f2661f736e29e">compteur_anim</a>++;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> touche_bas_relachee    = 1;</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> touche_haut_relachee   = 1;</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> touche_entree_relachee = 1;</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span> (key[KEY_DOWN] &amp;&amp; touche_bas_relachee) {</div>
+<div class="line"><span class="lineno">   47</span>        em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a> = (em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a> + 1) % <a class="code hl_define" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a>;</div>
+<div class="line"><span class="lineno">   48</span>        touche_bas_relachee = 0;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (!key[KEY_DOWN]) touche_bas_relachee = 1;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">if</span> (key[KEY_UP] &amp;&amp; touche_haut_relachee) {</div>
+<div class="line"><span class="lineno">   53</span>        em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a> = (em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a> + <a class="code hl_define" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a> - 1) % <a class="code hl_define" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a>;</div>
+<div class="line"><span class="lineno">   54</span>        touche_haut_relachee = 0;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">if</span> (!key[KEY_UP]) touche_haut_relachee = 1;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> (key[KEY_ENTER] &amp;&amp; touche_entree_relachee) {</div>
+<div class="line"><span class="lineno">   59</span>        touche_entree_relachee = 0;</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a> == <a class="code hl_enumvalue" href="header_2menu_8h.html#a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967">MENU_REGLES</a>) {</div>
+<div class="line"><span class="lineno">   61</span>            em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a51485ba2fa7fd3305c3db5275f018d73">afficher_regles</a> = 1;</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#ab3544f0488f630de2d9dce4cb43a18b8">element_selectionne</a>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (!key[KEY_ENTER]) touche_entree_relachee = 1;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span> (em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a51485ba2fa7fd3305c3db5275f018d73">afficher_regles</a> &amp;&amp; key[KEY_ESC])</div>
+<div class="line"><span class="lineno">   69</span>        em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a51485ba2fa7fd3305c3db5275f018d73">afficher_regles</a> = 0;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+<div class="ttc" id="aheader_2menu_8h_html_a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967"><div class="ttname"><a href="header_2menu_8h.html#a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967">MENU_REGLES</a></div><div class="ttdeci">@ MENU_REGLES</div><div class="ttdef"><b>Definition</b> <a href="header_2menu_8h_source.html#l00012">menu.h:12</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph.png" border="0" usemap="#amenu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph" loading="lazy" alt=""/></div>
+<map name="amenu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph" id="amenu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,285,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="94,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a015a16da2577c972ef258e595f5634b0" name="a015a16da2577c972ef258e595f5634b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015a16da2577c972ef258e595f5634b0">&#9670;&#160;</a></span>menu_saisir_pseudo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menu_saisir_pseudo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_menu.html">EtatMenu</a> *</td>          <td class="paramname"><span class="paramname"><em>em</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00074">74</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                                      {</div>
+<div class="line"><span class="lineno">   75</span>    clear_keybuf();</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordtype">int</span> len = strlen(em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a755e5e5d0bb2c1da07e6964478c4653a">pseudo_saisi</a>);</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (keypressed()) {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordtype">int</span> c     = readkey();</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">int</span> ascii = c &amp; 0xFF;</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordtype">int</span> scan  = (c &gt;&gt; 8) &amp; 0xFF;</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (scan == KEY_ENTER &amp;&amp; len &gt; 0) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan == KEY_BACKSPACE &amp;&amp; len &gt; 0)</div>
+<div class="line"><span class="lineno">   84</span>                em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a755e5e5d0bb2c1da07e6964478c4653a">pseudo_saisi</a>[--len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ascii &gt;= 32 &amp;&amp; ascii &lt; 127 &amp;&amp; len &lt; <a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a> - 1) {</div>
+<div class="line"><span class="lineno">   86</span>                em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a755e5e5d0bb2c1da07e6964478c4653a">pseudo_saisi</a>[len++] = (char)ascii;</div>
+<div class="line"><span class="lineno">   87</span>                em-&gt;<a class="code hl_variable" href="struct_etat_menu.html#a755e5e5d0bb2c1da07e6964478c4653a">pseudo_saisi</a>[len]   = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="af2b9eff02ed27d3a363f2661f736e29e" name="af2b9eff02ed27d3a363f2661f736e29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b9eff02ed27d3a363f2661f736e29e">&#9670;&#160;</a></span>compteur_anim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compteur_anim = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00013">13</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+
+</div>
+</div>
+<a id="a499a5e286fc4181187726055786536c0" name="a499a5e286fc4181187726055786536c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499a5e286fc4181187726055786536c0">&#9670;&#160;</a></span>LIBELLES_MENU</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* LIBELLES_MENU[<a class="el" href="header_2menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728">NB_ELEMENTS_MENU</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                = {</div>
+<div class="line">    <span class="stringliteral">&quot;Nouvelle partie&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;Reprendre une partie&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;Regles du jeu&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;Quitter&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00015">15</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                   {</div>
+<div class="line"><span class="lineno">   16</span>    <span class="stringliteral">&quot;Nouvelle partie&quot;</span>,</div>
+<div class="line"><span class="lineno">   17</span>    <span class="stringliteral">&quot;Reprendre une partie&quot;</span>,</div>
+<div class="line"><span class="lineno">   18</span>    <span class="stringliteral">&quot;Regles du jeu&quot;</span>,</div>
+<div class="line"><span class="lineno">   19</span>    <span class="stringliteral">&quot;Quitter&quot;</span></div>
+<div class="line"><span class="lineno">   20</span>};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aca94600d4de5f09d04105fd4ba4251ac" name="aca94600d4de5f09d04105fd4ba4251ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca94600d4de5f09d04105fd4ba4251ac">&#9670;&#160;</a></span>police_menu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a>* police_menu = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00010">10</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+
+</div>
+</div>
+<a id="afc29a26fce12980fc0ea07dfb9af6cb1" name="afc29a26fce12980fc0ea07dfb9af6cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc29a26fce12980fc0ea07dfb9af6cb1">&#9670;&#160;</a></span>police_petite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a>* police_petite = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00011">11</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+
+</div>
+</div>
+<a id="ad344e1e8f39d4f7029b79158d973604f" name="ad344e1e8f39d4f7029b79158d973604f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad344e1e8f39d4f7029b79158d973604f">&#9670;&#160;</a></span>police_regles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a>* police_regles = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00012">12</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+
+</div>
+</div>
+<a id="a2442016244e99e75b9b427b88a19fd47" name="a2442016244e99e75b9b427b88a19fd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2442016244e99e75b9b427b88a19fd47">&#9670;&#160;</a></span>police_titre</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="header_2alfont_8h.html#abad2d5b3ed8305634992a280ceb63f39">ALFONT_FONT</a>* police_titre = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="menu_8c_source.html#l00009">9</a> du fichier <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="menu_8c.html">menu.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

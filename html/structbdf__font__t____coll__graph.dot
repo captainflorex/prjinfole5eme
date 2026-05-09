@@ -1,0 +1,51 @@
+digraph "bdf_font_t_"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="bdf_font_t_",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">bbx</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node2 [id="Node000002",label="bdf_bbx_t_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structbdf__bbx__t__.html",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">glyphs</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">unencoded</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node3 [id="Node000003",label="bdf_glyph_t_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structbdf__glyph__t__.html",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000003_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">bbx</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node4 -> Node1 [id="edge4_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">props</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">user_props</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node4 [id="Node000004",label="bdf_property_t_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structbdf__property__t__.html",tooltip=" "];
+  Node5 -> Node1 [id="edge5_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">overflow</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node5 [id="Node000005",label="bdf_glyphlist_t_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structbdf__glyphlist__t__.html",tooltip=" "];
+  Node3 -> Node5 [id="edge6_Node000005_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">glyphs</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node2 -> Node5 [id="edge7_Node000005_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">bbx</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node6 -> Node1 [id="edge8_Node000001_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">memory</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node6 [id="Node000006",label="FT_MemoryRec_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_f_t___memory_rec__.html",tooltip=" "];
+  Node7 -> Node6 [id="edge9_Node000006_Node000007",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">mem_funcs</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node7 [id="Node000007",label="FT_Memory_FuncsRec_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_f_t___memory___funcs_rec__.html",tooltip=" "];
+  Node8 -> Node6 [id="edge10_Node000006_Node000008",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">cleanup_stack</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node8 [id="Node000008",label="FT_CleanupStackRec_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct_f_t___cleanup_stack_rec__.html",tooltip=" "];
+  Node9 -> Node8 [id="edge11_Node000008_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">chunk</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">chunk_0</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node9 [id="Node000009",label="FT_CleanupChunkRec_",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$struct_f_t___cleanup_chunk_rec__.html",tooltip=" "];
+  Node9 -> Node9 [id="edge12_Node000009_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">link</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node6 -> Node8 [id="edge13_Node000008_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">memory</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node11 -> Node1 [id="edge14_Node000001_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">proptbl</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node11 [id="Node000011",label="hashtable_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structhashtable__.html",tooltip=" "];
+  Node12 -> Node11 [id="edge15_Node000011_Node000012",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">table</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node12 [id="Node000012",label="_hashnode_",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$struct__hashnode__.html",tooltip=" "];
+}

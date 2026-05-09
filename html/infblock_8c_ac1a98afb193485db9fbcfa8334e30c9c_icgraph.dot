@@ -1,0 +1,34 @@
+digraph "inflate_blocks_reset"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="inflate_blocks_reset",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="inflate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$inflate_8c.html#aa69f3b62771ea8e0b859b48cf4e54b6b",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="OF",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$zlib_8h.html#aee5c57b9e01e91ab1abca43bafa98acb",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="inflate_blocks_free",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$infblock_8c.html#a77b40c2d205ee4e475dc463d186a571c",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="inflateEnd",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$inflate_8c.html#adb35fa0fdc9e857ba86d298e16e428d1",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="inflateInit2_",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$inflate_8c.html#a24cadd081749a872a778aa498bc7551b",tooltip=" "];
+  Node5 -> Node8 [id="edge6_Node000005_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="OF",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$zlib_8h.html#a68cab39344ebb206daf9137ac30848b3",tooltip=" "];
+  Node4 -> Node9 [id="edge7_Node000004_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="OF",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$infblock_8h.html#a7d57092e02b427c53526176374e7b372",tooltip=" "];
+  Node1 -> Node10 [id="edge8_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="inflate_blocks_new",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$infblock_8c.html#afe26bb275032192f9bed8ffcd45ab2f9",tooltip=" "];
+  Node10 -> Node6 [id="edge9_Node000010_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node11 [id="edge10_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="OF",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$infblock_8h.html#abf1c942d3deac7f9ae3b3101033d5083",tooltip=" "];
+  Node1 -> Node12 [id="edge11_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="inflateReset",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$inflate_8c.html#ae4bf2cf85662c81338ded783e746c305",tooltip=" "];
+  Node12 -> Node6 [id="edge12_Node000012_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node8 [id="edge13_Node000012_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge14_Node000001_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="OF",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$infblock_8h.html#a1e33cdddc528c5f55e8429b7916291e1",tooltip=" "];
+}

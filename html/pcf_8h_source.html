@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pcf/pcf.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pcf_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pcf.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pcf_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*  pcf.h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"></span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">  FreeType font driver for pcf fonts</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">  Copyright (C) 2000-2001, 2002 by</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">  Francesco Zappa Nardelli</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">all copies or substantial portions of the Software.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">THE SOFTWARE.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef __PCF_H__</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define __PCF_H__</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include FT_INTERNAL_DRIVER_H</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include FT_INTERNAL_STREAM_H</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_p_c_f___table_rec__.html">   39</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___table_rec__.html">PCF_TableRec_</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_p_c_f___table_rec__.html#ada89100bef8a0e316501e9a07dbfc45d">   41</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  <a class="code hl_variable" href="struct_p_c_f___table_rec__.html#ada89100bef8a0e316501e9a07dbfc45d">type</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_p_c_f___table_rec__.html#a212d6854709410db70c12671da5c282b">   42</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  <a class="code hl_variable" href="struct_p_c_f___table_rec__.html#a212d6854709410db70c12671da5c282b">format</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_p_c_f___table_rec__.html#a6a340dbfbed9846071a730ce76dd8881">   43</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  <a class="code hl_variable" href="struct_p_c_f___table_rec__.html#a6a340dbfbed9846071a730ce76dd8881">size</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_p_c_f___table_rec__.html#a6b77ef2cf8a89a1a709f12aae718fff9">   44</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  <a class="code hl_variable" href="struct_p_c_f___table_rec__.html#a6b77ef2cf8a89a1a709f12aae718fff9">offset</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">   46</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#a16783ecdca734d3952a6d2dbed552977">PCF_TableRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a>;</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_p_c_f___toc_rec__.html">   49</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___toc_rec__.html">PCF_TocRec_</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_p_c_f___toc_rec__.html#a9fefff153035611d6f1cb379859d84e7">   51</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>   <a class="code hl_variable" href="struct_p_c_f___toc_rec__.html#a9fefff153035611d6f1cb379859d84e7">version</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_p_c_f___toc_rec__.html#aa554adf7485a87f284b1ef39894e23fd">   52</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>   <a class="code hl_variable" href="struct_p_c_f___toc_rec__.html#aa554adf7485a87f284b1ef39894e23fd">count</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_p_c_f___toc_rec__.html#a29dabfeb5edce56ffb4ca3b662d13a42">   53</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a>  <a class="code hl_variable" href="struct_p_c_f___toc_rec__.html#a29dabfeb5edce56ffb4ca3b662d13a42">tables</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="pcf_8h.html#a7fe44763db61a1cc4ec467c38d84ac12">   55</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#aed3d9f5cc31ca6b90a2a73f5a8c70963">PCF_TocRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a7fe44763db61a1cc4ec467c38d84ac12">PCF_Toc</a>;</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_p_c_f___parse_property_rec__.html">   58</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___parse_property_rec__.html">PCF_ParsePropertyRec_</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_p_c_f___parse_property_rec__.html#a3d66f8d18db9b44249a782faffa7b348">   60</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>  <a class="code hl_variable" href="struct_p_c_f___parse_property_rec__.html#a3d66f8d18db9b44249a782faffa7b348">name</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_p_c_f___parse_property_rec__.html#a2b7224d19b12bce7094f4ef8a0f750d1">   61</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>  <a class="code hl_variable" href="struct_p_c_f___parse_property_rec__.html#a2b7224d19b12bce7094f4ef8a0f750d1">isString</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_p_c_f___parse_property_rec__.html#aaae3096dcf2b5b5d249bf878b6cdd57f">   62</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>  <a class="code hl_variable" href="struct_p_c_f___parse_property_rec__.html#aaae3096dcf2b5b5d249bf878b6cdd57f">value</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="pcf_8h.html#adf4d3674b398e99bf6448ef08c0ccd6e">   64</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#a229d0995e07fa4290bb45f0e4130f9cb">PCF_ParsePropertyRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#adf4d3674b398e99bf6448ef08c0ccd6e">PCF_ParseProperty</a>;</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html">   67</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___property_rec__.html">PCF_PropertyRec_</a></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html#aa5a3016c8149cbe48b246ffd670c3f5b">   69</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a>*  <a class="code hl_variable" href="struct_p_c_f___property_rec__.html#aa5a3016c8149cbe48b246ffd670c3f5b">name</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html#aa68a1298c3f359638fce955bf6662ee0">   70</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>     <a class="code hl_variable" href="struct_p_c_f___property_rec__.html#aa68a1298c3f359638fce955bf6662ee0">isString</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html#a26c11954f4bf00fa29abd751c8164bac">   74</a></span>      <a class="code hl_typedef" href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a>*  <a class="code hl_variable" href="struct_p_c_f___property_rec__.html#a26c11954f4bf00fa29abd751c8164bac">atom</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html#a5ff874cbdad815b1fefbaae50bf56217">   75</a></span>      <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>     <a class="code hl_variable" href="struct_p_c_f___property_rec__.html#a5ff874cbdad815b1fefbaae50bf56217">integer</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html#accfd0469460d6a84f0111b252f911307">   76</a></span>      <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>    <a class="code hl_variable" href="struct_p_c_f___property_rec__.html#accfd0469460d6a84f0111b252f911307">cardinal</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_p_c_f___property_rec__.html#a2f0f3b866259e268e2f07a3906f34420">   78</a></span>    } <a class="code hl_variable" href="struct_p_c_f___property_rec__.html#a2f0f3b866259e268e2f07a3906f34420">value</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="pcf_8h.html#a7280c8dd8cee7665de3d64862170a1cd">   80</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#a83780e9190caedabc06d75ecfd129fe0">PCF_PropertyRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a7280c8dd8cee7665de3d64862170a1cd">PCF_Property</a>;</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="};">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="struct_p_c_f___compressed___metric_rec__.html">   83</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___compressed___metric_rec__.html">PCF_Compressed_MetricRec_</a></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="struct_p_c_f___compressed___metric_rec__.html#aa755334ae0a81cf54129fc19af69024e">   85</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>  <a class="code hl_variable" href="struct_p_c_f___compressed___metric_rec__.html#aa755334ae0a81cf54129fc19af69024e">leftSideBearing</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="struct_p_c_f___compressed___metric_rec__.html#aab4b6fa2533bdb15cb3f44d028eb5ebc">   86</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>  <a class="code hl_variable" href="struct_p_c_f___compressed___metric_rec__.html#aab4b6fa2533bdb15cb3f44d028eb5ebc">rightSideBearing</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_p_c_f___compressed___metric_rec__.html#a0dedaf11ea8c350f2ecb4e258d9e6769">   87</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>  <a class="code hl_variable" href="struct_p_c_f___compressed___metric_rec__.html#a0dedaf11ea8c350f2ecb4e258d9e6769">characterWidth</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="struct_p_c_f___compressed___metric_rec__.html#a5bbb3b83ebf608c0e503f4409bf2354b">   88</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>  <a class="code hl_variable" href="struct_p_c_f___compressed___metric_rec__.html#a5bbb3b83ebf608c0e503f4409bf2354b">ascent</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_p_c_f___compressed___metric_rec__.html#aaa1d108831def803c4d4dd93f3035512">   89</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>  <a class="code hl_variable" href="struct_p_c_f___compressed___metric_rec__.html#aaa1d108831def803c4d4dd93f3035512">descent</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="pcf_8h.html#ac76b42eab798d4156f86bfa9e2a90bef">   91</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#aed5191e224c5d584cd40d98ca2dd962d">PCF_Compressed_MetricRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#ac76b42eab798d4156f86bfa9e2a90bef">PCF_Compressed_Metric</a>;</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="};">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html">   94</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___metric_rec__.html">PCF_MetricRec_</a></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#a2aad06aa95e7ed8224e798568a8c67b4">   96</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#a2aad06aa95e7ed8224e798568a8c67b4">leftSideBearing</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#a9467aee2a6fde65f71b2748ac4ac634d">   97</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#a9467aee2a6fde65f71b2748ac4ac634d">rightSideBearing</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#a121fbf02ee1dae3753b4f32af097eb9c">   98</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#a121fbf02ee1dae3753b4f32af097eb9c">characterWidth</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#a577fb99014992e7745a7aabc089afe30">   99</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#a577fb99014992e7745a7aabc089afe30">ascent</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#aa0e788e33d353f08320d33a1c6d4b697">  100</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#aa0e788e33d353f08320d33a1c6d4b697">descent</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#a04beeeaff10a6892d115ef188a687745">  101</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#a04beeeaff10a6892d115ef188a687745">attributes</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="struct_p_c_f___metric_rec__.html#af154186a935817fa06101885e74fd266">  102</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>  <a class="code hl_variable" href="struct_p_c_f___metric_rec__.html#af154186a935817fa06101885e74fd266">bits</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="pcf_8h.html#a499b8fa15b0498c0549e0e8b8df09ef6">  104</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a499b8fa15b0498c0549e0e8b8df09ef6">PCF_Metric</a>;</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="};">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html">  107</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___accel_rec__.html">PCF_AccelRec_</a></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#ac64fecfa13f845dfa798135f2fafe376">  109</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#ac64fecfa13f845dfa798135f2fafe376">noOverlap</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a206fa43a9a7f98bfdc3c785001fc1157">  110</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a206fa43a9a7f98bfdc3c785001fc1157">constantMetrics</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#ae766d252aaf93f0ddef014dd939c9574">  111</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#ae766d252aaf93f0ddef014dd939c9574">terminalFont</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a6b76976bea3aee5b00d0bcc460e1f5ea">  112</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a6b76976bea3aee5b00d0bcc460e1f5ea">constantWidth</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#ae06af38645c0cff36b0b2a411ad1eca6">  113</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#ae06af38645c0cff36b0b2a411ad1eca6">inkInside</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a82b6833fc548d25d252309da95525c31">  114</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a82b6833fc548d25d252309da95525c31">inkMetrics</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a3bc531152cae04868a08c1c1d8cb1224">  115</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a3bc531152cae04868a08c1c1d8cb1224">drawDirection</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a58fb2e3b32aa316257a41ed03f8fb9b0">  116</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a58fb2e3b32aa316257a41ed03f8fb9b0">fontAscent</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a51a6465885e07ff0f05181a755922a30">  117</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a51a6465885e07ff0f05181a755922a30">fontDescent</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#aedc57e23284e064bb5362f2bfeab1532">  118</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>        <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#aedc57e23284e064bb5362f2bfeab1532">maxOverlap</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a63fb8842ee23d3c7a2202e2dc4acd863">  119</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a>  <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a63fb8842ee23d3c7a2202e2dc4acd863">minbounds</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#acd64b758f76caf4954cc3da64a613a60">  120</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a>  <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#acd64b758f76caf4954cc3da64a613a60">maxbounds</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#a6f15958b404622ea0f7941e57622314a">  121</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a>  <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#a6f15958b404622ea0f7941e57622314a">ink_minbounds</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="struct_p_c_f___accel_rec__.html#abe21c2b1c2cd8288b0284468ff0abd78">  122</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a>  <a class="code hl_variable" href="struct_p_c_f___accel_rec__.html#abe21c2b1c2cd8288b0284468ff0abd78">ink_maxbounds</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="pcf_8h.html#a0cd14cd840933cc06a05b3863556465f">  124</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a0cd14cd840933cc06a05b3863556465f">PCF_Accel</a>;</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="};">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="struct_p_c_d___encoding_rec__.html">  127</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_d___encoding_rec__.html">PCD_EncodingRec_</a></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="struct_p_c_d___encoding_rec__.html#af6c217edd0d33bca5059b0055af5b136">  129</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>   <a class="code hl_variable" href="struct_p_c_d___encoding_rec__.html#af6c217edd0d33bca5059b0055af5b136">enc</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="struct_p_c_d___encoding_rec__.html#a44714e9e20d81d1b9cc3735a5d79dd71">  130</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>  <a class="code hl_variable" href="struct_p_c_d___encoding_rec__.html#a44714e9e20d81d1b9cc3735a5d79dd71">glyph</a>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="pcf_8h.html#a886e974d70e9e06480351719b93d6088">  132</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#a8d34095d81bfa7e977092568b19ca076">PCF_EncodingRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a886e974d70e9e06480351719b93d6088">PCF_Encoding</a>;</div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="};">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html">  135</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_p_c_f___face_rec__.html">PCF_FaceRec_</a></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a51fe9d1bbe61a05d6844da61bc6d1086">  137</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a45c4c2194a9dfb5df09387e80cad91e1">FT_FaceRec</a>     <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a51fe9d1bbe61a05d6844da61bc6d1086">root</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#af37f7cc2d192cbe117af8d510aa9b046">  139</a></span>    <a class="code hl_typedef" href="ftsysio_8h.html#a0ac77b1942c2bf23e05e4f95976a993a">FT_StreamRec</a>   <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#af37f7cc2d192cbe117af8d510aa9b046">gzip_stream</a>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a391bf20012df74cb60fe9573015ef0d2">  140</a></span>    <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>      <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a391bf20012df74cb60fe9573015ef0d2">gzip_source</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a21c4085f5d1a87078d357f85a2cf26bf">  142</a></span>    <span class="keywordtype">char</span>*          <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a21c4085f5d1a87078d357f85a2cf26bf">charset_encoding</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a4296eb308b2f114e911b04ab030816ec">  143</a></span>    <span class="keywordtype">char</span>*          <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a4296eb308b2f114e911b04ab030816ec">charset_registry</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#aa5f36f50831f2f8de1caf2cd3cf66151">  145</a></span>    <a class="code hl_typedef" href="pcf_8h.html#aed3d9f5cc31ca6b90a2a73f5a8c70963">PCF_TocRec</a>     <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#aa5f36f50831f2f8de1caf2cd3cf66151">toc</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a95b1db5f12b0093fbf2564778518fdd3">  146</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a>   <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a95b1db5f12b0093fbf2564778518fdd3">accel</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a5e4dadfec8bde8ce312ef16d13df661b">  148</a></span>    <span class="keywordtype">int</span>            <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a5e4dadfec8bde8ce312ef16d13df661b">nprops</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#af9d68a587f4d07fe5c8782a1edf47faa">  149</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a7280c8dd8cee7665de3d64862170a1cd">PCF_Property</a>   <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#af9d68a587f4d07fe5c8782a1edf47faa">properties</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a8e87b81531dcda01de5d91a51b271772">  151</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>        <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a8e87b81531dcda01de5d91a51b271772">nmetrics</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#abf1b0ff1a51b11de47000f7f34b5f8bf">  152</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a499b8fa15b0498c0549e0e8b8df09ef6">PCF_Metric</a>     <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#abf1b0ff1a51b11de47000f7f34b5f8bf">metrics</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a02e60a82ffdefb352c9d7760069e559f">  153</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a>        <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a02e60a82ffdefb352c9d7760069e559f">nencodings</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#ae22d68a972fbdda6ce79569d373d3d2d">  154</a></span>    <a class="code hl_typedef" href="pcf_8h.html#a886e974d70e9e06480351719b93d6088">PCF_Encoding</a>   <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#ae22d68a972fbdda6ce79569d373d3d2d">encodings</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a3251bb495b2c1dec4eddcf8e29413555">  156</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a>       <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a3251bb495b2c1dec4eddcf8e29413555">defaultChar</a>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#af1331f54c25d919b0a5949f829f5407e">  158</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a>       <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#af1331f54c25d919b0a5949f829f5407e">bitmapsFormat</a>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a06d9b5fe1a219df68d66ee68232db271">  160</a></span>    <a class="code hl_typedef" href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a>     <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a06d9b5fe1a219df68d66ee68232db271">charmap_handle</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="struct_p_c_f___face_rec__.html#a9cee8b94fd0fff40b65301c29ab46e28">  161</a></span>    <a class="code hl_typedef" href="freetype_8h.html#a073bdf7c4e684960bb330ff1bc64c9b5">FT_CharMapRec</a>  <a class="code hl_variable" href="struct_p_c_f___face_rec__.html#a9cee8b94fd0fff40b65301c29ab46e28">charmap</a>;  <span class="comment">/* a single charmap per face */</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">  163</a></span>  } <a class="code hl_typedef" href="pcf_8h.html#af6a90fd51f463a27e88e8014013f1684">PCF_FaceRec</a>, *<a class="code hl_typedef" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a>;</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="comment">/* macros for pcf font format */</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="pcf_8h.html#ae0628372cc68c1c79b78f99b824cc8e7">  168</a></span><span class="preprocessor">#define LSBFirst  0</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="pcf_8h.html#abfc8e001ca4b64b725443cf25f202eb2">  169</a></span><span class="preprocessor">#define MSBFirst  1</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00171" data-start="" data-end="">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="pcf_8h.html#a47c8bfae0bd745bb5c88bd8cf87a5e9f">  171</a></span><span class="preprocessor">#define PCF_FILE_VERSION        ( ( &#39;p&#39; &lt;&lt; 24 ) | \</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">                                  ( &#39;c&#39; &lt;&lt; 16 ) | \</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">                                  ( &#39;f&#39; &lt;&lt;  8 ) | 1 )</span></div>
+</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="pcf_8h.html#a7613fdad32ce15cc5a00450ad1300e91">  174</a></span><span class="preprocessor">#define PCF_FORMAT_MASK         0xFFFFFF00L</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="pcf_8h.html#a6251400ea57924813b07460b32b1a1a7">  176</a></span><span class="preprocessor">#define PCF_DEFAULT_FORMAT      0x00000000L</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="pcf_8h.html#a9cdadebaa623acbc82a6c88dba5f2c89">  177</a></span><span class="preprocessor">#define PCF_INKBOUNDS           0x00000200L</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="pcf_8h.html#a0100090b8f2e7a685aef3ee5bff21e9d">  178</a></span><span class="preprocessor">#define PCF_ACCEL_W_INKBOUNDS   0x00000100L</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="pcf_8h.html#a7003b22370f30d46729a30da8ccb9ce1">  179</a></span><span class="preprocessor">#define PCF_COMPRESSED_METRICS  0x00000100L</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="foldopen" id="foldopen00181" data-start="" data-end="">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="pcf_8h.html#a2fc2de6ecba5c553847f3786e014c6a4">  181</a></span><span class="preprocessor">#define PCF_FORMAT_MATCH( a, b ) \</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">          ( ( (a) &amp; PCF_FORMAT_MASK ) == ( (b) &amp; PCF_FORMAT_MASK ) )</span></div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="pcf_8h.html#a3216b3a46cae32bd60c42600f0e3b53d">  184</a></span><span class="preprocessor">#define PCF_GLYPH_PAD_MASK  ( 3 &lt;&lt; 0 )</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="pcf_8h.html#ae8bab4e31faa59753b0951cec4ce05e3">  185</a></span><span class="preprocessor">#define PCF_BYTE_MASK       ( 1 &lt;&lt; 2 )</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="pcf_8h.html#a8834c82ecaa01b252450febc247caef7">  186</a></span><span class="preprocessor">#define PCF_BIT_MASK        ( 1 &lt;&lt; 3 )</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="pcf_8h.html#acb48ec64a94afda64160fb2b01a20935">  187</a></span><span class="preprocessor">#define PCF_SCAN_UNIT_MASK  ( 3 &lt;&lt; 4 )</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="foldopen" id="foldopen00189" data-start="" data-end="">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="pcf_8h.html#a67bab32b18b0f1f998de5d8d21731127">  189</a></span><span class="preprocessor">#define PCF_BYTE_ORDER( f ) \</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">          ( ( (f) &amp; PCF_BYTE_MASK ) ? MSBFirst : LSBFirst )</span></div>
+</div>
+<div class="foldopen" id="foldopen00191" data-start="" data-end="">
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="pcf_8h.html#afad2eb4c5593effb0957a3b4293676fe">  191</a></span><span class="preprocessor">#define PCF_BIT_ORDER( f ) \</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">          ( ( (f) &amp; PCF_BIT_MASK ) ? MSBFirst : LSBFirst )</span></div>
+</div>
+<div class="foldopen" id="foldopen00193" data-start="" data-end="">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="pcf_8h.html#a3342d8c0d48b85f901265e3b35969f28">  193</a></span><span class="preprocessor">#define PCF_GLYPH_PAD_INDEX( f ) \</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">          ( (f) &amp; PCF_GLYPH_PAD_MASK )</span></div>
+</div>
+<div class="foldopen" id="foldopen00195" data-start="" data-end="">
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="pcf_8h.html#afdac1315a38b83767cf098f65d653b82">  195</a></span><span class="preprocessor">#define PCF_GLYPH_PAD( f ) \</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">          ( 1 &lt;&lt; PCF_GLYPH_PAD_INDEX( f ) )</span></div>
+</div>
+<div class="foldopen" id="foldopen00197" data-start="" data-end="">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="pcf_8h.html#a800eeaff4c7cf093cac6382875ce9cb0">  197</a></span><span class="preprocessor">#define PCF_SCAN_UNIT_INDEX( f ) \</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">          ( ( (f) &amp; PCF_SCAN_UNIT_MASK ) &gt;&gt; 4 )</span></div>
+</div>
+<div class="foldopen" id="foldopen00199" data-start="" data-end="">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="pcf_8h.html#aa4bc177cb6917f086fb1693248bac6d8">  199</a></span><span class="preprocessor">#define PCF_SCAN_UNIT( f ) \</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">          ( 1 &lt;&lt; PCF_SCAN_UNIT_INDEX( f ) )</span></div>
+</div>
+<div class="foldopen" id="foldopen00201" data-start="" data-end="">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="pcf_8h.html#ad72190d438957b85075719f9f6b46641">  201</a></span><span class="preprocessor">#define PCF_FORMAT_BITS( f )             \</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">          ( (f) &amp; ( PCF_GLYPH_PAD_MASK | \</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">                    PCF_BYTE_MASK      | \</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">                    PCF_BIT_MASK       | \</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">                    PCF_SCAN_UNIT_MASK ) )</span></div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="pcf_8h.html#abcd7a131574278a45dc3bc472dd2e849">  207</a></span><span class="preprocessor">#define PCF_SIZE_TO_INDEX( s )  ( (s) == 4 ? 2 : (s) == 2 ? 1 : 0 )</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="pcf_8h.html#a42f0bd31f022b85bcff98b0d97d6174e">  208</a></span><span class="preprocessor">#define PCF_INDEX_TO_SIZE( b )  ( 1 &lt;&lt; b )</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="foldopen" id="foldopen00210" data-start="" data-end="">
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="pcf_8h.html#aab1763ec9a710605c496aa7bcccb6cad">  210</a></span><span class="preprocessor">#define PCF_FORMAT( bit, byte, glyph, scan )          \</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">          ( ( PCF_SIZE_TO_INDEX( scan )      &lt;&lt; 4 ) | \</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">            ( ( (bit)  == MSBFirst ? 1 : 0 ) &lt;&lt; 3 ) | \</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">            ( ( (byte) == MSBFirst ? 1 : 0 ) &lt;&lt; 2 ) | \</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">            ( PCF_SIZE_TO_INDEX( glyph )     &lt;&lt; 0 ) )</span></div>
+</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="pcf_8h.html#a32f61cf7ad79613a7d3e6d33015a2aa0">  216</a></span><span class="preprocessor">#define PCF_PROPERTIES        ( 1 &lt;&lt; 0 )</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="pcf_8h.html#a51e8c026389be38137590cb0ace8b7ee">  217</a></span><span class="preprocessor">#define PCF_ACCELERATORS      ( 1 &lt;&lt; 1 )</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="pcf_8h.html#ab2c439c7c5d66771f1bccfee2c8e361e">  218</a></span><span class="preprocessor">#define PCF_METRICS           ( 1 &lt;&lt; 2 )</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="pcf_8h.html#a28e3bf4f9090d342bc480c7d2d1f6e2c">  219</a></span><span class="preprocessor">#define PCF_BITMAPS           ( 1 &lt;&lt; 3 )</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="pcf_8h.html#a918f9d06019ef8b0df42431061f09932">  220</a></span><span class="preprocessor">#define PCF_INK_METRICS       ( 1 &lt;&lt; 4 )</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="pcf_8h.html#aa47971a5ffca406dd1459fc73c2a7b2c">  221</a></span><span class="preprocessor">#define PCF_BDF_ENCODINGS     ( 1 &lt;&lt; 5 )</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="pcf_8h.html#aaf036573dbea7b419b73301e5a1a9f68">  222</a></span><span class="preprocessor">#define PCF_SWIDTHS           ( 1 &lt;&lt; 6 )</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="pcf_8h.html#a310cc814d8af79549a6bdea821ed7e4c">  223</a></span><span class="preprocessor">#define PCF_GLYPH_NAMES       ( 1 &lt;&lt; 7 )</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="pcf_8h.html#a7b62f800246a3d6900712b5ca39c0e59">  224</a></span><span class="preprocessor">#define PCF_BDF_ACCELERATORS  ( 1 &lt;&lt; 8 )</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="pcf_8h.html#a19b8bec3e0b839a60ecb69a6e915bf4c">  226</a></span><span class="preprocessor">#define GLYPHPADOPTIONS  4 </span><span class="comment">/* I&#39;m not sure about this */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a>( <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> )</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <a class="code hl_function" href="pcf_8h.html#a64b22edf99ad64376a0c877ec9453c66">pcf_load_font</a>( <a class="code hl_typedef" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a>,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                 <a class="code hl_typedef" href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a> );</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">#endif </span><span class="comment">/* __PCF_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a58a8b2fb387665ef9652a54a9ad80bd3"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a58a8b2fb387665ef9652a54a9ad80bd3">FT_LOCAL</a></div><div class="ttdeci">#define FT_LOCAL(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:154</div></div>
+<div class="ttc" id="afreetype_8h_html_a073bdf7c4e684960bb330ff1bc64c9b5"><div class="ttname"><a href="freetype_8h.html#a073bdf7c4e684960bb330ff1bc64c9b5">FT_CharMapRec</a></div><div class="ttdeci">struct FT_CharMapRec_ FT_CharMapRec</div></div>
+<div class="ttc" id="afreetype_8h_html_a45c4c2194a9dfb5df09387e80cad91e1"><div class="ttname"><a href="freetype_8h.html#a45c4c2194a9dfb5df09387e80cad91e1">FT_FaceRec</a></div><div class="ttdeci">struct FT_FaceRec_ FT_FaceRec</div></div>
+<div class="ttc" id="afreetype_8h_html_afc4717ddfd456a38ee15ec9c88fc7dac"><div class="ttname"><a href="freetype_8h.html#afc4717ddfd456a38ee15ec9c88fc7dac">FT_CharMap</a></div><div class="ttdeci">struct FT_CharMapRec_ * FT_CharMap</div><div class="ttdef"><b>Definition</b> freetype.h:389</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftsysio_8h_html_a0ac77b1942c2bf23e05e4f95976a993a"><div class="ttname"><a href="ftsysio_8h.html#a0ac77b1942c2bf23e05e4f95976a993a">FT_StreamRec</a></div><div class="ttdeci">struct FT_StreamRec_ FT_StreamRec</div></div>
+<div class="ttc" id="aftsysio_8h_html_a99e9995ed3299cabc8874b89ee1ee407"><div class="ttname"><a href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_StreamRec_ * FT_Stream</div><div class="ttdef"><b>Definition</b> ftsysio.h:55</div></div>
+<div class="ttc" id="afttypes_8h_html_a4fac88bdba78eb76b505efa6e4fbf3f5"><div class="ttname"><a href="fttypes_8h.html#a4fac88bdba78eb76b505efa6e4fbf3f5">FT_ULong</a></div><div class="ttdeci">unsigned long FT_ULong</div><div class="ttdef"><b>Definition</b> fttypes.h:220</div></div>
+<div class="ttc" id="afttypes_8h_html_a51f26183ca0c9f4af958939648caeccd"><div class="ttname"><a href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></div><div class="ttdeci">unsigned char FT_Byte</div><div class="ttdef"><b>Definition</b> fttypes.h:143</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a7fa72a1f0e79fb1860c5965789024d6f"><div class="ttname"><a href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></div><div class="ttdeci">signed long FT_Long</div><div class="ttdef"><b>Definition</b> fttypes.h:209</div></div>
+<div class="ttc" id="afttypes_8h_html_a9846214585359eb2ba6bbb0e6de30639"><div class="ttname"><a href="fttypes_8h.html#a9846214585359eb2ba6bbb0e6de30639">FT_String</a></div><div class="ttdeci">char FT_String</div><div class="ttdef"><b>Definition</b> fttypes.h:154</div></div>
+<div class="ttc" id="afttypes_8h_html_aa7279be89046a2563cd3d4d6651fbdcf"><div class="ttname"><a href="fttypes_8h.html#aa7279be89046a2563cd3d4d6651fbdcf">FT_Short</a></div><div class="ttdeci">signed short FT_Short</div><div class="ttdef"><b>Definition</b> fttypes.h:165</div></div>
+<div class="ttc" id="apcf_8h_html_a0cd14cd840933cc06a05b3863556465f"><div class="ttname"><a href="pcf_8h.html#a0cd14cd840933cc06a05b3863556465f">PCF_Accel</a></div><div class="ttdeci">struct PCF_AccelRec_ * PCF_Accel</div></div>
+<div class="ttc" id="apcf_8h_html_a16783ecdca734d3952a6d2dbed552977"><div class="ttname"><a href="pcf_8h.html#a16783ecdca734d3952a6d2dbed552977">PCF_TableRec</a></div><div class="ttdeci">FT_BEGIN_HEADER struct PCF_TableRec_ PCF_TableRec</div></div>
+<div class="ttc" id="apcf_8h_html_a229d0995e07fa4290bb45f0e4130f9cb"><div class="ttname"><a href="pcf_8h.html#a229d0995e07fa4290bb45f0e4130f9cb">PCF_ParsePropertyRec</a></div><div class="ttdeci">struct PCF_ParsePropertyRec_ PCF_ParsePropertyRec</div></div>
+<div class="ttc" id="apcf_8h_html_a325ccd25773b3e42d2ab171ad438c7f4"><div class="ttname"><a href="pcf_8h.html#a325ccd25773b3e42d2ab171ad438c7f4">PCF_Table</a></div><div class="ttdeci">FT_BEGIN_HEADER struct PCF_TableRec_ * PCF_Table</div></div>
+<div class="ttc" id="apcf_8h_html_a499b8fa15b0498c0549e0e8b8df09ef6"><div class="ttname"><a href="pcf_8h.html#a499b8fa15b0498c0549e0e8b8df09ef6">PCF_Metric</a></div><div class="ttdeci">struct PCF_MetricRec_ * PCF_Metric</div></div>
+<div class="ttc" id="apcf_8h_html_a56da45cac8477b66859224d00487466c"><div class="ttname"><a href="pcf_8h.html#a56da45cac8477b66859224d00487466c">PCF_AccelRec</a></div><div class="ttdeci">struct PCF_AccelRec_ PCF_AccelRec</div></div>
+<div class="ttc" id="apcf_8h_html_a64b22edf99ad64376a0c877ec9453c66"><div class="ttname"><a href="pcf_8h.html#a64b22edf99ad64376a0c877ec9453c66">pcf_load_font</a></div><div class="ttdeci">pcf_load_font(FT_Stream, PCF_Face)</div><div class="ttdef"><b>Definition</b> pcfread.c:860</div></div>
+<div class="ttc" id="apcf_8h_html_a7280c8dd8cee7665de3d64862170a1cd"><div class="ttname"><a href="pcf_8h.html#a7280c8dd8cee7665de3d64862170a1cd">PCF_Property</a></div><div class="ttdeci">struct PCF_PropertyRec_ * PCF_Property</div></div>
+<div class="ttc" id="apcf_8h_html_a7fe44763db61a1cc4ec467c38d84ac12"><div class="ttname"><a href="pcf_8h.html#a7fe44763db61a1cc4ec467c38d84ac12">PCF_Toc</a></div><div class="ttdeci">struct PCF_TocRec_ * PCF_Toc</div></div>
+<div class="ttc" id="apcf_8h_html_a822a40241ab27aadb849e6374911ed2f"><div class="ttname"><a href="pcf_8h.html#a822a40241ab27aadb849e6374911ed2f">PCF_MetricRec</a></div><div class="ttdeci">struct PCF_MetricRec_ PCF_MetricRec</div></div>
+<div class="ttc" id="apcf_8h_html_a83780e9190caedabc06d75ecfd129fe0"><div class="ttname"><a href="pcf_8h.html#a83780e9190caedabc06d75ecfd129fe0">PCF_PropertyRec</a></div><div class="ttdeci">struct PCF_PropertyRec_ PCF_PropertyRec</div></div>
+<div class="ttc" id="apcf_8h_html_a886e974d70e9e06480351719b93d6088"><div class="ttname"><a href="pcf_8h.html#a886e974d70e9e06480351719b93d6088">PCF_Encoding</a></div><div class="ttdeci">struct PCD_EncodingRec_ * PCF_Encoding</div></div>
+<div class="ttc" id="apcf_8h_html_a8d34095d81bfa7e977092568b19ca076"><div class="ttname"><a href="pcf_8h.html#a8d34095d81bfa7e977092568b19ca076">PCF_EncodingRec</a></div><div class="ttdeci">struct PCD_EncodingRec_ PCF_EncodingRec</div></div>
+<div class="ttc" id="apcf_8h_html_a9bf968282f5eca2a82f5f880c26e7fe4"><div class="ttname"><a href="pcf_8h.html#a9bf968282f5eca2a82f5f880c26e7fe4">PCF_Face</a></div><div class="ttdeci">struct PCF_FaceRec_ * PCF_Face</div></div>
+<div class="ttc" id="apcf_8h_html_ac76b42eab798d4156f86bfa9e2a90bef"><div class="ttname"><a href="pcf_8h.html#ac76b42eab798d4156f86bfa9e2a90bef">PCF_Compressed_Metric</a></div><div class="ttdeci">struct PCF_Compressed_MetricRec_ * PCF_Compressed_Metric</div></div>
+<div class="ttc" id="apcf_8h_html_adf4d3674b398e99bf6448ef08c0ccd6e"><div class="ttname"><a href="pcf_8h.html#adf4d3674b398e99bf6448ef08c0ccd6e">PCF_ParseProperty</a></div><div class="ttdeci">struct PCF_ParsePropertyRec_ * PCF_ParseProperty</div></div>
+<div class="ttc" id="apcf_8h_html_aed3d9f5cc31ca6b90a2a73f5a8c70963"><div class="ttname"><a href="pcf_8h.html#aed3d9f5cc31ca6b90a2a73f5a8c70963">PCF_TocRec</a></div><div class="ttdeci">struct PCF_TocRec_ PCF_TocRec</div></div>
+<div class="ttc" id="apcf_8h_html_aed5191e224c5d584cd40d98ca2dd962d"><div class="ttname"><a href="pcf_8h.html#aed5191e224c5d584cd40d98ca2dd962d">PCF_Compressed_MetricRec</a></div><div class="ttdeci">struct PCF_Compressed_MetricRec_ PCF_Compressed_MetricRec</div></div>
+<div class="ttc" id="apcf_8h_html_af6a90fd51f463a27e88e8014013f1684"><div class="ttname"><a href="pcf_8h.html#af6a90fd51f463a27e88e8014013f1684">PCF_FaceRec</a></div><div class="ttdeci">struct PCF_FaceRec_ PCF_FaceRec</div></div>
+<div class="ttc" id="astruct_p_c_d___encoding_rec___html"><div class="ttname"><a href="struct_p_c_d___encoding_rec__.html">PCD_EncodingRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:128</div></div>
+<div class="ttc" id="astruct_p_c_d___encoding_rec___html_a44714e9e20d81d1b9cc3735a5d79dd71"><div class="ttname"><a href="struct_p_c_d___encoding_rec__.html#a44714e9e20d81d1b9cc3735a5d79dd71">PCD_EncodingRec_::glyph</a></div><div class="ttdeci">FT_Short glyph</div><div class="ttdef"><b>Definition</b> pcf.h:130</div></div>
+<div class="ttc" id="astruct_p_c_d___encoding_rec___html_af6c217edd0d33bca5059b0055af5b136"><div class="ttname"><a href="struct_p_c_d___encoding_rec__.html#af6c217edd0d33bca5059b0055af5b136">PCD_EncodingRec_::enc</a></div><div class="ttdeci">FT_Long enc</div><div class="ttdef"><b>Definition</b> pcf.h:129</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html">PCF_AccelRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:108</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a206fa43a9a7f98bfdc3c785001fc1157"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a206fa43a9a7f98bfdc3c785001fc1157">PCF_AccelRec_::constantMetrics</a></div><div class="ttdeci">FT_Byte constantMetrics</div><div class="ttdef"><b>Definition</b> pcf.h:110</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a3bc531152cae04868a08c1c1d8cb1224"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a3bc531152cae04868a08c1c1d8cb1224">PCF_AccelRec_::drawDirection</a></div><div class="ttdeci">FT_Byte drawDirection</div><div class="ttdef"><b>Definition</b> pcf.h:115</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a51a6465885e07ff0f05181a755922a30"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a51a6465885e07ff0f05181a755922a30">PCF_AccelRec_::fontDescent</a></div><div class="ttdeci">FT_Long fontDescent</div><div class="ttdef"><b>Definition</b> pcf.h:117</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a58fb2e3b32aa316257a41ed03f8fb9b0"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a58fb2e3b32aa316257a41ed03f8fb9b0">PCF_AccelRec_::fontAscent</a></div><div class="ttdeci">FT_Long fontAscent</div><div class="ttdef"><b>Definition</b> pcf.h:116</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a63fb8842ee23d3c7a2202e2dc4acd863"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a63fb8842ee23d3c7a2202e2dc4acd863">PCF_AccelRec_::minbounds</a></div><div class="ttdeci">PCF_MetricRec minbounds</div><div class="ttdef"><b>Definition</b> pcf.h:119</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a6b76976bea3aee5b00d0bcc460e1f5ea"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a6b76976bea3aee5b00d0bcc460e1f5ea">PCF_AccelRec_::constantWidth</a></div><div class="ttdeci">FT_Byte constantWidth</div><div class="ttdef"><b>Definition</b> pcf.h:112</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a6f15958b404622ea0f7941e57622314a"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a6f15958b404622ea0f7941e57622314a">PCF_AccelRec_::ink_minbounds</a></div><div class="ttdeci">PCF_MetricRec ink_minbounds</div><div class="ttdef"><b>Definition</b> pcf.h:121</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_a82b6833fc548d25d252309da95525c31"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#a82b6833fc548d25d252309da95525c31">PCF_AccelRec_::inkMetrics</a></div><div class="ttdeci">FT_Byte inkMetrics</div><div class="ttdef"><b>Definition</b> pcf.h:114</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_abe21c2b1c2cd8288b0284468ff0abd78"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#abe21c2b1c2cd8288b0284468ff0abd78">PCF_AccelRec_::ink_maxbounds</a></div><div class="ttdeci">PCF_MetricRec ink_maxbounds</div><div class="ttdef"><b>Definition</b> pcf.h:122</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_ac64fecfa13f845dfa798135f2fafe376"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#ac64fecfa13f845dfa798135f2fafe376">PCF_AccelRec_::noOverlap</a></div><div class="ttdeci">FT_Byte noOverlap</div><div class="ttdef"><b>Definition</b> pcf.h:109</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_acd64b758f76caf4954cc3da64a613a60"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#acd64b758f76caf4954cc3da64a613a60">PCF_AccelRec_::maxbounds</a></div><div class="ttdeci">PCF_MetricRec maxbounds</div><div class="ttdef"><b>Definition</b> pcf.h:120</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_ae06af38645c0cff36b0b2a411ad1eca6"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#ae06af38645c0cff36b0b2a411ad1eca6">PCF_AccelRec_::inkInside</a></div><div class="ttdeci">FT_Byte inkInside</div><div class="ttdef"><b>Definition</b> pcf.h:113</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_ae766d252aaf93f0ddef014dd939c9574"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#ae766d252aaf93f0ddef014dd939c9574">PCF_AccelRec_::terminalFont</a></div><div class="ttdeci">FT_Byte terminalFont</div><div class="ttdef"><b>Definition</b> pcf.h:111</div></div>
+<div class="ttc" id="astruct_p_c_f___accel_rec___html_aedc57e23284e064bb5362f2bfeab1532"><div class="ttname"><a href="struct_p_c_f___accel_rec__.html#aedc57e23284e064bb5362f2bfeab1532">PCF_AccelRec_::maxOverlap</a></div><div class="ttdeci">FT_Long maxOverlap</div><div class="ttdef"><b>Definition</b> pcf.h:118</div></div>
+<div class="ttc" id="astruct_p_c_f___compressed___metric_rec___html"><div class="ttname"><a href="struct_p_c_f___compressed___metric_rec__.html">PCF_Compressed_MetricRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:84</div></div>
+<div class="ttc" id="astruct_p_c_f___compressed___metric_rec___html_a0dedaf11ea8c350f2ecb4e258d9e6769"><div class="ttname"><a href="struct_p_c_f___compressed___metric_rec__.html#a0dedaf11ea8c350f2ecb4e258d9e6769">PCF_Compressed_MetricRec_::characterWidth</a></div><div class="ttdeci">FT_Byte characterWidth</div><div class="ttdef"><b>Definition</b> pcf.h:87</div></div>
+<div class="ttc" id="astruct_p_c_f___compressed___metric_rec___html_a5bbb3b83ebf608c0e503f4409bf2354b"><div class="ttname"><a href="struct_p_c_f___compressed___metric_rec__.html#a5bbb3b83ebf608c0e503f4409bf2354b">PCF_Compressed_MetricRec_::ascent</a></div><div class="ttdeci">FT_Byte ascent</div><div class="ttdef"><b>Definition</b> pcf.h:88</div></div>
+<div class="ttc" id="astruct_p_c_f___compressed___metric_rec___html_aa755334ae0a81cf54129fc19af69024e"><div class="ttname"><a href="struct_p_c_f___compressed___metric_rec__.html#aa755334ae0a81cf54129fc19af69024e">PCF_Compressed_MetricRec_::leftSideBearing</a></div><div class="ttdeci">FT_Byte leftSideBearing</div><div class="ttdef"><b>Definition</b> pcf.h:85</div></div>
+<div class="ttc" id="astruct_p_c_f___compressed___metric_rec___html_aaa1d108831def803c4d4dd93f3035512"><div class="ttname"><a href="struct_p_c_f___compressed___metric_rec__.html#aaa1d108831def803c4d4dd93f3035512">PCF_Compressed_MetricRec_::descent</a></div><div class="ttdeci">FT_Byte descent</div><div class="ttdef"><b>Definition</b> pcf.h:89</div></div>
+<div class="ttc" id="astruct_p_c_f___compressed___metric_rec___html_aab4b6fa2533bdb15cb3f44d028eb5ebc"><div class="ttname"><a href="struct_p_c_f___compressed___metric_rec__.html#aab4b6fa2533bdb15cb3f44d028eb5ebc">PCF_Compressed_MetricRec_::rightSideBearing</a></div><div class="ttdeci">FT_Byte rightSideBearing</div><div class="ttdef"><b>Definition</b> pcf.h:86</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html"><div class="ttname"><a href="struct_p_c_f___face_rec__.html">PCF_FaceRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:136</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a02e60a82ffdefb352c9d7760069e559f"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a02e60a82ffdefb352c9d7760069e559f">PCF_FaceRec_::nencodings</a></div><div class="ttdeci">FT_Long nencodings</div><div class="ttdef"><b>Definition</b> pcf.h:153</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a06d9b5fe1a219df68d66ee68232db271"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a06d9b5fe1a219df68d66ee68232db271">PCF_FaceRec_::charmap_handle</a></div><div class="ttdeci">FT_CharMap charmap_handle</div><div class="ttdef"><b>Definition</b> pcf.h:160</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a21c4085f5d1a87078d357f85a2cf26bf"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a21c4085f5d1a87078d357f85a2cf26bf">PCF_FaceRec_::charset_encoding</a></div><div class="ttdeci">char * charset_encoding</div><div class="ttdef"><b>Definition</b> pcf.h:142</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a3251bb495b2c1dec4eddcf8e29413555"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a3251bb495b2c1dec4eddcf8e29413555">PCF_FaceRec_::defaultChar</a></div><div class="ttdeci">FT_Short defaultChar</div><div class="ttdef"><b>Definition</b> pcf.h:156</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a391bf20012df74cb60fe9573015ef0d2"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a391bf20012df74cb60fe9573015ef0d2">PCF_FaceRec_::gzip_source</a></div><div class="ttdeci">FT_Stream gzip_source</div><div class="ttdef"><b>Definition</b> pcf.h:140</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a4296eb308b2f114e911b04ab030816ec"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a4296eb308b2f114e911b04ab030816ec">PCF_FaceRec_::charset_registry</a></div><div class="ttdeci">char * charset_registry</div><div class="ttdef"><b>Definition</b> pcf.h:143</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a51fe9d1bbe61a05d6844da61bc6d1086"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a51fe9d1bbe61a05d6844da61bc6d1086">PCF_FaceRec_::root</a></div><div class="ttdeci">FT_FaceRec root</div><div class="ttdef"><b>Definition</b> pcf.h:137</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a5e4dadfec8bde8ce312ef16d13df661b"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a5e4dadfec8bde8ce312ef16d13df661b">PCF_FaceRec_::nprops</a></div><div class="ttdeci">int nprops</div><div class="ttdef"><b>Definition</b> pcf.h:148</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a8e87b81531dcda01de5d91a51b271772"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a8e87b81531dcda01de5d91a51b271772">PCF_FaceRec_::nmetrics</a></div><div class="ttdeci">FT_Long nmetrics</div><div class="ttdef"><b>Definition</b> pcf.h:151</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a95b1db5f12b0093fbf2564778518fdd3"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a95b1db5f12b0093fbf2564778518fdd3">PCF_FaceRec_::accel</a></div><div class="ttdeci">PCF_AccelRec accel</div><div class="ttdef"><b>Definition</b> pcf.h:146</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_a9cee8b94fd0fff40b65301c29ab46e28"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#a9cee8b94fd0fff40b65301c29ab46e28">PCF_FaceRec_::charmap</a></div><div class="ttdeci">FT_CharMapRec charmap</div><div class="ttdef"><b>Definition</b> pcf.h:161</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_aa5f36f50831f2f8de1caf2cd3cf66151"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#aa5f36f50831f2f8de1caf2cd3cf66151">PCF_FaceRec_::toc</a></div><div class="ttdeci">PCF_TocRec toc</div><div class="ttdef"><b>Definition</b> pcf.h:145</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_abf1b0ff1a51b11de47000f7f34b5f8bf"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#abf1b0ff1a51b11de47000f7f34b5f8bf">PCF_FaceRec_::metrics</a></div><div class="ttdeci">PCF_Metric metrics</div><div class="ttdef"><b>Definition</b> pcf.h:152</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_ae22d68a972fbdda6ce79569d373d3d2d"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#ae22d68a972fbdda6ce79569d373d3d2d">PCF_FaceRec_::encodings</a></div><div class="ttdeci">PCF_Encoding encodings</div><div class="ttdef"><b>Definition</b> pcf.h:154</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_af1331f54c25d919b0a5949f829f5407e"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#af1331f54c25d919b0a5949f829f5407e">PCF_FaceRec_::bitmapsFormat</a></div><div class="ttdeci">FT_ULong bitmapsFormat</div><div class="ttdef"><b>Definition</b> pcf.h:158</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_af37f7cc2d192cbe117af8d510aa9b046"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#af37f7cc2d192cbe117af8d510aa9b046">PCF_FaceRec_::gzip_stream</a></div><div class="ttdeci">FT_StreamRec gzip_stream</div><div class="ttdef"><b>Definition</b> pcf.h:139</div></div>
+<div class="ttc" id="astruct_p_c_f___face_rec___html_af9d68a587f4d07fe5c8782a1edf47faa"><div class="ttname"><a href="struct_p_c_f___face_rec__.html#af9d68a587f4d07fe5c8782a1edf47faa">PCF_FaceRec_::properties</a></div><div class="ttdeci">PCF_Property properties</div><div class="ttdef"><b>Definition</b> pcf.h:149</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html">PCF_MetricRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:95</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_a04beeeaff10a6892d115ef188a687745"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#a04beeeaff10a6892d115ef188a687745">PCF_MetricRec_::attributes</a></div><div class="ttdeci">FT_Short attributes</div><div class="ttdef"><b>Definition</b> pcf.h:101</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_a121fbf02ee1dae3753b4f32af097eb9c"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#a121fbf02ee1dae3753b4f32af097eb9c">PCF_MetricRec_::characterWidth</a></div><div class="ttdeci">FT_Short characterWidth</div><div class="ttdef"><b>Definition</b> pcf.h:98</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_a2aad06aa95e7ed8224e798568a8c67b4"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#a2aad06aa95e7ed8224e798568a8c67b4">PCF_MetricRec_::leftSideBearing</a></div><div class="ttdeci">FT_Short leftSideBearing</div><div class="ttdef"><b>Definition</b> pcf.h:96</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_a577fb99014992e7745a7aabc089afe30"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#a577fb99014992e7745a7aabc089afe30">PCF_MetricRec_::ascent</a></div><div class="ttdeci">FT_Short ascent</div><div class="ttdef"><b>Definition</b> pcf.h:99</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_a9467aee2a6fde65f71b2748ac4ac634d"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#a9467aee2a6fde65f71b2748ac4ac634d">PCF_MetricRec_::rightSideBearing</a></div><div class="ttdeci">FT_Short rightSideBearing</div><div class="ttdef"><b>Definition</b> pcf.h:97</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_aa0e788e33d353f08320d33a1c6d4b697"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#aa0e788e33d353f08320d33a1c6d4b697">PCF_MetricRec_::descent</a></div><div class="ttdeci">FT_Short descent</div><div class="ttdef"><b>Definition</b> pcf.h:100</div></div>
+<div class="ttc" id="astruct_p_c_f___metric_rec___html_af154186a935817fa06101885e74fd266"><div class="ttname"><a href="struct_p_c_f___metric_rec__.html#af154186a935817fa06101885e74fd266">PCF_MetricRec_::bits</a></div><div class="ttdeci">FT_ULong bits</div><div class="ttdef"><b>Definition</b> pcf.h:102</div></div>
+<div class="ttc" id="astruct_p_c_f___parse_property_rec___html"><div class="ttname"><a href="struct_p_c_f___parse_property_rec__.html">PCF_ParsePropertyRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:59</div></div>
+<div class="ttc" id="astruct_p_c_f___parse_property_rec___html_a2b7224d19b12bce7094f4ef8a0f750d1"><div class="ttname"><a href="struct_p_c_f___parse_property_rec__.html#a2b7224d19b12bce7094f4ef8a0f750d1">PCF_ParsePropertyRec_::isString</a></div><div class="ttdeci">FT_Byte isString</div><div class="ttdef"><b>Definition</b> pcf.h:61</div></div>
+<div class="ttc" id="astruct_p_c_f___parse_property_rec___html_a3d66f8d18db9b44249a782faffa7b348"><div class="ttname"><a href="struct_p_c_f___parse_property_rec__.html#a3d66f8d18db9b44249a782faffa7b348">PCF_ParsePropertyRec_::name</a></div><div class="ttdeci">FT_Long name</div><div class="ttdef"><b>Definition</b> pcf.h:60</div></div>
+<div class="ttc" id="astruct_p_c_f___parse_property_rec___html_aaae3096dcf2b5b5d249bf878b6cdd57f"><div class="ttname"><a href="struct_p_c_f___parse_property_rec__.html#aaae3096dcf2b5b5d249bf878b6cdd57f">PCF_ParsePropertyRec_::value</a></div><div class="ttdeci">FT_Long value</div><div class="ttdef"><b>Definition</b> pcf.h:62</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html"><div class="ttname"><a href="struct_p_c_f___property_rec__.html">PCF_PropertyRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:68</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html_a26c11954f4bf00fa29abd751c8164bac"><div class="ttname"><a href="struct_p_c_f___property_rec__.html#a26c11954f4bf00fa29abd751c8164bac">PCF_PropertyRec_::atom</a></div><div class="ttdeci">FT_String * atom</div><div class="ttdef"><b>Definition</b> pcf.h:74</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html_a2f0f3b866259e268e2f07a3906f34420"><div class="ttname"><a href="struct_p_c_f___property_rec__.html#a2f0f3b866259e268e2f07a3906f34420">PCF_PropertyRec_::value</a></div><div class="ttdeci">union PCF_PropertyRec_::@006071005374274334040013375121346363366110170244 value</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html_a5ff874cbdad815b1fefbaae50bf56217"><div class="ttname"><a href="struct_p_c_f___property_rec__.html#a5ff874cbdad815b1fefbaae50bf56217">PCF_PropertyRec_::integer</a></div><div class="ttdeci">FT_Long integer</div><div class="ttdef"><b>Definition</b> pcf.h:75</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html_aa5a3016c8149cbe48b246ffd670c3f5b"><div class="ttname"><a href="struct_p_c_f___property_rec__.html#aa5a3016c8149cbe48b246ffd670c3f5b">PCF_PropertyRec_::name</a></div><div class="ttdeci">FT_String * name</div><div class="ttdef"><b>Definition</b> pcf.h:69</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html_aa68a1298c3f359638fce955bf6662ee0"><div class="ttname"><a href="struct_p_c_f___property_rec__.html#aa68a1298c3f359638fce955bf6662ee0">PCF_PropertyRec_::isString</a></div><div class="ttdeci">FT_Byte isString</div><div class="ttdef"><b>Definition</b> pcf.h:70</div></div>
+<div class="ttc" id="astruct_p_c_f___property_rec___html_accfd0469460d6a84f0111b252f911307"><div class="ttname"><a href="struct_p_c_f___property_rec__.html#accfd0469460d6a84f0111b252f911307">PCF_PropertyRec_::cardinal</a></div><div class="ttdeci">FT_ULong cardinal</div><div class="ttdef"><b>Definition</b> pcf.h:76</div></div>
+<div class="ttc" id="astruct_p_c_f___table_rec___html"><div class="ttname"><a href="struct_p_c_f___table_rec__.html">PCF_TableRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:40</div></div>
+<div class="ttc" id="astruct_p_c_f___table_rec___html_a212d6854709410db70c12671da5c282b"><div class="ttname"><a href="struct_p_c_f___table_rec__.html#a212d6854709410db70c12671da5c282b">PCF_TableRec_::format</a></div><div class="ttdeci">FT_ULong format</div><div class="ttdef"><b>Definition</b> pcf.h:42</div></div>
+<div class="ttc" id="astruct_p_c_f___table_rec___html_a6a340dbfbed9846071a730ce76dd8881"><div class="ttname"><a href="struct_p_c_f___table_rec__.html#a6a340dbfbed9846071a730ce76dd8881">PCF_TableRec_::size</a></div><div class="ttdeci">FT_ULong size</div><div class="ttdef"><b>Definition</b> pcf.h:43</div></div>
+<div class="ttc" id="astruct_p_c_f___table_rec___html_a6b77ef2cf8a89a1a709f12aae718fff9"><div class="ttname"><a href="struct_p_c_f___table_rec__.html#a6b77ef2cf8a89a1a709f12aae718fff9">PCF_TableRec_::offset</a></div><div class="ttdeci">FT_ULong offset</div><div class="ttdef"><b>Definition</b> pcf.h:44</div></div>
+<div class="ttc" id="astruct_p_c_f___table_rec___html_ada89100bef8a0e316501e9a07dbfc45d"><div class="ttname"><a href="struct_p_c_f___table_rec__.html#ada89100bef8a0e316501e9a07dbfc45d">PCF_TableRec_::type</a></div><div class="ttdeci">FT_ULong type</div><div class="ttdef"><b>Definition</b> pcf.h:41</div></div>
+<div class="ttc" id="astruct_p_c_f___toc_rec___html"><div class="ttname"><a href="struct_p_c_f___toc_rec__.html">PCF_TocRec_</a></div><div class="ttdef"><b>Definition</b> pcf.h:50</div></div>
+<div class="ttc" id="astruct_p_c_f___toc_rec___html_a29dabfeb5edce56ffb4ca3b662d13a42"><div class="ttname"><a href="struct_p_c_f___toc_rec__.html#a29dabfeb5edce56ffb4ca3b662d13a42">PCF_TocRec_::tables</a></div><div class="ttdeci">PCF_Table tables</div><div class="ttdef"><b>Definition</b> pcf.h:53</div></div>
+<div class="ttc" id="astruct_p_c_f___toc_rec___html_a9fefff153035611d6f1cb379859d84e7"><div class="ttname"><a href="struct_p_c_f___toc_rec__.html#a9fefff153035611d6f1cb379859d84e7">PCF_TocRec_::version</a></div><div class="ttdeci">FT_ULong version</div><div class="ttdef"><b>Definition</b> pcf.h:51</div></div>
+<div class="ttc" id="astruct_p_c_f___toc_rec___html_aa554adf7485a87f284b1ef39894e23fd"><div class="ttname"><a href="struct_p_c_f___toc_rec__.html#aa554adf7485a87f284b1ef39894e23fd">PCF_TocRec_::count</a></div><div class="ttdeci">FT_ULong count</div><div class="ttdef"><b>Definition</b> pcf.h:52</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_eea6f76f8982a5b727b58b30e92f04d5.html">pcf</a></li><li class="navelem"><a href="pcf_8h.html">pcf.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

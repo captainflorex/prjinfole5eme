@@ -1,0 +1,24 @@
+digraph "FNT_Face_Init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FNT_Face_Init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FNT_Face_Done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$winfnt_8c.html#a1484184b825f01a04cdba8017a822740",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="fnt_face_done_fonts",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$winfnt_8c.html#a6905c9ecc7a6bc9f58271f327b035abb",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="fnt_font_done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$winfnt_8c.html#a0e6c4820fbe878e9e87cd07637004245",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="fnt_face_get_dll_fonts",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$winfnt_8c.html#a2cc5cf6a662bab38d64e2ced67b38076",tooltip=" "];
+  Node5 -> Node3 [id="edge5_Node000005_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node6 [id="edge6_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="fnt_font_load",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$winfnt_8c.html#a416cb0a0476b626216fa9fa5eea479c6",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge8_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_CMap_New",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a951ef5b2f18dc022f7524a2c4d209b99",tooltip=" "];
+  Node7 -> Node7 [id="edge9_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+}

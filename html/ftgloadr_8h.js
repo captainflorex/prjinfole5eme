@@ -1,0 +1,28 @@
+var ftgloadr_8h =
+[
+    [ "FT_SubGlyphRec_", "struct_f_t___sub_glyph_rec__.html", "struct_f_t___sub_glyph_rec__" ],
+    [ "FT_GlyphLoadRec_", "struct_f_t___glyph_load_rec__.html", "struct_f_t___glyph_load_rec__" ],
+    [ "FT_GlyphLoaderRec_", "struct_f_t___glyph_loader_rec__.html", "struct_f_t___glyph_loader_rec__" ],
+    [ "FT_SUBGLYPH_FLAG_2X2", "ftgloadr_8h.html#a5b174060ec5c81fb39fe69e6b9601cc0", null ],
+    [ "FT_SUBGLYPH_FLAG_ARGS_ARE_WORDS", "ftgloadr_8h.html#a3625d967f1dbb47350c1a55c83026a11", null ],
+    [ "FT_SUBGLYPH_FLAG_ARGS_ARE_XY_VALUES", "ftgloadr_8h.html#ab609fa06b6f57fff7bde18f6ad9a227e", null ],
+    [ "FT_SUBGLYPH_FLAG_ROUND_XY_TO_GRID", "ftgloadr_8h.html#ae8f56b4e77ae783eb11ae4e4abb6f25e", null ],
+    [ "FT_SUBGLYPH_FLAG_SCALE", "ftgloadr_8h.html#a276d29541600e9904f63a96c93e9d266", null ],
+    [ "FT_SUBGLYPH_FLAG_USE_MY_METRICS", "ftgloadr_8h.html#a6b205cfbdb60c347f9ed7ac54b530cb6", null ],
+    [ "FT_SUBGLYPH_FLAG_XY_SCALE", "ftgloadr_8h.html#a327854b0dea5f2d5e47254d2f5b877e4", null ],
+    [ "FT_GlyphLoad", "ftgloadr_8h.html#a65bc5c2b0e147c181ea506e0ba4144c3", null ],
+    [ "FT_GlyphLoader", "ftgloadr_8h.html#a2671bcb107327e81037ea42332454741", null ],
+    [ "FT_GlyphLoaderRec", "ftgloadr_8h.html#a9bc0b00c38fdb760c924442202d13a1d", null ],
+    [ "FT_GlyphLoadRec", "ftgloadr_8h.html#adf7927ebda1aa6d4749d0d08afc0b5cd", null ],
+    [ "FT_SubGlyphRec", "ftgloadr_8h.html#a902d276d3155d77598ea4b58c517e7bc", null ],
+    [ "FT_GlyphLoader_Add", "ftgloadr_8h.html#a05e75ff8be73536b15ebbc02f432e246", null ],
+    [ "FT_GlyphLoader_CheckPoints", "ftgloadr_8h.html#a33ec2edf52ffdde913e4ec66dcd16795", null ],
+    [ "FT_GlyphLoader_CheckSubGlyphs", "ftgloadr_8h.html#af54f34fd85b3c880b33635dc4d8e8963", null ],
+    [ "FT_GlyphLoader_CopyPoints", "ftgloadr_8h.html#a336934f4b883906ed8ff0560140a74e3", null ],
+    [ "FT_GlyphLoader_CreateExtra", "ftgloadr_8h.html#a4bf9b9b6d22501794502a9081bb79607", null ],
+    [ "FT_GlyphLoader_Done", "ftgloadr_8h.html#a920c9ede2b8f63e3dd25f51daee360ab", null ],
+    [ "FT_GlyphLoader_New", "ftgloadr_8h.html#ad9956ad2ed4b3dfc8da30f4e3e274a49", null ],
+    [ "FT_GlyphLoader_Prepare", "ftgloadr_8h.html#a8b24efd8846b09cfecb3534926d95931", null ],
+    [ "FT_GlyphLoader_Reset", "ftgloadr_8h.html#ac41dd5bfdbcc6c0158aaab4c0066f4b8", null ],
+    [ "FT_GlyphLoader_Rewind", "ftgloadr_8h.html#a4f4954b6e77f155ab5e46c3f2351f50e", null ]
+];

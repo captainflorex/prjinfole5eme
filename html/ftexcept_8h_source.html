@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/include/freetype/internal/ftexcept.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ftexcept_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ftexcept.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ftexcept_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __FT_EXCEPT_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __FT_EXCEPT_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="ft2build_8h.html">ft2build.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include FT_INTERNAL_OBJECTS_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> <span class="comment">/* I can&#39;t find a better place for this for now */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt; ftexcept.h</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>=======</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/* the size of a cleanup chunk in bytes is FT_CLEANUP_CHUNK_SIZE*12 + 4 */</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/* this must be a small power of 2 whenever possible..                  */</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/*                                                                      */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/* with a value of 5, we have a byte size of 64 bytes per chunk..       */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*                                                                      */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define  FT_CLEANUP_CHUNK_SIZE   5</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___cleanup_item_rec__.html">FT_CleanupItemRec_</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>      <a class="code hl_variable" href="struct_f_t___cleanup_item_rec__.html#a25cd9bf35d138d792eeee38312cc28bd">item</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_variable" href="ftcore_8h.html#a9ef4f0e35c2aec735f09636792bfd24f">FT_CleanupFunc</a>  <a class="code hl_variable" href="struct_f_t___cleanup_item_rec__.html#ac28b4fb4d55c9e4d0f73cd946c49a033">item_func</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>      <a class="code hl_variable" href="struct_f_t___cleanup_item_rec__.html#ac8de0145fa11c403aa46f68d2b144386">item_data</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  } <a class="code hl_typedef" href="ftcore_8h.html#a0250b87c6a8d9f9e5f8cba9d71b2cb99">FT_CleanupItemRec</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a>*   <a class="code hl_typedef" href="ftcore_8h.html#ac74c4d8822112aa92e678af3a2e6189d">FT_CleanupChunk</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_typedef" href="ftcore_8h.html#ac74c4d8822112aa92e678af3a2e6189d">FT_CleanupChunk</a>    <a class="code hl_variable" href="struct_f_t___cleanup_chunk_rec__.html#a0e628b253eb8ad414573b754f48443a7">link</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_typedef" href="ftcore_8h.html#a0250b87c6a8d9f9e5f8cba9d71b2cb99">FT_CleanupItemRec</a>  <a class="code hl_variable" href="struct_f_t___cleanup_chunk_rec__.html#ab71530fba17e217cb9a8dbf04deef947">items</a>[ <a class="code hl_define" href="ftcore_8h.html#acaecc7d9e93128d0532ac0453983265f">FT_CLEANUP_CHUNK_SIZE</a> ];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  } <a class="code hl_typedef" href="ftcore_8h.html#adf2be92c2ae0d624ff79d06adf7e8e12">FT_CleanupChunkRec</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    FT_CleanupItem     <a class="code hl_variable" href="struct_f_t___cleanup_stack_rec__.html#aced35508ab96afdf03d79e35f486a352">top</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    FT_CleanupItem     <a class="code hl_variable" href="struct_f_t___cleanup_stack_rec__.html#a6a6c89939ff04f7b3cf69d93e09e934d">limit</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_typedef" href="ftcore_8h.html#ac74c4d8822112aa92e678af3a2e6189d">FT_CleanupChunk</a>    <a class="code hl_variable" href="struct_f_t___cleanup_stack_rec__.html#a80245091e61deff1e1fcc42452dbf2a7">chunk</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_typedef" href="ftcore_8h.html#adf2be92c2ae0d624ff79d06adf7e8e12">FT_CleanupChunkRec</a> <a class="code hl_variable" href="struct_f_t___cleanup_stack_rec__.html#a8e750ffa66039489a8cc8052583a78dd">chunk_0</a>;  <span class="comment">/* avoids stupid dynamic allocation */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>          <a class="code hl_variable" href="struct_f_t___cleanup_stack_rec__.html#a33fad3c53be0716de33bffc074e2a328">memory</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  } <a class="code hl_typedef" href="ftcore_8h.html#ad703713de322822a5c2fcf258be07b49">FT_CleanupStackRec</a>, *<a class="code hl_typedef" href="ftcore_8h.html#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_function" href="ftcore_8h.html#a93dea04f6fd34efed98dbf9de2127463">ft_cleanup_stack_push</a>( <a class="code hl_typedef" href="ftcore_8h.html#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a>  stack,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                         <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>       item,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                         <a class="code hl_variable" href="ftcore_8h.html#a9ef4f0e35c2aec735f09636792bfd24f">FT_CleanupFunc</a>   item_func,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                         <a class="code hl_typedef" href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a>       item_data );</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_function" href="ftcore_8h.html#ad7be4bb9746cb81f1ea71fa0ab2363aa">ft_cleanup_stack_pop</a>( <a class="code hl_typedef" href="ftcore_8h.html#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a>   stack,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        <a class="code hl_typedef" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a>            destroy );</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( FT_CleanupItem )</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_function" href="ftcore_8h.html#ac85c27ac4479c14603b1435a66e4c762">ft_cleanup_stack_peek</a>( <a class="code hl_typedef" href="ftcore_8h.html#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a>  stack );</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_function" href="ftcore_8h.html#a356df26fdd9059be93375f78a45bccb2">ft_xhandler_enter</a>( <a class="code hl_typedef" href="ftcore_8h.html#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a>  xhandler,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                     <a class="code hl_typedef" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a>    <a class="code hl_variable" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a> );                         </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_function" href="ftcore_8h.html#afb804dd1be87b86d083f1426cb88a266">ft_xhandler_exit</a>( <a class="code hl_typedef" href="ftcore_8h.html#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a>  xhandler );</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_function" href="ftcore_8h.html#a28f25277649dcb5dc401d7e95abc4e28">ft_cleanup_throw</a>( <a class="code hl_typedef" href="ftcore_8h.html#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a>  stack,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <a class="code hl_typedef" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>         <a class="code hl_variable" href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a> );</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 1.2</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif </span><span class="comment">/* __FT_EXCEPT_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_ad9b0c555bd9c667187a720e265943bfc"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#ad9b0c555bd9c667187a720e265943bfc">FT_BASE</a></div><div class="ttdeci">#define FT_BASE(x)</div><div class="ttdef"><b>Definition</b> ftconfig.h:165</div></div>
+<div class="ttc" id="aft2build_8h_html"><div class="ttname"><a href="ft2build_8h.html">ft2build.h</a></div></div>
+<div class="ttc" id="aftcore_8h_html_a0250b87c6a8d9f9e5f8cba9d71b2cb99"><div class="ttname"><a href="ftcore_8h.html#a0250b87c6a8d9f9e5f8cba9d71b2cb99">FT_CleanupItemRec</a></div><div class="ttdeci">struct FT_CleanupItemRec_ FT_CleanupItemRec</div></div>
+<div class="ttc" id="aftcore_8h_html_a28f25277649dcb5dc401d7e95abc4e28"><div class="ttname"><a href="ftcore_8h.html#a28f25277649dcb5dc401d7e95abc4e28">ft_cleanup_throw</a></div><div class="ttdeci">ft_cleanup_throw(FT_CleanupStack stack, FT_Error error)</div><div class="ttdef"><b>Definition</b> ftexcept.c:176</div></div>
+<div class="ttc" id="aftcore_8h_html_a356df26fdd9059be93375f78a45bccb2"><div class="ttname"><a href="ftcore_8h.html#a356df26fdd9059be93375f78a45bccb2">ft_xhandler_enter</a></div><div class="ttdeci">ft_xhandler_enter(FT_XHandler xhandler, FT_Memory memory)</div><div class="ttdef"><b>Definition</b> ftexcept.c:149</div></div>
+<div class="ttc" id="aftcore_8h_html_a7bb0e15aade9448f0e7e12a094b11c2d"><div class="ttname"><a href="ftcore_8h.html#a7bb0e15aade9448f0e7e12a094b11c2d">FT_XHandler</a></div><div class="ttdeci">struct FT_XHandlerRec_ * FT_XHandler</div><div class="ttdef"><b>Definition</b> ftcore.h:47</div></div>
+<div class="ttc" id="aftcore_8h_html_a91da37f28ff680c8453a1d406985a62f"><div class="ttname"><a href="ftcore_8h.html#a91da37f28ff680c8453a1d406985a62f">FT_CleanupStack</a></div><div class="ttdeci">struct FT_CleanupStackRec_ * FT_CleanupStack</div></div>
+<div class="ttc" id="aftcore_8h_html_a93dea04f6fd34efed98dbf9de2127463"><div class="ttname"><a href="ftcore_8h.html#a93dea04f6fd34efed98dbf9de2127463">ft_cleanup_stack_push</a></div><div class="ttdeci">ft_cleanup_stack_push(FT_CleanupStack stack, FT_Pointer item, FT_CleanupFunc item_func, FT_Pointer item_data)</div><div class="ttdef"><b>Definition</b> ftexcept.c:42</div></div>
+<div class="ttc" id="aftcore_8h_html_a9ef4f0e35c2aec735f09636792bfd24f"><div class="ttname"><a href="ftcore_8h.html#a9ef4f0e35c2aec735f09636792bfd24f">FT_CleanupFunc</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef void(* FT_CleanupFunc)(FT_Pointer item, FT_Pointer item_data)</div><div class="ttdef"><b>Definition</b> ftcore.h:30</div></div>
+<div class="ttc" id="aftcore_8h_html_ac74c4d8822112aa92e678af3a2e6189d"><div class="ttname"><a href="ftcore_8h.html#ac74c4d8822112aa92e678af3a2e6189d">FT_CleanupChunk</a></div><div class="ttdeci">struct FT_CleanupChunkRec_ * FT_CleanupChunk</div><div class="ttdef"><b>Definition</b> ftcore.h:68</div></div>
+<div class="ttc" id="aftcore_8h_html_ac85c27ac4479c14603b1435a66e4c762"><div class="ttname"><a href="ftcore_8h.html#ac85c27ac4479c14603b1435a66e4c762">ft_cleanup_stack_peek</a></div><div class="ttdeci">ft_cleanup_stack_peek(FT_CleanupStack stack)</div><div class="ttdef"><b>Definition</b> ftexcept.c:123</div></div>
+<div class="ttc" id="aftcore_8h_html_acaecc7d9e93128d0532ac0453983265f"><div class="ttname"><a href="ftcore_8h.html#acaecc7d9e93128d0532ac0453983265f">FT_CLEANUP_CHUNK_SIZE</a></div><div class="ttdeci">#define FT_CLEANUP_CHUNK_SIZE</div><div class="ttdef"><b>Definition</b> ftcore.h:55</div></div>
+<div class="ttc" id="aftcore_8h_html_ad703713de322822a5c2fcf258be07b49"><div class="ttname"><a href="ftcore_8h.html#ad703713de322822a5c2fcf258be07b49">FT_CleanupStackRec</a></div><div class="ttdeci">struct FT_CleanupStackRec_ FT_CleanupStackRec</div></div>
+<div class="ttc" id="aftcore_8h_html_ad7be4bb9746cb81f1ea71fa0ab2363aa"><div class="ttname"><a href="ftcore_8h.html#ad7be4bb9746cb81f1ea71fa0ab2363aa">ft_cleanup_stack_pop</a></div><div class="ttdeci">ft_cleanup_stack_pop(FT_CleanupStack stack, FT_Int destroy)</div><div class="ttdef"><b>Definition</b> ftexcept.c:79</div></div>
+<div class="ttc" id="aftcore_8h_html_adf2be92c2ae0d624ff79d06adf7e8e12"><div class="ttname"><a href="ftcore_8h.html#adf2be92c2ae0d624ff79d06adf7e8e12">FT_CleanupChunkRec</a></div><div class="ttdeci">struct FT_CleanupChunkRec_ FT_CleanupChunkRec</div></div>
+<div class="ttc" id="aftcore_8h_html_afb804dd1be87b86d083f1426cb88a266"><div class="ttname"><a href="ftcore_8h.html#afb804dd1be87b86d083f1426cb88a266">ft_xhandler_exit</a></div><div class="ttdeci">ft_xhandler_exit(FT_XHandler xhandler)</div><div class="ttdef"><b>Definition</b> ftexcept.c:163</div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftsysio_8h_html_a34160e2441c6c6ecdf82e3faf4a84757"><div class="ttname"><a href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a></div><div class="ttdeci">FT_ULong FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftsysio.h:180</div></div>
+<div class="ttc" id="aftsysmem_8h_html_a67ec7ea35cde99a89a65e9f827a9ad3a"><div class="ttname"><a href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct FT_MemoryRec_ * FT_Memory</div><div class="ttdef"><b>Definition</b> ftsysmem.h:30</div></div>
+<div class="ttc" id="afttypes_8h_html_a00f9e6a0ddd7bc55f79b2f4b5b867266"><div class="ttname"><a href="fttypes_8h.html#a00f9e6a0ddd7bc55f79b2f4b5b867266">FT_Pointer</a></div><div class="ttdeci">void * FT_Pointer</div><div class="ttdef"><b>Definition</b> fttypes.h:278</div></div>
+<div class="ttc" id="afttypes_8h_html_a64c8060bdb3d6eec844a1bf670e06bdd"><div class="ttname"><a href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a></div><div class="ttdeci">int FT_Error</div><div class="ttdef"><b>Definition</b> fttypes.h:267</div></div>
+<div class="ttc" id="afttypes_8h_html_a77b77ff4d86f1c3a791463b762cfe60e"><div class="ttname"><a href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></div><div class="ttdeci">int FT_Int</div><div class="ttdef"><b>Definition</b> fttypes.h:187</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_chunk_rec___html"><div class="ttname"><a href="struct_f_t___cleanup_chunk_rec__.html">FT_CleanupChunkRec_</a></div><div class="ttdef"><b>Definition</b> ftcore.h:71</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_chunk_rec___html_a0e628b253eb8ad414573b754f48443a7"><div class="ttname"><a href="struct_f_t___cleanup_chunk_rec__.html#a0e628b253eb8ad414573b754f48443a7">FT_CleanupChunkRec_::link</a></div><div class="ttdeci">FT_CleanupChunk link</div><div class="ttdef"><b>Definition</b> ftcore.h:72</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_chunk_rec___html_ab71530fba17e217cb9a8dbf04deef947"><div class="ttname"><a href="struct_f_t___cleanup_chunk_rec__.html#ab71530fba17e217cb9a8dbf04deef947">FT_CleanupChunkRec_::items</a></div><div class="ttdeci">FT_CleanupItemRec items[FT_CLEANUP_CHUNK_SIZE]</div><div class="ttdef"><b>Definition</b> ftcore.h:73</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_item_rec___html"><div class="ttname"><a href="struct_f_t___cleanup_item_rec__.html">FT_CleanupItemRec_</a></div><div class="ttdef"><b>Definition</b> ftcore.h:60</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_item_rec___html_a25cd9bf35d138d792eeee38312cc28bd"><div class="ttname"><a href="struct_f_t___cleanup_item_rec__.html#a25cd9bf35d138d792eeee38312cc28bd">FT_CleanupItemRec_::item</a></div><div class="ttdeci">FT_Pointer item</div><div class="ttdef"><b>Definition</b> ftcore.h:61</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_item_rec___html_ac28b4fb4d55c9e4d0f73cd946c49a033"><div class="ttname"><a href="struct_f_t___cleanup_item_rec__.html#ac28b4fb4d55c9e4d0f73cd946c49a033">FT_CleanupItemRec_::item_func</a></div><div class="ttdeci">FT_CleanupFunc item_func</div><div class="ttdef"><b>Definition</b> ftcore.h:62</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_item_rec___html_ac8de0145fa11c403aa46f68d2b144386"><div class="ttname"><a href="struct_f_t___cleanup_item_rec__.html#ac8de0145fa11c403aa46f68d2b144386">FT_CleanupItemRec_::item_data</a></div><div class="ttdeci">FT_Pointer item_data</div><div class="ttdef"><b>Definition</b> ftcore.h:63</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_stack_rec___html"><div class="ttname"><a href="struct_f_t___cleanup_stack_rec__.html">FT_CleanupStackRec_</a></div><div class="ttdef"><b>Definition</b> ftcore.h:79</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_stack_rec___html_a33fad3c53be0716de33bffc074e2a328"><div class="ttname"><a href="struct_f_t___cleanup_stack_rec__.html#a33fad3c53be0716de33bffc074e2a328">FT_CleanupStackRec_::memory</a></div><div class="ttdeci">FT_Memory memory</div><div class="ttdef"><b>Definition</b> ftcore.h:84</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_stack_rec___html_a6a6c89939ff04f7b3cf69d93e09e934d"><div class="ttname"><a href="struct_f_t___cleanup_stack_rec__.html#a6a6c89939ff04f7b3cf69d93e09e934d">FT_CleanupStackRec_::limit</a></div><div class="ttdeci">FT_CleanupItem limit</div><div class="ttdef"><b>Definition</b> ftcore.h:81</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_stack_rec___html_a80245091e61deff1e1fcc42452dbf2a7"><div class="ttname"><a href="struct_f_t___cleanup_stack_rec__.html#a80245091e61deff1e1fcc42452dbf2a7">FT_CleanupStackRec_::chunk</a></div><div class="ttdeci">FT_CleanupChunk chunk</div><div class="ttdef"><b>Definition</b> ftcore.h:82</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_stack_rec___html_a8e750ffa66039489a8cc8052583a78dd"><div class="ttname"><a href="struct_f_t___cleanup_stack_rec__.html#a8e750ffa66039489a8cc8052583a78dd">FT_CleanupStackRec_::chunk_0</a></div><div class="ttdeci">FT_CleanupChunkRec chunk_0</div><div class="ttdef"><b>Definition</b> ftcore.h:83</div></div>
+<div class="ttc" id="astruct_f_t___cleanup_stack_rec___html_aced35508ab96afdf03d79e35f486a352"><div class="ttname"><a href="struct_f_t___cleanup_stack_rec__.html#aced35508ab96afdf03d79e35f486a352">FT_CleanupStackRec_::top</a></div><div class="ttdeci">FT_CleanupItem top</div><div class="ttdef"><b>Definition</b> ftcore.h:80</div></div>
+<div class="ttc" id="atest__trig_8c_html_af10dacfa214e2575bb2e0ee407c242e0"><div class="ttname"><a href="test__trig_8c.html#af10dacfa214e2575bb2e0ee407c242e0">error</a></div><div class="ttdeci">static error</div><div class="ttdef"><b>Definition</b> test_trig.c:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_3603bed0816a62e1b0e4984ead63386d.html">include</a></li><li class="navelem"><a href="dir_d8ac8280a3ec2caf39957e3462e5441b.html">freetype</a></li><li class="navelem"><a href="dir_5a7d374fb846e4a5bfa73ed3019144e9.html">internal</a></li><li class="navelem"><a href="ftexcept_8h.html">ftexcept.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

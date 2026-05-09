@@ -1,0 +1,23 @@
+digraph "t42_is_alpha"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="t42_is_alpha",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="t42_parse_charstrings",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t42parse_8c.html#a84789d038b9f05dc79d96d3ed690299e",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="t42_parse_dict",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t42parse_8c.html#a0a3e040590b5e892c4ba93e6edc1f062",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="T42_Open_Face",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t42objs_8c.html#a53d84802ba82da1ac53ff024ee580b23",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="T42_Face_Init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t42objs_8c.html#a2ff9b1fba7616d8545358c4793f7b903",tooltip=" "];
+  Node5 -> Node5 [id="edge5_Node000005_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node3 [id="edge6_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="t42_parse_encoding",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t42parse_8c.html#a2dac3c3e86f419f66aa0a0e9692ea383",tooltip=" "];
+  Node1 -> Node7 [id="edge8_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="t42_parse_font_name",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t42parse_8c.html#abb16b6b58a1504af3475eda1e435d302",tooltip=" "];
+}

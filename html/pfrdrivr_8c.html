@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/pfr/pfrdrivr.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('pfrdrivr_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier pfrdrivr.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="pfrdrivr_8h_source.html">pfrdrivr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pfrobjs_8h_source.html">pfrobjs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de pfrdrivr.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="pfrdrivr_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pfr_2pfrdrivr_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="pfrdrivr_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2pfr_2pfrdrivr_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="pfrdrivr_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2f1abe42c70c4c775e1225b039add060" id="r_a2f1abe42c70c4c775e1225b039add060"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a> (<a class="el" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> left, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> right, <a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *avector)</td></tr>
+<tr class="memitem:abe6bd0ad25c569a3766442dcd42e10aa" id="r_abe6bd0ad25c569a3766442dcd42e10aa"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#abe6bd0ad25c569a3766442dcd42e10aa">pfr_get_advance</a> (<a class="el" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> gindex, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> *aadvance)</td></tr>
+<tr class="memitem:aaf0c622f73a2cbfc644b36155096719a" id="r_aaf0c622f73a2cbfc644b36155096719a"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaf0c622f73a2cbfc644b36155096719a">pfr_get_metrics</a> (<a class="el" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *aoutline_resolution, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *ametrics_resolution, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *ametrics_x_scale, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *ametrics_y_scale)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3e65574b95d55cb037b5c6ca1ca19b6c" id="r_a3e65574b95d55cb037b5c6ca1ca19b6c"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="pfr_8h.html#a774107cf0b97a6955c94e04bc0c7155f">FT_PFR_ServiceRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3e65574b95d55cb037b5c6ca1ca19b6c">pfr_service_rec</a></td></tr>
+<tr class="memitem:ab7882c806340569473622c5c1b94461b" id="r_ab7882c806340569473622c5c1b94461b"><td class="memItemLeft"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftdriver_8h.html#a57f9368fa4a66804639f104da3cb0780">FT_Driver_ClassRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab7882c806340569473622c5c1b94461b">pfr_driver_class</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="abe6bd0ad25c569a3766442dcd42e10aa" name="abe6bd0ad25c569a3766442dcd42e10aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6bd0ad25c569a3766442dcd42e10aa">&#9670;&#160;</a></span>pfr_get_advance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pfr_get_advance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>gindex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> *</td>          <td class="paramname"><span class="paramname"><em>aadvance</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f1abe42c70c4c775e1225b039add060" name="a2f1abe42c70c4c775e1225b039add060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1abe42c70c4c775e1225b039add060">&#9670;&#160;</a></span>pfr_get_kerning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pfr_get_kerning </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#abfcb941b4b81f3a922d4ae57c620db27">FT_Vector</a> *</td>          <td class="paramname"><span class="paramname"><em>avector</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pfrdrivr_8c_a2f1abe42c70c4c775e1225b039add060_cgraph.png" border="0" usemap="#apfrdrivr_8c_a2f1abe42c70c4c775e1225b039add060_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="aaf0c622f73a2cbfc644b36155096719a" name="aaf0c622f73a2cbfc644b36155096719a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0c622f73a2cbfc644b36155096719a">&#9670;&#160;</a></span>pfr_get_metrics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> pfr_get_metrics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pfrobjs_8h.html#a59ef022bfa0a198447ffd8c9cde4c8af">PFR_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>aoutline_resolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> *</td>          <td class="paramname"><span class="paramname"><em>ametrics_resolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *</td>          <td class="paramname"><span class="paramname"><em>ametrics_x_scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> *</td>          <td class="paramname"><span class="paramname"><em>ametrics_y_scale</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="pfrdrivr_8c_aaf0c622f73a2cbfc644b36155096719a_cgraph.png" border="0" usemap="#apfrdrivr_8c_aaf0c622f73a2cbfc644b36155096719a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ab7882c806340569473622c5c1b94461b" name="ab7882c806340569473622c5c1b94461b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7882c806340569473622c5c1b94461b">&#9670;&#160;</a></span>pfr_driver_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="ftdriver_8h.html#a57f9368fa4a66804639f104da3cb0780">FT_Driver_ClassRec</a> pfr_driver_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e65574b95d55cb037b5c6ca1ca19b6c" name="a3e65574b95d55cb037b5c6ca1ca19b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e65574b95d55cb037b5c6ca1ca19b6c">&#9670;&#160;</a></span>pfr_service_rec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="builds_2vms_2ftconfig_8h.html#a3e7304105563eb715cae1b9c213858ed">FT_CALLBACK_TABLE_DEF</a> <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="pfr_8h.html#a774107cf0b97a6955c94e04bc0c7155f">FT_PFR_ServiceRec</a> pfr_service_rec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                         =</div>
+<div class="line">{</div>
+<div class="line">  (<a class="code hl_variable" href="pfr_8h.html#ab21fad849eb6704c93f76526928df372">FT_PFR_GetMetricsFunc</a>)  <a class="code hl_function" href="#aaf0c622f73a2cbfc644b36155096719a">pfr_get_metrics</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="pfr_8h.html#a20eaaef20dc0096e67973f240c5b121e">FT_PFR_GetKerningFunc</a>)  <a class="code hl_function" href="#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a>,</div>
+<div class="line">  (<a class="code hl_typedef" href="pfr_8h.html#aabfd6d5f6302418e87a808f7e1c77525">FT_PFR_GetAdvanceFunc</a>)  <a class="code hl_function" href="#abe6bd0ad25c569a3766442dcd42e10aa">pfr_get_advance</a></div>
+<div class="line">}</div>
+<div class="ttc" id="apfr_8h_html_a20eaaef20dc0096e67973f240c5b121e"><div class="ttname"><a href="pfr_8h.html#a20eaaef20dc0096e67973f240c5b121e">FT_PFR_GetKerningFunc</a></div><div class="ttdeci">FT_Error(* FT_PFR_GetKerningFunc)(FT_Face face, FT_UInt left, FT_UInt right, FT_Vector *avector)</div><div class="ttdef"><b>Definition</b> pfr.h:15</div></div>
+<div class="ttc" id="apfr_8h_html_aabfd6d5f6302418e87a808f7e1c77525"><div class="ttname"><a href="pfr_8h.html#aabfd6d5f6302418e87a808f7e1c77525">FT_PFR_GetAdvanceFunc</a></div><div class="ttdeci">FT_Error(* FT_PFR_GetAdvanceFunc)(FT_Face face, FT_UInt gindex, FT_Pos *aadvance)</div><div class="ttdef"><b>Definition</b> pfr.h:20</div></div>
+<div class="ttc" id="apfr_8h_html_ab21fad849eb6704c93f76526928df372"><div class="ttname"><a href="pfr_8h.html#ab21fad849eb6704c93f76526928df372">FT_PFR_GetMetricsFunc</a></div><div class="ttdeci">FT_BEGIN_HEADER typedef FT_Error(* FT_PFR_GetMetricsFunc)(FT_Face face, FT_UInt *aoutline, FT_UInt *ametrics, FT_Fixed *ax_scale, FT_Fixed *ay_scale)</div><div class="ttdef"><b>Definition</b> pfr.h:9</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_a2f1abe42c70c4c775e1225b039add060"><div class="ttname"><a href="#a2f1abe42c70c4c775e1225b039add060">pfr_get_kerning</a></div><div class="ttdeci">static FT_Error pfr_get_kerning(PFR_Face face, FT_UInt left, FT_UInt right, FT_Vector *avector)</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:28</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_aaf0c622f73a2cbfc644b36155096719a"><div class="ttname"><a href="#aaf0c622f73a2cbfc644b36155096719a">pfr_get_metrics</a></div><div class="ttdeci">static FT_Error pfr_get_metrics(PFR_Face face, FT_UInt *aoutline_resolution, FT_UInt *ametrics_resolution, FT_Fixed *ametrics_x_scale, FT_Fixed *ametrics_y_scale)</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:80</div></div>
+<div class="ttc" id="apfrdrivr_8c_html_abe6bd0ad25c569a3766442dcd42e10aa"><div class="ttname"><a href="#abe6bd0ad25c569a3766442dcd42e10aa">pfr_get_advance</a></div><div class="ttdeci">static FT_Error pfr_get_advance(PFR_Face face, FT_UInt gindex, FT_Pos *aadvance)</div><div class="ttdef"><b>Definition</b> pfrdrivr.c:57</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_d4ba0b202c3d42f5530bd6926753ce2f.html">pfr</a></li><li class="navelem"><a href="pfrdrivr_8c.html">pfrdrivr.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

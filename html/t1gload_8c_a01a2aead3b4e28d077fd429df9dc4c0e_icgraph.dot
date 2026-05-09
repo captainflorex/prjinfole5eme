@@ -1,0 +1,23 @@
+digraph "T1_Parse_Glyph_And_Get_Char_String"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="T1_Parse_Glyph_And\l_Get_Char_String",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="T1_Load_Glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1gload_8c.html#a08c51bafeeda2d2b37dd521280844c42",tooltip=" "];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="T1_Parse_Glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1gload_8c.html#a8210004a1c7f56d6e0eb5c5a00ea8a1f",tooltip=" "];
+  Node3 -> Node4 [id="edge4_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="T1_Compute_Max_Advance",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1gload_8c.html#a3e7f57f24428ebe1a38e43b76f467374",tooltip=" "];
+  Node4 -> Node4 [id="edge5_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node5 [id="edge6_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="T1_Face_Init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$t1objs_8c.html#ab701c1866f7ad9c23603e1294f7830af",tooltip=" "];
+  Node5 -> Node5 [id="edge7_Node000005_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node2 [id="edge8_Node000003_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node3 [id="edge9_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node1 [id="edge10_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

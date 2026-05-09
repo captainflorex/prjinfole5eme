@@ -1,0 +1,29 @@
+digraph "alfont_textout_aa_ex"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="alfont_textout_aa_ex",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="afficher_menu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$menu_8c.html#a5ea310a2d8bd7c9b2e2c6050629dd7b0",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="afficher_regles",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$menu_8c.html#aa21de65fbde7933c3234a51ff1cf192f",tooltip=" "];
+  Node4 -> Node3 [id="edge4_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge5_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="alfont_textout_aa",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#ae65d558a4f09bf1e9fc752895134950f",tooltip=" "];
+  Node1 -> Node6 [id="edge6_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="alfont_textout_centre\l_aa_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a3aa8bde851e871445c6b9d68bc4d3838",tooltip=" "];
+  Node6 -> Node7 [id="edge7_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="afficher_decompte",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$affichage_8c.html#ae09ee85bc962e3a9ff1cb5934b972c03",tooltip=" "];
+  Node7 -> Node3 [id="edge8_Node000007_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node2 [id="edge9_Node000006_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node4 [id="edge10_Node000006_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge11_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="alfont_textout_right\l_aa_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a06107ea0ca9a3708da9d3b108053b475",tooltip=" "];
+  Node1 -> Node9 [id="edge12_Node000001_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="alfont_textprintf_aa_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a875b576927463f7877545c294d174f15",tooltip=" "];
+}

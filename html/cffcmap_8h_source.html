@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/cff/cffcmap.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('cffcmap_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">cffcmap.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="cffcmap_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*  cffcmap.h                                                              */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*    CFF character mapping table (cmap) support (specification).          */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/*  Copyright 2002 by                                                      */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  This file is part of the FreeType project, and may only be used,       */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/*  modified, and distributed under the terms of the FreeType project      */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*  license, LICENSE.TXT.  By continuing to use, modify, or distribute     */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*  this file you indicate that you have read the license and              */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*  understand and accept it fully.                                        */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/*                                                                         */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/***************************************************************************/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef __CFFCMAP_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define __CFFCMAP_H__</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="cffobjs_8h.html">cffobjs.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><a class="code hl_define" href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">  /*****          TYPE1 STANDARD (AND EXPERT) ENCODING CMAPS           *****/</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">/* standard (and expert) encoding cmaps */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#af375fe09b118bc99175be3f4c185af62">   36</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_c_f_f___c_map_std_rec__.html">CFF_CMapStdRec_</a>*  <a class="code hl_typedef" href="cffcmap_8h.html#af375fe09b118bc99175be3f4c185af62">CFF_CMapStd</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_std_rec__.html">   38</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_c_f_f___c_map_std_rec__.html">CFF_CMapStdRec_</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_std_rec__.html#ac6d3f72081f23021a7bc1786a33bf53a">   40</a></span>    <a class="code hl_typedef" href="ftobjs_8h.html#a8e3cfe5cb2fc243b50bbc6cd2b94119f">FT_CMapRec</a>  <a class="code hl_variable" href="struct_c_f_f___c_map_std_rec__.html#ac6d3f72081f23021a7bc1786a33bf53a">cmap</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_std_rec__.html#af30e6b9aed7d1b78e716b350765b37f5">   41</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>     <a class="code hl_variable" href="struct_c_f_f___c_map_std_rec__.html#af30e6b9aed7d1b78e716b350765b37f5">count</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_std_rec__.html#a3ed3062bdd37dc60c7d9621c2d6e84d8">   42</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a>*  <a class="code hl_variable" href="struct_c_f_f___c_map_std_rec__.html#a3ed3062bdd37dc60c7d9621c2d6e84d8">gids</a>;   <span class="comment">/* up to 256 elements */</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#a1e8c202779b126b9dd11d809d286919b">   44</a></span>  } <a class="code hl_typedef" href="cffcmap_8h.html#a1e8c202779b126b9dd11d809d286919b">CFF_CMapStdRec</a>;</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <span class="keyword">const</span> <a class="code hl_typedef" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#a66d55761f2da687789a69bb68e9da1b3">   48</a></span>  <a class="code hl_variable" href="cffcmap_8c.html#ae0d5122e8dfd782ee44862cbe865813c">cff_cmap_encoding_class_rec</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">  /*****               CFF SYNTHETIC UNICODE ENCODING CMAP             *****/</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">  /*****                                                               *****/</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">  /*************************************************************************/</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">/* unicode (synthetic) cmaps */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#a4ae99e9699a0cd1d1ef2ed9c2f24b553">   60</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_c_f_f___c_map_unicode_rec__.html">CFF_CMapUnicodeRec_</a>*  <a class="code hl_typedef" href="cffcmap_8h.html#a4ae99e9699a0cd1d1ef2ed9c2f24b553">CFF_CMapUnicode</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_uni_pair_rec__.html">   62</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_c_f_f___c_map_uni_pair_rec__.html">CFF_CMapUniPairRec_</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_uni_pair_rec__.html#a46b6ff385541703e1fd383d6687c664a">   64</a></span>    <a class="code hl_typedef" href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a>  <a class="code hl_variable" href="struct_c_f_f___c_map_uni_pair_rec__.html#a46b6ff385541703e1fd383d6687c664a">unicode</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_uni_pair_rec__.html#aa3deff156159463e0c854f380583cd45">   65</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>    <a class="code hl_variable" href="struct_c_f_f___c_map_uni_pair_rec__.html#aa3deff156159463e0c854f380583cd45">gindex</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#afe4b4ee8e7c3ead10ae74184346b4159">   67</a></span>  } <a class="code hl_typedef" href="cffcmap_8h.html#aa38cf28b9e786f40d0e3c5575d703d4e">CFF_CMapUniPairRec</a>, *<a class="code hl_typedef" href="cffcmap_8h.html#afe4b4ee8e7c3ead10ae74184346b4159">CFF_CMapUniPair</a>;</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_unicode_rec__.html">   70</a></span>  <span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code hl_struct" href="struct_c_f_f___c_map_unicode_rec__.html">CFF_CMapUnicodeRec_</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_unicode_rec__.html#ac86e5f34cef9d2aa5a815a27b76c6660">   72</a></span>    <a class="code hl_typedef" href="ftobjs_8h.html#a8e3cfe5cb2fc243b50bbc6cd2b94119f">FT_CMapRec</a>       <a class="code hl_variable" href="struct_c_f_f___c_map_unicode_rec__.html#ac86e5f34cef9d2aa5a815a27b76c6660">cmap</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_unicode_rec__.html#aca9f9a61b2554d72fc3e8e202d7f45bb">   73</a></span>    <a class="code hl_typedef" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>          <a class="code hl_variable" href="struct_c_f_f___c_map_unicode_rec__.html#aca9f9a61b2554d72fc3e8e202d7f45bb">num_pairs</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_c_f_f___c_map_unicode_rec__.html#a6d404a0d80866d44fa0e39c66d5d38a4">   74</a></span>    <a class="code hl_typedef" href="cffcmap_8h.html#afe4b4ee8e7c3ead10ae74184346b4159">CFF_CMapUniPair</a>  <a class="code hl_variable" href="struct_c_f_f___c_map_unicode_rec__.html#a6d404a0d80866d44fa0e39c66d5d38a4">pairs</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#a36d21a0ba38d44750beb24b04a2b1f0a">   76</a></span>  } <a class="code hl_typedef" href="cffcmap_8h.html#a36d21a0ba38d44750beb24b04a2b1f0a">CFF_CMapUnicodeRec</a>;</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <a class="code hl_define" href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a> <span class="keyword">const</span> <a class="code hl_typedef" href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="cffcmap_8h.html#af66e33577eeaa5019015bf8f1e43ed8a">   80</a></span>  <a class="code hl_variable" href="cffcmap_8c.html#a81693e194f3e1e34f1da5f06e4992857">cff_cmap_unicode_class_rec</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><a class="code hl_define" href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif </span><span class="comment">/* __CFFCMAP_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">/* END */</span></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_a3b8071588139bdf26503c59260303ebd"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#a3b8071588139bdf26503c59260303ebd">FT_UInt32</a></div><div class="ttdeci">unsigned int FT_UInt32</div><div class="ttdef"><b>Definition</b> ftconfig.h:104</div></div>
+<div class="ttc" id="abuilds_2vms_2ftconfig_8h_html_ab037b0107bb83cacaf7a8437564798f6"><div class="ttname"><a href="builds_2vms_2ftconfig_8h.html#ab037b0107bb83cacaf7a8437564798f6">FT_CALLBACK_TABLE</a></div><div class="ttdeci">#define FT_CALLBACK_TABLE</div><div class="ttdef"><b>Definition</b> ftconfig.h:228</div></div>
+<div class="ttc" id="acffcmap_8c_html_a81693e194f3e1e34f1da5f06e4992857"><div class="ttname"><a href="cffcmap_8c.html#a81693e194f3e1e34f1da5f06e4992857">cff_cmap_unicode_class_rec</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_CMap_ClassRec cff_cmap_unicode_class_rec</div><div class="ttdef"><b>Definition</b> cffcmap.c:315</div></div>
+<div class="ttc" id="acffcmap_8c_html_ae0d5122e8dfd782ee44862cbe865813c"><div class="ttname"><a href="cffcmap_8c.html#ae0d5122e8dfd782ee44862cbe865813c">cff_cmap_encoding_class_rec</a></div><div class="ttdeci">FT_CALLBACK_TABLE_DEF const FT_CMap_ClassRec cff_cmap_encoding_class_rec</div><div class="ttdef"><b>Definition</b> cffcmap.c:103</div></div>
+<div class="ttc" id="acffcmap_8h_html_a1e8c202779b126b9dd11d809d286919b"><div class="ttname"><a href="cffcmap_8h.html#a1e8c202779b126b9dd11d809d286919b">CFF_CMapStdRec</a></div><div class="ttdeci">struct CFF_CMapStdRec_ CFF_CMapStdRec</div></div>
+<div class="ttc" id="acffcmap_8h_html_a36d21a0ba38d44750beb24b04a2b1f0a"><div class="ttname"><a href="cffcmap_8h.html#a36d21a0ba38d44750beb24b04a2b1f0a">CFF_CMapUnicodeRec</a></div><div class="ttdeci">struct CFF_CMapUnicodeRec_ CFF_CMapUnicodeRec</div></div>
+<div class="ttc" id="acffcmap_8h_html_a4ae99e9699a0cd1d1ef2ed9c2f24b553"><div class="ttname"><a href="cffcmap_8h.html#a4ae99e9699a0cd1d1ef2ed9c2f24b553">CFF_CMapUnicode</a></div><div class="ttdeci">struct CFF_CMapUnicodeRec_ * CFF_CMapUnicode</div><div class="ttdef"><b>Definition</b> cffcmap.h:60</div></div>
+<div class="ttc" id="acffcmap_8h_html_aa38cf28b9e786f40d0e3c5575d703d4e"><div class="ttname"><a href="cffcmap_8h.html#aa38cf28b9e786f40d0e3c5575d703d4e">CFF_CMapUniPairRec</a></div><div class="ttdeci">struct CFF_CMapUniPairRec_ CFF_CMapUniPairRec</div></div>
+<div class="ttc" id="acffcmap_8h_html_af375fe09b118bc99175be3f4c185af62"><div class="ttname"><a href="cffcmap_8h.html#af375fe09b118bc99175be3f4c185af62">CFF_CMapStd</a></div><div class="ttdeci">typedefFT_BEGIN_HEADER struct CFF_CMapStdRec_ * CFF_CMapStd</div><div class="ttdef"><b>Definition</b> cffcmap.h:36</div></div>
+<div class="ttc" id="acffcmap_8h_html_afe4b4ee8e7c3ead10ae74184346b4159"><div class="ttname"><a href="cffcmap_8h.html#afe4b4ee8e7c3ead10ae74184346b4159">CFF_CMapUniPair</a></div><div class="ttdeci">struct CFF_CMapUniPairRec_ * CFF_CMapUniPair</div></div>
+<div class="ttc" id="acffobjs_8h_html"><div class="ttname"><a href="cffobjs_8h.html">cffobjs.h</a></div></div>
+<div class="ttc" id="aftheader_8h_html_a2ebbdbbee7f9bfa8b6b86790de7e9963"><div class="ttname"><a href="ftheader_8h.html#a2ebbdbbee7f9bfa8b6b86790de7e9963">FT_END_HEADER</a></div><div class="ttdeci">#define FT_END_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:53</div></div>
+<div class="ttc" id="aftheader_8h_html_a72ee5814b3ae378ebb7fd3a8e3ddec14"><div class="ttname"><a href="ftheader_8h.html#a72ee5814b3ae378ebb7fd3a8e3ddec14">FT_BEGIN_HEADER</a></div><div class="ttdeci">#define FT_BEGIN_HEADER</div><div class="ttdef"><b>Definition</b> ftheader.h:35</div></div>
+<div class="ttc" id="aftobjs_8h_html_a7b6b9614765f3c8190d69ee737273dec"><div class="ttname"><a href="ftobjs_8h.html#a7b6b9614765f3c8190d69ee737273dec">FT_CMap_ClassRec</a></div><div class="ttdeci">struct FT_CMap_ClassRec_ FT_CMap_ClassRec</div></div>
+<div class="ttc" id="aftobjs_8h_html_a8e3cfe5cb2fc243b50bbc6cd2b94119f"><div class="ttname"><a href="ftobjs_8h.html#a8e3cfe5cb2fc243b50bbc6cd2b94119f">FT_CMapRec</a></div><div class="ttdeci">struct FT_CMapRec_ FT_CMapRec</div></div>
+<div class="ttc" id="afttypes_8h_html_a937f6c17cf5ffd09086d8610c37b9f58"><div class="ttname"><a href="fttypes_8h.html#a937f6c17cf5ffd09086d8610c37b9f58">FT_UShort</a></div><div class="ttdeci">unsigned short FT_UShort</div><div class="ttdef"><b>Definition</b> fttypes.h:176</div></div>
+<div class="ttc" id="afttypes_8h_html_abcb8db4dbf35d2b55a9e8c7b0926dc52"><div class="ttname"><a href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></div><div class="ttdeci">unsigned int FT_UInt</div><div class="ttdef"><b>Definition</b> fttypes.h:198</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_std_rec___html"><div class="ttname"><a href="struct_c_f_f___c_map_std_rec__.html">CFF_CMapStdRec_</a></div><div class="ttdef"><b>Definition</b> cffcmap.h:39</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_std_rec___html_a3ed3062bdd37dc60c7d9621c2d6e84d8"><div class="ttname"><a href="struct_c_f_f___c_map_std_rec__.html#a3ed3062bdd37dc60c7d9621c2d6e84d8">CFF_CMapStdRec_::gids</a></div><div class="ttdeci">FT_UShort * gids</div><div class="ttdef"><b>Definition</b> cffcmap.h:42</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_std_rec___html_ac6d3f72081f23021a7bc1786a33bf53a"><div class="ttname"><a href="struct_c_f_f___c_map_std_rec__.html#ac6d3f72081f23021a7bc1786a33bf53a">CFF_CMapStdRec_::cmap</a></div><div class="ttdeci">FT_CMapRec cmap</div><div class="ttdef"><b>Definition</b> cffcmap.h:40</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_std_rec___html_af30e6b9aed7d1b78e716b350765b37f5"><div class="ttname"><a href="struct_c_f_f___c_map_std_rec__.html#af30e6b9aed7d1b78e716b350765b37f5">CFF_CMapStdRec_::count</a></div><div class="ttdeci">FT_UInt count</div><div class="ttdef"><b>Definition</b> cffcmap.h:41</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_uni_pair_rec___html"><div class="ttname"><a href="struct_c_f_f___c_map_uni_pair_rec__.html">CFF_CMapUniPairRec_</a></div><div class="ttdef"><b>Definition</b> cffcmap.h:63</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_uni_pair_rec___html_a46b6ff385541703e1fd383d6687c664a"><div class="ttname"><a href="struct_c_f_f___c_map_uni_pair_rec__.html#a46b6ff385541703e1fd383d6687c664a">CFF_CMapUniPairRec_::unicode</a></div><div class="ttdeci">FT_UInt32 unicode</div><div class="ttdef"><b>Definition</b> cffcmap.h:64</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_uni_pair_rec___html_aa3deff156159463e0c854f380583cd45"><div class="ttname"><a href="struct_c_f_f___c_map_uni_pair_rec__.html#aa3deff156159463e0c854f380583cd45">CFF_CMapUniPairRec_::gindex</a></div><div class="ttdeci">FT_UInt gindex</div><div class="ttdef"><b>Definition</b> cffcmap.h:65</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_unicode_rec___html"><div class="ttname"><a href="struct_c_f_f___c_map_unicode_rec__.html">CFF_CMapUnicodeRec_</a></div><div class="ttdef"><b>Definition</b> cffcmap.h:71</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_unicode_rec___html_a6d404a0d80866d44fa0e39c66d5d38a4"><div class="ttname"><a href="struct_c_f_f___c_map_unicode_rec__.html#a6d404a0d80866d44fa0e39c66d5d38a4">CFF_CMapUnicodeRec_::pairs</a></div><div class="ttdeci">CFF_CMapUniPair pairs</div><div class="ttdef"><b>Definition</b> cffcmap.h:74</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_unicode_rec___html_ac86e5f34cef9d2aa5a815a27b76c6660"><div class="ttname"><a href="struct_c_f_f___c_map_unicode_rec__.html#ac86e5f34cef9d2aa5a815a27b76c6660">CFF_CMapUnicodeRec_::cmap</a></div><div class="ttdeci">FT_CMapRec cmap</div><div class="ttdef"><b>Definition</b> cffcmap.h:72</div></div>
+<div class="ttc" id="astruct_c_f_f___c_map_unicode_rec___html_aca9f9a61b2554d72fc3e8e202d7f45bb"><div class="ttname"><a href="struct_c_f_f___c_map_unicode_rec__.html#aca9f9a61b2554d72fc3e8e202d7f45bb">CFF_CMapUnicodeRec_::num_pairs</a></div><div class="ttdeci">FT_UInt num_pairs</div><div class="ttdef"><b>Definition</b> cffcmap.h:73</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_ef10f7e7d7430b88d4d2aea26a8f2c3a.html">cff</a></li><li class="navelem"><a href="cffcmap_8h.html">cffcmap.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

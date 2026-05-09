@@ -1,0 +1,1120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/type42/t42parse.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t42parse_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier t42parse.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="t42parse_8h_source.html">t42parse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="t42error_8h_source.html">t42error.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de t42parse.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2type42_2t42parse_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2type42_2t42parse_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="t42parse_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c208ea57bc9a5fcbfc81a6106d28f3a" id="r_a9c208ea57bc9a5fcbfc81a6106d28f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">FT_COMPONENT</a>&#160;&#160;&#160;trace_t42</td></tr>
+<tr class="memitem:adb14d0edf0c80ad37476a4c6ae657d15" id="r_adb14d0edf0c80ad37476a4c6ae657d15"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb14d0edf0c80ad37476a4c6ae657d15">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#a8001fe406bf979aac781a209ab866b73">T1_FontInfo</a></td></tr>
+<tr class="memitem:a601a070597291d53b0e6964aca356eb7" id="r_a601a070597291d53b0e6964aca356eb7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a601a070597291d53b0e6964aca356eb7">T1CODE</a>&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a92b9d360faa31535e6b2d8023857e3fe">T1_FIELD_LOCATION_FONT_INFO</a></td></tr>
+<tr class="memitem:a486ece7706e0b40f03d6ab0b842586f0" id="r_a486ece7706e0b40f03d6ab0b842586f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a486ece7706e0b40f03d6ab0b842586f0">FT_STRUCTURE</a>&#160;&#160;&#160;<a class="el" href="t1types_8h.html#a1361f22406b468b78d92a943aa77d5f2">T1_FontRec</a></td></tr>
+<tr class="memitem:a948c4cb7b1455b9e1ffd02164e485eeb" id="r_a948c4cb7b1455b9e1ffd02164e485eeb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a948c4cb7b1455b9e1ffd02164e485eeb">T1CODE</a>&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32afa57448995b2f1f0876491e1ead3c26a">T1_FIELD_LOCATION_FONT_DICT</a></td></tr>
+<tr class="memitem:a4587cc322042ed26db057bc082e190fd" id="r_a4587cc322042ed26db057bc082e190fd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4587cc322042ed26db057bc082e190fd">T1_Add_Table</a>(p,  i,  o,  l)</td></tr>
+<tr class="memitem:ab4108e2e73879e4306d478bdc1af1068" id="r_ab4108e2e73879e4306d478bdc1af1068"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab4108e2e73879e4306d478bdc1af1068">T1_Done_Table</a>(p)</td></tr>
+<tr class="memitem:a46bfcd2eb2336c0d9020606bdb310fbb" id="r_a46bfcd2eb2336c0d9020606bdb310fbb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a46bfcd2eb2336c0d9020606bdb310fbb">T1_Release_Table</a>(p)</td></tr>
+<tr class="memitem:a4a8e90ed89199336b0358f2186afb837" id="r_a4a8e90ed89199336b0358f2186afb837"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4a8e90ed89199336b0358f2186afb837">T1_Skip_Spaces</a>(p)</td></tr>
+<tr class="memitem:a2d281963fa9b2f5fee3076127e721f3c" id="r_a2d281963fa9b2f5fee3076127e721f3c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2d281963fa9b2f5fee3076127e721f3c">T1_Skip_Alpha</a>(p)</td></tr>
+<tr class="memitem:a7b274cb3d757bd0c8932331385fd3f15" id="r_a7b274cb3d757bd0c8932331385fd3f15"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7b274cb3d757bd0c8932331385fd3f15">T1_ToInt</a>(p)</td></tr>
+<tr class="memitem:a0f804df0419d1a32855721d7383a1571" id="r_a0f804df0419d1a32855721d7383a1571"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0f804df0419d1a32855721d7383a1571">T1_ToFixed</a>(p,  t)</td></tr>
+<tr class="memitem:a0092666fe7c0022dfe337dbe42e38246" id="r_a0092666fe7c0022dfe337dbe42e38246"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0092666fe7c0022dfe337dbe42e38246">T1_ToCoordArray</a>(p,  m,  c)</td></tr>
+<tr class="memitem:a38518bc9a98a9e4beb448a73c955c4da" id="r_a38518bc9a98a9e4beb448a73c955c4da"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a38518bc9a98a9e4beb448a73c955c4da">T1_ToFixedArray</a>(p,  m,  f,  t)</td></tr>
+<tr class="memitem:a053a68ccae503c6802c5d3b0bb39888f" id="r_a053a68ccae503c6802c5d3b0bb39888f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a053a68ccae503c6802c5d3b0bb39888f">T1_ToToken</a>(p,  t)</td></tr>
+<tr class="memitem:aa7087295875eb31bd7d9b57363549fb7" id="r_aa7087295875eb31bd7d9b57363549fb7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa7087295875eb31bd7d9b57363549fb7">T1_ToTokenArray</a>(p,  t,  m,  c)</td></tr>
+<tr class="memitem:ad2bafe5a5ab0c58c6c8db76ea9606064" id="r_ad2bafe5a5ab0c58c6c8db76ea9606064"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad2bafe5a5ab0c58c6c8db76ea9606064">T1_Load_Field</a>(p,  f,  o,  m,  pf)</td></tr>
+<tr class="memitem:afd63d95256e2e53f93a8c13c79bd9c83" id="r_afd63d95256e2e53f93a8c13c79bd9c83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afd63d95256e2e53f93a8c13c79bd9c83">T1_Load_Field_Table</a>(p,  f,  o,  m,  pf)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:abb16b6b58a1504af3475eda1e435d302" id="r_abb16b6b58a1504af3475eda1e435d302"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abb16b6b58a1504af3475eda1e435d302">t42_parse_font_name</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+<tr class="memitem:adae9b0657b59fdb3495327cd0cdddb0d" id="r_adae9b0657b59fdb3495327cd0cdddb0d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#adae9b0657b59fdb3495327cd0cdddb0d">t42_parse_font_bbox</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+<tr class="memitem:a0253959716df71194509cea88c2c6cdc" id="r_a0253959716df71194509cea88c2c6cdc"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0253959716df71194509cea88c2c6cdc">t42_parse_font_matrix</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+<tr class="memitem:a2dac3c3e86f419f66aa0a0e9692ea383" id="r_a2dac3c3e86f419f66aa0a0e9692ea383"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2dac3c3e86f419f66aa0a0e9692ea383">t42_parse_encoding</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+<tr class="memitem:a84789d038b9f05dc79d96d3ed690299e" id="r_a84789d038b9f05dc79d96d3ed690299e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a84789d038b9f05dc79d96d3ed690299e">t42_parse_charstrings</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+<tr class="memitem:a98b839ea403391b84c88fa9230de4f28" id="r_a98b839ea403391b84c88fa9230de4f28"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a98b839ea403391b84c88fa9230de4f28">t42_parse_sfnts</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+<tr class="memitem:a43fc97be5bb364464a3ccaea36f52173" id="r_a43fc97be5bb364464a3ccaea36f52173"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a43fc97be5bb364464a3ccaea36f52173">t42_parser_init</a> (<a class="el" href="t42parse_8h.html#af5f501c62bb1b1c76877f537e587495f">T42_Parser</a> parser, <a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a> stream, <a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a> <a class="el" href="ftsysio_8h.html#a34160e2441c6c6ecdf82e3faf4a84757">memory</a>, <a class="el" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a> psaux)</td></tr>
+<tr class="memitem:af2b42e5e0356242aceb0f93f275da9f5" id="r_af2b42e5e0356242aceb0f93f275da9f5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af2b42e5e0356242aceb0f93f275da9f5">t42_parser_done</a> (<a class="el" href="t42parse_8h.html#af5f501c62bb1b1c76877f537e587495f">T42_Parser</a> parser)</td></tr>
+<tr class="memitem:a1bf95f403cb4bf4e0c981fa898e50cff" id="r_a1bf95f403cb4bf4e0c981fa898e50cff"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a1bf95f403cb4bf4e0c981fa898e50cff">t42_is_alpha</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> c)</td></tr>
+<tr class="memitem:aae6bc620e8b10cb47aefd821152622d2" id="r_aae6bc620e8b10cb47aefd821152622d2"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#aae6bc620e8b10cb47aefd821152622d2">t42_is_space</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> c)</td></tr>
+<tr class="memitem:a61bc21b909abe9db6147c0ce7da518d0" id="r_a61bc21b909abe9db6147c0ce7da518d0"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a>&#160;</td><td class="memItemRight"><a class="el" href="#a61bc21b909abe9db6147c0ce7da518d0">t42_hexval</a> (<a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> v)</td></tr>
+<tr class="memitem:ac3b5cc96904ca670138d72c3cf70dcc0" id="r_ac3b5cc96904ca670138d72c3cf70dcc0"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac3b5cc96904ca670138d72c3cf70dcc0">t42_load_keyword</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader, <a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a> field)</td></tr>
+<tr class="memitem:a0a3e040590b5e892c4ba93e6edc1f062" id="r_a0a3e040590b5e892c4ba93e6edc1f062"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0a3e040590b5e892c4ba93e6edc1f062">t42_parse_dict</a> (<a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader, <a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *base, <a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a> size)</td></tr>
+<tr class="memitem:abce49c3a10768d015c50b3eb905466d0" id="r_abce49c3a10768d015c50b3eb905466d0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abce49c3a10768d015c50b3eb905466d0">t42_loader_init</a> (<a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader, <a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a8673dfd427d364079b7e8b20b246ee48" id="r_a8673dfd427d364079b7e8b20b246ee48"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8673dfd427d364079b7e8b20b246ee48">t42_loader_done</a> (<a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a> loader)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab43d436202cce23878a7a53aa261e1d2" id="r_ab43d436202cce23878a7a53aa261e1d2"><td class="memItemLeft">static <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#a4d4d3541e7fa341d8699b39efe37973c">T1_FieldRec</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab43d436202cce23878a7a53aa261e1d2">t42_keywords</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9c208ea57bc9a5fcbfc81a6106d28f3a" name="a9c208ea57bc9a5fcbfc81a6106d28f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c208ea57bc9a5fcbfc81a6106d28f3a">&#9670;&#160;</a></span>FT_COMPONENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_COMPONENT&#160;&#160;&#160;trace_t42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a486ece7706e0b40f03d6ab0b842586f0" name="a486ece7706e0b40f03d6ab0b842586f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486ece7706e0b40f03d6ab0b842586f0">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="t1types_8h.html#a1361f22406b468b78d92a943aa77d5f2">T1_FontRec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb14d0edf0c80ad37476a4c6ae657d15" name="adb14d0edf0c80ad37476a4c6ae657d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb14d0edf0c80ad37476a4c6ae657d15">&#9670;&#160;</a></span>FT_STRUCTURE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FT_STRUCTURE&#160;&#160;&#160;<a class="el" href="t1tables_8h.html#a8001fe406bf979aac781a209ab866b73">T1_FontInfo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4587cc322042ed26db057bc082e190fd" name="a4587cc322042ed26db057bc082e190fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4587cc322042ed26db057bc082e190fd">&#9670;&#160;</a></span>T1_Add_Table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Add_Table</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>l</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;funcs.add( (p), i, o, l )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab4108e2e73879e4306d478bdc1af1068" name="ab4108e2e73879e4306d478bdc1af1068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4108e2e73879e4306d478bdc1af1068">&#9670;&#160;</a></span>T1_Done_Table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Done_Table</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                        \</div>
+<div class="line">{                         \</div>
+<div class="line">  if ( (p)-&gt;funcs.done )  \</div>
+<div class="line">    (p)-&gt;funcs.done( p ); \</div>
+<div class="line">} <span class="keywordflow">while</span> ( 0 )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad2bafe5a5ab0c58c6c8db76ea9606064" name="ad2bafe5a5ab0c58c6c8db76ea9606064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bafe5a5ab0c58c6c8db76ea9606064">&#9670;&#160;</a></span>T1_Load_Field</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Load_Field</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.load_field( &amp;(p)-&gt;root, f, o, m, pf )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afd63d95256e2e53f93a8c13c79bd9c83" name="afd63d95256e2e53f93a8c13c79bd9c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd63d95256e2e53f93a8c13c79bd9c83">&#9670;&#160;</a></span>T1_Load_Field_Table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Load_Field_Table</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.load_field_table( &amp;(p)-&gt;root, f, o, m, pf )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a46bfcd2eb2336c0d9020606bdb310fbb" name="a46bfcd2eb2336c0d9020606bdb310fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46bfcd2eb2336c0d9020606bdb310fbb">&#9670;&#160;</a></span>T1_Release_Table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Release_Table</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                           \</div>
+<div class="line">{                            \</div>
+<div class="line">  if ( (p)-&gt;funcs.release )  \</div>
+<div class="line">    (p)-&gt;funcs.release( p ); \</div>
+<div class="line">} <span class="keywordflow">while</span> ( 0 )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2d281963fa9b2f5fee3076127e721f3c" name="a2d281963fa9b2f5fee3076127e721f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d281963fa9b2f5fee3076127e721f3c">&#9670;&#160;</a></span>T1_Skip_Alpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Skip_Alpha</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.skip_alpha ( &amp;(p)-&gt;root )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4a8e90ed89199336b0358f2186afb837" name="a4a8e90ed89199336b0358f2186afb837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8e90ed89199336b0358f2186afb837">&#9670;&#160;</a></span>T1_Skip_Spaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_Skip_Spaces</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.skip_spaces( &amp;(p)-&gt;root )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0092666fe7c0022dfe337dbe42e38246" name="a0092666fe7c0022dfe337dbe42e38246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0092666fe7c0022dfe337dbe42e38246">&#9670;&#160;</a></span>T1_ToCoordArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ToCoordArray</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.to_coord_array( &amp;(p)-&gt;root, m, c )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f804df0419d1a32855721d7383a1571" name="a0f804df0419d1a32855721d7383a1571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f804df0419d1a32855721d7383a1571">&#9670;&#160;</a></span>T1_ToFixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ToFixed</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.to_fixed( &amp;(p)-&gt;root, t )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a38518bc9a98a9e4beb448a73c955c4da" name="a38518bc9a98a9e4beb448a73c955c4da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38518bc9a98a9e4beb448a73c955c4da">&#9670;&#160;</a></span>T1_ToFixedArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ToFixedArray</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.to_fixed_array( &amp;(p)-&gt;root, m, f, t )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7b274cb3d757bd0c8932331385fd3f15" name="a7b274cb3d757bd0c8932331385fd3f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b274cb3d757bd0c8932331385fd3f15">&#9670;&#160;</a></span>T1_ToInt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ToInt</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.to_int( &amp;(p)-&gt;root )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a053a68ccae503c6802c5d3b0bb39888f" name="a053a68ccae503c6802c5d3b0bb39888f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053a68ccae503c6802c5d3b0bb39888f">&#9670;&#160;</a></span>T1_ToToken</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ToToken</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.to_token( &amp;(p)-&gt;root, t )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa7087295875eb31bd7d9b57363549fb7" name="aa7087295875eb31bd7d9b57363549fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7087295875eb31bd7d9b57363549fb7">&#9670;&#160;</a></span>T1_ToTokenArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ToTokenArray</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">(p)-&gt;root.funcs.to_token_array( &amp;(p)-&gt;root, t, m, c )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a948c4cb7b1455b9e1ffd02164e485eeb" name="a948c4cb7b1455b9e1ffd02164e485eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948c4cb7b1455b9e1ffd02164e485eeb">&#9670;&#160;</a></span>T1CODE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1CODE&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32afa57448995b2f1f0876491e1ead3c26a">T1_FIELD_LOCATION_FONT_DICT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a601a070597291d53b0e6964aca356eb7" name="a601a070597291d53b0e6964aca356eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601a070597291d53b0e6964aca356eb7">&#9670;&#160;</a></span>T1CODE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1CODE&#160;&#160;&#160;<a class="el" href="psaux_8h.html#afd9a0a61ee6f01b027bd29b42b78de32a92b9d360faa31535e6b2d8023857e3fe">T1_FIELD_LOCATION_FONT_INFO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a61bc21b909abe9db6147c0ce7da518d0" name="a61bc21b909abe9db6147c0ce7da518d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61bc21b909abe9db6147c0ce7da518d0">&#9670;&#160;</a></span>t42_hexval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> t42_hexval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a61bc21b909abe9db6147c0ce7da518d0_icgraph.png" border="0" usemap="#at42parse_8c_a61bc21b909abe9db6147c0ce7da518d0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a1bf95f403cb4bf4e0c981fa898e50cff" name="a1bf95f403cb4bf4e0c981fa898e50cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf95f403cb4bf4e0c981fa898e50cff">&#9670;&#160;</a></span>t42_is_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int t42_is_alpha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a1bf95f403cb4bf4e0c981fa898e50cff_icgraph.png" border="0" usemap="#at42parse_8c_a1bf95f403cb4bf4e0c981fa898e50cff_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="aae6bc620e8b10cb47aefd821152622d2" name="aae6bc620e8b10cb47aefd821152622d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6bc620e8b10cb47aefd821152622d2">&#9670;&#160;</a></span>t42_is_space()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int t42_is_space </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_aae6bc620e8b10cb47aefd821152622d2_icgraph.png" border="0" usemap="#at42parse_8c_aae6bc620e8b10cb47aefd821152622d2_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="ac3b5cc96904ca670138d72c3cf70dcc0" name="ac3b5cc96904ca670138d72c3cf70dcc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b5cc96904ca670138d72c3cf70dcc0">&#9670;&#160;</a></span>t42_load_keyword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> t42_load_keyword </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#aff7e8566a4f38b05a4dc5355a81facea">T1_Field</a></td>          <td class="paramname"><span class="paramname"><em>field</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_ac3b5cc96904ca670138d72c3cf70dcc0_icgraph.png" border="0" usemap="#at42parse_8c_ac3b5cc96904ca670138d72c3cf70dcc0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a8673dfd427d364079b7e8b20b246ee48" name="a8673dfd427d364079b7e8b20b246ee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8673dfd427d364079b7e8b20b246ee48">&#9670;&#160;</a></span>t42_loader_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t42_loader_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a8673dfd427d364079b7e8b20b246ee48_cgraph.png" border="0" usemap="#at42parse_8c_a8673dfd427d364079b7e8b20b246ee48_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a8673dfd427d364079b7e8b20b246ee48_icgraph.png" border="0" usemap="#at42parse_8c_a8673dfd427d364079b7e8b20b246ee48_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="abce49c3a10768d015c50b3eb905466d0" name="abce49c3a10768d015c50b3eb905466d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce49c3a10768d015c50b3eb905466d0">&#9670;&#160;</a></span>t42_loader_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t42_loader_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_abce49c3a10768d015c50b3eb905466d0_cgraph.png" border="0" usemap="#at42parse_8c_abce49c3a10768d015c50b3eb905466d0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_abce49c3a10768d015c50b3eb905466d0_icgraph.png" border="0" usemap="#at42parse_8c_abce49c3a10768d015c50b3eb905466d0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="a84789d038b9f05dc79d96d3ed690299e" name="a84789d038b9f05dc79d96d3ed690299e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84789d038b9f05dc79d96d3ed690299e">&#9670;&#160;</a></span>t42_parse_charstrings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t42_parse_charstrings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a84789d038b9f05dc79d96d3ed690299e_cgraph.png" border="0" usemap="#at42parse_8c_a84789d038b9f05dc79d96d3ed690299e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a0a3e040590b5e892c4ba93e6edc1f062" name="a0a3e040590b5e892c4ba93e6edc1f062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3e040590b5e892c4ba93e6edc1f062">&#9670;&#160;</a></span>t42_parse_dict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t42_parse_dict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a51f26183ca0c9f4af958939648caeccd">FT_Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a7fa72a1f0e79fb1860c5965789024d6f">FT_Long</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a0a3e040590b5e892c4ba93e6edc1f062_cgraph.png" border="0" usemap="#at42parse_8c_a0a3e040590b5e892c4ba93e6edc1f062_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a0a3e040590b5e892c4ba93e6edc1f062_icgraph.png" border="0" usemap="#at42parse_8c_a0a3e040590b5e892c4ba93e6edc1f062_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a2dac3c3e86f419f66aa0a0e9692ea383" name="a2dac3c3e86f419f66aa0a0e9692ea383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dac3c3e86f419f66aa0a0e9692ea383">&#9670;&#160;</a></span>t42_parse_encoding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t42_parse_encoding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a2dac3c3e86f419f66aa0a0e9692ea383_cgraph.png" border="0" usemap="#at42parse_8c_a2dac3c3e86f419f66aa0a0e9692ea383_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="adae9b0657b59fdb3495327cd0cdddb0d" name="adae9b0657b59fdb3495327cd0cdddb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae9b0657b59fdb3495327cd0cdddb0d">&#9670;&#160;</a></span>t42_parse_font_bbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t42_parse_font_bbox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0253959716df71194509cea88c2c6cdc" name="a0253959716df71194509cea88c2c6cdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0253959716df71194509cea88c2c6cdc">&#9670;&#160;</a></span>t42_parse_font_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t42_parse_font_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a0253959716df71194509cea88c2c6cdc_cgraph.png" border="0" usemap="#at42parse_8c_a0253959716df71194509cea88c2c6cdc_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="abb16b6b58a1504af3475eda1e435d302" name="abb16b6b58a1504af3475eda1e435d302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb16b6b58a1504af3475eda1e435d302">&#9670;&#160;</a></span>t42_parse_font_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t42_parse_font_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_abb16b6b58a1504af3475eda1e435d302_cgraph.png" border="0" usemap="#at42parse_8c_abb16b6b58a1504af3475eda1e435d302_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="a98b839ea403391b84c88fa9230de4f28" name="a98b839ea403391b84c88fa9230de4f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b839ea403391b84c88fa9230de4f28">&#9670;&#160;</a></span>t42_parse_sfnts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t42_parse_sfnts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42types_8h.html#aa101ad840b4d7a3b47063e3ef23c5566">T42_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#a4ab9fbbe3716f5d6afc7fd5836c6362d">T42_Loader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a98b839ea403391b84c88fa9230de4f28_cgraph.png" border="0" usemap="#at42parse_8c_a98b839ea403391b84c88fa9230de4f28_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="af2b42e5e0356242aceb0f93f275da9f5" name="af2b42e5e0356242aceb0f93f275da9f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b42e5e0356242aceb0f93f275da9f5">&#9670;&#160;</a></span>t42_parser_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t42_parser_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#af5f501c62bb1b1c76877f537e587495f">T42_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_af2b42e5e0356242aceb0f93f275da9f5_cgraph.png" border="0" usemap="#at42parse_8c_af2b42e5e0356242aceb0f93f275da9f5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_af2b42e5e0356242aceb0f93f275da9f5_icgraph.png" border="0" usemap="#at42parse_8c_af2b42e5e0356242aceb0f93f275da9f5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="a43fc97be5bb364464a3ccaea36f52173" name="a43fc97be5bb364464a3ccaea36f52173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43fc97be5bb364464a3ccaea36f52173">&#9670;&#160;</a></span>t42_parser_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t42_parser_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="t42parse_8h.html#af5f501c62bb1b1c76877f537e587495f">T42_Parser</a></td>          <td class="paramname"><span class="paramname"><em>parser</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysio_8h.html#a99e9995ed3299cabc8874b89ee1ee407">FT_Stream</a></td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftsysmem_8h.html#a67ec7ea35cde99a89a65e9f827a9ad3a">FT_Memory</a></td>          <td class="paramname"><span class="paramname"><em>memory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="psaux_8h.html#a9f18cae2940f734d57781d4b4f3e5233">PSAux_Service</a></td>          <td class="paramname"><span class="paramname"><em>psaux</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a43fc97be5bb364464a3ccaea36f52173_cgraph.png" border="0" usemap="#at42parse_8c_a43fc97be5bb364464a3ccaea36f52173_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="t42parse_8c_a43fc97be5bb364464a3ccaea36f52173_icgraph.png" border="0" usemap="#at42parse_8c_a43fc97be5bb364464a3ccaea36f52173_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ab43d436202cce23878a7a53aa261e1d2" name="ab43d436202cce23878a7a53aa261e1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43d436202cce23878a7a53aa261e1d2">&#9670;&#160;</a></span>t42_keywords</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="psaux_8h.html#a4d4d3541e7fa341d8699b39efe37973c">T1_FieldRec</a> t42_keywords[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_6f0f591ba5d60169d561c02fe650af6d.html">type42</a></li><li class="navelem"><a href="t42parse_8c.html">t42parse.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1073 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/alfont-code-r12-trunk/alfont-code-r12-trunk/freetype/src/autohint/ahhint.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ahhint_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier ahhint.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="ft2build_8h_source.html">ft2build.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ahhint_8h_source.html">ahhint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ahglyph_8h_source.html">ahglyph.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ahangles_8h_source.html">ahangles.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aherrors_8h_source.html">aherrors.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ahhint.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2autohint_2ahhint_8c" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c__dep__incl.png" border="0" usemap="#asrc_2alfont-code-r12-trunk_2alfont-code-r12-trunk_2freetype_2src_2autohint_2ahhint_8cdep" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="ahhint_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abd4a53becf395865256548f9fe5b6142" id="r_abd4a53becf395865256548f9fe5b6142"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abd4a53becf395865256548f9fe5b6142">FACE_GLOBALS</a>(<a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)</td></tr>
+<tr class="memitem:a6bfe9ec4bf70e8ff98ab1ad2d96b89a4" id="r_a6bfe9ec4bf70e8ff98ab1ad2d96b89a4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6bfe9ec4bf70e8ff98ab1ad2d96b89a4">AH_USE_IUP</a></td></tr>
+<tr class="memitem:a6382e55f60b5544430a3d94c13bb77b4" id="r_a6382e55f60b5544430a3d94c13bb77b4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6382e55f60b5544430a3d94c13bb77b4">OPTIM_STEM_SNAP</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:acd3794812cbcd9d636ff482e6d31fed4" id="r_acd3794812cbcd9d636ff482e6d31fed4"><td class="memItemLeft">static <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>&#160;</td><td class="memItemRight"><a class="el" href="#acd3794812cbcd9d636ff482e6d31fed4">ah_snap_width</a> (<a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> *widths, <a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a> count, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> width)</td></tr>
+<tr class="memitem:a330c125aa30996285eca3557e3911172" id="r_a330c125aa30996285eca3557e3911172"><td class="memItemLeft">static <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a>&#160;</td><td class="memItemRight"><a class="el" href="#a330c125aa30996285eca3557e3911172">ah_compute_stem_width</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, int vertical, <a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> width)</td></tr>
+<tr class="memitem:ab4e4b651f3a05a02db4b185d139392de" id="r_ab4e4b651f3a05a02db4b185d139392de"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab4e4b651f3a05a02db4b185d139392de">ah_align_linked_edge</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a> base_edge, <a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a> stem_edge, int vertical)</td></tr>
+<tr class="memitem:a82c9a45b560a7a22a2f004bf38925a44" id="r_a82c9a45b560a7a22a2f004bf38925a44"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a82c9a45b560a7a22a2f004bf38925a44">ah_align_serif_edge</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a> base, <a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a> serif, int vertical)</td></tr>
+<tr class="memitem:a5f9e7c08c370fc49c26abdd2a4ec638d" id="r_a5f9e7c08c370fc49c26abdd2a4ec638d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5f9e7c08c370fc49c26abdd2a4ec638d">ah_hint_edges_3</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:ac09d0cd0c4e5ef00086498f1edeba677" id="r_ac09d0cd0c4e5ef00086498f1edeba677"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac09d0cd0c4e5ef00086498f1edeba677">ah_hinter_hint_edges</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:a577fa89b731851b7a866cdd011b75a48" id="r_a577fa89b731851b7a866cdd011b75a48"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a577fa89b731851b7a866cdd011b75a48">ah_hinter_align_edge_points</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:af135fe0c4bd7b53490c08e289efbd083" id="r_af135fe0c4bd7b53490c08e289efbd083"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af135fe0c4bd7b53490c08e289efbd083">ah_hinter_align_strong_points</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:a8dba5de1ec298ea4997d17c0ffe5c5c4" id="r_a8dba5de1ec298ea4997d17c0ffe5c5c4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8dba5de1ec298ea4997d17c0ffe5c5c4">ah_iup_shift</a> (<a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> p1, <a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> p2, <a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> ref)</td></tr>
+<tr class="memitem:a7be274ceffca99183f701ff45a4eea8b" id="r_a7be274ceffca99183f701ff45a4eea8b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7be274ceffca99183f701ff45a4eea8b">ah_iup_interp</a> (<a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> p1, <a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> p2, <a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> ref1, <a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a> ref2)</td></tr>
+<tr class="memitem:ab99e6d44198f4787def269a54539feb6" id="r_ab99e6d44198f4787def269a54539feb6"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab99e6d44198f4787def269a54539feb6">ah_hinter_align_weak_points</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:ab3bb5a3a64cea14fd42415c430c2ff7e" id="r_ab3bb5a3a64cea14fd42415c430c2ff7e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab3bb5a3a64cea14fd42415c430c2ff7e">ah_hinter_align_points</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:a66d966fbfbf6cf9f6e7f178866c29c6c" id="r_a66d966fbfbf6cf9f6e7f178866c29c6c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a66d966fbfbf6cf9f6e7f178866c29c6c">ah_hinter_scale_globals</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> x_scale, <a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a> y_scale)</td></tr>
+<tr class="memitem:adb242de5b45eb1c82b323d389c729f60" id="r_adb242de5b45eb1c82b323d389c729f60"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#adb242de5b45eb1c82b323d389c729f60">ah_hinter_align</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:a11f073f0007863aef1eb9254a46393bd" id="r_a11f073f0007863aef1eb9254a46393bd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a11f073f0007863aef1eb9254a46393bd">ah_hinter_done</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter)</td></tr>
+<tr class="memitem:a98f08d801a4efb41d4d28a6d2e21b2da" id="r_a98f08d801a4efb41d4d28a6d2e21b2da"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a98f08d801a4efb41d4d28a6d2e21b2da">ah_hinter_new</a> (<a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a> library, <a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> *ahinter)</td></tr>
+<tr class="memitem:a7df1a488c9a77b4d88297dd664535285" id="r_a7df1a488c9a77b4d88297dd664535285"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7df1a488c9a77b4d88297dd664535285">ah_hinter_new_face_globals</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, <a class="el" href="ahtypes_8h.html#a692f872a33e25146da06e6f0fa70a876">AH_Globals</a> globals)</td></tr>
+<tr class="memitem:ad184ecefa38f3b28e1571cee5a1ceb53" id="r_ad184ecefa38f3b28e1571cee5a1ceb53"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad184ecefa38f3b28e1571cee5a1ceb53">ah_hinter_done_face_globals</a> (<a class="el" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a> globals)</td></tr>
+<tr class="memitem:ad5f7274fb7019501ec29695ad4956b73" id="r_ad5f7274fb7019501ec29695ad4956b73"><td class="memItemLeft">static <a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad5f7274fb7019501ec29695ad4956b73">ah_hinter_load</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>, <a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a> load_flags, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> depth)</td></tr>
+<tr class="memitem:a5a86c39bc12dae33a50994fd2714f6b0" id="r_a5a86c39bc12dae33a50994fd2714f6b0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a86c39bc12dae33a50994fd2714f6b0">ah_hinter_load_glyph</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a> slot, <a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a> size, <a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a> <a class="el" href="gview_8c.html#a669b1d955c38f86e5c74b6add88d3d36">glyph_index</a>, <a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a> load_flags)</td></tr>
+<tr class="memitem:a23d7c1d38d4473a68471ffbec6331a52" id="r_a23d7c1d38d4473a68471ffbec6331a52"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a23d7c1d38d4473a68471ffbec6331a52">ah_hinter_get_global_hints</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, <a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a> <a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>, void **global_hints, long *global_len)</td></tr>
+<tr class="memitem:adaa216996d8169083929d46080cde9aa" id="r_adaa216996d8169083929d46080cde9aa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adaa216996d8169083929d46080cde9aa">ah_hinter_done_global_hints</a> (<a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> hinter, void *global_hints)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a6bfe9ec4bf70e8ff98ab1ad2d96b89a4" name="a6bfe9ec4bf70e8ff98ab1ad2d96b89a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bfe9ec4bf70e8ff98ab1ad2d96b89a4">&#9670;&#160;</a></span>AH_USE_IUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_USE_IUP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd4a53becf395865256548f9fe5b6142" name="abd4a53becf395865256548f9fe5b6142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4a53becf395865256548f9fe5b6142">&#9670;&#160;</a></span>FACE_GLOBALS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FACE_GLOBALS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((<a class="code hl_typedef" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a>)(<a class="code hl_variable" href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a>)-&gt;autohint.data)</div>
+<div class="ttc" id="aahtypes_8h_html_a6a93c22568ce41e4651ade8212362626"><div class="ttname"><a href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a></div><div class="ttdeci">struct AH_Face_GlobalsRec_ * AH_Face_Globals</div></div>
+<div class="ttc" id="agview_8c_html_aa8301da67cd3f6aca160cac906ecac1a"><div class="ttname"><a href="gview_8c.html#aa8301da67cd3f6aca160cac906ecac1a">face</a></div><div class="ttdeci">static FT_Face face</div><div class="ttdef"><b>Definition</b> gview.c:45</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6382e55f60b5544430a3d94c13bb77b4" name="a6382e55f60b5544430a3d94c13bb77b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6382e55f60b5544430a3d94c13bb77b4">&#9670;&#160;</a></span>OPTIM_STEM_SNAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPTIM_STEM_SNAP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ab4e4b651f3a05a02db4b185d139392de" name="ab4e4b651f3a05a02db4b185d139392de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e4b651f3a05a02db4b185d139392de">&#9670;&#160;</a></span>ah_align_linked_edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_align_linked_edge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a></td>          <td class="paramname"><span class="paramname"><em>base_edge</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a></td>          <td class="paramname"><span class="paramname"><em>stem_edge</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertical</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ab4e4b651f3a05a02db4b185d139392de_cgraph.png" border="0" usemap="#aahhint_8c_ab4e4b651f3a05a02db4b185d139392de_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ab4e4b651f3a05a02db4b185d139392de_icgraph.png" border="0" usemap="#aahhint_8c_ab4e4b651f3a05a02db4b185d139392de_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a82c9a45b560a7a22a2f004bf38925a44" name="a82c9a45b560a7a22a2f004bf38925a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82c9a45b560a7a22a2f004bf38925a44">&#9670;&#160;</a></span>ah_align_serif_edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_align_serif_edge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a></td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a52e1bd78a67b3b48a3e63c0d88ef8746">AH_Edge</a></td>          <td class="paramname"><span class="paramname"><em>serif</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertical</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a82c9a45b560a7a22a2f004bf38925a44_icgraph.png" border="0" usemap="#aahhint_8c_a82c9a45b560a7a22a2f004bf38925a44_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a330c125aa30996285eca3557e3911172" name="a330c125aa30996285eca3557e3911172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330c125aa30996285eca3557e3911172">&#9670;&#160;</a></span>ah_compute_stem_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> ah_compute_stem_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertical</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a330c125aa30996285eca3557e3911172_cgraph.png" border="0" usemap="#aahhint_8c_a330c125aa30996285eca3557e3911172_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a330c125aa30996285eca3557e3911172_icgraph.png" border="0" usemap="#aahhint_8c_a330c125aa30996285eca3557e3911172_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a5f9e7c08c370fc49c26abdd2a4ec638d" name="a5f9e7c08c370fc49c26abdd2a4ec638d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9e7c08c370fc49c26abdd2a4ec638d">&#9670;&#160;</a></span>ah_hint_edges_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_hint_edges_3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a5f9e7c08c370fc49c26abdd2a4ec638d_cgraph.png" border="0" usemap="#aahhint_8c_a5f9e7c08c370fc49c26abdd2a4ec638d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a5f9e7c08c370fc49c26abdd2a4ec638d_icgraph.png" border="0" usemap="#aahhint_8c_a5f9e7c08c370fc49c26abdd2a4ec638d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="adb242de5b45eb1c82b323d389c729f60" name="adb242de5b45eb1c82b323d389c729f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb242de5b45eb1c82b323d389c729f60">&#9670;&#160;</a></span>ah_hinter_align()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_hinter_align </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_adb242de5b45eb1c82b323d389c729f60_cgraph.png" border="0" usemap="#aahhint_8c_adb242de5b45eb1c82b323d389c729f60_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_adb242de5b45eb1c82b323d389c729f60_icgraph.png" border="0" usemap="#aahhint_8c_adb242de5b45eb1c82b323d389c729f60_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a577fa89b731851b7a866cdd011b75a48" name="a577fa89b731851b7a866cdd011b75a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577fa89b731851b7a866cdd011b75a48">&#9670;&#160;</a></span>ah_hinter_align_edge_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_hinter_align_edge_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a577fa89b731851b7a866cdd011b75a48_icgraph.png" border="0" usemap="#aahhint_8c_a577fa89b731851b7a866cdd011b75a48_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="ab3bb5a3a64cea14fd42415c430c2ff7e" name="ab3bb5a3a64cea14fd42415c430c2ff7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bb5a3a64cea14fd42415c430c2ff7e">&#9670;&#160;</a></span>ah_hinter_align_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_align_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ab3bb5a3a64cea14fd42415c430c2ff7e_cgraph.png" border="0" usemap="#aahhint_8c_ab3bb5a3a64cea14fd42415c430c2ff7e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ab3bb5a3a64cea14fd42415c430c2ff7e_icgraph.png" border="0" usemap="#aahhint_8c_ab3bb5a3a64cea14fd42415c430c2ff7e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="af135fe0c4bd7b53490c08e289efbd083" name="af135fe0c4bd7b53490c08e289efbd083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af135fe0c4bd7b53490c08e289efbd083">&#9670;&#160;</a></span>ah_hinter_align_strong_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_hinter_align_strong_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_af135fe0c4bd7b53490c08e289efbd083_cgraph.png" border="0" usemap="#aahhint_8c_af135fe0c4bd7b53490c08e289efbd083_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_af135fe0c4bd7b53490c08e289efbd083_icgraph.png" border="0" usemap="#aahhint_8c_af135fe0c4bd7b53490c08e289efbd083_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="ab99e6d44198f4787def269a54539feb6" name="ab99e6d44198f4787def269a54539feb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99e6d44198f4787def269a54539feb6">&#9670;&#160;</a></span>ah_hinter_align_weak_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_hinter_align_weak_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ab99e6d44198f4787def269a54539feb6_cgraph.png" border="0" usemap="#aahhint_8c_ab99e6d44198f4787def269a54539feb6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ab99e6d44198f4787def269a54539feb6_icgraph.png" border="0" usemap="#aahhint_8c_ab99e6d44198f4787def269a54539feb6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="a11f073f0007863aef1eb9254a46393bd" name="a11f073f0007863aef1eb9254a46393bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f073f0007863aef1eb9254a46393bd">&#9670;&#160;</a></span>ah_hinter_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a11f073f0007863aef1eb9254a46393bd_cgraph.png" border="0" usemap="#aahhint_8c_a11f073f0007863aef1eb9254a46393bd_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a11f073f0007863aef1eb9254a46393bd_icgraph.png" border="0" usemap="#aahhint_8c_a11f073f0007863aef1eb9254a46393bd_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="ad184ecefa38f3b28e1571cee5a1ceb53" name="ad184ecefa38f3b28e1571cee5a1ceb53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad184ecefa38f3b28e1571cee5a1ceb53">&#9670;&#160;</a></span>ah_hinter_done_face_globals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_done_face_globals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6a93c22568ce41e4651ade8212362626">AH_Face_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ad184ecefa38f3b28e1571cee5a1ceb53_cgraph.png" border="0" usemap="#aahhint_8c_ad184ecefa38f3b28e1571cee5a1ceb53_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ad184ecefa38f3b28e1571cee5a1ceb53_icgraph.png" border="0" usemap="#aahhint_8c_ad184ecefa38f3b28e1571cee5a1ceb53_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="adaa216996d8169083929d46080cde9aa" name="adaa216996d8169083929d46080cde9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa216996d8169083929d46080cde9aa">&#9670;&#160;</a></span>ah_hinter_done_global_hints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_done_global_hints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>global_hints</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_adaa216996d8169083929d46080cde9aa_cgraph.png" border="0" usemap="#aahhint_8c_adaa216996d8169083929d46080cde9aa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_adaa216996d8169083929d46080cde9aa_icgraph.png" border="0" usemap="#aahhint_8c_adaa216996d8169083929d46080cde9aa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a23d7c1d38d4473a68471ffbec6331a52" name="a23d7c1d38d4473a68471ffbec6331a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d7c1d38d4473a68471ffbec6331a52">&#9670;&#160;</a></span>ah_hinter_get_global_hints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_get_global_hints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>global_hints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>global_len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a23d7c1d38d4473a68471ffbec6331a52_cgraph.png" border="0" usemap="#aahhint_8c_a23d7c1d38d4473a68471ffbec6331a52_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a23d7c1d38d4473a68471ffbec6331a52_icgraph.png" border="0" usemap="#aahhint_8c_a23d7c1d38d4473a68471ffbec6331a52_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="ac09d0cd0c4e5ef00086498f1edeba677" name="ac09d0cd0c4e5ef00086498f1edeba677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09d0cd0c4e5ef00086498f1edeba677">&#9670;&#160;</a></span>ah_hinter_hint_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_hint_edges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ac09d0cd0c4e5ef00086498f1edeba677_cgraph.png" border="0" usemap="#aahhint_8c_ac09d0cd0c4e5ef00086498f1edeba677_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ac09d0cd0c4e5ef00086498f1edeba677_icgraph.png" border="0" usemap="#aahhint_8c_ac09d0cd0c4e5ef00086498f1edeba677_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="ad5f7274fb7019501ec29695ad4956b73" name="ad5f7274fb7019501ec29695ad4956b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f7274fb7019501ec29695ad4956b73">&#9670;&#160;</a></span>ah_hinter_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fttypes_8h.html#a64c8060bdb3d6eec844a1bf670e06bdd">FT_Error</a> ah_hinter_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a></td>          <td class="paramname"><span class="paramname"><em>load_flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>depth</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ad5f7274fb7019501ec29695ad4956b73_cgraph.png" border="0" usemap="#aahhint_8c_ad5f7274fb7019501ec29695ad4956b73_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_ad5f7274fb7019501ec29695ad4956b73_icgraph.png" border="0" usemap="#aahhint_8c_ad5f7274fb7019501ec29695ad4956b73_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a5a86c39bc12dae33a50994fd2714f6b0" name="a5a86c39bc12dae33a50994fd2714f6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a86c39bc12dae33a50994fd2714f6b0">&#9670;&#160;</a></span>ah_hinter_load_glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_load_glyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a768daa0d9c3fa499e6c37034ee9f2ca3">FT_GlyphSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a791d0ff3273ca9628a523efd98d138c1">FT_Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#abcb8db4dbf35d2b55a9e8c7b0926dc52">FT_UInt</a></td>          <td class="paramname"><span class="paramname"><em>glyph_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="builds_2vms_2ftconfig_8h.html#a0d0a21a9c236f9d8cd4789ee8b4fb33f">FT_Int32</a></td>          <td class="paramname"><span class="paramname"><em>load_flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a5a86c39bc12dae33a50994fd2714f6b0_cgraph.png" border="0" usemap="#aahhint_8c_a5a86c39bc12dae33a50994fd2714f6b0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a5a86c39bc12dae33a50994fd2714f6b0_icgraph.png" border="0" usemap="#aahhint_8c_a5a86c39bc12dae33a50994fd2714f6b0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="a98f08d801a4efb41d4d28a6d2e21b2da" name="a98f08d801a4efb41d4d28a6d2e21b2da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f08d801a4efb41d4d28a6d2e21b2da">&#9670;&#160;</a></span>ah_hinter_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a92857f8bf079b7b9ef5d3ce74cf89ef5">FT_Library</a></td>          <td class="paramname"><span class="paramname"><em>library</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a> *</td>          <td class="paramname"><span class="paramname"><em>ahinter</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a98f08d801a4efb41d4d28a6d2e21b2da_cgraph.png" border="0" usemap="#aahhint_8c_a98f08d801a4efb41d4d28a6d2e21b2da_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a98f08d801a4efb41d4d28a6d2e21b2da_icgraph.png" border="0" usemap="#aahhint_8c_a98f08d801a4efb41d4d28a6d2e21b2da_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="a7df1a488c9a77b4d88297dd664535285" name="a7df1a488c9a77b4d88297dd664535285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df1a488c9a77b4d88297dd664535285">&#9670;&#160;</a></span>ah_hinter_new_face_globals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ah_hinter_new_face_globals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="freetype_8h.html#a7eba045ee20968354fa1bff0f69740fa">FT_Face</a></td>          <td class="paramname"><span class="paramname"><em>face</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a692f872a33e25146da06e6f0fa70a876">AH_Globals</a></td>          <td class="paramname"><span class="paramname"><em>globals</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a7df1a488c9a77b4d88297dd664535285_cgraph.png" border="0" usemap="#aahhint_8c_a7df1a488c9a77b4d88297dd664535285_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a7df1a488c9a77b4d88297dd664535285_icgraph.png" border="0" usemap="#aahhint_8c_a7df1a488c9a77b4d88297dd664535285_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a66d966fbfbf6cf9f6e7f178866c29c6c" name="a66d966fbfbf6cf9f6e7f178866c29c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d966fbfbf6cf9f6e7f178866c29c6c">&#9670;&#160;</a></span>ah_hinter_scale_globals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_hinter_scale_globals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#af9660231b5142dd9dc745324150d3ba8">AH_Hinter</a></td>          <td class="paramname"><span class="paramname"><em>hinter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>x_scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a5f5a679cc09f758efdd0d1c5feed3c3d">FT_Fixed</a></td>          <td class="paramname"><span class="paramname"><em>y_scale</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a66d966fbfbf6cf9f6e7f178866c29c6c_cgraph.png" border="0" usemap="#aahhint_8c_a66d966fbfbf6cf9f6e7f178866c29c6c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a66d966fbfbf6cf9f6e7f178866c29c6c_icgraph.png" border="0" usemap="#aahhint_8c_a66d966fbfbf6cf9f6e7f178866c29c6c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a id="a7be274ceffca99183f701ff45a4eea8b" name="a7be274ceffca99183f701ff45a4eea8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be274ceffca99183f701ff45a4eea8b">&#9670;&#160;</a></span>ah_iup_interp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_iup_interp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>ref1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>ref2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a7be274ceffca99183f701ff45a4eea8b_cgraph.png" border="0" usemap="#aahhint_8c_a7be274ceffca99183f701ff45a4eea8b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a7be274ceffca99183f701ff45a4eea8b_icgraph.png" border="0" usemap="#aahhint_8c_a7be274ceffca99183f701ff45a4eea8b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+
+</div>
+</div>
+<a id="a8dba5de1ec298ea4997d17c0ffe5c5c4" name="a8dba5de1ec298ea4997d17c0ffe5c5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dba5de1ec298ea4997d17c0ffe5c5c4">&#9670;&#160;</a></span>ah_iup_shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ah_iup_shift </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ahtypes_8h.html#a6fe03bf1307e346af69d7904a4c933bd">AH_Point</a></td>          <td class="paramname"><span class="paramname"><em>ref</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_a8dba5de1ec298ea4997d17c0ffe5c5c4_icgraph.png" border="0" usemap="#aahhint_8c_a8dba5de1ec298ea4997d17c0ffe5c5c4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+
+</div>
+</div>
+<a id="acd3794812cbcd9d636ff482e6d31fed4" name="acd3794812cbcd9d636ff482e6d31fed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3794812cbcd9d636ff482e6d31fed4">&#9670;&#160;</a></span>ah_snap_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> ah_snap_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a> *</td>          <td class="paramname"><span class="paramname"><em>widths</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fttypes_8h.html#a77b77ff4d86f1c3a791463b762cfe60e">FT_Int</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ftimage_8h.html#af5f230f4b253d4c7715fd2e595614c90">FT_Pos</a></td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="ahhint_8c_acd3794812cbcd9d636ff482e6d31fed4_icgraph.png" border="0" usemap="#aahhint_8c_acd3794812cbcd9d636ff482e6d31fed4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c18b3fa2e88dc6591ed55c5904faefa6.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_9ce061168feabb3f8d0e630e44f27401.html">alfont-code-r12-trunk</a></li><li class="navelem"><a href="dir_95a098809e4a27e03a0eec249d425569.html">freetype</a></li><li class="navelem"><a href="dir_0efbf6ef4eced45ce4b80ebd0fb47e9e.html">src</a></li><li class="navelem"><a href="dir_808c9a22bb2c2440b2d86bdaad927006.html">autohint</a></li><li class="navelem"><a href="ahhint_8c.html">ahhint.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

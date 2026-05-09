@@ -1,0 +1,12 @@
+digraph "src/alfont-code-r12-trunk/alfont-code-r12-trunk/include"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_9ce061168feabb3f8d0e630e44f27401 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="alfont-code-r12-trunk", rankdir=LR style="filled,dashed", URL="dir_9ce061168feabb3f8d0e630e44f27401.html",tooltip=""]
+  dir_af59a8bda9da4320c3e8cdad46d0f17d [label="include", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_af59a8bda9da4320c3e8cdad46d0f17d.html",tooltip=""];
+  }
+}

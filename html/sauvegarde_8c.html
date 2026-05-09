@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Info S2: Référence du fichier src/sauvegarde.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet Info S2<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Jeu de plateforme réalisé en C avec Allegro</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('sauvegarde_8c.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Recherche',true);
+});
+</script>
+<div id="main-nav"></div>
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier sauvegarde.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="src_2sauvegarde_8h_source.html">sauvegarde.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de sauvegarde.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c__incl.png" border="0" usemap="#asrc_2sauvegarde_8c" loading="lazy" alt=""/></div>
+<map name="asrc_2sauvegarde_8c" id="asrc_2sauvegarde_8c">
+<area shape="rect" title=" " alt="" coords="158,5,300,38"/>
+<area shape="rect" href="src_2sauvegarde_8h.html" title=" " alt="" coords="5,86,122,119"/>
+<area shape="poly" title=" " alt="" coords="194,41,112,81,109,77,197,36"/>
+<area shape="rect" title=" " alt="" coords="146,86,216,119"/>
+<area shape="poly" title=" " alt="" coords="221,36,200,74,196,71,218,41"/>
+<area shape="rect" title=" " alt="" coords="240,86,316,119"/>
+<area shape="poly" title=" " alt="" coords="239,36,263,73,258,73,238,41"/>
+<area shape="rect" title=" " alt="" coords="340,86,440,119"/>
+<area shape="poly" title=" " alt="" coords="261,36,347,78,342,80,261,41"/>
+<area shape="rect" href="src_2entites_8h.html" title=" " alt="" coords="22,167,105,199"/>
+<area shape="poly" title=" " alt="" coords="64,117,66,152,61,151,63,122"/>
+<area shape="rect" href="src_2eclair_8h.html" title=" " alt="" coords="26,247,101,280"/>
+<area shape="poly" title=" " alt="" coords="65,198,66,233,61,231,62,202"/>
+</map>
+</div>
+</div>
+<p><a href="sauvegarde_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2bedaca1c6ca66de2397772910fbe140" id="r_a2bedaca1c6ca66de2397772910fbe140"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2bedaca1c6ca66de2397772910fbe140">NOGDI</a></td></tr>
+<tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ac9a3ba3a895bc585b972bfb2b0c8c61e" id="r_ac9a3ba3a895bc585b972bfb2b0c8c61e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac9a3ba3a895bc585b972bfb2b0c8c61e">nom_fichier</a> (const char *pseudo, char *buf, int buf_size)</td></tr>
+<tr class="memitem:a07c35849f53b33522cbc3cc8e1784779" id="r_a07c35849f53b33522cbc3cc8e1784779"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07c35849f53b33522cbc3cc8e1784779">sauvegarde_ecrire</a> (const <a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej)</td></tr>
+<tr class="memitem:a5a6a2ce1cbb6732733a1fc058fe29996" id="r_a5a6a2ce1cbb6732733a1fc058fe29996"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5a6a2ce1cbb6732733a1fc058fe29996">sauvegarde_lire</a> (<a class="el" href="struct_etat_jeu.html">EtatJeu</a> *ej)</td></tr>
+<tr class="memitem:a8422aabf50c82f48020bb8896a36abb5" id="r_a8422aabf50c82f48020bb8896a36abb5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8422aabf50c82f48020bb8896a36abb5">sauvegarde_existe</a> (const char *pseudo)</td></tr>
+<tr class="memitem:a5d6bc09d3f024cea1682331f9857b868" id="r_a5d6bc09d3f024cea1682331f9857b868"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5d6bc09d3f024cea1682331f9857b868">sauvegarde_lister</a> (char noms[][<a class="el" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>], int max)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a2bedaca1c6ca66de2397772910fbe140" name="a2bedaca1c6ca66de2397772910fbe140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bedaca1c6ca66de2397772910fbe140">&#9670;&#160;</a></span>NOGDI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOGDI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00005">5</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+
+</div>
+</div>
+<a id="ac7bef5d85e3dcd73eef56ad39ffc84a9" name="ac7bef5d85e3dcd73eef56ad39ffc84a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">&#9670;&#160;</a></span>WIN32_LEAN_AND_MEAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIN32_LEAN_AND_MEAN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00006">6</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ac9a3ba3a895bc585b972bfb2b0c8c61e" name="ac9a3ba3a895bc585b972bfb2b0c8c61e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a3ba3a895bc585b972bfb2b0c8c61e">&#9670;&#160;</a></span>nom_fichier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nom_fichier </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>pseudo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>buf_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00010">10</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                                     {</div>
+<div class="line"><span class="lineno">   11</span>    snprintf(buf, buf_size, <span class="stringliteral">&quot;sauvegarde_%s.txt&quot;</span>, pseudo);</div>
+<div class="line"><span class="lineno">   12</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph.png" border="0" usemap="#asauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph" id="asauvegarde_8c_ac9a3ba3a895bc585b972bfb2b0c8c61e_icgraph">
+<area shape="rect" title=" " alt="" coords="313,63,423,95"/>
+<area shape="rect" href="sauvegarde_8c.html#a07c35849f53b33522cbc3cc8e1784779" title=" " alt="" coords="112,5,264,38"/>
+<area shape="poly" title=" " alt="" coords="298,58,242,41,242,36,303,57"/>
+<area shape="rect" href="sauvegarde_8c.html#a8422aabf50c82f48020bb8896a36abb5" title=" " alt="" coords="112,63,265,95"/>
+<area shape="poly" title=" " alt="" coords="295,79,266,82,265,76,300,79"/>
+<area shape="rect" href="sauvegarde_8c.html#a5a6a2ce1cbb6732733a1fc058fe29996" title=" " alt="" coords="121,120,256,153"/>
+<area shape="poly" title=" " alt="" coords="303,100,243,122,241,117,298,101"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,63,64,95"/>
+<area shape="poly" title=" " alt="" coords="127,46,65,71,63,66,130,42"/>
+<area shape="poly" title=" " alt="" coords="126,116,64,92,64,87,130,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07c35849f53b33522cbc3cc8e1784779" name="a07c35849f53b33522cbc3cc8e1784779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c35849f53b33522cbc3cc8e1784779">&#9670;&#160;</a></span>sauvegarde_ecrire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sauvegarde_ecrire </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00014">14</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                                          {</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">char</span> fichier[64];</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_function" href="#ac9a3ba3a895bc585b972bfb2b0c8c61e">nom_fichier</a>(ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">pseudo</a>, fichier, <span class="keyword">sizeof</span>(fichier));</div>
+<div class="line"><span class="lineno">   17</span>    FILE *f = fopen(fichier, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span> (!f) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   19</span>    fprintf(f, <span class="stringliteral">&quot;%s\n%d\n%d\n&quot;</span>, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">pseudo</a>, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a>, ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a>);</div>
+<div class="line"><span class="lineno">   20</span>    fclose(f);</div>
+<div class="line"><span class="lineno">   21</span>}</div>
+<div class="ttc" id="asauvegarde_8c_html_ac9a3ba3a895bc585b972bfb2b0c8c61e"><div class="ttname"><a href="#ac9a3ba3a895bc585b972bfb2b0c8c61e">nom_fichier</a></div><div class="ttdeci">static void nom_fichier(const char *pseudo, char *buf, int buf_size)</div><div class="ttdef"><b>Definition</b> <a href="sauvegarde_8c_source.html#l00010">sauvegarde.c:10</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_a7dee0e2699f36b8a465ae681834af88f"><div class="ttname"><a href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">EtatJeu::joueur</a></div><div class="ttdeci">Joueur joueur</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00076">entites.h:76</a></div></div>
+<div class="ttc" id="astruct_etat_jeu_html_ad6d7ae27c8298976545ebfde15b4df4a"><div class="ttname"><a href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">EtatJeu::niveau</a></div><div class="ttdeci">int niveau</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00082">entites.h:82</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a2f35193f146718ce5993497d8ad0f78b"><div class="ttname"><a href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">Joueur::pseudo</a></div><div class="ttdeci">char pseudo[PSEUDO_LEN]</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00042">entites.h:42</a></div></div>
+<div class="ttc" id="astruct_joueur_html_a680896b9ff71c2762ae653ef6aa7c8ce"><div class="ttname"><a href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">Joueur::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00041">entites.h:41</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph.png" border="0" usemap="#asauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph" id="asauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,158,38"/>
+<area shape="rect" href="sauvegarde_8c.html#ac9a3ba3a895bc585b972bfb2b0c8c61e" title=" " alt="" coords="206,5,316,38"/>
+<area shape="poly" title=" " alt="" coords="158,19,193,21,187,22,158,24"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph.png" border="0" usemap="#asauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph" id="asauvegarde_8c_a07c35849f53b33522cbc3cc8e1784779_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,264,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,98,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8422aabf50c82f48020bb8896a36abb5" name="a8422aabf50c82f48020bb8896a36abb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8422aabf50c82f48020bb8896a36abb5">&#9670;&#160;</a></span>sauvegarde_existe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sauvegarde_existe </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>pseudo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00040">40</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                          {</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">char</span> fichier[64];</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_function" href="#ac9a3ba3a895bc585b972bfb2b0c8c61e">nom_fichier</a>(pseudo, fichier, <span class="keyword">sizeof</span>(fichier));</div>
+<div class="line"><span class="lineno">   43</span>    FILE *f = fopen(fichier, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span> (!f) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   45</span>    fclose(f);</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   47</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph.png" border="0" usemap="#asauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph" id="asauvegarde_8c_a8422aabf50c82f48020bb8896a36abb5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,159,38"/>
+<area shape="rect" href="sauvegarde_8c.html#ac9a3ba3a895bc585b972bfb2b0c8c61e" title=" " alt="" coords="207,5,317,38"/>
+<area shape="poly" title=" " alt="" coords="159,19,194,21,189,22,159,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a6a2ce1cbb6732733a1fc058fe29996" name="a5a6a2ce1cbb6732733a1fc058fe29996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6a2ce1cbb6732733a1fc058fe29996">&#9670;&#160;</a></span>sauvegarde_lire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sauvegarde_lire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_etat_jeu.html">EtatJeu</a> *</td>          <td class="paramname"><span class="paramname"><em>ej</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00023">23</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                                 {</div>
+<div class="line"><span class="lineno">   24</span>    <span class="keywordtype">char</span> fichier[64];</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_function" href="#ac9a3ba3a895bc585b972bfb2b0c8c61e">nom_fichier</a>(ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">pseudo</a>, fichier, <span class="keyword">sizeof</span>(fichier));</div>
+<div class="line"><span class="lineno">   26</span>    FILE *f = fopen(fichier, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">if</span> (!f) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordtype">char</span> pseudo[<a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>];</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordtype">int</span>  score, niveau;</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span> (fscanf(f, <span class="stringliteral">&quot;%49s\n%d\n%d\n&quot;</span>, pseudo, &amp;score, &amp;niveau) != 3) {</div>
+<div class="line"><span class="lineno">   31</span>        fclose(f); <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span>    strncpy(ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a2f35193f146718ce5993497d8ad0f78b">pseudo</a>, pseudo, <a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>);</div>
+<div class="line"><span class="lineno">   34</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f">joueur</a>.<a class="code hl_variable" href="struct_joueur.html#a680896b9ff71c2762ae653ef6aa7c8ce">score</a> = score;</div>
+<div class="line"><span class="lineno">   35</span>    ej-&gt;<a class="code hl_variable" href="struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a">niveau</a>       = niveau;</div>
+<div class="line"><span class="lineno">   36</span>    fclose(f);</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+<div class="ttc" id="aheader_2entites_8h_html_a5d2813c915f8962316bdba34165daef5"><div class="ttname"><a href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a></div><div class="ttdeci">#define PSEUDO_LEN</div><div class="ttdef"><b>Definition</b> <a href="header_2entites_8h_source.html#l00014">entites.h:14</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph.png" border="0" usemap="#asauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph" id="asauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,141,38"/>
+<area shape="rect" href="sauvegarde_8c.html#ac9a3ba3a895bc585b972bfb2b0c8c61e" title=" " alt="" coords="189,5,299,38"/>
+<area shape="poly" title=" " alt="" coords="141,19,176,21,170,22,141,24"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph.png" border="0" usemap="#asauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph" id="asauvegarde_8c_a5a6a2ce1cbb6732733a1fc058fe29996_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,247,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d6bc09d3f024cea1682331f9857b868" name="a5d6bc09d3f024cea1682331f9857b868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6bc09d3f024cea1682331f9857b868">&#9670;&#160;</a></span>sauvegarde_lister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sauvegarde_lister </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>noms</em></span>[][PSEUDO_LEN], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="sauvegarde_8c_source.html#l00049">49</a> du fichier <a class="el" href="sauvegarde_8c_source.html">sauvegarde.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                        {</div>
+<div class="line"><span class="lineno">   50</span>    WIN32_FIND_DATA fd;</div>
+<div class="line"><span class="lineno">   51</span>    HANDLE h;</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordtype">int</span> nb = 0;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    h = FindFirstFileA(<span class="stringliteral">&quot;sauvegarde_*.txt&quot;</span>, &amp;fd);</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span> (h == INVALID_HANDLE_VALUE) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (nb &gt;= max) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (fd.dwFileAttributes &amp; FILE_ATTRIBUTE_DIRECTORY) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">char</span> *debut = fd.cFileName + 11; <span class="comment">/* len(&quot;sauvegarde_&quot;) == 11 */</span></div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">char</span> *fin   = strrchr(fd.cFileName, <span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!fin || fin &lt;= debut) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">int</span> len = (int)(fin - debut);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (len &lt;= 0 || len &gt;= <a class="code hl_define" href="header_2entites_8h.html#a5d2813c915f8962316bdba34165daef5">PSEUDO_LEN</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>        strncpy(noms[nb], debut, len);</div>
+<div class="line"><span class="lineno">   69</span>        noms[nb][len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   70</span>        nb++;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    } <span class="keywordflow">while</span> (FindNextFileA(h, &amp;fd) != 0);</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    FindClose(h);</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> nb;</div>
+<div class="line"><span class="lineno">   76</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="sauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph.png" border="0" usemap="#asauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph" loading="lazy" alt=""/></div>
+<map name="asauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph" id="asauvegarde_8c_a5d6bc09d3f024cea1682331f9857b868_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,259,38"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="sauvegarde_8c.html">sauvegarde.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

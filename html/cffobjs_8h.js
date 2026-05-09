@@ -1,0 +1,25 @@
+var cffobjs_8h =
+[
+    [ "CFF_GlyphSlotRec_", "struct_c_f_f___glyph_slot_rec__.html", "struct_c_f_f___glyph_slot_rec__" ],
+    [ "CFF_Transform_", "struct_c_f_f___transform__.html", "struct_c_f_f___transform__" ],
+    [ "CFF_CharMapRec_", "struct_c_f_f___char_map_rec__.html", "struct_c_f_f___char_map_rec__" ],
+    [ "CFF_DriverRec_", "struct_c_f_f___driver_rec__.html", "struct_c_f_f___driver_rec__" ],
+    [ "CFF_CharMap", "cffobjs_8h.html#a14b9e1410aea26cab81be15eb6e26e8e", null ],
+    [ "CFF_CharMapRec", "cffobjs_8h.html#af684f8a1ba7c1b3b9be47c0e19997960", null ],
+    [ "CFF_Driver", "cffobjs_8h.html#a54b2e1e585979ef61e796d7c6f807503", null ],
+    [ "CFF_DriverRec", "cffobjs_8h.html#a300c4332fdcff8299d717bbc06cd09d1", null ],
+    [ "CFF_Face", "cffobjs_8h.html#aa18411ddfe99fb47e21cf26dbf4bb0c7", null ],
+    [ "CFF_GlyphSlot", "cffobjs_8h.html#ab0311d60969475c27e1347c46a37eabd", null ],
+    [ "CFF_GlyphSlotRec", "cffobjs_8h.html#a517a3e35f89c94be2c7d3ecadf0b4e0d", null ],
+    [ "CFF_Size", "cffobjs_8h.html#aa48d71bf8b3b04d738bb51c399942579", null ],
+    [ "CFF_Transform", "cffobjs_8h.html#a3981437db83eecbf1b33e7fc1f1e40c9", null ],
+    [ "cff_driver_done", "cffobjs_8h.html#a729f65ebabc5f352ba0e290862a8e63e", null ],
+    [ "cff_driver_init", "cffobjs_8h.html#a190723e4ead3f1ef07579e3caf2c6188", null ],
+    [ "cff_face_done", "cffobjs_8h.html#a235cc8fdf8596274ca0055da2738b0ec", null ],
+    [ "cff_face_init", "cffobjs_8h.html#a2a2f1032ff6b87615871e15339af32e3", null ],
+    [ "cff_size_done", "cffobjs_8h.html#a6a3ab6d2b1b7d7b1f2ce06be354337ec", null ],
+    [ "cff_size_init", "cffobjs_8h.html#a95e3dabac3640b630e384d7284cab4f0", null ],
+    [ "cff_size_reset", "cffobjs_8h.html#a88df4d3e39ca437ecc9b97248d2fb439", null ],
+    [ "cff_slot_done", "cffobjs_8h.html#a5639a0710695548fc18183f131e564ec", null ],
+    [ "cff_slot_init", "cffobjs_8h.html#a5a97d8acb955a7c033dba07f62399da4", null ]
+];

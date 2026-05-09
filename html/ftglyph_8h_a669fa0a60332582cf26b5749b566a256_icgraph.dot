@@ -1,0 +1,22 @@
+digraph "FT_Glyph_To_Bitmap"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="FT_Glyph_To_Bitmap",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="_alfont_cache_glyph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a0666628364488a824cb42afc68e8b912",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="alfont_text_length",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#abe0ef90b0b723ec8f4dee4427c3c403e",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="alfont_textout_aa_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#a20cd5b5cf5f24216bc18ede9b34334f3",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="afficher_menu",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$menu_8c.html#a5ea310a2d8bd7c9b2e2c6050629dd7b0",tooltip=" "];
+  Node4 -> Node7 [id="edge5_Node000004_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="afficher_regles",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$menu_8c.html#aa21de65fbde7933c3234a51ff1cf192f",tooltip=" "];
+  Node2 -> Node8 [id="edge6_Node000002_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="alfont_textout_ex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alfont_8c.html#ae026835dbcb2be41a2f58ba48584f1f0",tooltip=" "];
+  Node1 -> Node1 [id="edge7_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

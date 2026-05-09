@@ -1,0 +1,34 @@
+digraph "FT_Add_Default_Modules"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [rankdir=LR,labelfontname=Helvetica,labelfontsize=10];
+  node [rankdir=LR,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="FT_Add_Default_Modules",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [id="edge1_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge2_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="FT_Add_Module",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a537c6119249420ea935f0e61cbee5079",tooltip=" "];
+  Node2 -> Node2 [id="edge3_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge4_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ft_add_renderer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a038f96cdeebcf981be0463505f24e087",tooltip=" "];
+  Node3 -> Node4 [id="edge5_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="FT_List_Add",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftutil_8c.html#afc59903c201f367a5d77dc6b7daf8f3c",tooltip=" "];
+  Node4 -> Node4 [id="edge6_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node5 [id="edge7_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="ft_set_current_renderer",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#acaefac9110b7b49a692b6e2e5327d81b",tooltip=" "];
+  Node2 -> Node7 [id="edge8_Node000002_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="FT_GlyphLoader_Done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#a920c9ede2b8f63e3dd25f51daee360ab",tooltip=" "];
+  Node7 -> Node7 [id="edge9_Node000007_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node8 [id="edge10_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="FT_GlyphLoader_Reset",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftgloadr_8c.html#ac41dd5bfdbcc6c0158aaab4c0066f4b8",tooltip=" "];
+  Node8 -> Node8 [id="edge11_Node000008_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node10 [id="edge12_Node000002_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="FT_GlyphLoader_New",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftgloadr_8c.html#ad9956ad2ed4b3dfc8da30f4e3e274a49",tooltip=" "];
+  Node10 -> Node10 [id="edge13_Node000010_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node11 [id="edge14_Node000002_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="FT_Remove_Module",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ftobjs_8c.html#a036e2fa194e8a02f2626cee7aea1ac53",tooltip=" "];
+  Node11 -> Node12 [id="edge15_Node000011_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Destroy_Module",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$ftobjs_8c.html#a3e1ed8be3b28f02ad5fb8ea1f90bde53",tooltip=" "];
+  Node11 -> Node11 [id="edge16_Node000011_Node000011",color="steelblue1",style="solid",tooltip=" "];
+}
