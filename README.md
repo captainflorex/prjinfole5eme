@@ -109,6 +109,59 @@ Puis lancez l'executable genere dans le dossier `build/`.
 
 - Config Doxygen: `Doxyfile`
 - Sorties deja presentes: `html/` et `latex/`
+- Documentation complete (PDF): `latex/refman.pdf`
+
+## English translation
+
+### Super Bulles - INFO S2 Project
+
+2D C game with Allegro 4, inspired by Pang.
+The player moves horizontally, shoots bubbles that split, and must complete levels before time runs out.
+
+### Overview
+
+- Language: C99
+- Graphics library: Allegro 4 (`allegro.h`)
+- Resolution: 800x600
+- Game loop: 60 FPS with Allegro timer
+- Application states:
+  - main menu
+  - nickname input
+  - in game
+  - pause
+  - win / lose
+
+### Features
+
+- Main menu:
+  - New game
+  - Continue game
+  - Game rules
+  - Quit
+- 4 increasing difficulty levels
+- Bubble splitting system (large bubbles split into smaller ones)
+- HUD: nickname, score, level, remaining time
+- Pause screen and level-start countdown
+- Simple save/load by nickname in `sauvegardes.txt`
+
+### Controls
+
+- Left / Right arrow: move
+- Space: shoot
+- P: pause / resume
+- Escape:
+  - quit current game to menu
+  - return from rules screen
+- Enter:
+  - confirm menu selection
+  - confirm nickname
+  - return to menu after win/lose
+
+### Documentation
+
+- Doxygen config: `Doxyfile`
+- Generated outputs: `html/` and `latex/`
+- Full documentation PDF: `latex/refman.pdf`
 
 ## Auteurs
 
@@ -116,4 +169,3 @@ Floriant CHAFFRAY
 Tom PETITJEAN
 Remi MATTEODA
 Candice OSWALD
-
