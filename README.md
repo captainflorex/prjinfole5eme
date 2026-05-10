@@ -109,7 +109,7 @@ Puis lancez l'executable genere dans le dossier `build/`.
 
 - Config Doxygen: `Doxyfile`
 - Sorties deja presentes: `html/` et `latex/`
-- Documentation complete (PDF): `latex/refman.pdf`
+- Documentation complete (PDF): [latex/refman.pdf](latex/refman.pdf)
 
 ## English translation
 
@@ -161,7 +161,7 @@ The player moves horizontally, shoots bubbles that split, and must complete leve
 
 - Doxygen config: `Doxyfile`
 - Generated outputs: `html/` and `latex/`
-- Full documentation PDF: `latex/refman.pdf`
+- Full documentation PDF: [latex/refman.pdf](latex/refman.pdf)
 
 ## Auteurs
 
