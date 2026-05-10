@@ -3,6 +3,11 @@
 Jeu 2D en C avec Allegro 4, inspire de Pang.
 Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et doit finir les niveaux avant la fin du temps.
 
+## Description
+
+Super Bulles est un jeu d'arcade solo dans lequel chaque niveau augmente la difficulte (vitesse, nombre et taille des bulles).
+Le but est de survivre, gerer le temps imparti et maximiser le score en eliminant toutes les bulles.
+
 ## Presentation
 
 - Langage: C99
@@ -117,6 +122,11 @@ Puis lancez l'executable genere dans le dossier `build/`.
 
 2D C game with Allegro 4, inspired by Pang.
 The player moves horizontally, shoots bubbles that split, and must complete levels before time runs out.
+
+### Description
+
+Super Bulles is a single-player arcade game where each level increases the difficulty (bubble speed, count, and size).
+The objective is to survive, manage the time limit, and maximize score by clearing all bubbles.
 
 ### Overview
 
