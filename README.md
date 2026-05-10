@@ -27,7 +27,7 @@ Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et do
 - Systeme de bulles qui se divisent en tailles plus petites
 - HUD: pseudo, score, niveau, temps restant
 - Ecran de pause et decompte de debut de niveau
-- Sauvegarde/chargement simple par pseudo dans `sauvegardes.txt`
+- Sauvegarde/chargement simple par pseudo dans [sauvegardes.txt](sauvegardes.txt)
 
 ## Controles
 
@@ -44,11 +44,11 @@ Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et do
 
 ## Arborescence utile
 
-- `src/`: fichiers source C
-- `heat/`: headers
-- `ressources/`: assets (fond et sprites)
-- `html/` et `latex/`: documentation generee (Doxygen)
-- `cmake-build-debug/`: artefacts de build CMake
+- [src/](src/): fichiers source C
+- [header/](header/): headers
+- [ressources/](ressources/): assets (fond et sprites)
+- [html/](html/) et [latex/](latex/): documentation generee (Doxygen)
+- [cmake-build-debug/](cmake-build-debug/): artefacts de build CMake
 
 ## Prerequis
 
@@ -81,7 +81,7 @@ Execution:
 
 ## Compilation avec CMake
 
-Le projet contient un `CMakeLists.txt`.
+Le projet contient un [CMakeLists.txt](CMakeLists.txt).
 Si votre environnement Allegro 4 est correctement configure:
 
 ```bash
@@ -93,23 +93,23 @@ Puis lancez l'executable genere dans le dossier `build/`.
 
 ## Sauvegardes
 
-- Fichier utilise: `sauvegardes.txt` (a la racine d'execution)
+- Fichier utilise: [sauvegardes.txt](sauvegardes.txt) (a la racine d'execution)
 - Format d'une ligne: `pseudo niveau`
 - Le chargement reprend le dernier niveau trouve pour un pseudo
 
 ## Ressources et remarques
 
-- Le fond principal est present dans `ressources/fonds/fond_jeu.bmp`.
-- Plusieurs sprites attendus dans `ressources/sprites/` peuvent etre absents.
+- Le fond principal est present dans [ressources/fonds/fond_jeu.bmp](ressources/fonds/fond_jeu.bmp).
+- Plusieurs sprites attendus dans [ressources/sprites/](ressources/sprites/) peuvent etre absents.
   - Le code gere des fallback graphiques (formes colorees) si un sprite manque.
-- Une partie du chargement de fond dans `src/affichage.c` utilise un chemin absolu local.
+- Une partie du chargement de fond dans [src/affichage.c](src/affichage.c) utilise un chemin absolu local.
   - Si le fichier n'est pas trouve, un fond de secours est cree automatiquement.
 
 ## Documentation
 
-- Config Doxygen: `Doxyfile`
-- Sorties deja presentes: `html/` et `latex/`
-- Documentation complete (PDF): [latex/refman.pdf](latex/refman.pdf)
+- Config Doxygen: [Doxyfile](Doxyfile)
+- Sorties deja presentes: [html/](html/) et [latex/](latex/)
+- Documentation complete (PDF): [refman.pdf](latex/refman.pdf)
 
 ## English translation
 
@@ -142,7 +142,7 @@ The player moves horizontally, shoots bubbles that split, and must complete leve
 - Bubble splitting system (large bubbles split into smaller ones)
 - HUD: nickname, score, level, remaining time
 - Pause screen and level-start countdown
-- Simple save/load by nickname in `sauvegardes.txt`
+- Simple save/load by nickname in [sauvegardes.txt](sauvegardes.txt)
 
 ### Controls
 
@@ -159,9 +159,9 @@ The player moves horizontally, shoots bubbles that split, and must complete leve
 
 ### Documentation
 
-- Doxygen config: `Doxyfile`
-- Generated outputs: `html/` and `latex/`
-- Full documentation PDF: [latex/refman.pdf](latex/refman.pdf)
+- Doxygen config: [Doxyfile](Doxyfile)
+- Generated outputs: [html/](html/) and [latex/](latex/)
+- Full documentation PDF: [refman.pdf](latex/refman.pdf)
 
 ## Auteurs
 
