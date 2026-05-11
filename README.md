@@ -5,10 +5,10 @@ Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et do
 
 ## Langues / Languages
 
-- [Francais](#super-bulles---projet-info-s2)
+- [Français](#super-bulles---projet-info-s2)
 - [English](#english-translation)
-- [Espanol](#traduccion-al-espanol)
-- [Deutsch](#deutsche-ubersetzung)
+- [Español](#traduccion-al-espanol)
+- [Deutsch](#deutsche-übersetzung)
 
 ## Description
 
@@ -195,7 +195,7 @@ El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe term
 - Modos principales: menu, juego, pausa, victoria/derrota
 - Guardado/carga por apodo en [sauvegardes.txt](sauvegardes.txt)
 
-## Deutsche Ubersetzung
+## Deutsche Übersetzung
 
 ### Super Bulles - INFO S2 Projekt
 
