@@ -3,6 +3,13 @@
 Jeu 2D en C avec Allegro 4, inspire de Pang.
 Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et doit finir les niveaux avant la fin du temps.
 
+## Langues / Languages
+
+- [Francais](#super-bulles---projet-info-s2)
+- [English](#english-translation)
+- [Espanol](#traduccion-al-espanol)
+- [Deutsch](#deutsche-ubersetzung)
+
 ## Description
 
 Super Bulles est un jeu d'arcade solo dans lequel chaque niveau augmente la difficulte (vitesse, nombre et taille des bulles).
@@ -172,6 +179,36 @@ The objective is to survive, manage the time limit, and maximize score by cleari
 - Doxygen config: [Doxyfile](Doxyfile)
 - Generated outputs: [html/](html/) and [latex/](latex/)
 - Full documentation PDF: [refman.pdf](latex/refman.pdf)
+
+## Traduccion al espanol
+
+### Super Bulles - Proyecto INFO S2
+
+Juego 2D en C con Allegro 4, inspirado en Pang.
+El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe terminar los niveles antes de que se acabe el tiempo.
+
+### Descripcion breve
+
+- Lenguaje: C99
+- Biblioteca grafica: Allegro 4 (`allegro.h`)
+- Resolucion: 800x600
+- Modos principales: menu, juego, pausa, victoria/derrota
+- Guardado/carga por apodo en [sauvegardes.txt](sauvegardes.txt)
+
+## Deutsche Ubersetzung
+
+### Super Bulles - INFO S2 Projekt
+
+2D-Spiel in C mit Allegro 4, inspiriert von Pang.
+Der Spieler bewegt sich horizontal, schiesst auf Blasen, die sich teilen, und muss die Level vor Ablauf der Zeit abschliessen.
+
+### Kurzbeschreibung
+
+- Sprache: C99
+- Grafikbibliothek: Allegro 4 (`allegro.h`)
+- Auflosung: 800x600
+- Hauptzustande: Menu, Spiel, Pause, Sieg/Niederlage
+- Speichern/Laden per Spielername in [sauvegardes.txt](sauvegardes.txt)
 
 ## Auteurs
 
