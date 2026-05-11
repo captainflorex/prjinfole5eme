@@ -7,7 +7,7 @@ Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et do
 
 - [Français](#super-bulles---projet-info-s2)
 - [English](#english-translation)
-- [Español](#traduccion-al-espanol)
+- [Español](#traducción-al-español)
 - [Deutsch](#deutsche-übersetzung)
 
 ## Description
@@ -180,14 +180,14 @@ The objective is to survive, manage the time limit, and maximize score by cleari
 - Generated outputs: [html/](html/) and [latex/](latex/)
 - Full documentation PDF: [refman.pdf](latex/refman.pdf)
 
-## Traduccion al espanol
+## Traducción al español
 
 ### Super Bulles - Proyecto INFO S2
 
 Juego 2D en C con Allegro 4, inspirado en Pang.
 El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe terminar los niveles antes de que se acabe el tiempo.
 
-### Descripcion breve
+### Descripción breve
 
 - Lenguaje: C99
 - Biblioteca grafica: Allegro 4 (`allegro.h`)
