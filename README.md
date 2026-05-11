@@ -3,12 +3,14 @@
 Jeu 2D en C avec Allegro 4, inspire de Pang.
 Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et doit finir les niveaux avant la fin du temps.
 
+<a id="fr"></a>
+
 ## Langues / Languages
 
-- [Français](#super-bulles---projet-info-s2)
-- [English](#english-translation)
-- [Español](#traducción-al-español)
-- [Deutsch](#deutsche-übersetzung)
+- [Français](#fr)
+- [English](#en)
+- [Español](#es)
+- [Deutsch](#de)
 
 ## Description
 
@@ -123,6 +125,7 @@ Puis lancez l'executable genere dans le dossier `build/`.
 - Sorties deja presentes: [html/](html/) et [latex/](latex/)
 - Documentation complete (PDF): [refman.pdf](latex/refman.pdf)
 
+<a id="en"></a>
 ## English translation
 
 ### Super Bulles - INFO S2 Project
@@ -180,6 +183,7 @@ The objective is to survive, manage the time limit, and maximize score by cleari
 - Generated outputs: [html/](html/) and [latex/](latex/)
 - Full documentation PDF: [refman.pdf](latex/refman.pdf)
 
+<a id="es"></a>
 ## Traducción al español
 
 ### Super Bulles - Proyecto INFO S2
@@ -195,6 +199,7 @@ El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe term
 - Modos principales: menu, juego, pausa, victoria/derrota
 - Guardado/carga por apodo en el archivo de guardado [sauvegardes.txt](sauvegardes.txt)
 
+<a id="de"></a>
 ## Deutsche Übersetzung
 
 ### Super Bulles - INFO S2 Projekt
