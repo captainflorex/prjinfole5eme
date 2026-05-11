@@ -200,14 +200,14 @@ El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe term
 ### Super Bulles - INFO S2 Projekt
 
 2D-Spiel in C mit Allegro 4, inspiriert von Pang.
-Der Spieler bewegt sich horizontal, schiesst auf Blasen, die sich teilen, und muss die Level vor Ablauf der Zeit abschliessen.
+Der Spieler bewegt sich horizontal, schießt auf Blasen, die sich teilen, und muss die Level vor Ablauf der Zeit abschließen.
 
 ### Kurzbeschreibung
 
 - Sprache: C99
 - Grafikbibliothek: Allegro 4 (`allegro.h`)
-- Auflosung: 800x600
-- Hauptzustande: Menu, Spiel, Pause, Sieg/Niederlage
+- Auflösung: 800x600
+- Hauptzustände: Menu, Spiel, Pause, Sieg/Niederlage
 - Speichern/Laden per Spielername in [sauvegardes.txt](sauvegardes.txt)
 
 ## Auteurs
