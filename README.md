@@ -194,8 +194,8 @@ El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe term
 ### Descripción breve
 
 - Lenguaje: C99
-- Biblioteca grafica: Allegro 4 (`allegro.h`)
-- Resolucion: 800x600
+- Biblioteca gráfica: Allegro 4 (`allegro.h`)
+- Resolución: 800x600
 - Modos principales: menu, juego, pausa, victoria/derrota
 - Guardado/carga por apodo en el archivo de guardado [sauvegardes.txt](sauvegardes.txt)
 
