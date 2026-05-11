@@ -193,7 +193,7 @@ El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe term
 - Biblioteca grafica: Allegro 4 (`allegro.h`)
 - Resolucion: 800x600
 - Modos principales: menu, juego, pausa, victoria/derrota
-- Guardado/carga por apodo en [sauvegardes.txt](sauvegardes.txt)
+- Guardado/carga por apodo en el archivo de guardado [sauvegardes.txt](sauvegardes.txt)
 
 ## Deutsche Übersetzung
 
@@ -208,7 +208,7 @@ Der Spieler bewegt sich horizontal, schießt auf Blasen, die sich teilen, und mu
 - Grafikbibliothek: Allegro 4 (`allegro.h`)
 - Auflösung: 800x600
 - Hauptzustände: Menu, Spiel, Pause, Sieg/Niederlage
-- Speichern/Laden per Spielername in [sauvegardes.txt](sauvegardes.txt)
+- Speichern/Laden per Spielername in der Speicherdatei [sauvegardes.txt](sauvegardes.txt)
 
 ## Auteurs
 
