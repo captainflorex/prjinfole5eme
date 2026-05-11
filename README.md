@@ -1,9 +1,8 @@
+<a id="fr"></a>
 # Super Bulles - Projet INFO S2
 
 Jeu 2D en C avec Allegro 4, inspire de Pang.
 Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et doit finir les niveaux avant la fin du temps.
-
-<a id="fr"></a>
 
 ## Langues / Languages
 
