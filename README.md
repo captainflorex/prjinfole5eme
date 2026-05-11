@@ -195,7 +195,7 @@ El jugador se mueve horizontalmente, dispara burbujas que se dividen y debe term
 - Lenguaje: C99
 - Biblioteca gráfica: Allegro 4 (`allegro.h`)
 - Resolución: 800x600
-- Modos principales: menu, juego, pausa, victoria/derrota
+- Modos principales: Menú, juego, pausa, victoria/derrota
 - Guardado/carga por apodo en el archivo de guardados [sauvegardes.txt](sauvegardes.txt)
 
 <a id="de"></a>
@@ -211,7 +211,7 @@ Der Spieler bewegt sich horizontal, schießt auf Blasen, die sich teilen, und mu
 - Sprache: C99
 - Grafikbibliothek: Allegro 4 (`allegro.h`)
 - Auflösung: 800x600
-- Hauptzustände: Menu, Spiel, Pause, Sieg/Niederlage
+- Hauptzustände: Menü, Spiel, Pause, Sieg/Niederlage
 - Speichern/Laden per Spielername in der Speicherdatei [sauvegardes.txt](sauvegardes.txt)
 
 ## Auteurs
